@@ -21,6 +21,7 @@ header{position:sticky;top:0;z-index:100;background:rgba(8,12,16,.96);backdrop-f
 .logo{font-family:'Bebas Neue',sans-serif;font-size:25px;letter-spacing:5px;color:var(--green);display:flex;align-items:center;gap:8px;flex-shrink:0}
 .logo-dot{width:7px;height:7px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.6)}}
+@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(400%)}}
 .logo-sub{font-size:10px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;font-family:'DM Sans',sans-serif;font-weight:500}
 .hright{margin-left:auto;display:flex;gap:10px;align-items:center}
 .hbadge{display:flex;align-items:center;gap:5px;border-radius:20px;padding:4px 12px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
@@ -246,7 +247,93 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 .sd-l{background:rgba(255,59,92,.18);color:var(--red)}
 .sd-h{background:rgba(255,184,0,.18);color:var(--yellow)}
 
+/* ─── COMBO SECTION ─── */
+.combo-section{margin-bottom:32px}
+.combo-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px}
+.combo-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px}
+.combo-title em{color:var(--yellow);font-style:normal}
+.combo-sub{font-size:11px;color:var(--muted);margin-top:2px}
+
+.combo-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:14px}
+.combo-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .2s;cursor:pointer}
+.combo-card:hover{border-color:rgba(255,184,0,.25);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.3)}
+.combo-card.selected{border-color:rgba(255,184,0,.5);background:rgba(255,184,0,.04)}
+.combo-card-top{padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.combo-card-info{}
+.combo-badge{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:4px;margin-bottom:6px}
+.cb-safe{background:rgba(0,232,122,.12);color:var(--green)}
+.cb-risky{background:rgba(255,59,92,.12);color:var(--red)}
+.cb-val{background:rgba(255,184,0,.12);color:var(--yellow)}
+.combo-name{font-size:15px;font-weight:600;margin-bottom:3px}
+.combo-picks{font-size:11px;color:var(--muted);line-height:1.6}
+.combo-pick-item{display:flex;align-items:center;gap:5px;padding:3px 0}
+.combo-pick-dot{width:5px;height:5px;border-radius:50%;background:var(--green);flex-shrink:0}
+.combo-right{text-align:right;flex-shrink:0}
+.combo-legs{font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.combo-total-odd{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:1px;color:var(--yellow);line-height:1}
+.combo-conf-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:2px;margin-top:4px}
+.combo-cbar{width:64px;height:3px;background:var(--dark3);border-radius:2px;overflow:hidden}
+.combo-cfill{height:100%;border-radius:2px}
+.combo-cpct{font-family:'DM Mono',monospace;font-size:10px;font-weight:600}
+
+.combo-footer{padding:10px 16px;background:rgba(255,255,255,.02);border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.combo-book-row{display:flex;align-items:center;gap:6px;font-size:11px}
+.combo-book-dot{width:7px;height:7px;border-radius:2px}
+.combo-best-label{font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(255,184,0,.15);color:var(--yellow);padding:1px 5px;border-radius:3px}
+.combo-select-btn{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:6px;border:none;cursor:pointer;transition:all .15s}
+.combo-select-btn.off{background:var(--dark3);color:var(--muted)}
+.combo-select-btn.on{background:rgba(255,184,0,.15);color:var(--yellow);border:1px solid rgba(255,184,0,.3)}
+
+/* BETSLIP */
+.betslip{background:var(--card);border:1px solid rgba(255,184,0,.2);border-radius:14px;overflow:hidden}
+.bs-header{padding:14px 18px;background:rgba(255,184,0,.06);border-bottom:1px solid rgba(255,184,0,.15);display:flex;align-items:center;justify-content:space-between}
+.bs-title{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:var(--yellow)}
+.bs-count{font-family:'DM Mono',monospace;font-size:12px;background:rgba(255,184,0,.15);color:var(--yellow);padding:2px 8px;border-radius:4px;font-weight:700}
+.bs-empty{padding:20px;text-align:center;color:var(--muted);font-size:12px}
+.bs-legs{padding:8px 0}
+.bs-leg{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 16px;border-bottom:1px solid var(--border);font-size:11px;gap:8px}
+.bs-leg:last-child{border-bottom:none}
+.bs-leg-left{}
+.bs-leg-match{font-weight:600;color:var(--text);font-size:12px}
+.bs-leg-pick{color:var(--muted);margin-top:1px}
+.bs-leg-right{text-align:right;flex-shrink:0}
+.bs-leg-odd{font-family:'DM Mono',monospace;font-size:13px;color:var(--yellow);font-weight:700}
+.bs-leg-book{font-size:9px;color:var(--muted);margin-top:1px}
+.bs-leg-remove{font-size:10px;color:var(--red);cursor:pointer;margin-top:3px;opacity:.6;transition:opacity .15s}
+.bs-leg-remove:hover{opacity:1}
+.bs-totals{padding:12px 16px;background:rgba(255,255,255,.02);border-top:1px solid var(--border)}
+.bs-total-row{display:flex;justify-content:space-between;font-size:12px;padding:3px 0}
+.bs-total-label{color:var(--muted)}
+.bs-total-val{font-family:'DM Mono',monospace;font-weight:700}
+.bs-total-row.final .bs-total-label{color:var(--text);font-weight:600;font-size:13px}
+.bs-total-row.final .bs-total-val{color:var(--yellow);font-size:16px}
+.bs-stake-row{display:flex;align-items:center;gap:8px;padding:10px 0 4px}
+.bs-stake-label{font-size:11px;color:var(--muted);flex-shrink:0}
+.bs-stake-input{flex:1;background:var(--dark3);border:1px solid var(--border);border-radius:7px;padding:6px 10px;font-family:'DM Mono',monospace;font-size:13px;color:var(--text);outline:none;transition:border-color .15s}
+.bs-stake-input:focus{border-color:rgba(255,184,0,.4)}
+.bs-stake-input::placeholder{color:var(--muted)}
+.bs-lv{font-size:11px;color:var(--muted);flex-shrink:0}
+.bs-place-btn{width:100%;margin-top:10px;padding:11px;border-radius:9px;border:none;background:linear-gradient(135deg,#FFB800,#FF8C00);color:#000;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:.5px;cursor:pointer;transition:all .15s}
+.bs-place-btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.bs-place-btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+
+.custom-combo-builder{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 18px;margin-top:14px}
+.ccb-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.ccb-picks{display:flex;flex-direction:column;gap:6px}
+.ccb-pick{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:var(--dark3);border:1px solid var(--border);border-radius:8px;cursor:pointer;transition:all .15s}
+.ccb-pick:hover{border-color:rgba(255,184,0,.25)}
+.ccb-pick.added{background:rgba(255,184,0,.06);border-color:rgba(255,184,0,.3)}
+.ccb-pick-left{display:flex;flex-direction:column;gap:2px}
+.ccb-pick-match{font-size:11px;font-weight:600}
+.ccb-pick-bet{font-size:10px;color:var(--muted)}
+.ccb-pick-right{display:flex;align-items:center;gap:8px}
+.ccb-odd{font-family:'DM Mono',monospace;font-size:13px;color:var(--yellow);font-weight:700}
+.ccb-add{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:4px;border:none;cursor:pointer;transition:all .15s}
+.ccb-add.off{background:var(--dark3);color:var(--muted);border:1px solid var(--border)}
+.ccb-add.on{background:rgba(255,184,0,.15);color:var(--yellow);border:1px solid rgba(255,184,0,.3)}
+
 @media(max-width:920px){
+  .combo-cards{grid-template-columns:1fr}
   .layout{grid-template-columns:1fr}.sidebar{display:none}
   main{padding:18px 14px}.mc-top{grid-template-columns:1fr 86px 1fr}.pside{display:none}
   header{padding:0 14px}.odds-cols{grid-template-columns:1fr}.exp-inner{grid-template-columns:1fr}
@@ -333,6 +420,55 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
     <button onclick="loadMore()" id="loadMoreBtn" style="background:var(--dark3);border:1px solid var(--border);border-radius:8px;padding:8px 24px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s">Покажи повече →</button>
   </div>
 </div>
+
+<!-- ═══ COMBO SECTION ═══ -->
+<div class="combo-section">
+  <div class="combo-header">
+    <div>
+      <div class="combo-title">КОМБИНИРАНИ <em>ЗАЛОЗИ</em></div>
+      <div class="combo-sub">Готови комбинации от 2 до 5 мача · Изберете комбинация или изградете своя</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+      <div id="oddsStatus" style="font-size:11px;color:var(--muted)">
+        <span style="color:var(--muted)">⏳ Зарежда реални коефициенти от Bet365...</span>
+      </div>
+      <div id="oddsLoadingBar" style="width:200px;height:3px;background:var(--dark3);border-radius:2px;overflow:hidden;display:flex">
+        <div style="height:100%;width:40%;background:linear-gradient(90deg,transparent,var(--yellow),transparent);animation:shimmer 1.5s infinite"></div>
+      </div>
+      <button onclick="fetchLiveOdds()" style="background:rgba(255,184,0,.08);border:1px solid rgba(255,184,0,.25);border-radius:7px;padding:4px 12px;font-size:11px;font-weight:600;color:var(--yellow);cursor:pointer">🔄 Обнови коефициенти</button>
+    </div>
+  </div>
+
+  <!-- PRESET COMBOS -->
+  <div class="combo-cards" id="comboCards"></div>
+
+  <!-- CUSTOM BUILDER + BETSLIP -->
+  <div style="display:grid;grid-template-columns:1fr 320px;gap:14px;align-items:start">
+    <div class="custom-combo-builder">
+      <div class="ccb-title">🔧 Изгради своя комбинация</div>
+      <div class="ccb-picks" id="ccbPicks"></div>
+    </div>
+    <div class="betslip">
+      <div class="bs-header">
+        <div class="bs-title">🎟 Бетслип</div>
+        <div class="bs-count" id="bsCount">0 избора</div>
+      </div>
+      <div id="bsLegs"><div class="bs-empty">Добавете избори от комбинациите или от таблицата</div></div>
+      <div class="bs-totals" id="bsTotals" style="display:none">
+        <div class="bs-total-row"><span class="bs-total-label">Брой избори</span><span class="bs-total-val" id="bsLegsCount">0</span></div>
+        <div class="bs-total-row"><span class="bs-total-label">Обща квота</span><span class="bs-total-val" id="bsTotalOdd" style="color:var(--yellow)">0.00</span></div>
+        <div class="bs-stake-row">
+          <span class="bs-stake-label">Залог:</span>
+          <input class="bs-stake-input" id="bsStake" type="number" placeholder="10" min="1" oninput="recalcBetslip()">
+          <span class="bs-lv">лв.</span>
+        </div>
+        <div class="bs-total-row final"><span class="bs-total-label">Потенциална печалба</span><span class="bs-total-val" id="bsWin">0.00 лв.</span></div>
+        <button class="bs-place-btn" onclick="placeBet()">ПОСТАВИ ЗАЛОГ →</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ═══ END COMBO ═══ -->
 
 <div class="layout">
 <div id="container"></div>
@@ -940,6 +1076,376 @@ function filterMarket(mkt, btn){
 
 function renderAccuracy(){ renderKPIs(); renderStreak(); renderHistTable(); }
 renderAccuracy();
+
+// ════════════════════════════════════════
+// COMBO / BETSLIP SECTION
+// ════════════════════════════════════════
+
+const MARKETS_TO_FETCH = [
+  { id:"atm_1",   match:"Atletico Madrid vs Club Brugge",    market:"match_winner",    selection:"Atletico Madrid" },
+  { id:"atm_x",   match:"Atletico Madrid vs Club Brugge",    market:"match_winner",    selection:"Draw" },
+  { id:"atm_2",   match:"Atletico Madrid vs Club Brugge",    market:"match_winner",    selection:"Club Brugge" },
+  { id:"atm_btts",match:"Atletico Madrid vs Club Brugge",    market:"btts",            selection:"Yes" },
+  { id:"atm_o25", match:"Atletico Madrid vs Club Brugge",    market:"over_under_2_5",  selection:"Over 2.5" },
+  { id:"lev_1",   match:"Bayer Leverkusen vs Olympiacos",    market:"match_winner",    selection:"Bayer Leverkusen" },
+  { id:"lev_btts",match:"Bayer Leverkusen vs Olympiacos",    market:"btts",            selection:"Yes" },
+  { id:"lev_o25", match:"Bayer Leverkusen vs Olympiacos",    market:"over_under_2_5",  selection:"Over 2.5" },
+  { id:"new_1",   match:"Newcastle United vs Qarabag FK",    market:"match_winner",    selection:"Newcastle United" },
+  { id:"new_o35", match:"Newcastle United vs Qarabag FK",    market:"over_under_3_5",  selection:"Over 3.5" },
+  { id:"int_1",   match:"Inter Milan vs Bodo/Glimt",         market:"match_winner",    selection:"Inter Milan" },
+  { id:"int_btts",match:"Inter Milan vs Bodo/Glimt",         market:"btts",            selection:"Yes" },
+  { id:"int_o25", match:"Inter Milan vs Bodo/Glimt",         market:"over_under_2_5",  selection:"Over 2.5" },
+  { id:"bog_q",   match:"Inter Milan vs Bodo/Glimt",         market:"to_qualify",      selection:"Bodo/Glimt" },
+];
+
+const FALLBACK_ODDS = {
+  atm_1:"1.50", atm_x:"5.25", atm_2:"7.00", atm_btts:"1.72", atm_o25:"2.00",
+  lev_1:"1.62", lev_btts:"2.10", lev_o25:"1.80",
+  new_1:"1.40", new_o35:"2.20",
+  int_1:"1.44", int_btts:"1.75", int_o25:"1.85", bog_q:"2.25",
+};
+
+let LIVE_ODDS = { ...FALLBACK_ODDS };
+let oddsLoaded = false;
+
+async function fetchLiveOdds() {
+  const loadingEl = document.getElementById('oddsLoadingBar');
+  if (loadingEl) loadingEl.style.display = 'flex';
+
+  const prompt = `You are a sports betting odds expert. Today is February 24, 2026.
+For each of the following Champions League matches playing TODAY, provide the REAL current Bet365 odds.
+These are REAL matches today:
+1. Atletico Madrid vs Club Brugge (17:45 CET) - 2nd leg playoff, first leg was 3-3
+2. Bayer Leverkusen vs Olympiacos (20:00 CET) - 2nd leg playoff, Leverkusen lead 2-0
+3. Newcastle United vs Qarabag FK (20:00 CET) - 2nd leg playoff, Newcastle lead 6-1
+4. Inter Milan vs Bodo/Glimt (20:00 CET) - 2nd leg playoff, Bodo/Glimt lead 3-1
+
+Return ONLY a valid JSON object with these exact keys and real Bet365 decimal odds as string values:
+{
+  "atm_1": "odds for Atletico Madrid win",
+  "atm_x": "odds for Draw",
+  "atm_2": "odds for Club Brugge win",
+  "atm_btts": "odds for Both Teams to Score Yes",
+  "atm_o25": "odds for Over 2.5 goals",
+  "lev_1": "odds for Leverkusen win",
+  "lev_btts": "odds for Both Teams to Score Yes",
+  "lev_o25": "odds for Over 2.5 goals",
+  "new_1": "odds for Newcastle win",
+  "new_o35": "odds for Over 3.5 goals",
+  "int_1": "odds for Inter Milan win",
+  "int_btts": "odds for Both Teams to Score Yes",
+  "int_o25": "odds for Over 2.5 goals",
+  "bog_q": "odds for Bodo/Glimt to qualify (advance)"
+}
+Use real Bet365 odds. Only return the JSON, no other text.`;
+
+  try {
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-20250514",
+        max_tokens: 1000,
+        tools: [{ type: "web_search_20250305", name: "web_search" }],
+        messages: [{ role: "user", content: prompt }]
+      })
+    });
+
+    const data = await response.json();
+    const text = (data.content || [])
+      .filter(b => b.type === "text")
+      .map(b => b.text)
+      .join("\n");
+
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    if (jsonMatch) {
+      const parsed = JSON.parse(jsonMatch[0]);
+      let valid = true;
+      Object.values(parsed).forEach(v => {
+        if (isNaN(parseFloat(v))) valid = false;
+      });
+      if (valid) {
+        LIVE_ODDS = { ...FALLBACK_ODDS, ...parsed };
+        oddsLoaded = true;
+        updateOddsInUI();
+        showOddsStatus('live');
+      } else {
+        showOddsStatus('fallback');
+      }
+    } else {
+      showOddsStatus('fallback');
+    }
+  } catch(e) {
+    console.warn('Odds fetch failed:', e);
+    showOddsStatus('fallback');
+  }
+
+  if (loadingEl) loadingEl.style.display = 'none';
+}
+
+function showOddsStatus(type) {
+  const el = document.getElementById('oddsStatus');
+  if (!el) return;
+  if (type === 'live') {
+    el.innerHTML = `<span style="color:var(--green)">⚡ Коефициенти обновени от Bet365</span>`;
+  } else {
+    el.innerHTML = `<span style="color:var(--muted)">📋 Индикативни коефициенти · <button onclick="fetchLiveOdds()" style="background:none;border:none;color:var(--yellow);cursor:pointer;font-size:11px;text-decoration:underline">Обнови →</button></span>`;
+  }
+}
+
+function updateOddsInUI() {
+  rebuildComboData();
+  renderCombos();
+  renderCCBPicks();
+}
+
+function rebuildComboData() {
+  const o = LIVE_ODDS;
+  PRESET_COMBOS[0].picks[0].odd = parseFloat(o.new_1);
+  PRESET_COMBOS[0].picks[1].odd = parseFloat(o.lev_1);
+  PRESET_COMBOS[0].picks[2].odd = parseFloat(o.atm_1);
+  PRESET_COMBOS[1].picks[0].odd = parseFloat(o.atm_btts);
+  PRESET_COMBOS[1].picks[1].odd = parseFloat(o.int_btts);
+  PRESET_COMBOS[1].picks[2].odd = parseFloat(o.lev_o25);
+  PRESET_COMBOS[2].picks[0].odd = parseFloat(o.new_1);
+  PRESET_COMBOS[2].picks[1].odd = parseFloat(o.lev_1);
+  PRESET_COMBOS[2].picks[2].odd = parseFloat(o.atm_btts);
+  PRESET_COMBOS[2].picks[3].odd = parseFloat(o.int_o25);
+  PRESET_COMBOS[2].picks[4].odd = parseFloat(o.bog_q);
+  PRESET_COMBOS[3].picks[0].odd = parseFloat(o.new_1);
+  PRESET_COMBOS[3].picks[1].odd = parseFloat(o.lev_1);
+  PRESET_COMBOS[4].picks[0].odd = parseFloat(o.atm_o25);
+  PRESET_COMBOS[4].picks[1].odd = parseFloat(o.int_o25);
+  PRESET_COMBOS[4].picks[2].odd = parseFloat(o.lev_o25);
+  PRESET_COMBOS[4].picks[3].odd = parseFloat(o.new_o35);
+  PRESET_COMBOS[5].picks[1].odd = parseFloat(o.bog_q);
+  PRESET_COMBOS[5].picks[2].odd = parseFloat(o.atm_2);
+  ALL_SINGLE_PICKS[0].odd = parseFloat(o.new_1);
+  ALL_SINGLE_PICKS[1].odd = parseFloat(o.new_o35);
+  ALL_SINGLE_PICKS[3].odd = parseFloat(o.lev_1);
+  ALL_SINGLE_PICKS[4].odd = parseFloat(o.lev_btts);
+  ALL_SINGLE_PICKS[5].odd = parseFloat(o.lev_o25);
+  ALL_SINGLE_PICKS[6].odd = parseFloat(o.atm_btts);
+  ALL_SINGLE_PICKS[7].odd = parseFloat(o.atm_o25);
+  ALL_SINGLE_PICKS[8].odd = parseFloat(o.atm_1);
+  ALL_SINGLE_PICKS[9].odd = parseFloat(o.int_o25);
+  ALL_SINGLE_PICKS[10].odd = parseFloat(o.bog_q);
+  ALL_SINGLE_PICKS[11].odd = parseFloat(o.int_btts);
+}
+
+const PRESET_COMBOS = [
+  {
+    id:"safe3", badge:"cb-safe", badgeText:"🛡 СИГУРНА",
+    name:"Тройка Фаворити", conf:68, legs:3,
+    picks:[
+      {match:"Нюкасъл — Карабах",   bet:"Нюкасъл победа",   odd:parseFloat(FALLBACK_ODDS.new_1), book:"Bet365", bookKey:"bet365"},
+      {match:"Леверкузен — Олимп.", bet:"Леверкузен победа", odd:parseFloat(FALLBACK_ODDS.lev_1), book:"Bet365", bookKey:"bet365"},
+      {match:"Атлетико — Брюж",     bet:"Атлетико победа",   odd:parseFloat(FALLBACK_ODDS.atm_1), book:"Bet365", bookKey:"bet365"},
+    ]
+  },
+  {
+    id:"btts3", badge:"cb-val", badgeText:"⚡ СТОЙНОСТ",
+    name:"BTTS Тройна", conf:58, legs:3,
+    picks:[
+      {match:"Атлетико — Брюж",    bet:"BTTS Да",      odd:parseFloat(FALLBACK_ODDS.atm_btts), book:"Bet365", bookKey:"bet365"},
+      {match:"Интер — Будьо",      bet:"BTTS Да",      odd:parseFloat(FALLBACK_ODDS.int_btts), book:"Bet365", bookKey:"bet365"},
+      {match:"Леверкузен — Олимп.",bet:"Над 2.5 гола", odd:parseFloat(FALLBACK_ODDS.lev_o25),  book:"Bet365", bookKey:"bet365"},
+    ]
+  },
+  {
+    id:"value5", badge:"cb-val", badgeText:"💎 МЕГА СТОЙНОСТ",
+    name:"Пятка с Изненада", conf:32, legs:5,
+    picks:[
+      {match:"Нюкасъл — Карабах",   bet:"Нюкасъл победа",    odd:parseFloat(FALLBACK_ODDS.new_1),   book:"Bet365", bookKey:"bet365"},
+      {match:"Леверкузен — Олимп.", bet:"Леверкузен победа",  odd:parseFloat(FALLBACK_ODDS.lev_1),   book:"Bet365", bookKey:"bet365"},
+      {match:"Атлетико — Брюж",     bet:"BTTS Да",            odd:parseFloat(FALLBACK_ODDS.atm_btts),book:"Bet365", bookKey:"bet365"},
+      {match:"Интер — Будьо",       bet:"Над 2.5 гола",       odd:parseFloat(FALLBACK_ODDS.int_o25), book:"Bet365", bookKey:"bet365"},
+      {match:"Интер — Будьо",       bet:"Будьо квалификация", odd:parseFloat(FALLBACK_ODDS.bog_q),   book:"Bet365", bookKey:"bet365"},
+    ]
+  },
+  {
+    id:"safe2", badge:"cb-safe", badgeText:"🛡 СИГУРНА",
+    name:"Двойна Сигурност", conf:78, legs:2,
+    picks:[
+      {match:"Нюкасъл — Карабах",   bet:"Нюкасъл победа",   odd:parseFloat(FALLBACK_ODDS.new_1), book:"Bet365", bookKey:"bet365"},
+      {match:"Леверкузен — Олимп.", bet:"Леверкузен победа", odd:parseFloat(FALLBACK_ODDS.lev_1), book:"Bet365", bookKey:"bet365"},
+    ]
+  },
+  {
+    id:"over4", badge:"cb-val", badgeText:"⚽ ГОЛОВЕ",
+    name:"Над 2.5 Четворна", conf:44, legs:4,
+    picks:[
+      {match:"Атлетико — Брюж",    bet:"Над 2.5 гола", odd:parseFloat(FALLBACK_ODDS.atm_o25), book:"Bet365", bookKey:"bet365"},
+      {match:"Интер — Будьо",      bet:"Над 2.5 гола", odd:parseFloat(FALLBACK_ODDS.int_o25), book:"Bet365", bookKey:"bet365"},
+      {match:"Леверкузен — Олимп.",bet:"Над 2.5 гола", odd:parseFloat(FALLBACK_ODDS.lev_o25), book:"Bet365", bookKey:"bet365"},
+      {match:"Нюкасъл — Карабах",  bet:"Над 3.5 гола", odd:parseFloat(FALLBACK_ODDS.new_o35), book:"Bet365", bookKey:"bet365"},
+    ]
+  },
+  {
+    id:"risky", badge:"cb-risky", badgeText:"🔥 РИСКОВА",
+    name:"Дивата Комбинация", conf:22, legs:4,
+    picks:[
+      {match:"Атлетико — Брюж",    bet:"Брюж победа",         odd:parseFloat(FALLBACK_ODDS.atm_2), book:"Bet365", bookKey:"bet365"},
+      {match:"Интер — Будьо",      bet:"Будьо квалификация",   odd:parseFloat(FALLBACK_ODDS.bog_q), book:"Bet365", bookKey:"bet365"},
+      {match:"Атлетико — Брюж",    bet:"Брюж победа",          odd:parseFloat(FALLBACK_ODDS.atm_2), book:"Bet365", bookKey:"bet365"},
+      {match:"Леверкузен — Олимп.",bet:"Олимпиакос победа",    odd:6.50, book:"Bet365", bookKey:"bet365"},
+    ]
+  },
+];
+
+const ALL_SINGLE_PICKS = [
+  {id:"p1",  match:"Нюкасъл — Карабах",   bet:"Нюкасъл победа",     odd:parseFloat(FALLBACK_ODDS.new_1),   book:"Bet365", bookKey:"bet365", conf:85},
+  {id:"p2",  match:"Нюкасъл — Карабах",   bet:"Над 3.5 гола",        odd:parseFloat(FALLBACK_ODDS.new_o35), book:"Bet365", bookKey:"bet365", conf:62},
+  {id:"p3",  match:"Нюкасъл — Карабах",   bet:"Нюкасъл чиста мрежа", odd:1.83, book:"Bet365", bookKey:"bet365", conf:45},
+  {id:"p4",  match:"Леверкузен — Олимп.", bet:"Леверкузен победа",    odd:parseFloat(FALLBACK_ODDS.lev_1),   book:"Bet365", bookKey:"bet365", conf:71},
+  {id:"p5",  match:"Леверкузен — Олимп.", bet:"BTTS Да",              odd:parseFloat(FALLBACK_ODDS.lev_btts),book:"Bet365", bookKey:"bet365", conf:50},
+  {id:"p6",  match:"Леверкузен — Олимп.", bet:"Над 2.5 гола",         odd:parseFloat(FALLBACK_ODDS.lev_o25), book:"Bet365", bookKey:"bet365", conf:60},
+  {id:"p7",  match:"Атлетико — Брюж",    bet:"BTTS Да",              odd:parseFloat(FALLBACK_ODDS.atm_btts),book:"Bet365", bookKey:"bet365", conf:78},
+  {id:"p8",  match:"Атлетико — Брюж",    bet:"Над 2.5 гола",         odd:parseFloat(FALLBACK_ODDS.atm_o25), book:"Bet365", bookKey:"bet365", conf:72},
+  {id:"p9",  match:"Атлетико — Брюж",    bet:"Атлетико победа",      odd:parseFloat(FALLBACK_ODDS.atm_1),   book:"Bet365", bookKey:"bet365", conf:48},
+  {id:"p10", match:"Интер — Будьо",       bet:"Над 2.5 гола",         odd:parseFloat(FALLBACK_ODDS.int_o25), book:"Bet365", bookKey:"bet365", conf:70},
+  {id:"p11", match:"Интер — Будьо",       bet:"Будьо квалификация",   odd:parseFloat(FALLBACK_ODDS.bog_q),   book:"Bet365", bookKey:"bet365", conf:55},
+  {id:"p12", match:"Интер — Будьо",       bet:"BTTS Да",              odd:parseFloat(FALLBACK_ODDS.int_btts),book:"Bet365", bookKey:"bet365", conf:65},
+];
+
+let betslip = [];
+
+function totalOdd(){ return betslip.reduce((a,x)=>a*parseFloat(x.odd),1); }
+
+function recalcBetslip(){
+  const stake = parseFloat(document.getElementById('bsStake').value)||10;
+  const total = totalOdd();
+  document.getElementById('bsTotalOdd').textContent = total.toFixed(2);
+  document.getElementById('bsLegsCount').textContent = betslip.length;
+  document.getElementById('bsCount').textContent = betslip.length + ' избор' + (betslip.length===1?'':'а');
+  document.getElementById('bsWin').textContent = (stake * total).toFixed(2) + ' лв.';
+}
+
+function addToBetslip(id, match, bet, odd, book, bookKey){
+  if(betslip.find(x=>x.id===id)) return;
+  betslip.push({id,match,bet,odd,book,bookKey});
+  renderBetslip();
+  renderCCBPicks();
+}
+
+function removeFromBetslip(id){
+  betslip = betslip.filter(x=>x.id!==id);
+  renderBetslip();
+  renderCCBPicks();
+}
+
+function renderBetslip(){
+  const legsEl = document.getElementById('bsLegs');
+  const totEl  = document.getElementById('bsTotals');
+  if(!betslip.length){
+    legsEl.innerHTML='<div class="bs-empty">Добавете избори от комбинациите или от таблицата</div>';
+    totEl.style.display='none';
+    document.getElementById('bsCount').textContent='0 избора';
+    return;
+  }
+  totEl.style.display='block';
+  legsEl.innerHTML=`<div class="bs-legs">${betslip.map(x=>{
+    const bk=BOOKS[x.bookKey]||{name:x.book,color:'#888'};
+    return `<div class="bs-leg">
+      <div class="bs-leg-left">
+        <div class="bs-leg-match">${x.match}</div>
+        <div class="bs-leg-pick">${x.bet}</div>
+      </div>
+      <div class="bs-leg-right">
+        <div class="bs-leg-odd">${parseFloat(x.odd).toFixed(2)}</div>
+        <div class="bs-leg-book" style="color:${bk.color}">${bk.name}</div>
+        <div class="bs-leg-remove" onclick="removeFromBetslip('${x.id}');event.stopPropagation()">✕ Премахни</div>
+      </div>
+    </div>`;
+  }).join('')}</div>`;
+  recalcBetslip();
+}
+
+function addComboToBetslip(comboId){
+  const combo = PRESET_COMBOS.find(c=>c.id===comboId);
+  if(!combo) return;
+  betslip = combo.picks.map((p,i)=>({
+    id: comboId+'_'+i,
+    match: p.match, bet: p.bet, odd: p.odd, book: p.book, bookKey: p.bookKey
+  }));
+  renderBetslip();
+  renderCCBPicks();
+  document.getElementById('bsStake').value = 10;
+  recalcBetslip();
+  document.getElementById('bsLegs').scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function placeBet(){
+  const stake = parseFloat(document.getElementById('bsStake').value)||10;
+  const win = (stake * totalOdd()).toFixed(2);
+  alert(`✅ Комбинацията е изпратена!\n\nОбща квота: ${totalOdd().toFixed(2)}\nЗалог: ${stake} лв.\nПотенциална печалба: ${win} лв.\n\n(Демо режим — реално залагане изисква акаунт при букмейкъра)`);
+}
+
+function renderCombos(){
+  const el = document.getElementById('comboCards');
+  el.innerHTML = PRESET_COMBOS.map(c=>{
+    const total = c.picks.reduce((a,p)=>a*p.odd,1).toFixed(2);
+    const cfColor = c.conf>=60?'var(--green)':c.conf>=40?'var(--yellow)':'var(--red)';
+    const cfFill  = c.conf>=60?'cf-high':c.conf>=40?'cf-mid':'cf-low';
+    const bk = BOOKS[c.picks[0].bookKey]||{name:c.picks[0].book,color:'#888'};
+    return `<div class="combo-card" id="cc-${c.id}">
+      <div class="combo-card-top">
+        <div class="combo-card-info">
+          <div class="combo-badge ${c.badge}">${c.badgeText}</div>
+          <div class="combo-name">${c.name}</div>
+          <div class="combo-picks">
+            ${c.picks.map(p=>`<div class="combo-pick-item"><div class="combo-pick-dot"></div>${p.match} — <strong>${p.bet}</strong></div>`).join('')}
+          </div>
+        </div>
+        <div class="combo-right">
+          <div class="combo-legs">${c.legs} ИЗБОРА</div>
+          <div class="combo-total-odd">${total}</div>
+          <div class="combo-conf-wrap">
+            <div class="combo-cbar"><div class="combo-cfill ${cfFill}" style="width:${c.conf}%"></div></div>
+            <div class="combo-cpct" style="color:${cfColor}">${c.conf}%</div>
+          </div>
+        </div>
+      </div>
+      <div class="combo-footer">
+        <div class="combo-book-row">
+          <div class="combo-book-dot" style="background:${bk.color}"></div>
+          <span style="color:var(--muted);font-size:11px">Основно: ${bk.name}</span>
+          <span class="combo-best-label">BEST ODDS</span>
+        </div>
+        <button class="combo-select-btn off" id="btn-${c.id}" onclick="addComboToBetslip('${c.id}');event.stopPropagation()">+ Добави →</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderCCBPicks(){
+  const el = document.getElementById('ccbPicks');
+  el.innerHTML = ALL_SINGLE_PICKS.map(p=>{
+    const inSlip = betslip.find(x=>x.id===p.id);
+    const bk = BOOKS[p.bookKey]||{name:p.book,color:'#888'};
+    const confColor = p.conf>=70?'var(--green)':p.conf>=50?'var(--yellow)':'var(--red)';
+    return `<div class="ccb-pick ${inSlip?'added':''}">
+      <div class="ccb-pick-left">
+        <div class="ccb-pick-match">${p.match}</div>
+        <div class="ccb-pick-bet">${p.bet} <span style="font-size:9px;color:${confColor}">(${p.conf}%)</span></div>
+      </div>
+      <div class="ccb-pick-right">
+        <div style="text-align:right">
+          <div class="ccb-odd">${p.odd.toFixed(2)}</div>
+          <div style="font-size:9px;color:${bk.color}">${bk.name}</div>
+        </div>
+        <button class="ccb-add ${inSlip?'on':'off'}" onclick="${inSlip?`removeFromBetslip('${p.id}')`:`addToBetslip('${p.id}','${p.match}','${p.bet}',${p.odd},'${p.book}','${p.bookKey}')`};event.stopPropagation()">
+          ${inSlip?'✓ Добавен':'+ Добави'}
+        </button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+renderCombos();
+renderCCBPicks();
+renderBetslip();
+fetchLiveOdds();
 
 </script>
 </body>
