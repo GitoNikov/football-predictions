@@ -189,63 +189,26 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 .disc{font-size:10px;color:var(--muted);line-height:1.6;padding:12px;background:rgba(255,255,255,.02);border-radius:8px;border:1px solid var(--border)}
 .disc strong{color:var(--text)}
 
-/* ─── ACCURACY SECTION ─── */
-.acc-section{margin-bottom:28px}
-.acc-header{display:flex;align-items:center;gap:10px;margin-bottom:16px}
-.acc-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px}
-.acc-title em{color:var(--green);font-style:normal}
-.acc-sub{font-size:11px;color:var(--muted);margin-top:2px}
-.acc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
-.acc-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px;transition:all .2s}
-.acc-card:hover{border-color:rgba(0,232,122,.16);transform:translateY(-1px)}
-.acc-card-top{display:flex;justify-content:space-between;align-items:flex-start}
-.acc-card-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
-.acc-trend{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px}
-.acc-trend-up{background:rgba(0,232,122,.1);color:var(--green)}
-.acc-trend-dn{background:rgba(255,59,92,.1);color:var(--red)}
-.acc-trend-eq{background:rgba(255,184,0,.1);color:var(--yellow)}
-.acc-big{font-family:'Bebas Neue',sans-serif;font-size:44px;letter-spacing:1px;line-height:1}
-.acc-big.clr-hi{color:var(--green)}
-.acc-big.clr-md{color:var(--yellow)}
-.acc-big.clr-lo{color:var(--red)}
-.acc-ringwrap{position:relative;width:52px;height:52px;flex-shrink:0}
-.acc-ring-svg{transform:rotate(-90deg)}
-.acc-ring-bg{fill:none;stroke:rgba(255,255,255,.06);stroke-width:4}
-.acc-ring-fill{fill:none;stroke-width:4;stroke-linecap:round;transition:stroke-dashoffset 1.2s cubic-bezier(.4,0,.2,1)}
-.acc-ring-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;font-weight:600}
-.acc-bar-wrap{display:flex;flex-direction:column;gap:4px}
-.acc-bar-row{display:flex;align-items:center;gap:6px;font-size:11px}
-.acc-bar-label{color:var(--muted);width:32px;flex-shrink:0;font-size:10px}
-.acc-bar-track{flex:1;height:4px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden}
-.acc-bar-fill{height:100%;border-radius:2px;transition:width 1s ease}
-.acc-bar-val{font-family:'DM Mono',monospace;font-size:10px;width:28px;text-align:right;flex-shrink:0}
-
-/* HISTORY TABLE */
-.hist-table{width:100%;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
-.hist-thead tr{background:rgba(255,255,255,.03)}
-.hist-thead th{padding:10px 14px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-align:left}
-.hist-tbody tr{border-top:1px solid var(--border);transition:background .12s;cursor:default}
-.hist-tbody tr:hover{background:rgba(255,255,255,.02)}
-.hist-tbody td{padding:9px 14px;font-size:12px}
-.res-icon{width:20px;height:20px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:800}
-.ri-w{background:rgba(0,232,122,.15);color:var(--green)}
-.ri-l{background:rgba(255,59,92,.15);color:var(--red)}
-.ri-h{background:rgba(255,184,0,.15);color:var(--yellow)}
-.ht-muted{color:var(--muted);font-size:11px}
-.ht-green{color:var(--green);font-weight:600}
-.ht-red{color:var(--red);font-weight:600}
-.ht-yellow{color:var(--yellow)}
-.ht-pred{font-family:'DM Mono',monospace;font-size:11px;background:rgba(255,255,255,.04);border-radius:4px;padding:2px 6px}
-.ht-score{font-family:'DM Mono',monospace;font-weight:700}
-.market-filter{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
-.mf-btn{background:var(--dark3);border:1px solid var(--border);border-radius:7px;padding:5px 12px;font-size:11px;font-weight:600;color:var(--muted);cursor:pointer;transition:all .15s}
-.mf-btn:hover{color:var(--text)}
-.mf-btn.active{background:rgba(0,232,122,.08);border-color:rgba(0,232,122,.28);color:var(--green)}
-.streak-row{display:flex;gap:4px;flex-wrap:wrap}
-.streak-dot{width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800}
-.sd-w{background:rgba(0,232,122,.18);color:var(--green)}
-.sd-l{background:rgba(255,59,92,.18);color:var(--red)}
-.sd-h{background:rgba(255,184,0,.18);color:var(--yellow)}
+/* ─── TODAY'S PERFORMANCE SECTION ─── */
+.perf-section{margin-bottom:28px}
+.perf-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px}
+.perf-title em{color:var(--green);font-style:normal}
+.perf-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.perf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.perf-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;transition:all .2s}
+.perf-card.win{border-color:rgba(0,232,122,.3);background:rgba(0,232,122,.03)}
+.perf-card.loss{border-color:rgba(255,59,92,.25);background:rgba(255,59,92,.02)}
+.perf-status{display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:5px;margin-bottom:10px}
+.perf-status.win{background:rgba(0,232,122,.12);color:var(--green)}
+.perf-status.loss{background:rgba(255,59,92,.12);color:var(--red)}
+.perf-status.pending{background:rgba(255,184,0,.1);color:var(--yellow)}
+.perf-match{font-size:12px;font-weight:600;margin-bottom:4px;line-height:1.4}
+.perf-pick{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);background:rgba(255,255,255,.04);border-radius:5px;padding:3px 7px;display:inline-block;margin-bottom:6px}
+.perf-odd{font-size:11px;color:var(--yellow)}
+.perf-summary{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 24px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.perf-score{font-family:'Bebas Neue',sans-serif;font-size:48px;letter-spacing:2px;line-height:1}
+.perf-score-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.perf-note{font-size:11px;color:var(--muted);font-style:italic;max-width:480px}
 
 /* ─── COMBO SECTION ─── */
 .combo-section{margin-bottom:32px}
@@ -495,44 +458,16 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
   </div>
 </div>
 
-<!-- ═══ TRACK RECORD ═══ -->
-<div class="acc-section">
+<!-- ═══ TODAY'S PERFORMANCE ═══ -->
+<div class="perf-section">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px">
     <div>
-      <div class="acc-title" data-t="trackTitle">ИСТОРИЯ & <em>ТОЧНОСТ</em></div>
-      <div class="acc-sub" data-t="trackSub">Реална история от последните 90 дни · Актуализирано: 24.02.2026</div>
-    </div>
-    <div class="market-filter" id="mfilter">
-      <button class="mf-btn active" onclick="filterMarket('all',this)" data-t="filterAll">Всички</button>
-      <button class="mf-btn" onclick="filterMarket('1x2',this)">1X2</button>
-      <button class="mf-btn" onclick="filterMarket('btts',this)">BTTS</button>
-      <button class="mf-btn" onclick="filterMarket('ou',this)" data-t="filterOU">Над/Под</button>
-      <button class="mf-btn" onclick="filterMarket('hn',this)" data-t="filterHN">Хенди</button>
+      <div class="perf-title" data-t="perfTitle">ДНЕШНО <em>ПРЕДСТАВЯНЕ</em></div>
+      <div class="perf-sub" data-t="perfSub">Резултати от прогнозите за 24.02.2026 — актуализира се след края на мачовете</div>
     </div>
   </div>
-  <div class="acc-grid" id="kpiGrid"></div>
-  <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
-    <div>
-      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px" data-t="last30">ПОСЛЕДНИ 30 ПРОГНОЗИ</div>
-      <div class="streak-row" id="streakRow"></div>
-    </div>
-    <div style="margin-left:auto;text-align:right">
-      <div style="font-size:9px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px" data-t="currentStreakLabel">Текуща серия</div>
-      <div style="font-family:'DM Mono',monospace;font-size:18px;font-weight:700;color:var(--green)" id="currentStreak"></div>
-    </div>
-  </div>
-  <div style="margin-bottom:8px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted)" data-t="historyLabel">ИСТОРИЯ НА ПРОГНОЗИТЕ</div>
-  <table class="hist-table" id="histTable">
-    <thead class="hist-thead">
-      <tr>
-        <th data-t="thDate">Дата</th><th data-t="thMatch">Мач</th><th data-t="thLeague">Лига</th><th data-t="thPred">Прогноза</th><th data-t="thOdds">Коеф.</th><th data-t="thScore">Резултат</th><th data-t="thResult">Изход</th>
-      </tr>
-    </thead>
-    <tbody class="hist-tbody" id="histBody"></tbody>
-  </table>
-  <div style="text-align:center;padding:12px 0">
-    <button onclick="loadMore()" id="loadMoreBtn" style="background:var(--dark3);border:1px solid var(--border);border-radius:8px;padding:8px 24px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s" data-t="loadMore">Покажи повече →</button>
-  </div>
+  <div class="perf-grid" id="perfGrid"></div>
+  <div class="perf-summary" id="perfSummary"></div>
 </div>
 </main>
 
@@ -567,12 +502,12 @@ const T = {
     betslipEmpty:"Добавете избори от комбинациите или от таблицата",
     bsLegsLabel:"Брой избори", bsTotalOddsLabel:"Обща квота",
     bsStakeLabel:"Залог:", bsCurrency:"лв.", bsWinLabel:"Потенциална печалба", bsPlaceBtn:"ПОСТАВИ ЗАЛОГ →",
-    trackTitle:"ИСТОРИЯ & <em>ТОЧНОСТ</em>",
-    trackSub:"Реална история от последните 90 дни · Актуализирано: 24.02.2026",
-    filterAll:"Всички", filterOU:"Над/Под", filterHN:"Хенди",
-    last30:"ПОСЛЕДНИ 30 ПРОГНОЗИ", currentStreakLabel:"Текуща серия", historyLabel:"ИСТОРИЯ НА ПРОГНОЗИТЕ",
-    thDate:"Дата", thMatch:"Мач", thLeague:"Лига", thPred:"Прогноза",
-    thOdds:"Коеф.", thScore:"Резултат", thResult:"Изход", loadMore:"Покажи повече →",
+    perfTitle:"ДНЕШНО <em>ПРЕДСТАВЯНЕ</em>",
+    perfSub:"Резултати от прогнозите за 24.02.2026 — актуализира се след края на мачовете",
+    perfPending:"⏳ Изчакване", perfWin:"✓ Победа", perfLoss:"✗ Неуспех",
+    perfOddsLabel:"Коеф:", perfScoreLabel:"ВЕРНИ / ОБЩО",
+    perfNoteAll:"Всички мачове приключиха — виж резултатите.",
+    perfNoteWaiting:"Мачовете започват в 17:45 и 20:00 ч. Резултатите ще се покажат след края.",
     homeWin:"1 — Домакин", drawOdds:"X — Равенство", awayWin:"2 — Гост",
     oddsComparison:"1 X 2 — Сравнение на коефициенти", bestBGOdds:"НАЙ-ДОБЪР БГ КФ", atBook:"в",
     keyStats:"📊 Ключова статистика", injuriesLabel:"🏥 Контузии & Наказания", fullSquad:"✅ Пълен отбор",
@@ -580,7 +515,6 @@ const T = {
     predLabel:"Прогноза", bestOddsRow:"Най-добър БГ кф", aiLabel:"🤖 AI Анализ",
     dateLabel:"Вторник, 24 Февруари 2026", todayBadge:"ДНЕС",
     leagueLabel:"UEFA Champions League — Плейоф, 2-ри крак",
-    mktOrder:[["1X2","1x2"],["BTTS","btts"],["Над/Под","ou"],["Хенди","hn"]],
   },
   en:{
     logoSub:"Licensed BG Bookmakers Only", napBadge:"NAP Licensed", liveBadge:"UCL Today",
@@ -609,12 +543,12 @@ const T = {
     betslipEmpty:"Add picks from the combos or the list below",
     bsLegsLabel:"Picks", bsTotalOddsLabel:"Total Odds",
     bsStakeLabel:"Stake:", bsCurrency:"BGN", bsWinLabel:"Potential Win", bsPlaceBtn:"PLACE BET →",
-    trackTitle:"PREDICTION <em>TRACK RECORD</em>",
-    trackSub:"Real history from the last 90 days · Updated: 24.02.2026",
-    filterAll:"All", filterOU:"Over/Under", filterHN:"Handicap",
-    last30:"LAST 30 PREDICTIONS", currentStreakLabel:"Current Streak", historyLabel:"PREDICTION HISTORY",
-    thDate:"Date", thMatch:"Match", thLeague:"League", thPred:"Prediction",
-    thOdds:"Odds", thScore:"Score", thResult:"Result", loadMore:"Show more →",
+    perfTitle:"TODAY'S <em>PERFORMANCE</em>",
+    perfSub:"Results for picks on 24.02.2026 — updates once matches end",
+    perfPending:"⏳ Pending", perfWin:"✓ Win", perfLoss:"✗ Loss",
+    perfOddsLabel:"Odds:", perfScoreLabel:"CORRECT / TOTAL",
+    perfNoteAll:"All matches have ended — check the results.",
+    perfNoteWaiting:"Matches start at 17:45 and 20:00. Results will appear once they end.",
     homeWin:"1 — Home Win", drawOdds:"X — Draw", awayWin:"2 — Away Win",
     oddsComparison:"1 X 2 — Odds Comparison", bestBGOdds:"BEST BG ODDS", atBook:"at",
     keyStats:"📊 Key Stats", injuriesLabel:"🏥 Injuries & Suspensions", fullSquad:"✅ Full Squad",
@@ -622,7 +556,6 @@ const T = {
     predLabel:"Prediction", bestOddsRow:"Best BG Odds", aiLabel:"🤖 AI Analysis",
     dateLabel:"Tuesday, 24 February 2026", todayBadge:"TODAY",
     leagueLabel:"UEFA Champions League — Playoff, 2nd Leg",
-    mktOrder:[["1X2","1x2"],["BTTS","btts"],["Over/Under","ou"],["Handicap","hn"]],
   }
 };
 
@@ -634,7 +567,7 @@ function setLang(lang){
   });
   document.getElementById('btn-bg').classList.toggle('active', lang==='bg');
   document.getElementById('btn-en').classList.toggle('active', lang==='en');
-  render(); renderAccuracy(); renderCombos(); renderCCBPicks(); renderBetslip();
+  render(); renderTodayPerf(); renderCombos(); renderCCBPicks(); renderBetslip();
 }
 
 // ─── BULGARIAN BOOKMAKERS ───
@@ -1027,203 +960,60 @@ function render(){
 render();
 
 // ════════════════════════════════════════
-// ACCURACY SECTION
+// TODAY'S PERFORMANCE SECTION
 // ════════════════════════════════════════
 
-const HISTORY = [
-  // format: date, home, away, league, market, marketLabel, pred, odds, score, result (W/L/H=half win)
-  {d:"24.02",h:"Нюкасъл",a:"Карабах",lg:"🏆 ЛЧ",mkt:"1x2",ml:"1X2",pred:"1 (Нюкасъл)",odd:"1.36",score:"TBD",res:null},
-  {d:"22.02",h:"Тотнъм",a:"Арсенал",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"2 (Арсенал)",odd:"2.10",score:"1-4",res:"W"},
-  {d:"22.02",h:"Тотнъм",a:"Арсенал",lg:"🏴 ПЛ",mkt:"ou",ml:"Над/Под",pred:"Над 3.5",odd:"2.00",score:"1-4",res:"W"},
-  {d:"22.02",h:"Сундерланд",a:"Фулъм",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"2 (Фулъм)",odd:"2.15",score:"1-3",res:"W"},
-  {d:"22.02",h:"Крист.Палас",a:"Уулвър.",lg:"🏴 ПЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Не",odd:"1.72",score:"1-0",res:"W"},
-  {d:"22.02",h:"Барселона",a:"Леванте",lg:"🇪🇸 ЛЛ",mkt:"1x2",ml:"1X2",pred:"1 (Барселона)",odd:"1.25",score:"3-0",res:"W"},
-  {d:"22.02",h:"Барселона",a:"Леванте",lg:"🇪🇸 ЛЛ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.55",score:"3-0",res:"W"},
-  {d:"22.02",h:"Аталанта",a:"Наполи",lg:"🇮🇹 СА",mkt:"1x2",ml:"1X2",pred:"X или 1",odd:"1.65",score:"2-1",res:"W"},
-  {d:"22.02",h:"АК Милан",a:"Парма",lg:"🇮🇹 СА",mkt:"1x2",ml:"1X2",pred:"1 (Милан)",odd:"1.70",score:"0-1",res:"L"},
-  {d:"22.02",h:"Байерн",a:"Айнтрахт",lg:"🇩🇪 БЛ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.60",score:"3-2",res:"W"},
-  {d:"21.02",h:"Осасуна",a:"Реал Мадрид",lg:"🇪🇸 ЛЛ",mkt:"1x2",ml:"1X2",pred:"2 (Р.Мадрид)",odd:"1.40",score:"2-1",res:"L"},
-  {d:"21.02",h:"Атлетико",a:"Еспаньол",lg:"🇪🇸 ЛЛ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.75",score:"4-2",res:"W"},
-  {d:"21.02",h:"Атлетико",a:"Еспаньол",lg:"🇪🇸 ЛЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.65",score:"4-2",res:"W"},
-  {d:"21.02",h:"Манч.Сити",a:"Нюкасъл",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"1 (М.Сити)",odd:"1.65",score:"2-1",res:"W"},
-  {d:"21.02",h:"Ювентус",a:"Комо",lg:"🇮🇹 СА",mkt:"1x2",ml:"1X2",pred:"1 (Ювентус)",odd:"1.55",score:"0-2",res:"L"},
-  {d:"21.02",h:"РБ Лайпциг",a:"Дортмунд",lg:"🇩🇪 БЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.72",score:"2-2",res:"W"},
-  {d:"21.02",h:"Байерн",a:"Айнтрахт",lg:"🇩🇪 БЛ",mkt:"1x2",ml:"1X2",pred:"1 (Байерн)",odd:"1.45",score:"3-2",res:"W"},
-  {d:"20.02",h:"Атлетик Б.",a:"Елче",lg:"🇪🇸 ЛЛ",mkt:"1x2",ml:"1X2",pred:"1 (Атлетик)",odd:"2.00",score:"2-1",res:"W"},
-  {d:"20.02",h:"Рома",a:"Кремонезе",lg:"🇮🇹 СА",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.65",score:"3-0",res:"W"},
-  {d:"18.02",h:"Нюкасъл",a:"Карабах",lg:"🏆 ЛЧ",mkt:"1x2",ml:"1X2",pred:"1 (Нюкасъл)",odd:"1.28",score:"6-1",res:"W"},
-  {d:"18.02",h:"Нюкасъл",a:"Карабах",lg:"🏆 ЛЧ",mkt:"ou",ml:"Над/Под",pred:"Над 3.5",odd:"1.85",score:"6-1",res:"W"},
-  {d:"18.02",h:"Монако",a:"ПСЖ",lg:"🏆 ЛЧ",mkt:"1x2",ml:"1X2",pred:"2 (ПСЖ)",odd:"1.90",score:"2-3",res:"W"},
-  {d:"18.02",h:"Бенфика",a:"Реал Мадрид",lg:"🏆 ЛЧ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"2.00",score:"0-1",res:"L"},
-  {d:"17.02",h:"Дортмунд",a:"Аталанта",lg:"🏆 ЛЧ",mkt:"1x2",ml:"1X2",pred:"1X (DN загуба)",odd:"1.60",score:"2-0",res:"W"},
-  {d:"17.02",h:"Галатасарай",a:"Ювентус",lg:"🏆 ЛЧ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.70",score:"5-2",res:"W"},
-  {d:"17.02",h:"Галатасарай",a:"Ювентус",lg:"🏆 ЛЧ",mkt:"ou",ml:"Над/Под",pred:"Над 3.5",odd:"2.05",score:"5-2",res:"W"},
-  {d:"15.02",h:"Арсенал",a:"Ман Сити",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"1 (Арсенал)",odd:"2.20",score:"2-1",res:"W"},
-  {d:"15.02",h:"Ливърпул",a:"Евертън",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"1 (Ливърпул)",odd:"1.35",score:"3-0",res:"W"},
-  {d:"15.02",h:"Ливърпул",a:"Евертън",lg:"🏴 ПЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Не",odd:"1.80",score:"3-0",res:"W"},
-  {d:"14.02",h:"Барселона",a:"Реал Мадрид",lg:"🇪🇸 ЛЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.60",score:"2-1",res:"W"},
-  {d:"14.02",h:"Барселона",a:"Реал Мадрид",lg:"🇪🇸 ЛЛ",mkt:"1x2",ml:"1X2",pred:"1 (Барселона)",odd:"2.10",score:"2-1",res:"W"},
-  {d:"12.02",h:"Интер",a:"Наполи",lg:"🇮🇹 СА",mkt:"1x2",ml:"1X2",pred:"1X (DN загуба)",odd:"1.55",score:"2-2",res:"W"},
-  {d:"11.02",h:"Байерн",a:"Леверкузен",lg:"🇩🇪 БЛ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.65",score:"3-1",res:"W"},
-  {d:"11.02",h:"Дортмунд",a:"Щутгарт",lg:"🇩🇪 БЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.75",score:"3-2",res:"W"},
-  {d:"08.02",h:"Ман Сити",a:"Тотнъм",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"1 (М.Сити)",odd:"1.75",score:"1-0",res:"W"},
-  {d:"08.02",h:"Атлетико",a:"Виляреал",lg:"🇪🇸 ЛЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.68",score:"2-1",res:"W"},
-  {d:"07.02",h:"Байерн",a:"Кьолн",lg:"🇩🇪 БЛ",mkt:"hn",ml:"Хенди",pred:"Байерн -1.5",odd:"1.85",score:"4-1",res:"W"},
-  {d:"05.02",h:"Челси",a:"Арсенал",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"2 (Арсенал)",odd:"2.30",score:"0-2",res:"W"},
-  {d:"04.02",h:"Лацио",a:"Рома",lg:"🇮🇹 СА",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.72",score:"1-2",res:"W"},
-  {d:"02.02",h:"Реал Мадрид",a:"Атлетико",lg:"🇪🇸 ЛЛ",mkt:"1x2",ml:"1X2",pred:"1X (DN загуба)",odd:"1.45",score:"2-2",res:"W"},
-  {d:"01.02",h:"Ман Сити",a:"Арсенал",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"2 (Арсенал)",odd:"2.15",score:"3-1",res:"L"},
-  {d:"28.01",h:"Нюкасъл",a:"Евертън",lg:"🏴 ПЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Не",odd:"1.78",score:"1-0",res:"W"},
-  {d:"26.01",h:"Интер",a:"Аталанта",lg:"🇮🇹 СА",mkt:"1x2",ml:"1X2",pred:"1 (Интер)",odd:"1.72",score:"2-0",res:"W"},
-  {d:"25.01",h:"Барселона",a:"Атлетик Б.",lg:"🇪🇸 ЛЛ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.70",score:"2-0",res:"L"},
-  {d:"22.01",h:"Реал Мадрид",a:"Леванте",lg:"🇪🇸 ЛЛ",mkt:"1x2",ml:"1X2",pred:"1 (Р.Мадрид)",odd:"1.30",score:"3-0",res:"W"},
-  {d:"19.01",h:"Байерн",a:"РБ Лайпциг",lg:"🇩🇪 БЛ",mkt:"1x2",ml:"1X2",pred:"1 (Байерн)",odd:"1.55",score:"2-0",res:"W"},
-  {d:"18.01",h:"Арсенал",a:"Фулъм",lg:"🏴 ПЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.65",score:"1-1",res:"W"},
-  {d:"15.01",h:"Ювентус",a:"Милан",lg:"🇮🇹 СА",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.68",score:"0-1",res:"L"},
-  {d:"12.01",h:"Дортмунд",a:"Байерн",lg:"🇩🇪 БЛ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.70",score:"1-4",res:"W"},
-  {d:"10.01",h:"Тотнъм",a:"Ман Юнайтед",lg:"🏴 ПЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.72",score:"2-1",res:"W"},
-];
+// Update these after matches end: null = pending, 'W' = win, 'L' = loss
+const TODAY_RESULTS = {
+  atm_bru: null,  // Atletico Madrid vs Club Brugge — BTTS Yes
+  lev_oly: null,  // Bayer Leverkusen vs Olympiacos — Leverkusen Win
+  new_qar: null,  // Newcastle United vs Qarabag — Newcastle Win
+  int_bog: null,  // Inter Milan vs Bodo/Glimt — Bodo/Glimt Qualification
+};
 
-let visibleRows = 15;
-let currentMarket = 'all';
+const EN_MATCH_NAMES = {
+  atm_bru: "Atletico Madrid vs Club Brugge",
+  lev_oly: "Bayer Leverkusen vs Olympiacos",
+  new_qar: "Newcastle United vs Qarabag",
+  int_bog:  "Inter Milan vs Bodo/Glimt",
+};
 
-function getFiltered(){
-  if(currentMarket==='all') return HISTORY.filter(x=>x.res!==null);
-  return HISTORY.filter(x=>x.res!==null && x.mkt===currentMarket);
-}
-
-function calcKPIs(data){
-  const total = data.length;
-  const wins  = data.filter(x=>x.res==='W').length;
-  const losses= data.filter(x=>x.res==='L').length;
-  const byMkt = {};
-  data.forEach(x=>{
-    if(!byMkt[x.ml]) byMkt[x.ml]={w:0,t:0};
-    byMkt[x.ml].t++; if(x.res==='W') byMkt[x.ml].w++;
-  });
-  return { total, wins, losses, pct: total? Math.round(wins/total*100):0, byMkt };
-}
-
-function ring(pct, color){
-  const r=22, circ=2*Math.PI*r;
-  const off=circ*(1-pct/100);
-  return `<div class="acc-ringwrap">
-    <svg class="acc-ring-svg" width="52" height="52" viewBox="0 0 52 52">
-      <circle class="acc-ring-bg" cx="26" cy="26" r="${r}"/>
-      <circle class="acc-ring-fill" cx="26" cy="26" r="${r}"
-        stroke="${color}" stroke-dasharray="${circ}" stroke-dashoffset="${off}"/>
-    </svg>
-    <div class="acc-ring-text" style="color:${color}">${pct}%</div>
-  </div>`;
-}
-
-function renderKPIs(){
-  const data = getFiltered();
-  const {total,wins,losses,pct,byMkt} = calcKPIs(data);
-  const color = pct>=70?'var(--green)':pct>=55?'var(--yellow)':'var(--red)';
-  const clr   = pct>=70?'clr-hi':pct>=55?'clr-md':'clr-lo';
-  const trend = pct>=70?'↑ +3.2%':'↓ -1.1%';
-  const trendCls = pct>=70?'acc-trend-up':'acc-trend-dn';
-
-  // Market breakdown bars
-  const mktOrder = T[currentLang].mktOrder;
-  const barsHtml = mktOrder.map(([label,key])=>{
-    const m = byMkt[label]||{w:0,t:0};
-    const p = m.t? Math.round(m.w/m.t*100):0;
-    const c = p>=70?'var(--green)':p>=55?'var(--yellow)':'var(--red)';
-    return `<div class="acc-bar-row">
-      <span class="acc-bar-label">${label}</span>
-      <div class="acc-bar-track"><div class="acc-bar-fill" style="width:${p}%;background:${c}"></div></div>
-      <span class="acc-bar-val" style="color:${c}">${p}%</span>
+function renderTodayPerf(){
+  const lang = currentLang;
+  const cards = MATCHES.map(m => {
+    const res = TODAY_RESULTS[m.id];
+    const statusKey = res === 'W' ? 'perfWin' : res === 'L' ? 'perfLoss' : 'perfPending';
+    const statusCls = res === 'W' ? 'win' : res === 'L' ? 'loss' : 'pending';
+    const cardCls   = res ? statusCls : '';
+    const matchName = lang === 'en' ? EN_MATCH_NAMES[m.id] : `${m.home} — ${m.away}`;
+    const bet = lang === 'en' ? m.pick.betEn : m.pick.bet;
+    return `<div class="perf-card ${cardCls}">
+      <div class="perf-status ${statusCls}">${T[lang][statusKey]}</div>
+      <div class="perf-match">${matchName}</div>
+      <div class="perf-pick">${bet}</div>
+      <div class="perf-odd">${T[lang].perfOddsLabel} ${m.pick.odd} @ ${m.pick.book}</div>
     </div>`;
   }).join('');
 
-  const roiPct = (data.reduce((s,x)=>{
-    const o=parseFloat(x.odd); return x.res==='W'?s+(o-1):s-1;
-  },0)/Math.max(total,1)*100).toFixed(1);
-  const roiColor = parseFloat(roiPct)>0?'var(--green)':'var(--red)';
+  const wins  = Object.values(TODAY_RESULTS).filter(r => r === 'W').length;
+  const dones = Object.values(TODAY_RESULTS).filter(r => r !== null).length;
+  const total = MATCHES.length;
+  const allDone = dones === total;
+  const pct = dones ? Math.round(wins / dones * 100) : null;
+  const scoreColor = pct === null ? 'var(--yellow)' : pct >= 75 ? 'var(--green)' : pct >= 50 ? 'var(--yellow)' : 'var(--red)';
+  const scoreDisplay = dones > 0 ? `${wins}/${dones}` : `0/${total}`;
 
-  document.getElementById('kpiGrid').innerHTML = `
-    <div class="acc-card">
-      <div class="acc-card-top"><span class="acc-card-label">Обща точност</span><span class="acc-trend ${trendCls}">${trend}</span></div>
-      <div style="display:flex;align-items:center;gap:14px">
-        ${ring(pct, color)}
-        <div>
-          <div class="acc-big ${clr}">${pct}<span style="font-size:20px">%</span></div>
-          <div style="font-size:10px;color:var(--muted);margin-top:3px">${wins}П / ${losses}Г / ${total} общо</div>
-        </div>
-      </div>
+  const summary = `
+    <div>
+      <div class="perf-score" style="color:${scoreColor}">${scoreDisplay}</div>
+      <div class="perf-score-label">${T[lang].perfScoreLabel}</div>
     </div>
-    <div class="acc-card">
-      <div class="acc-card-top"><span class="acc-card-label">По пазари</span></div>
-      <div class="acc-bar-wrap">${barsHtml}</div>
-    </div>
-    <div class="acc-card">
-      <div class="acc-card-top"><span class="acc-card-label">ROI (добив)</span><span class="acc-trend ${parseFloat(roiPct)>0?'acc-trend-up':'acc-trend-dn'}">${parseFloat(roiPct)>0?'Печеливш':'Губещ'}</span></div>
-      <div style="display:flex;align-items:flex-end;gap:6px;margin-top:6px">
-        <div class="acc-big" style="color:${roiColor}">${parseFloat(roiPct)>0?'+':''}${roiPct}<span style="font-size:16px">%</span></div>
-      </div>
-      <div style="font-size:10px;color:var(--muted)">На единица залог (при 1 лев залог)</div>
-    </div>
-    <div class="acc-card">
-      <div class="acc-card-top"><span class="acc-card-label">Средна квота</span></div>
-      <div class="acc-big clr-hi" style="margin-top:6px">${(data.reduce((s,x)=>s+parseFloat(x.odd),0)/Math.max(total,1)).toFixed(2)}</div>
-      <div style="font-size:10px;color:var(--muted);margin-top:3px">Средна стойност на коефициент</div>
-      <div style="font-size:10px;color:var(--yellow);margin-top:2px">Най-висок: ${Math.max(...data.map(x=>parseFloat(x.odd))).toFixed(2)}</div>
-    </div>`;
+    <div class="perf-note">${allDone ? T[lang].perfNoteAll : T[lang].perfNoteWaiting}</div>`;
+
+  document.getElementById('perfGrid').innerHTML = cards;
+  document.getElementById('perfSummary').innerHTML = summary;
 }
-
-function renderStreak(){
-  const data = getFiltered().slice(0,30);
-  let streak=0, streakType=null;
-  for(let i=0;i<data.length;i++){
-    if(i===0){streakType=data[i].res;streak=1}
-    else if(data[i].res===streakType) streak++;
-    else break;
-  }
-  const streakLabel = streakType==='W'?`🔥 ${streak} поредни ПОБЕДИm`:`❄️ ${streak} поредни НЕУСПЕХИ`;
-  document.getElementById('currentStreak').textContent = streakLabel.replace('m','');
-  document.getElementById('streakRow').innerHTML = data.map(x=>{
-    const cls = x.res==='W'?'sd-w':'sd-l';
-    const icon = x.res==='W'?'✓':'✗';
-    return `<div class="streak-dot ${cls}" title="${x.h} vs ${x.a}">${icon}</div>`;
-  }).join('');
-}
-
-function renderHistTable(){
-  const data = getFiltered();
-  const rows = data.slice(0, visibleRows);
-  document.getElementById('histBody').innerHTML = rows.map(x=>{
-    const iconCls = x.res==='W'?'ri-w':'ri-l';
-    const iconTxt = x.res==='W'?'✓':'✗';
-    const resCls  = x.res==='W'?'ht-green':'ht-red';
-    const resTxt  = x.res==='W'?'ПОЗНАТА':'НЕУСПЕХ';
-    return `<tr>
-      <td class="ht-muted">${x.d}</td>
-      <td style="font-weight:500;font-size:12px">${x.h} — ${x.a}</td>
-      <td class="ht-muted">${x.lg}</td>
-      <td><span class="ht-pred">${x.pred}</span> <span style="font-size:9px;color:var(--muted)">(${x.ml})</span></td>
-      <td style="font-family:'DM Mono',monospace;font-size:12px;color:var(--yellow)">${x.odd}</td>
-      <td class="ht-score">${x.score}</td>
-      <td><span class="${resCls}" style="display:flex;align-items:center;gap:5px"><span class="res-icon ${iconCls}">${iconTxt}</span>${resTxt}</span></td>
-    </tr>`;
-  }).join('');
-  const btn = document.getElementById('loadMoreBtn');
-  if(visibleRows>=data.length){ btn.style.display='none'; }
-  else { btn.style.display=''; btn.textContent=`Покажи повече (${data.length-visibleRows} останали) →`; }
-}
-
-function loadMore(){ visibleRows+=15; renderHistTable(); }
-
-function filterMarket(mkt, btn){
-  currentMarket=mkt; visibleRows=15;
-  document.querySelectorAll('.mf-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  renderKPIs(); renderStreak(); renderHistTable();
-}
-
-function renderAccuracy(){ renderKPIs(); renderStreak(); renderHistTable(); }
-renderAccuracy();
+renderTodayPerf();
 
 // ════════════════════════════════════════
 // COMBO / BETSLIP SECTION
