@@ -332,6 +332,13 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 .ccb-add.off{background:var(--dark3);color:var(--muted);border:1px solid var(--border)}
 .ccb-add.on{background:rgba(255,184,0,.15);color:var(--yellow);border:1px solid rgba(255,184,0,.3)}
 
+.lang-toggle{display:flex;background:var(--dark3);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.lang-btn{padding:5px 11px;font-size:11px;font-weight:700;letter-spacing:1px;border:none;background:none;color:var(--muted);cursor:pointer;transition:all .15s}
+.lang-btn.active{background:var(--green);color:#000}
+.picks-header{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.picks-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px}
+.picks-sub{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+
 @media(max-width:920px){
   .combo-cards{grid-template-columns:1fr}
   .layout{grid-template-columns:1fr}.sidebar{display:none}
@@ -345,12 +352,16 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 <header>
   <div>
     <div class="logo"><div class="logo-dot"></div>ПРОГНОЗА</div>
-    <div class="logo-sub">Само лицензирани БГ букмейкъри</div>
+    <div class="logo-sub" data-t="logoSub">Само лицензирани БГ букмейкъри</div>
   </div>
   <div class="hright">
-    <div class="hbadge hbadge-bg">🇧🇬 НАП Лицензирани</div>
-    <div class="hbadge hbadge-live"><div class="hbadge-dot"></div>ЛЧ Днес</div>
+    <div class="hbadge hbadge-bg">🇧🇬 <span data-t="napBadge">НАП Лицензирани</span></div>
+    <div class="hbadge hbadge-live"><div class="hbadge-dot"></div><span data-t="liveBadge">ЛЧ Днес</span></div>
     <span class="hdate">24.02.2026</span>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-bg" onclick="setLang('bg')">БГ</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
   </div>
 </header>
 
@@ -358,19 +369,19 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 
 <div class="hero">
   <div>
-    <h1>АНАЛИЗ & КОЕФИЦИЕНТИ<br>ОТ <em>БЪЛГАРСКИ БУКМЕЙКЪРИ</em></h1>
-    <p>Сравнение на коефициенти от лицензирани в България оператори (НАП). Намери най-добрата ставка за Шампионска лига — 24 Февруари 2026.</p>
+    <h1 data-t="heroH1">АНАЛИЗ & КОЕФИЦИЕНТИ<br>ОТ <em>БЪЛГАРСКИ БУКМЕЙКЪРИ</em></h1>
+    <p data-t="heroP">Сравнение на коефициенти от лицензирани в България оператори (НАП). Намери най-добрата ставка за Шампионска лига — 24 Февруари 2026.</p>
   </div>
   <div class="hero-stats">
-    <div class="hst"><div class="hst-v">8</div><div class="hst-l">Букмейкъра</div></div>
-    <div class="hst"><div class="hst-v">4</div><div class="hst-l">ЛЧ Мача</div></div>
-    <div class="hst"><div class="hst-v">24</div><div class="hst-l">Пазара</div></div>
+    <div class="hst"><div class="hst-v">8</div><div class="hst-l" data-t="statBooks">Букмейкъра</div></div>
+    <div class="hst"><div class="hst-v">4</div><div class="hst-l" data-t="statMatches">ЛЧ Мача</div></div>
+    <div class="hst"><div class="hst-v">24</div><div class="hst-l" data-t="statMarkets">Пазара</div></div>
   </div>
 </div>
 
 <!-- BOOKMAKER LEGEND -->
 <div class="bg-books-bar">
-  <span class="bgb-title">🇧🇬 + 🌍 Букмейкъри:</span>
+  <span class="bgb-title" data-t="booksTitle">🇧🇬 + 🌍 Букмейкъри:</span>
   <div class="bgb-chip"><div class="bgb-dot" style="background:#1C7A2E"></div>Bet365 <small>🌍 Международен</small></div>
   <div class="bgb-chip"><div class="bgb-dot" style="background:#0F4F8C"></div>Palms Bet <small>БГ</small></div>
   <div class="bgb-chip"><div class="bgb-dot" style="background:#2563EB"></div>Winbet <small>БГ</small></div>
@@ -381,150 +392,251 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
   <div class="bgb-chip"><div class="bgb-dot" style="background:#475569"></div>Efbet <small>БГ</small></div>
 </div>
 
-<!-- ═══ ACCURACY SECTION ═══ -->
-<div class="acc-section">
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px">
-    <div>
-      <div class="acc-title">ТОЧНОСТ НА <em>ПРОГНОЗИТЕ</em></div>
-      <div class="acc-sub">Реална история от последните 90 дни · Актуализирано: 24.02.2026</div>
-    </div>
-    <div class="market-filter" id="mfilter">
-      <button class="mf-btn active" onclick="filterMarket('all',this)">Всички</button>
-      <button class="mf-btn" onclick="filterMarket('1x2',this)">1X2</button>
-      <button class="mf-btn" onclick="filterMarket('btts',this)">BTTS</button>
-      <button class="mf-btn" onclick="filterMarket('ou',this)">Над/Под</button>
-      <button class="mf-btn" onclick="filterMarket('hn',this)">Хенди</button>
-    </div>
-  </div>
-  <div class="acc-grid" id="kpiGrid"></div>
-  <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
-    <div>
-      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">ПОСЛЕДНИ 30 ПРОГНОЗИ</div>
-      <div class="streak-row" id="streakRow"></div>
-    </div>
-    <div style="margin-left:auto;text-align:right">
-      <div style="font-size:9px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Текуща серия</div>
-      <div style="font-family:'DM Mono',monospace;font-size:18px;font-weight:700;color:var(--green)" id="currentStreak"></div>
-    </div>
-  </div>
-  <div style="margin-bottom:8px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">ИСТОРИЯ НА ПРОГНОЗИТЕ</div>
-  <table class="hist-table" id="histTable">
-    <thead class="hist-thead">
-      <tr>
-        <th>Дата</th><th>Мач</th><th>Лига</th><th>Прогноза</th><th>Коеф.</th><th>Резултат</th><th>Изход</th>
-      </tr>
-    </thead>
-    <tbody class="hist-tbody" id="histBody"></tbody>
-  </table>
-  <div style="text-align:center;padding:12px 0">
-    <button onclick="loadMore()" id="loadMoreBtn" style="background:var(--dark3);border:1px solid var(--border);border-radius:8px;padding:8px 24px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s">Покажи повече →</button>
-  </div>
+<!-- ═══ TODAY'S PICKS ═══ -->
+<div class="picks-header">
+  <div class="picks-title" data-t="todayTitle">ДНЕШНИ <em style="color:var(--green)">ПРОГНОЗИ</em></div>
+  <div style="flex:1;height:1px;background:var(--border)"></div>
+  <div class="picks-sub" data-t="todaySub">Шампионска лига · 24.02.2026</div>
 </div>
-
-<!-- ═══ COMBO SECTION ═══ -->
-<div class="combo-section">
-  <div class="combo-header">
-    <div>
-      <div class="combo-title">КОМБИНИРАНИ <em>ЗАЛОЗИ</em></div>
-      <div class="combo-sub">Готови комбинации от 2 до 5 мача · Изберете комбинация или изградете своя</div>
-    </div>
-    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
-      <div id="oddsStatus" style="font-size:11px;color:var(--muted)">
-        <span style="color:var(--muted)">⏳ Зарежда реални коефициенти от Bet365...</span>
-      </div>
-      <div id="oddsLoadingBar" style="width:200px;height:3px;background:var(--dark3);border-radius:2px;overflow:hidden;display:flex">
-        <div style="height:100%;width:40%;background:linear-gradient(90deg,transparent,var(--yellow),transparent);animation:shimmer 1.5s infinite"></div>
-      </div>
-      <button onclick="fetchLiveOdds()" style="background:rgba(255,184,0,.08);border:1px solid rgba(255,184,0,.25);border-radius:7px;padding:4px 12px;font-size:11px;font-weight:600;color:var(--yellow);cursor:pointer">🔄 Обнови коефициенти</button>
-    </div>
-  </div>
-
-  <!-- PRESET COMBOS -->
-  <div class="combo-cards" id="comboCards"></div>
-
-  <!-- CUSTOM BUILDER + BETSLIP -->
-  <div style="display:grid;grid-template-columns:1fr 320px;gap:14px;align-items:start">
-    <div class="custom-combo-builder">
-      <div class="ccb-title">🔧 Изгради своя комбинация</div>
-      <div class="ccb-picks" id="ccbPicks"></div>
-    </div>
-    <div class="betslip">
-      <div class="bs-header">
-        <div class="bs-title">🎟 Бетслип</div>
-        <div class="bs-count" id="bsCount">0 избора</div>
-      </div>
-      <div id="bsLegs"><div class="bs-empty">Добавете избори от комбинациите или от таблицата</div></div>
-      <div class="bs-totals" id="bsTotals" style="display:none">
-        <div class="bs-total-row"><span class="bs-total-label">Брой избори</span><span class="bs-total-val" id="bsLegsCount">0</span></div>
-        <div class="bs-total-row"><span class="bs-total-label">Обща квота</span><span class="bs-total-val" id="bsTotalOdd" style="color:var(--yellow)">0.00</span></div>
-        <div class="bs-stake-row">
-          <span class="bs-stake-label">Залог:</span>
-          <input class="bs-stake-input" id="bsStake" type="number" placeholder="10" min="1" oninput="recalcBetslip()">
-          <span class="bs-lv">лв.</span>
-        </div>
-        <div class="bs-total-row final"><span class="bs-total-label">Потенциална печалба</span><span class="bs-total-val" id="bsWin">0.00 лв.</span></div>
-        <button class="bs-place-btn" onclick="placeBet()">ПОСТАВИ ЗАЛОГ →</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ═══ END COMBO ═══ -->
 
 <div class="layout">
 <div id="container"></div>
 
 <div class="sidebar">
-
   <div class="top-pick">
-    <div class="tp-title">⭐ Топ избор на деня</div>
+    <div class="tp-title" data-t="topPickTitle">⭐ Топ избор на деня</div>
     <div class="tp-match">Интер — Будьо/Глимт</div>
-    <div class="tp-bet">Будьо квалификация</div>
+    <div class="tp-bet" data-t="topPickBet">Будьо квалификация</div>
     <div class="tp-odd-row">
       <div class="tp-odd">2.25</div>
       <div>
         <div class="tp-book">Bet365</div>
-        <div class="tp-conf" style="color:var(--green)">55% реален шанс</div>
+        <div class="tp-conf" style="color:var(--green)" data-t="topPickConf">55% реален шанс</div>
       </div>
     </div>
-    <div class="tp-conf" style="margin-top:8px">Водят 3-1 след 1-ви крак. Без Лаутаро. Ценностен залог!</div>
+    <div class="tp-conf" style="margin-top:8px" data-t="topPickNote">Водят 3-1 след 1-ви крак. Без Лаутаро. Ценностен залог!</div>
   </div>
 
   <div class="scard">
-    <div class="stitle">💡 ВСИЧКИ ПРЕПОРЪКИ</div>
-    <div class="srow"><span class="sname">BTTS Атлетико-Брюж</span><span class="sbg sg">1.72 Bet365</span></div>
-    <div class="srow"><span class="sname">Нюкасъл победа</span><span class="sbg sg">1.40 Bet365</span></div>
-    <div class="srow"><span class="sname">Леверкузен победа</span><span class="sbg sg">1.62 Bet365</span></div>
-    <div class="srow"><span class="sname">Над 2.5 Атлетико</span><span class="sbg sg">2.00 Bet365</span></div>
-    <div class="srow"><span class="sname">Интер Над 2.5</span><span class="sbg sy">1.85 Bet365</span></div>
-    <div class="srow"><span class="sname">Будьо квалификация</span><span class="sbg sy">2.25 Bet365</span></div>
+    <div class="stitle" data-t="allPicksTitle">💡 ВСИЧКИ ПРЕПОРЪКИ</div>
+    <div class="srow"><span class="sname" data-t="pick1">BTTS Атлетико-Брюж</span><span class="sbg sg">1.72 Bet365</span></div>
+    <div class="srow"><span class="sname" data-t="pick2">Нюкасъл победа</span><span class="sbg sg">1.40 Bet365</span></div>
+    <div class="srow"><span class="sname" data-t="pick3">Леверкузен победа</span><span class="sbg sg">1.62 Bet365</span></div>
+    <div class="srow"><span class="sname" data-t="pick4">Над 2.5 Атлетико</span><span class="sbg sg">2.00 Bet365</span></div>
+    <div class="srow"><span class="sname" data-t="pick5">Интер Над 2.5</span><span class="sbg sy">1.85 Bet365</span></div>
+    <div class="srow"><span class="sname" data-t="pick6">Будьо квалификация</span><span class="sbg sy">2.25 Bet365</span></div>
   </div>
 
   <div class="scard">
-    <div class="stitle">🏅 БУКМЕЙКЪРИ РАНГЛИСТ</div>
-    <div class="srow"><span class="sname">Най-висок коеф (ЛЧ)</span><span class="sbg sg">Bet365</span></div>
-    <div class="srow"><span class="sname">Най-много пазари</span><span class="sbg sb">Bet365 / Betano</span></div>
-    <div class="srow"><span class="sname">Най-нисък марж</span><span class="sbg sg">Sesame ~4%</span></div>
-    <div class="srow"><span class="sname">Без лимит залог</span><span class="sbg sg">Palms Bet</span></div>
-    <div class="srow"><span class="sname">Най-бърз кешаут</span><span class="sbg sb">Bet365 / Betano</span></div>
+    <div class="stitle" data-t="bookRankTitle">🏅 БУКМЕЙКЪРИ РАНГЛИСТ</div>
+    <div class="srow"><span class="sname" data-t="rank1">Най-висок коеф (ЛЧ)</span><span class="sbg sg">Bet365</span></div>
+    <div class="srow"><span class="sname" data-t="rank2">Най-много пазари</span><span class="sbg sb">Bet365 / Betano</span></div>
+    <div class="srow"><span class="sname" data-t="rank3">Най-нисък марж</span><span class="sbg sg">Sesame ~4%</span></div>
+    <div class="srow"><span class="sname" data-t="rank4">Без лимит залог</span><span class="sbg sg">Palms Bet</span></div>
+    <div class="srow"><span class="sname" data-t="rank5">Най-бърз кешаут</span><span class="sbg sb">Bet365 / Betano</span></div>
   </div>
 
   <div class="scard">
-    <div class="stitle">📊 ЛЧ ТРЕНД</div>
-    <div class="srow"><span class="sname">Атлетико BTTS (посл.10)</span><span class="sbg sg">8/10</span></div>
-    <div class="srow"><span class="sname">Будьо Над 2.5 (посл.9)</span><span class="sbg sg">8/9</span></div>
-    <div class="srow"><span class="sname">Интер Над 2.5 (КО)</span><span class="sbg sg">7/7</span></div>
-    <div class="srow"><span class="sname">Олимпиакос гост в ЛЧ</span><span class="sbg sr">12 загуби</span></div>
+    <div class="stitle" data-t="trendTitle">📊 ЛЧ ТРЕНД</div>
+    <div class="srow"><span class="sname" data-t="trend1">Атлетико BTTS (посл.10)</span><span class="sbg sg">8/10</span></div>
+    <div class="srow"><span class="sname" data-t="trend2">Будьо Над 2.5 (посл.9)</span><span class="sbg sg">8/9</span></div>
+    <div class="srow"><span class="sname" data-t="trend3">Интер Над 2.5 (КО)</span><span class="sbg sg">7/7</span></div>
+    <div class="srow"><span class="sname" data-t="trend4">Олимпиакос гост в ЛЧ</span><span class="sbg sr">12 загуби</span></div>
   </div>
 
   <div class="disc">
-    <strong>⚠️ Отговорна игра</strong><br>
-    Залагането носи риск. Играй отговорно. Всички оператори тук са лицензирани от НАП — Национална агенция за приходите на Република България. 18+
+    <strong data-t="discTitle">⚠️ Отговорна игра</strong><br>
+    <span data-t="discText">Залагането носи риск. Играй отговорно. Всички оператори тук са лицензирани от НАП — Национална агенция за приходите на Република България. 18+</span>
   </div>
 </div>
+</div>
+
+<!-- ═══ COMBO BUILDER ═══ -->
+<div class="combo-section">
+  <div class="combo-header">
+    <div>
+      <div class="combo-title" data-t="comboTitle">КОМБИНИРАНИ <em>ЗАЛОЗИ</em></div>
+      <div class="combo-sub" data-t="comboSub">Готови комбинации от 2 до 5 мача · Изберете комбинация или изградете своя</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+      <div id="oddsStatus" style="font-size:11px;color:var(--muted)">
+        <span data-t="oddsLoading" style="color:var(--muted)">⏳ Зарежда реални коефициенти от Bet365...</span>
+      </div>
+      <div id="oddsLoadingBar" style="width:200px;height:3px;background:var(--dark3);border-radius:2px;overflow:hidden;display:flex">
+        <div style="height:100%;width:40%;background:linear-gradient(90deg,transparent,var(--yellow),transparent);animation:shimmer 1.5s infinite"></div>
+      </div>
+      <button onclick="fetchLiveOdds()" style="background:rgba(255,184,0,.08);border:1px solid rgba(255,184,0,.25);border-radius:7px;padding:4px 12px;font-size:11px;font-weight:600;color:var(--yellow);cursor:pointer" data-t="refreshBtn">🔄 Обнови коефициенти</button>
+    </div>
+  </div>
+  <div class="combo-cards" id="comboCards"></div>
+  <div style="display:grid;grid-template-columns:1fr 320px;gap:14px;align-items:start">
+    <div class="custom-combo-builder">
+      <div class="ccb-title" data-t="buildComboTitle">🔧 Изгради своя комбинация</div>
+      <div class="ccb-picks" id="ccbPicks"></div>
+    </div>
+    <div class="betslip">
+      <div class="bs-header">
+        <div class="bs-title" data-t="betslipTitle">🎟 Бетслип</div>
+        <div class="bs-count" id="bsCount">0 избора</div>
+      </div>
+      <div id="bsLegs"><div class="bs-empty" data-t="betslipEmpty">Добавете избори от комбинациите или от таблицата</div></div>
+      <div class="bs-totals" id="bsTotals" style="display:none">
+        <div class="bs-total-row"><span class="bs-total-label" data-t="bsLegsLabel">Брой избори</span><span class="bs-total-val" id="bsLegsCount">0</span></div>
+        <div class="bs-total-row"><span class="bs-total-label" data-t="bsTotalOddsLabel">Обща квота</span><span class="bs-total-val" id="bsTotalOdd" style="color:var(--yellow)">0.00</span></div>
+        <div class="bs-stake-row">
+          <span class="bs-stake-label" data-t="bsStakeLabel">Залог:</span>
+          <input class="bs-stake-input" id="bsStake" type="number" placeholder="10" min="1" oninput="recalcBetslip()">
+          <span class="bs-lv" data-t="bsCurrency">лв.</span>
+        </div>
+        <div class="bs-total-row final"><span class="bs-total-label" data-t="bsWinLabel">Потенциална печалба</span><span class="bs-total-val" id="bsWin">0.00 лв.</span></div>
+        <button class="bs-place-btn" onclick="placeBet()" data-t="bsPlaceBtn">ПОСТАВИ ЗАЛОГ →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TRACK RECORD ═══ -->
+<div class="acc-section">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px">
+    <div>
+      <div class="acc-title" data-t="trackTitle">ИСТОРИЯ & <em>ТОЧНОСТ</em></div>
+      <div class="acc-sub" data-t="trackSub">Реална история от последните 90 дни · Актуализирано: 24.02.2026</div>
+    </div>
+    <div class="market-filter" id="mfilter">
+      <button class="mf-btn active" onclick="filterMarket('all',this)" data-t="filterAll">Всички</button>
+      <button class="mf-btn" onclick="filterMarket('1x2',this)">1X2</button>
+      <button class="mf-btn" onclick="filterMarket('btts',this)">BTTS</button>
+      <button class="mf-btn" onclick="filterMarket('ou',this)" data-t="filterOU">Над/Под</button>
+      <button class="mf-btn" onclick="filterMarket('hn',this)" data-t="filterHN">Хенди</button>
+    </div>
+  </div>
+  <div class="acc-grid" id="kpiGrid"></div>
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+    <div>
+      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px" data-t="last30">ПОСЛЕДНИ 30 ПРОГНОЗИ</div>
+      <div class="streak-row" id="streakRow"></div>
+    </div>
+    <div style="margin-left:auto;text-align:right">
+      <div style="font-size:9px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px" data-t="currentStreakLabel">Текуща серия</div>
+      <div style="font-family:'DM Mono',monospace;font-size:18px;font-weight:700;color:var(--green)" id="currentStreak"></div>
+    </div>
+  </div>
+  <div style="margin-bottom:8px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted)" data-t="historyLabel">ИСТОРИЯ НА ПРОГНОЗИТЕ</div>
+  <table class="hist-table" id="histTable">
+    <thead class="hist-thead">
+      <tr>
+        <th data-t="thDate">Дата</th><th data-t="thMatch">Мач</th><th data-t="thLeague">Лига</th><th data-t="thPred">Прогноза</th><th data-t="thOdds">Коеф.</th><th data-t="thScore">Резултат</th><th data-t="thResult">Изход</th>
+      </tr>
+    </thead>
+    <tbody class="hist-tbody" id="histBody"></tbody>
+  </table>
+  <div style="text-align:center;padding:12px 0">
+    <button onclick="loadMore()" id="loadMoreBtn" style="background:var(--dark3);border:1px solid var(--border);border-radius:8px;padding:8px 24px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s" data-t="loadMore">Покажи повече →</button>
+  </div>
 </div>
 </main>
 
 <script>
+// ─── LANGUAGE ───
+let currentLang = 'bg';
+const T = {
+  bg:{
+    logoSub:"Само лицензирани БГ букмейкъри", napBadge:"НАП Лицензирани", liveBadge:"ЛЧ Днес",
+    heroH1:"АНАЛИЗ & КОЕФИЦИЕНТИ<br>ОТ <em>БЪЛГАРСКИ БУКМЕЙКЪРИ</em>",
+    heroP:"Сравнение на коефициенти от лицензирани в България оператори (НАП). Намери най-добрата ставка за Шампионска лига — 24 Февруари 2026.",
+    statBooks:"Букмейкъра", statMatches:"ЛЧ Мача", statMarkets:"Пазара",
+    booksTitle:"🇧🇬 + 🌍 Букмейкъри:",
+    todayTitle:"ДНЕШНИ <em style=\"color:var(--green)\">ПРОГНОЗИ</em>", todaySub:"Шампионска лига · 24.02.2026",
+    topPickTitle:"⭐ Топ избор на деня", topPickBet:"Будьо квалификация", topPickConf:"55% реален шанс",
+    topPickNote:"Водят 3-1 след 1-ви крак. Без Лаутаро. Ценностен залог!",
+    allPicksTitle:"💡 ВСИЧКИ ПРЕПОРЪКИ",
+    pick1:"BTTS Атлетико-Брюж", pick2:"Нюкасъл победа", pick3:"Леверкузен победа",
+    pick4:"Над 2.5 Атлетико", pick5:"Интер Над 2.5", pick6:"Будьо квалификация",
+    bookRankTitle:"🏅 БУКМЕЙКЪРИ РАНГЛИСТ",
+    rank1:"Най-висок коеф (ЛЧ)", rank2:"Най-много пазари", rank3:"Най-нисък марж",
+    rank4:"Без лимит залог", rank5:"Най-бърз кешаут",
+    trendTitle:"📊 ЛЧ ТРЕНД",
+    trend1:"Атлетико BTTS (посл.10)", trend2:"Будьо Над 2.5 (посл.9)",
+    trend3:"Интер Над 2.5 (КО)", trend4:"Олимпиакос гост в ЛЧ",
+    discTitle:"⚠️ Отговорна игра",
+    discText:"Залагането носи риск. Играй отговорно. Всички оператори тук са лицензирани от НАП — Национална агенция за приходите на Република България. 18+",
+    comboTitle:"КОМБИНИРАНИ <em>ЗАЛОЗИ</em>",
+    comboSub:"Готови комбинации от 2 до 5 мача · Изберете комбинация или изградете своя",
+    oddsLoading:"⏳ Зарежда реални коефициенти от Bet365...", refreshBtn:"🔄 Обнови коефициенти",
+    buildComboTitle:"🔧 Изгради своя комбинация", betslipTitle:"🎟 Бетслип",
+    betslipEmpty:"Добавете избори от комбинациите или от таблицата",
+    bsLegsLabel:"Брой избори", bsTotalOddsLabel:"Обща квота",
+    bsStakeLabel:"Залог:", bsCurrency:"лв.", bsWinLabel:"Потенциална печалба", bsPlaceBtn:"ПОСТАВИ ЗАЛОГ →",
+    trackTitle:"ИСТОРИЯ & <em>ТОЧНОСТ</em>",
+    trackSub:"Реална история от последните 90 дни · Актуализирано: 24.02.2026",
+    filterAll:"Всички", filterOU:"Над/Под", filterHN:"Хенди",
+    last30:"ПОСЛЕДНИ 30 ПРОГНОЗИ", currentStreakLabel:"Текуща серия", historyLabel:"ИСТОРИЯ НА ПРОГНОЗИТЕ",
+    thDate:"Дата", thMatch:"Мач", thLeague:"Лига", thPred:"Прогноза",
+    thOdds:"Коеф.", thScore:"Резултат", thResult:"Изход", loadMore:"Покажи повече →",
+    homeWin:"1 — Домакин", drawOdds:"X — Равенство", awayWin:"2 — Гост",
+    oddsComparison:"1 X 2 — Сравнение на коефициенти", bestBGOdds:"НАЙ-ДОБЪР БГ КФ", atBook:"в",
+    keyStats:"📊 Ключова статистика", injuriesLabel:"🏥 Контузии & Наказания", fullSquad:"✅ Пълен отбор",
+    probLabel:"📈 Вероятности", winLabel:"Победа", drawLabel:"Равенство",
+    predLabel:"Прогноза", bestOddsRow:"Най-добър БГ кф", aiLabel:"🤖 AI Анализ",
+    dateLabel:"Вторник, 24 Февруари 2026", todayBadge:"ДНЕС",
+    leagueLabel:"UEFA Champions League — Плейоф, 2-ри крак",
+    mktOrder:[["1X2","1x2"],["BTTS","btts"],["Над/Под","ou"],["Хенди","hn"]],
+  },
+  en:{
+    logoSub:"Licensed BG Bookmakers Only", napBadge:"NAP Licensed", liveBadge:"UCL Today",
+    heroH1:"ODDS ANALYSIS & PREDICTIONS<br>FROM <em>BULGARIAN BOOKMAKERS</em>",
+    heroP:"Odds comparison from NAP-licensed operators in Bulgaria. Find the best odds for Champions League — 24 February 2026.",
+    statBooks:"Bookmakers", statMatches:"UCL Matches", statMarkets:"Markets",
+    booksTitle:"🇧🇬 + 🌍 Bookmakers:",
+    todayTitle:"TODAY'S <em style=\"color:var(--green)\">PICKS</em>", todaySub:"Champions League · 24.02.2026",
+    topPickTitle:"⭐ Top Pick of the Day", topPickBet:"Bodo/Glimt Qualification", topPickConf:"55% real chance",
+    topPickNote:"Lead 3-1 after 1st leg. No Lautaro. Value bet!",
+    allPicksTitle:"💡 ALL PICKS",
+    pick1:"BTTS Atletico-Bruges", pick2:"Newcastle Win", pick3:"Leverkusen Win",
+    pick4:"Over 2.5 Atletico", pick5:"Inter Over 2.5", pick6:"Bodo Qualification",
+    bookRankTitle:"🏅 BOOKMAKER RANKINGS",
+    rank1:"Highest odds (UCL)", rank2:"Most markets", rank3:"Lowest margin",
+    rank4:"No betting limit", rank5:"Fastest cashout",
+    trendTitle:"📊 UCL TRENDS",
+    trend1:"Atletico BTTS (last 10)", trend2:"Bodo Over 2.5 (last 9)",
+    trend3:"Inter Over 2.5 (KO)", trend4:"Olympiacos away in UCL",
+    discTitle:"⚠️ Responsible Gambling",
+    discText:"Gambling carries risk. Play responsibly. All operators listed here are licensed by NAP — the National Revenue Agency of Bulgaria. 18+",
+    comboTitle:"COMBO <em>BUILDER</em>",
+    comboSub:"Ready-made combos from 2 to 5 matches · Pick one or build your own",
+    oddsLoading:"⏳ Loading live odds from Bet365...", refreshBtn:"🔄 Refresh Odds",
+    buildComboTitle:"🔧 Build your own combo", betslipTitle:"🎟 Betslip",
+    betslipEmpty:"Add picks from the combos or the list below",
+    bsLegsLabel:"Picks", bsTotalOddsLabel:"Total Odds",
+    bsStakeLabel:"Stake:", bsCurrency:"BGN", bsWinLabel:"Potential Win", bsPlaceBtn:"PLACE BET →",
+    trackTitle:"PREDICTION <em>TRACK RECORD</em>",
+    trackSub:"Real history from the last 90 days · Updated: 24.02.2026",
+    filterAll:"All", filterOU:"Over/Under", filterHN:"Handicap",
+    last30:"LAST 30 PREDICTIONS", currentStreakLabel:"Current Streak", historyLabel:"PREDICTION HISTORY",
+    thDate:"Date", thMatch:"Match", thLeague:"League", thPred:"Prediction",
+    thOdds:"Odds", thScore:"Score", thResult:"Result", loadMore:"Show more →",
+    homeWin:"1 — Home Win", drawOdds:"X — Draw", awayWin:"2 — Away Win",
+    oddsComparison:"1 X 2 — Odds Comparison", bestBGOdds:"BEST BG ODDS", atBook:"at",
+    keyStats:"📊 Key Stats", injuriesLabel:"🏥 Injuries & Suspensions", fullSquad:"✅ Full Squad",
+    probLabel:"📈 Probabilities", winLabel:"Win", drawLabel:"Draw",
+    predLabel:"Prediction", bestOddsRow:"Best BG Odds", aiLabel:"🤖 AI Analysis",
+    dateLabel:"Tuesday, 24 February 2026", todayBadge:"TODAY",
+    leagueLabel:"UEFA Champions League — Playoff, 2nd Leg",
+    mktOrder:[["1X2","1x2"],["BTTS","btts"],["Over/Under","ou"],["Handicap","hn"]],
+  }
+};
+
+function setLang(lang){
+  currentLang = lang;
+  document.querySelectorAll('[data-t]').forEach(el=>{
+    const k = el.dataset.t;
+    if(T[lang][k] !== undefined) el.innerHTML = T[lang][k];
+  });
+  document.getElementById('btn-bg').classList.toggle('active', lang==='bg');
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  render(); renderAccuracy(); renderCombos(); renderCCBPicks(); renderBetslip();
+}
+
 // ─── BULGARIAN BOOKMAKERS ───
 const BOOKS = {
   bet365: { name:"Bet365",    color:"#1C7A2E", short:"Bet365" },
@@ -540,13 +652,13 @@ const BOOKS = {
 const MATCHES = [
   {
     id:"atm_bru",
-    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак",
+    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак", leagueNameEn:"Champions League — Playoff, 2nd Leg",
     date:"2026-02-24", time:"17:45", statusType:"today",
-    ctx:"1-ви крак: Брюж 3-3 Атлетико",
+    ctx:"1-ви крак: Брюж 3-3 Атлетико", ctxEn:"1st leg: Bruges 3-3 Atletico",
     home:"Атлетико Мадрид", homeA:"ATM", homeForm:["W","W","L","W","W"],
     away:"Club Brugge",     awayA:"BRU", awayForm:["W","W","D","W","L"],
     pred:{ result:"BTTS", conf:78, cfClass:"cf-high", cpc:"cpct-high" },
-    pick:{ bet:"И двата отбора гол", odd:"1.72", book:"Bet365", bookKey:"bet365" },
+    pick:{ bet:"И двата отбора гол", betEn:"Both Teams to Score", odd:"1.72", book:"Bet365", bookKey:"bet365" },
     prob:{ h:47.9, d:12.7, a:39.4 },
     odds:{
       home:[
@@ -563,11 +675,11 @@ const MATCHES = [
       ]
     },
     extraOdds:[
-      { market:"BTTS (Да)", rows:[
+      { market:"BTTS (Да)", marketEn:"BTTS (Yes)", rows:[
         {bk:"bet365", o:"1.72"}, {bk:"palms",  o:"1.62"}, {bk:"winbet", o:"1.65"}, {bk:"betano", o:"1.63"},
         {bk:"sesame", o:"1.64"}, {bk:"b8888",  o:"1.60"}, {bk:"inbet",  o:"1.58"}, {bk:"efbet",  o:"1.55"},
       ]},
-      { market:"Над 2.5 гола", rows:[
+      { market:"Над 2.5 гола", marketEn:"Over 2.5 Goals", rows:[
         {bk:"bet365", o:"2.00"}, {bk:"palms",  o:"1.85"}, {bk:"winbet", o:"1.92"}, {bk:"betano", o:"1.88"},
         {bk:"sesame", o:"1.90"}, {bk:"b8888",  o:"1.83"}, {bk:"inbet",  o:"1.80"}, {bk:"efbet",  o:"1.77"},
       ]},
@@ -584,17 +696,26 @@ const MATCHES = [
       {k:"Брюж Над 2.5 (посл.9)", v:"8 от 9", g:true},
       {k:"Атлетико Алварес форма", v:"5 гола, 2 асист (ЛЧ)", g:true},
     ],
-    ai:"Слав мач след 3-3 в Брюж — и двата отбора демонстрираха желание да атакуват. Симеоне води у дома 19 поредни КО мача без загуба, но Брюж не се страхуват: 10 удари в рамката в 1-ви крак. Алварес е в неудържима форма. BTTS е паднало в 8 от последните 10 домашни мача на Атлетико. Winbet предлага най-добрия коефициент 1.65 за BTTS — при реален шанс от ~72% това е добра стойност. Над 2.5 гола (1.90 @ Sesame) е алтернативен избор."
+    statsEn:[
+      {k:"BTTS (Atletico last 10)", v:"8 of 10", g:true},
+      {k:"Over 2.5 (Atletico, 9 UCL)", v:"7 of 9", g:true},
+      {k:"Atletico unbeaten at home (KO)", v:"19 straight", g:true},
+      {k:"Bruges away in Spain (hist.)", v:"1 win in 15", g:false},
+      {k:"Bruges Over 2.5 (last 9)", v:"8 of 9", g:true},
+      {k:"Atletico Alvarez form", v:"5 goals, 2 assists (UCL)", g:true},
+    ],
+    ai:"Слав мач след 3-3 в Брюж — и двата отбора демонстрираха желание да атакуват. Симеоне води у дома 19 поредни КО мача без загуба, но Брюж не се страхуват: 10 удари в рамката в 1-ви крак. Алварес е в неудържима форма. BTTS е паднало в 8 от последните 10 домашни мача на Атлетико. Winbet предлага най-добрия коефициент 1.65 за BTTS — при реален шанс от ~72% това е добра стойност. Над 2.5 гола (1.90 @ Sesame) е алтернативен избор.",
+    aiEn:"Fascinating tie after the 3-3 in Bruges — both teams showed real attacking intent. Simeone is unbeaten at home in 19 consecutive KO matches, but Bruges don't fear them: 10 shots on target in the 1st leg. Alvarez is in unstoppable form. BTTS has landed in 8 of Atletico's last 10 home games. Winbet offers the best BTTS odds at 1.65 — at a real ~72% probability this is solid value. Over 2.5 goals (1.90 @ Sesame) is an alternative pick."
   },
   {
     id:"lev_oly",
-    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак",
+    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак", leagueNameEn:"Champions League — Playoff, 2nd Leg",
     date:"2026-02-24", time:"20:00", statusType:"today",
-    ctx:"1-ви крак: Леверкузен 2-0 Олимпиакос",
+    ctx:"1-ви крак: Леверкузен 2-0 Олимпиакос", ctxEn:"1st leg: Leverkusen 2-0 Olympiacos",
     home:"Байер Леверкузен", homeA:"LEV", homeForm:["W","W","W","D","W"],
     away:"Олимпиакос",       awayA:"OLY", awayForm:["W","L","L","L","L"],
     pred:{ result:"1", conf:71, cfClass:"cf-high", cpc:"cpct-high" },
-    pick:{ bet:"Леверкузен победа (1)", odd:"1.62", book:"Bet365", bookKey:"bet365" },
+    pick:{ bet:"Леверкузен победа (1)", betEn:"Leverkusen Win", odd:"1.62", book:"Bet365", bookKey:"bet365" },
     prob:{ h:52.7, d:24.1, a:23.2 },
     odds:{
       home:[
@@ -611,11 +732,11 @@ const MATCHES = [
       ]
     },
     extraOdds:[
-      { market:"BTTS (Да)", rows:[
+      { market:"BTTS (Да)", marketEn:"BTTS (Yes)", rows:[
         {bk:"bet365", o:"2.10"}, {bk:"palms",  o:"1.90"}, {bk:"winbet", o:"1.95"}, {bk:"betano", o:"1.93"},
         {bk:"sesame", o:"1.92"}, {bk:"b8888",  o:"1.88"}, {bk:"inbet",  o:"1.85"}, {bk:"efbet",  o:"1.82"},
       ]},
-      { market:"Над 2.5 гола", rows:[
+      { market:"Над 2.5 гола", marketEn:"Over 2.5 Goals", rows:[
         {bk:"bet365", o:"1.80"}, {bk:"palms",  o:"1.73"}, {bk:"winbet", o:"1.78"}, {bk:"betano", o:"1.76"},
         {bk:"sesame", o:"1.75"}, {bk:"b8888",  o:"1.70"}, {bk:"inbet",  o:"1.67"}, {bk:"efbet",  o:"1.64"},
       ]},
@@ -628,17 +749,25 @@ const MATCHES = [
       {k:"БайАрена — средни голове", v:"4.5 на мач", g:true},
       {k:"BTTS като фаворит (ЛЧ Вт)", v:"Не в 6 поредни", g:false},
     ],
-    ai:"Леверкузен са почти сигурни за четвъртфиналите — 2-0 преднина след мача в Гърция. Олимпиакос са губили 12 поредни гостувания в ЛЧ. Домакините могат да управляват мача без риск. Betano предлага 1.57 за победа — малко по-висок от останалите. Ако търсиш по-интересна ставка: Над 2.5 гола при 1.78 @ Winbet (за БайАрена с 4.5 средни гола) е разумен избор."
+    statsEn:[
+      {k:"Leverkusen home form", v:"7 wins in last 10", g:true},
+      {k:"Olympiacos away in UCL", v:"12 straight losses", g:false},
+      {k:"1st leg lead", v:"2-0", g:true},
+      {k:"BayArena — avg goals", v:"4.5 per match", g:true},
+      {k:"BTTS as favourite (UCL Tue)", v:"Not in last 6", g:false},
+    ],
+    ai:"Леверкузен са почти сигурни за четвъртфиналите — 2-0 преднина след мача в Гърция. Олимпиакос са губили 12 поредни гостувания в ЛЧ. Домакините могат да управляват мача без риск. Betano предлага 1.57 за победа — малко по-висок от останалите. Ако търсиш по-интересна ставка: Над 2.5 гола при 1.78 @ Winbet (за БайАрена с 4.5 средни гола) е разумен избор.",
+    aiEn:"Leverkusen are virtually through — 2-0 lead from Greece. Olympiacos have lost 12 consecutive UCL away games. The hosts can control this match without taking risks. Betano offers 1.57 for the win — slightly higher than the others. If you want more value: Over 2.5 goals at 1.78 @ Winbet (BayArena averages 4.5 goals per match) is a solid alternative."
   },
   {
     id:"new_qar",
-    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак",
+    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак", leagueNameEn:"Champions League — Playoff, 2nd Leg",
     date:"2026-02-24", time:"20:00", statusType:"today",
-    ctx:"1-ви крак: Нюкасъл 6-1 Карабах",
+    ctx:"1-ви крак: Нюкасъл 6-1 Карабах", ctxEn:"1st leg: Newcastle 6-1 Qarabag",
     home:"Нюкасъл",  homeA:"NEW", homeForm:["W","W","D","W","L"],
     away:"Карабах",  awayA:"QAR", awayForm:["L","L","W","L","L"],
     pred:{ result:"1", conf:85, cfClass:"cf-high", cpc:"cpct-high" },
-    pick:{ bet:"Нюкасъл победа (1)", odd:"1.40", book:"Bet365", bookKey:"bet365" },
+    pick:{ bet:"Нюкасъл победа (1)", betEn:"Newcastle Win", odd:"1.40", book:"Bet365", bookKey:"bet365" },
     prob:{ h:85.2, d:9.4, a:5.4 },
     odds:{
       home:[
@@ -655,11 +784,11 @@ const MATCHES = [
       ]
     },
     extraOdds:[
-      { market:"Нюкасъл Над 3.5", rows:[
+      { market:"Нюкасъл Над 3.5", marketEn:"Newcastle Over 3.5", rows:[
         {bk:"bet365", o:"2.20"}, {bk:"palms",  o:"2.05"}, {bk:"winbet", o:"2.10"}, {bk:"betano", o:"2.08"},
         {bk:"sesame", o:"2.07"}, {bk:"b8888",  o:"2.03"}, {bk:"inbet",  o:"2.00"}, {bk:"efbet",  o:"1.95"},
       ]},
-      { market:"Нюкасъл чиста мрежа", rows:[
+      { market:"Нюкасъл чиста мрежа", marketEn:"Newcastle Clean Sheet", rows:[
         {bk:"bet365", o:"1.83"}, {bk:"palms",  o:"1.75"}, {bk:"winbet", o:"1.78"}, {bk:"betano", o:"1.76"},
         {bk:"sesame", o:"1.77"}, {bk:"b8888",  o:"1.73"}, {bk:"inbet",  o:"1.70"}, {bk:"efbet",  o:"1.67"},
       ]},
@@ -675,17 +804,25 @@ const MATCHES = [
       {k:"Нюкасъл BTTS (ЛЧ)", v:"4 от 5 мача", g:true},
       {k:"Очаквана ротация", v:"5-6 смени от Howe", g:false},
     ],
-    ai:"Нюкасъл са с де факто осигурена квалификация. 6-1 е почти невъзможен за преобръщане при всякакви обстоятелства. Eddie Howe ще ротира значително — Гордон и Исак почиват за ПЛ. Palms Bet и Winbet предлагат по 1.35-1.36 за победа — стабилна ставка. По-интересна опция е Над 3.5 гола при 2.10 @ Winbet, ако Howe реши да даде шанс на резервите да се изявят."
+    statsEn:[
+      {k:"1st leg result", v:"6-1 to Newcastle!", g:true},
+      {k:"Gordon in 1st leg", v:"4 goals, 1 assist", g:true},
+      {k:"Qarabag away from home", v:"0 wins in 5", g:false},
+      {k:"Newcastle BTTS (UCL)", v:"4 of 5 matches", g:true},
+      {k:"Expected rotation", v:"5-6 changes by Howe", g:false},
+    ],
+    ai:"Нюкасъл са с де факто осигурена квалификация. 6-1 е почти невъзможен за преобръщане при всякакви обстоятелства. Eddie Howe ще ротира значително — Гордон и Исак почиват за ПЛ. Palms Bet и Winbet предлагат по 1.35-1.36 за победа — стабилна ставка. По-интересна опция е Над 3.5 гола при 2.10 @ Winbet, ако Howe реши да даде шанс на резервите да се изявят.",
+    aiEn:"Newcastle are through virtually already — 6-1 is almost impossible to overturn. Eddie Howe will rotate heavily — Gordon and Isak resting ahead of the Premier League. Palms Bet and Winbet offer 1.35-1.36 for the win — a solid bet. The more interesting option is Over 3.5 goals at 2.10 @ Winbet if Howe gives squad players a chance to impress."
   },
   {
     id:"int_bog",
-    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак",
+    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак", leagueNameEn:"Champions League — Playoff, 2nd Leg",
     date:"2026-02-24", time:"20:00", statusType:"today",
-    ctx:"1-ви крак: Будьо/Глимт 3-1 Интер",
+    ctx:"1-ви крак: Будьо/Глимт 3-1 Интер", ctxEn:"1st leg: Bodo/Glimt 3-1 Inter",
     home:"Интер Милано",   homeA:"INT", homeForm:["W","W","W","L","W"],
     away:"Будьо/Глимт",    awayA:"BOG", awayForm:["W","W","W","W","D"],
     pred:{ result:"Будьо КФ", conf:55, cfClass:"cf-mid", cpc:"cpct-mid" },
-    pick:{ bet:"Будьо квалификация", odd:"2.25", book:"Bet365", bookKey:"bet365" },
+    pick:{ bet:"Будьо квалификация", betEn:"Bodo/Glimt Qualification", odd:"2.25", book:"Bet365", bookKey:"bet365" },
     prob:{ h:79.3, d:12.3, a:8.4 },
     odds:{
       home:[
@@ -702,11 +839,11 @@ const MATCHES = [
       ]
     },
     extraOdds:[
-      { market:"Будьо квалификация", rows:[
+      { market:"Будьо квалификация", marketEn:"Bodo/Glimt Qualification", rows:[
         {bk:"bet365", o:"2.25"}, {bk:"palms",  o:"2.10"}, {bk:"winbet", o:"2.18"}, {bk:"betano", o:"2.12"},
         {bk:"sesame", o:"2.15"}, {bk:"b8888",  o:"2.08"}, {bk:"inbet",  o:"2.05"}, {bk:"efbet",  o:"2.00"},
       ]},
-      { market:"Над 2.5 гола", rows:[
+      { market:"Над 2.5 гола", marketEn:"Over 2.5 Goals", rows:[
         {bk:"bet365", o:"1.85"}, {bk:"palms",  o:"1.75"}, {bk:"winbet", o:"1.80"}, {bk:"betano", o:"1.78"},
         {bk:"sesame", o:"1.77"}, {bk:"b8888",  o:"1.73"}, {bk:"inbet",  o:"1.70"}, {bk:"efbet",  o:"1.67"},
       ]},
@@ -723,7 +860,16 @@ const MATCHES = [
       {k:"Будьо BTTS (посл.5)", v:"5 от 5", g:true},
       {k:"Интер дома без Лаутаро", v:"2П — 0Г в 3 мача", g:false},
     ],
-    ai:"Сензационна история! Будьо/Глимт от Норвегия се нуждаят само от равенство или загуба с 1 гол за да отстранят Интер. В 1-ви крак ги победиха 3-1 в Сан Сиро — вторият най-добър резултат в историята на Норвегия в ЛЧ. Интер са без Лаутаро (контузен), Думфрийс и Чалханоглу под съмнение. Нужна им е победа с поне 2 гола разлика. Winbet предлага 2.18 за квалификация на Будьо — при реален шанс от ~55% (приет от нас след анализ на контузиите) — това е ДОБРА СТОЙНОСТ. Внимание: коефициентите за самата победа на Интер са подценени заради ситуацията."
+    statsEn:[
+      {k:"Inter need", v:"Win by 2+ goals", g:false},
+      {k:"Bodo wins this UCL", v:"Man City, Atletico, Inter", g:true},
+      {k:"Inter Over 2.5 (KO)", v:"7 of 7 straight", g:true},
+      {k:"Lautaro — status", v:"OUT — ABSENT", g:false},
+      {k:"Bodo BTTS (last 5)", v:"5 of 5", g:true},
+      {k:"Inter at home without Lautaro", v:"2 pts — 0 goals in 3 matches", g:false},
+    ],
+    ai:"Сензационна история! Будьо/Глимт от Норвегия се нуждаят само от равенство или загуба с 1 гол за да отстранят Интер. В 1-ви крак ги победиха 3-1 в Сан Сиро — вторият най-добър резултат в историята на Норвегия в ЛЧ. Интер са без Лаутаро (контузен), Думфрийс и Чалханоглу под съмнение. Нужна им е победа с поне 2 гола разлика. Winbet предлага 2.18 за квалификация на Будьо — при реален шанс от ~55% (приет от нас след анализ на контузиите) — това е ДОБРА СТОЙНОСТ. Внимание: коефициентите за самата победа на Интер са подценени заради ситуацията.",
+    aiEn:"Sensational story! Bodo/Glimt from Norway only need a draw or a 1-goal defeat to eliminate Inter. In the 1st leg they won 3-1 at the San Siro — the second best result in Norwegian UCL history. Inter are without Lautaro (injured), Dumfries and Calhanoglu are doubts. They need to win by at least 2 goals. Winbet offers 2.18 for Bodo qualification — at a real ~55% chance (our analysis after injury news) — this is GREAT VALUE. Note: Inter's match-win odds are undervalued given the situation."
   }
 ];
 
@@ -758,13 +904,14 @@ function renderCard(m, idx){
   const hf = m.homeForm.map(r=>`<div class="fd ${r==="W"?"fw":r==="D"?"fd2":"fl"}">${r}</div>`).join('');
   const af = m.awayForm.map(r=>`<div class="fd ${r==="W"?"fw":r==="D"?"fd2":"fl"}">${r}</div>`).join('');
 
-  const extraOddsHtml = m.extraOdds.map(eo=>`
-    <div style="margin-top:10px">
-      <div class="odds-sec-title">${eo.market}</div>
+  const extraOddsHtml = m.extraOdds.map(eo=>{
+    const mktLabel = currentLang==='en'?(eo.marketEn||eo.market):eo.market;
+    return `<div style="margin-top:10px">
+      <div class="odds-sec-title">${mktLabel}</div>
       <div class="odds-cols" style="grid-template-columns:1fr">
-        ${renderOddsBlock(eo.market, eo.rows)}
+        ${renderOddsBlock(mktLabel, eo.rows)}
       </div>
-    </div>`).join('');
+    </div>`;}).join('');
 
   return `
   <div class="mc" id="mc-${m.id}" onclick="tog('${m.id}')" style="animation-delay:${idx*.07}s">
@@ -772,12 +919,12 @@ function renderCard(m, idx){
       <div class="team"><div class="tname">${m.home}</div><div class="tform">${hf}</div></div>
       <div class="mctr">
         <div class="mc-time">${m.time}</div>
-        <div class="mc-st st-today">ДНЕС</div>
-        <div class="mc-ctx">${m.ctx}</div>
+        <div class="mc-st st-today">${T[currentLang].todayBadge}</div>
+        <div class="mc-ctx">${currentLang==='en'?(m.ctxEn||m.ctx):m.ctx}</div>
       </div>
       <div class="team away"><div class="tname">${m.away}</div><div class="tform">${af}</div></div>
       <div class="pside">
-        <div class="ptip">Прогноза</div>
+        <div class="ptip">${T[currentLang].predLabel}</div>
         <div class="prow">
           <div class="pval">${m.pred.result}</div>
           <div class="pconf">
@@ -805,54 +952,54 @@ function renderCard(m, idx){
     <div class="pick">
       <div class="pick-star">⭐</div>
       <div class="pick-text">
-        <span class="pick-bet">${m.pick.bet}</span>
+        <span class="pick-bet">${currentLang==='en'?(m.pick.betEn||m.pick.bet):m.pick.bet}</span>
         <span class="pick-at">@</span>
         <span class="pick-odd">${m.pick.odd}</span>
-        <span class="pick-at">в</span>
+        <span class="pick-at">${T[currentLang].atBook}</span>
         <div class="obook-dot" style="background:${bk.color};width:8px;height:8px;border-radius:2px;display:inline-block"></div>
         <span class="pick-book">${m.pick.book}</span>
-        <span class="pick-best">НАЙ-ДОБЪР БГ КФ</span>
+        <span class="pick-best">${T[currentLang].bestBGOdds}</span>
       </div>
     </div>
 
     <div class="expand" id="exp-${m.id}">
       <div class="odds-sec">
-        <div class="odds-sec-title">1 X 2 — Сравнение на коефициенти</div>
+        <div class="odds-sec-title">${T[currentLang].oddsComparison}</div>
         <div class="odds-cols">
-          ${renderOddsBlock("1 — Домакин", m.odds.home)}
-          ${renderOddsBlock("X — Равенство", m.odds.draw)}
-          ${renderOddsBlock("2 — Гост", m.odds.away)}
+          ${renderOddsBlock(T[currentLang].homeWin, m.odds.home)}
+          ${renderOddsBlock(T[currentLang].drawOdds, m.odds.draw)}
+          ${renderOddsBlock(T[currentLang].awayWin, m.odds.away)}
         </div>
         ${extraOddsHtml}
       </div>
 
       <div class="exp-inner">
         <div class="iblock">
-          <div class="ibt">📊 Ключова статистика</div>
-          ${m.stats.map(s=>`<div class="irow"><span class="ikey">${s.k}</span><span class="ival ${s.g?'ival-g':'ival-r'}">${s.v}</span></div>`).join('')}
+          <div class="ibt">${T[currentLang].keyStats}</div>
+          ${(currentLang==='en'&&m.statsEn?m.statsEn:m.stats).map(s=>`<div class="irow"><span class="ikey">${s.k}</span><span class="ival ${s.g?'ival-g':'ival-r'}">${s.v}</span></div>`).join('')}
         </div>
         <div class="iblock">
-          <div class="ibt">🏥 Контузии & Наказания</div>
+          <div class="ibt">${T[currentLang].injuriesLabel}</div>
           <div style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,.03)">
             <div style="font-size:9px;color:var(--muted);margin-bottom:5px">${m.home}</div>
-            ${m.injuries.home.length?m.injuries.home.map(p=>`<span class="tag t-inj">🤕 ${p}</span>`).join(''):'<span class="t-ok">✅ Пълен отбор</span>'}
+            ${m.injuries.home.length?m.injuries.home.map(p=>`<span class="tag t-inj">🤕 ${p}</span>`).join(''):`<span class="t-ok">${T[currentLang].fullSquad}</span>`}
           </div>
           <div style="padding:5px 0">
             <div style="font-size:9px;color:var(--muted);margin-bottom:5px">${m.away}</div>
-            ${m.injuries.away.length?m.injuries.away.map(p=>`<span class="tag ${p.includes('🟨')?'t-sus':'t-inj'}">${p.includes('🟨')?'🟨':'🤕'} ${p}</span>`).join(''):'<span class="t-ok">✅ Пълен отбор</span>'}
+            ${m.injuries.away.length?m.injuries.away.map(p=>`<span class="tag ${p.includes('🟨')?'t-sus':'t-inj'}">${p.includes('🟨')?'🟨':'🤕'} ${p}</span>`).join(''):`<span class="t-ok">${T[currentLang].fullSquad}</span>`}
           </div>
         </div>
         <div class="iblock">
-          <div class="ibt">📈 Вероятности</div>
-          <div class="irow"><span class="ikey">Победа ${m.homeA}</span><span class="ival ival-g">${m.prob.h.toFixed(1)}%</span></div>
-          <div class="irow"><span class="ikey">Равенство</span><span class="ival ival-y">${m.prob.d.toFixed(1)}%</span></div>
-          <div class="irow"><span class="ikey">Победа ${m.awayA}</span><span class="ival ival-r">${m.prob.a.toFixed(1)}%</span></div>
-          <div class="irow"><span class="ikey">Прогноза</span><span class="ival ival-g">${m.pred.result} (${m.pred.conf}%)</span></div>
-          <div class="irow"><span class="ikey">Най-добър БГ кф</span><span class="ival ival-g">${m.pick.odd} @ ${m.pick.book}</span></div>
+          <div class="ibt">${T[currentLang].probLabel}</div>
+          <div class="irow"><span class="ikey">${T[currentLang].winLabel} ${m.homeA}</span><span class="ival ival-g">${m.prob.h.toFixed(1)}%</span></div>
+          <div class="irow"><span class="ikey">${T[currentLang].drawLabel}</span><span class="ival ival-y">${m.prob.d.toFixed(1)}%</span></div>
+          <div class="irow"><span class="ikey">${T[currentLang].winLabel} ${m.awayA}</span><span class="ival ival-r">${m.prob.a.toFixed(1)}%</span></div>
+          <div class="irow"><span class="ikey">${T[currentLang].predLabel}</span><span class="ival ival-g">${m.pred.result} (${m.pred.conf}%)</span></div>
+          <div class="irow"><span class="ikey">${T[currentLang].bestOddsRow}</span><span class="ival ival-g">${m.pick.odd} @ ${m.pick.book}</span></div>
         </div>
         <div class="aibox">
-          <div class="aibox-t">🤖 AI Анализ</div>
-          <div class="aitext">${m.ai}</div>
+          <div class="aibox-t">${T[currentLang].aiLabel}</div>
+          <div class="aitext">${currentLang==='en'?(m.aiEn||m.ai):m.ai}</div>
         </div>
       </div>
     </div>
@@ -868,10 +1015,11 @@ function tog(id){
 }
 
 function render(){
+  const t=T[currentLang];
   const c=document.getElementById('container');
   let html=`<div>
-    <div class="section-header"><span class="sec-label">Вторник, 24 Февруари 2026</span><span class="sec-badge sb-today">ДНЕС</span><div class="sec-line"></div></div>
-    <div class="league-pill"><span>🏆</span><span>UEFA Champions League — Плейоф, 2-ри крак</span></div>`;
+    <div class="section-header"><span class="sec-label">${t.dateLabel}</span><span class="sec-badge sb-today">${t.todayBadge}</span><div class="sec-line"></div></div>
+    <div class="league-pill"><span>🏆</span><span>${t.leagueLabel}</span></div>`;
   MATCHES.forEach((m,i)=>html+=renderCard(m,i));
   html+='</div>';
   c.innerHTML=html;
@@ -978,7 +1126,7 @@ function renderKPIs(){
   const trendCls = pct>=70?'acc-trend-up':'acc-trend-dn';
 
   // Market breakdown bars
-  const mktOrder = [['1X2','1x2'],['BTTS','btts'],['Над/Под','ou'],['Хенди','hn']];
+  const mktOrder = T[currentLang].mktOrder;
   const barsHtml = mktOrder.map(([label,key])=>{
     const m = byMkt[label]||{w:0,t:0};
     const p = m.t? Math.round(m.w/m.t*100):0;
