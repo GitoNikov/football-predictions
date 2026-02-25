@@ -143,8 +143,8 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 .oval.second{color:var(--text)}
 
 /* ─── EXPAND ─── */
-.expand{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
-.expand.open{max-height:800px;border-top:1px solid var(--border)}
+.expand{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.4,0,.2,1)}
+.expand.open{max-height:2400px;border-top:1px solid var(--border)}
 .exp-inner{padding:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .iblock{}
 .ibt{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:6px}
@@ -423,9 +423,9 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
     </div>
     <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
       <div id="oddsStatus" style="font-size:11px;color:var(--muted)">
-        <span data-t="oddsLoading" style="color:var(--muted)">⏳ Зарежда реални коефициенти от Bet365...</span>
+        <span style="color:var(--muted)">📋 Индикативни коефициенти · <button onclick="fetchLiveOdds()" style="background:none;border:none;color:var(--yellow);cursor:pointer;font-size:11px;text-decoration:underline">Обнови →</button></span>
       </div>
-      <div id="oddsLoadingBar" style="width:200px;height:3px;background:var(--dark3);border-radius:2px;overflow:hidden;display:flex">
+      <div id="oddsLoadingBar" style="width:200px;height:3px;background:var(--dark3);border-radius:2px;overflow:hidden;display:none">
         <div style="height:100%;width:40%;background:linear-gradient(90deg,transparent,var(--yellow),transparent);animation:shimmer 1.5s infinite"></div>
       </div>
       <button onclick="fetchLiveOdds()" style="background:rgba(255,184,0,.08);border:1px solid rgba(255,184,0,.25);border-radius:7px;padding:4px 12px;font-size:11px;font-weight:600;color:var(--yellow);cursor:pointer" data-t="refreshBtn">🔄 Обнови коефициенти</button>
