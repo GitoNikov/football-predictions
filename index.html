@@ -302,8 +302,54 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 .picks-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px}
 .picks-sub{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
 
+/* ─── SURE BET / ARBITRAGE ─── */
+.sure-section{margin-bottom:32px}
+.sure-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px}
+.sure-title em{color:var(--green);font-style:normal}
+.sure-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.sure-tabs{display:flex;background:var(--dark3);border:1px solid var(--border);border-radius:8px;overflow:hidden;flex-shrink:0}
+.sure-tab{padding:6px 14px;font-size:11px;font-weight:700;letter-spacing:1px;border:none;background:none;color:var(--muted);cursor:pointer;transition:all .15s;white-space:nowrap}
+.sure-tab.active{background:var(--green);color:#000}
+.sure-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.sure-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .2s}
+.sure-card:hover{border-color:rgba(0,232,122,.2)}
+.sure-card-head{padding:12px 16px;border-bottom:1px solid var(--border)}
+.sure-card-match{font-size:13px;font-weight:600;margin-bottom:7px}
+.arb-meter-row{display:flex;align-items:center;gap:8px}
+.arb-bar{flex:1;height:4px;background:var(--dark3);border-radius:2px;overflow:hidden}
+.arb-fill{height:100%;border-radius:2px;transition:width .4s}
+.af-good{background:linear-gradient(90deg,var(--green),#00ffaa)}
+.af-near{background:linear-gradient(90deg,var(--yellow),#ffd700)}
+.af-bad{background:linear-gradient(90deg,var(--red),#ff8c69)}
+.arb-pct-label{font-family:'DM Mono',monospace;font-size:11px;font-weight:700;flex-shrink:0}
+.arb-badge{font-size:8px;padding:2px 6px;border-radius:4px;font-weight:700;letter-spacing:1px;text-transform:uppercase;flex-shrink:0}
+.ab-arb{background:rgba(0,232,122,.15);color:var(--green)}
+.ab-near{background:rgba(255,184,0,.15);color:var(--yellow)}
+.ab-no{background:rgba(255,59,92,.12);color:var(--red)}
+.sure-card-body{padding:10px 16px}
+.sure-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.sure-row:last-child{border-bottom:none}
+.sure-row-label{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:5px}
+.sure-row-right{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.sure-stake-val{font-family:'DM Mono',monospace;font-size:12px;font-weight:700}
+.sure-bk-chip{font-size:9px;padding:1px 5px;border-radius:3px;font-family:'DM Mono',monospace;font-weight:600}
+.sure-card-foot{padding:10px 16px;background:rgba(255,255,255,.018);border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.sure-return{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;line-height:1}
+.sure-return-label{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:1px}
+.sure-combo-card{background:linear-gradient(135deg,rgba(0,232,122,.04),rgba(0,0,0,0));border:1px solid rgba(0,232,122,.15);border-radius:14px;padding:16px 18px;margin-top:14px}
+.sure-combo-title{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+.sure-combo-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
+.sure-combo-cell{background:var(--dark3);border:1px solid var(--border);border-radius:8px;padding:8px 10px;text-align:center}
+.sure-combo-cell.win{border-color:rgba(0,232,122,.3);background:rgba(0,232,122,.05)}
+.sure-combo-cell.loss{border-color:rgba(255,59,92,.2);background:rgba(255,59,92,.03)}
+.sure-stake-row{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.sure-stake-input{background:var(--dark3);border:1px solid var(--border);border-radius:7px;padding:6px 10px;font-family:'DM Mono',monospace;font-size:13px;color:var(--text);outline:none;width:90px;transition:border-color .15s}
+.sure-stake-input:focus{border-color:rgba(0,232,122,.4)}
+
 @media(max-width:920px){
   .combo-cards{grid-template-columns:1fr}
+  .sure-cards-grid{grid-template-columns:1fr}
+  .sure-combo-row{grid-template-columns:repeat(2,1fr)}
   .layout{grid-template-columns:1fr}.sidebar{display:none}
   main{padding:18px 14px}.mc-top{grid-template-columns:1fr 86px 1fr}.pside{display:none}
   header{padding:0 14px}.odds-cols{grid-template-columns:1fr}.exp-inner{grid-template-columns:1fr}
@@ -439,6 +485,27 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
   </div>
 </div>
 
+<!-- ═══ SURE BETS / ARBITRAGE ═══ -->
+<div class="sure-section">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px">
+    <div>
+      <div class="sure-title">⚡ АРБИТРАЖ & <em>СИГУРЕН ЗАЛОГ</em></div>
+      <div class="sure-sub">Сканиране на 1X2 коефициенти от 8 букмейкъра · Намери гарантирана печалба</div>
+    </div>
+    <div class="sure-tabs">
+      <button class="sure-tab active" id="tab-arb" onclick="setSureMode('arb')">⚖ АРБ СКЕНЕР</button>
+      <button class="sure-tab" id="tab-dutch" onclick="setSureMode('dutch')">🎯 DUTCH ЗАЛОГ</button>
+    </div>
+  </div>
+  <div class="sure-stake-row">
+    <span style="font-size:11px;color:var(--muted)">Залог:</span>
+    <input class="sure-stake-input" id="sureStake" type="number" value="100" min="10" oninput="renderSureBets()">
+    <span style="font-size:11px;color:var(--muted)">лв.</span>
+    <span id="sureExplain" style="font-size:11px;color:var(--muted);font-style:italic;margin-left:4px"></span>
+  </div>
+  <div id="sureBets"></div>
+</div>
+
 <!-- ═══ TODAY'S PERFORMANCE ═══ -->
 <div class="perf-section">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px">
@@ -540,7 +607,7 @@ function setLang(lang){
   });
   document.getElementById('btn-bg').classList.toggle('active', lang==='bg');
   document.getElementById('btn-en').classList.toggle('active', lang==='en');
-  render(); renderTodayPerf(); renderCombos(); renderCCBPicks(); renderBetslip();
+  render(); renderTodayPerf(); renderSureBets(); renderCombos(); renderCCBPicks(); renderBetslip();
 }
 
 // ─── BULGARIAN BOOKMAKERS ───
@@ -1837,6 +1904,158 @@ function renderCCBPicks(){
   }).join('');
 }
 
+// ════════════════════════════════════════
+// SURE BET / ARBITRAGE SECTION
+// ════════════════════════════════════════
+let sureMode = 'arb';
+
+function calcMatchArb(m) {
+  const bestH = m.odds.home.reduce((b,c)=>parseFloat(c.o)>parseFloat(b.o)?c:b);
+  const bestD = m.odds.draw.reduce((b,c)=>parseFloat(c.o)>parseFloat(b.o)?c:b);
+  const bestA = m.odds.away.reduce((b,c)=>parseFloat(c.o)>parseFloat(b.o)?c:b);
+  const h = parseFloat(bestH.o), d = parseFloat(bestD.o), a = parseFloat(bestA.o);
+  const impliedSum = 1/h + 1/d + 1/a;
+  const dutchSum = 1/h + 1/a;
+  const dutchFactor = 1 / dutchSum;
+  return {
+    id:m.id, home:m.home, homeA:m.homeA, away:m.away, awayA:m.awayA,
+    bestH:{o:h,bk:bestH.bk}, bestD:{o:d,bk:bestD.bk}, bestA:{o:a,bk:bestA.bk},
+    impliedSum, profit:(1-impliedSum)*100,
+    dutchSum, dutchFactor, dutchProfit:(dutchFactor-1)*100
+  };
+}
+
+function setSureMode(mode){
+  sureMode = mode;
+  document.getElementById('tab-arb').classList.toggle('active', mode==='arb');
+  document.getElementById('tab-dutch').classList.toggle('active', mode==='dutch');
+  renderSureBets();
+}
+
+function renderSureBets(){
+  const stake = Math.max(10, parseFloat(document.getElementById('sureStake').value)||100);
+  const arbs = MATCHES.map(m=>calcMatchArb(m));
+  if(sureMode==='arb'){
+    arbs.sort((a,b)=>a.impliedSum-b.impliedSum);
+    document.getElementById('sureExplain').textContent = '· Сортирано по най-близо до истински арбитраж';
+    document.getElementById('sureBets').innerHTML = `<div class="sure-cards-grid">${arbs.map(a=>renderArbCard(a,stake)).join('')}</div>`;
+  } else {
+    arbs.sort((a,b)=>b.dutchFactor-a.dutchFactor);
+    document.getElementById('sureExplain').textContent = '· Залог на домакин + гост (пропуска равенството)';
+    const top2 = arbs.slice(0,2);
+    document.getElementById('sureBets').innerHTML =
+      `<div class="sure-cards-grid">${arbs.map(a=>renderDutchCard(a,stake)).join('')}</div>` +
+      renderMultiDutch(top2, stake);
+  }
+}
+
+function renderArbCard(arb, stake){
+  const bk = BOOKS;
+  const pct = arb.impliedSum * 100;
+  const isArb = pct < 100;
+  const isNear = pct < 104;
+  const barColor = isArb?'af-good':isNear?'af-near':'af-bad';
+  const badgeCls = isArb?'ab-arb':isNear?'ab-near':'ab-no';
+  const badgeTxt = isArb?'✅ АРБ':isNear?'⚡ БЛИЗО':'❌ БЕЗ АРБ';
+  const barW = Math.min(100, Math.max(5, (pct/115)*100));
+  let stakeRows;
+  if(isArb){
+    const sH = stake*(1/arb.bestH.o)/arb.impliedSum;
+    const sD = stake*(1/arb.bestD.o)/arb.impliedSum;
+    const sA = stake*(1/arb.bestA.o)/arb.impliedSum;
+    const ret = sH*arb.bestH.o;
+    const profit = ret-stake;
+    stakeRows = `
+      <div class="sure-row"><span>🏠 ${arb.homeA}</span><span class="sure-stake-val">${sH.toFixed(2)} лв</span><span class="sure-bk-chip" style="background:${bk[arb.bestH.bk]?.color||'#333'}">${bk[arb.bestH.bk]?.short||arb.bestH.bk}</span></div>
+      <div class="sure-row"><span>➖ Равен</span><span class="sure-stake-val">${sD.toFixed(2)} лв</span><span class="sure-bk-chip" style="background:${bk[arb.bestD.bk]?.color||'#333'}">${bk[arb.bestD.bk]?.short||arb.bestD.bk}</span></div>
+      <div class="sure-row"><span>✈ ${arb.awayA}</span><span class="sure-stake-val">${sA.toFixed(2)} лв</span><span class="sure-bk-chip" style="background:${bk[arb.bestA.bk]?.color||'#333'}">${bk[arb.bestA.bk]?.short||arb.bestA.bk}</span></div>
+      <div class="sure-card-foot"><span style="font-size:11px;color:var(--muted)">Гарантирана печалба:</span><span class="sure-return" style="color:var(--green)">+${profit.toFixed(2)} лв</span></div>`;
+  } else {
+    stakeRows = `
+      <div class="sure-row"><span>🏠 ${arb.homeA}</span><span class="sure-stake-val">${arb.bestH.o.toFixed(2)}</span><span class="sure-bk-chip" style="background:${bk[arb.bestH.bk]?.color||'#333'}">${bk[arb.bestH.bk]?.short||arb.bestH.bk}</span></div>
+      <div class="sure-row"><span>➖ Равен</span><span class="sure-stake-val">${arb.bestD.o.toFixed(2)}</span><span class="sure-bk-chip" style="background:${bk[arb.bestD.bk]?.color||'#333'}">${bk[arb.bestD.bk]?.short||arb.bestD.bk}</span></div>
+      <div class="sure-row"><span>✈ ${arb.awayA}</span><span class="sure-stake-val">${arb.bestA.o.toFixed(2)}</span><span class="sure-bk-chip" style="background:${bk[arb.bestA.bk]?.color||'#333'}">${bk[arb.bestA.bk]?.short||arb.bestA.bk}</span></div>
+      <div class="sure-card-foot"><span style="font-size:11px;color:var(--muted)">Свръхзалагане:</span><span class="sure-return" style="color:var(--muted);font-size:16px">${(pct-100).toFixed(2)}% маржин</span></div>`;
+  }
+  return `<div class="sure-card">
+    <div style="padding:14px 16px 10px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
+        <div>
+          <div style="font-size:11px;color:var(--muted);font-weight:600;letter-spacing:1px">${arb.homeA} vs ${arb.awayA}</div>
+          <div style="font-size:13px;font-weight:700;margin-top:2px">${arb.home} — ${arb.away}</div>
+        </div>
+        <div class="arb-badge ${badgeCls}">${badgeTxt}</div>
+      </div>
+      <div class="arb-bar"><div class="arb-fill ${barColor}" style="width:${barW}%"></div></div>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:4px">
+        <span>Подразбиране: ${pct.toFixed(1)}%</span>
+        <span>${isArb?'+'+Math.abs(arb.profit).toFixed(2)+'% печалба':isNear?'Маржин '+(pct-100).toFixed(1)+'%':''}</span>
+      </div>
+    </div>
+    <div style="padding:0 16px 0;border-top:1px solid var(--border)">${stakeRows}</div>
+  </div>`;
+}
+
+function renderDutchCard(arb, stake){
+  const bk = BOOKS;
+  const sH = stake*(1/arb.bestH.o)/arb.dutchSum;
+  const sA = stake*(1/arb.bestA.o)/arb.dutchSum;
+  const returnAmt = arb.dutchFactor*stake;
+  const profit = returnAmt-stake;
+  const isProfitable = arb.dutchFactor>1;
+  const drawRisk = Math.round((1/arb.bestD.o)*100);
+  return `<div class="sure-card">
+    <div style="padding:14px 16px 10px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
+        <div>
+          <div style="font-size:11px;color:var(--muted);font-weight:600;letter-spacing:1px">${arb.homeA} vs ${arb.awayA}</div>
+          <div style="font-size:13px;font-weight:700;margin-top:2px">${arb.home} — ${arb.away}</div>
+        </div>
+        <div class="arb-badge ${isProfitable?'ab-arb':'ab-near'}">${isProfitable?'✅ ПЕЧАЛБА':'⚡ DUTCH'}</div>
+      </div>
+      <div style="display:flex;gap:16px;font-size:10px;margin-bottom:4px">
+        <span style="color:${isProfitable?'var(--green)':'var(--yellow)'}">Нетна: <b>${profit>=0?'+':''}${profit.toFixed(2)} лв</b></span>
+        <span style="color:var(--red)">Риск равен: ~${drawRisk}%</span>
+      </div>
+    </div>
+    <div style="padding:0 16px 0;border-top:1px solid var(--border)">
+      <div class="sure-row"><span>🏠 ${arb.homeA} Победа</span><span class="sure-stake-val">${sH.toFixed(2)} лв @ ${arb.bestH.o.toFixed(2)}</span><span class="sure-bk-chip" style="background:${bk[arb.bestH.bk]?.color||'#333'}">${bk[arb.bestH.bk]?.short||arb.bestH.bk}</span></div>
+      <div class="sure-row"><span>✈ ${arb.awayA} Победа</span><span class="sure-stake-val">${sA.toFixed(2)} лв @ ${arb.bestA.o.toFixed(2)}</span><span class="sure-bk-chip" style="background:${bk[arb.bestA.bk]?.color||'#333'}">${bk[arb.bestA.bk]?.short||arb.bestA.bk}</span></div>
+      <div class="sure-card-foot"><span style="font-size:11px;color:var(--muted)">Гаранция (без равен):</span><span class="sure-return" style="color:${isProfitable?'var(--green)':'var(--yellow)'}">${returnAmt.toFixed(2)} лв</span></div>
+    </div>
+  </div>`;
+}
+
+function renderMultiDutch(top2, stake){
+  if(top2.length<2) return '';
+  const [m1,m2] = top2;
+  const bk = BOOKS;
+  const s1 = stake*m1.dutchFactor/(m1.dutchFactor+m2.dutchFactor);
+  const s2 = stake-s1;
+  const r1 = s1*m1.dutchFactor;
+  const r2 = s2*m2.dutchFactor;
+  const sc = [
+    {label:'Без равенство',              sub:'Печелиш и двата', val:r1+r2-stake,   cls:r1+r2-stake>=0?'win':'loss'},
+    {label:`Равен ${m1.homeA}-${m1.awayA}`, sub:'Губиш М1, печелиш М2', val:r2-s1-s2, cls:r2-s1-s2>=0?'win':'loss'},
+    {label:`Равен ${m2.homeA}-${m2.awayA}`, sub:'Печелиш М1, губиш М2', val:r1-s1-s2, cls:r1-s1-s2>=0?'win':'loss'},
+    {label:'Двойно равенство',           sub:'Губиш и двата', val:-stake,          cls:'loss'},
+  ];
+  const rows = sc.map(s=>`<div class="sure-combo-cell ${s.cls}">
+    <div style="font-size:10px;font-weight:700;margin-bottom:3px">${s.label}</div>
+    <div style="font-size:9px;color:var(--muted);margin-bottom:5px">${s.sub}</div>
+    <div style="font-size:15px;font-weight:800;font-family:'Bebas Neue',sans-serif;color:${s.cls==='win'?'var(--green)':'var(--red)'}">${s.val>=0?'+':''}${s.val.toFixed(2)} лв</div>
+  </div>`).join('');
+  return `<div class="sure-combo-card">
+    <div style="margin-bottom:12px">
+      <div class="sure-combo-title">КОМБО DUTCH · 2 МАЧА</div>
+      <div style="font-size:13px;font-weight:700">${m1.home}–${m1.away} &amp; ${m2.home}–${m2.away}</div>
+      <div style="font-size:11px;color:var(--muted);margin-top:4px">Залог ${s1.toFixed(2)} лв на М1 + ${s2.toFixed(2)} лв на М2 = ${stake} лв общо</div>
+    </div>
+    <div class="sure-combo-row">${rows}</div>
+  </div>`;
+}
+
+renderSureBets();
 renderCombos();
 renderCCBPicks();
 renderBetslip();
