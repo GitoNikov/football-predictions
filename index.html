@@ -247,6 +247,27 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 .combo-select-btn.off{background:var(--dark3);color:var(--muted)}
 .combo-select-btn.on{background:rgba(255,184,0,.15);color:var(--yellow);border:1px solid rgba(255,184,0,.3)}
 
+/* BUILD-A-BET */
+.bab-box{background:var(--card);border:1px solid rgba(59,139,255,.25);border-radius:14px;overflow:hidden}
+.bab-header{padding:12px 16px;background:rgba(59,139,255,.06);border-bottom:1px solid rgba(59,139,255,.15);display:flex;align-items:center;justify-content:space-between}
+.bab-title{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2px;color:var(--blue)}
+.bab-badge{font-size:8px;padding:2px 7px;border-radius:4px;background:rgba(59,139,255,.15);color:var(--blue);font-weight:700;letter-spacing:1.5px}
+.bab-match{padding:10px 16px;border-bottom:1px solid var(--border)}
+.bab-match-name{font-size:12px;font-weight:700;margin-bottom:2px}
+.bab-match-meta{font-size:10px;color:var(--muted)}
+.bab-leg{display:flex;justify-content:space-between;align-items:center;padding:8px 16px;border-bottom:1px solid rgba(255,255,255,.03)}
+.bab-leg:last-child{border-bottom:none}
+.bab-leg-left{display:flex;align-items:center;gap:8px}
+.bab-leg-icon{font-size:14px;width:20px;text-align:center;flex-shrink:0}
+.bab-leg-bet{font-size:11px;font-weight:600}
+.bab-leg-conf{font-size:9px;color:var(--muted);margin-top:1px}
+.bab-leg-odd{font-family:'DM Mono',monospace;font-size:12px;color:var(--blue);font-weight:700;flex-shrink:0}
+.bab-footer{padding:11px 16px;background:rgba(59,139,255,.04);border-top:1px solid rgba(59,139,255,.12)}
+.bab-combo-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.bab-combo-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.bab-combo-odd{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--blue);letter-spacing:1px;line-height:1}
+.bab-ai{font-size:10px;color:var(--muted);line-height:1.55;font-style:italic;padding-top:8px;border-top:1px solid var(--border)}
+
 /* BETSLIP */
 .betslip{background:var(--card);border:1px solid rgba(255,184,0,.2);border-radius:14px;overflow:hidden}
 .bs-header{padding:14px 18px;background:rgba(255,184,0,.06);border-bottom:1px solid rgba(255,184,0,.15);display:flex;align-items:center;justify-content:space-between}
@@ -464,23 +485,26 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
       <div class="ccb-title" data-t="buildComboTitle">🔧 Изгради своя комбинация</div>
       <div class="ccb-picks" id="ccbPicks"></div>
     </div>
-    <div class="betslip">
-      <div class="bs-header">
-        <div class="bs-title" data-t="betslipTitle">🎟 Бетслип</div>
-        <div class="bs-count" id="bsCount">0 избора</div>
-      </div>
-      <div id="bsLegs"><div class="bs-empty" data-t="betslipEmpty">Добавете избори от комбинациите или от таблицата</div></div>
-      <div class="bs-totals" id="bsTotals" style="display:none">
-        <div class="bs-total-row"><span class="bs-total-label" data-t="bsLegsLabel">Брой избори</span><span class="bs-total-val" id="bsLegsCount">0</span></div>
-        <div class="bs-total-row"><span class="bs-total-label" data-t="bsTotalOddsLabel">Обща квота</span><span class="bs-total-val" id="bsTotalOdd" style="color:var(--yellow)">0.00</span></div>
-        <div class="bs-stake-row">
-          <span class="bs-stake-label" data-t="bsStakeLabel">Залог:</span>
-          <input class="bs-stake-input" id="bsStake" type="number" placeholder="10" min="1" oninput="recalcBetslip()">
-          <span class="bs-lv" data-t="bsCurrency">лв.</span>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="betslip">
+        <div class="bs-header">
+          <div class="bs-title" data-t="betslipTitle">🎟 Бетслип</div>
+          <div class="bs-count" id="bsCount">0 избора</div>
         </div>
-        <div class="bs-total-row final"><span class="bs-total-label" data-t="bsWinLabel">Потенциална печалба</span><span class="bs-total-val" id="bsWin">0.00 лв.</span></div>
-        <button class="bs-place-btn" onclick="placeBet()" data-t="bsPlaceBtn">ПОСТАВИ ЗАЛОГ →</button>
+        <div id="bsLegs"><div class="bs-empty" data-t="betslipEmpty">Добавете избори от комбинациите или от таблицата</div></div>
+        <div class="bs-totals" id="bsTotals" style="display:none">
+          <div class="bs-total-row"><span class="bs-total-label" data-t="bsLegsLabel">Брой избори</span><span class="bs-total-val" id="bsLegsCount">0</span></div>
+          <div class="bs-total-row"><span class="bs-total-label" data-t="bsTotalOddsLabel">Обща квота</span><span class="bs-total-val" id="bsTotalOdd" style="color:var(--yellow)">0.00</span></div>
+          <div class="bs-stake-row">
+            <span class="bs-stake-label" data-t="bsStakeLabel">Залог:</span>
+            <input class="bs-stake-input" id="bsStake" type="number" placeholder="10" min="1" oninput="recalcBetslip()">
+            <span class="bs-lv" data-t="bsCurrency">лв.</span>
+          </div>
+          <div class="bs-total-row final"><span class="bs-total-label" data-t="bsWinLabel">Потенциална печалба</span><span class="bs-total-val" id="bsWin">0.00 лв.</span></div>
+          <button class="bs-place-btn" onclick="placeBet()" data-t="bsPlaceBtn">ПОСТАВИ ЗАЛОГ →</button>
+        </div>
       </div>
+      <div id="babBox"></div>
     </div>
   </div>
 </div>
@@ -607,7 +631,7 @@ function setLang(lang){
   });
   document.getElementById('btn-bg').classList.toggle('active', lang==='bg');
   document.getElementById('btn-en').classList.toggle('active', lang==='en');
-  render(); renderTodayPerf(); renderSureBets(); renderCombos(); renderCCBPicks(); renderBetslip();
+  render(); renderTodayPerf(); renderBuildBet(); renderSureBets(); renderCombos(); renderCCBPicks(); renderBetslip();
 }
 
 // ─── BULGARIAN BOOKMAKERS ───
@@ -1905,6 +1929,59 @@ function renderCCBPicks(){
 }
 
 // ════════════════════════════════════════
+// BUILD-A-BET BOX
+// ════════════════════════════════════════
+const BUILD_BET = {
+  home:"Аталанта", homeEn:"Atalanta",
+  away:"Борусия Дортмунд", awayEn:"Borussia Dortmund",
+  time:"18:45", league:"ЛЧ · Днес", leagueEn:"UCL · Today",
+  legs:[
+    { bet:"И двата отбора гол",    betEn:"Both Teams to Score", icon:"⚽", conf:65, estOdd:1.75 },
+    { bet:"Над 2.5 гола",          betEn:"Over 2.5 Goals",       icon:"🎯", conf:63, estOdd:1.80 },
+    { bet:"Над 8 ъглови",          betEn:"Over 8 Corners",        icon:"🚩", conf:61, estOdd:1.75 },
+  ],
+  ai:"Аталанта трябва да обърне 0-2 — Гасперини атакува тотално от 1-ва мин. BTTS в 4/5 от последните им ЛЧ мача. Постоянният натиск → много ъглови. Дортмунд опасни с бърза контра → отворена игра гарантирана.",
+  aiEn:"Atalanta must overturn a 0-2 deficit — Gasperini attacks all-out from minute 1. BTTS in 4 of their last 5 UCL games. Constant pressure → high corner count. Dortmund dangerous on the counter → open game guaranteed.",
+};
+
+function renderBuildBet(){
+  const lang = currentLang;
+  const bb = BUILD_BET;
+  const combined = bb.legs.reduce((acc,l)=>acc*l.estOdd,1);
+  const legsHtml = bb.legs.map(l=>`
+    <div class="bab-leg">
+      <div class="bab-leg-left">
+        <div class="bab-leg-icon">${l.icon}</div>
+        <div>
+          <div class="bab-leg-bet">${lang==='en'?l.betEn:l.bet}</div>
+          <div class="bab-leg-conf">${l.conf}% ${lang==='en'?'confidence':'реален шанс'}</div>
+        </div>
+      </div>
+      <div class="bab-leg-odd">~${l.estOdd.toFixed(2)}</div>
+    </div>`).join('');
+  document.getElementById('babBox').innerHTML = `
+    <div class="bab-header">
+      <div class="bab-title">${lang==='en'?'🔨 BUILD A BET':'🔨 ИЗГРАДИ ЗАЛОГ'}</div>
+      <div class="bab-badge">SGM · AI</div>
+    </div>
+    <div class="bab-match">
+      <div class="bab-match-name">${lang==='en'?bb.homeEn:bb.home} — ${lang==='en'?bb.awayEn:bb.away}</div>
+      <div class="bab-match-meta">${bb.time} · ${lang==='en'?bb.leagueEn:bb.league}</div>
+    </div>
+    <div>${legsHtml}</div>
+    <div class="bab-footer">
+      <div class="bab-combo-row">
+        <div>
+          <div class="bab-combo-label">${lang==='en'?'Combined Odds':'Обща квота'}</div>
+          <div style="font-size:9px;color:var(--muted);margin-top:2px">${lang==='en'?'indicative · verify with your bookmaker':'индикативна · провери при букмейкъра'}</div>
+        </div>
+        <div class="bab-combo-odd">~${combined.toFixed(2)}</div>
+      </div>
+      <div class="bab-ai">${lang==='en'?bb.aiEn:bb.ai}</div>
+    </div>`;
+}
+
+// ════════════════════════════════════════
 // SURE BET / ARBITRAGE SECTION
 // ════════════════════════════════════════
 let sureMode = 'arb';
@@ -2055,6 +2132,7 @@ function renderMultiDutch(top2, stake){
   </div>`;
 }
 
+renderBuildBet();
 renderSureBets();
 renderCombos();
 renderCCBPicks();
