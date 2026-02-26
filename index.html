@@ -60,6 +60,7 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 .sec-badge{font-size:9px;padding:2px 8px;border-radius:4px;font-family:'DM Mono',monospace;font-weight:700;letter-spacing:1px}
 .sb-today{background:rgba(0,232,122,.12);color:var(--green)}
 .sb-next{background:rgba(59,139,255,.1);color:var(--blue)}
+.sb-done{background:rgba(90,105,120,.12);color:var(--muted)}
 .league-pill{display:flex;align-items:center;gap:7px;padding:5px 12px;background:rgba(255,255,255,.025);border-radius:7px;margin-bottom:8px;width:fit-content}
 .league-pill span{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
 
@@ -579,10 +580,11 @@ const T = {
     keyStats:"📊 Ключова статистика", injuriesLabel:"🏥 Контузии & Наказания", fullSquad:"✅ Пълен отбор",
     probLabel:"📈 Вероятности", winLabel:"Победа", drawLabel:"Равенство",
     predLabel:"Прогноза", bestOddsRow:"Най-добър БГ кф", aiLabel:"🤖 AI Анализ",
-    dateLabelCL:"Сряда, 25 Февруари 2026", todayBadge:"ДНЕС",
+    dateLabelCL:"Сряда, 25 Февруари 2026", todayBadge:"ДНЕС", yesterdayBadge:"ВЧЕРА",
     dateLabelEL:"Четвъртък, 26 Февруари 2026", tomorrowBadge:"УТРЕ",
     leagueLabelCL:"UEFA Champions League — Плейоф, 2-ри крак",
     leagueLabelEL:"UEFA Europa League — Плейоф, 2-ри крак",
+    prevRecordLabel:"Резултати от", prevRecordSuffix:"верни прогнози (ЛЧ)",
   },
   en:{
     logoSub:"Licensed BG Bookmakers Only", napBadge:"NAP Licensed", liveBadge:"UCL & UEL",
@@ -616,10 +618,11 @@ const T = {
     keyStats:"📊 Key Stats", injuriesLabel:"🏥 Injuries & Suspensions", fullSquad:"✅ Full Squad",
     probLabel:"📈 Probabilities", winLabel:"Win", drawLabel:"Draw",
     predLabel:"Prediction", bestOddsRow:"Best BG Odds", aiLabel:"🤖 AI Analysis",
-    dateLabelCL:"Wednesday, 25 February 2026", todayBadge:"TODAY",
+    dateLabelCL:"Wednesday, 25 February 2026", todayBadge:"TODAY", yesterdayBadge:"YESTERDAY",
     dateLabelEL:"Thursday, 26 February 2026", tomorrowBadge:"TOMORROW",
     leagueLabelCL:"UEFA Champions League — Playoff, 2nd Leg",
     leagueLabelEL:"UEFA Europa League — Playoff, 2nd Leg",
+    prevRecordLabel:"Results from", prevRecordSuffix:"correct (UCL)",
   }
 };
 
@@ -651,7 +654,7 @@ const MATCHES = [
   {
     id:"atl_bvb",
     league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак", leagueNameEn:"Champions League — Playoff, 2nd Leg",
-    date:"2026-02-25", time:"18:45", statusType:"today",
+    date:"2026-02-25", time:"18:45", statusType:"done",
     ctx:"1-ви крак: Дортмунд 2-0 Аталанта", ctxEn:"1st leg: Dortmund 2-0 Atalanta",
     home:"Аталанта",          homeA:"ATL", homeForm:["W","W","D","W","L"],
     away:"Борусия Дортмунд",  awayA:"BVB", awayForm:["W","D","W","W","W"],
@@ -706,7 +709,7 @@ const MATCHES = [
   {
     id:"juv_gal",
     league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак", leagueNameEn:"Champions League — Playoff, 2nd Leg",
-    date:"2026-02-25", time:"21:00", statusType:"today",
+    date:"2026-02-25", time:"21:00", statusType:"done",
     ctx:"1-ви крак: Галатасарай 5-2 Ювентус", ctxEn:"1st leg: Galatasaray 5-2 Juventus",
     home:"Ювентус",       homeA:"JUV", homeForm:["L","W","D","W","W"],
     away:"Галатасарай",   awayA:"GAL", awayForm:["W","W","W","D","W"],
@@ -761,7 +764,7 @@ const MATCHES = [
   {
     id:"psg_mon",
     league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак", leagueNameEn:"Champions League — Playoff, 2nd Leg",
-    date:"2026-02-25", time:"21:00", statusType:"today",
+    date:"2026-02-25", time:"21:00", statusType:"done",
     ctx:"1-ви крак: Монако 2-3 ПСЖ", ctxEn:"1st leg: Monaco 2-3 PSG",
     home:"ПСЖ",     homeA:"PSG", homeForm:["W","W","W","W","D"],
     away:"Монако",  awayA:"MON", awayForm:["W","D","W","L","W"],
@@ -816,7 +819,7 @@ const MATCHES = [
   {
     id:"rma_ben",
     league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак", leagueNameEn:"Champions League — Playoff, 2nd Leg",
-    date:"2026-02-25", time:"21:00", statusType:"today",
+    date:"2026-02-25", time:"21:00", statusType:"done",
     ctx:"1-ви крак: Бенфика 0-1 Реал Мадрид", ctxEn:"1st leg: Benfica 0-1 Real Madrid",
     home:"Реал Мадрид", homeA:"RMA", homeForm:["W","W","D","W","W"],
     away:"Бенфика",     awayA:"BEN", awayForm:["W","W","D","W","L"],
@@ -872,7 +875,7 @@ const MATCHES = [
   {
     id:"plz_pan",
     league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"18:45", statusType:"tomorrow",
+    date:"2026-02-26", time:"18:45", statusType:"today",
     ctx:"1-ви крак: Панатинаикос 2-2 Плзен", ctxEn:"1st leg: Panathinaikos 2-2 Plzen",
     home:"Виктория Плзен",    homeA:"PLZ", homeForm:["W","D","W","W","D"],
     away:"Панатинаикос",      awayA:"PAN", awayForm:["W","W","D","L","W"],
@@ -927,7 +930,7 @@ const MATCHES = [
   {
     id:"fer_lud",
     league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"18:45", statusType:"tomorrow",
+    date:"2026-02-26", time:"18:45", statusType:"today",
     ctx:"1-ви крак: Лудогорец 2-1 Ференцварош", ctxEn:"1st leg: Ludogorets 2-1 Ferencvaros",
     home:"Ференцварош",  homeA:"FER", homeForm:["W","D","W","D","W"],
     away:"Лудогорец",    awayA:"LUD", awayForm:["W","W","W","D","L"],
@@ -982,7 +985,7 @@ const MATCHES = [
   {
     id:"red_lil",
     league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"18:45", statusType:"tomorrow",
+    date:"2026-02-26", time:"18:45", statusType:"today",
     ctx:"1-ви крак: Лил 0-1 Цр. Звезда", ctxEn:"1st leg: Lille 0-1 Red Star",
     home:"Цр. Звезда Белград", homeA:"RED", homeForm:["W","W","W","D","W"],
     away:"Лил",               awayA:"LIL", awayForm:["W","D","W","W","L"],
@@ -1037,7 +1040,7 @@ const MATCHES = [
   {
     id:"stu_cel",
     league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"18:45", statusType:"tomorrow",
+    date:"2026-02-26", time:"18:45", statusType:"today",
     ctx:"1-ви крак: Селтик 1-4 Щутгарт", ctxEn:"1st leg: Celtic 1-4 Stuttgart",
     home:"Щутгарт",  homeA:"STU", homeForm:["W","W","W","W","D"],
     away:"Селтик",   awayA:"CEL", awayForm:["L","W","D","W","W"],
@@ -1092,7 +1095,7 @@ const MATCHES = [
   {
     id:"bol_brn",
     league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"21:00", statusType:"tomorrow",
+    date:"2026-02-26", time:"21:00", statusType:"today",
     ctx:"1-ви крак: Бран 0-1 Болоня", ctxEn:"1st leg: Brann 0-1 Bologna",
     home:"Болоня",  homeA:"BOL", homeForm:["W","W","W","D","W"],
     away:"Бран",    awayA:"BRN", awayForm:["W","L","W","D","W"],
@@ -1147,7 +1150,7 @@ const MATCHES = [
   {
     id:"gen_din",
     league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"21:00", statusType:"tomorrow",
+    date:"2026-02-26", time:"21:00", statusType:"today",
     ctx:"1-ви крак: Динамо Загреб 1-3 Хенк", ctxEn:"1st leg: Dinamo Zagreb 1-3 Genk",
     home:"Хенк",             homeA:"GNK", homeForm:["W","W","W","D","W"],
     away:"Динамо Загреб",    awayA:"DIN", awayForm:["W","L","D","W","L"],
@@ -1202,7 +1205,7 @@ const MATCHES = [
   {
     id:"for_fen",
     league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"21:00", statusType:"tomorrow",
+    date:"2026-02-26", time:"21:00", statusType:"today",
     ctx:"1-ви крак: Фенербахче 0-3 Форест", ctxEn:"1st leg: Fenerbahce 0-3 Nottm Forest",
     home:"Нотингам Форест", homeA:"FOR", homeForm:["W","W","W","W","D"],
     away:"Фенербахче",      awayA:"FEN", awayForm:["W","L","W","D","L"],
@@ -1257,7 +1260,7 @@ const MATCHES = [
   {
     id:"cel_pak",
     league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"21:00", statusType:"tomorrow",
+    date:"2026-02-26", time:"21:00", statusType:"today",
     ctx:"1-ви крак: ПАОК 1-2 Селта", ctxEn:"1st leg: PAOK 1-2 Celta",
     home:"Селта Виго",  homeA:"CEL", homeForm:["W","D","W","W","W"],
     away:"ПАОК",        awayA:"PAO", awayForm:["W","W","D","W","L"],
@@ -1357,7 +1360,7 @@ function renderCard(m, idx){
       <div class="team"><div class="tname">${m.home}</div><div class="tform">${hf}</div></div>
       <div class="mctr">
         <div class="mc-time">${m.time}</div>
-        <div class="mc-st ${m.statusType==='tomorrow'?'st-soon':'st-today'}">${m.statusType==='tomorrow'?T[currentLang].tomorrowBadge:T[currentLang].todayBadge}</div>
+        <div class="mc-st ${m.statusType==='today'?'st-today':m.statusType==='done'?'st-fin':'st-soon'}">${m.statusType==='today'?T[currentLang].todayBadge:m.statusType==='done'?T[currentLang].yesterdayBadge:T[currentLang].tomorrowBadge}</div>
         <div class="mc-ctx">${currentLang==='en'?(m.ctxEn||m.ctx):m.ctx}</div>
       </div>
       <div class="team away"><div class="tname">${m.away}</div><div class="tform">${af}</div></div>
@@ -1458,11 +1461,11 @@ function render(){
   const clMatches = MATCHES.filter(m=>m.league==='cl');
   const elMatches = MATCHES.filter(m=>m.league==='el');
   let html=`<div>
-    <div class="section-header"><span class="sec-label">${t.dateLabelCL}</span><span class="sec-badge sb-today">${t.todayBadge}</span><div class="sec-line"></div></div>
+    <div class="section-header"><span class="sec-label">${t.dateLabelCL}</span><span class="sec-badge sb-done">${t.yesterdayBadge}</span><div class="sec-line"></div></div>
     <div class="league-pill"><span>🏆</span><span>${t.leagueLabelCL}</span></div>`;
   clMatches.forEach((m,i)=>html+=renderCard(m,i));
   html+=`</div><div style="margin-top:24px">
-    <div class="section-header"><span class="sec-label">${t.dateLabelEL}</span><span class="sec-badge sb-next">${t.tomorrowBadge}</span><div class="sec-line"></div></div>
+    <div class="section-header"><span class="sec-label">${t.dateLabelEL}</span><span class="sec-badge sb-today">${t.todayBadge}</span><div class="sec-line"></div></div>
     <div class="league-pill"><span>🟠</span><span>${t.leagueLabelEL}</span></div>`;
   elMatches.forEach((m,i)=>html+=renderCard(m,i+4));
   html+='</div>';
@@ -1474,12 +1477,15 @@ render();
 // TODAY'S PERFORMANCE SECTION
 // ════════════════════════════════════════
 
+// Previous matchday record (24.02.2026)
+const PREV_RECORD = { date:"24.02.2026", correct:3, total:4 };
+
 // Update these after matches end: null = pending, 'W' = win, 'L' = loss
 const TODAY_RESULTS = {
-  atl_bvb: null,  // Atalanta vs Borussia Dortmund — BTTS
-  juv_gal: null,  // Juventus vs Galatasaray — Over 2.5
-  psg_mon: null,  // PSG vs Monaco — PSG Win
-  rma_ben: null,  // Real Madrid vs Benfica — Real Madrid Win
+  atl_bvb: 'W',  // Atalanta vs Borussia Dortmund — BTTS ✓
+  juv_gal: 'W',  // Juventus vs Galatasaray — Over 2.5 ✓
+  psg_mon: 'L',  // PSG vs Monaco — PSG Win ✗
+  rma_ben: 'W',  // Real Madrid vs Benfica — Real Madrid Win ✓
 };
 
 const EN_MATCH_NAMES = {
@@ -1515,12 +1521,18 @@ function renderTodayPerf(){
   const scoreColor = pct === null ? 'var(--yellow)' : pct >= 75 ? 'var(--green)' : pct >= 50 ? 'var(--yellow)' : 'var(--red)';
   const scoreDisplay = dones > 0 ? `${wins}/${dones}` : `0/${total}`;
 
+  const prevColor = PREV_RECORD.correct / PREV_RECORD.total >= 0.75 ? 'var(--green)' : 'var(--yellow)';
   const summary = `
     <div>
       <div class="perf-score" style="color:${scoreColor}">${scoreDisplay}</div>
       <div class="perf-score-label">${T[lang].perfScoreLabel}</div>
     </div>
-    <div class="perf-note">${allDone ? T[lang].perfNoteAll : T[lang].perfNoteWaiting}</div>`;
+    <div class="perf-note">${allDone ? T[lang].perfNoteAll : T[lang].perfNoteWaiting}</div>
+    <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:11px;color:var(--muted)">
+      📅 ${T[lang].prevRecordLabel} ${PREV_RECORD.date} —
+      <span style="font-weight:700;color:${prevColor}">${PREV_RECORD.correct}/${PREV_RECORD.total}</span>
+      ${T[lang].prevRecordSuffix}
+    </div>`;
 
   document.getElementById('perfGrid').innerHTML = cards;
   document.getElementById('perfSummary').innerHTML = summary;
