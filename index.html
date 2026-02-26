@@ -436,17 +436,19 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 <div class="sidebar">
   <div class="top-pick">
     <div class="tp-title" data-t="topPickTitle">⭐ Топ избор на деня</div>
-    <div class="tp-match">Реал Мадрид — Бенфика</div>
-    <div class="tp-bet" data-t="topPickBet">Реал Мадрид победа</div>
+    <div class="tp-match">Щутгарт — Селтик</div>
+    <div class="tp-bet" data-t="topPickBet">Щутгарт победа</div>
     <div class="tp-odd-row">
       <div class="tp-odd">1.65</div>
       <div>
         <div class="tp-book">Bet365</div>
-        <div class="tp-conf" style="color:var(--green)" data-t="topPickConf">71% реален шанс</div>
+        <div class="tp-conf" style="color:var(--green)" data-t="topPickConf">72% реален шанс</div>
       </div>
     </div>
-    <div class="tp-conf" style="margin-top:8px" data-t="topPickNote">Водят 1-0 от Лисабон. Бернабеу непобедим. Топ избор!</div>
+    <div class="tp-conf" style="margin-top:8px" data-t="topPickNote">Спечелиха 4-1 в Глазгоу. Вкъщи пред своите фенове — типична победа.</div>
   </div>
+  <div id="babBox"></div>
+  <div id="multiPickBox"></div>
 
   <div class="scard">
     <div class="stitle" data-t="trendTitle">📊 ЛЧ & ЛЕ ТРЕНД</div>
@@ -486,41 +488,32 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
       <div class="ccb-title" data-t="buildComboTitle">🔧 Изгради своя комбинация</div>
       <div class="ccb-picks" id="ccbPicks"></div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:14px">
-      <div class="betslip">
-        <div class="bs-header">
-          <div class="bs-title" data-t="betslipTitle">🎟 Бетслип</div>
-          <div class="bs-count" id="bsCount">0 избора</div>
-        </div>
-        <div id="bsLegs"><div class="bs-empty" data-t="betslipEmpty">Добавете избори от комбинациите или от таблицата</div></div>
-        <div class="bs-totals" id="bsTotals" style="display:none">
-          <div class="bs-total-row"><span class="bs-total-label" data-t="bsLegsLabel">Брой избори</span><span class="bs-total-val" id="bsLegsCount">0</span></div>
-          <div class="bs-total-row"><span class="bs-total-label" data-t="bsTotalOddsLabel">Обща квота</span><span class="bs-total-val" id="bsTotalOdd" style="color:var(--yellow)">0.00</span></div>
-          <div class="bs-stake-row">
-            <span class="bs-stake-label" data-t="bsStakeLabel">Залог:</span>
-            <input class="bs-stake-input" id="bsStake" type="number" placeholder="10" min="1" oninput="recalcBetslip()">
-            <span class="bs-lv" data-t="bsCurrency">лв.</span>
-          </div>
-          <div class="bs-total-row final"><span class="bs-total-label" data-t="bsWinLabel">Потенциална печалба</span><span class="bs-total-val" id="bsWin">0.00 лв.</span></div>
-          <button class="bs-place-btn" onclick="placeBet()" data-t="bsPlaceBtn">ПОСТАВИ ЗАЛОГ →</button>
-        </div>
+    <div class="betslip">
+      <div class="bs-header">
+        <div class="bs-title" data-t="betslipTitle">🎟 Бетслип</div>
+        <div class="bs-count" id="bsCount">0 избора</div>
       </div>
-      <div id="babBox"></div>
+      <div id="bsLegs"><div class="bs-empty" data-t="betslipEmpty">Добавете избори от комбинациите или от таблицата</div></div>
+      <div class="bs-totals" id="bsTotals" style="display:none">
+        <div class="bs-total-row"><span class="bs-total-label" data-t="bsLegsLabel">Брой избори</span><span class="bs-total-val" id="bsLegsCount">0</span></div>
+        <div class="bs-total-row"><span class="bs-total-label" data-t="bsTotalOddsLabel">Обща квота</span><span class="bs-total-val" id="bsTotalOdd" style="color:var(--yellow)">0.00</span></div>
+        <div class="bs-stake-row">
+          <span class="bs-stake-label" data-t="bsStakeLabel">Залог:</span>
+          <input class="bs-stake-input" id="bsStake" type="number" placeholder="10" min="1" oninput="recalcBetslip()">
+          <span class="bs-lv" data-t="bsCurrency">лв.</span>
+        </div>
+        <div class="bs-total-row final"><span class="bs-total-label" data-t="bsWinLabel">Потенциална печалба</span><span class="bs-total-val" id="bsWin">0.00 лв.</span></div>
+        <button class="bs-place-btn" onclick="placeBet()" data-t="bsPlaceBtn">ПОСТАВИ ЗАЛОГ →</button>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- ═══ SURE BETS / ARBITRAGE ═══ -->
+<!-- ═══ SURE BETS / DUTCH ═══ -->
 <div class="sure-section">
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px">
-    <div>
-      <div class="sure-title">⚡ АРБИТРАЖ & <em>СИГУРЕН ЗАЛОГ</em></div>
-      <div class="sure-sub">Сканиране на 1X2 коефициенти от 8 букмейкъра · Намери гарантирана печалба</div>
-    </div>
-    <div class="sure-tabs">
-      <button class="sure-tab active" id="tab-arb" onclick="setSureMode('arb')">⚖ АРБ СКЕНЕР</button>
-      <button class="sure-tab" id="tab-dutch" onclick="setSureMode('dutch')">🎯 DUTCH ЗАЛОГ</button>
-    </div>
+  <div style="margin-bottom:16px">
+    <div class="sure-title">🎯 <em>DUTCH ЗАЛОГ</em></div>
+    <div class="sure-sub">Залагай на домакин + гост едновременно · Гарантирана печалба ако няма равенство · Топ 3 мача от ЛЕ</div>
   </div>
   <div class="sure-stake-row">
     <span style="font-size:11px;color:var(--muted)">Залог:</span>
@@ -554,12 +547,12 @@ const T = {
     heroP:"Сравнение на коефициенти от лицензирани в България оператори (НАП). Намери най-добрата ставка за ЛЧ (25 Февруари) и ЛЕ (26 Февруари 2026).",
     statBooks:"Букмейкъра", statMatches:"Мача", statMarkets:"Пазара",
     booksTitle:"🇧🇬 + 🌍 Букмейкъри:",
-    todayTitle:"ДНЕШНИ <em style=\"color:var(--green)\">ПРОГНОЗИ</em>", todaySub:"ЛЧ · 25.02 / ЛЕ · 26.02.2026",
-    topPickTitle:"⭐ Топ избор на деня", topPickBet:"Реал Мадрид победа", topPickConf:"71% реален шанс",
-    topPickNote:"Водят 1-0 от Лисабон. Бернабеу непобедим. Топ избор!",
-    trendTitle:"📊 ЛЧ & ЛЕ ТРЕНД",
-    trend1:"Реал Мадрид дома (ЛЧ КО)", trend2:"Форест вкъщи (ЛЕ)",
-    trend3:"Лудогорец 🇧🇬 преднина", trend4:"Бенфика извън (ЕК)",
+    todayTitle:"ДНЕШНИ <em style=\"color:var(--green)\">ПРОГНОЗИ</em>", todaySub:"ЛЕ · 26.02.2026",
+    topPickTitle:"⭐ Топ избор на деня", topPickBet:"Щутгарт победа", topPickConf:"72% реален шанс",
+    topPickNote:"Спечелиха 4-1 в Глазгоу. Вкъщи пред своите фенове — типична победа.",
+    trendTitle:"📊 ЛЕ ТРЕНД ДНЕС",
+    trend1:"Щутгарт (ЛЕ, КО, вкъщи)", trend2:"Болоня вкъщи (ЛЕ)",
+    trend3:"Лудогорец 🇧🇬 преднина 2-1", trend4:"Форест не пусна (0-3)",
     discTitle:"⚠️ Отговорна игра",
     discText:"Залагането носи риск. Играй отговорно. Всички оператори тук са лицензирани от НАП — Национална агенция за приходите на Република България. 18+",
     comboTitle:"КОМБИНИРАНИ <em>ЗАЛОЗИ</em>",
@@ -592,12 +585,12 @@ const T = {
     heroP:"Odds comparison from NAP-licensed operators in Bulgaria. Best odds for UCL (25 Feb) & UEL (26 Feb 2026).",
     statBooks:"Bookmakers", statMatches:"Matches", statMarkets:"Markets",
     booksTitle:"🇧🇬 + 🌍 Bookmakers:",
-    todayTitle:"TODAY'S <em style=\"color:var(--green)\">PICKS</em>", todaySub:"UCL · 25.02 / UEL · 26.02.2026",
-    topPickTitle:"⭐ Top Pick of the Day", topPickBet:"Real Madrid Win", topPickConf:"71% real chance",
-    topPickNote:"Lead 1-0 from Lisbon. Bernabeu is a fortress. Top pick!",
-    trendTitle:"📊 UCL & UEL TRENDS",
-    trend1:"Real Madrid home (UCL KO)", trend2:"Forest at home (UEL)",
-    trend3:"Ludogorets 🇧🇬 lead", trend4:"Benfica away (European)",
+    todayTitle:"TODAY'S <em style=\"color:var(--green)\">PICKS</em>", todaySub:"UEL · 26.02.2026",
+    topPickTitle:"⭐ Top Pick of the Day", topPickBet:"Stuttgart Win", topPickConf:"72% real chance",
+    topPickNote:"Won 4-1 in Glasgow. At home in front of their fans — routine win.",
+    trendTitle:"📊 UEL TRENDS TODAY",
+    trend1:"Stuttgart (UEL KO, home)", trend2:"Bologna at home (UEL)",
+    trend3:"Ludogorets 🇧🇬 lead 2-1", trend4:"Forest clean sheet (0-3)",
     discTitle:"⚠️ Responsible Gambling",
     discText:"Gambling carries risk. Play responsibly. All operators listed here are licensed by NAP — the National Revenue Agency of Bulgaria. 18+",
     comboTitle:"COMBO <em>BUILDER</em>",
@@ -634,7 +627,7 @@ function setLang(lang){
   });
   document.getElementById('btn-bg').classList.toggle('active', lang==='bg');
   document.getElementById('btn-en').classList.toggle('active', lang==='en');
-  render(); renderTodayPerf(); renderBuildBet(); renderSureBets(); renderCombos(); renderCCBPicks(); renderBetslip();
+  render(); renderTodayPerf(); renderBuildBet(); renderMultiPick(); renderSureBets(); renderCombos(); renderCCBPicks(); renderBetslip();
 }
 
 // ─── BULGARIAN BOOKMAKERS ───
@@ -1458,16 +1451,11 @@ function tog(id){
 function render(){
   const t=T[currentLang];
   const c=document.getElementById('container');
-  const clMatches = MATCHES.filter(m=>m.league==='cl');
   const elMatches = MATCHES.filter(m=>m.league==='el');
   let html=`<div>
-    <div class="section-header"><span class="sec-label">${t.dateLabelCL}</span><span class="sec-badge sb-done">${t.yesterdayBadge}</span><div class="sec-line"></div></div>
-    <div class="league-pill"><span>🏆</span><span>${t.leagueLabelCL}</span></div>`;
-  clMatches.forEach((m,i)=>html+=renderCard(m,i));
-  html+=`</div><div style="margin-top:24px">
     <div class="section-header"><span class="sec-label">${t.dateLabelEL}</span><span class="sec-badge sb-today">${t.todayBadge}</span><div class="sec-line"></div></div>
     <div class="league-pill"><span>🟠</span><span>${t.leagueLabelEL}</span></div>`;
-  elMatches.forEach((m,i)=>html+=renderCard(m,i+4));
+  elMatches.forEach((m,i)=>html+=renderCard(m,i));
   html+='</div>';
   c.innerHTML=html;
 }
@@ -1695,115 +1683,109 @@ function updateOddsInUI() {
 
 function rebuildComboData() {
   const o = LIVE_ODDS;
-  // Combo 0: safe2 — Real Madrid + PSG
-  PRESET_COMBOS[0].picks[0].odd = parseFloat(o.rma_1);
-  PRESET_COMBOS[0].picks[1].odd = parseFloat(o.psg_1);
-  // Combo 1: goals3 — BTTS Atalanta + O2.5 Juve + O2.5 Forest
-  PRESET_COMBOS[1].picks[0].odd = parseFloat(o.atl_btts);
-  PRESET_COMBOS[1].picks[1].odd = parseFloat(o.juv_o25);
-  PRESET_COMBOS[1].picks[2].odd = parseFloat(o.for_o25);
-  // Combo 2: el3 — Bologna + Stuttgart + Forest
-  PRESET_COMBOS[2].picks[0].odd = parseFloat(o.bol_1);
-  PRESET_COMBOS[2].picks[1].odd = parseFloat(o.stu_1);
+  // Combo 0: safe2 — Stuttgart + Bologna
+  PRESET_COMBOS[0].picks[0].odd = parseFloat(o.stu_1);
+  PRESET_COMBOS[0].picks[1].odd = parseFloat(o.bol_1);
+  // Combo 1: goals3 — Forest O2.5 + Genk O2.5 + Celta BTTS
+  PRESET_COMBOS[1].picks[0].odd = parseFloat(o.for_o25);
+  PRESET_COMBOS[1].picks[1].odd = parseFloat(o.gen_o25);
+  PRESET_COMBOS[1].picks[2].odd = parseFloat(o.cel_btts);
+  // Combo 2: el3 — Stuttgart + Bologna + Forest O2.5
+  PRESET_COMBOS[2].picks[0].odd = parseFloat(o.stu_1);
+  PRESET_COMBOS[2].picks[1].odd = parseFloat(o.bol_1);
   PRESET_COMBOS[2].picks[2].odd = parseFloat(o.for_o25);
   // Combo 3: bulg — Ludogorets qualify + Red Star qualify
   PRESET_COMBOS[3].picks[0].odd = parseFloat(o.lud_q);
   PRESET_COMBOS[3].picks[1].odd = parseFloat(o.red_q);
-  // Combo 4: ucl3 — Real Madrid + PSG + Stuttgart
-  PRESET_COMBOS[4].picks[0].odd = parseFloat(o.rma_1);
-  PRESET_COMBOS[4].picks[1].odd = parseFloat(o.psg_1);
-  PRESET_COMBOS[4].picks[2].odd = parseFloat(o.stu_1);
-  // Combo 5: mega5 — Real Madrid + PSG + Bologna + BTTS Atalanta + O2.5 Forest
-  PRESET_COMBOS[5].picks[0].odd = parseFloat(o.rma_1);
-  PRESET_COMBOS[5].picks[1].odd = parseFloat(o.psg_1);
-  PRESET_COMBOS[5].picks[2].odd = parseFloat(o.bol_1);
-  PRESET_COMBOS[5].picks[3].odd = parseFloat(o.atl_btts);
-  PRESET_COMBOS[5].picks[4].odd = parseFloat(o.for_o25);
-  // Single picks
-  ALL_SINGLE_PICKS[0].odd  = parseFloat(o.atl_btts);
-  ALL_SINGLE_PICKS[1].odd  = parseFloat(o.juv_o25);
-  ALL_SINGLE_PICKS[2].odd  = parseFloat(o.psg_1);
-  ALL_SINGLE_PICKS[3].odd  = parseFloat(o.rma_1);
-  ALL_SINGLE_PICKS[4].odd  = parseFloat(o.lud_q);
-  ALL_SINGLE_PICKS[5].odd  = parseFloat(o.red_q);
-  ALL_SINGLE_PICKS[6].odd  = parseFloat(o.stu_1);
-  ALL_SINGLE_PICKS[7].odd  = parseFloat(o.bol_1);
-  ALL_SINGLE_PICKS[8].odd  = parseFloat(o.for_o25);
-  ALL_SINGLE_PICKS[9].odd  = parseFloat(o.plz_1);
-  ALL_SINGLE_PICKS[10].odd = parseFloat(o.cel_btts);
-  ALL_SINGLE_PICKS[11].odd = parseFloat(o.gen_o25);
+  // Combo 4: el4 — Stuttgart + Bologna + Red Star + Forest O2.5
+  PRESET_COMBOS[4].picks[0].odd = parseFloat(o.stu_1);
+  PRESET_COMBOS[4].picks[1].odd = parseFloat(o.bol_1);
+  PRESET_COMBOS[4].picks[2].odd = parseFloat(o.red_q);
+  PRESET_COMBOS[4].picks[3].odd = parseFloat(o.for_o25);
+  // Combo 5: mega5 — Stuttgart + Bologna + Red Star + Forest O2.5 + Genk O2.5
+  PRESET_COMBOS[5].picks[0].odd = parseFloat(o.stu_1);
+  PRESET_COMBOS[5].picks[1].odd = parseFloat(o.bol_1);
+  PRESET_COMBOS[5].picks[2].odd = parseFloat(o.red_q);
+  PRESET_COMBOS[5].picks[3].odd = parseFloat(o.for_o25);
+  PRESET_COMBOS[5].picks[4].odd = parseFloat(o.gen_o25);
+  // Single picks (EL only, 8 picks)
+  ALL_SINGLE_PICKS[0].odd = parseFloat(o.lud_q);
+  ALL_SINGLE_PICKS[1].odd = parseFloat(o.red_q);
+  ALL_SINGLE_PICKS[2].odd = parseFloat(o.stu_1);
+  ALL_SINGLE_PICKS[3].odd = parseFloat(o.bol_1);
+  ALL_SINGLE_PICKS[4].odd = parseFloat(o.for_o25);
+  ALL_SINGLE_PICKS[5].odd = parseFloat(o.plz_1);
+  ALL_SINGLE_PICKS[6].odd = parseFloat(o.cel_btts);
+  ALL_SINGLE_PICKS[7].odd = parseFloat(o.gen_o25);
 }
 
 const PRESET_COMBOS = [
   {
     id:"safe2", badge:"cb-safe", badgeText:"🛡 СИГУРНА",
-    name:"Двойна Сигурност", conf:65, legs:2,
+    name:"Двойна Сигурност", conf:68, legs:2,
     picks:[
-      {match:"Реал Мадрид — Бенфика", bet:"Реал Мадрид победа", odd:parseFloat(FALLBACK_ODDS.rma_1), book:"Bet365", bookKey:"bet365"},
-      {match:"ПСЖ — Монако",          bet:"ПСЖ победа",         odd:parseFloat(FALLBACK_ODDS.psg_1), book:"Bet365", bookKey:"bet365"},
+      {match:"Щутгарт — Селтик", bet:"Щутгарт победа", odd:parseFloat(FALLBACK_ODDS.stu_1), book:"Bet365", bookKey:"bet365"},
+      {match:"Болоня — Бран",    bet:"Болоня победа",   odd:parseFloat(FALLBACK_ODDS.bol_1), book:"Bet365", bookKey:"bet365"},
     ]
   },
   {
     id:"goals3", badge:"cb-val", badgeText:"⚽ ГОЛОВЕ",
-    name:"Голов Тройник", conf:48, legs:3,
+    name:"Голов Тройник", conf:52, legs:3,
     picks:[
-      {match:"Аталанта — Дортмунд",    bet:"BTTS Да",      odd:parseFloat(FALLBACK_ODDS.atl_btts), book:"Bet365", bookKey:"bet365"},
-      {match:"Ювентус — Галатасарай",  bet:"Над 2.5 гола", odd:parseFloat(FALLBACK_ODDS.juv_o25),  book:"Bet365", bookKey:"bet365"},
-      {match:"Форест — Фенербахче",    bet:"Над 2.5 гола", odd:parseFloat(FALLBACK_ODDS.for_o25),  book:"Bet365", bookKey:"bet365"},
+      {match:"Форест — Фенербахче",  bet:"Над 2.5 гола", odd:parseFloat(FALLBACK_ODDS.for_o25),  book:"Bet365", bookKey:"bet365"},
+      {match:"Хенк — Динамо Загреб", bet:"Над 2.5 гола", odd:parseFloat(FALLBACK_ODDS.gen_o25),  book:"Bet365", bookKey:"bet365"},
+      {match:"Селта — ПАОК",         bet:"BTTS Да",       odd:parseFloat(FALLBACK_ODDS.cel_btts), book:"Bet365", bookKey:"bet365"},
     ]
   },
   {
     id:"el3", badge:"cb-safe", badgeText:"🛡 СИГУРНА",
-    name:"ЕЛ Доминатори", conf:56, legs:3,
+    name:"ЛЕ Тройка", conf:60, legs:3,
     picks:[
-      {match:"Болоня — Бран",         bet:"Болоня победа",    odd:parseFloat(FALLBACK_ODDS.bol_1), book:"Bet365", bookKey:"bet365"},
-      {match:"Щутгарт — Селтик",      bet:"Щутгарт победа",   odd:parseFloat(FALLBACK_ODDS.stu_1), book:"Bet365", bookKey:"bet365"},
-      {match:"Форест — Фенербахче",   bet:"Над 2.5 гола",     odd:parseFloat(FALLBACK_ODDS.for_o25), book:"Bet365", bookKey:"bet365"},
+      {match:"Щутгарт — Селтик",    bet:"Щутгарт победа", odd:parseFloat(FALLBACK_ODDS.stu_1),   book:"Bet365", bookKey:"bet365"},
+      {match:"Болоня — Бран",       bet:"Болоня победа",   odd:parseFloat(FALLBACK_ODDS.bol_1),   book:"Bet365", bookKey:"bet365"},
+      {match:"Форест — Фенербахче", bet:"Над 2.5 гола",    odd:parseFloat(FALLBACK_ODDS.for_o25), book:"Bet365", bookKey:"bet365"},
     ]
   },
   {
     id:"bulg", badge:"cb-val", badgeText:"🇧🇬 БЪЛГАРСКИ",
-    name:"Български Специал 🇧🇬", conf:42, legs:2,
+    name:"Български Специал 🇧🇬", conf:46, legs:2,
     picks:[
       {match:"Ференцварош — Лудогорец", bet:"Лудогорец квалификация", odd:parseFloat(FALLBACK_ODDS.lud_q), book:"Bet365", bookKey:"bet365"},
       {match:"Ц. Звезда — Лил",         bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q), book:"Bet365", bookKey:"bet365"},
     ]
   },
   {
-    id:"ucl3", badge:"cb-safe", badgeText:"🏆 ЛЧ ТРОЙКА",
-    name:"ЛЧ Тройка", conf:55, legs:3,
+    id:"el4", badge:"cb-val", badgeText:"🟠 ЛЕ ЧЕТВОРКА",
+    name:"ЛЕ Четворка", conf:42, legs:4,
     picks:[
-      {match:"Реал Мадрид — Бенфика", bet:"Реал Мадрид победа", odd:parseFloat(FALLBACK_ODDS.rma_1), book:"Bet365", bookKey:"bet365"},
-      {match:"ПСЖ — Монако",          bet:"ПСЖ победа",         odd:parseFloat(FALLBACK_ODDS.psg_1), book:"Bet365", bookKey:"bet365"},
-      {match:"Щутгарт — Селтик",      bet:"Щутгарт победа",     odd:parseFloat(FALLBACK_ODDS.stu_1), book:"Bet365", bookKey:"bet365"},
+      {match:"Щутгарт — Селтик",    bet:"Щутгарт победа",         odd:parseFloat(FALLBACK_ODDS.stu_1),   book:"Bet365", bookKey:"bet365"},
+      {match:"Болоня — Бран",       bet:"Болоня победа",           odd:parseFloat(FALLBACK_ODDS.bol_1),   book:"Bet365", bookKey:"bet365"},
+      {match:"Ц. Звезда — Лил",     bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q),   book:"Bet365", bookKey:"bet365"},
+      {match:"Форест — Фенербахче", bet:"Над 2.5 гола",            odd:parseFloat(FALLBACK_ODDS.for_o25), book:"Bet365", bookKey:"bet365"},
     ]
   },
   {
     id:"mega5", badge:"cb-risky", badgeText:"🔥 МЕГА КОМБО",
-    name:"Мега Комбо", conf:28, legs:5,
+    name:"Мега ЛЕ Комбо", conf:26, legs:5,
     picks:[
-      {match:"Реал Мадрид — Бенфика", bet:"Реал Мадрид победа", odd:parseFloat(FALLBACK_ODDS.rma_1),    book:"Bet365", bookKey:"bet365"},
-      {match:"ПСЖ — Монако",          bet:"ПСЖ победа",         odd:parseFloat(FALLBACK_ODDS.psg_1),    book:"Bet365", bookKey:"bet365"},
-      {match:"Болоня — Бран",         bet:"Болоня победа",       odd:parseFloat(FALLBACK_ODDS.bol_1),    book:"Bet365", bookKey:"bet365"},
-      {match:"Аталанта — Дортмунд",   bet:"BTTS Да",             odd:parseFloat(FALLBACK_ODDS.atl_btts), book:"Bet365", bookKey:"bet365"},
-      {match:"Форест — Фенербахче",   bet:"Над 2.5 гола",        odd:parseFloat(FALLBACK_ODDS.for_o25),  book:"Bet365", bookKey:"bet365"},
+      {match:"Щутгарт — Селтик",     bet:"Щутгарт победа",         odd:parseFloat(FALLBACK_ODDS.stu_1),   book:"Bet365", bookKey:"bet365"},
+      {match:"Болоня — Бран",        bet:"Болоня победа",           odd:parseFloat(FALLBACK_ODDS.bol_1),   book:"Bet365", bookKey:"bet365"},
+      {match:"Ц. Звезда — Лил",      bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q),   book:"Bet365", bookKey:"bet365"},
+      {match:"Форест — Фенербахче",  bet:"Над 2.5 гола",            odd:parseFloat(FALLBACK_ODDS.for_o25), book:"Bet365", bookKey:"bet365"},
+      {match:"Хенк — Динамо Загреб", bet:"Над 2.5 гола",            odd:parseFloat(FALLBACK_ODDS.gen_o25), book:"Bet365", bookKey:"bet365"},
     ]
   },
 ];
 
 const ALL_SINGLE_PICKS = [
-  {id:"p1",  match:"Аталанта — Дортмунд",    bet:"BTTS Да",                  odd:parseFloat(FALLBACK_ODDS.atl_btts), book:"Bet365", bookKey:"bet365", conf:65},
-  {id:"p2",  match:"Ювентус — Галатасарай",  bet:"Над 2.5 гола",             odd:parseFloat(FALLBACK_ODDS.juv_o25),  book:"Bet365", bookKey:"bet365", conf:72},
-  {id:"p3",  match:"ПСЖ — Монако",           bet:"ПСЖ победа",               odd:parseFloat(FALLBACK_ODDS.psg_1),    book:"Bet365", bookKey:"bet365", conf:68},
-  {id:"p4",  match:"Реал Мадрид — Бенфика",  bet:"Реал Мадрид победа",       odd:parseFloat(FALLBACK_ODDS.rma_1),    book:"Bet365", bookKey:"bet365", conf:71},
-  {id:"p5",  match:"Ференцварош — Лудогорец",bet:"Лудогорец квалификация",    odd:parseFloat(FALLBACK_ODDS.lud_q),    book:"Bet365", bookKey:"bet365", conf:58},
-  {id:"p6",  match:"Ц. Звезда — Лил",        bet:"Ц.Звезда квалификация",    odd:parseFloat(FALLBACK_ODDS.red_q),    book:"Bet365", bookKey:"bet365", conf:68},
-  {id:"p7",  match:"Щутгарт — Селтик",       bet:"Щутгарт победа",           odd:parseFloat(FALLBACK_ODDS.stu_1),    book:"Bet365", bookKey:"bet365", conf:72},
-  {id:"p8",  match:"Болоня — Бран",          bet:"Болоня победа",             odd:parseFloat(FALLBACK_ODDS.bol_1),    book:"Bet365", bookKey:"bet365", conf:73},
-  {id:"p9",  match:"Форест — Фенербахче",    bet:"Над 2.5 гола",             odd:parseFloat(FALLBACK_ODDS.for_o25),  book:"Bet365", bookKey:"bet365", conf:70},
-  {id:"p10", match:"Плзен — Панатинаикос",   bet:"Плзен победа",             odd:parseFloat(FALLBACK_ODDS.plz_1),    book:"Bet365", bookKey:"bet365", conf:55},
-  {id:"p11", match:"Селта — ПАОК",           bet:"BTTS Да",                  odd:parseFloat(FALLBACK_ODDS.cel_btts), book:"Bet365", bookKey:"bet365", conf:62},
-  {id:"p12", match:"Хенк — Динамо Загреб",   bet:"Над 2.5 гола",             odd:parseFloat(FALLBACK_ODDS.gen_o25),  book:"Bet365", bookKey:"bet365", conf:67},
+  {id:"p1", match:"Ференцварош — Лудогорец", bet:"Лудогорец квалификация", odd:parseFloat(FALLBACK_ODDS.lud_q),    book:"Bet365", bookKey:"bet365", conf:58},
+  {id:"p2", match:"Ц. Звезда — Лил",         bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q),    book:"Bet365", bookKey:"bet365", conf:68},
+  {id:"p3", match:"Щутгарт — Селтик",        bet:"Щутгарт победа",         odd:parseFloat(FALLBACK_ODDS.stu_1),    book:"Bet365", bookKey:"bet365", conf:72},
+  {id:"p4", match:"Болоня — Бран",           bet:"Болоня победа",           odd:parseFloat(FALLBACK_ODDS.bol_1),    book:"Bet365", bookKey:"bet365", conf:73},
+  {id:"p5", match:"Форест — Фенербахче",     bet:"Над 2.5 гола",           odd:parseFloat(FALLBACK_ODDS.for_o25),  book:"Bet365", bookKey:"bet365", conf:70},
+  {id:"p6", match:"Плзен — Панатинаикос",    bet:"Плзен победа",           odd:parseFloat(FALLBACK_ODDS.plz_1),    book:"Bet365", bookKey:"bet365", conf:55},
+  {id:"p7", match:"Селта — ПАОК",            bet:"BTTS Да",                odd:parseFloat(FALLBACK_ODDS.cel_btts), book:"Bet365", bookKey:"bet365", conf:62},
+  {id:"p8", match:"Хенк — Динамо Загреб",    bet:"Над 2.5 гола",           odd:parseFloat(FALLBACK_ODDS.gen_o25),  book:"Bet365", bookKey:"bet365", conf:67},
 ];
 
 let betslip = [];
@@ -1944,16 +1926,30 @@ function renderCCBPicks(){
 // BUILD-A-BET BOX
 // ════════════════════════════════════════
 const BUILD_BET = {
-  home:"Аталанта", homeEn:"Atalanta",
-  away:"Борусия Дортмунд", awayEn:"Borussia Dortmund",
-  time:"18:45", league:"ЛЧ · Днес", leagueEn:"UCL · Today",
+  home:"Щутгарт", homeEn:"Stuttgart",
+  away:"Селтик", awayEn:"Celtic",
+  time:"18:45", league:"ЛЕ · Днес", leagueEn:"UEL · Today",
   legs:[
-    { bet:"И двата отбора гол",    betEn:"Both Teams to Score", icon:"⚽", conf:65, estOdd:1.75 },
-    { bet:"Над 2.5 гола",          betEn:"Over 2.5 Goals",       icon:"🎯", conf:63, estOdd:1.80 },
-    { bet:"Над 8 ъглови",          betEn:"Over 8 Corners",        icon:"🚩", conf:61, estOdd:1.75 },
+    { bet:"Щутгарт победа",        betEn:"Stuttgart Win",         icon:"🏆", conf:72, estOdd:1.65 },
+    { bet:"Над 1.5 гола",          betEn:"Over 1.5 Goals",        icon:"⚽", conf:82, estOdd:1.38 },
+    { bet:"Щутгарт гол 1-во полувр.", betEn:"Stuttgart HT goal", icon:"⏱", conf:68, estOdd:1.55 },
   ],
-  ai:"Аталанта трябва да обърне 0-2 — Гасперини атакува тотално от 1-ва мин. BTTS в 4/5 от последните им ЛЧ мача. Постоянният натиск → много ъглови. Дортмунд опасни с бърза контра → отворена игра гарантирана.",
-  aiEn:"Atalanta must overturn a 0-2 deficit — Gasperini attacks all-out from minute 1. BTTS in 4 of their last 5 UCL games. Constant pressure → high corner count. Dortmund dangerous on the counter → open game guaranteed.",
+  ai:"Щутгарт доминираха в Глазгоу с 4-1. Вкъщи пред 60 000 фена Щутгарт са непобедими в ЛЕ. Силен нападателен арсенал + Щутгарт водят в над 70% от домашните си мачове в първото полувреме. Три взаимно усилващи се избора от един мач.",
+  aiEn:"Stuttgart dominated in Glasgow 4-1. At home in front of 60,000 fans Stuttgart are unbeaten in UEL. Strong attacking arsenal + Stuttgart lead at HT in 70%+ of their home games. Three mutually reinforcing selections from one match.",
+};
+
+const MULTI_PICK = {
+  type:"Lucky 15", typeSub:"4 избора · 15 залога (4 сингъла + 6 двойки + 4 тройки + 1 четворка)",
+  typeEn:"Lucky 15", typeSubEn:"4 selections · 15 bets (4 singles + 6 doubles + 4 trebles + 1 fourfold)",
+  unitStake: 1,
+  legs:[
+    { match:"Щутгарт — Селтик",       matchEn:"Stuttgart — Celtic",       bet:"Щутгарт победа",         betEn:"Stuttgart Win",          odd:1.65, conf:72 },
+    { match:"Болоня — Бран",          matchEn:"Bologna — Brann",          bet:"Болоня победа",           betEn:"Bologna Win",            odd:1.55, conf:73 },
+    { match:"Форест — Фенербахче",    matchEn:"Nottm Forest — Fenerbahce",bet:"Над 2.5 гола",            betEn:"Over 2.5 Goals",         odd:1.65, conf:70 },
+    { match:"Ц. Звезда — Лил",        matchEn:"Red Star — Lille",         bet:"Ц. Звезда квалификация", betEn:"Red Star Qualify",        odd:1.50, conf:68 },
+  ],
+  ai:"Lucky 15 от четирите най-сигурни ЛЕ избора днес. Щутгарт и Болоня с огромни преднини от 1-ви крак, Форест вкарват много вкъщи (3-0 в Турция), Цр.Звезда водят 1-0. Дори само 2 от 4 попадения носят печалба от двойките.",
+  aiEn:"Lucky 15 from today's four most confident UEL picks. Stuttgart & Bologna with huge first-leg leads, Forest score freely at home (3-0 in Turkey), Red Star lead 1-0. Even hitting just 2 of 4 returns profit via the doubles.",
 };
 
 function renderBuildBet(){
@@ -1993,10 +1989,52 @@ function renderBuildBet(){
     </div>`;
 }
 
+function renderMultiPick(){
+  const lang = currentLang;
+  const mp = MULTI_PICK;
+  const u = mp.unitStake;
+  const odds = mp.legs.map(l=>l.odd);
+  // Calculate key returns (all 15 bets at unit stake each = 15u total)
+  const fourfold = odds.reduce((a,b)=>a*b,1);
+  const trebles  = [[0,1,2],[0,1,3],[0,2,3],[1,2,3]].reduce((s,idx)=>s+idx.reduce((a,i)=>a*odds[i],1),0);
+  const doubles  = [[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]].reduce((s,idx)=>s+idx.reduce((a,i)=>a*odds[i],1),0);
+  const singles  = odds.reduce((a,b)=>a+b,0);
+  const totalReturn = (singles+doubles+trebles+fourfold)*u;
+  const totalStake  = 15*u;
+  const legsHtml = mp.legs.map((l,i)=>`
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 16px;border-bottom:1px solid rgba(255,255,255,.03)">
+      <div>
+        <div style="font-size:10px;font-weight:600">${lang==='en'?l.matchEn:l.match}</div>
+        <div style="font-size:9px;color:var(--muted);margin-top:1px">${lang==='en'?l.betEn:l.bet} · ${l.conf}%</div>
+      </div>
+      <div style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent);font-weight:700;flex-shrink:0">${l.odd.toFixed(2)}</div>
+    </div>`).join('');
+  document.getElementById('multiPickBox').innerHTML = `
+    <div class="bab-box" style="border-color:rgba(99,102,241,.3);margin-top:0">
+      <div class="bab-header" style="background:rgba(99,102,241,.06);border-color:rgba(99,102,241,.2)">
+        <div>
+          <div class="bab-title" style="color:var(--accent)">${lang==='en'?'🎰 '+mp.typeEn:'🎰 '+mp.type}</div>
+          <div style="font-size:9px;color:var(--muted);margin-top:2px">${lang==='en'?mp.typeSubEn:mp.typeSub}</div>
+        </div>
+        <div class="bab-badge" style="background:rgba(99,102,241,.15);color:var(--accent)">AI</div>
+      </div>
+      <div>${legsHtml}</div>
+      <div class="bab-footer" style="background:rgba(99,102,241,.04);border-color:rgba(99,102,241,.12)">
+        <div class="bab-combo-row">
+          <div>
+            <div class="bab-combo-label">${lang==='en'?'All 4 win return':'Всичките 4 печелят'}</div>
+            <div style="font-size:9px;color:var(--muted);margin-top:2px">${lang==='en'?'from':'от'} ${totalStake.toFixed(2)} лв ${lang==='en'?'('+u+' лв/bet)':'('+u+' лв/залог)'}</div>
+          </div>
+          <div class="bab-combo-odd" style="color:var(--accent)">~${totalReturn.toFixed(2)} лв</div>
+        </div>
+        <div class="bab-ai">${lang==='en'?mp.aiEn:mp.ai}</div>
+      </div>
+    </div>`;
+}
+
 // ════════════════════════════════════════
-// SURE BET / ARBITRAGE SECTION
+// DUTCH BETTING SECTION
 // ════════════════════════════════════════
-let sureMode = 'arb';
 
 function calcMatchArb(m) {
   const bestH = m.odds.home.reduce((b,c)=>parseFloat(c.o)>parseFloat(b.o)?c:b);
@@ -2014,75 +2052,16 @@ function calcMatchArb(m) {
   };
 }
 
-function setSureMode(mode){
-  sureMode = mode;
-  document.getElementById('tab-arb').classList.toggle('active', mode==='arb');
-  document.getElementById('tab-dutch').classList.toggle('active', mode==='dutch');
-  renderSureBets();
-}
-
 function renderSureBets(){
   const stake = Math.max(10, parseFloat(document.getElementById('sureStake').value)||100);
-  const arbs = MATCHES.map(m=>calcMatchArb(m));
-  if(sureMode==='arb'){
-    arbs.sort((a,b)=>a.impliedSum-b.impliedSum);
-    document.getElementById('sureExplain').textContent = '· Сортирано по най-близо до истински арбитраж';
-    document.getElementById('sureBets').innerHTML = `<div class="sure-cards-grid">${arbs.map(a=>renderArbCard(a,stake)).join('')}</div>`;
-  } else {
-    arbs.sort((a,b)=>b.dutchFactor-a.dutchFactor);
-    document.getElementById('sureExplain').textContent = '· Залог на домакин + гост (пропуска равенството)';
-    const top2 = arbs.slice(0,2);
-    document.getElementById('sureBets').innerHTML =
-      `<div class="sure-cards-grid">${arbs.map(a=>renderDutchCard(a,stake)).join('')}</div>` +
-      renderMultiDutch(top2, stake);
-  }
-}
-
-function renderArbCard(arb, stake){
-  const bk = BOOKS;
-  const pct = arb.impliedSum * 100;
-  const isArb = pct < 100;
-  const isNear = pct < 104;
-  const barColor = isArb?'af-good':isNear?'af-near':'af-bad';
-  const badgeCls = isArb?'ab-arb':isNear?'ab-near':'ab-no';
-  const badgeTxt = isArb?'✅ АРБ':isNear?'⚡ БЛИЗО':'❌ БЕЗ АРБ';
-  const barW = Math.min(100, Math.max(5, (pct/115)*100));
-  let stakeRows;
-  if(isArb){
-    const sH = stake*(1/arb.bestH.o)/arb.impliedSum;
-    const sD = stake*(1/arb.bestD.o)/arb.impliedSum;
-    const sA = stake*(1/arb.bestA.o)/arb.impliedSum;
-    const ret = sH*arb.bestH.o;
-    const profit = ret-stake;
-    stakeRows = `
-      <div class="sure-row"><span>🏠 ${arb.homeA}</span><span class="sure-stake-val">${sH.toFixed(2)} лв</span><span class="sure-bk-chip" style="background:${bk[arb.bestH.bk]?.color||'#333'}">${bk[arb.bestH.bk]?.short||arb.bestH.bk}</span></div>
-      <div class="sure-row"><span>➖ Равен</span><span class="sure-stake-val">${sD.toFixed(2)} лв</span><span class="sure-bk-chip" style="background:${bk[arb.bestD.bk]?.color||'#333'}">${bk[arb.bestD.bk]?.short||arb.bestD.bk}</span></div>
-      <div class="sure-row"><span>✈ ${arb.awayA}</span><span class="sure-stake-val">${sA.toFixed(2)} лв</span><span class="sure-bk-chip" style="background:${bk[arb.bestA.bk]?.color||'#333'}">${bk[arb.bestA.bk]?.short||arb.bestA.bk}</span></div>
-      <div class="sure-card-foot"><span style="font-size:11px;color:var(--muted)">Гарантирана печалба:</span><span class="sure-return" style="color:var(--green)">+${profit.toFixed(2)} лв</span></div>`;
-  } else {
-    stakeRows = `
-      <div class="sure-row"><span>🏠 ${arb.homeA}</span><span class="sure-stake-val">${arb.bestH.o.toFixed(2)}</span><span class="sure-bk-chip" style="background:${bk[arb.bestH.bk]?.color||'#333'}">${bk[arb.bestH.bk]?.short||arb.bestH.bk}</span></div>
-      <div class="sure-row"><span>➖ Равен</span><span class="sure-stake-val">${arb.bestD.o.toFixed(2)}</span><span class="sure-bk-chip" style="background:${bk[arb.bestD.bk]?.color||'#333'}">${bk[arb.bestD.bk]?.short||arb.bestD.bk}</span></div>
-      <div class="sure-row"><span>✈ ${arb.awayA}</span><span class="sure-stake-val">${arb.bestA.o.toFixed(2)}</span><span class="sure-bk-chip" style="background:${bk[arb.bestA.bk]?.color||'#333'}">${bk[arb.bestA.bk]?.short||arb.bestA.bk}</span></div>
-      <div class="sure-card-foot"><span style="font-size:11px;color:var(--muted)">Свръхзалагане:</span><span class="sure-return" style="color:var(--muted);font-size:16px">${(pct-100).toFixed(2)}% маржин</span></div>`;
-  }
-  return `<div class="sure-card">
-    <div style="padding:14px 16px 10px">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
-        <div>
-          <div style="font-size:11px;color:var(--muted);font-weight:600;letter-spacing:1px">${arb.homeA} vs ${arb.awayA}</div>
-          <div style="font-size:13px;font-weight:700;margin-top:2px">${arb.home} — ${arb.away}</div>
-        </div>
-        <div class="arb-badge ${badgeCls}">${badgeTxt}</div>
-      </div>
-      <div class="arb-bar"><div class="arb-fill ${barColor}" style="width:${barW}%"></div></div>
-      <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:4px">
-        <span>Подразбиране: ${pct.toFixed(1)}%</span>
-        <span>${isArb?'+'+Math.abs(arb.profit).toFixed(2)+'% печалба':isNear?'Маржин '+(pct-100).toFixed(1)+'%':''}</span>
-      </div>
-    </div>
-    <div style="padding:0 16px 0;border-top:1px solid var(--border)">${stakeRows}</div>
-  </div>`;
+  const arbs = MATCHES.filter(m=>m.league==='el').map(m=>calcMatchArb(m));
+  arbs.sort((a,b)=>b.dutchFactor-a.dutchFactor);
+  document.getElementById('sureExplain').textContent = '· Залог на домакин + гост (пропуска равенството)';
+  const top3 = arbs.slice(0,3);
+  const top2 = arbs.slice(0,2);
+  document.getElementById('sureBets').innerHTML =
+    `<div class="sure-cards-grid">${top3.map(a=>renderDutchCard(a,stake)).join('')}</div>` +
+    renderMultiDutch(top2, stake);
 }
 
 function renderDutchCard(arb, stake){
@@ -2145,6 +2124,7 @@ function renderMultiDutch(top2, stake){
 }
 
 renderBuildBet();
+renderMultiPick();
 renderSureBets();
 renderCombos();
 renderCCBPicks();
