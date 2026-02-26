@@ -24,10 +24,10 @@ except ImportError:
 
 # ── Config ─────────────────────────────────────────────────────────────────
 BASE_URL    = "https://api.the-odds-api.com/v4"
-SPORTS      = ["soccer_uefa_champs_league", "soccer_europa_league"]
+SPORTS      = ["soccer_uefa_champs_league", "soccer_uefa_europa_league", "soccer_uefa_europa_conference_league"]
 REGIONS     = "eu"
-BOOKMAKER   = "bet365"
-MARKETS     = "h2h,totals,btts"
+BOOKMAKER   = "williamhill"
+MARKETS     = "h2h,totals"
 ODDS_FORMAT = "decimal"
 OUTPUT_FILE = Path("data/live_odds.json")
 
@@ -122,7 +122,7 @@ def fetch_sport_odds(api_key: str, sport: str) -> list:
     resp = requests.get(url, params=params, timeout=15)
     if resp.status_code == 401:
         sys.exit("❌  Invalid API key — check your ODDS_API_KEY")
-    if resp.status_code == 422:
+    if resp.status_code in (404, 422):
         print(f"  ⚠  Sport not found or not available: {sport}")
         return []
     resp.raise_for_status()
