@@ -219,7 +219,7 @@ def main():
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     payload = {
         "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "bookmaker":  "Bet365",
+        "bookmaker":  "William Hill",
         "odds":       all_odds,
     }
     with open(OUTPUT_FILE, "w") as f:

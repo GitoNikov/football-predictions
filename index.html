@@ -439,9 +439,9 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
     <div class="tp-match">Щутгарт — Селтик</div>
     <div class="tp-bet" data-t="topPickBet">Щутгарт победа</div>
     <div class="tp-odd-row">
-      <div class="tp-odd">1.65</div>
+      <div class="tp-odd">1.36</div>
       <div>
-        <div class="tp-book">Bet365</div>
+        <div class="tp-book">William Hill ⚡</div>
         <div class="tp-conf" style="color:var(--green)" data-t="topPickConf">72% реален шанс</div>
       </div>
     </div>
@@ -632,7 +632,8 @@ function setLang(lang){
 
 // ─── BULGARIAN BOOKMAKERS ───
 const BOOKS = {
-  bet365: { name:"Bet365",    color:"#1C7A2E", short:"Bet365" },
+  bet365:      { name:"Bet365",      color:"#1C7A2E", short:"Bet365" },
+  williamhill: { name:"William Hill",color:"#1A3C5E", short:"W.Hill" },
   palms:  { name:"Palms Bet", color:"#0F4F8C", short:"Palms" },
   winbet: { name:"Winbet",    color:"#2563EB", short:"Winbet" },
   betano: { name:"Betano",    color:"#DC2626", short:"Betano" },
@@ -1568,14 +1569,14 @@ const FALLBACK_ODDS = {
   juv_1:"1.80", juv_x:"3.60", juv_2:"4.50", juv_o25:"1.65", juv_btts:"1.70",
   psg_1:"1.60", psg_x:"3.80", psg_2:"5.00", psg_btts:"1.80", psg_o25:"1.75",
   rma_1:"1.65", rma_x:"3.80", rma_2:"5.25", rma_btts:"1.85", rma_o25:"1.80",
-  plz_1:"1.95", plz_x:"3.30", plz_2:"4.00", plz_btts:"1.85", plz_o25:"1.75",
-  fer_1:"1.80", fer_x:"3.50", fer_2:"4.50", lud_q:"2.20",    fer_o25:"1.75",
-  red_1:"2.10", red_x:"3.30", red_2:"3.50", red_q:"1.50",    red_btts:"1.75",
-  stu_1:"1.65", stu_x:"3.80", stu_2:"5.25", stu_o25:"1.75",  stu_btts:"1.85",
-  bol_1:"1.55", bol_x:"3.90", bol_2:"6.00", bol_o25:"1.75",  bol_btts:"1.80",
-  gen_1:"1.60", gen_x:"3.80", gen_2:"5.50", gen_o25:"1.75",  gen_btts:"1.75",
-  for_1:"1.55", for_x:"3.90", for_2:"6.00", for_o25:"1.65",  for_btts:"1.75",
-  cel_1:"1.65", cel_x:"3.60", cel_2:"5.25", cel_btts:"1.80", cel_o25:"1.78",
+  plz_1:"2.00", plz_x:"3.10", plz_2:"3.80", plz_btts:"1.85", plz_o25:"2.10",
+  fer_1:"1.57", fer_x:"4.00", fer_2:"5.00", lud_q:"2.20",    fer_o25:"1.67",
+  red_1:"2.70", red_x:"3.25", red_2:"2.45", red_q:"1.50",    red_btts:"1.75",
+  stu_1:"1.36", stu_x:"5.00", stu_2:"7.00", stu_o25:"1.36",  stu_btts:"1.85",
+  bol_1:"1.50", bol_x:"4.00", bol_2:"5.80", bol_o25:"1.73",  bol_btts:"1.80",
+  gen_1:"2.30", gen_x:"3.30", gen_2:"2.88", gen_o25:"1.75",  gen_btts:"1.75",
+  for_1:"1.60", for_x:"4.00", for_2:"4.80", for_o25:"1.65",  for_btts:"1.75",
+  cel_1:"1.65", cel_x:"3.70", cel_2:"4.80", cel_btts:"1.80", cel_o25:"1.85",
 };
 
 let LIVE_ODDS = { ...FALLBACK_ODDS };
@@ -1593,7 +1594,7 @@ async function fetchLiveOdds() {
       LIVE_ODDS = { ...FALLBACK_ODDS, ...data.odds };
       oddsLoaded = true;
       updateOddsInUI();
-      showOddsStatus('live', data.updated_at);
+      showOddsStatus('live', data.updated_at, data.bookmaker);
     } else {
       showOddsStatus('fallback');
     }
@@ -1605,12 +1606,13 @@ async function fetchLiveOdds() {
   if (loadingEl) loadingEl.style.display = 'none';
 }
 
-function showOddsStatus(type, updatedAt) {
+function showOddsStatus(type, updatedAt, bookmaker) {
   const el = document.getElementById('oddsStatus');
   if (!el) return;
   if (type === 'live') {
+    const bkName = bookmaker || 'William Hill';
     const timeStr = updatedAt ? ' · ' + updatedAt.replace('T',' ').replace('Z','') + ' UTC' : '';
-    el.innerHTML = `<span style="color:var(--green)">⚡ Живи коефициенти от Bet365${timeStr}</span>`;
+    el.innerHTML = `<span style="color:var(--green)">⚡ Живи коефициенти от ${bkName}${timeStr}</span>`;
   } else {
     el.innerHTML = `<span style="color:var(--muted)">📋 Индикативни коефициенти · <button onclick="fetchLiveOdds()" style="background:none;border:none;color:var(--yellow);cursor:pointer;font-size:11px;text-decoration:underline">Обнови →</button></span>`;
   }
@@ -1665,26 +1667,26 @@ const PRESET_COMBOS = [
     id:"safe2", badge:"cb-safe", badgeText:"🛡 СИГУРНА",
     name:"Двойна Сигурност", conf:68, legs:2,
     picks:[
-      {match:"Щутгарт — Селтик", bet:"Щутгарт победа", odd:parseFloat(FALLBACK_ODDS.stu_1), book:"Bet365", bookKey:"bet365"},
-      {match:"Болоня — Бран",    bet:"Болоня победа",   odd:parseFloat(FALLBACK_ODDS.bol_1), book:"Bet365", bookKey:"bet365"},
+      {match:"Щутгарт — Селтик", bet:"Щутгарт победа", odd:parseFloat(FALLBACK_ODDS.stu_1), book:"William Hill", bookKey:"williamhill"},
+      {match:"Болоня — Бран",    bet:"Болоня победа",   odd:parseFloat(FALLBACK_ODDS.bol_1), book:"William Hill", bookKey:"williamhill"},
     ]
   },
   {
     id:"goals3", badge:"cb-val", badgeText:"⚽ ГОЛОВЕ",
     name:"Голов Тройник", conf:52, legs:3,
     picks:[
-      {match:"Форест — Фенербахче",  bet:"Над 2.5 гола", odd:parseFloat(FALLBACK_ODDS.for_o25),  book:"Bet365", bookKey:"bet365"},
-      {match:"Хенк — Динамо Загреб", bet:"Над 2.5 гола", odd:parseFloat(FALLBACK_ODDS.gen_o25),  book:"Bet365", bookKey:"bet365"},
-      {match:"Селта — ПАОК",         bet:"BTTS Да",       odd:parseFloat(FALLBACK_ODDS.cel_btts), book:"Bet365", bookKey:"bet365"},
+      {match:"Форест — Фенербахче",  bet:"Над 2.5 гола", odd:parseFloat(FALLBACK_ODDS.for_o25),  book:"William Hill", bookKey:"williamhill"},
+      {match:"Хенк — Динамо Загреб", bet:"Над 2.5 гола", odd:parseFloat(FALLBACK_ODDS.gen_o25),  book:"William Hill", bookKey:"williamhill"},
+      {match:"Селта — ПАОК",         bet:"BTTS Да",       odd:parseFloat(FALLBACK_ODDS.cel_btts), book:"Bet365",       bookKey:"bet365"},
     ]
   },
   {
     id:"el3", badge:"cb-safe", badgeText:"🛡 СИГУРНА",
     name:"ЛЕ Тройка", conf:60, legs:3,
     picks:[
-      {match:"Щутгарт — Селтик",    bet:"Щутгарт победа", odd:parseFloat(FALLBACK_ODDS.stu_1),   book:"Bet365", bookKey:"bet365"},
-      {match:"Болоня — Бран",       bet:"Болоня победа",   odd:parseFloat(FALLBACK_ODDS.bol_1),   book:"Bet365", bookKey:"bet365"},
-      {match:"Форест — Фенербахче", bet:"Над 2.5 гола",    odd:parseFloat(FALLBACK_ODDS.for_o25), book:"Bet365", bookKey:"bet365"},
+      {match:"Щутгарт — Селтик",    bet:"Щутгарт победа", odd:parseFloat(FALLBACK_ODDS.stu_1),   book:"William Hill", bookKey:"williamhill"},
+      {match:"Болоня — Бран",       bet:"Болоня победа",   odd:parseFloat(FALLBACK_ODDS.bol_1),   book:"William Hill", bookKey:"williamhill"},
+      {match:"Форест — Фенербахче", bet:"Над 2.5 гола",    odd:parseFloat(FALLBACK_ODDS.for_o25), book:"William Hill", bookKey:"williamhill"},
     ]
   },
   {
@@ -1693,40 +1695,41 @@ const PRESET_COMBOS = [
     picks:[
       {match:"Ференцварош — Лудогорец", bet:"Лудогорец квалификация", odd:parseFloat(FALLBACK_ODDS.lud_q), book:"Bet365", bookKey:"bet365"},
       {match:"Ц. Звезда — Лил",         bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q), book:"Bet365", bookKey:"bet365"},
+
     ]
   },
   {
     id:"el4", badge:"cb-val", badgeText:"🟠 ЛЕ ЧЕТВОРКА",
     name:"ЛЕ Четворка", conf:42, legs:4,
     picks:[
-      {match:"Щутгарт — Селтик",    bet:"Щутгарт победа",         odd:parseFloat(FALLBACK_ODDS.stu_1),   book:"Bet365", bookKey:"bet365"},
-      {match:"Болоня — Бран",       bet:"Болоня победа",           odd:parseFloat(FALLBACK_ODDS.bol_1),   book:"Bet365", bookKey:"bet365"},
-      {match:"Ц. Звезда — Лил",     bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q),   book:"Bet365", bookKey:"bet365"},
-      {match:"Форест — Фенербахче", bet:"Над 2.5 гола",            odd:parseFloat(FALLBACK_ODDS.for_o25), book:"Bet365", bookKey:"bet365"},
+      {match:"Щутгарт — Селтик",    bet:"Щутгарт победа",         odd:parseFloat(FALLBACK_ODDS.stu_1),   book:"William Hill", bookKey:"williamhill"},
+      {match:"Болоня — Бран",       bet:"Болоня победа",           odd:parseFloat(FALLBACK_ODDS.bol_1),   book:"William Hill", bookKey:"williamhill"},
+      {match:"Ц. Звезда — Лил",     bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q),   book:"Bet365",       bookKey:"bet365"},
+      {match:"Форест — Фенербахче", bet:"Над 2.5 гола",            odd:parseFloat(FALLBACK_ODDS.for_o25), book:"William Hill", bookKey:"williamhill"},
     ]
   },
   {
     id:"mega5", badge:"cb-risky", badgeText:"🔥 МЕГА КОМБО",
     name:"Мега ЛЕ Комбо", conf:26, legs:5,
     picks:[
-      {match:"Щутгарт — Селтик",     bet:"Щутгарт победа",         odd:parseFloat(FALLBACK_ODDS.stu_1),   book:"Bet365", bookKey:"bet365"},
-      {match:"Болоня — Бран",        bet:"Болоня победа",           odd:parseFloat(FALLBACK_ODDS.bol_1),   book:"Bet365", bookKey:"bet365"},
-      {match:"Ц. Звезда — Лил",      bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q),   book:"Bet365", bookKey:"bet365"},
-      {match:"Форест — Фенербахче",  bet:"Над 2.5 гола",            odd:parseFloat(FALLBACK_ODDS.for_o25), book:"Bet365", bookKey:"bet365"},
-      {match:"Хенк — Динамо Загреб", bet:"Над 2.5 гола",            odd:parseFloat(FALLBACK_ODDS.gen_o25), book:"Bet365", bookKey:"bet365"},
+      {match:"Щутгарт — Селтик",     bet:"Щутгарт победа",         odd:parseFloat(FALLBACK_ODDS.stu_1),   book:"William Hill", bookKey:"williamhill"},
+      {match:"Болоня — Бран",        bet:"Болоня победа",           odd:parseFloat(FALLBACK_ODDS.bol_1),   book:"William Hill", bookKey:"williamhill"},
+      {match:"Ц. Звезда — Лил",      bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q),   book:"Bet365",       bookKey:"bet365"},
+      {match:"Форест — Фенербахче",  bet:"Над 2.5 гола",            odd:parseFloat(FALLBACK_ODDS.for_o25), book:"William Hill", bookKey:"williamhill"},
+      {match:"Хенк — Динамо Загреб", bet:"Над 2.5 гола",            odd:parseFloat(FALLBACK_ODDS.gen_o25), book:"William Hill", bookKey:"williamhill"},
     ]
   },
 ];
 
 const ALL_SINGLE_PICKS = [
-  {id:"p1", match:"Ференцварош — Лудогорец", bet:"Лудогорец квалификация", odd:parseFloat(FALLBACK_ODDS.lud_q),    book:"Bet365", bookKey:"bet365", conf:58},
-  {id:"p2", match:"Ц. Звезда — Лил",         bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q),    book:"Bet365", bookKey:"bet365", conf:68},
-  {id:"p3", match:"Щутгарт — Селтик",        bet:"Щутгарт победа",         odd:parseFloat(FALLBACK_ODDS.stu_1),    book:"Bet365", bookKey:"bet365", conf:72},
-  {id:"p4", match:"Болоня — Бран",           bet:"Болоня победа",           odd:parseFloat(FALLBACK_ODDS.bol_1),    book:"Bet365", bookKey:"bet365", conf:73},
-  {id:"p5", match:"Форест — Фенербахче",     bet:"Над 2.5 гола",           odd:parseFloat(FALLBACK_ODDS.for_o25),  book:"Bet365", bookKey:"bet365", conf:70},
-  {id:"p6", match:"Плзен — Панатинаикос",    bet:"Плзен победа",           odd:parseFloat(FALLBACK_ODDS.plz_1),    book:"Bet365", bookKey:"bet365", conf:55},
-  {id:"p7", match:"Селта — ПАОК",            bet:"BTTS Да",                odd:parseFloat(FALLBACK_ODDS.cel_btts), book:"Bet365", bookKey:"bet365", conf:62},
-  {id:"p8", match:"Хенк — Динамо Загреб",    bet:"Над 2.5 гола",           odd:parseFloat(FALLBACK_ODDS.gen_o25),  book:"Bet365", bookKey:"bet365", conf:67},
+  {id:"p1", match:"Ференцварош — Лудогорец", bet:"Лудогорец квалификация", odd:parseFloat(FALLBACK_ODDS.lud_q),    book:"Bet365",      bookKey:"bet365",      conf:58},
+  {id:"p2", match:"Ц. Звезда — Лил",         bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q),    book:"Bet365",      bookKey:"bet365",      conf:68},
+  {id:"p3", match:"Щутгарт — Селтик",        bet:"Щутгарт победа",         odd:parseFloat(FALLBACK_ODDS.stu_1),    book:"William Hill",bookKey:"williamhill", conf:72},
+  {id:"p4", match:"Болоня — Бран",           bet:"Болоня победа",           odd:parseFloat(FALLBACK_ODDS.bol_1),    book:"William Hill",bookKey:"williamhill", conf:73},
+  {id:"p5", match:"Форест — Фенербахче",     bet:"Над 2.5 гола",           odd:parseFloat(FALLBACK_ODDS.for_o25),  book:"William Hill",bookKey:"williamhill", conf:70},
+  {id:"p6", match:"Плзен — Панатинаикос",    bet:"Плзен победа",           odd:parseFloat(FALLBACK_ODDS.plz_1),    book:"William Hill",bookKey:"williamhill", conf:55},
+  {id:"p7", match:"Селта — ПАОК",            bet:"BTTS Да",                odd:parseFloat(FALLBACK_ODDS.cel_btts), book:"Bet365",      bookKey:"bet365",      conf:62},
+  {id:"p8", match:"Хенк — Динамо Загреб",    bet:"Над 2.5 гола",           odd:parseFloat(FALLBACK_ODDS.gen_o25),  book:"William Hill",bookKey:"williamhill", conf:67},
 ];
 
 let betslip = [];
@@ -1871,7 +1874,7 @@ const BUILD_BET = {
   away:"Селтик", awayEn:"Celtic",
   time:"18:45", league:"ЛЕ · Днес", leagueEn:"UEL · Today",
   legs:[
-    { bet:"Щутгарт победа",        betEn:"Stuttgart Win",         icon:"🏆", conf:72, estOdd:1.65 },
+    { bet:"Щутгарт победа",        betEn:"Stuttgart Win",         icon:"🏆", conf:72, estOdd:1.36 },
     { bet:"Над 1.5 гола",          betEn:"Over 1.5 Goals",        icon:"⚽", conf:82, estOdd:1.38 },
     { bet:"Щутгарт гол 1-во полувр.", betEn:"Stuttgart HT goal", icon:"⏱", conf:68, estOdd:1.55 },
   ],
@@ -1884,13 +1887,13 @@ const MULTI_PICK = {
   typeEn:"Lucky 15", typeSubEn:"4 selections · 15 bets (4 singles + 6 doubles + 4 trebles + 1 fourfold)",
   unitStake: 1,
   legs:[
-    { match:"Щутгарт — Селтик",       matchEn:"Stuttgart — Celtic",       bet:"Щутгарт победа",         betEn:"Stuttgart Win",          odd:1.65, conf:72 },
-    { match:"Болоня — Бран",          matchEn:"Bologna — Brann",          bet:"Болоня победа",           betEn:"Bologna Win",            odd:1.55, conf:73 },
-    { match:"Форест — Фенербахче",    matchEn:"Nottm Forest — Fenerbahce",bet:"Над 2.5 гола",            betEn:"Over 2.5 Goals",         odd:1.65, conf:70 },
-    { match:"Ц. Звезда — Лил",        matchEn:"Red Star — Lille",         bet:"Ц. Звезда квалификация", betEn:"Red Star Qualify",        odd:1.50, conf:68 },
+    { match:"Селта — ПАОК",           matchEn:"Celta Vigo — PAOK",        bet:"Селта победа",            betEn:"Celta Vigo Win",         odd:1.65, conf:65, book:"William Hill", bookKey:"williamhill" },
+    { match:"Плзен — Панатинаикос",   matchEn:"Plzen — Panathinaikos",    bet:"Плзен победа",            betEn:"Plzen Win",              odd:2.00, conf:58, book:"William Hill", bookKey:"williamhill" },
+    { match:"Хенк — Динамо Загреб",   matchEn:"Genk — Dinamo Zagreb",     bet:"Хенк победа",             betEn:"Genk Win",               odd:2.30, conf:60, book:"William Hill", bookKey:"williamhill" },
+    { match:"Форест — Фенербахче",    matchEn:"Nottm Forest — Fenerbahce",bet:"Над 2.5 гола",            betEn:"Over 2.5 Goals",         odd:1.65, conf:70, book:"William Hill", bookKey:"williamhill" },
   ],
-  ai:"Lucky 15 от четирите най-сигурни ЛЕ избора днес. Щутгарт и Болоня с огромни преднини от 1-ви крак, Форест вкарват много вкъщи (3-0 в Турция), Цр.Звезда водят 1-0. Дори само 2 от 4 попадения носят печалба от двойките.",
-  aiEn:"Lucky 15 from today's four most confident UEL picks. Stuttgart & Bologna with huge first-leg leads, Forest score freely at home (3-0 in Turkey), Red Star lead 1-0. Even hitting just 2 of 4 returns profit via the doubles.",
+  ai:"Lucky 15 с реални коефициенти от William Hill — средна квота 1.90. Селта водят 2-1 и приемат вкъщи, Плзен се нуждаят от победа след равенство 2-2, Хенк са фаворити у дома с аванс 3-1, Форест вкарваха в Истанбул 3-0 и ще продължат да атакуват. Дори 2 от 4 попадения носят печалба.",
+  aiEn:"Lucky 15 with real William Hill odds — average odds 1.90. Celta lead 2-1 at home, Plzen need a win after 2-2 draw, Genk favourites at home leading 3-1, Forest scored 3 in Istanbul and will attack again. Even 2 of 4 wins returns profit.",
 };
 
 function renderBuildBet(){
@@ -1948,7 +1951,10 @@ function renderMultiPick(){
         <div style="font-size:10px;font-weight:600">${lang==='en'?l.matchEn:l.match}</div>
         <div style="font-size:9px;color:var(--muted);margin-top:1px">${lang==='en'?l.betEn:l.bet} · ${l.conf}%</div>
       </div>
-      <div style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent);font-weight:700;flex-shrink:0">${l.odd.toFixed(2)}</div>
+      <div style="text-align:right;flex-shrink:0">
+        <div style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent);font-weight:700">${l.odd.toFixed(2)}</div>
+        ${l.bookKey==='williamhill'?`<div style="font-size:8px;color:#5b8dd9;font-weight:600">W.Hill ⚡</div>`:''}
+      </div>
     </div>`).join('');
   document.getElementById('multiPickBox').innerHTML = `
     <div class="bab-box" style="border-color:rgba(99,102,241,.3);margin-top:0">
