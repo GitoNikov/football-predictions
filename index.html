@@ -1090,7 +1090,7 @@ const MATCHES = [
     ],
     ai:"Селта са с 2-1 преднина след успеха в Солун. ПАОК трябват 2 гола за продължения или 3 за директна квалификация — ще атакуват. Селта са добри у дома и ще контрират опасно. Очакваме двустранен мач — BTTS при 1.80 е добра ставка при ~62% реален шанс. Победата на Селта при 1.65 е по-сигурен вариант.",
     aiEn:"Celta lead 2-1 from Thessaloniki. PAOK need 2 goals for extra time or 3 to qualify directly — they'll attack. Celta are strong at home and will counter-attack dangerously. We expect a two-way match — BTTS at 1.80 is a solid bet at ~62% real probability. Celta win at 1.65 is the safer option."
-  }
+  },
   // ═══ PREMIER LEAGUE — КРЪГ 28 · 28.02–01.03.2026 ═══
   // ── Събота 28 Февруари ──
   {
@@ -1682,11 +1682,7 @@ function render(){
   html+='</div>';
   c.innerHTML=html;
 }
-try { render(); } catch(e) {
-  document.getElementById('container').innerHTML =
-    '<div style="color:red;padding:20px;font-family:monospace;background:#1a0000;border-radius:8px;margin:10px">' +
-    '<b>render() ERROR:</b><br>' + e.message + '<br><br>' + e.stack + '</div>';
-}
+render();
 
 // ════════════════════════════════════════
 // TODAY'S PERFORMANCE SECTION
