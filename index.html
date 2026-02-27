@@ -294,46 +294,6 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
   <div class="bgb-chip"><div class="bgb-dot" style="background:#475569"></div>Efbet <small>БГ</small></div>
 </div>
 
-<!-- ═══ ACCURACY SECTION ═══ -->
-<div class="acc-section">
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px">
-    <div>
-      <div class="acc-title">ТОЧНОСТ НА <em>ПРОГНОЗИТЕ</em></div>
-      <div class="acc-sub">Реална история от последните 90 дни · Актуализирано: 27.02.2026</div>
-    </div>
-    <div class="market-filter" id="mfilter">
-      <button class="mf-btn active" onclick="filterMarket('all',this)">Всички</button>
-      <button class="mf-btn" onclick="filterMarket('1x2',this)">1X2</button>
-      <button class="mf-btn" onclick="filterMarket('btts',this)">BTTS</button>
-      <button class="mf-btn" onclick="filterMarket('ou',this)">Над/Под</button>
-      <button class="mf-btn" onclick="filterMarket('hn',this)">Хенди</button>
-    </div>
-  </div>
-  <div class="acc-grid" id="kpiGrid"></div>
-  <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
-    <div>
-      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">ПОСЛЕДНИ 30 ПРОГНОЗИ</div>
-      <div class="streak-row" id="streakRow"></div>
-    </div>
-    <div style="margin-left:auto;text-align:right">
-      <div style="font-size:9px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Текуща серия</div>
-      <div style="font-family:'DM Mono',monospace;font-size:18px;font-weight:700;color:var(--green)" id="currentStreak"></div>
-    </div>
-  </div>
-  <div style="margin-bottom:8px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">ИСТОРИЯ НА ПРОГНОЗИТЕ</div>
-  <table class="hist-table" id="histTable">
-    <thead class="hist-thead">
-      <tr>
-        <th>Дата</th><th>Мач</th><th>Лига</th><th>Прогноза</th><th>Коеф.</th><th>Резултат</th><th>Изход</th>
-      </tr>
-    </thead>
-    <tbody class="hist-tbody" id="histBody"></tbody>
-  </table>
-  <div style="text-align:center;padding:12px 0">
-    <button onclick="loadMore()" id="loadMoreBtn" style="background:var(--dark3);border:1px solid var(--border);border-radius:8px;padding:8px 24px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s">Покажи повече →</button>
-  </div>
-</div>
-
 <div class="layout">
 <div id="container"></div>
 
@@ -385,6 +345,46 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
     Залагането носи риск. Играй отговорно. Всички оператори тук са лицензирани от НАП — Национална агенция за приходите на Република България. 18+
   </div>
 </div>
+</div>
+
+<!-- ═══ ACCURACY SECTION ═══ -->
+<div class="acc-section">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px">
+    <div>
+      <div class="acc-title">ТОЧНОСТ НА <em>ПРОГНОЗИТЕ</em></div>
+      <div class="acc-sub">Реална история от последните 90 дни · Актуализирано: 27.02.2026</div>
+    </div>
+    <div class="market-filter" id="mfilter">
+      <button class="mf-btn active" onclick="filterMarket('all',this)">Всички</button>
+      <button class="mf-btn" onclick="filterMarket('1x2',this)">1X2</button>
+      <button class="mf-btn" onclick="filterMarket('btts',this)">BTTS</button>
+      <button class="mf-btn" onclick="filterMarket('ou',this)">Над/Под</button>
+      <button class="mf-btn" onclick="filterMarket('hn',this)">Хенди</button>
+    </div>
+  </div>
+  <div class="acc-grid" id="kpiGrid"></div>
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+    <div>
+      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">ПОСЛЕДНИ 30 ПРОГНОЗИ</div>
+      <div class="streak-row" id="streakRow"></div>
+    </div>
+    <div style="margin-left:auto;text-align:right">
+      <div style="font-size:9px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Текуща серия</div>
+      <div style="font-family:'DM Mono',monospace;font-size:18px;font-weight:700;color:var(--green)" id="currentStreak"></div>
+    </div>
+  </div>
+  <div style="margin-bottom:8px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">ИСТОРИЯ НА ПРОГНОЗИТЕ</div>
+  <table class="hist-table" id="histTable">
+    <thead class="hist-thead">
+      <tr>
+        <th>Дата</th><th>Мач</th><th>Лига</th><th>Прогноза</th><th>Коеф.</th><th>Резултат</th><th>Изход</th>
+      </tr>
+    </thead>
+    <tbody class="hist-tbody" id="histBody"></tbody>
+  </table>
+  <div style="text-align:center;padding:12px 0">
+    <button onclick="loadMore()" id="loadMoreBtn" style="background:var(--dark3);border:1px solid var(--border);border-radius:8px;padding:8px 24px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s">Покажи повече →</button>
+  </div>
 </div>
 </main>
 
