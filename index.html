@@ -21,7 +21,6 @@ header{position:sticky;top:0;z-index:100;background:rgba(8,12,16,.96);backdrop-f
 .logo{font-family:'Bebas Neue',sans-serif;font-size:25px;letter-spacing:5px;color:var(--green);display:flex;align-items:center;gap:8px;flex-shrink:0}
 .logo-dot{width:7px;height:7px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.6)}}
-@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(400%)}}
 .logo-sub{font-size:10px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;font-family:'DM Sans',sans-serif;font-weight:500}
 .hright{margin-left:auto;display:flex;gap:10px;align-items:center}
 .hbadge{display:flex;align-items:center;gap:5px;border-radius:20px;padding:4px 12px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
@@ -60,7 +59,6 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 .sec-badge{font-size:9px;padding:2px 8px;border-radius:4px;font-family:'DM Mono',monospace;font-weight:700;letter-spacing:1px}
 .sb-today{background:rgba(0,232,122,.12);color:var(--green)}
 .sb-next{background:rgba(59,139,255,.1);color:var(--blue)}
-.sb-done{background:rgba(90,105,120,.12);color:var(--muted)}
 .league-pill{display:flex;align-items:center;gap:7px;padding:5px 12px;background:rgba(255,255,255,.025);border-radius:7px;margin-bottom:8px;width:fit-content}
 .league-pill span{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
 
@@ -144,8 +142,8 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 .oval.second{color:var(--text)}
 
 /* ─── EXPAND ─── */
-.expand{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.4,0,.2,1)}
-.expand.open{max-height:2400px;border-top:1px solid var(--border)}
+.expand{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+.expand.open{max-height:800px;border-top:1px solid var(--border)}
 .exp-inner{padding:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .iblock{}
 .ibt{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:6px}
@@ -190,188 +188,65 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 .disc{font-size:10px;color:var(--muted);line-height:1.6;padding:12px;background:rgba(255,255,255,.02);border-radius:8px;border:1px solid var(--border)}
 .disc strong{color:var(--text)}
 
-/* ─── TODAY'S PERFORMANCE SECTION ─── */
-.perf-section{margin-bottom:28px}
-.perf-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px}
-.perf-title em{color:var(--green);font-style:normal}
-.perf-sub{font-size:11px;color:var(--muted);margin-top:2px}
-.perf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
-.perf-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;transition:all .2s}
-.perf-card.win{border-color:rgba(0,232,122,.3);background:rgba(0,232,122,.03)}
-.perf-card.loss{border-color:rgba(255,59,92,.25);background:rgba(255,59,92,.02)}
-.perf-status{display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:5px;margin-bottom:10px}
-.perf-status.win{background:rgba(0,232,122,.12);color:var(--green)}
-.perf-status.loss{background:rgba(255,59,92,.12);color:var(--red)}
-.perf-status.pending{background:rgba(255,184,0,.1);color:var(--yellow)}
-.perf-match{font-size:12px;font-weight:600;margin-bottom:4px;line-height:1.4}
-.perf-pick{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);background:rgba(255,255,255,.04);border-radius:5px;padding:3px 7px;display:inline-block;margin-bottom:6px}
-.perf-odd{font-size:11px;color:var(--yellow)}
-.perf-summary{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 24px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
-.perf-score{font-family:'Bebas Neue',sans-serif;font-size:48px;letter-spacing:2px;line-height:1}
-.perf-score-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:2px}
-.perf-note{font-size:11px;color:var(--muted);font-style:italic;max-width:480px}
+/* ─── ACCURACY SECTION ─── */
+.acc-section{margin-bottom:28px}
+.acc-header{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.acc-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px}
+.acc-title em{color:var(--green);font-style:normal}
+.acc-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.acc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.acc-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px;transition:all .2s}
+.acc-card:hover{border-color:rgba(0,232,122,.16);transform:translateY(-1px)}
+.acc-card-top{display:flex;justify-content:space-between;align-items:flex-start}
+.acc-card-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.acc-trend{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px}
+.acc-trend-up{background:rgba(0,232,122,.1);color:var(--green)}
+.acc-trend-dn{background:rgba(255,59,92,.1);color:var(--red)}
+.acc-trend-eq{background:rgba(255,184,0,.1);color:var(--yellow)}
+.acc-big{font-family:'Bebas Neue',sans-serif;font-size:44px;letter-spacing:1px;line-height:1}
+.acc-big.clr-hi{color:var(--green)}
+.acc-big.clr-md{color:var(--yellow)}
+.acc-big.clr-lo{color:var(--red)}
+.acc-ringwrap{position:relative;width:52px;height:52px;flex-shrink:0}
+.acc-ring-svg{transform:rotate(-90deg)}
+.acc-ring-bg{fill:none;stroke:rgba(255,255,255,.06);stroke-width:4}
+.acc-ring-fill{fill:none;stroke-width:4;stroke-linecap:round;transition:stroke-dashoffset 1.2s cubic-bezier(.4,0,.2,1)}
+.acc-ring-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;font-weight:600}
+.acc-bar-wrap{display:flex;flex-direction:column;gap:4px}
+.acc-bar-row{display:flex;align-items:center;gap:6px;font-size:11px}
+.acc-bar-label{color:var(--muted);width:32px;flex-shrink:0;font-size:10px}
+.acc-bar-track{flex:1;height:4px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden}
+.acc-bar-fill{height:100%;border-radius:2px;transition:width 1s ease}
+.acc-bar-val{font-family:'DM Mono',monospace;font-size:10px;width:28px;text-align:right;flex-shrink:0}
 
-/* ─── COMBO SECTION ─── */
-.combo-section{margin-bottom:32px}
-.combo-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px}
-.combo-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px}
-.combo-title em{color:var(--yellow);font-style:normal}
-.combo-sub{font-size:11px;color:var(--muted);margin-top:2px}
-
-.combo-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:14px}
-.combo-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .2s;cursor:pointer}
-.combo-card:hover{border-color:rgba(255,184,0,.25);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.3)}
-.combo-card.selected{border-color:rgba(255,184,0,.5);background:rgba(255,184,0,.04)}
-.combo-card-top{padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
-.combo-card-info{}
-.combo-badge{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:4px;margin-bottom:6px}
-.cb-safe{background:rgba(0,232,122,.12);color:var(--green)}
-.cb-risky{background:rgba(255,59,92,.12);color:var(--red)}
-.cb-val{background:rgba(255,184,0,.12);color:var(--yellow)}
-.combo-name{font-size:15px;font-weight:600;margin-bottom:3px}
-.combo-picks{font-size:11px;color:var(--muted);line-height:1.6}
-.combo-pick-item{display:flex;align-items:center;gap:5px;padding:3px 0}
-.combo-pick-dot{width:5px;height:5px;border-radius:50%;background:var(--green);flex-shrink:0}
-.combo-right{text-align:right;flex-shrink:0}
-.combo-legs{font-size:9px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
-.combo-total-odd{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:1px;color:var(--yellow);line-height:1}
-.combo-conf-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:2px;margin-top:4px}
-.combo-cbar{width:64px;height:3px;background:var(--dark3);border-radius:2px;overflow:hidden}
-.combo-cfill{height:100%;border-radius:2px}
-.combo-cpct{font-family:'DM Mono',monospace;font-size:10px;font-weight:600}
-
-.combo-footer{padding:10px 16px;background:rgba(255,255,255,.02);border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
-.combo-book-row{display:flex;align-items:center;gap:6px;font-size:11px}
-.combo-book-dot{width:7px;height:7px;border-radius:2px}
-.combo-best-label{font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(255,184,0,.15);color:var(--yellow);padding:1px 5px;border-radius:3px}
-.combo-select-btn{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:6px;border:none;cursor:pointer;transition:all .15s}
-.combo-select-btn.off{background:var(--dark3);color:var(--muted)}
-.combo-select-btn.on{background:rgba(255,184,0,.15);color:var(--yellow);border:1px solid rgba(255,184,0,.3)}
-
-/* BUILD-A-BET */
-.bab-box{background:var(--card);border:1px solid rgba(59,139,255,.25);border-radius:14px;overflow:hidden}
-.bab-header{padding:12px 16px;background:rgba(59,139,255,.06);border-bottom:1px solid rgba(59,139,255,.15);display:flex;align-items:center;justify-content:space-between}
-.bab-title{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2px;color:var(--blue)}
-.bab-badge{font-size:8px;padding:2px 7px;border-radius:4px;background:rgba(59,139,255,.15);color:var(--blue);font-weight:700;letter-spacing:1.5px}
-.bab-match{padding:10px 16px;border-bottom:1px solid var(--border)}
-.bab-match-name{font-size:12px;font-weight:700;margin-bottom:2px}
-.bab-match-meta{font-size:10px;color:var(--muted)}
-.bab-leg{display:flex;justify-content:space-between;align-items:center;padding:8px 16px;border-bottom:1px solid rgba(255,255,255,.03)}
-.bab-leg:last-child{border-bottom:none}
-.bab-leg-left{display:flex;align-items:center;gap:8px}
-.bab-leg-icon{font-size:14px;width:20px;text-align:center;flex-shrink:0}
-.bab-leg-bet{font-size:11px;font-weight:600}
-.bab-leg-conf{font-size:9px;color:var(--muted);margin-top:1px}
-.bab-leg-odd{font-family:'DM Mono',monospace;font-size:12px;color:var(--blue);font-weight:700;flex-shrink:0}
-.bab-footer{padding:11px 16px;background:rgba(59,139,255,.04);border-top:1px solid rgba(59,139,255,.12)}
-.bab-combo-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.bab-combo-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
-.bab-combo-odd{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--blue);letter-spacing:1px;line-height:1}
-.bab-ai{font-size:10px;color:var(--muted);line-height:1.55;font-style:italic;padding-top:8px;border-top:1px solid var(--border)}
-
-/* BETSLIP */
-.betslip{background:var(--card);border:1px solid rgba(255,184,0,.2);border-radius:14px;overflow:hidden}
-.bs-header{padding:14px 18px;background:rgba(255,184,0,.06);border-bottom:1px solid rgba(255,184,0,.15);display:flex;align-items:center;justify-content:space-between}
-.bs-title{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:var(--yellow)}
-.bs-count{font-family:'DM Mono',monospace;font-size:12px;background:rgba(255,184,0,.15);color:var(--yellow);padding:2px 8px;border-radius:4px;font-weight:700}
-.bs-empty{padding:20px;text-align:center;color:var(--muted);font-size:12px}
-.bs-legs{padding:8px 0}
-.bs-leg{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 16px;border-bottom:1px solid var(--border);font-size:11px;gap:8px}
-.bs-leg:last-child{border-bottom:none}
-.bs-leg-left{}
-.bs-leg-match{font-weight:600;color:var(--text);font-size:12px}
-.bs-leg-pick{color:var(--muted);margin-top:1px}
-.bs-leg-right{text-align:right;flex-shrink:0}
-.bs-leg-odd{font-family:'DM Mono',monospace;font-size:13px;color:var(--yellow);font-weight:700}
-.bs-leg-book{font-size:9px;color:var(--muted);margin-top:1px}
-.bs-leg-remove{font-size:10px;color:var(--red);cursor:pointer;margin-top:3px;opacity:.6;transition:opacity .15s}
-.bs-leg-remove:hover{opacity:1}
-.bs-totals{padding:12px 16px;background:rgba(255,255,255,.02);border-top:1px solid var(--border)}
-.bs-total-row{display:flex;justify-content:space-between;font-size:12px;padding:3px 0}
-.bs-total-label{color:var(--muted)}
-.bs-total-val{font-family:'DM Mono',monospace;font-weight:700}
-.bs-total-row.final .bs-total-label{color:var(--text);font-weight:600;font-size:13px}
-.bs-total-row.final .bs-total-val{color:var(--yellow);font-size:16px}
-.bs-stake-row{display:flex;align-items:center;gap:8px;padding:10px 0 4px}
-.bs-stake-label{font-size:11px;color:var(--muted);flex-shrink:0}
-.bs-stake-input{flex:1;background:var(--dark3);border:1px solid var(--border);border-radius:7px;padding:6px 10px;font-family:'DM Mono',monospace;font-size:13px;color:var(--text);outline:none;transition:border-color .15s}
-.bs-stake-input:focus{border-color:rgba(255,184,0,.4)}
-.bs-stake-input::placeholder{color:var(--muted)}
-.bs-lv{font-size:11px;color:var(--muted);flex-shrink:0}
-.bs-place-btn{width:100%;margin-top:10px;padding:11px;border-radius:9px;border:none;background:linear-gradient(135deg,#FFB800,#FF8C00);color:#000;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:.5px;cursor:pointer;transition:all .15s}
-.bs-place-btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
-.bs-place-btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
-
-.custom-combo-builder{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 18px;margin-top:14px}
-.ccb-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.ccb-picks{display:flex;flex-direction:column;gap:6px}
-.ccb-pick{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:var(--dark3);border:1px solid var(--border);border-radius:8px;cursor:pointer;transition:all .15s}
-.ccb-pick:hover{border-color:rgba(255,184,0,.25)}
-.ccb-pick.added{background:rgba(255,184,0,.06);border-color:rgba(255,184,0,.3)}
-.ccb-pick-left{display:flex;flex-direction:column;gap:2px}
-.ccb-pick-match{font-size:11px;font-weight:600}
-.ccb-pick-bet{font-size:10px;color:var(--muted)}
-.ccb-pick-right{display:flex;align-items:center;gap:8px}
-.ccb-odd{font-family:'DM Mono',monospace;font-size:13px;color:var(--yellow);font-weight:700}
-.ccb-add{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:4px;border:none;cursor:pointer;transition:all .15s}
-.ccb-add.off{background:var(--dark3);color:var(--muted);border:1px solid var(--border)}
-.ccb-add.on{background:rgba(255,184,0,.15);color:var(--yellow);border:1px solid rgba(255,184,0,.3)}
-
-.lang-toggle{display:flex;background:var(--dark3);border:1px solid var(--border);border-radius:8px;overflow:hidden}
-.lang-btn{padding:5px 11px;font-size:11px;font-weight:700;letter-spacing:1px;border:none;background:none;color:var(--muted);cursor:pointer;transition:all .15s}
-.lang-btn.active{background:var(--green);color:#000}
-.picks-header{display:flex;align-items:center;gap:12px;margin-bottom:20px}
-.picks-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px}
-.picks-sub{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-
-/* ─── SURE BET / ARBITRAGE ─── */
-.sure-section{margin-bottom:32px}
-.sure-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px}
-.sure-title em{color:var(--green);font-style:normal}
-.sure-sub{font-size:11px;color:var(--muted);margin-top:2px}
-.sure-tabs{display:flex;background:var(--dark3);border:1px solid var(--border);border-radius:8px;overflow:hidden;flex-shrink:0}
-.sure-tab{padding:6px 14px;font-size:11px;font-weight:700;letter-spacing:1px;border:none;background:none;color:var(--muted);cursor:pointer;transition:all .15s;white-space:nowrap}
-.sure-tab.active{background:var(--green);color:#000}
-.sure-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.sure-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .2s}
-.sure-card:hover{border-color:rgba(0,232,122,.2)}
-.sure-card-head{padding:12px 16px;border-bottom:1px solid var(--border)}
-.sure-card-match{font-size:13px;font-weight:600;margin-bottom:7px}
-.arb-meter-row{display:flex;align-items:center;gap:8px}
-.arb-bar{flex:1;height:4px;background:var(--dark3);border-radius:2px;overflow:hidden}
-.arb-fill{height:100%;border-radius:2px;transition:width .4s}
-.af-good{background:linear-gradient(90deg,var(--green),#00ffaa)}
-.af-near{background:linear-gradient(90deg,var(--yellow),#ffd700)}
-.af-bad{background:linear-gradient(90deg,var(--red),#ff8c69)}
-.arb-pct-label{font-family:'DM Mono',monospace;font-size:11px;font-weight:700;flex-shrink:0}
-.arb-badge{font-size:8px;padding:2px 6px;border-radius:4px;font-weight:700;letter-spacing:1px;text-transform:uppercase;flex-shrink:0}
-.ab-arb{background:rgba(0,232,122,.15);color:var(--green)}
-.ab-near{background:rgba(255,184,0,.15);color:var(--yellow)}
-.ab-no{background:rgba(255,59,92,.12);color:var(--red)}
-.sure-card-body{padding:10px 16px}
-.sure-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.03)}
-.sure-row:last-child{border-bottom:none}
-.sure-row-label{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:5px}
-.sure-row-right{display:flex;align-items:center;gap:6px;flex-shrink:0}
-.sure-stake-val{font-family:'DM Mono',monospace;font-size:12px;font-weight:700}
-.sure-bk-chip{font-size:9px;padding:1px 5px;border-radius:3px;font-family:'DM Mono',monospace;font-weight:600}
-.sure-card-foot{padding:10px 16px;background:rgba(255,255,255,.018);border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
-.sure-return{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;line-height:1}
-.sure-return-label{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:1px}
-.sure-combo-card{background:linear-gradient(135deg,rgba(0,232,122,.04),rgba(0,0,0,0));border:1px solid rgba(0,232,122,.15);border-radius:14px;padding:16px 18px;margin-top:14px}
-.sure-combo-title{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:10px}
-.sure-combo-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
-.sure-combo-cell{background:var(--dark3);border:1px solid var(--border);border-radius:8px;padding:8px 10px;text-align:center}
-.sure-combo-cell.win{border-color:rgba(0,232,122,.3);background:rgba(0,232,122,.05)}
-.sure-combo-cell.loss{border-color:rgba(255,59,92,.2);background:rgba(255,59,92,.03)}
-.sure-stake-row{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
-.sure-stake-input{background:var(--dark3);border:1px solid var(--border);border-radius:7px;padding:6px 10px;font-family:'DM Mono',monospace;font-size:13px;color:var(--text);outline:none;width:90px;transition:border-color .15s}
-.sure-stake-input:focus{border-color:rgba(0,232,122,.4)}
+/* HISTORY TABLE */
+.hist-table{width:100%;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.hist-thead tr{background:rgba(255,255,255,.03)}
+.hist-thead th{padding:10px 14px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-align:left}
+.hist-tbody tr{border-top:1px solid var(--border);transition:background .12s;cursor:default}
+.hist-tbody tr:hover{background:rgba(255,255,255,.02)}
+.hist-tbody td{padding:9px 14px;font-size:12px}
+.res-icon{width:20px;height:20px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:800}
+.ri-w{background:rgba(0,232,122,.15);color:var(--green)}
+.ri-l{background:rgba(255,59,92,.15);color:var(--red)}
+.ri-h{background:rgba(255,184,0,.15);color:var(--yellow)}
+.ht-muted{color:var(--muted);font-size:11px}
+.ht-green{color:var(--green);font-weight:600}
+.ht-red{color:var(--red);font-weight:600}
+.ht-yellow{color:var(--yellow)}
+.ht-pred{font-family:'DM Mono',monospace;font-size:11px;background:rgba(255,255,255,.04);border-radius:4px;padding:2px 6px}
+.ht-score{font-family:'DM Mono',monospace;font-weight:700}
+.market-filter{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.mf-btn{background:var(--dark3);border:1px solid var(--border);border-radius:7px;padding:5px 12px;font-size:11px;font-weight:600;color:var(--muted);cursor:pointer;transition:all .15s}
+.mf-btn:hover{color:var(--text)}
+.mf-btn.active{background:rgba(0,232,122,.08);border-color:rgba(0,232,122,.28);color:var(--green)}
+.streak-row{display:flex;gap:4px;flex-wrap:wrap}
+.streak-dot{width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800}
+.sd-w{background:rgba(0,232,122,.18);color:var(--green)}
+.sd-l{background:rgba(255,59,92,.18);color:var(--red)}
+.sd-h{background:rgba(255,184,0,.18);color:var(--yellow)}
 
 @media(max-width:920px){
-  .combo-cards{grid-template-columns:1fr}
-  .sure-cards-grid{grid-template-columns:1fr}
-  .sure-combo-row{grid-template-columns:repeat(2,1fr)}
   .layout{grid-template-columns:1fr}.sidebar{display:none}
   main{padding:18px 14px}.mc-top{grid-template-columns:1fr 86px 1fr}.pside{display:none}
   header{padding:0 14px}.odds-cols{grid-template-columns:1fr}.exp-inner{grid-template-columns:1fr}
@@ -383,16 +258,12 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 <header>
   <div>
     <div class="logo"><div class="logo-dot"></div>ПРОГНОЗА</div>
-    <div class="logo-sub" data-t="logoSub">Само лицензирани БГ букмейкъри</div>
+    <div class="logo-sub">Само лицензирани БГ букмейкъри</div>
   </div>
   <div class="hright">
-    <div class="hbadge hbadge-bg">🇧🇬 <span data-t="napBadge">НАП Лицензирани</span></div>
-    <div class="hbadge hbadge-live"><div class="hbadge-dot"></div><span data-t="liveBadge">ЛЧ Днес</span></div>
-    <span class="hdate">25.02.2026</span>
-    <div class="lang-toggle">
-      <button class="lang-btn active" id="btn-bg" onclick="setLang('bg')">БГ</button>
-      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
-    </div>
+    <div class="hbadge hbadge-bg">🇧🇬 НАП Лицензирани</div>
+    <div class="hbadge hbadge-live"><div class="hbadge-dot"></div>ПЛ Уикенд</div>
+    <span class="hdate">27.02.2026</span>
   </div>
 </header>
 
@@ -400,19 +271,19 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 
 <div class="hero">
   <div>
-    <h1 data-t="heroH1">АНАЛИЗ & КОЕФИЦИЕНТИ<br>ОТ <em>БЪЛГАРСКИ БУКМЕЙКЪРИ</em></h1>
-    <p data-t="heroP">Сравнение на коефициенти от лицензирани в България оператори (НАП). Намери най-добрата ставка за Шампионска лига — 24 Февруари 2026.</p>
+    <h1>АНАЛИЗ & КОЕФИЦИЕНТИ<br>ОТ <em>БЪЛГАРСКИ БУКМЕЙКЪРИ</em></h1>
+    <p>Сравнение на коефициенти от лицензирани в България оператори (НАП). Намери най-добрата ставка за Висша лига — Уикенд 28 Февруари / 1 Март 2026.</p>
   </div>
   <div class="hero-stats">
-    <div class="hst"><div class="hst-v">8</div><div class="hst-l" data-t="statBooks">Букмейкъра</div></div>
-    <div class="hst"><div class="hst-v">12</div><div class="hst-l" data-t="statMatches">Мача</div></div>
-    <div class="hst"><div class="hst-v">60</div><div class="hst-l" data-t="statMarkets">Пазара</div></div>
+    <div class="hst"><div class="hst-v">8</div><div class="hst-l">Букмейкъра</div></div>
+    <div class="hst"><div class="hst-v">9</div><div class="hst-l">ПЛ Мача</div></div>
+    <div class="hst"><div class="hst-v">27</div><div class="hst-l">Пазара</div></div>
   </div>
 </div>
 
 <!-- BOOKMAKER LEGEND -->
 <div class="bg-books-bar">
-  <span class="bgb-title" data-t="booksTitle">🇧🇬 + 🌍 Букмейкъри:</span>
+  <span class="bgb-title">🇧🇬 + 🌍 Букмейкъри:</span>
   <div class="bgb-chip"><div class="bgb-dot" style="background:#1C7A2E"></div>Bet365 <small>🌍 Международен</small></div>
   <div class="bgb-chip"><div class="bgb-dot" style="background:#0F4F8C"></div>Palms Bet <small>БГ</small></div>
   <div class="bgb-chip"><div class="bgb-dot" style="background:#2563EB"></div>Winbet <small>БГ</small></div>
@@ -423,217 +294,104 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
   <div class="bgb-chip"><div class="bgb-dot" style="background:#475569"></div>Efbet <small>БГ</small></div>
 </div>
 
-<!-- ═══ TODAY'S PICKS ═══ -->
-<div class="picks-header">
-  <div class="picks-title" data-t="todayTitle">ДНЕШНИ <em style="color:var(--green)">ПРОГНОЗИ</em></div>
-  <div style="flex:1;height:1px;background:var(--border)"></div>
-  <div class="picks-sub" data-t="todaySub">ЛЧ · 25.02 / ЛЕ · 26.02.2026</div>
+<!-- ═══ ACCURACY SECTION ═══ -->
+<div class="acc-section">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px">
+    <div>
+      <div class="acc-title">ТОЧНОСТ НА <em>ПРОГНОЗИТЕ</em></div>
+      <div class="acc-sub">Реална история от последните 90 дни · Актуализирано: 27.02.2026</div>
+    </div>
+    <div class="market-filter" id="mfilter">
+      <button class="mf-btn active" onclick="filterMarket('all',this)">Всички</button>
+      <button class="mf-btn" onclick="filterMarket('1x2',this)">1X2</button>
+      <button class="mf-btn" onclick="filterMarket('btts',this)">BTTS</button>
+      <button class="mf-btn" onclick="filterMarket('ou',this)">Над/Под</button>
+      <button class="mf-btn" onclick="filterMarket('hn',this)">Хенди</button>
+    </div>
+  </div>
+  <div class="acc-grid" id="kpiGrid"></div>
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+    <div>
+      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">ПОСЛЕДНИ 30 ПРОГНОЗИ</div>
+      <div class="streak-row" id="streakRow"></div>
+    </div>
+    <div style="margin-left:auto;text-align:right">
+      <div style="font-size:9px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Текуща серия</div>
+      <div style="font-family:'DM Mono',monospace;font-size:18px;font-weight:700;color:var(--green)" id="currentStreak"></div>
+    </div>
+  </div>
+  <div style="margin-bottom:8px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">ИСТОРИЯ НА ПРОГНОЗИТЕ</div>
+  <table class="hist-table" id="histTable">
+    <thead class="hist-thead">
+      <tr>
+        <th>Дата</th><th>Мач</th><th>Лига</th><th>Прогноза</th><th>Коеф.</th><th>Резултат</th><th>Изход</th>
+      </tr>
+    </thead>
+    <tbody class="hist-tbody" id="histBody"></tbody>
+  </table>
+  <div style="text-align:center;padding:12px 0">
+    <button onclick="loadMore()" id="loadMoreBtn" style="background:var(--dark3);border:1px solid var(--border);border-radius:8px;padding:8px 24px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s">Покажи повече →</button>
+  </div>
 </div>
 
 <div class="layout">
 <div id="container"></div>
 
 <div class="sidebar">
+
   <div class="top-pick">
-    <div class="tp-title" data-t="topPickTitle">⭐ Топ избор на деня</div>
-    <div class="tp-match">Щутгарт — Селтик</div>
-    <div class="tp-bet" data-t="topPickBet">Щутгарт победа</div>
+    <div class="tp-title">⭐ Топ избор на уикенда</div>
+    <div class="tp-match">Брайтън — Нотингам Форест</div>
+    <div class="tp-bet">Форест победа (2)</div>
     <div class="tp-odd-row">
-      <div class="tp-odd">1.36</div>
+      <div class="tp-odd">4.20</div>
       <div>
-        <div class="tp-book">William Hill ⚡</div>
-        <div class="tp-conf" style="color:var(--green)" data-t="topPickConf">72% реален шанс</div>
+        <div class="tp-book">Bet365</div>
+        <div class="tp-conf" style="color:var(--green)">~37% реален шанс</div>
       </div>
     </div>
-    <div class="tp-conf" style="margin-top:8px" data-t="topPickNote">Спечелиха 4-1 в Глазгоу. Вкъщи пред своите фенове — типична победа.</div>
+    <div class="tp-conf" style="margin-top:8px">Форест без загуба от 11 мача. Страхотна ценностна ставка!</div>
   </div>
-  <div id="babBox"></div>
-  <div id="multiPickBox"></div>
 
   <div class="scard">
-    <div class="stitle" data-t="trendTitle">📊 ЛЧ & ЛЕ ТРЕНД</div>
-    <div class="srow"><span class="sname" data-t="trend1">Реал Мадрид дома (ЛЧ КО)</span><span class="sbg sg">10/11</span></div>
-    <div class="srow"><span class="sname" data-t="trend2">Форест вкъщи (ЛЕ)</span><span class="sbg sg">3/5</span></div>
-    <div class="srow"><span class="sname" data-t="trend3">Лудогорец 🇧🇬 преднина</span><span class="sbg sy">2-1</span></div>
-    <div class="srow"><span class="sname" data-t="trend4">Бенфика извън (ЕК)</span><span class="sbg sr">1П от посл.7</span></div>
+    <div class="stitle">💡 ВСИЧКИ ПРЕПОРЪКИ</div>
+    <div class="srow"><span class="sname">Арсенал победа</span><span class="sbg sg">1.60 Bet365</span></div>
+    <div class="srow"><span class="sname">Ливърпул -1.5 хенди</span><span class="sbg sg">1.95 Bet365</span></div>
+    <div class="srow"><span class="sname">BTTS Фулъм-Тотнъм</span><span class="sbg sg">1.62 Bet365</span></div>
+    <div class="srow"><span class="sname">Форест победа (ценност)</span><span class="sbg sg">4.20 Bet365</span></div>
+    <div class="srow"><span class="sname">Ман Сити победа</span><span class="sbg sy">1.65 Bet365</span></div>
+    <div class="srow"><span class="sname">Брентфорд победа</span><span class="sbg sy">1.75 Bet365</span></div>
+  </div>
+
+  <div class="scard">
+    <div class="stitle">🏅 БУКМЕЙКЪРИ РАНГЛИСТ</div>
+    <div class="srow"><span class="sname">Най-висок коеф (ПЛ)</span><span class="sbg sg">Bet365</span></div>
+    <div class="srow"><span class="sname">Най-много пазари</span><span class="sbg sb">Bet365 / Betano</span></div>
+    <div class="srow"><span class="sname">Най-нисък марж</span><span class="sbg sg">Sesame ~4%</span></div>
+    <div class="srow"><span class="sname">Без лимит залог</span><span class="sbg sg">Palms Bet</span></div>
+    <div class="srow"><span class="sname">Най-бърз кешаут</span><span class="sbg sb">Bet365 / Betano</span></div>
+  </div>
+
+  <div class="scard">
+    <div class="stitle">📊 ПЛ ТРЕНД</div>
+    <div class="srow"><span class="sname">Арсенал без загуба (у дома)</span><span class="sbg sg">14 поредни</span></div>
+    <div class="srow"><span class="sname">Форест без загуба</span><span class="sbg sg">11 поредни</span></div>
+    <div class="srow"><span class="sname">Уест Хем без победа</span><span class="sbg sr">7 поредни</span></div>
+    <div class="srow"><span class="sname">Палас без победа (гости)</span><span class="sbg sr">6 поредни</span></div>
   </div>
 
   <div class="disc">
-    <strong data-t="discTitle">⚠️ Отговорна игра</strong><br>
-    <span data-t="discText">Залагането носи риск. Играй отговорно. Всички оператори тук са лицензирани от НАП — Национална агенция за приходите на Република България. 18+</span>
+    <strong>⚠️ Отговорна игра</strong><br>
+    Залагането носи риск. Играй отговорно. Всички оператори тук са лицензирани от НАП — Национална агенция за приходите на Република България. 18+
   </div>
 </div>
-</div>
-
-<!-- ═══ COMBO BUILDER ═══ -->
-<div class="combo-section">
-  <div class="combo-header">
-    <div>
-      <div class="combo-title" data-t="comboTitle">КОМБИНИРАНИ <em>ЗАЛОЗИ</em></div>
-      <div class="combo-sub" data-t="comboSub">Готови комбинации от 2 до 5 мача · Изберете комбинация или изградете своя</div>
-    </div>
-    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
-      <div id="oddsStatus" style="font-size:11px;color:var(--muted)">
-        <span style="color:var(--muted)">📋 Индикативни коефициенти · <button onclick="fetchLiveOdds()" style="background:none;border:none;color:var(--yellow);cursor:pointer;font-size:11px;text-decoration:underline">Обнови →</button></span>
-      </div>
-      <div id="oddsLoadingBar" style="width:200px;height:3px;background:var(--dark3);border-radius:2px;overflow:hidden;display:none">
-        <div style="height:100%;width:40%;background:linear-gradient(90deg,transparent,var(--yellow),transparent);animation:shimmer 1.5s infinite"></div>
-      </div>
-      <button onclick="fetchLiveOdds()" style="background:rgba(255,184,0,.08);border:1px solid rgba(255,184,0,.25);border-radius:7px;padding:4px 12px;font-size:11px;font-weight:600;color:var(--yellow);cursor:pointer" data-t="refreshBtn">🔄 Обнови коефициенти</button>
-    </div>
-  </div>
-  <div class="combo-cards" id="comboCards"></div>
-  <div style="display:grid;grid-template-columns:1fr 320px;gap:14px;align-items:start">
-    <div class="custom-combo-builder">
-      <div class="ccb-title" data-t="buildComboTitle">🔧 Изгради своя комбинация</div>
-      <div class="ccb-picks" id="ccbPicks"></div>
-    </div>
-    <div class="betslip">
-      <div class="bs-header">
-        <div class="bs-title" data-t="betslipTitle">🎟 Бетслип</div>
-        <div class="bs-count" id="bsCount">0 избора</div>
-      </div>
-      <div id="bsLegs"><div class="bs-empty" data-t="betslipEmpty">Добавете избори от комбинациите или от таблицата</div></div>
-      <div class="bs-totals" id="bsTotals" style="display:none">
-        <div class="bs-total-row"><span class="bs-total-label" data-t="bsLegsLabel">Брой избори</span><span class="bs-total-val" id="bsLegsCount">0</span></div>
-        <div class="bs-total-row"><span class="bs-total-label" data-t="bsTotalOddsLabel">Обща квота</span><span class="bs-total-val" id="bsTotalOdd" style="color:var(--yellow)">0.00</span></div>
-        <div class="bs-stake-row">
-          <span class="bs-stake-label" data-t="bsStakeLabel">Залог:</span>
-          <input class="bs-stake-input" id="bsStake" type="number" placeholder="10" min="1" oninput="recalcBetslip()">
-          <span class="bs-lv" data-t="bsCurrency">лв.</span>
-        </div>
-        <div class="bs-total-row final"><span class="bs-total-label" data-t="bsWinLabel">Потенциална печалба</span><span class="bs-total-val" id="bsWin">0.00 лв.</span></div>
-        <button class="bs-place-btn" onclick="placeBet()" data-t="bsPlaceBtn">ПОСТАВИ ЗАЛОГ →</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══ SURE BETS / DUTCH ═══ -->
-<div class="sure-section">
-  <div style="margin-bottom:16px">
-    <div class="sure-title">🎯 <em>DUTCH ЗАЛОГ</em></div>
-    <div class="sure-sub">Залагай на домакин + гост едновременно · Гарантирана печалба ако няма равенство · Топ 3 мача от ЛЕ</div>
-  </div>
-  <div class="sure-stake-row">
-    <span style="font-size:11px;color:var(--muted)">Залог:</span>
-    <input class="sure-stake-input" id="sureStake" type="number" value="100" min="10" oninput="renderSureBets()">
-    <span style="font-size:11px;color:var(--muted)">лв.</span>
-    <span id="sureExplain" style="font-size:11px;color:var(--muted);font-style:italic;margin-left:4px"></span>
-  </div>
-  <div id="sureBets"></div>
-</div>
-
-<!-- ═══ TODAY'S PERFORMANCE ═══ -->
-<div class="perf-section">
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px">
-    <div>
-      <div class="perf-title" data-t="perfTitle">ДНЕШНО <em>ПРЕДСТАВЯНЕ</em></div>
-      <div class="perf-sub" data-t="perfSub">Резултати от прогнозите за 25.02.2026 (ЛЧ) — актуализира се след края на мачовете</div>
-    </div>
-  </div>
-  <div class="perf-grid" id="perfGrid"></div>
-  <div class="perf-summary" id="perfSummary"></div>
 </div>
 </main>
 
 <script>
-// ─── LANGUAGE ───
-let currentLang = 'bg';
-const T = {
-  bg:{
-    logoSub:"Само лицензирани БГ букмейкъри", napBadge:"НАП Лицензирани", liveBadge:"ЛЧ & ЛЕ",
-    heroH1:"АНАЛИЗ & КОЕФИЦИЕНТИ<br>ОТ <em>БЪЛГАРСКИ БУКМЕЙКЪРИ</em>",
-    heroP:"Сравнение на коефициенти от лицензирани в България оператори (НАП). Намери най-добрата ставка за ЛЧ (25 Февруари) и ЛЕ (26 Февруари 2026).",
-    statBooks:"Букмейкъра", statMatches:"Мача", statMarkets:"Пазара",
-    booksTitle:"🇧🇬 + 🌍 Букмейкъри:",
-    todayTitle:"ДНЕШНИ <em style=\"color:var(--green)\">ПРОГНОЗИ</em>", todaySub:"ЛЕ · 26.02.2026",
-    topPickTitle:"⭐ Топ избор на деня", topPickBet:"Щутгарт победа", topPickConf:"72% реален шанс",
-    topPickNote:"Спечелиха 4-1 в Глазгоу. Вкъщи пред своите фенове — типична победа.",
-    trendTitle:"📊 ЛЕ ТРЕНД ДНЕС",
-    trend1:"Щутгарт (ЛЕ, КО, вкъщи)", trend2:"Болоня вкъщи (ЛЕ)",
-    trend3:"Лудогорец 🇧🇬 преднина 2-1", trend4:"Форест не пусна (0-3)",
-    discTitle:"⚠️ Отговорна игра",
-    discText:"Залагането носи риск. Играй отговорно. Всички оператори тук са лицензирани от НАП — Национална агенция за приходите на Република България. 18+",
-    comboTitle:"КОМБИНИРАНИ <em>ЗАЛОЗИ</em>",
-    comboSub:"Готови комбинации от 2 до 5 мача · Изберете комбинация или изградете своя",
-    oddsLoading:"⏳ Зарежда реални коефициенти от Bet365...", refreshBtn:"🔄 Обнови коефициенти",
-    buildComboTitle:"🔧 Изгради своя комбинация", betslipTitle:"🎟 Бетслип",
-    betslipEmpty:"Добавете избори от комбинациите или от таблицата",
-    bsLegsLabel:"Брой избори", bsTotalOddsLabel:"Обща квота",
-    bsStakeLabel:"Залог:", bsCurrency:"лв.", bsWinLabel:"Потенциална печалба", bsPlaceBtn:"ПОСТАВИ ЗАЛОГ →",
-    perfTitle:"ДНЕШНО <em>ПРЕДСТАВЯНЕ</em>",
-    perfSub:"Резултати от прогнозите за 25.02.2026 (ЛЧ) — актуализира се след края на мачовете",
-    perfPending:"⏳ Изчакване", perfWin:"✓ Победа", perfLoss:"✗ Неуспех",
-    perfOddsLabel:"Коеф:", perfScoreLabel:"ВЕРНИ / ОБЩО",
-    perfNoteAll:"Всички мачове приключиха — виж резултатите.",
-    perfNoteWaiting:"Мачовете започват в 18:45 и 21:00 ч. Резултатите ще се покажат след края.",
-    homeWin:"1 — Домакин", drawOdds:"X — Равенство", awayWin:"2 — Гост",
-    oddsComparison:"1 X 2 — Сравнение на коефициенти", bestBGOdds:"НАЙ-ДОБЪР БГ КФ", atBook:"в",
-    keyStats:"📊 Ключова статистика", injuriesLabel:"🏥 Контузии & Наказания", fullSquad:"✅ Пълен отбор",
-    probLabel:"📈 Вероятности", winLabel:"Победа", drawLabel:"Равенство",
-    predLabel:"Прогноза", bestOddsRow:"Най-добър БГ кф", aiLabel:"🤖 AI Анализ",
-    dateLabelCL:"Сряда, 25 Февруари 2026", todayBadge:"ДНЕС", yesterdayBadge:"ВЧЕРА",
-    dateLabelEL:"Четвъртък, 26 Февруари 2026", tomorrowBadge:"УТРЕ",
-    leagueLabelCL:"UEFA Champions League — Плейоф, 2-ри крак",
-    leagueLabelEL:"UEFA Europa League — Плейоф, 2-ри крак",
-    prevRecordLabel:"Резултати от", prevRecordSuffix:"верни прогнози (ЛЧ)",
-  },
-  en:{
-    logoSub:"Licensed BG Bookmakers Only", napBadge:"NAP Licensed", liveBadge:"UCL & UEL",
-    heroH1:"ODDS ANALYSIS & PREDICTIONS<br>FROM <em>BULGARIAN BOOKMAKERS</em>",
-    heroP:"Odds comparison from NAP-licensed operators in Bulgaria. Best odds for UCL (25 Feb) & UEL (26 Feb 2026).",
-    statBooks:"Bookmakers", statMatches:"Matches", statMarkets:"Markets",
-    booksTitle:"🇧🇬 + 🌍 Bookmakers:",
-    todayTitle:"TODAY'S <em style=\"color:var(--green)\">PICKS</em>", todaySub:"UEL · 26.02.2026",
-    topPickTitle:"⭐ Top Pick of the Day", topPickBet:"Stuttgart Win", topPickConf:"72% real chance",
-    topPickNote:"Won 4-1 in Glasgow. At home in front of their fans — routine win.",
-    trendTitle:"📊 UEL TRENDS TODAY",
-    trend1:"Stuttgart (UEL KO, home)", trend2:"Bologna at home (UEL)",
-    trend3:"Ludogorets 🇧🇬 lead 2-1", trend4:"Forest clean sheet (0-3)",
-    discTitle:"⚠️ Responsible Gambling",
-    discText:"Gambling carries risk. Play responsibly. All operators listed here are licensed by NAP — the National Revenue Agency of Bulgaria. 18+",
-    comboTitle:"COMBO <em>BUILDER</em>",
-    comboSub:"Ready-made combos from 2 to 5 matches · Pick one or build your own",
-    oddsLoading:"⏳ Loading live odds from Bet365...", refreshBtn:"🔄 Refresh Odds",
-    buildComboTitle:"🔧 Build your own combo", betslipTitle:"🎟 Betslip",
-    betslipEmpty:"Add picks from the combos or the list below",
-    bsLegsLabel:"Picks", bsTotalOddsLabel:"Total Odds",
-    bsStakeLabel:"Stake:", bsCurrency:"BGN", bsWinLabel:"Potential Win", bsPlaceBtn:"PLACE BET →",
-    perfTitle:"TODAY'S <em>PERFORMANCE</em>",
-    perfSub:"Results for picks on 25.02.2026 (UCL) — updates once matches end",
-    perfPending:"⏳ Pending", perfWin:"✓ Win", perfLoss:"✗ Loss",
-    perfOddsLabel:"Odds:", perfScoreLabel:"CORRECT / TOTAL",
-    perfNoteAll:"All matches have ended — check the results.",
-    perfNoteWaiting:"Matches start at 18:45 and 21:00. Results will appear once they end.",
-    homeWin:"1 — Home Win", drawOdds:"X — Draw", awayWin:"2 — Away Win",
-    oddsComparison:"1 X 2 — Odds Comparison", bestBGOdds:"BEST BG ODDS", atBook:"at",
-    keyStats:"📊 Key Stats", injuriesLabel:"🏥 Injuries & Suspensions", fullSquad:"✅ Full Squad",
-    probLabel:"📈 Probabilities", winLabel:"Win", drawLabel:"Draw",
-    predLabel:"Prediction", bestOddsRow:"Best BG Odds", aiLabel:"🤖 AI Analysis",
-    dateLabelCL:"Wednesday, 25 February 2026", todayBadge:"TODAY", yesterdayBadge:"YESTERDAY",
-    dateLabelEL:"Thursday, 26 February 2026", tomorrowBadge:"TOMORROW",
-    leagueLabelCL:"UEFA Champions League — Playoff, 2nd Leg",
-    leagueLabelEL:"UEFA Europa League — Playoff, 2nd Leg",
-    prevRecordLabel:"Results from", prevRecordSuffix:"correct (UCL)",
-  }
-};
-
-function setLang(lang){
-  currentLang = lang;
-  document.querySelectorAll('[data-t]').forEach(el=>{
-    const k = el.dataset.t;
-    if(T[lang][k] !== undefined) el.innerHTML = T[lang][k];
-  });
-  document.getElementById('btn-bg').classList.toggle('active', lang==='bg');
-  document.getElementById('btn-en').classList.toggle('active', lang==='en');
-  render(); renderTodayPerf(); renderBuildBet(); renderMultiPick(); renderSureBets(); renderCombos(); renderCCBPicks(); renderBetslip();
-}
-
 // ─── BULGARIAN BOOKMAKERS ───
 const BOOKS = {
-  bet365:      { name:"Bet365",      color:"#1C7A2E", short:"Bet365" },
-  williamhill: { name:"William Hill",color:"#1A3C5E", short:"W.Hill" },
+  bet365: { name:"Bet365",    color:"#1C7A2E", short:"Bet365" },
   palms:  { name:"Palms Bet", color:"#0F4F8C", short:"Palms" },
   winbet: { name:"Winbet",    color:"#2563EB", short:"Winbet" },
   betano: { name:"Betano",    color:"#DC2626", short:"Betano" },
@@ -644,667 +402,589 @@ const BOOKS = {
 };
 
 const MATCHES = [
-  // ═══ CHAMPIONS LEAGUE — 25.02.2026 ═══
+  // ── СЪБОТА 28 ФЕВРУАРИ ──
   {
-    id:"atl_bvb",
-    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак", leagueNameEn:"Champions League — Playoff, 2nd Leg",
-    date:"2026-02-25", time:"18:45", statusType:"done",
-    ctx:"1-ви крак: Дортмунд 2-0 Аталанта", ctxEn:"1st leg: Dortmund 2-0 Atalanta",
-    home:"Аталанта",          homeA:"ATL", homeForm:["W","W","D","W","L"],
-    away:"Борусия Дортмунд",  awayA:"BVB", awayForm:["W","D","W","W","W"],
-    pred:{ result:"BTTS", conf:65, cfClass:"cf-mid", cpc:"cpct-mid" },
-    pick:{ bet:"И двата отбора гол", betEn:"Both Teams to Score", odd:"1.75", book:"Bet365", bookKey:"bet365" },
-    prob:{ h:42, d:20, a:38 },
+    id:"bou_sun",
+    league:"epl", leagueName:"Висша лига — Кръг 28",
+    date:"2026-02-28", time:"12:30", statusType:"soon",
+    ctx:"Борнемут 7-о, Сундерланд 16-о в таблицата",
+    home:"Борнемут", homeA:"BOU", homeForm:["W","D","W","L","W"],
+    away:"Сундерланд", awayA:"SUN", awayForm:["L","D","L","W","L"],
+    pred:{ result:"1", conf:62, cfClass:"cf-high", cpc:"cpct-high" },
+    pick:{ bet:"Борнемут победа (1)", odd:"1.75", book:"Bet365", bookKey:"bet365" },
+    prob:{ h:54.2, d:24.5, a:21.3 },
     odds:{
       home:[
-        {bk:"bet365", o:"2.20"}, {bk:"palms",  o:"2.10"}, {bk:"winbet", o:"2.15"}, {bk:"betano", o:"2.12"},
-        {bk:"sesame", o:"2.13"}, {bk:"b8888",  o:"2.08"}, {bk:"inbet",  o:"2.05"}, {bk:"efbet",  o:"2.02"},
+        {bk:"bet365", o:"1.75"}, {bk:"palms", o:"1.67"}, {bk:"winbet", o:"1.70"}, {bk:"betano", o:"1.68"},
+        {bk:"sesame", o:"1.69"}, {bk:"b8888", o:"1.65"}, {bk:"inbet",  o:"1.63"}, {bk:"efbet",  o:"1.61"},
       ],
       draw:[
-        {bk:"bet365", o:"3.60"}, {bk:"palms",  o:"3.40"}, {bk:"winbet", o:"3.45"}, {bk:"betano", o:"3.42"},
-        {bk:"sesame", o:"3.43"}, {bk:"b8888",  o:"3.38"}, {bk:"inbet",  o:"3.32"}, {bk:"efbet",  o:"3.28"},
+        {bk:"bet365", o:"3.70"}, {bk:"palms", o:"3.50"}, {bk:"winbet", o:"3.55"}, {bk:"betano", o:"3.45"},
+        {bk:"sesame", o:"3.48"}, {bk:"b8888", o:"3.40"}, {bk:"inbet",  o:"3.35"}, {bk:"efbet",  o:"3.30"},
       ],
       away:[
-        {bk:"bet365", o:"3.40"}, {bk:"palms",  o:"3.20"}, {bk:"winbet", o:"3.28"}, {bk:"betano", o:"3.25"},
-        {bk:"sesame", o:"3.26"}, {bk:"b8888",  o:"3.18"}, {bk:"inbet",  o:"3.12"}, {bk:"efbet",  o:"3.08"},
+        {bk:"bet365", o:"4.50"}, {bk:"palms", o:"4.10"}, {bk:"winbet", o:"4.20"}, {bk:"betano", o:"4.00"},
+        {bk:"sesame", o:"4.15"}, {bk:"b8888", o:"4.00"}, {bk:"inbet",  o:"3.90"}, {bk:"efbet",  o:"3.80"},
       ]
     },
     extraOdds:[
-      { market:"BTTS (Да)", marketEn:"BTTS (Yes)", rows:[
-        {bk:"bet365", o:"1.75"}, {bk:"palms",  o:"1.66"}, {bk:"winbet", o:"1.69"}, {bk:"betano", o:"1.67"},
-        {bk:"sesame", o:"1.68"}, {bk:"b8888",  o:"1.64"}, {bk:"inbet",  o:"1.61"}, {bk:"efbet",  o:"1.58"},
+      { market:"BTTS (Да)", rows:[
+        {bk:"bet365", o:"1.80"}, {bk:"palms", o:"1.70"}, {bk:"winbet", o:"1.73"}, {bk:"betano", o:"1.72"},
+        {bk:"sesame", o:"1.71"}, {bk:"b8888", o:"1.68"}, {bk:"inbet",  o:"1.65"}, {bk:"efbet",  o:"1.62"},
       ]},
-      { market:"Над 2.5 гола", marketEn:"Over 2.5 Goals", rows:[
-        {bk:"bet365", o:"1.80"}, {bk:"palms",  o:"1.72"}, {bk:"winbet", o:"1.75"}, {bk:"betano", o:"1.73"},
-        {bk:"sesame", o:"1.74"}, {bk:"b8888",  o:"1.70"}, {bk:"inbet",  o:"1.67"}, {bk:"efbet",  o:"1.64"},
+      { market:"Над 2.5 гола", rows:[
+        {bk:"bet365", o:"1.90"}, {bk:"palms", o:"1.80"}, {bk:"winbet", o:"1.83"}, {bk:"betano", o:"1.82"},
+        {bk:"sesame", o:"1.81"}, {bk:"b8888", o:"1.78"}, {bk:"inbet",  o:"1.75"}, {bk:"efbet",  o:"1.72"},
       ]},
     ],
-    injuries:{
-      home:["Скалвини (контузия)", "Де Кетелаере (под съмнение)"],
-      away:["Брант (контузия)", "Ало (под съмнение 🟨)"]
-    },
+    injuries:{ home:[], away:["Патрик Робъртс (мускул)"] },
     stats:[
-      {k:"Аталанта нуждае от", v:"3+ гола без отговор", g:false},
-      {k:"BTTS (ЛЧ, двата отбора)", v:"4 от 5 мача", g:true},
-      {k:"Дортмунд Над 2.5 (извън)", v:"5 от 7", g:true},
-      {k:"Гасперини атакуваща игра", v:"86 удара в ЛЧ 2025/26", g:true},
-      {k:"Дортмунд форма извън", v:"3П-1Р-1З (посл.5)", g:true},
+      {k:"Борнемут домашна форма (посл.5)", v:"3П 1Р 1З", g:true},
+      {k:"Сундерланд гости (посл.5)", v:"1П 1Р 3З", g:false},
+      {k:"BTTS Борнемут (посл.5)", v:"4 от 5", g:true},
+      {k:"Сундерланд без победа гости", v:"6 поредни", g:false},
+      {k:"Разлика в таблицата", v:"+9 места Борнемут", g:true},
     ],
-    statsEn:[
-      {k:"Atalanta need", v:"3+ goals without reply", g:false},
-      {k:"BTTS (UCL, both teams)", v:"4 of 5 games", g:true},
-      {k:"Dortmund Over 2.5 (away)", v:"5 of 7", g:true},
-      {k:"Gasperini attacking stats", v:"86 shots in UCL 2025/26", g:true},
-      {k:"Dortmund away form", v:"3W-1D-1L (last 5)", g:true},
-    ],
-    ai:"Аталанта трябва да извърши невъзможното — изравняват от 0-2 срещу Дортмунд. Гасперини винаги атакува, но Дортмунд са опасни с контраатаките. Очакваме открит мач с голове от двете страни — BTTS е паднало в 4 от 5-те им ЛЧ мача. Bet365 предлага 1.75 за BTTS при реален шанс ~65% — добра стойност. Над 2.5 при 1.80 е алтернатива.",
-    aiEn:"Atalanta need the impossible — to overturn a 2-0 deficit against Dortmund. Gasperini always attacks, but Dortmund are dangerous on the counter. We expect an open match with goals at both ends — BTTS has landed in 4 of their last 5 UCL games. Bet365 offers 1.75 for BTTS at a real ~65% probability — good value. Over 2.5 at 1.80 is an alternative."
+    ai:"Борнемут са домакини с добра форма срещу Сундерланд — новак в Премиер лийг. Гостите не са победили като гост от 6 мача. Bet365 предлага 1.75 за домакинска победа — умерена стойност при ~54% реален шанс. BTTS е паднало в 4 от последните 5 домашни мача на Борнемут при 1.80 @ Bet365 — добра алтернатива."
   },
   {
-    id:"juv_gal",
-    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак", leagueNameEn:"Champions League — Playoff, 2nd Leg",
-    date:"2026-02-25", time:"21:00", statusType:"done",
-    ctx:"1-ви крак: Галатасарай 5-2 Ювентус", ctxEn:"1st leg: Galatasaray 5-2 Juventus",
-    home:"Ювентус",       homeA:"JUV", homeForm:["L","W","D","W","W"],
-    away:"Галатасарай",   awayA:"GAL", awayForm:["W","W","W","D","W"],
-    pred:{ result:"Над 2.5", conf:72, cfClass:"cf-high", cpc:"cpct-high" },
-    pick:{ bet:"Над 2.5 гола", betEn:"Over 2.5 Goals", odd:"1.65", book:"Bet365", bookKey:"bet365" },
-    prob:{ h:38, d:22, a:40 },
+    id:"bur_bre",
+    league:"epl", leagueName:"Висша лига — Кръг 28",
+    date:"2026-02-28", time:"15:00", statusType:"soon",
+    ctx:"Бърнли 18-о, Брентфорд 8-о в таблицата",
+    home:"Бърнли",    homeA:"BUR", homeForm:["L","L","D","L","W"],
+    away:"Брентфорд", awayA:"BRE", awayForm:["W","W","D","W","L"],
+    pred:{ result:"2", conf:61, cfClass:"cf-high", cpc:"cpct-high" },
+    pick:{ bet:"Брентфорд победа (2)", odd:"1.75", book:"Bet365", bookKey:"bet365" },
+    prob:{ h:22.3, d:27.5, a:50.2 },
     odds:{
       home:[
-        {bk:"bet365", o:"1.80"}, {bk:"palms",  o:"1.72"}, {bk:"winbet", o:"1.75"}, {bk:"betano", o:"1.73"},
-        {bk:"sesame", o:"1.74"}, {bk:"b8888",  o:"1.70"}, {bk:"inbet",  o:"1.67"}, {bk:"efbet",  o:"1.64"},
+        {bk:"bet365", o:"4.50"}, {bk:"palms", o:"4.20"}, {bk:"winbet", o:"4.30"}, {bk:"betano", o:"4.10"},
+        {bk:"sesame", o:"4.25"}, {bk:"b8888", o:"4.00"}, {bk:"inbet",  o:"3.90"}, {bk:"efbet",  o:"3.80"},
       ],
       draw:[
-        {bk:"bet365", o:"3.60"}, {bk:"palms",  o:"3.40"}, {bk:"winbet", o:"3.45"}, {bk:"betano", o:"3.42"},
-        {bk:"sesame", o:"3.43"}, {bk:"b8888",  o:"3.38"}, {bk:"inbet",  o:"3.32"}, {bk:"efbet",  o:"3.28"},
+        {bk:"bet365", o:"3.60"}, {bk:"palms", o:"3.40"}, {bk:"winbet", o:"3.45"}, {bk:"betano", o:"3.35"},
+        {bk:"sesame", o:"3.42"}, {bk:"b8888", o:"3.30"}, {bk:"inbet",  o:"3.20"}, {bk:"efbet",  o:"3.10"},
       ],
       away:[
-        {bk:"bet365", o:"4.50"}, {bk:"palms",  o:"4.20"}, {bk:"winbet", o:"4.30"}, {bk:"betano", o:"4.25"},
-        {bk:"sesame", o:"4.28"}, {bk:"b8888",  o:"4.15"}, {bk:"inbet",  o:"4.05"}, {bk:"efbet",  o:"3.95"},
+        {bk:"bet365", o:"1.75"}, {bk:"palms", o:"1.67"}, {bk:"winbet", o:"1.70"}, {bk:"betano", o:"1.68"},
+        {bk:"sesame", o:"1.69"}, {bk:"b8888", o:"1.65"}, {bk:"inbet",  o:"1.63"}, {bk:"efbet",  o:"1.60"},
       ]
     },
     extraOdds:[
-      { market:"Над 2.5 гола", marketEn:"Over 2.5 Goals", rows:[
-        {bk:"bet365", o:"1.65"}, {bk:"palms",  o:"1.58"}, {bk:"winbet", o:"1.60"}, {bk:"betano", o:"1.59"},
-        {bk:"sesame", o:"1.59"}, {bk:"b8888",  o:"1.56"}, {bk:"inbet",  o:"1.53"}, {bk:"efbet",  o:"1.50"},
+      { market:"Над 2.5 гола", rows:[
+        {bk:"bet365", o:"1.85"}, {bk:"palms", o:"1.75"}, {bk:"winbet", o:"1.78"}, {bk:"betano", o:"1.77"},
+        {bk:"sesame", o:"1.76"}, {bk:"b8888", o:"1.73"}, {bk:"inbet",  o:"1.70"}, {bk:"efbet",  o:"1.67"},
       ]},
-      { market:"BTTS (Да)", marketEn:"BTTS (Yes)", rows:[
-        {bk:"bet365", o:"1.70"}, {bk:"palms",  o:"1.62"}, {bk:"winbet", o:"1.65"}, {bk:"betano", o:"1.63"},
-        {bk:"sesame", o:"1.64"}, {bk:"b8888",  o:"1.60"}, {bk:"inbet",  o:"1.57"}, {bk:"efbet",  o:"1.54"},
+      { market:"BTTS (Да)", rows:[
+        {bk:"bet365", o:"1.90"}, {bk:"palms", o:"1.80"}, {bk:"winbet", o:"1.83"}, {bk:"betano", o:"1.82"},
+        {bk:"sesame", o:"1.81"}, {bk:"b8888", o:"1.77"}, {bk:"inbet",  o:"1.74"}, {bk:"efbet",  o:"1.71"},
+      ]},
+    ],
+    injuries:{ home:["Джей Родригез (хамстринг)"], away:[] },
+    stats:[
+      {k:"Бърнли домашна форма (посл.5)", v:"1П 1Р 3З", g:false},
+      {k:"Брентфорд гости (посл.5)", v:"3П 1Р 1З", g:true},
+      {k:"Бърнли в зона на изпадане", v:"18-о място", g:false},
+      {k:"Брентфорд без загуба (посл.4)", v:"3П 1Р", g:true},
+      {k:"H2H (посл.3 срещи)", v:"2 победи Брентфорд", g:true},
+    ],
+    ai:"Бърнли са в зоната на изпадане и са в лоша форма. Брентфорд имат отлична гостуваща форма — 3 победи от последните 5. Bet365 предлага 1.75 за победа на Брентфорд — умерена стойност при ~50% реален шанс. Над 2.5 гола при 1.85 @ Bet365 е разумен избор предвид слабата защита на Бърнли."
+  },
+  {
+    id:"liv_whu",
+    league:"epl", leagueName:"Висша лига — Кръг 28",
+    date:"2026-02-28", time:"16:00", statusType:"soon",
+    ctx:"Ливърпул 2-ро, Уест Хем 15-о в таблицата",
+    home:"Ливърпул",  homeA:"LIV", homeForm:["W","W","W","D","W"],
+    away:"Уест Хем",  awayA:"WHU", awayForm:["L","D","L","L","D"],
+    pred:{ result:"1", conf:74, cfClass:"cf-high", cpc:"cpct-high" },
+    pick:{ bet:"Ливърпул победа (1)", odd:"1.37", book:"Bet365", bookKey:"bet365" },
+    prob:{ h:74.2, d:15.4, a:10.3 },
+    odds:{
+      home:[
+        {bk:"bet365", o:"1.37"}, {bk:"palms", o:"1.32"}, {bk:"winbet", o:"1.34"}, {bk:"betano", o:"1.33"},
+        {bk:"sesame", o:"1.33"}, {bk:"b8888", o:"1.31"}, {bk:"inbet",  o:"1.30"}, {bk:"efbet",  o:"1.28"},
+      ],
+      draw:[
+        {bk:"bet365", o:"2.85"}, {bk:"palms", o:"2.65"}, {bk:"winbet", o:"2.75"}, {bk:"betano", o:"2.70"},
+        {bk:"sesame", o:"2.72"}, {bk:"b8888", o:"2.60"}, {bk:"inbet",  o:"2.55"}, {bk:"efbet",  o:"2.50"},
+      ],
+      away:[
+        {bk:"bet365", o:"7.50"}, {bk:"palms", o:"7.00"}, {bk:"winbet", o:"7.20"}, {bk:"betano", o:"6.80"},
+        {bk:"sesame", o:"7.10"}, {bk:"b8888", o:"6.70"}, {bk:"inbet",  o:"6.50"}, {bk:"efbet",  o:"6.20"},
+      ]
+    },
+    extraOdds:[
+      { market:"BTTS (Да)", rows:[
+        {bk:"bet365", o:"2.10"}, {bk:"palms", o:"2.00"}, {bk:"winbet", o:"2.05"}, {bk:"betano", o:"2.03"},
+        {bk:"sesame", o:"2.02"}, {bk:"b8888", o:"1.98"}, {bk:"inbet",  o:"1.95"}, {bk:"efbet",  o:"1.90"},
+      ]},
+      { market:"Ливърпул -1.5 (хенди)", rows:[
+        {bk:"bet365", o:"1.95"}, {bk:"palms", o:"1.85"}, {bk:"winbet", o:"1.88"}, {bk:"betano", o:"1.87"},
+        {bk:"sesame", o:"1.86"}, {bk:"b8888", o:"1.83"}, {bk:"inbet",  o:"1.80"}, {bk:"efbet",  o:"1.77"},
+      ]},
+    ],
+    injuries:{ home:["Алисон (проверка)"], away:["Лукас Пакета (под съмнение)"] },
+    stats:[
+      {k:"Ливърпул домашна форма (посл.5)", v:"4П 1Р 0З", g:true},
+      {k:"Уест Хем гости (посл.5)", v:"0П 2Р 3З", g:false},
+      {k:"Уест Хем без победа (посл.7)", v:"1Р 6З", g:false},
+      {k:"Ливърпул BTTS (Анфийлд, посл.5)", v:"3 от 5", g:true},
+      {k:"Ливърпул срещу Д15+ (тази сезон)", v:"100% победи", g:true},
+    ],
+    ai:"Ливърпул са вторите в лигата и са в блестяща форма. Уест Хем не са победили от 7 мача и са в криза. Bet365 предлага само 1.37 за домакинска победа — почти сигурно, но ниска стойност. По-добри опции: Ливърпул -1.5 хенди при 1.95 @ Bet365, или BTTS Не при ~1.75 предвид бедната атака на Уест Хем гост."
+  },
+  {
+    id:"new_eve",
+    league:"epl", leagueName:"Висша лига — Кръг 28",
+    date:"2026-02-28", time:"15:00", statusType:"soon",
+    ctx:"Нюкасъл 5-о, Евертън 13-о в таблицата",
+    home:"Нюкасъл", homeA:"NEW", homeForm:["W","W","D","W","L"],
+    away:"Евертън",  awayA:"EVE", awayForm:["L","D","W","L","D"],
+    pred:{ result:"1", conf:65, cfClass:"cf-high", cpc:"cpct-high" },
+    pick:{ bet:"Нюкасъл победа (1)", odd:"1.75", book:"Bet365", bookKey:"bet365" },
+    prob:{ h:56.3, d:22.8, a:20.9 },
+    odds:{
+      home:[
+        {bk:"bet365", o:"1.75"}, {bk:"palms", o:"1.67"}, {bk:"winbet", o:"1.70"}, {bk:"betano", o:"1.68"},
+        {bk:"sesame", o:"1.69"}, {bk:"b8888", o:"1.65"}, {bk:"inbet",  o:"1.63"}, {bk:"efbet",  o:"1.61"},
+      ],
+      draw:[
+        {bk:"bet365", o:"3.80"}, {bk:"palms", o:"3.60"}, {bk:"winbet", o:"3.65"}, {bk:"betano", o:"3.55"},
+        {bk:"sesame", o:"3.58"}, {bk:"b8888", o:"3.50"}, {bk:"inbet",  o:"3.40"}, {bk:"efbet",  o:"3.30"},
+      ],
+      away:[
+        {bk:"bet365", o:"4.33"}, {bk:"palms", o:"4.00"}, {bk:"winbet", o:"4.10"}, {bk:"betano", o:"3.90"},
+        {bk:"sesame", o:"4.05"}, {bk:"b8888", o:"3.85"}, {bk:"inbet",  o:"3.75"}, {bk:"efbet",  o:"3.65"},
+      ]
+    },
+    extraOdds:[
+      { market:"Нюкасъл чиста мрежа", rows:[
+        {bk:"bet365", o:"2.00"}, {bk:"palms", o:"1.90"}, {bk:"winbet", o:"1.93"}, {bk:"betano", o:"1.92"},
+        {bk:"sesame", o:"1.91"}, {bk:"b8888", o:"1.88"}, {bk:"inbet",  o:"1.85"}, {bk:"efbet",  o:"1.82"},
+      ]},
+      { market:"Над 2.5 гола", rows:[
+        {bk:"bet365", o:"2.10"}, {bk:"palms", o:"2.00"}, {bk:"winbet", o:"2.03"}, {bk:"betano", o:"2.02"},
+        {bk:"sesame", o:"2.01"}, {bk:"b8888", o:"1.97"}, {bk:"inbet",  o:"1.94"}, {bk:"efbet",  o:"1.91"},
+      ]},
+    ],
+    injuries:{ home:["А. Гордон (почивка след ЛЧ)"], away:["Д. Кала-Левин (мускул)"] },
+    stats:[
+      {k:"Нюкасъл домашна форма (посл.5)", v:"3П 1Р 1З", g:true},
+      {k:"Евертън гости (посл.5)", v:"1П 2Р 2З", g:false},
+      {k:"Нюкасъл чиста мрежа (Сейнт Джеймс)", v:"3 от посл.5", g:true},
+      {k:"Евертън вкарани гости (посл.5)", v:"само 2 гола", g:false},
+      {k:"Нюкасъл след ЛЧ мачове", v:"4П в посл.4 ПЛ", g:true},
+    ],
+    ai:"Нюкасъл са в добра форма въпреки ротацията в ЛЧ. Евертън имат слаба атака като гост — само 2 гола в последните 5 гостувания. Bet365 предлага 1.75 за домакинска победа — умерена стойност. Нюкасъл чиста мрежа при 2.00 @ Bet365 е интересна опция предвид бедната гостуваща атака на Евертън."
+  },
+  {
+    id:"lee_mci",
+    league:"epl", leagueName:"Висша лига — Кръг 28",
+    date:"2026-02-28", time:"17:30", statusType:"soon",
+    ctx:"Лийдс 11-о, Ман Сити 4-о в таблицата",
+    home:"Лийдс Юнайтед", homeA:"LEE", homeForm:["D","W","L","D","W"],
+    away:"Ман Сити",       awayA:"MCI", awayForm:["W","W","W","D","W"],
+    pred:{ result:"2", conf:58, cfClass:"cf-mid", cpc:"cpct-mid" },
+    pick:{ bet:"Ман Сити победа (2)", odd:"1.65", book:"Bet365", bookKey:"bet365" },
+    prob:{ h:19.7, d:21.9, a:58.4 },
+    odds:{
+      home:[
+        {bk:"bet365", o:"5.50"}, {bk:"palms", o:"5.10"}, {bk:"winbet", o:"5.20"}, {bk:"betano", o:"5.00"},
+        {bk:"sesame", o:"5.15"}, {bk:"b8888", o:"4.90"}, {bk:"inbet",  o:"4.75"}, {bk:"efbet",  o:"4.60"},
+      ],
+      draw:[
+        {bk:"bet365", o:"4.00"}, {bk:"palms", o:"3.70"}, {bk:"winbet", o:"3.80"}, {bk:"betano", o:"3.65"},
+        {bk:"sesame", o:"3.75"}, {bk:"b8888", o:"3.60"}, {bk:"inbet",  o:"3.50"}, {bk:"efbet",  o:"3.40"},
+      ],
+      away:[
+        {bk:"bet365", o:"1.65"}, {bk:"palms", o:"1.58"}, {bk:"winbet", o:"1.60"}, {bk:"betano", o:"1.59"},
+        {bk:"sesame", o:"1.59"}, {bk:"b8888", o:"1.56"}, {bk:"inbet",  o:"1.54"}, {bk:"efbet",  o:"1.52"},
+      ]
+    },
+    extraOdds:[
+      { market:"BTTS (Да)", rows:[
+        {bk:"bet365", o:"1.71"}, {bk:"palms", o:"1.63"}, {bk:"winbet", o:"1.65"}, {bk:"betano", o:"1.64"},
+        {bk:"sesame", o:"1.64"}, {bk:"b8888", o:"1.61"}, {bk:"inbet",  o:"1.58"}, {bk:"efbet",  o:"1.55"},
+      ]},
+      { market:"Над 2.5 гола", rows:[
+        {bk:"bet365", o:"1.80"}, {bk:"palms", o:"1.72"}, {bk:"winbet", o:"1.74"}, {bk:"betano", o:"1.73"},
+        {bk:"sesame", o:"1.73"}, {bk:"b8888", o:"1.70"}, {bk:"inbet",  o:"1.67"}, {bk:"efbet",  o:"1.64"},
+      ]},
+    ],
+    injuries:{ home:["Крамер (контузия)"], away:["Де Брайне (проверка)"] },
+    stats:[
+      {k:"Ман Сити гости (посл.5)", v:"4П 1Р 0З", g:true},
+      {k:"Лийдс домашна форма (посл.5)", v:"2П 2Р 1З", g:true},
+      {k:"Ман Сити без загуба (посл.8)", v:"7П 1Р", g:true},
+      {k:"BTTS Ман Сити гости (посл.5)", v:"4 от 5", g:true},
+      {k:"Лийдс срещу Топ 6", v:"2П 1Р 4З", g:false},
+    ],
+    ai:"Ман Сити са в отлична форма с 7 победи от последните 8 мача. Лийдс са новак и имат затруднения срещу топ отборите. Bet365 предлага 1.65 за гостуваща победа. По-интересен залог: BTTS при 1.71 @ Bet365 — Ман Сити вкарват много, но и Лийдс атакуват смело у дома. Внимание: Де Брайне е под съмнение."
+  },
+  // ── НЕДЕЛЯ 1 МАРТ ──
+  {
+    id:"ful_tot",
+    league:"epl", leagueName:"Висша лига — Кръг 28",
+    date:"2026-03-01", time:"14:00", statusType:"soon",
+    ctx:"Фулъм 9-о, Тотнъм 7-о в таблицата",
+    home:"Фулъм",  homeA:"FUL", homeForm:["W","D","W","W","L"],
+    away:"Тотнъм", awayA:"TOT", awayForm:["L","W","D","L","W"],
+    pred:{ result:"1", conf:52, cfClass:"cf-mid", cpc:"cpct-mid" },
+    pick:{ bet:"Фулъм победа (1)", odd:"2.10", book:"Bet365", bookKey:"bet365" },
+    prob:{ h:46.5, d:27.3, a:26.2 },
+    odds:{
+      home:[
+        {bk:"bet365", o:"2.10"}, {bk:"palms", o:"2.00"}, {bk:"winbet", o:"2.04"}, {bk:"betano", o:"2.02"},
+        {bk:"sesame", o:"2.03"}, {bk:"b8888", o:"1.98"}, {bk:"inbet",  o:"1.95"}, {bk:"efbet",  o:"1.92"},
+      ],
+      draw:[
+        {bk:"bet365", o:"3.40"}, {bk:"palms", o:"3.20"}, {bk:"winbet", o:"3.25"}, {bk:"betano", o:"3.15"},
+        {bk:"sesame", o:"3.22"}, {bk:"b8888", o:"3.10"}, {bk:"inbet",  o:"3.00"}, {bk:"efbet",  o:"2.90"},
+      ],
+      away:[
+        {bk:"bet365", o:"3.00"}, {bk:"palms", o:"2.80"}, {bk:"winbet", o:"2.87"}, {bk:"betano", o:"2.83"},
+        {bk:"sesame", o:"2.85"}, {bk:"b8888", o:"2.75"}, {bk:"inbet",  o:"2.67"}, {bk:"efbet",  o:"2.60"},
+      ]
+    },
+    extraOdds:[
+      { market:"BTTS (Да)", rows:[
+        {bk:"bet365", o:"1.62"}, {bk:"palms", o:"1.55"}, {bk:"winbet", o:"1.57"}, {bk:"betano", o:"1.56"},
+        {bk:"sesame", o:"1.56"}, {bk:"b8888", o:"1.53"}, {bk:"inbet",  o:"1.50"}, {bk:"efbet",  o:"1.48"},
+      ]},
+      { market:"Над 2.5 гола", rows:[
+        {bk:"bet365", o:"1.73"}, {bk:"palms", o:"1.65"}, {bk:"winbet", o:"1.67"}, {bk:"betano", o:"1.66"},
+        {bk:"sesame", o:"1.66"}, {bk:"b8888", o:"1.63"}, {bk:"inbet",  o:"1.60"}, {bk:"efbet",  o:"1.57"},
+      ]},
+    ],
+    injuries:{ home:[], away:["Ричарлисон (отсъства)", "Удомо (проверка)"] },
+    stats:[
+      {k:"Фулъм домашна форма (посл.5)", v:"3П 1Р 1З", g:true},
+      {k:"Тотнъм гости (посл.5)", v:"2П 1Р 2З", g:true},
+      {k:"Тотнъм без Ричарлисон", v:"Слаба атака", g:false},
+      {k:"H2H последни 3 срещи", v:"2 победи Фулъм", g:true},
+      {k:"BTTS Фулъм-Тотнъм (посл.5)", v:"4 от 5", g:true},
+    ],
+    ai:"Фулъм са тесни фаворити у дома срещу непостоянен Тотнъм. Гостите са без Ричарлисон (отсъства) и Удомо (под съмнение). Bet365 предлага 2.10 за Фулъм — добра стойност при ~46% реален шанс! BTTS при 1.62 е надеждна опция — 4 от последните 5 срещи между тях имат голове от двете страни."
+  },
+  {
+    id:"bri_nfo",
+    league:"epl", leagueName:"Висша лига — Кръг 28",
+    date:"2026-03-01", time:"14:00", statusType:"soon",
+    ctx:"Брайтън 10-о, Нотингам Форест 3-то в таблицата",
+    home:"Брайтън",         homeA:"BRI", homeForm:["W","D","L","W","W"],
+    away:"Нотингам Форест", awayA:"NFO", awayForm:["W","W","W","D","W"],
+    pred:{ result:"2", conf:58, cfClass:"cf-mid", cpc:"cpct-mid" },
+    pick:{ bet:"Нотингам Форест победа (2)", odd:"4.20", book:"Bet365", bookKey:"bet365" },
+    prob:{ h:38.5, d:24.3, a:37.2 },
+    odds:{
+      home:[
+        {bk:"bet365", o:"1.85"}, {bk:"palms", o:"1.76"}, {bk:"winbet", o:"1.79"}, {bk:"betano", o:"1.77"},
+        {bk:"sesame", o:"1.78"}, {bk:"b8888", o:"1.74"}, {bk:"inbet",  o:"1.71"}, {bk:"efbet",  o:"1.68"},
+      ],
+      draw:[
+        {bk:"bet365", o:"3.50"}, {bk:"palms", o:"3.30"}, {bk:"winbet", o:"3.35"}, {bk:"betano", o:"3.25"},
+        {bk:"sesame", o:"3.32"}, {bk:"b8888", o:"3.20"}, {bk:"inbet",  o:"3.10"}, {bk:"efbet",  o:"3.00"},
+      ],
+      away:[
+        {bk:"bet365", o:"4.20"}, {bk:"palms", o:"3.90"}, {bk:"winbet", o:"4.00"}, {bk:"betano", o:"3.80"},
+        {bk:"sesame", o:"3.95"}, {bk:"b8888", o:"3.75"}, {bk:"inbet",  o:"3.65"}, {bk:"efbet",  o:"3.55"},
+      ]
+    },
+    extraOdds:[
+      { market:"Над 2.5 гола", rows:[
+        {bk:"bet365", o:"2.00"}, {bk:"palms", o:"1.90"}, {bk:"winbet", o:"1.93"}, {bk:"betano", o:"1.92"},
+        {bk:"sesame", o:"1.91"}, {bk:"b8888", o:"1.88"}, {bk:"inbet",  o:"1.85"}, {bk:"efbet",  o:"1.82"},
+      ]},
+      { market:"BTTS (Да)", rows:[
+        {bk:"bet365", o:"1.75"}, {bk:"palms", o:"1.67"}, {bk:"winbet", o:"1.70"}, {bk:"betano", o:"1.68"},
+        {bk:"sesame", o:"1.69"}, {bk:"b8888", o:"1.65"}, {bk:"inbet",  o:"1.62"}, {bk:"efbet",  o:"1.59"},
+      ]},
+    ],
+    injuries:{ home:["Митома (под съмнение)"], away:[] },
+    stats:[
+      {k:"Форест форма (посл.5)", v:"4П 1Р 0З", g:true},
+      {k:"Форест гости (посл.5)", v:"3П 1Р 1З", g:true},
+      {k:"Форест без загуба (посл.11)", v:"8П 3Р", g:true},
+      {k:"Брайтън домашна форма (посл.5)", v:"2П 1Р 2З", g:true},
+      {k:"Форест след ЕЛ мач (тази сезон)", v:"2П 1Р", g:true},
+    ],
+    ai:"Нотингам Форест са третият в лигата и са в невероятна форма — без загуба от 11 мача! Въпреки умората от ЕЛ срещу Фенербахче в четвъртък, те са стабилни. Брайтън са добри у дома, но Форест са реален претендент. Bet365 предлага 4.20 за гостуваща победа — ОТЛИЧНА СТОЙНОСТ при ~37% реален шанс! Форест X1 при ~1.75 е по-консервативен вариант."
+  },
+  {
+    id:"mnu_cpa",
+    league:"epl", leagueName:"Висша лига — Кръг 28",
+    date:"2026-03-01", time:"15:00", statusType:"soon",
+    ctx:"Ман Юнайтед 14-о, Крист. Палас 17-о в таблицата",
+    home:"Ман Юнайтед",  homeA:"MNU", homeForm:["L","D","W","L","D"],
+    away:"Крист. Палас", awayA:"CPA", awayForm:["L","L","D","L","W"],
+    pred:{ result:"1", conf:60, cfClass:"cf-mid", cpc:"cpct-mid" },
+    pick:{ bet:"Ман Юнайтед победа (1)", odd:"1.55", book:"Bet365", bookKey:"bet365" },
+    prob:{ h:51.3, d:27.2, a:21.5 },
+    odds:{
+      home:[
+        {bk:"bet365", o:"1.55"}, {bk:"palms", o:"1.47"}, {bk:"winbet", o:"1.50"}, {bk:"betano", o:"1.48"},
+        {bk:"sesame", o:"1.49"}, {bk:"b8888", o:"1.46"}, {bk:"inbet",  o:"1.44"}, {bk:"efbet",  o:"1.42"},
+      ],
+      draw:[
+        {bk:"bet365", o:"4.33"}, {bk:"palms", o:"4.00"}, {bk:"winbet", o:"4.10"}, {bk:"betano", o:"3.90"},
+        {bk:"sesame", o:"4.05"}, {bk:"b8888", o:"3.85"}, {bk:"inbet",  o:"3.75"}, {bk:"efbet",  o:"3.65"},
+      ],
+      away:[
+        {bk:"bet365", o:"5.50"}, {bk:"palms", o:"5.10"}, {bk:"winbet", o:"5.25"}, {bk:"betano", o:"5.00"},
+        {bk:"sesame", o:"5.15"}, {bk:"b8888", o:"4.90"}, {bk:"inbet",  o:"4.75"}, {bk:"efbet",  o:"4.60"},
+      ]
+    },
+    extraOdds:[
+      { market:"Над 2.5 гола", rows:[
+        {bk:"bet365", o:"2.00"}, {bk:"palms", o:"1.90"}, {bk:"winbet", o:"1.93"}, {bk:"betano", o:"1.92"},
+        {bk:"sesame", o:"1.91"}, {bk:"b8888", o:"1.88"}, {bk:"inbet",  o:"1.85"}, {bk:"efbet",  o:"1.82"},
+      ]},
+      { market:"BTTS (Да)", rows:[
+        {bk:"bet365", o:"2.20"}, {bk:"palms", o:"2.10"}, {bk:"winbet", o:"2.14"}, {bk:"betano", o:"2.12"},
+        {bk:"sesame", o:"2.13"}, {bk:"b8888", o:"2.08"}, {bk:"inbet",  o:"2.05"}, {bk:"efbet",  o:"2.00"},
+      ]},
+    ],
+    injuries:{ home:["Лука Шо (отсъства)"], away:[] },
+    stats:[
+      {k:"Ман Юнайтед домашна форма (посл.5)", v:"2П 2Р 1З", g:true},
+      {k:"Крист. Палас гости (посл.5)", v:"1П 1Р 3З", g:false},
+      {k:"Ман Юнайтед без загуба у дома", v:"Последните 4", g:true},
+      {k:"Палас без победа гости (посл.6)", v:"1Р 5З", g:false},
+      {k:"Ман Юнайтед чиста мрежа (посл.4)", v:"2 от 4", g:true},
+    ],
+    ai:"Ман Юнайтед са под натиск, но играят у дома срещу едни от най-слабите гости в лигата. Крист. Палас не са победили като гост от 6 мача. Bet365 предлага 1.55 за домакинска победа — оправдана стойност. По-интересен залог: BTTS Не при ~2.20, предвид слабата атака на Палас като гост (под 1 гол средно)."
+  },
+  {
+    id:"ars_che",
+    league:"epl", leagueName:"Висша лига — Кръг 28",
+    date:"2026-03-01", time:"16:30", statusType:"soon",
+    ctx:"Арсенал 1-во, Челси 5-о в таблицата",
+    home:"Арсенал", homeA:"ARS", homeForm:["W","W","W","W","D"],
+    away:"Челси",   awayA:"CHE", awayForm:["W","D","W","L","W"],
+    pred:{ result:"1", conf:68, cfClass:"cf-high", cpc:"cpct-high" },
+    pick:{ bet:"Арсенал победа (1)", odd:"1.60", book:"Bet365", bookKey:"bet365" },
+    prob:{ h:55.8, d:22.4, a:21.8 },
+    odds:{
+      home:[
+        {bk:"bet365", o:"1.60"}, {bk:"palms", o:"1.53"}, {bk:"winbet", o:"1.56"}, {bk:"betano", o:"1.55"},
+        {bk:"sesame", o:"1.55"}, {bk:"b8888", o:"1.52"}, {bk:"inbet",  o:"1.50"}, {bk:"efbet",  o:"1.48"},
+      ],
+      draw:[
+        {bk:"bet365", o:"3.50"}, {bk:"palms", o:"3.30"}, {bk:"winbet", o:"3.35"}, {bk:"betano", o:"3.25"},
+        {bk:"sesame", o:"3.32"}, {bk:"b8888", o:"3.20"}, {bk:"inbet",  o:"3.10"}, {bk:"efbet",  o:"3.00"},
+      ],
+      away:[
+        {bk:"bet365", o:"5.50"}, {bk:"palms", o:"5.10"}, {bk:"winbet", o:"5.20"}, {bk:"betano", o:"5.00"},
+        {bk:"sesame", o:"5.15"}, {bk:"b8888", o:"4.90"}, {bk:"inbet",  o:"4.75"}, {bk:"efbet",  o:"4.60"},
+      ]
+    },
+    extraOdds:[
+      { market:"BTTS (Да)", rows:[
+        {bk:"bet365", o:"1.75"}, {bk:"palms", o:"1.67"}, {bk:"winbet", o:"1.70"}, {bk:"betano", o:"1.68"},
+        {bk:"sesame", o:"1.69"}, {bk:"b8888", o:"1.65"}, {bk:"inbet",  o:"1.62"}, {bk:"efbet",  o:"1.59"},
+      ]},
+      { market:"Над 2.5 гола", rows:[
+        {bk:"bet365", o:"1.90"}, {bk:"palms", o:"1.82"}, {bk:"winbet", o:"1.85"}, {bk:"betano", o:"1.83"},
+        {bk:"sesame", o:"1.84"}, {bk:"b8888", o:"1.80"}, {bk:"inbet",  o:"1.77"}, {bk:"efbet",  o:"1.74"},
+      ]},
+    ],
+    injuries:{ home:["Сака (форма проверка)"], away:["Нкунку (под съмнение)"] },
+    stats:[
+      {k:"Арсенал лидер с", v:"61 точки / 28 мача", g:true},
+      {k:"Арсенал срещу Топ 6 (тази сезон)", v:"5П 1Р 1З", g:true},
+      {k:"Челси без победа (Емирейтс)", v:"Последните 3", g:false},
+      {k:"Арсенал домашна серия", v:"Без загуба от 14 мача", g:true},
+      {k:"BTTS в Арсенал-Челси (посл.4)", v:"3 от 4", g:true},
+    ],
+    ai:"Голямото лондонско дерби на финала на уикенда! Арсенал са лидери с 61т и са в страхотна домашна форма — без загуба от 14 мача на Емирейтс. Челси са без победа там в последните 3 посещения. Bet365 предлага 1.60 за Арсенал — умерена стойност при ~56% реален шанс. Отлична алтернатива: BTTS при 1.75 @ Bet365 — 3 от последните 4 дербита имат голове и от двете страни!"
+  }
+];
+    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак",
+    date:"2026-02-24", time:"17:45", statusType:"today",
+    ctx:"1-ви крак: Брюж 3-3 Атлетико",
+    home:"Атлетико Мадрид", homeA:"ATM", homeForm:["W","W","L","W","W"],
+    away:"Club Brugge",     awayA:"BRU", awayForm:["W","W","D","W","L"],
+    pred:{ result:"BTTS", conf:78, cfClass:"cf-high", cpc:"cpct-high" },
+    pick:{ bet:"И двата отбора гол", odd:"1.72", book:"Bet365", bookKey:"bet365" },
+    prob:{ h:47.9, d:12.7, a:39.4 },
+    odds:{
+      home:[
+        {bk:"bet365", o:"1.50"}, {bk:"palms",  o:"1.42"}, {bk:"winbet", o:"1.45"}, {bk:"betano", o:"1.43"},
+        {bk:"sesame", o:"1.44"}, {bk:"b8888",  o:"1.41"}, {bk:"inbet",  o:"1.40"}, {bk:"efbet",  o:"1.39"},
+      ],
+      draw:[
+        {bk:"bet365", o:"5.25"}, {bk:"palms",  o:"4.90"}, {bk:"winbet", o:"5.10"}, {bk:"betano", o:"4.80"},
+        {bk:"sesame", o:"5.00"}, {bk:"b8888",  o:"4.75"}, {bk:"inbet",  o:"4.60"}, {bk:"efbet",  o:"4.50"},
+      ],
+      away:[
+        {bk:"bet365", o:"7.00"}, {bk:"palms",  o:"7.00"}, {bk:"winbet", o:"7.50"}, {bk:"betano", o:"7.20"},
+        {bk:"sesame", o:"7.30"}, {bk:"b8888",  o:"7.10"}, {bk:"inbet",  o:"6.80"}, {bk:"efbet",  o:"6.60"},
+      ]
+    },
+    extraOdds:[
+      { market:"BTTS (Да)", rows:[
+        {bk:"bet365", o:"1.72"}, {bk:"palms",  o:"1.62"}, {bk:"winbet", o:"1.65"}, {bk:"betano", o:"1.63"},
+        {bk:"sesame", o:"1.64"}, {bk:"b8888",  o:"1.60"}, {bk:"inbet",  o:"1.58"}, {bk:"efbet",  o:"1.55"},
+      ]},
+      { market:"Над 2.5 гола", rows:[
+        {bk:"bet365", o:"2.00"}, {bk:"palms",  o:"1.85"}, {bk:"winbet", o:"1.92"}, {bk:"betano", o:"1.88"},
+        {bk:"sesame", o:"1.90"}, {bk:"b8888",  o:"1.83"}, {bk:"inbet",  o:"1.80"}, {bk:"efbet",  o:"1.77"},
       ]},
     ],
     injuries:{
-      home:["Карен (спиране 🟨)", "Ди Лоренцо (контузия)"],
+      home:["Пабло Бариос (мускул)", "Нахуел Молина (контузия)"],
+      away:["Де Кетелаере (2 жълти 🟨)", "Дж. ван ден Хьовел (контузен)"]
+    },
+    stats:[
+      {k:"BTTS (Атлетико посл.10)", v:"8 от 10", g:true},
+      {k:"Над 2.5 (Атлетико, 9 ЛЧ)", v:"7 от 9", g:true},
+      {k:"Атлетико без КО загуба дома", v:"19 поредни", g:true},
+      {k:"Брюж гости в Испания (ист.)", v:"1 победа в 15", g:false},
+      {k:"Брюж Над 2.5 (посл.9)", v:"8 от 9", g:true},
+      {k:"Атлетико Алварес форма", v:"5 гола, 2 асист (ЛЧ)", g:true},
+    ],
+    ai:"Слав мач след 3-3 в Брюж — и двата отбора демонстрираха желание да атакуват. Симеоне води у дома 19 поредни КО мача без загуба, но Брюж не се страхуват: 10 удари в рамката в 1-ви крак. Алварес е в неудържима форма. BTTS е паднало в 8 от последните 10 домашни мача на Атлетико. Winbet предлага най-добрия коефициент 1.65 за BTTS — при реален шанс от ~72% това е добра стойност. Над 2.5 гола (1.90 @ Sesame) е алтернативен избор."
+  },
+  {
+    id:"lev_oly",
+    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак",
+    date:"2026-02-24", time:"20:00", statusType:"today",
+    ctx:"1-ви крак: Леверкузен 2-0 Олимпиакос",
+    home:"Байер Леверкузен", homeA:"LEV", homeForm:["W","W","W","D","W"],
+    away:"Олимпиакос",       awayA:"OLY", awayForm:["W","L","L","L","L"],
+    pred:{ result:"1", conf:71, cfClass:"cf-high", cpc:"cpct-high" },
+    pick:{ bet:"Леверкузен победа (1)", odd:"1.62", book:"Bet365", bookKey:"bet365" },
+    prob:{ h:52.7, d:24.1, a:23.2 },
+    odds:{
+      home:[
+        {bk:"bet365", o:"1.62"}, {bk:"palms",  o:"1.54"}, {bk:"winbet", o:"1.56"}, {bk:"betano", o:"1.57"},
+        {bk:"sesame", o:"1.55"}, {bk:"b8888",  o:"1.52"}, {bk:"inbet",  o:"1.50"}, {bk:"efbet",  o:"1.48"},
+      ],
+      draw:[
+        {bk:"bet365", o:"4.50"}, {bk:"palms",  o:"4.10"}, {bk:"winbet", o:"4.20"}, {bk:"betano", o:"4.30"},
+        {bk:"sesame", o:"4.15"}, {bk:"b8888",  o:"4.00"}, {bk:"inbet",  o:"3.90"}, {bk:"efbet",  o:"3.80"},
+      ],
+      away:[
+        {bk:"bet365", o:"6.50"}, {bk:"palms",  o:"5.80"}, {bk:"winbet", o:"6.00"}, {bk:"betano", o:"5.90"},
+        {bk:"sesame", o:"5.95"}, {bk:"b8888",  o:"5.70"}, {bk:"inbet",  o:"5.50"}, {bk:"efbet",  o:"5.30"},
+      ]
+    },
+    extraOdds:[
+      { market:"BTTS (Да)", rows:[
+        {bk:"bet365", o:"2.10"}, {bk:"palms",  o:"1.90"}, {bk:"winbet", o:"1.95"}, {bk:"betano", o:"1.93"},
+        {bk:"sesame", o:"1.92"}, {bk:"b8888",  o:"1.88"}, {bk:"inbet",  o:"1.85"}, {bk:"efbet",  o:"1.82"},
+      ]},
+      { market:"Над 2.5 гола", rows:[
+        {bk:"bet365", o:"1.80"}, {bk:"palms",  o:"1.73"}, {bk:"winbet", o:"1.78"}, {bk:"betano", o:"1.76"},
+        {bk:"sesame", o:"1.75"}, {bk:"b8888",  o:"1.70"}, {bk:"inbet",  o:"1.67"}, {bk:"efbet",  o:"1.64"},
+      ]},
+    ],
+    injuries:{ home:[], away:[] },
+    stats:[
+      {k:"Леверкузен домашна форма", v:"7 победи от посл.10", g:true},
+      {k:"Олимпиакос гост в ЛЧ", v:"12 поредни загуби", g:false},
+      {k:"Преднина от 1-ви крак", v:"2-0", g:true},
+      {k:"БайАрена — средни голове", v:"4.5 на мач", g:true},
+      {k:"BTTS като фаворит (ЛЧ Вт)", v:"Не в 6 поредни", g:false},
+    ],
+    ai:"Леверкузен са почти сигурни за четвъртфиналите — 2-0 преднина след мача в Гърция. Олимпиакос са губили 12 поредни гостувания в ЛЧ. Домакините могат да управляват мача без риск. Betano предлага 1.57 за победа — малко по-висок от останалите. Ако търсиш по-интересна ставка: Над 2.5 гола при 1.78 @ Winbet (за БайАрена с 4.5 средни гола) е разумен избор."
+  },
+  {
+    id:"new_qar",
+    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак",
+    date:"2026-02-24", time:"20:00", statusType:"today",
+    ctx:"1-ви крак: Нюкасъл 6-1 Карабах",
+    home:"Нюкасъл",  homeA:"NEW", homeForm:["W","W","D","W","L"],
+    away:"Карабах",  awayA:"QAR", awayForm:["L","L","W","L","L"],
+    pred:{ result:"1", conf:85, cfClass:"cf-high", cpc:"cpct-high" },
+    pick:{ bet:"Нюкасъл победа (1)", odd:"1.40", book:"Bet365", bookKey:"bet365" },
+    prob:{ h:85.2, d:9.4, a:5.4 },
+    odds:{
+      home:[
+        {bk:"bet365", o:"1.40"}, {bk:"palms",  o:"1.36"}, {bk:"winbet", o:"1.35"}, {bk:"betano", o:"1.33"},
+        {bk:"sesame", o:"1.34"}, {bk:"b8888",  o:"1.35"}, {bk:"inbet",  o:"1.32"}, {bk:"efbet",  o:"1.30"},
+      ],
+      draw:[
+        {bk:"bet365", o:"8.00"}, {bk:"palms",  o:"7.20"}, {bk:"winbet", o:"7.50"}, {bk:"betano", o:"7.00"},
+        {bk:"sesame", o:"7.30"}, {bk:"b8888",  o:"7.10"}, {bk:"inbet",  o:"6.80"}, {bk:"efbet",  o:"6.50"},
+      ],
+      away:[
+        {bk:"bet365", o:"17.00"},{bk:"palms",  o:"13.00"},{bk:"winbet", o:"14.00"},{bk:"betano", o:"12.00"},
+        {bk:"sesame", o:"13.50"},{bk:"b8888",  o:"12.50"},{bk:"inbet",  o:"11.00"},{bk:"efbet",  o:"10.00"},
+      ]
+    },
+    extraOdds:[
+      { market:"Нюкасъл Над 3.5", rows:[
+        {bk:"bet365", o:"2.20"}, {bk:"palms",  o:"2.05"}, {bk:"winbet", o:"2.10"}, {bk:"betano", o:"2.08"},
+        {bk:"sesame", o:"2.07"}, {bk:"b8888",  o:"2.03"}, {bk:"inbet",  o:"2.00"}, {bk:"efbet",  o:"1.95"},
+      ]},
+      { market:"Нюкасъл чиста мрежа", rows:[
+        {bk:"bet365", o:"1.83"}, {bk:"palms",  o:"1.75"}, {bk:"winbet", o:"1.78"}, {bk:"betano", o:"1.76"},
+        {bk:"sesame", o:"1.77"}, {bk:"b8888",  o:"1.73"}, {bk:"inbet",  o:"1.70"}, {bk:"efbet",  o:"1.67"},
+      ]},
+    ],
+    injuries:{
+      home:["А. Гордон (очаква се почивка)", "Исак (очаква се ротация)"],
       away:[]
     },
     stats:[
-      {k:"Ювентус нуждае от", v:"4+ гола срещу Гала", g:false},
-      {k:"Галатасарай победа в 1-ви крак", v:"5-2 — голяма победа", g:true},
-      {k:"Юве домашни голове тази сезон", v:"Само 1.8 ср.", g:false},
-      {k:"Над 2.5 в тази фаза (ЛЧ)", v:"8 от 12 мача", g:true},
-      {k:"Мбале форма (Гала)", v:"7 гола тази ЛЧ", g:true},
+      {k:"Резултат 1-ви крак", v:"6-1 за Нюкасъл!", g:true},
+      {k:"Гордон в 1-ви мач", v:"4 гола, 1 асист", g:true},
+      {k:"Карабах извън Азербайджан", v:"0 победи от 5", g:false},
+      {k:"Нюкасъл BTTS (ЛЧ)", v:"4 от 5 мача", g:true},
+      {k:"Очаквана ротация", v:"5-6 смени от Howe", g:false},
     ],
-    statsEn:[
-      {k:"Juventus need", v:"4+ goals vs Galatasaray", g:false},
-      {k:"Galatasaray 1st leg win", v:"5-2 — dominant", g:true},
-      {k:"Juve home goals this season", v:"Just 1.8 avg", g:false},
-      {k:"Over 2.5 in this UCL phase", v:"8 of 12 matches", g:true},
-      {k:"Mbaile form (Gala)", v:"7 goals this UCL", g:true},
-    ],
-    ai:"Ювентус имат почти невъзможна мисия — да вкарат 4+ гола на Галатасарай вкъщи след 2-5 в Истанбул. Турците са ефективни в контраатаката — Мбале е в невероятна форма. Очакваме поне 3-4 гола — Юве ще атакуват масово, Гала ще контрират. Над 2.5 при 1.65 @ Bet365 е нашата препоръка. При всякакъв резултат почти сигурно ще има много голове.",
-    aiEn:"Juventus face a near-impossible task — scoring 4+ goals against Galatasaray at home after losing 2-5 in Istanbul. The Turks are lethal on the counter — Mbaile is in unstoppable form. We expect at least 3-4 goals — Juve will attack en masse, Gala will counter. Over 2.5 at 1.65 @ Bet365 is our recommendation. Whatever the result, expect a high-scoring affair."
+    ai:"Нюкасъл са с де факто осигурена квалификация. 6-1 е почти невъзможен за преобръщане при всякакви обстоятелства. Eddie Howe ще ротира значително — Гордон и Исак почиват за ПЛ. Palms Bet и Winbet предлагат по 1.35-1.36 за победа — стабилна ставка. По-интересна опция е Над 3.5 гола при 2.10 @ Winbet, ако Howe реши да даде шанс на резервите да се изявят."
   },
   {
-    id:"psg_mon",
-    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак", leagueNameEn:"Champions League — Playoff, 2nd Leg",
-    date:"2026-02-25", time:"21:00", statusType:"done",
-    ctx:"1-ви крак: Монако 2-3 ПСЖ", ctxEn:"1st leg: Monaco 2-3 PSG",
-    home:"ПСЖ",     homeA:"PSG", homeForm:["W","W","W","W","D"],
-    away:"Монако",  awayA:"MON", awayForm:["W","D","W","L","W"],
-    pred:{ result:"1", conf:68, cfClass:"cf-mid", cpc:"cpct-mid" },
-    pick:{ bet:"ПСЖ победа (1)", betEn:"PSG Win", odd:"1.60", book:"Bet365", bookKey:"bet365" },
-    prob:{ h:58, d:22, a:20 },
+    id:"int_bog",
+    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак",
+    date:"2026-02-24", time:"20:00", statusType:"today",
+    ctx:"1-ви крак: Будьо/Глимт 3-1 Интер",
+    home:"Интер Милано",   homeA:"INT", homeForm:["W","W","W","L","W"],
+    away:"Будьо/Глимт",    awayA:"BOG", awayForm:["W","W","W","W","D"],
+    pred:{ result:"Будьо КФ", conf:55, cfClass:"cf-mid", cpc:"cpct-mid" },
+    pick:{ bet:"Будьо квалификация", odd:"2.25", book:"Bet365", bookKey:"bet365" },
+    prob:{ h:79.3, d:12.3, a:8.4 },
     odds:{
       home:[
-        {bk:"bet365", o:"1.60"}, {bk:"palms",  o:"1.53"}, {bk:"winbet", o:"1.55"}, {bk:"betano", o:"1.54"},
-        {bk:"sesame", o:"1.54"}, {bk:"b8888",  o:"1.51"}, {bk:"inbet",  o:"1.49"}, {bk:"efbet",  o:"1.47"},
+        {bk:"bet365", o:"1.44"}, {bk:"palms",  o:"1.38"}, {bk:"winbet", o:"1.42"}, {bk:"betano", o:"1.40"},
+        {bk:"sesame", o:"1.39"}, {bk:"b8888",  o:"1.37"}, {bk:"inbet",  o:"1.35"}, {bk:"efbet",  o:"1.33"},
       ],
       draw:[
-        {bk:"bet365", o:"3.80"}, {bk:"palms",  o:"3.55"}, {bk:"winbet", o:"3.60"}, {bk:"betano", o:"3.58"},
-        {bk:"sesame", o:"3.59"}, {bk:"b8888",  o:"3.52"}, {bk:"inbet",  o:"3.45"}, {bk:"efbet",  o:"3.40"},
+        {bk:"bet365", o:"6.00"}, {bk:"palms",  o:"5.50"}, {bk:"winbet", o:"5.80"}, {bk:"betano", o:"5.60"},
+        {bk:"sesame", o:"5.70"}, {bk:"b8888",  o:"5.40"}, {bk:"inbet",  o:"5.20"}, {bk:"efbet",  o:"5.00"},
       ],
       away:[
-        {bk:"bet365", o:"5.00"}, {bk:"palms",  o:"4.70"}, {bk:"winbet", o:"4.80"}, {bk:"betano", o:"4.75"},
-        {bk:"sesame", o:"4.77"}, {bk:"b8888",  o:"4.65"}, {bk:"inbet",  o:"4.55"}, {bk:"efbet",  o:"4.45"},
+        {bk:"bet365", o:"8.50"}, {bk:"palms",  o:"7.80"}, {bk:"winbet", o:"8.20"}, {bk:"betano", o:"8.00"},
+        {bk:"sesame", o:"8.10"}, {bk:"b8888",  o:"7.60"}, {bk:"inbet",  o:"7.30"}, {bk:"efbet",  o:"7.00"},
       ]
     },
     extraOdds:[
-      { market:"BTTS (Да)", marketEn:"BTTS (Yes)", rows:[
-        {bk:"bet365", o:"1.80"}, {bk:"palms",  o:"1.72"}, {bk:"winbet", o:"1.74"}, {bk:"betano", o:"1.73"},
-        {bk:"sesame", o:"1.73"}, {bk:"b8888",  o:"1.70"}, {bk:"inbet",  o:"1.67"}, {bk:"efbet",  o:"1.64"},
+      { market:"Будьо квалификация", rows:[
+        {bk:"bet365", o:"2.25"}, {bk:"palms",  o:"2.10"}, {bk:"winbet", o:"2.18"}, {bk:"betano", o:"2.12"},
+        {bk:"sesame", o:"2.15"}, {bk:"b8888",  o:"2.08"}, {bk:"inbet",  o:"2.05"}, {bk:"efbet",  o:"2.00"},
       ]},
-      { market:"Над 2.5 гола", marketEn:"Over 2.5 Goals", rows:[
-        {bk:"bet365", o:"1.75"}, {bk:"palms",  o:"1.67"}, {bk:"winbet", o:"1.70"}, {bk:"betano", o:"1.68"},
-        {bk:"sesame", o:"1.69"}, {bk:"b8888",  o:"1.65"}, {bk:"inbet",  o:"1.62"}, {bk:"efbet",  o:"1.59"},
-      ]},
-    ],
-    injuries:{
-      home:["Завет (контузия)"],
-      away:["Голосон (контузия)", "Маракаши (под съмнение)"]
-    },
-    stats:[
-      {k:"ПСЖ дома в ЛЧ 2025/26", v:"5П-0Р-0З", g:true},
-      {k:"Монако извън (ЛЧ) 2025/26", v:"2П-2Р-3З", g:false},
-      {k:"ПСЖ без загуба вкъщи", v:"19 поредни", g:true},
-      {k:"Желдес форма (ПСЖ)", v:"12 гола тази ЛЧ", g:true},
-      {k:"Монако Над 2.5 извън", v:"4 от 8", g:false},
-    ],
-    statsEn:[
-      {k:"PSG home in UCL 2025/26", v:"5W-0D-0L", g:true},
-      {k:"Monaco away (UCL) 2025/26", v:"2W-2D-3L", g:false},
-      {k:"PSG unbeaten at home", v:"19 consecutive", g:true},
-      {k:"Desiree form (PSG)", v:"12 goals this UCL", g:true},
-      {k:"Monaco Over 2.5 away", v:"4 of 8", g:false},
-    ],
-    ai:"ПСЖ са с 3-2 преднина след гостуването в Монако. На Принс Парк пред домашните им фенове са практически непобедими — 19 поредни домашни мача без загуба. Монако имаха добра игра в 1-ви крак, но гостуванията в ЛЧ са по-трудни. Желдес е в отлична форма. Победата за ПСЖ при 1.60 е разумен залог. Над 2.5 при 1.75 е алтернативен избор.",
-    aiEn:"PSG hold a 3-2 aggregate lead after the Monaco away leg. At Parc des Princes they are virtually invincible — 19 consecutive home matches unbeaten. Monaco played well in the 1st leg, but UCL away trips are different. Desiree is in excellent form. PSG win at 1.60 is a sensible bet. Over 2.5 at 1.75 is an alternative pick."
-  },
-  {
-    id:"rma_ben",
-    league:"cl", leagueName:"Шампионска лига — Плейоф, 2-ри крак", leagueNameEn:"Champions League — Playoff, 2nd Leg",
-    date:"2026-02-25", time:"21:00", statusType:"done",
-    ctx:"1-ви крак: Бенфика 0-1 Реал Мадрид", ctxEn:"1st leg: Benfica 0-1 Real Madrid",
-    home:"Реал Мадрид", homeA:"RMA", homeForm:["W","W","D","W","W"],
-    away:"Бенфика",     awayA:"BEN", awayForm:["W","W","D","W","L"],
-    pred:{ result:"1", conf:71, cfClass:"cf-high", cpc:"cpct-high" },
-    pick:{ bet:"Реал Мадрид победа (1)", betEn:"Real Madrid Win", odd:"1.65", book:"Bet365", bookKey:"bet365" },
-    prob:{ h:55, d:25, a:20 },
-    odds:{
-      home:[
-        {bk:"bet365", o:"1.65"}, {bk:"palms",  o:"1.58"}, {bk:"winbet", o:"1.60"}, {bk:"betano", o:"1.59"},
-        {bk:"sesame", o:"1.59"}, {bk:"b8888",  o:"1.56"}, {bk:"inbet",  o:"1.54"}, {bk:"efbet",  o:"1.52"},
-      ],
-      draw:[
-        {bk:"bet365", o:"3.80"}, {bk:"palms",  o:"3.55"}, {bk:"winbet", o:"3.62"}, {bk:"betano", o:"3.58"},
-        {bk:"sesame", o:"3.60"}, {bk:"b8888",  o:"3.52"}, {bk:"inbet",  o:"3.45"}, {bk:"efbet",  o:"3.40"},
-      ],
-      away:[
-        {bk:"bet365", o:"5.25"}, {bk:"palms",  o:"4.90"}, {bk:"winbet", o:"5.00"}, {bk:"betano", o:"4.95"},
-        {bk:"sesame", o:"4.98"}, {bk:"b8888",  o:"4.85"}, {bk:"inbet",  o:"4.70"}, {bk:"efbet",  o:"4.55"},
-      ]
-    },
-    extraOdds:[
-      { market:"BTTS (Да)", marketEn:"BTTS (Yes)", rows:[
-        {bk:"bet365", o:"1.85"}, {bk:"palms",  o:"1.75"}, {bk:"winbet", o:"1.78"}, {bk:"betano", o:"1.77"},
+      { market:"Над 2.5 гола", rows:[
+        {bk:"bet365", o:"1.85"}, {bk:"palms",  o:"1.75"}, {bk:"winbet", o:"1.80"}, {bk:"betano", o:"1.78"},
         {bk:"sesame", o:"1.77"}, {bk:"b8888",  o:"1.73"}, {bk:"inbet",  o:"1.70"}, {bk:"efbet",  o:"1.67"},
       ]},
-      { market:"Над 2.5 гола", marketEn:"Over 2.5 Goals", rows:[
-        {bk:"bet365", o:"1.80"}, {bk:"palms",  o:"1.72"}, {bk:"winbet", o:"1.75"}, {bk:"betano", o:"1.73"},
-        {bk:"sesame", o:"1.74"}, {bk:"b8888",  o:"1.70"}, {bk:"inbet",  o:"1.67"}, {bk:"efbet",  o:"1.64"},
-      ]},
     ],
     injuries:{
-      home:["Куртоа (контузия)", "Белингам (очаква се почивка)"],
-      away:["Ди Мария (контузия)", "Антоний (под съмнение)"]
+      home:["Лаутаро Мартинес (контузия — извън)", "Д. Думфрийс (под съмнение)", "Чалханоглу (под съмнение)"],
+      away:[]
     },
     stats:[
-      {k:"Реал Мадрид дома в ЛЧ", v:"10П-1Р-0З (посл.11)", g:true},
-      {k:"Бенфика извън (ЛЧ)", v:"1П в посл.7", g:false},
-      {k:"Бернабеу средни голове", v:"3.2 на мач", g:true},
-      {k:"Валверде форма", v:"4 гола + 3 асист (ЛЧ)", g:true},
-      {k:"Бенфика без чиста мрежа извън", v:"6 поредни", g:false},
+      {k:"Интер нуждае от", v:"Победа с 2+ гола разлика", g:false},
+      {k:"Будьо победи тази ЛЧ", v:"Ман.Сити, Атлетико, Интер", g:true},
+      {k:"Интер Над 2.5 (КО)", v:"7 от 7 поредни", g:true},
+      {k:"Лаутаро — статус", v:"Извън — ОТСЪСТВА", g:false},
+      {k:"Будьо BTTS (посл.5)", v:"5 от 5", g:true},
+      {k:"Интер дома без Лаутаро", v:"2П — 0Г в 3 мача", g:false},
     ],
-    statsEn:[
-      {k:"Real Madrid home in UCL", v:"10W-1D-0L (last 11)", g:true},
-      {k:"Benfica away (UCL)", v:"1W in last 7", g:false},
-      {k:"Bernabeu avg goals", v:"3.2 per match", g:true},
-      {k:"Valverde form", v:"4 goals + 3 assists (UCL)", g:true},
-      {k:"Benfica no clean sheet away", v:"6 straight", g:false},
-    ],
-    ai:"Реал Мадрид водят 1-0 след скучен 1-ви крак в Лисабон. На Бернабеу обаче са чудовище — 10 победи от последните 11 домашни в ЛЧ. Бенфика почти никога не печелят извън Португалия в евротурнирите. Валверде е в отлична форма. Победата на Реал при 1.65 е топ залог за деня — уверена, с добра стойност при ~71% реален шанс.",
-    aiEn:"Real Madrid lead 1-0 after a cagey 1st leg in Lisbon. At the Bernabeu however they are monsters — 10 wins from the last 11 UCL home games. Benfica almost never win away in European competition outside Portugal. Valverde is in excellent form. Real Madrid win at 1.65 is the top pick of the day — confident, with solid value at ~71% real probability."
-  },
-  // ═══ EUROPA LEAGUE — 26.02.2026 ═══
-  {
-    id:"plz_pan",
-    league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"18:45", statusType:"today",
-    ctx:"1-ви крак: Панатинаикос 2-2 Плзен", ctxEn:"1st leg: Panathinaikos 2-2 Plzen",
-    home:"Виктория Плзен",    homeA:"PLZ", homeForm:["W","D","W","W","D"],
-    away:"Панатинаикос",      awayA:"PAN", awayForm:["W","W","D","L","W"],
-    pred:{ result:"1", conf:55, cfClass:"cf-mid", cpc:"cpct-mid" },
-    pick:{ bet:"Плзен победа (1)", betEn:"Plzen Win", odd:"1.95", book:"Bet365", bookKey:"bet365" },
-    prob:{ h:48, d:28, a:24 },
-    odds:{
-      home:[
-        {bk:"bet365", o:"1.95"}, {bk:"palms",  o:"1.87"}, {bk:"winbet", o:"1.90"}, {bk:"betano", o:"1.88"},
-        {bk:"sesame", o:"1.89"}, {bk:"b8888",  o:"1.85"}, {bk:"inbet",  o:"1.82"}, {bk:"efbet",  o:"1.79"},
-      ],
-      draw:[
-        {bk:"bet365", o:"3.30"}, {bk:"palms",  o:"3.12"}, {bk:"winbet", o:"3.18"}, {bk:"betano", o:"3.15"},
-        {bk:"sesame", o:"3.16"}, {bk:"b8888",  o:"3.10"}, {bk:"inbet",  o:"3.05"}, {bk:"efbet",  o:"3.00"},
-      ],
-      away:[
-        {bk:"bet365", o:"4.00"}, {bk:"palms",  o:"3.80"}, {bk:"winbet", o:"3.85"}, {bk:"betano", o:"3.82"},
-        {bk:"sesame", o:"3.83"}, {bk:"b8888",  o:"3.75"}, {bk:"inbet",  o:"3.68"}, {bk:"efbet",  o:"3.60"},
-      ]
-    },
-    extraOdds:[
-      { market:"BTTS (Да)", marketEn:"BTTS (Yes)", rows:[
-        {bk:"bet365", o:"1.85"}, {bk:"palms",  o:"1.77"}, {bk:"winbet", o:"1.80"}, {bk:"betano", o:"1.78"},
-        {bk:"sesame", o:"1.79"}, {bk:"b8888",  o:"1.75"}, {bk:"inbet",  o:"1.72"}, {bk:"efbet",  o:"1.69"},
-      ]},
-      { market:"Над 2.5 гола", marketEn:"Over 2.5 Goals", rows:[
-        {bk:"bet365", o:"1.75"}, {bk:"palms",  o:"1.67"}, {bk:"winbet", o:"1.70"}, {bk:"betano", o:"1.68"},
-        {bk:"sesame", o:"1.69"}, {bk:"b8888",  o:"1.65"}, {bk:"inbet",  o:"1.62"}, {bk:"efbet",  o:"1.59"},
-      ]},
-    ],
-    injuries:{
-      home:["Чермак (контузия)"],
-      away:["Баральдес (спиране 🟨)"]
-    },
-    stats:[
-      {k:"Агрегат след 1-ви крак", v:"2-2 (равни)", g:false},
-      {k:"Плзен дома в ЛЕ", v:"3П-1Р-1З", g:true},
-      {k:"Панатинаикос извън (ЛЕ)", v:"1П в посл.6", g:false},
-      {k:"BTTS в двата крака", v:"Да — 6 гола общо", g:true},
-      {k:"Плзен Над 2.5 (вкъщи)", v:"4 от 6", g:true},
-    ],
-    statsEn:[
-      {k:"Aggregate after 1st leg", v:"2-2 (level)", g:false},
-      {k:"Plzen home in UEL", v:"3W-1D-1L", g:true},
-      {k:"Panathinaikos away (UEL)", v:"1W in last 6", g:false},
-      {k:"BTTS in both legs", v:"Yes — 6 goals total", g:true},
-      {k:"Plzen Over 2.5 (home)", v:"4 of 6", g:true},
-    ],
-    ai:"Равен агрегат от 2-2 след напрегнатия 1-ви крак в Гърция. Плзен са силни у дома и ще разчитат на домашния терен. Панатинаикос рядко печелят далеч от Атина. И двата крака завършиха с BTTS — очаквай отново голове. Плзен при 1.95 е разумна ставка. Внимание: при равенство мачът продължава с продължения/дузпи.",
-    aiEn:"Level on aggregate at 2-2 after an intense 1st leg in Greece. Plzeň are strong at home and will count on their home advantage. Panathinaikos rarely win away from Athens. Both legs ended with BTTS — expect goals again. Plzeň win at 1.95 is a reasonable bet. Caution: a draw sends it to extra time/penalties."
-  },
-  {
-    id:"fer_lud",
-    league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"18:45", statusType:"today",
-    ctx:"1-ви крак: Лудогорец 2-1 Ференцварош", ctxEn:"1st leg: Ludogorets 2-1 Ferencvaros",
-    home:"Ференцварош",  homeA:"FER", homeForm:["W","D","W","D","W"],
-    away:"Лудогорец",    awayA:"LUD", awayForm:["W","W","W","D","L"],
-    pred:{ result:"Лудо КФ", conf:58, cfClass:"cf-mid", cpc:"cpct-mid" },
-    pick:{ bet:"Лудогорец квалификация", betEn:"Ludogorets Qualification", odd:"2.20", book:"Bet365", bookKey:"bet365" },
-    prob:{ h:43, d:27, a:30 },
-    odds:{
-      home:[
-        {bk:"bet365", o:"1.80"}, {bk:"palms",  o:"1.72"}, {bk:"winbet", o:"1.75"}, {bk:"betano", o:"1.73"},
-        {bk:"sesame", o:"1.74"}, {bk:"b8888",  o:"1.70"}, {bk:"inbet",  o:"1.67"}, {bk:"efbet",  o:"1.64"},
-      ],
-      draw:[
-        {bk:"bet365", o:"3.50"}, {bk:"palms",  o:"3.30"}, {bk:"winbet", o:"3.36"}, {bk:"betano", o:"3.33"},
-        {bk:"sesame", o:"3.34"}, {bk:"b8888",  o:"3.28"}, {bk:"inbet",  o:"3.22"}, {bk:"efbet",  o:"3.18"},
-      ],
-      away:[
-        {bk:"bet365", o:"4.50"}, {bk:"palms",  o:"4.20"}, {bk:"winbet", o:"4.30"}, {bk:"betano", o:"4.25"},
-        {bk:"sesame", o:"4.28"}, {bk:"b8888",  o:"4.15"}, {bk:"inbet",  o:"4.05"}, {bk:"efbet",  o:"3.95"},
-      ]
-    },
-    extraOdds:[
-      { market:"Лудогорец квалификация", marketEn:"Ludogorets Qualification", rows:[
-        {bk:"bet365", o:"2.20"}, {bk:"palms",  o:"2.08"}, {bk:"winbet", o:"2.13"}, {bk:"betano", o:"2.10"},
-        {bk:"sesame", o:"2.11"}, {bk:"b8888",  o:"2.06"}, {bk:"inbet",  o:"2.02"}, {bk:"efbet",  o:"1.98"},
-      ]},
-      { market:"Над 2.5 гола", marketEn:"Over 2.5 Goals", rows:[
-        {bk:"bet365", o:"1.75"}, {bk:"palms",  o:"1.67"}, {bk:"winbet", o:"1.70"}, {bk:"betano", o:"1.68"},
-        {bk:"sesame", o:"1.69"}, {bk:"b8888",  o:"1.65"}, {bk:"inbet",  o:"1.62"}, {bk:"efbet",  o:"1.59"},
-      ]},
-    ],
-    injuries:{
-      home:["Ухман (контузия)"],
-      away:["Браун-Форде (контузия)"]
-    },
-    stats:[
-      {k:"Лудогорец преднина", v:"2-1 след 1-ви крак", g:true},
-      {k:"Ференцварош дома в ЛЕ", v:"3П-2Р-0З", g:true},
-      {k:"Лудогорец извън (Европа)", v:"2П-1Р-3З (посл.6)", g:false},
-      {k:"BTTS в 1-ви крак", v:"Да — 3 гола", g:true},
-      {k:"Лудо само нуждае от", v:"Равенство за квалификация", g:true},
-    ],
-    statsEn:[
-      {k:"Ludogorets lead", v:"2-1 after 1st leg", g:true},
-      {k:"Ferencvaros home in UEL", v:"3W-2D-0L", g:true},
-      {k:"Ludogorets away (Europe)", v:"2W-1D-3L (last 6)", g:false},
-      {k:"BTTS in 1st leg", v:"Yes — 3 goals", g:true},
-      {k:"Ludogorets only need", v:"A draw to qualify", g:true},
-    ],
-    ai:"Лудогорец са с 2-1 преднина след успеха вкъщи — звезден момент за българския футбол! Ференцварош са силни у дома, но Лудогорец имат ключово предимство — само равенство им стига за квалификация. Ференц трябва да вкарат и да не допускат. Квалификация на Лудогорец при 2.20 е ценностен залог с ~58% реален шанс.",
-    aiEn:"Ludogorets hold a 2-1 lead after winning the home leg — a proud moment for Bulgarian football! Ferencváros are strong at home in the UEL, but Ludogorets have a key advantage — they just need a draw to qualify. Ferencváros must score without conceding twice. Ludogorets qualification at 2.20 is a value bet with ~58% real probability."
-  },
-  {
-    id:"red_lil",
-    league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"18:45", statusType:"today",
-    ctx:"1-ви крак: Лил 0-1 Цр. Звезда", ctxEn:"1st leg: Lille 0-1 Red Star",
-    home:"Цр. Звезда Белград", homeA:"RED", homeForm:["W","W","W","D","W"],
-    away:"Лил",               awayA:"LIL", awayForm:["W","D","W","W","L"],
-    pred:{ result:"Цр.Звезда КФ", conf:68, cfClass:"cf-mid", cpc:"cpct-mid" },
-    pick:{ bet:"Цр.Звезда квалификация", betEn:"Red Star Qualification", odd:"1.50", book:"Bet365", bookKey:"bet365" },
-    prob:{ h:45, d:28, a:27 },
-    odds:{
-      home:[
-        {bk:"bet365", o:"2.10"}, {bk:"palms",  o:"2.00"}, {bk:"winbet", o:"2.04"}, {bk:"betano", o:"2.02"},
-        {bk:"sesame", o:"2.03"}, {bk:"b8888",  o:"1.98"}, {bk:"inbet",  o:"1.94"}, {bk:"efbet",  o:"1.91"},
-      ],
-      draw:[
-        {bk:"bet365", o:"3.30"}, {bk:"palms",  o:"3.12"}, {bk:"winbet", o:"3.18"}, {bk:"betano", o:"3.15"},
-        {bk:"sesame", o:"3.16"}, {bk:"b8888",  o:"3.10"}, {bk:"inbet",  o:"3.05"}, {bk:"efbet",  o:"3.00"},
-      ],
-      away:[
-        {bk:"bet365", o:"3.50"}, {bk:"palms",  o:"3.30"}, {bk:"winbet", o:"3.38"}, {bk:"betano", o:"3.34"},
-        {bk:"sesame", o:"3.36"}, {bk:"b8888",  o:"3.28"}, {bk:"inbet",  o:"3.20"}, {bk:"efbet",  o:"3.15"},
-      ]
-    },
-    extraOdds:[
-      { market:"Цр.Звезда квалификация", marketEn:"Red Star Qualification", rows:[
-        {bk:"bet365", o:"1.50"}, {bk:"palms",  o:"1.43"}, {bk:"winbet", o:"1.46"}, {bk:"betano", o:"1.44"},
-        {bk:"sesame", o:"1.45"}, {bk:"b8888",  o:"1.41"}, {bk:"inbet",  o:"1.38"}, {bk:"efbet",  o:"1.36"},
-      ]},
-      { market:"BTTS (Да)", marketEn:"BTTS (Yes)", rows:[
-        {bk:"bet365", o:"1.75"}, {bk:"palms",  o:"1.67"}, {bk:"winbet", o:"1.70"}, {bk:"betano", o:"1.68"},
-        {bk:"sesame", o:"1.69"}, {bk:"b8888",  o:"1.65"}, {bk:"inbet",  o:"1.62"}, {bk:"efbet",  o:"1.59"},
-      ]},
-    ],
-    injuries:{
-      home:[],
-      away:["Диаки (спиране 🟨)", "Ле Мар (контузия)"]
-    },
-    stats:[
-      {k:"Цр.Звезда дома (ЕК)", v:"7П-1Р-0З (посл.8)", g:true},
-      {k:"Лил извън в ЛЕ", v:"1П-2Р-2З", g:false},
-      {k:"Преднина на Звезда", v:"1-0 от Лил", g:true},
-      {k:"Лил без Диаки (изгонен)", v:"Ключов играч отсъства", g:false},
-      {k:"Стадион Раjко Митич — атмосфера", v:"Легендарна публика", g:true},
-    ],
-    statsEn:[
-      {k:"Red Star home (European)", v:"7W-1D-0L (last 8)", g:true},
-      {k:"Lille away in UEL", v:"1W-2D-2L", g:false},
-      {k:"Red Star lead", v:"1-0 from Lille", g:true},
-      {k:"Lille without Diakhi (suspended)", v:"Key player absent", g:false},
-      {k:"Rajko Mitic Stadium — atmosphere", v:"Legendary crowd", g:true},
-    ],
-    ai:"Цр. Звезда водят 1-0 и играят вкъщи пред легендарната публика на Раjко Митич. Лил почти никога не печелят извън Франция в Европа. 7П-1Р-0З е домашния им европейски рекорд от последните 8 мача. Квалификацията на Звезда при 1.50 е почти сигурна — ~68% реален шанс. По-сигурна ставка: победа за Звезда в мача при 2.10.",
-    aiEn:"Red Star lead 1-0 and play at home in front of the legendary Rajko Mitić crowd. Lille almost never win away from France in Europe. 7W-1D-0L is their European home record in the last 8 games. Red Star qualification at 1.50 is nearly certain — ~68% real probability. Slightly safer bet: Red Star match win at 2.10."
-  },
-  {
-    id:"stu_cel",
-    league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"18:45", statusType:"today",
-    ctx:"1-ви крак: Селтик 1-4 Щутгарт", ctxEn:"1st leg: Celtic 1-4 Stuttgart",
-    home:"Щутгарт",  homeA:"STU", homeForm:["W","W","W","W","D"],
-    away:"Селтик",   awayA:"CEL", awayForm:["L","W","D","W","W"],
-    pred:{ result:"1", conf:72, cfClass:"cf-high", cpc:"cpct-high" },
-    pick:{ bet:"Щутгарт победа (1)", betEn:"Stuttgart Win", odd:"1.65", book:"Bet365", bookKey:"bet365" },
-    prob:{ h:55, d:25, a:20 },
-    odds:{
-      home:[
-        {bk:"bet365", o:"1.65"}, {bk:"palms",  o:"1.58"}, {bk:"winbet", o:"1.60"}, {bk:"betano", o:"1.59"},
-        {bk:"sesame", o:"1.59"}, {bk:"b8888",  o:"1.56"}, {bk:"inbet",  o:"1.54"}, {bk:"efbet",  o:"1.52"},
-      ],
-      draw:[
-        {bk:"bet365", o:"3.80"}, {bk:"palms",  o:"3.55"}, {bk:"winbet", o:"3.62"}, {bk:"betano", o:"3.58"},
-        {bk:"sesame", o:"3.60"}, {bk:"b8888",  o:"3.52"}, {bk:"inbet",  o:"3.45"}, {bk:"efbet",  o:"3.40"},
-      ],
-      away:[
-        {bk:"bet365", o:"5.25"}, {bk:"palms",  o:"4.90"}, {bk:"winbet", o:"5.00"}, {bk:"betano", o:"4.95"},
-        {bk:"sesame", o:"4.98"}, {bk:"b8888",  o:"4.85"}, {bk:"inbet",  o:"4.70"}, {bk:"efbet",  o:"4.55"},
-      ]
-    },
-    extraOdds:[
-      { market:"Над 2.5 гола", marketEn:"Over 2.5 Goals", rows:[
-        {bk:"bet365", o:"1.75"}, {bk:"palms",  o:"1.67"}, {bk:"winbet", o:"1.70"}, {bk:"betano", o:"1.68"},
-        {bk:"sesame", o:"1.69"}, {bk:"b8888",  o:"1.65"}, {bk:"inbet",  o:"1.62"}, {bk:"efbet",  o:"1.59"},
-      ]},
-      { market:"BTTS (Да)", marketEn:"BTTS (Yes)", rows:[
-        {bk:"bet365", o:"1.85"}, {bk:"palms",  o:"1.77"}, {bk:"winbet", o:"1.80"}, {bk:"betano", o:"1.78"},
-        {bk:"sesame", o:"1.79"}, {bk:"b8888",  o:"1.75"}, {bk:"inbet",  o:"1.72"}, {bk:"efbet",  o:"1.69"},
-      ]},
-    ],
-    injuries:{
-      home:["Чеко (контузия)"],
-      away:["О'Райли (под съмнение)", "Хаги (контузия)"]
-    },
-    stats:[
-      {k:"Щутгарт голяма преднина", v:"4-1 след 1-ви крак", g:true},
-      {k:"Селтик нуждае от", v:"4+ гола за изравняване", g:false},
-      {k:"Щутгарт дома в ЛЕ", v:"3П-0Р-2З", g:true},
-      {k:"Фьорде/Дурмиши форма", v:"5 гола тази ЛЕ", g:true},
-      {k:"Над 2.5 (Щутгарт вкъщи)", v:"5 от 7", g:true},
-    ],
-    statsEn:[
-      {k:"Stuttgart massive lead", v:"4-1 after 1st leg", g:true},
-      {k:"Celtic need", v:"4+ goals to level", g:false},
-      {k:"Stuttgart home in UEL", v:"3W-0D-2L", g:true},
-      {k:"Fördős/Durmisi form", v:"5 goals this UEL", g:true},
-      {k:"Over 2.5 (Stuttgart home)", v:"5 of 7", g:true},
-    ],
-    ai:"Щутгарт са с огромна преднина от 4-1 след гостуването в Глазгоу. Сигурно са сред фаворитите за трофея! Селтик трябват невъзможни 4 гола за изравняване. Фьорде е в топ форма. Победата на Щутгарт при 1.65 е много сигурна ставка. Над 2.5 при 1.75 е алтернатива за по-висока квота.",
-    aiEn:"Stuttgart hold a massive 4-1 lead after the away leg in Glasgow. They must be among the favorites for the trophy! Celtic need an impossible 4 goals just to level. Fördős is in top form. Stuttgart win at 1.65 is a very confident bet. Over 2.5 at 1.75 is an alternative for a higher odds option."
-  },
-  {
-    id:"bol_brn",
-    league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"21:00", statusType:"today",
-    ctx:"1-ви крак: Бран 0-1 Болоня", ctxEn:"1st leg: Brann 0-1 Bologna",
-    home:"Болоня",  homeA:"BOL", homeForm:["W","W","W","D","W"],
-    away:"Бран",    awayA:"BRN", awayForm:["W","L","W","D","W"],
-    pred:{ result:"1", conf:73, cfClass:"cf-high", cpc:"cpct-high" },
-    pick:{ bet:"Болоня победа (1)", betEn:"Bologna Win", odd:"1.55", book:"Bet365", bookKey:"bet365" },
-    prob:{ h:60, d:25, a:15 },
-    odds:{
-      home:[
-        {bk:"bet365", o:"1.55"}, {bk:"palms",  o:"1.48"}, {bk:"winbet", o:"1.51"}, {bk:"betano", o:"1.50"},
-        {bk:"sesame", o:"1.50"}, {bk:"b8888",  o:"1.47"}, {bk:"inbet",  o:"1.45"}, {bk:"efbet",  o:"1.43"},
-      ],
-      draw:[
-        {bk:"bet365", o:"3.90"}, {bk:"palms",  o:"3.65"}, {bk:"winbet", o:"3.72"}, {bk:"betano", o:"3.68"},
-        {bk:"sesame", o:"3.70"}, {bk:"b8888",  o:"3.62"}, {bk:"inbet",  o:"3.55"}, {bk:"efbet",  o:"3.50"},
-      ],
-      away:[
-        {bk:"bet365", o:"6.00"}, {bk:"palms",  o:"5.60"}, {bk:"winbet", o:"5.75"}, {bk:"betano", o:"5.68"},
-        {bk:"sesame", o:"5.72"}, {bk:"b8888",  o:"5.55"}, {bk:"inbet",  o:"5.40"}, {bk:"efbet",  o:"5.25"},
-      ]
-    },
-    extraOdds:[
-      { market:"Над 2.5 гола", marketEn:"Over 2.5 Goals", rows:[
-        {bk:"bet365", o:"1.75"}, {bk:"palms",  o:"1.67"}, {bk:"winbet", o:"1.70"}, {bk:"betano", o:"1.68"},
-        {bk:"sesame", o:"1.69"}, {bk:"b8888",  o:"1.65"}, {bk:"inbet",  o:"1.62"}, {bk:"efbet",  o:"1.59"},
-      ]},
-      { market:"BTTS (Да)", marketEn:"BTTS (Yes)", rows:[
-        {bk:"bet365", o:"1.80"}, {bk:"palms",  o:"1.72"}, {bk:"winbet", o:"1.74"}, {bk:"betano", o:"1.73"},
-        {bk:"sesame", o:"1.73"}, {bk:"b8888",  o:"1.70"}, {bk:"inbet",  o:"1.67"}, {bk:"efbet",  o:"1.64"},
-      ]},
-    ],
-    injuries:{
-      home:["Алуел (контузия)"],
-      away:["Карлсен (контузия)"]
-    },
-    stats:[
-      {k:"Болоня преднина", v:"1-0 от Норвегия", g:true},
-      {k:"Болоня дома 2025/26", v:"8П-2Р-1З", g:true},
-      {k:"Бран в Западна Европа", v:"0П в посл.5", g:false},
-      {k:"Болоня Над 2.5 (ЛЕ)", v:"4 от 5", g:true},
-      {k:"Зиркзе форма", v:"3 гола + 2 асист (ЛЕ)", g:true},
-    ],
-    statsEn:[
-      {k:"Bologna lead", v:"1-0 from Norway", g:true},
-      {k:"Bologna home 2025/26", v:"8W-2D-1L", g:true},
-      {k:"Brann in Western Europe", v:"0W in last 5", g:false},
-      {k:"Bologna Over 2.5 (UEL)", v:"4 of 5", g:true},
-      {k:"Zirkzee form", v:"3 goals + 2 assists (UEL)", g:true},
-    ],
-    ai:"Болоня водят 1-0 и играят на Олимпико — в отлична домашна форма. Бран са от Норвегия и рядко вземат точки при гостувания в Западна Европа. Зиркзе се завърна в отлична форма. Победата на Болоня при 1.55 е сигурна ставка с добра стойност — 73% реален шанс. Алтернатива: BTTS при 1.80 ако смятате, че Бран ще отбележат гол.",
-    aiEn:"Bologna lead 1-0 and play at the Olimpico — in excellent home form. Brann are a Norwegian side who rarely take points in Western European away games. Zirkzee is in excellent form. Bologna win at 1.55 is a confident bet with good value — 73% real probability. Alternative: BTTS at 1.80 if you think Brann will score a consolation."
-  },
-  {
-    id:"gen_din",
-    league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"21:00", statusType:"today",
-    ctx:"1-ви крак: Динамо Загреб 1-3 Хенк", ctxEn:"1st leg: Dinamo Zagreb 1-3 Genk",
-    home:"Хенк",             homeA:"GNK", homeForm:["W","W","W","D","W"],
-    away:"Динамо Загреб",    awayA:"DIN", awayForm:["W","L","D","W","L"],
-    pred:{ result:"Над 2.5", conf:67, cfClass:"cf-mid", cpc:"cpct-mid" },
-    pick:{ bet:"Над 2.5 гола", betEn:"Over 2.5 Goals", odd:"1.75", book:"Bet365", bookKey:"bet365" },
-    prob:{ h:58, d:25, a:17 },
-    odds:{
-      home:[
-        {bk:"bet365", o:"1.60"}, {bk:"palms",  o:"1.53"}, {bk:"winbet", o:"1.55"}, {bk:"betano", o:"1.54"},
-        {bk:"sesame", o:"1.54"}, {bk:"b8888",  o:"1.51"}, {bk:"inbet",  o:"1.49"}, {bk:"efbet",  o:"1.47"},
-      ],
-      draw:[
-        {bk:"bet365", o:"3.80"}, {bk:"palms",  o:"3.55"}, {bk:"winbet", o:"3.62"}, {bk:"betano", o:"3.58"},
-        {bk:"sesame", o:"3.60"}, {bk:"b8888",  o:"3.52"}, {bk:"inbet",  o:"3.45"}, {bk:"efbet",  o:"3.40"},
-      ],
-      away:[
-        {bk:"bet365", o:"5.50"}, {bk:"palms",  o:"5.15"}, {bk:"winbet", o:"5.28"}, {bk:"betano", o:"5.22"},
-        {bk:"sesame", o:"5.25"}, {bk:"b8888",  o:"5.10"}, {bk:"inbet",  o:"4.95"}, {bk:"efbet",  o:"4.80"},
-      ]
-    },
-    extraOdds:[
-      { market:"Над 2.5 гола", marketEn:"Over 2.5 Goals", rows:[
-        {bk:"bet365", o:"1.75"}, {bk:"palms",  o:"1.67"}, {bk:"winbet", o:"1.70"}, {bk:"betano", o:"1.68"},
-        {bk:"sesame", o:"1.69"}, {bk:"b8888",  o:"1.65"}, {bk:"inbet",  o:"1.62"}, {bk:"efbet",  o:"1.59"},
-      ]},
-      { market:"BTTS (Да)", marketEn:"BTTS (Yes)", rows:[
-        {bk:"bet365", o:"1.75"}, {bk:"palms",  o:"1.67"}, {bk:"winbet", o:"1.70"}, {bk:"betano", o:"1.68"},
-        {bk:"sesame", o:"1.69"}, {bk:"b8888",  o:"1.65"}, {bk:"inbet",  o:"1.62"}, {bk:"efbet",  o:"1.59"},
-      ]},
-    ],
-    injuries:{
-      home:[],
-      away:["Пиварич (контузия)", "Брнич (спиране 🟨)"]
-    },
-    stats:[
-      {k:"Хенк голяма преднина", v:"3-1 след 1-ви крак", g:true},
-      {k:"Динамо нуждае от", v:"3+ гола без отговор", g:false},
-      {k:"Хенк дома в ЛЕ", v:"3П-1Р-1З", g:true},
-      {k:"Над 2.5 в тази двойка", v:"2/2 — 7 гола общо", g:true},
-      {k:"Динамо извън (ЛЕ)", v:"1П-1Р-3З", g:false},
-    ],
-    statsEn:[
-      {k:"Genk massive lead", v:"3-1 after 1st leg", g:true},
-      {k:"Dinamo need", v:"3+ goals without reply", g:false},
-      {k:"Genk home in UEL", v:"3W-1D-1L", g:true},
-      {k:"Over 2.5 in this tie", v:"2/2 — 7 goals total", g:true},
-      {k:"Dinamo away (UEL)", v:"1W-1D-3L", g:false},
-    ],
-    ai:"Хенк са с 3-1 преднина след доминацията в Загреб. Динамо трябват 3+ гола, за да се върнат в играта — ще атакуват масово. Очакваме Хенк да добавят и Динамо да контрират — Над 2.5 гола при 1.75 е добра ставка с 67% реален шанс. Победата на Хенк при 1.60 е алтернатива.",
-    aiEn:"Genk hold a 3-1 lead after dominating in Zagreb. Dinamo need 3+ goals to get back in it — they'll have to attack en masse. We expect Genk to score more and Dinamo to counter-attack — Over 2.5 goals at 1.75 is a solid pick with 67% real probability. Genk win at 1.60 is the alternative."
-  },
-  {
-    id:"for_fen",
-    league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"21:00", statusType:"today",
-    ctx:"1-ви крак: Фенербахче 0-3 Форест", ctxEn:"1st leg: Fenerbahce 0-3 Nottm Forest",
-    home:"Нотингам Форест", homeA:"FOR", homeForm:["W","W","W","W","D"],
-    away:"Фенербахче",      awayA:"FEN", awayForm:["W","L","W","D","L"],
-    pred:{ result:"Над 2.5", conf:70, cfClass:"cf-high", cpc:"cpct-high" },
-    pick:{ bet:"Над 2.5 гола", betEn:"Over 2.5 Goals", odd:"1.65", book:"Bet365", bookKey:"bet365" },
-    prob:{ h:60, d:25, a:15 },
-    odds:{
-      home:[
-        {bk:"bet365", o:"1.55"}, {bk:"palms",  o:"1.48"}, {bk:"winbet", o:"1.51"}, {bk:"betano", o:"1.50"},
-        {bk:"sesame", o:"1.50"}, {bk:"b8888",  o:"1.47"}, {bk:"inbet",  o:"1.45"}, {bk:"efbet",  o:"1.43"},
-      ],
-      draw:[
-        {bk:"bet365", o:"3.90"}, {bk:"palms",  o:"3.65"}, {bk:"winbet", o:"3.72"}, {bk:"betano", o:"3.68"},
-        {bk:"sesame", o:"3.70"}, {bk:"b8888",  o:"3.62"}, {bk:"inbet",  o:"3.55"}, {bk:"efbet",  o:"3.50"},
-      ],
-      away:[
-        {bk:"bet365", o:"6.00"}, {bk:"palms",  o:"5.60"}, {bk:"winbet", o:"5.75"}, {bk:"betano", o:"5.68"},
-        {bk:"sesame", o:"5.72"}, {bk:"b8888",  o:"5.55"}, {bk:"inbet",  o:"5.40"}, {bk:"efbet",  o:"5.25"},
-      ]
-    },
-    extraOdds:[
-      { market:"Над 2.5 гола", marketEn:"Over 2.5 Goals", rows:[
-        {bk:"bet365", o:"1.65"}, {bk:"palms",  o:"1.58"}, {bk:"winbet", o:"1.60"}, {bk:"betano", o:"1.59"},
-        {bk:"sesame", o:"1.59"}, {bk:"b8888",  o:"1.56"}, {bk:"inbet",  o:"1.53"}, {bk:"efbet",  o:"1.50"},
-      ]},
-      { market:"BTTS (Да)", marketEn:"BTTS (Yes)", rows:[
-        {bk:"bet365", o:"1.75"}, {bk:"palms",  o:"1.67"}, {bk:"winbet", o:"1.70"}, {bk:"betano", o:"1.68"},
-        {bk:"sesame", o:"1.69"}, {bk:"b8888",  o:"1.65"}, {bk:"inbet",  o:"1.62"}, {bk:"efbet",  o:"1.59"},
-      ]},
-    ],
-    injuries:{
-      home:["Н. Домингес (контузия)"],
-      away:["Бекао (спиране 🟨)", "Лебьоф (контузия)"]
-    },
-    stats:[
-      {k:"Форест голяма преднина", v:"3-0 от Истанбул", g:true},
-      {k:"Фенербахче нуждае от", v:"4+ гола за шанс", g:false},
-      {k:"Форест дома в ЛЕ", v:"3П-0Р-2З", g:true},
-      {k:"Хадсон-Одой форма", v:"4 гола тази ЛЕ", g:true},
-      {k:"Над 2.5 (Форест вкъщи)", v:"4 от 6", g:true},
-    ],
-    statsEn:[
-      {k:"Forest massive lead", v:"3-0 from Istanbul", g:true},
-      {k:"Fenerbahce need", v:"4+ goals for a chance", g:false},
-      {k:"Forest home in UEL", v:"3W-0D-2L", g:true},
-      {k:"Hudson-Odoi form", v:"4 goals this UEL", g:true},
-      {k:"Over 2.5 (Forest home)", v:"4 of 6", g:true},
-    ],
-    ai:"Форест са с огромна преднина от 3-0 след успеха в Истанбул. Хадсон-Одой е в страхотна форма. Фенербахче трябват 4 гола — почти невъзможно. Очакваме Форест да атакуват за комфортна победа, а Фенер да рискуват — Над 2.5 при 1.65 е добра ставка. При 70% реален шанс — топ избор.",
-    aiEn:"Forest hold a massive 3-0 lead from Istanbul. Hudson-Odoi is in brilliant form. Fenerbahçe need 4 goals — almost impossible. We expect Forest to attack for a comfortable win while Fener risk everything — Over 2.5 at 1.65 is a solid pick. At 70% real probability — top choice."
-  },
-  {
-    id:"cel_pak",
-    league:"el", leagueName:"Лига Европа — Плейоф, 2-ри крак", leagueNameEn:"Europa League — Playoff, 2nd Leg",
-    date:"2026-02-26", time:"21:00", statusType:"today",
-    ctx:"1-ви крак: ПАОК 1-2 Селта", ctxEn:"1st leg: PAOK 1-2 Celta",
-    home:"Селта Виго",  homeA:"CEL", homeForm:["W","D","W","W","W"],
-    away:"ПАОК",        awayA:"PAO", awayForm:["W","W","D","W","L"],
-    pred:{ result:"BTTS", conf:62, cfClass:"cf-mid", cpc:"cpct-mid" },
-    pick:{ bet:"И двата отбора гол", betEn:"Both Teams to Score", odd:"1.80", book:"Bet365", bookKey:"bet365" },
-    prob:{ h:52, d:26, a:22 },
-    odds:{
-      home:[
-        {bk:"bet365", o:"1.65"}, {bk:"palms",  o:"1.58"}, {bk:"winbet", o:"1.60"}, {bk:"betano", o:"1.59"},
-        {bk:"sesame", o:"1.59"}, {bk:"b8888",  o:"1.56"}, {bk:"inbet",  o:"1.54"}, {bk:"efbet",  o:"1.52"},
-      ],
-      draw:[
-        {bk:"bet365", o:"3.60"}, {bk:"palms",  o:"3.38"}, {bk:"winbet", o:"3.44"}, {bk:"betano", o:"3.41"},
-        {bk:"sesame", o:"3.42"}, {bk:"b8888",  o:"3.36"}, {bk:"inbet",  o:"3.30"}, {bk:"efbet",  o:"3.25"},
-      ],
-      away:[
-        {bk:"bet365", o:"5.25"}, {bk:"palms",  o:"4.90"}, {bk:"winbet", o:"5.00"}, {bk:"betano", o:"4.95"},
-        {bk:"sesame", o:"4.98"}, {bk:"b8888",  o:"4.85"}, {bk:"inbet",  o:"4.70"}, {bk:"efbet",  o:"4.55"},
-      ]
-    },
-    extraOdds:[
-      { market:"BTTS (Да)", marketEn:"BTTS (Yes)", rows:[
-        {bk:"bet365", o:"1.80"}, {bk:"palms",  o:"1.72"}, {bk:"winbet", o:"1.74"}, {bk:"betano", o:"1.73"},
-        {bk:"sesame", o:"1.73"}, {bk:"b8888",  o:"1.70"}, {bk:"inbet",  o:"1.67"}, {bk:"efbet",  o:"1.64"},
-      ]},
-      { market:"Над 2.5 гола", marketEn:"Over 2.5 Goals", rows:[
-        {bk:"bet365", o:"1.78"}, {bk:"palms",  o:"1.70"}, {bk:"winbet", o:"1.73"}, {bk:"betano", o:"1.71"},
-        {bk:"sesame", o:"1.72"}, {bk:"b8888",  o:"1.68"}, {bk:"inbet",  o:"1.65"}, {bk:"efbet",  o:"1.62"},
-      ]},
-    ],
-    injuries:{
-      home:[],
-      away:["Жуниньо (под съмнение)", "Ингасон (контузия)"]
-    },
-    stats:[
-      {k:"Селта преднина", v:"2-1 от Солун", g:true},
-      {k:"ПАОК нуждае от", v:"2+ гола за продължения", g:false},
-      {k:"BTTS (Селта вкъщи)", v:"5 от 7", g:true},
-      {k:"Ас Бланко форма", v:"3 гола + 3 асист (ЛЕ)", g:true},
-      {k:"ПАОК извън (ЛЕ)", v:"1П-1Р-3З", g:false},
-    ],
-    statsEn:[
-      {k:"Celta lead", v:"2-1 from Thessaloniki", g:true},
-      {k:"PAOK need", v:"2+ goals for extra time", g:false},
-      {k:"BTTS (Celta home)", v:"5 of 7", g:true},
-      {k:"Aspas/Blanco form", v:"3 goals + 3 assists (UEL)", g:true},
-      {k:"PAOK away (UEL)", v:"1W-1D-3L", g:false},
-    ],
-    ai:"Селта са с 2-1 преднина след успеха в Солун. ПАОК трябват 2 гола за продължения или 3 за директна квалификация — ще атакуват. Селта са добри у дома и ще контрират опасно. Очакваме двустранен мач — BTTS при 1.80 е добра ставка при ~62% реален шанс. Победата на Селта при 1.65 е по-сигурен вариант.",
-    aiEn:"Celta lead 2-1 from Thessaloniki. PAOK need 2 goals for extra time or 3 to qualify directly — they'll attack. Celta are strong at home and will counter-attack dangerously. We expect a two-way match — BTTS at 1.80 is a solid bet at ~62% real probability. Celta win at 1.65 is the safer option."
+    ai:"Сензационна история! Будьо/Глимт от Норвегия се нуждаят само от равенство или загуба с 1 гол за да отстранят Интер. В 1-ви крак ги победиха 3-1 в Сан Сиро — вторият най-добър резултат в историята на Норвегия в ЛЧ. Интер са без Лаутаро (контузен), Думфрийс и Чалханоглу под съмнение. Нужна им е победа с поне 2 гола разлика. Winbet предлага 2.18 за квалификация на Будьо — при реален шанс от ~55% (приет от нас след анализ на контузиите) — това е ДОБРА СТОЙНОСТ. Внимание: коефициентите за самата победа на Интер са подценени заради ситуацията."
   }
 ];
 
@@ -1339,14 +1019,13 @@ function renderCard(m, idx){
   const hf = m.homeForm.map(r=>`<div class="fd ${r==="W"?"fw":r==="D"?"fd2":"fl"}">${r}</div>`).join('');
   const af = m.awayForm.map(r=>`<div class="fd ${r==="W"?"fw":r==="D"?"fd2":"fl"}">${r}</div>`).join('');
 
-  const extraOddsHtml = m.extraOdds.map(eo=>{
-    const mktLabel = currentLang==='en'?(eo.marketEn||eo.market):eo.market;
-    return `<div style="margin-top:10px">
-      <div class="odds-sec-title">${mktLabel}</div>
+  const extraOddsHtml = m.extraOdds.map(eo=>`
+    <div style="margin-top:10px">
+      <div class="odds-sec-title">${eo.market}</div>
       <div class="odds-cols" style="grid-template-columns:1fr">
-        ${renderOddsBlock(mktLabel, eo.rows)}
+        ${renderOddsBlock(eo.market, eo.rows)}
       </div>
-    </div>`;}).join('');
+    </div>`).join('');
 
   return `
   <div class="mc" id="mc-${m.id}" onclick="tog('${m.id}')" style="animation-delay:${idx*.07}s">
@@ -1354,12 +1033,12 @@ function renderCard(m, idx){
       <div class="team"><div class="tname">${m.home}</div><div class="tform">${hf}</div></div>
       <div class="mctr">
         <div class="mc-time">${m.time}</div>
-        <div class="mc-st ${m.statusType==='today'?'st-today':m.statusType==='done'?'st-fin':'st-soon'}">${m.statusType==='today'?T[currentLang].todayBadge:m.statusType==='done'?T[currentLang].yesterdayBadge:T[currentLang].tomorrowBadge}</div>
-        <div class="mc-ctx">${currentLang==='en'?(m.ctxEn||m.ctx):m.ctx}</div>
+        <div class="mc-st ${m.statusType==='today'?'st-today':m.statusType==='fin'?'st-fin':'st-soon'}">${m.statusType==='today'?'ДНЕС':m.statusType==='fin'?'КРАЙ':m.date==='2026-02-28'?'СЪБОТА':'НЕДЕЛЯ'}</div>
+        <div class="mc-ctx">${m.ctx}</div>
       </div>
       <div class="team away"><div class="tname">${m.away}</div><div class="tform">${af}</div></div>
       <div class="pside">
-        <div class="ptip">${T[currentLang].predLabel}</div>
+        <div class="ptip">Прогноза</div>
         <div class="prow">
           <div class="pval">${m.pred.result}</div>
           <div class="pconf">
@@ -1387,54 +1066,54 @@ function renderCard(m, idx){
     <div class="pick">
       <div class="pick-star">⭐</div>
       <div class="pick-text">
-        <span class="pick-bet">${currentLang==='en'?(m.pick.betEn||m.pick.bet):m.pick.bet}</span>
+        <span class="pick-bet">${m.pick.bet}</span>
         <span class="pick-at">@</span>
         <span class="pick-odd">${m.pick.odd}</span>
-        <span class="pick-at">${T[currentLang].atBook}</span>
+        <span class="pick-at">в</span>
         <div class="obook-dot" style="background:${bk.color};width:8px;height:8px;border-radius:2px;display:inline-block"></div>
         <span class="pick-book">${m.pick.book}</span>
-        <span class="pick-best">${T[currentLang].bestBGOdds}</span>
+        <span class="pick-best">НАЙ-ДОБЪР БГ КФ</span>
       </div>
     </div>
 
     <div class="expand" id="exp-${m.id}">
       <div class="odds-sec">
-        <div class="odds-sec-title">${T[currentLang].oddsComparison}</div>
+        <div class="odds-sec-title">1 X 2 — Сравнение на коефициенти</div>
         <div class="odds-cols">
-          ${renderOddsBlock(T[currentLang].homeWin, m.odds.home)}
-          ${renderOddsBlock(T[currentLang].drawOdds, m.odds.draw)}
-          ${renderOddsBlock(T[currentLang].awayWin, m.odds.away)}
+          ${renderOddsBlock("1 — Домакин", m.odds.home)}
+          ${renderOddsBlock("X — Равенство", m.odds.draw)}
+          ${renderOddsBlock("2 — Гост", m.odds.away)}
         </div>
         ${extraOddsHtml}
       </div>
 
       <div class="exp-inner">
         <div class="iblock">
-          <div class="ibt">${T[currentLang].keyStats}</div>
-          ${(currentLang==='en'&&m.statsEn?m.statsEn:m.stats).map(s=>`<div class="irow"><span class="ikey">${s.k}</span><span class="ival ${s.g?'ival-g':'ival-r'}">${s.v}</span></div>`).join('')}
+          <div class="ibt">📊 Ключова статистика</div>
+          ${m.stats.map(s=>`<div class="irow"><span class="ikey">${s.k}</span><span class="ival ${s.g?'ival-g':'ival-r'}">${s.v}</span></div>`).join('')}
         </div>
         <div class="iblock">
-          <div class="ibt">${T[currentLang].injuriesLabel}</div>
+          <div class="ibt">🏥 Контузии & Наказания</div>
           <div style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,.03)">
             <div style="font-size:9px;color:var(--muted);margin-bottom:5px">${m.home}</div>
-            ${m.injuries.home.length?m.injuries.home.map(p=>`<span class="tag t-inj">🤕 ${p}</span>`).join(''):`<span class="t-ok">${T[currentLang].fullSquad}</span>`}
+            ${m.injuries.home.length?m.injuries.home.map(p=>`<span class="tag t-inj">🤕 ${p}</span>`).join(''):'<span class="t-ok">✅ Пълен отбор</span>'}
           </div>
           <div style="padding:5px 0">
             <div style="font-size:9px;color:var(--muted);margin-bottom:5px">${m.away}</div>
-            ${m.injuries.away.length?m.injuries.away.map(p=>`<span class="tag ${p.includes('🟨')?'t-sus':'t-inj'}">${p.includes('🟨')?'🟨':'🤕'} ${p}</span>`).join(''):`<span class="t-ok">${T[currentLang].fullSquad}</span>`}
+            ${m.injuries.away.length?m.injuries.away.map(p=>`<span class="tag ${p.includes('🟨')?'t-sus':'t-inj'}">${p.includes('🟨')?'🟨':'🤕'} ${p}</span>`).join(''):'<span class="t-ok">✅ Пълен отбор</span>'}
           </div>
         </div>
         <div class="iblock">
-          <div class="ibt">${T[currentLang].probLabel}</div>
-          <div class="irow"><span class="ikey">${T[currentLang].winLabel} ${m.homeA}</span><span class="ival ival-g">${m.prob.h.toFixed(1)}%</span></div>
-          <div class="irow"><span class="ikey">${T[currentLang].drawLabel}</span><span class="ival ival-y">${m.prob.d.toFixed(1)}%</span></div>
-          <div class="irow"><span class="ikey">${T[currentLang].winLabel} ${m.awayA}</span><span class="ival ival-r">${m.prob.a.toFixed(1)}%</span></div>
-          <div class="irow"><span class="ikey">${T[currentLang].predLabel}</span><span class="ival ival-g">${m.pred.result} (${m.pred.conf}%)</span></div>
-          <div class="irow"><span class="ikey">${T[currentLang].bestOddsRow}</span><span class="ival ival-g">${m.pick.odd} @ ${m.pick.book}</span></div>
+          <div class="ibt">📈 Вероятности</div>
+          <div class="irow"><span class="ikey">Победа ${m.homeA}</span><span class="ival ival-g">${m.prob.h.toFixed(1)}%</span></div>
+          <div class="irow"><span class="ikey">Равенство</span><span class="ival ival-y">${m.prob.d.toFixed(1)}%</span></div>
+          <div class="irow"><span class="ikey">Победа ${m.awayA}</span><span class="ival ival-r">${m.prob.a.toFixed(1)}%</span></div>
+          <div class="irow"><span class="ikey">Прогноза</span><span class="ival ival-g">${m.pred.result} (${m.pred.conf}%)</span></div>
+          <div class="irow"><span class="ikey">Най-добър БГ кф</span><span class="ival ival-g">${m.pick.odd} @ ${m.pick.book}</span></div>
         </div>
         <div class="aibox">
-          <div class="aibox-t">${T[currentLang].aiLabel}</div>
-          <div class="aitext">${currentLang==='en'?(m.aiEn||m.ai):m.ai}</div>
+          <div class="aibox-t">🤖 AI Анализ</div>
+          <div class="aitext">${m.ai}</div>
         </div>
       </div>
     </div>
@@ -1450,633 +1129,224 @@ function tog(id){
 }
 
 function render(){
-  const t=T[currentLang];
   const c=document.getElementById('container');
-  const elMatches = MATCHES.filter(m=>m.league==='el');
+  const sat = MATCHES.filter(m=>m.date==='2026-02-28');
+  const sun = MATCHES.filter(m=>m.date==='2026-03-01');
   let html=`<div>
-    <div class="section-header"><span class="sec-label">${t.dateLabelEL}</span><span class="sec-badge sb-today">${t.todayBadge}</span><div class="sec-line"></div></div>
-    <div class="league-pill"><span>🟠</span><span>${t.leagueLabelEL}</span></div>`;
-  elMatches.forEach((m,i)=>html+=renderCard(m,i));
+    <div class="section-header"><span class="sec-label">Събота, 28 Февруари 2026</span><span class="sec-badge sb-next">СЪБОТА</span><div class="sec-line"></div></div>
+    <div class="league-pill"><span>🏴󠁧󠁢󠁥󠁮󠁧󠁿</span><span>Premier League — Кръг 28</span></div>`;
+  sat.forEach((m,i)=>html+=renderCard(m,i));
+  html+=`<div class="section-header" style="margin-top:20px"><span class="sec-label">Неделя, 1 Март 2026</span><span class="sec-badge sb-next">НЕДЕЛЯ</span><div class="sec-line"></div></div>
+    <div class="league-pill"><span>🏴󠁧󠁢󠁥󠁮󠁧󠁿</span><span>Premier League — Кръг 28</span></div>`;
+  sun.forEach((m,i)=>html+=renderCard(m,i+sat.length));
   html+='</div>';
   c.innerHTML=html;
 }
 render();
 
 // ════════════════════════════════════════
-// TODAY'S PERFORMANCE SECTION
+// ACCURACY SECTION
 // ════════════════════════════════════════
 
-// Previous matchday record (24.02.2026)
-const PREV_RECORD = { date:"24.02.2026", correct:3, total:4 };
-
-// Update these after matches end: null = pending, 'W' = win, 'L' = loss
-const TODAY_RESULTS = {
-  atl_bvb: 'W',  // Atalanta vs Borussia Dortmund — BTTS ✓
-  juv_gal: 'W',  // Juventus vs Galatasaray — Over 2.5 ✓
-  psg_mon: 'L',  // PSG vs Monaco — PSG Win ✗
-  rma_ben: 'W',  // Real Madrid vs Benfica — Real Madrid Win ✓
-};
-
-const EN_MATCH_NAMES = {
-  atl_bvb: "Atalanta vs Borussia Dortmund",
-  juv_gal: "Juventus vs Galatasaray",
-  psg_mon: "PSG vs Monaco",
-  rma_ben: "Real Madrid vs Benfica",
-};
-
-function renderTodayPerf(){
-  const lang = currentLang;
-  const todayMatches = MATCHES.filter(m=>m.league==='cl');
-  const cards = todayMatches.map(m => {
-    const res = TODAY_RESULTS[m.id];
-    const statusKey = res === 'W' ? 'perfWin' : res === 'L' ? 'perfLoss' : 'perfPending';
-    const statusCls = res === 'W' ? 'win' : res === 'L' ? 'loss' : 'pending';
-    const cardCls   = res ? statusCls : '';
-    const matchName = lang === 'en' ? EN_MATCH_NAMES[m.id] : `${m.home} — ${m.away}`;
-    const bet = lang === 'en' ? m.pick.betEn : m.pick.bet;
-    return `<div class="perf-card ${cardCls}">
-      <div class="perf-status ${statusCls}">${T[lang][statusKey]}</div>
-      <div class="perf-match">${matchName}</div>
-      <div class="perf-pick">${bet}</div>
-      <div class="perf-odd">${T[lang].perfOddsLabel} ${m.pick.odd} @ ${m.pick.book}</div>
-    </div>`;
-  }).join('');
-
-  const wins  = Object.values(TODAY_RESULTS).filter(r => r === 'W').length;
-  const dones = Object.values(TODAY_RESULTS).filter(r => r !== null).length;
-  const total = todayMatches.length;
-  const allDone = dones === total;
-  const pct = dones ? Math.round(wins / dones * 100) : null;
-  const scoreColor = pct === null ? 'var(--yellow)' : pct >= 75 ? 'var(--green)' : pct >= 50 ? 'var(--yellow)' : 'var(--red)';
-  const scoreDisplay = dones > 0 ? `${wins}/${dones}` : `0/${total}`;
-
-  const prevColor = PREV_RECORD.correct / PREV_RECORD.total >= 0.75 ? 'var(--green)' : 'var(--yellow)';
-  const summary = `
-    <div>
-      <div class="perf-score" style="color:${scoreColor}">${scoreDisplay}</div>
-      <div class="perf-score-label">${T[lang].perfScoreLabel}</div>
-    </div>
-    <div class="perf-note">${allDone ? T[lang].perfNoteAll : T[lang].perfNoteWaiting}</div>
-    <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:11px;color:var(--muted)">
-      📅 ${T[lang].prevRecordLabel} ${PREV_RECORD.date} —
-      <span style="font-weight:700;color:${prevColor}">${PREV_RECORD.correct}/${PREV_RECORD.total}</span>
-      ${T[lang].prevRecordSuffix}
-    </div>`;
-
-  document.getElementById('perfGrid').innerHTML = cards;
-  document.getElementById('perfSummary').innerHTML = summary;
-}
-renderTodayPerf();
-
-// ════════════════════════════════════════
-// COMBO / BETSLIP SECTION
-// ════════════════════════════════════════
-
-const MARKETS_TO_FETCH = [
-  { id:"atl_1",   match:"Atalanta vs Borussia Dortmund",  market:"match_winner",   selection:"Atalanta" },
-  { id:"atl_x",   match:"Atalanta vs Borussia Dortmund",  market:"match_winner",   selection:"Draw" },
-  { id:"atl_2",   match:"Atalanta vs Borussia Dortmund",  market:"match_winner",   selection:"Borussia Dortmund" },
-  { id:"atl_btts",match:"Atalanta vs Borussia Dortmund",  market:"btts",           selection:"Yes" },
-  { id:"atl_o25", match:"Atalanta vs Borussia Dortmund",  market:"over_under_2_5", selection:"Over 2.5" },
-  { id:"juv_1",   match:"Juventus vs Galatasaray",        market:"match_winner",   selection:"Juventus" },
-  { id:"juv_x",   match:"Juventus vs Galatasaray",        market:"match_winner",   selection:"Draw" },
-  { id:"juv_2",   match:"Juventus vs Galatasaray",        market:"match_winner",   selection:"Galatasaray" },
-  { id:"juv_o25", match:"Juventus vs Galatasaray",        market:"over_under_2_5", selection:"Over 2.5" },
-  { id:"juv_btts",match:"Juventus vs Galatasaray",        market:"btts",           selection:"Yes" },
-  { id:"psg_1",   match:"PSG vs Monaco",                  market:"match_winner",   selection:"PSG" },
-  { id:"psg_x",   match:"PSG vs Monaco",                  market:"match_winner",   selection:"Draw" },
-  { id:"psg_2",   match:"PSG vs Monaco",                  market:"match_winner",   selection:"Monaco" },
-  { id:"psg_btts",match:"PSG vs Monaco",                  market:"btts",           selection:"Yes" },
-  { id:"psg_o25", match:"PSG vs Monaco",                  market:"over_under_2_5", selection:"Over 2.5" },
-  { id:"rma_1",   match:"Real Madrid vs Benfica",         market:"match_winner",   selection:"Real Madrid" },
-  { id:"rma_x",   match:"Real Madrid vs Benfica",         market:"match_winner",   selection:"Draw" },
-  { id:"rma_2",   match:"Real Madrid vs Benfica",         market:"match_winner",   selection:"Benfica" },
-  { id:"rma_btts",match:"Real Madrid vs Benfica",         market:"btts",           selection:"Yes" },
-  { id:"rma_o25", match:"Real Madrid vs Benfica",         market:"over_under_2_5", selection:"Over 2.5" },
-  { id:"plz_1",   match:"Viktoria Plzen vs Panathinaikos",market:"match_winner",   selection:"Viktoria Plzen" },
-  { id:"plz_btts",match:"Viktoria Plzen vs Panathinaikos",market:"btts",           selection:"Yes" },
-  { id:"lud_q",   match:"Ferencvaros vs Ludogorets",      market:"to_qualify",     selection:"Ludogorets" },
-  { id:"red_q",   match:"Red Star Belgrade vs Lille",     market:"to_qualify",     selection:"Red Star Belgrade" },
-  { id:"stu_1",   match:"Stuttgart vs Celtic",            market:"match_winner",   selection:"Stuttgart" },
-  { id:"bol_1",   match:"Bologna vs Brann",               market:"match_winner",   selection:"Bologna" },
-  { id:"gen_o25", match:"Genk vs Dinamo Zagreb",          market:"over_under_2_5", selection:"Over 2.5" },
-  { id:"for_o25", match:"Nottingham Forest vs Fenerbahce",market:"over_under_2_5", selection:"Over 2.5" },
-  { id:"cel_btts",match:"Celta vs PAOK",                  market:"btts",           selection:"Yes" },
+const HISTORY = [
+  // format: date, home, away, league, market, marketLabel, pred, odds, score, result (W/L/H=half win)
+  {d:"26.02",h:"Щутгарт",a:"Селтик",lg:"🟠 ЕЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Не",odd:"1.90",score:"0-1",res:"L"},
+  {d:"26.02",h:"Чрв. Звезда",a:"Лил",lg:"🟠 ЕЛ",mkt:"1x2",ml:"1X2",pred:"Чрв. Звезда КФ",odd:"2.10",score:"0-2",res:"L"},
+  {d:"26.02",h:"Нотингам",a:"Фенербахче",lg:"🟠 ЕЛ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.95",score:"1-2",res:"W"},
+  {d:"26.02",h:"Болоня",a:"Бран",lg:"🟠 ЕЛ",mkt:"1x2",ml:"1X2",pred:"1 (Болоня)",odd:"1.45",score:"1-0",res:"W"},
+  {d:"26.02",h:"Ференцварош",a:"Лудогорец",lg:"🟠 ЕЛ",mkt:"1x2",ml:"1X2",pred:"1 (Ференцварош)",odd:"1.60",score:"2-0",res:"L"},
+  {d:"24.02",h:"Нюкасъл",a:"Карабах",lg:"🏆 ЛЧ",mkt:"1x2",ml:"1X2",pred:"1 (Нюкасъл)",odd:"1.36",score:"TBD",res:null},
+  {d:"22.02",h:"Тотнъм",a:"Арсенал",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"2 (Арсенал)",odd:"2.10",score:"1-4",res:"W"},
+  {d:"22.02",h:"Тотнъм",a:"Арсенал",lg:"🏴 ПЛ",mkt:"ou",ml:"Над/Под",pred:"Над 3.5",odd:"2.00",score:"1-4",res:"W"},
+  {d:"22.02",h:"Сундерланд",a:"Фулъм",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"2 (Фулъм)",odd:"2.15",score:"1-3",res:"W"},
+  {d:"22.02",h:"Крист.Палас",a:"Уулвър.",lg:"🏴 ПЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Не",odd:"1.72",score:"1-0",res:"W"},
+  {d:"22.02",h:"Барселона",a:"Леванте",lg:"🇪🇸 ЛЛ",mkt:"1x2",ml:"1X2",pred:"1 (Барселона)",odd:"1.25",score:"3-0",res:"W"},
+  {d:"22.02",h:"Барселона",a:"Леванте",lg:"🇪🇸 ЛЛ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.55",score:"3-0",res:"W"},
+  {d:"22.02",h:"Аталанта",a:"Наполи",lg:"🇮🇹 СА",mkt:"1x2",ml:"1X2",pred:"X или 1",odd:"1.65",score:"2-1",res:"W"},
+  {d:"22.02",h:"АК Милан",a:"Парма",lg:"🇮🇹 СА",mkt:"1x2",ml:"1X2",pred:"1 (Милан)",odd:"1.70",score:"0-1",res:"L"},
+  {d:"22.02",h:"Байерн",a:"Айнтрахт",lg:"🇩🇪 БЛ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.60",score:"3-2",res:"W"},
+  {d:"21.02",h:"Осасуна",a:"Реал Мадрид",lg:"🇪🇸 ЛЛ",mkt:"1x2",ml:"1X2",pred:"2 (Р.Мадрид)",odd:"1.40",score:"2-1",res:"L"},
+  {d:"21.02",h:"Атлетико",a:"Еспаньол",lg:"🇪🇸 ЛЛ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.75",score:"4-2",res:"W"},
+  {d:"21.02",h:"Атлетико",a:"Еспаньол",lg:"🇪🇸 ЛЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.65",score:"4-2",res:"W"},
+  {d:"21.02",h:"Манч.Сити",a:"Нюкасъл",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"1 (М.Сити)",odd:"1.65",score:"2-1",res:"W"},
+  {d:"21.02",h:"Ювентус",a:"Комо",lg:"🇮🇹 СА",mkt:"1x2",ml:"1X2",pred:"1 (Ювентус)",odd:"1.55",score:"0-2",res:"L"},
+  {d:"21.02",h:"РБ Лайпциг",a:"Дортмунд",lg:"🇩🇪 БЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.72",score:"2-2",res:"W"},
+  {d:"21.02",h:"Байерн",a:"Айнтрахт",lg:"🇩🇪 БЛ",mkt:"1x2",ml:"1X2",pred:"1 (Байерн)",odd:"1.45",score:"3-2",res:"W"},
+  {d:"20.02",h:"Атлетик Б.",a:"Елче",lg:"🇪🇸 ЛЛ",mkt:"1x2",ml:"1X2",pred:"1 (Атлетик)",odd:"2.00",score:"2-1",res:"W"},
+  {d:"20.02",h:"Рома",a:"Кремонезе",lg:"🇮🇹 СА",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.65",score:"3-0",res:"W"},
+  {d:"18.02",h:"Нюкасъл",a:"Карабах",lg:"🏆 ЛЧ",mkt:"1x2",ml:"1X2",pred:"1 (Нюкасъл)",odd:"1.28",score:"6-1",res:"W"},
+  {d:"18.02",h:"Нюкасъл",a:"Карабах",lg:"🏆 ЛЧ",mkt:"ou",ml:"Над/Под",pred:"Над 3.5",odd:"1.85",score:"6-1",res:"W"},
+  {d:"18.02",h:"Монако",a:"ПСЖ",lg:"🏆 ЛЧ",mkt:"1x2",ml:"1X2",pred:"2 (ПСЖ)",odd:"1.90",score:"2-3",res:"W"},
+  {d:"18.02",h:"Бенфика",a:"Реал Мадрид",lg:"🏆 ЛЧ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"2.00",score:"0-1",res:"L"},
+  {d:"17.02",h:"Дортмунд",a:"Аталанта",lg:"🏆 ЛЧ",mkt:"1x2",ml:"1X2",pred:"1X (DN загуба)",odd:"1.60",score:"2-0",res:"W"},
+  {d:"17.02",h:"Галатасарай",a:"Ювентус",lg:"🏆 ЛЧ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.70",score:"5-2",res:"W"},
+  {d:"17.02",h:"Галатасарай",a:"Ювентус",lg:"🏆 ЛЧ",mkt:"ou",ml:"Над/Под",pred:"Над 3.5",odd:"2.05",score:"5-2",res:"W"},
+  {d:"15.02",h:"Арсенал",a:"Ман Сити",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"1 (Арсенал)",odd:"2.20",score:"2-1",res:"W"},
+  {d:"15.02",h:"Ливърпул",a:"Евертън",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"1 (Ливърпул)",odd:"1.35",score:"3-0",res:"W"},
+  {d:"15.02",h:"Ливърпул",a:"Евертън",lg:"🏴 ПЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Не",odd:"1.80",score:"3-0",res:"W"},
+  {d:"14.02",h:"Барселона",a:"Реал Мадрид",lg:"🇪🇸 ЛЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.60",score:"2-1",res:"W"},
+  {d:"14.02",h:"Барселона",a:"Реал Мадрид",lg:"🇪🇸 ЛЛ",mkt:"1x2",ml:"1X2",pred:"1 (Барселона)",odd:"2.10",score:"2-1",res:"W"},
+  {d:"12.02",h:"Интер",a:"Наполи",lg:"🇮🇹 СА",mkt:"1x2",ml:"1X2",pred:"1X (DN загуба)",odd:"1.55",score:"2-2",res:"W"},
+  {d:"11.02",h:"Байерн",a:"Леверкузен",lg:"🇩🇪 БЛ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.65",score:"3-1",res:"W"},
+  {d:"11.02",h:"Дортмунд",a:"Щутгарт",lg:"🇩🇪 БЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.75",score:"3-2",res:"W"},
+  {d:"08.02",h:"Ман Сити",a:"Тотнъм",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"1 (М.Сити)",odd:"1.75",score:"1-0",res:"W"},
+  {d:"08.02",h:"Атлетико",a:"Виляреал",lg:"🇪🇸 ЛЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.68",score:"2-1",res:"W"},
+  {d:"07.02",h:"Байерн",a:"Кьолн",lg:"🇩🇪 БЛ",mkt:"hn",ml:"Хенди",pred:"Байерн -1.5",odd:"1.85",score:"4-1",res:"W"},
+  {d:"05.02",h:"Челси",a:"Арсенал",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"2 (Арсенал)",odd:"2.30",score:"0-2",res:"W"},
+  {d:"04.02",h:"Лацио",a:"Рома",lg:"🇮🇹 СА",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.72",score:"1-2",res:"W"},
+  {d:"02.02",h:"Реал Мадрид",a:"Атлетико",lg:"🇪🇸 ЛЛ",mkt:"1x2",ml:"1X2",pred:"1X (DN загуба)",odd:"1.45",score:"2-2",res:"W"},
+  {d:"01.02",h:"Ман Сити",a:"Арсенал",lg:"🏴 ПЛ",mkt:"1x2",ml:"1X2",pred:"2 (Арсенал)",odd:"2.15",score:"3-1",res:"L"},
+  {d:"28.01",h:"Нюкасъл",a:"Евертън",lg:"🏴 ПЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Не",odd:"1.78",score:"1-0",res:"W"},
+  {d:"26.01",h:"Интер",a:"Аталанта",lg:"🇮🇹 СА",mkt:"1x2",ml:"1X2",pred:"1 (Интер)",odd:"1.72",score:"2-0",res:"W"},
+  {d:"25.01",h:"Барселона",a:"Атлетик Б.",lg:"🇪🇸 ЛЛ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.70",score:"2-0",res:"L"},
+  {d:"22.01",h:"Реал Мадрид",a:"Леванте",lg:"🇪🇸 ЛЛ",mkt:"1x2",ml:"1X2",pred:"1 (Р.Мадрид)",odd:"1.30",score:"3-0",res:"W"},
+  {d:"19.01",h:"Байерн",a:"РБ Лайпциг",lg:"🇩🇪 БЛ",mkt:"1x2",ml:"1X2",pred:"1 (Байерн)",odd:"1.55",score:"2-0",res:"W"},
+  {d:"18.01",h:"Арсенал",a:"Фулъм",lg:"🏴 ПЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.65",score:"1-1",res:"W"},
+  {d:"15.01",h:"Ювентус",a:"Милан",lg:"🇮🇹 СА",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.68",score:"0-1",res:"L"},
+  {d:"12.01",h:"Дортмунд",a:"Байерн",lg:"🇩🇪 БЛ",mkt:"ou",ml:"Над/Под",pred:"Над 2.5",odd:"1.70",score:"1-4",res:"W"},
+  {d:"10.01",h:"Тотнъм",a:"Ман Юнайтед",lg:"🏴 ПЛ",mkt:"btts",ml:"BTTS",pred:"BTTS Да",odd:"1.72",score:"2-1",res:"W"},
 ];
 
-const FALLBACK_ODDS = {
-  atl_1:"2.20", atl_x:"3.60", atl_2:"3.40", atl_btts:"1.75", atl_o25:"1.80",
-  juv_1:"1.80", juv_x:"3.60", juv_2:"4.50", juv_o25:"1.65", juv_btts:"1.70",
-  psg_1:"1.60", psg_x:"3.80", psg_2:"5.00", psg_btts:"1.80", psg_o25:"1.75",
-  rma_1:"1.65", rma_x:"3.80", rma_2:"5.25", rma_btts:"1.85", rma_o25:"1.80",
-  plz_1:"2.00", plz_x:"3.10", plz_2:"3.80", plz_btts:"1.85", plz_o25:"2.10",
-  fer_1:"1.57", fer_x:"4.00", fer_2:"5.00", lud_q:"2.20",    fer_o25:"1.67",
-  red_1:"2.70", red_x:"3.25", red_2:"2.45", red_q:"1.50",    red_btts:"1.75",
-  stu_1:"1.36", stu_x:"5.00", stu_2:"7.00", stu_o25:"1.36",  stu_btts:"1.85",
-  bol_1:"1.50", bol_x:"4.00", bol_2:"5.80", bol_o25:"1.73",  bol_btts:"1.80",
-  gen_1:"2.30", gen_x:"3.30", gen_2:"2.88", gen_o25:"1.75",  gen_btts:"1.75",
-  for_1:"1.60", for_x:"4.00", for_2:"4.80", for_o25:"1.65",  for_btts:"1.75",
-  cel_1:"1.65", cel_x:"3.70", cel_2:"4.80", cel_btts:"1.80", cel_o25:"1.85",
-};
+let visibleRows = 15;
+let currentMarket = 'all';
 
-let LIVE_ODDS = { ...FALLBACK_ODDS };
-let oddsLoaded = false;
-
-async function fetchLiveOdds() {
-  const loadingEl = document.getElementById('oddsLoadingBar');
-  if (loadingEl) loadingEl.style.display = 'flex';
-
-  try {
-    const res = await fetch('data/live_odds.json?t=' + Date.now());
-    if (!res.ok) throw new Error('not found');
-    const data = await res.json();
-    if (data.odds && typeof data.odds === 'object') {
-      LIVE_ODDS = { ...FALLBACK_ODDS, ...data.odds };
-      oddsLoaded = true;
-      updateOddsInUI();
-      showOddsStatus('live', data.updated_at, data.bookmaker);
-    } else {
-      showOddsStatus('fallback');
-    }
-  } catch(e) {
-    console.warn('Odds fetch failed:', e);
-    showOddsStatus('fallback');
-  }
-
-  if (loadingEl) loadingEl.style.display = 'none';
+function getFiltered(){
+  if(currentMarket==='all') return HISTORY.filter(x=>x.res!==null);
+  return HISTORY.filter(x=>x.res!==null && x.mkt===currentMarket);
 }
 
-function showOddsStatus(type, updatedAt, bookmaker) {
-  const el = document.getElementById('oddsStatus');
-  if (!el) return;
-  if (type === 'live') {
-    const bkName = bookmaker || 'William Hill';
-    const timeStr = updatedAt ? ' · ' + updatedAt.replace('T',' ').replace('Z','') + ' UTC' : '';
-    el.innerHTML = `<span style="color:var(--green)">⚡ Живи коефициенти от ${bkName}${timeStr}</span>`;
-  } else {
-    el.innerHTML = `<span style="color:var(--muted)">📋 Индикативни коефициенти · <button onclick="fetchLiveOdds()" style="background:none;border:none;color:var(--yellow);cursor:pointer;font-size:11px;text-decoration:underline">Обнови →</button></span>`;
-  }
+function calcKPIs(data){
+  const total = data.length;
+  const wins  = data.filter(x=>x.res==='W').length;
+  const losses= data.filter(x=>x.res==='L').length;
+  const byMkt = {};
+  data.forEach(x=>{
+    if(!byMkt[x.ml]) byMkt[x.ml]={w:0,t:0};
+    byMkt[x.ml].t++; if(x.res==='W') byMkt[x.ml].w++;
+  });
+  return { total, wins, losses, pct: total? Math.round(wins/total*100):0, byMkt };
 }
 
-function updateOddsInUI() {
-  rebuildComboData();
-  renderCombos();
-  renderCCBPicks();
-}
-
-function rebuildComboData() {
-  const o = LIVE_ODDS;
-  // Combo 0: safe2 — Stuttgart + Bologna
-  PRESET_COMBOS[0].picks[0].odd = parseFloat(o.stu_1);
-  PRESET_COMBOS[0].picks[1].odd = parseFloat(o.bol_1);
-  // Combo 1: goals3 — Forest O2.5 + Genk O2.5 + Celta BTTS
-  PRESET_COMBOS[1].picks[0].odd = parseFloat(o.for_o25);
-  PRESET_COMBOS[1].picks[1].odd = parseFloat(o.gen_o25);
-  PRESET_COMBOS[1].picks[2].odd = parseFloat(o.cel_btts);
-  // Combo 2: el3 — Stuttgart + Bologna + Forest O2.5
-  PRESET_COMBOS[2].picks[0].odd = parseFloat(o.stu_1);
-  PRESET_COMBOS[2].picks[1].odd = parseFloat(o.bol_1);
-  PRESET_COMBOS[2].picks[2].odd = parseFloat(o.for_o25);
-  // Combo 3: bulg — Ludogorets qualify + Red Star qualify
-  PRESET_COMBOS[3].picks[0].odd = parseFloat(o.lud_q);
-  PRESET_COMBOS[3].picks[1].odd = parseFloat(o.red_q);
-  // Combo 4: el4 — Stuttgart + Bologna + Red Star + Forest O2.5
-  PRESET_COMBOS[4].picks[0].odd = parseFloat(o.stu_1);
-  PRESET_COMBOS[4].picks[1].odd = parseFloat(o.bol_1);
-  PRESET_COMBOS[4].picks[2].odd = parseFloat(o.red_q);
-  PRESET_COMBOS[4].picks[3].odd = parseFloat(o.for_o25);
-  // Combo 5: mega5 — Stuttgart + Bologna + Red Star + Forest O2.5 + Genk O2.5
-  PRESET_COMBOS[5].picks[0].odd = parseFloat(o.stu_1);
-  PRESET_COMBOS[5].picks[1].odd = parseFloat(o.bol_1);
-  PRESET_COMBOS[5].picks[2].odd = parseFloat(o.red_q);
-  PRESET_COMBOS[5].picks[3].odd = parseFloat(o.for_o25);
-  PRESET_COMBOS[5].picks[4].odd = parseFloat(o.gen_o25);
-  // Single picks (EL only, 8 picks)
-  ALL_SINGLE_PICKS[0].odd = parseFloat(o.lud_q);
-  ALL_SINGLE_PICKS[1].odd = parseFloat(o.red_q);
-  ALL_SINGLE_PICKS[2].odd = parseFloat(o.stu_1);
-  ALL_SINGLE_PICKS[3].odd = parseFloat(o.bol_1);
-  ALL_SINGLE_PICKS[4].odd = parseFloat(o.for_o25);
-  ALL_SINGLE_PICKS[5].odd = parseFloat(o.plz_1);
-  ALL_SINGLE_PICKS[6].odd = parseFloat(o.cel_btts);
-  ALL_SINGLE_PICKS[7].odd = parseFloat(o.gen_o25);
-}
-
-const PRESET_COMBOS = [
-  {
-    id:"safe2", badge:"cb-safe", badgeText:"🛡 СИГУРНА",
-    name:"Двойна Сигурност", conf:68, legs:2,
-    picks:[
-      {match:"Щутгарт — Селтик", bet:"Щутгарт победа", odd:parseFloat(FALLBACK_ODDS.stu_1), book:"William Hill", bookKey:"williamhill"},
-      {match:"Болоня — Бран",    bet:"Болоня победа",   odd:parseFloat(FALLBACK_ODDS.bol_1), book:"William Hill", bookKey:"williamhill"},
-    ]
-  },
-  {
-    id:"goals3", badge:"cb-val", badgeText:"⚽ ГОЛОВЕ",
-    name:"Голов Тройник", conf:52, legs:3,
-    picks:[
-      {match:"Форест — Фенербахче",  bet:"Над 2.5 гола", odd:parseFloat(FALLBACK_ODDS.for_o25),  book:"William Hill", bookKey:"williamhill"},
-      {match:"Хенк — Динамо Загреб", bet:"Над 2.5 гола", odd:parseFloat(FALLBACK_ODDS.gen_o25),  book:"William Hill", bookKey:"williamhill"},
-      {match:"Селта — ПАОК",         bet:"BTTS Да",       odd:parseFloat(FALLBACK_ODDS.cel_btts), book:"Bet365",       bookKey:"bet365"},
-    ]
-  },
-  {
-    id:"el3", badge:"cb-safe", badgeText:"🛡 СИГУРНА",
-    name:"ЛЕ Тройка", conf:60, legs:3,
-    picks:[
-      {match:"Щутгарт — Селтик",    bet:"Щутгарт победа", odd:parseFloat(FALLBACK_ODDS.stu_1),   book:"William Hill", bookKey:"williamhill"},
-      {match:"Болоня — Бран",       bet:"Болоня победа",   odd:parseFloat(FALLBACK_ODDS.bol_1),   book:"William Hill", bookKey:"williamhill"},
-      {match:"Форест — Фенербахче", bet:"Над 2.5 гола",    odd:parseFloat(FALLBACK_ODDS.for_o25), book:"William Hill", bookKey:"williamhill"},
-    ]
-  },
-  {
-    id:"bulg", badge:"cb-val", badgeText:"🇧🇬 БЪЛГАРСКИ",
-    name:"Български Специал 🇧🇬", conf:46, legs:2,
-    picks:[
-      {match:"Ференцварош — Лудогорец", bet:"Лудогорец квалификация", odd:parseFloat(FALLBACK_ODDS.lud_q), book:"Bet365", bookKey:"bet365"},
-      {match:"Ц. Звезда — Лил",         bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q), book:"Bet365", bookKey:"bet365"},
-
-    ]
-  },
-  {
-    id:"el4", badge:"cb-val", badgeText:"🟠 ЛЕ ЧЕТВОРКА",
-    name:"ЛЕ Четворка", conf:42, legs:4,
-    picks:[
-      {match:"Щутгарт — Селтик",    bet:"Щутгарт победа",         odd:parseFloat(FALLBACK_ODDS.stu_1),   book:"William Hill", bookKey:"williamhill"},
-      {match:"Болоня — Бран",       bet:"Болоня победа",           odd:parseFloat(FALLBACK_ODDS.bol_1),   book:"William Hill", bookKey:"williamhill"},
-      {match:"Ц. Звезда — Лил",     bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q),   book:"Bet365",       bookKey:"bet365"},
-      {match:"Форест — Фенербахче", bet:"Над 2.5 гола",            odd:parseFloat(FALLBACK_ODDS.for_o25), book:"William Hill", bookKey:"williamhill"},
-    ]
-  },
-  {
-    id:"mega5", badge:"cb-risky", badgeText:"🔥 МЕГА КОМБО",
-    name:"Мега ЛЕ Комбо", conf:26, legs:5,
-    picks:[
-      {match:"Щутгарт — Селтик",     bet:"Щутгарт победа",         odd:parseFloat(FALLBACK_ODDS.stu_1),   book:"William Hill", bookKey:"williamhill"},
-      {match:"Болоня — Бран",        bet:"Болоня победа",           odd:parseFloat(FALLBACK_ODDS.bol_1),   book:"William Hill", bookKey:"williamhill"},
-      {match:"Ц. Звезда — Лил",      bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q),   book:"Bet365",       bookKey:"bet365"},
-      {match:"Форест — Фенербахче",  bet:"Над 2.5 гола",            odd:parseFloat(FALLBACK_ODDS.for_o25), book:"William Hill", bookKey:"williamhill"},
-      {match:"Хенк — Динамо Загреб", bet:"Над 2.5 гола",            odd:parseFloat(FALLBACK_ODDS.gen_o25), book:"William Hill", bookKey:"williamhill"},
-    ]
-  },
-];
-
-const ALL_SINGLE_PICKS = [
-  {id:"p1", match:"Ференцварош — Лудогорец", bet:"Лудогорец квалификация", odd:parseFloat(FALLBACK_ODDS.lud_q),    book:"Bet365",      bookKey:"bet365",      conf:58},
-  {id:"p2", match:"Ц. Звезда — Лил",         bet:"Ц.Звезда квалификация",  odd:parseFloat(FALLBACK_ODDS.red_q),    book:"Bet365",      bookKey:"bet365",      conf:68},
-  {id:"p3", match:"Щутгарт — Селтик",        bet:"Щутгарт победа",         odd:parseFloat(FALLBACK_ODDS.stu_1),    book:"William Hill",bookKey:"williamhill", conf:72},
-  {id:"p4", match:"Болоня — Бран",           bet:"Болоня победа",           odd:parseFloat(FALLBACK_ODDS.bol_1),    book:"William Hill",bookKey:"williamhill", conf:73},
-  {id:"p5", match:"Форест — Фенербахче",     bet:"Над 2.5 гола",           odd:parseFloat(FALLBACK_ODDS.for_o25),  book:"William Hill",bookKey:"williamhill", conf:70},
-  {id:"p6", match:"Плзен — Панатинаикос",    bet:"Плзен победа",           odd:parseFloat(FALLBACK_ODDS.plz_1),    book:"William Hill",bookKey:"williamhill", conf:55},
-  {id:"p7", match:"Селта — ПАОК",            bet:"BTTS Да",                odd:parseFloat(FALLBACK_ODDS.cel_btts), book:"Bet365",      bookKey:"bet365",      conf:62},
-  {id:"p8", match:"Хенк — Динамо Загреб",    bet:"Над 2.5 гола",           odd:parseFloat(FALLBACK_ODDS.gen_o25),  book:"William Hill",bookKey:"williamhill", conf:67},
-];
-
-let betslip = [];
-
-function totalOdd(){ return betslip.reduce((a,x)=>a*parseFloat(x.odd),1); }
-
-function recalcBetslip(){
-  const stake = parseFloat(document.getElementById('bsStake').value)||10;
-  const total = totalOdd();
-  document.getElementById('bsTotalOdd').textContent = total.toFixed(2);
-  document.getElementById('bsLegsCount').textContent = betslip.length;
-  document.getElementById('bsCount').textContent = betslip.length + ' избор' + (betslip.length===1?'':'а');
-  document.getElementById('bsWin').textContent = (stake * total).toFixed(2) + ' лв.';
-}
-
-function addToBetslip(id, match, bet, odd, book, bookKey){
-  if(betslip.find(x=>x.id===id)) return;
-  betslip.push({id,match,bet,odd,book,bookKey});
-  renderBetslip();
-  renderCCBPicks();
-}
-
-function removeFromBetslip(id){
-  betslip = betslip.filter(x=>x.id!==id);
-  renderBetslip();
-  renderCCBPicks();
-}
-
-function renderBetslip(){
-  const legsEl = document.getElementById('bsLegs');
-  const totEl  = document.getElementById('bsTotals');
-  if(!betslip.length){
-    legsEl.innerHTML='<div class="bs-empty">Добавете избори от комбинациите или от таблицата</div>';
-    totEl.style.display='none';
-    document.getElementById('bsCount').textContent='0 избора';
-    return;
-  }
-  totEl.style.display='block';
-  legsEl.innerHTML=`<div class="bs-legs">${betslip.map(x=>{
-    const bk=BOOKS[x.bookKey]||{name:x.book,color:'#888'};
-    return `<div class="bs-leg">
-      <div class="bs-leg-left">
-        <div class="bs-leg-match">${x.match}</div>
-        <div class="bs-leg-pick">${x.bet}</div>
-      </div>
-      <div class="bs-leg-right">
-        <div class="bs-leg-odd">${parseFloat(x.odd).toFixed(2)}</div>
-        <div class="bs-leg-book" style="color:${bk.color}">${bk.name}</div>
-        <div class="bs-leg-remove" onclick="removeFromBetslip('${x.id}');event.stopPropagation()">✕ Премахни</div>
-      </div>
-    </div>`;
-  }).join('')}</div>`;
-  recalcBetslip();
-}
-
-function addComboToBetslip(comboId){
-  const combo = PRESET_COMBOS.find(c=>c.id===comboId);
-  if(!combo) return;
-  betslip = combo.picks.map((p,i)=>({
-    id: comboId+'_'+i,
-    match: p.match, bet: p.bet, odd: p.odd, book: p.book, bookKey: p.bookKey
-  }));
-  renderBetslip();
-  renderCCBPicks();
-  document.getElementById('bsStake').value = 10;
-  recalcBetslip();
-  document.getElementById('bsLegs').scrollIntoView({behavior:'smooth',block:'center'});
-}
-
-function placeBet(){
-  const stake = parseFloat(document.getElementById('bsStake').value)||10;
-  const win = (stake * totalOdd()).toFixed(2);
-  alert(`✅ Комбинацията е изпратена!\n\nОбща квота: ${totalOdd().toFixed(2)}\nЗалог: ${stake} лв.\nПотенциална печалба: ${win} лв.\n\n(Демо режим — реално залагане изисква акаунт при букмейкъра)`);
-}
-
-function renderCombos(){
-  const el = document.getElementById('comboCards');
-  el.innerHTML = PRESET_COMBOS.map(c=>{
-    const total = c.picks.reduce((a,p)=>a*p.odd,1).toFixed(2);
-    const cfColor = c.conf>=60?'var(--green)':c.conf>=40?'var(--yellow)':'var(--red)';
-    const cfFill  = c.conf>=60?'cf-high':c.conf>=40?'cf-mid':'cf-low';
-    const bk = BOOKS[c.picks[0].bookKey]||{name:c.picks[0].book,color:'#888'};
-    return `<div class="combo-card" id="cc-${c.id}">
-      <div class="combo-card-top">
-        <div class="combo-card-info">
-          <div class="combo-badge ${c.badge}">${c.badgeText}</div>
-          <div class="combo-name">${c.name}</div>
-          <div class="combo-picks">
-            ${c.picks.map(p=>`<div class="combo-pick-item"><div class="combo-pick-dot"></div>${p.match} — <strong>${p.bet}</strong></div>`).join('')}
-          </div>
-        </div>
-        <div class="combo-right">
-          <div class="combo-legs">${c.legs} ИЗБОРА</div>
-          <div class="combo-total-odd">${total}</div>
-          <div class="combo-conf-wrap">
-            <div class="combo-cbar"><div class="combo-cfill ${cfFill}" style="width:${c.conf}%"></div></div>
-            <div class="combo-cpct" style="color:${cfColor}">${c.conf}%</div>
-          </div>
-        </div>
-      </div>
-      <div class="combo-footer">
-        <div class="combo-book-row">
-          <div class="combo-book-dot" style="background:${bk.color}"></div>
-          <span style="color:var(--muted);font-size:11px">Основно: ${bk.name}</span>
-          <span class="combo-best-label">BEST ODDS</span>
-        </div>
-        <button class="combo-select-btn off" id="btn-${c.id}" onclick="addComboToBetslip('${c.id}');event.stopPropagation()">+ Добави →</button>
-      </div>
-    </div>`;
-  }).join('');
-}
-
-function renderCCBPicks(){
-  const el = document.getElementById('ccbPicks');
-  el.innerHTML = ALL_SINGLE_PICKS.map(p=>{
-    const inSlip = betslip.find(x=>x.id===p.id);
-    const bk = BOOKS[p.bookKey]||{name:p.book,color:'#888'};
-    const confColor = p.conf>=70?'var(--green)':p.conf>=50?'var(--yellow)':'var(--red)';
-    return `<div class="ccb-pick ${inSlip?'added':''}">
-      <div class="ccb-pick-left">
-        <div class="ccb-pick-match">${p.match}</div>
-        <div class="ccb-pick-bet">${p.bet} <span style="font-size:9px;color:${confColor}">(${p.conf}%)</span></div>
-      </div>
-      <div class="ccb-pick-right">
-        <div style="text-align:right">
-          <div class="ccb-odd">${p.odd.toFixed(2)}</div>
-          <div style="font-size:9px;color:${bk.color}">${bk.name}</div>
-        </div>
-        <button class="ccb-add ${inSlip?'on':'off'}" onclick="${inSlip?`removeFromBetslip('${p.id}')`:`addToBetslip('${p.id}','${p.match}','${p.bet}',${p.odd},'${p.book}','${p.bookKey}')`};event.stopPropagation()">
-          ${inSlip?'✓ Добавен':'+ Добави'}
-        </button>
-      </div>
-    </div>`;
-  }).join('');
-}
-
-// ════════════════════════════════════════
-// BUILD-A-BET BOX
-// ════════════════════════════════════════
-const BUILD_BET = {
-  home:"Щутгарт", homeEn:"Stuttgart",
-  away:"Селтик", awayEn:"Celtic",
-  time:"18:45", league:"ЛЕ · Днес", leagueEn:"UEL · Today",
-  legs:[
-    { bet:"Щутгарт победа",        betEn:"Stuttgart Win",         icon:"🏆", conf:72, estOdd:1.36 },
-    { bet:"Над 1.5 гола",          betEn:"Over 1.5 Goals",        icon:"⚽", conf:82, estOdd:1.38 },
-    { bet:"Щутгарт гол 1-во полувр.", betEn:"Stuttgart HT goal", icon:"⏱", conf:68, estOdd:1.55 },
-  ],
-  ai:"Щутгарт доминираха в Глазгоу с 4-1. Вкъщи пред 60 000 фена Щутгарт са непобедими в ЛЕ. Силен нападателен арсенал + Щутгарт водят в над 70% от домашните си мачове в първото полувреме. Три взаимно усилващи се избора от един мач.",
-  aiEn:"Stuttgart dominated in Glasgow 4-1. At home in front of 60,000 fans Stuttgart are unbeaten in UEL. Strong attacking arsenal + Stuttgart lead at HT in 70%+ of their home games. Three mutually reinforcing selections from one match.",
-};
-
-const MULTI_PICK = {
-  type:"Lucky 15", typeSub:"4 избора · 15 залога (4 сингъла + 6 двойки + 4 тройки + 1 четворка)",
-  typeEn:"Lucky 15", typeSubEn:"4 selections · 15 bets (4 singles + 6 doubles + 4 trebles + 1 fourfold)",
-  unitStake: 1,
-  legs:[
-    { match:"Селта — ПАОК",           matchEn:"Celta Vigo — PAOK",        bet:"Селта победа",            betEn:"Celta Vigo Win",         odd:1.65, conf:65, book:"William Hill", bookKey:"williamhill" },
-    { match:"Плзен — Панатинаикос",   matchEn:"Plzen — Panathinaikos",    bet:"Плзен победа",            betEn:"Plzen Win",              odd:2.00, conf:58, book:"William Hill", bookKey:"williamhill" },
-    { match:"Хенк — Динамо Загреб",   matchEn:"Genk — Dinamo Zagreb",     bet:"Хенк победа",             betEn:"Genk Win",               odd:2.30, conf:60, book:"William Hill", bookKey:"williamhill" },
-    { match:"Форест — Фенербахче",    matchEn:"Nottm Forest — Fenerbahce",bet:"Над 2.5 гола",            betEn:"Over 2.5 Goals",         odd:1.65, conf:70, book:"William Hill", bookKey:"williamhill" },
-  ],
-  ai:"Lucky 15 с реални коефициенти от William Hill — средна квота 1.90. Селта водят 2-1 и приемат вкъщи, Плзен се нуждаят от победа след равенство 2-2, Хенк са фаворити у дома с аванс 3-1, Форест вкарваха в Истанбул 3-0 и ще продължат да атакуват. Дори 2 от 4 попадения носят печалба.",
-  aiEn:"Lucky 15 with real William Hill odds — average odds 1.90. Celta lead 2-1 at home, Plzen need a win after 2-2 draw, Genk favourites at home leading 3-1, Forest scored 3 in Istanbul and will attack again. Even 2 of 4 wins returns profit.",
-};
-
-function renderBuildBet(){
-  const lang = currentLang;
-  const bb = BUILD_BET;
-  const combined = bb.legs.reduce((acc,l)=>acc*l.estOdd,1);
-  const legsHtml = bb.legs.map(l=>`
-    <div class="bab-leg">
-      <div class="bab-leg-left">
-        <div class="bab-leg-icon">${l.icon}</div>
-        <div>
-          <div class="bab-leg-bet">${lang==='en'?l.betEn:l.bet}</div>
-          <div class="bab-leg-conf">${l.conf}% ${lang==='en'?'confidence':'реален шанс'}</div>
-        </div>
-      </div>
-      <div class="bab-leg-odd">~${l.estOdd.toFixed(2)}</div>
-    </div>`).join('');
-  document.getElementById('babBox').innerHTML = `
-    <div class="bab-header">
-      <div class="bab-title">${lang==='en'?'🔨 BUILD A BET':'🔨 ИЗГРАДИ ЗАЛОГ'}</div>
-      <div class="bab-badge">SGM · AI</div>
-    </div>
-    <div class="bab-match">
-      <div class="bab-match-name">${lang==='en'?bb.homeEn:bb.home} — ${lang==='en'?bb.awayEn:bb.away}</div>
-      <div class="bab-match-meta">${bb.time} · ${lang==='en'?bb.leagueEn:bb.league}</div>
-    </div>
-    <div>${legsHtml}</div>
-    <div class="bab-footer">
-      <div class="bab-combo-row">
-        <div>
-          <div class="bab-combo-label">${lang==='en'?'Combined Odds':'Обща квота'}</div>
-          <div style="font-size:9px;color:var(--muted);margin-top:2px">${lang==='en'?'indicative · verify with your bookmaker':'индикативна · провери при букмейкъра'}</div>
-        </div>
-        <div class="bab-combo-odd">~${combined.toFixed(2)}</div>
-      </div>
-      <div class="bab-ai">${lang==='en'?bb.aiEn:bb.ai}</div>
-    </div>`;
-}
-
-function renderMultiPick(){
-  const lang = currentLang;
-  const mp = MULTI_PICK;
-  const u = mp.unitStake;
-  const odds = mp.legs.map(l=>l.odd);
-  // Calculate key returns (all 15 bets at unit stake each = 15u total)
-  const fourfold = odds.reduce((a,b)=>a*b,1);
-  const trebles  = [[0,1,2],[0,1,3],[0,2,3],[1,2,3]].reduce((s,idx)=>s+idx.reduce((a,i)=>a*odds[i],1),0);
-  const doubles  = [[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]].reduce((s,idx)=>s+idx.reduce((a,i)=>a*odds[i],1),0);
-  const singles  = odds.reduce((a,b)=>a+b,0);
-  const totalReturn = (singles+doubles+trebles+fourfold)*u;
-  const totalStake  = 15*u;
-  const legsHtml = mp.legs.map((l,i)=>`
-    <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 16px;border-bottom:1px solid rgba(255,255,255,.03)">
-      <div>
-        <div style="font-size:10px;font-weight:600">${lang==='en'?l.matchEn:l.match}</div>
-        <div style="font-size:9px;color:var(--muted);margin-top:1px">${lang==='en'?l.betEn:l.bet} · ${l.conf}%</div>
-      </div>
-      <div style="text-align:right;flex-shrink:0">
-        <div style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent);font-weight:700">${l.odd.toFixed(2)}</div>
-        ${l.bookKey==='williamhill'?`<div style="font-size:8px;color:#5b8dd9;font-weight:600">W.Hill ⚡</div>`:''}
-      </div>
-    </div>`).join('');
-  document.getElementById('multiPickBox').innerHTML = `
-    <div class="bab-box" style="border-color:rgba(99,102,241,.3);margin-top:0">
-      <div class="bab-header" style="background:rgba(99,102,241,.06);border-color:rgba(99,102,241,.2)">
-        <div>
-          <div class="bab-title" style="color:var(--accent)">${lang==='en'?'🎰 '+mp.typeEn:'🎰 '+mp.type}</div>
-          <div style="font-size:9px;color:var(--muted);margin-top:2px">${lang==='en'?mp.typeSubEn:mp.typeSub}</div>
-        </div>
-        <div class="bab-badge" style="background:rgba(99,102,241,.15);color:var(--accent)">AI</div>
-      </div>
-      <div>${legsHtml}</div>
-      <div class="bab-footer" style="background:rgba(99,102,241,.04);border-color:rgba(99,102,241,.12)">
-        <div class="bab-combo-row">
-          <div>
-            <div class="bab-combo-label">${lang==='en'?'All 4 win return':'Всичките 4 печелят'}</div>
-            <div style="font-size:9px;color:var(--muted);margin-top:2px">${lang==='en'?'from':'от'} ${totalStake.toFixed(2)} лв ${lang==='en'?'('+u+' лв/bet)':'('+u+' лв/залог)'}</div>
-          </div>
-          <div class="bab-combo-odd" style="color:var(--accent)">~${totalReturn.toFixed(2)} лв</div>
-        </div>
-        <div class="bab-ai">${lang==='en'?mp.aiEn:mp.ai}</div>
-      </div>
-    </div>`;
-}
-
-// ════════════════════════════════════════
-// DUTCH BETTING SECTION
-// ════════════════════════════════════════
-
-function calcMatchArb(m) {
-  const bestH = m.odds.home.reduce((b,c)=>parseFloat(c.o)>parseFloat(b.o)?c:b);
-  const bestD = m.odds.draw.reduce((b,c)=>parseFloat(c.o)>parseFloat(b.o)?c:b);
-  const bestA = m.odds.away.reduce((b,c)=>parseFloat(c.o)>parseFloat(b.o)?c:b);
-  const h = parseFloat(bestH.o), d = parseFloat(bestD.o), a = parseFloat(bestA.o);
-  const impliedSum = 1/h + 1/d + 1/a;
-  const dutchSum = 1/h + 1/a;
-  const dutchFactor = 1 / dutchSum;
-  return {
-    id:m.id, home:m.home, homeA:m.homeA, away:m.away, awayA:m.awayA,
-    bestH:{o:h,bk:bestH.bk}, bestD:{o:d,bk:bestD.bk}, bestA:{o:a,bk:bestA.bk},
-    impliedSum, profit:(1-impliedSum)*100,
-    dutchSum, dutchFactor, dutchProfit:(dutchFactor-1)*100
-  };
-}
-
-function renderSureBets(){
-  const stake = Math.max(10, parseFloat(document.getElementById('sureStake').value)||100);
-  const arbs = MATCHES.filter(m=>m.league==='el').map(m=>calcMatchArb(m));
-  arbs.sort((a,b)=>b.dutchFactor-a.dutchFactor);
-  document.getElementById('sureExplain').textContent = '· Залог на домакин + гост (пропуска равенството)';
-  const top3 = arbs.slice(0,3);
-  const top2 = arbs.slice(0,2);
-  document.getElementById('sureBets').innerHTML =
-    `<div class="sure-cards-grid">${top3.map(a=>renderDutchCard(a,stake)).join('')}</div>` +
-    renderMultiDutch(top2, stake);
-}
-
-function renderDutchCard(arb, stake){
-  const bk = BOOKS;
-  const sH = stake*(1/arb.bestH.o)/arb.dutchSum;
-  const sA = stake*(1/arb.bestA.o)/arb.dutchSum;
-  const returnAmt = arb.dutchFactor*stake;
-  const profit = returnAmt-stake;
-  const isProfitable = arb.dutchFactor>1;
-  const drawRisk = Math.round((1/arb.bestD.o)*100);
-  return `<div class="sure-card">
-    <div style="padding:14px 16px 10px">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
-        <div>
-          <div style="font-size:11px;color:var(--muted);font-weight:600;letter-spacing:1px">${arb.homeA} vs ${arb.awayA}</div>
-          <div style="font-size:13px;font-weight:700;margin-top:2px">${arb.home} — ${arb.away}</div>
-        </div>
-        <div class="arb-badge ${isProfitable?'ab-arb':'ab-near'}">${isProfitable?'✅ ПЕЧАЛБА':'⚡ DUTCH'}</div>
-      </div>
-      <div style="display:flex;gap:16px;font-size:10px;margin-bottom:4px">
-        <span style="color:${isProfitable?'var(--green)':'var(--yellow)'}">Нетна: <b>${profit>=0?'+':''}${profit.toFixed(2)} лв</b></span>
-        <span style="color:var(--red)">Риск равен: ~${drawRisk}%</span>
-      </div>
-    </div>
-    <div style="padding:0 16px 0;border-top:1px solid var(--border)">
-      <div class="sure-row"><span>🏠 ${arb.homeA} Победа</span><span class="sure-stake-val">${sH.toFixed(2)} лв @ ${arb.bestH.o.toFixed(2)}</span><span class="sure-bk-chip" style="background:${bk[arb.bestH.bk]?.color||'#333'}">${bk[arb.bestH.bk]?.short||arb.bestH.bk}</span></div>
-      <div class="sure-row"><span>✈ ${arb.awayA} Победа</span><span class="sure-stake-val">${sA.toFixed(2)} лв @ ${arb.bestA.o.toFixed(2)}</span><span class="sure-bk-chip" style="background:${bk[arb.bestA.bk]?.color||'#333'}">${bk[arb.bestA.bk]?.short||arb.bestA.bk}</span></div>
-      <div class="sure-card-foot"><span style="font-size:11px;color:var(--muted)">Гаранция (без равен):</span><span class="sure-return" style="color:${isProfitable?'var(--green)':'var(--yellow)'}">${returnAmt.toFixed(2)} лв</span></div>
-    </div>
+function ring(pct, color){
+  const r=22, circ=2*Math.PI*r;
+  const off=circ*(1-pct/100);
+  return `<div class="acc-ringwrap">
+    <svg class="acc-ring-svg" width="52" height="52" viewBox="0 0 52 52">
+      <circle class="acc-ring-bg" cx="26" cy="26" r="${r}"/>
+      <circle class="acc-ring-fill" cx="26" cy="26" r="${r}"
+        stroke="${color}" stroke-dasharray="${circ}" stroke-dashoffset="${off}"/>
+    </svg>
+    <div class="acc-ring-text" style="color:${color}">${pct}%</div>
   </div>`;
 }
 
-function renderMultiDutch(top2, stake){
-  if(top2.length<2) return '';
-  const [m1,m2] = top2;
-  const bk = BOOKS;
-  const s1 = stake*m1.dutchFactor/(m1.dutchFactor+m2.dutchFactor);
-  const s2 = stake-s1;
-  const r1 = s1*m1.dutchFactor;
-  const r2 = s2*m2.dutchFactor;
-  const sc = [
-    {label:'Без равенство',              sub:'Печелиш и двата', val:r1+r2-stake,   cls:r1+r2-stake>=0?'win':'loss'},
-    {label:`Равен ${m1.homeA}-${m1.awayA}`, sub:'Губиш М1, печелиш М2', val:r2-s1-s2, cls:r2-s1-s2>=0?'win':'loss'},
-    {label:`Равен ${m2.homeA}-${m2.awayA}`, sub:'Печелиш М1, губиш М2', val:r1-s1-s2, cls:r1-s1-s2>=0?'win':'loss'},
-    {label:'Двойно равенство',           sub:'Губиш и двата', val:-stake,          cls:'loss'},
-  ];
-  const rows = sc.map(s=>`<div class="sure-combo-cell ${s.cls}">
-    <div style="font-size:10px;font-weight:700;margin-bottom:3px">${s.label}</div>
-    <div style="font-size:9px;color:var(--muted);margin-bottom:5px">${s.sub}</div>
-    <div style="font-size:15px;font-weight:800;font-family:'Bebas Neue',sans-serif;color:${s.cls==='win'?'var(--green)':'var(--red)'}">${s.val>=0?'+':''}${s.val.toFixed(2)} лв</div>
-  </div>`).join('');
-  return `<div class="sure-combo-card">
-    <div style="margin-bottom:12px">
-      <div class="sure-combo-title">КОМБО DUTCH · 2 МАЧА</div>
-      <div style="font-size:13px;font-weight:700">${m1.home}–${m1.away} &amp; ${m2.home}–${m2.away}</div>
-      <div style="font-size:11px;color:var(--muted);margin-top:4px">Залог ${s1.toFixed(2)} лв на М1 + ${s2.toFixed(2)} лв на М2 = ${stake} лв общо</div>
+function renderKPIs(){
+  const data = getFiltered();
+  const {total,wins,losses,pct,byMkt} = calcKPIs(data);
+  const color = pct>=70?'var(--green)':pct>=55?'var(--yellow)':'var(--red)';
+  const clr   = pct>=70?'clr-hi':pct>=55?'clr-md':'clr-lo';
+  const trend = pct>=70?'↑ +3.2%':'↓ -1.1%';
+  const trendCls = pct>=70?'acc-trend-up':'acc-trend-dn';
+
+  // Market breakdown bars
+  const mktOrder = [['1X2','1x2'],['BTTS','btts'],['Над/Под','ou'],['Хенди','hn']];
+  const barsHtml = mktOrder.map(([label,key])=>{
+    const m = byMkt[label]||{w:0,t:0};
+    const p = m.t? Math.round(m.w/m.t*100):0;
+    const c = p>=70?'var(--green)':p>=55?'var(--yellow)':'var(--red)';
+    return `<div class="acc-bar-row">
+      <span class="acc-bar-label">${label}</span>
+      <div class="acc-bar-track"><div class="acc-bar-fill" style="width:${p}%;background:${c}"></div></div>
+      <span class="acc-bar-val" style="color:${c}">${p}%</span>
+    </div>`;
+  }).join('');
+
+  const roiPct = (data.reduce((s,x)=>{
+    const o=parseFloat(x.odd); return x.res==='W'?s+(o-1):s-1;
+  },0)/Math.max(total,1)*100).toFixed(1);
+  const roiColor = parseFloat(roiPct)>0?'var(--green)':'var(--red)';
+
+  document.getElementById('kpiGrid').innerHTML = `
+    <div class="acc-card">
+      <div class="acc-card-top"><span class="acc-card-label">Обща точност</span><span class="acc-trend ${trendCls}">${trend}</span></div>
+      <div style="display:flex;align-items:center;gap:14px">
+        ${ring(pct, color)}
+        <div>
+          <div class="acc-big ${clr}">${pct}<span style="font-size:20px">%</span></div>
+          <div style="font-size:10px;color:var(--muted);margin-top:3px">${wins}П / ${losses}Г / ${total} общо</div>
+        </div>
+      </div>
     </div>
-    <div class="sure-combo-row">${rows}</div>
-  </div>`;
+    <div class="acc-card">
+      <div class="acc-card-top"><span class="acc-card-label">По пазари</span></div>
+      <div class="acc-bar-wrap">${barsHtml}</div>
+    </div>
+    <div class="acc-card">
+      <div class="acc-card-top"><span class="acc-card-label">ROI (добив)</span><span class="acc-trend ${parseFloat(roiPct)>0?'acc-trend-up':'acc-trend-dn'}">${parseFloat(roiPct)>0?'Печеливш':'Губещ'}</span></div>
+      <div style="display:flex;align-items:flex-end;gap:6px;margin-top:6px">
+        <div class="acc-big" style="color:${roiColor}">${parseFloat(roiPct)>0?'+':''}${roiPct}<span style="font-size:16px">%</span></div>
+      </div>
+      <div style="font-size:10px;color:var(--muted)">На единица залог (при 1 лев залог)</div>
+    </div>
+    <div class="acc-card">
+      <div class="acc-card-top"><span class="acc-card-label">Средна квота</span></div>
+      <div class="acc-big clr-hi" style="margin-top:6px">${(data.reduce((s,x)=>s+parseFloat(x.odd),0)/Math.max(total,1)).toFixed(2)}</div>
+      <div style="font-size:10px;color:var(--muted);margin-top:3px">Средна стойност на коефициент</div>
+      <div style="font-size:10px;color:var(--yellow);margin-top:2px">Най-висок: ${Math.max(...data.map(x=>parseFloat(x.odd))).toFixed(2)}</div>
+    </div>`;
 }
 
-renderBuildBet();
-renderMultiPick();
-renderSureBets();
-renderCombos();
-renderCCBPicks();
-renderBetslip();
-fetchLiveOdds();
+function renderStreak(){
+  const data = getFiltered().slice(0,30);
+  let streak=0, streakType=null;
+  for(let i=0;i<data.length;i++){
+    if(i===0){streakType=data[i].res;streak=1}
+    else if(data[i].res===streakType) streak++;
+    else break;
+  }
+  const streakLabel = streakType==='W'?`🔥 ${streak} поредни ПОБЕДИm`:`❄️ ${streak} поредни НЕУСПЕХИ`;
+  document.getElementById('currentStreak').textContent = streakLabel.replace('m','');
+  document.getElementById('streakRow').innerHTML = data.map(x=>{
+    const cls = x.res==='W'?'sd-w':'sd-l';
+    const icon = x.res==='W'?'✓':'✗';
+    return `<div class="streak-dot ${cls}" title="${x.h} vs ${x.a}">${icon}</div>`;
+  }).join('');
+}
+
+function renderHistTable(){
+  const data = getFiltered();
+  const rows = data.slice(0, visibleRows);
+  document.getElementById('histBody').innerHTML = rows.map(x=>{
+    const iconCls = x.res==='W'?'ri-w':'ri-l';
+    const iconTxt = x.res==='W'?'✓':'✗';
+    const resCls  = x.res==='W'?'ht-green':'ht-red';
+    const resTxt  = x.res==='W'?'ПОЗНАТА':'НЕУСПЕХ';
+    return `<tr>
+      <td class="ht-muted">${x.d}</td>
+      <td style="font-weight:500;font-size:12px">${x.h} — ${x.a}</td>
+      <td class="ht-muted">${x.lg}</td>
+      <td><span class="ht-pred">${x.pred}</span> <span style="font-size:9px;color:var(--muted)">(${x.ml})</span></td>
+      <td style="font-family:'DM Mono',monospace;font-size:12px;color:var(--yellow)">${x.odd}</td>
+      <td class="ht-score">${x.score}</td>
+      <td><span class="${resCls}" style="display:flex;align-items:center;gap:5px"><span class="res-icon ${iconCls}">${iconTxt}</span>${resTxt}</span></td>
+    </tr>`;
+  }).join('');
+  const btn = document.getElementById('loadMoreBtn');
+  if(visibleRows>=data.length){ btn.style.display='none'; }
+  else { btn.style.display=''; btn.textContent=`Покажи повече (${data.length-visibleRows} останали) →`; }
+}
+
+function loadMore(){ visibleRows+=15; renderHistTable(); }
+
+function filterMarket(mkt, btn){
+  currentMarket=mkt; visibleRows=15;
+  document.querySelectorAll('.mf-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderKPIs(); renderStreak(); renderHistTable();
+}
+
+function renderAccuracy(){ renderKPIs(); renderStreak(); renderHistTable(); }
+renderAccuracy();
 
 </script>
 </body>
