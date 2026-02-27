@@ -1682,7 +1682,11 @@ function render(){
   html+='</div>';
   c.innerHTML=html;
 }
-render();
+try { render(); } catch(e) {
+  document.getElementById('container').innerHTML =
+    '<div style="color:red;padding:20px;font-family:monospace;background:#1a0000;border-radius:8px;margin:10px">' +
+    '<b>render() ERROR:</b><br>' + e.message + '<br><br>' + e.stack + '</div>';
+}
 
 // ════════════════════════════════════════
 // TODAY'S PERFORMANCE SECTION
