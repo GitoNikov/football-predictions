@@ -805,13 +805,15 @@ function renderSystem() {
   const lang = currentLang;
   const allPending = (MD.upcoming || []).filter(m => m.status === 'pending');
 
-  // Restrict to the current GW: find earliest date and include only matches within 4 days of it
-  const gwDates = allPending.map(m => m.date).filter(Boolean).sort();
-  const firstDate = gwDates[0];
-  const cutoff = firstDate
-    ? new Date(new Date(firstDate + 'T00:00:00Z').getTime() + 4 * 86400000).toISOString().slice(0, 10)
-    : '9999-12-31';
-  const upcoming = allPending.filter(m => !m.date || m.date <= cutoff);
+  // Restrict to the current GW: walk sorted unique dates, stop at first gap ≥2 days
+  const uniqueDates = [...new Set(allPending.map(m => m.date).filter(Boolean))].sort();
+  const gwDateSet = new Set(uniqueDates.slice(0, 1));
+  for (let i = 1; i < uniqueDates.length; i++) {
+    const gap = (new Date(uniqueDates[i] + 'T00:00:00Z') - new Date(uniqueDates[i-1] + 'T00:00:00Z')) / 86400000;
+    if (gap >= 2) break;
+    gwDateSet.add(uniqueDates[i]);
+  }
+  const upcoming = allPending.filter(m => !m.date || gwDateSet.has(m.date));
 
   // Filter qualifying picks: 1.40 ≤ odd ≤ 2.50
   const qualifying = [...upcoming]
