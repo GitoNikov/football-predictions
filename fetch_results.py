@@ -28,7 +28,8 @@ def fetch_scores(api_key: str, sport: str, days_from: int = 3) -> list:
     url = f"{BASE_URL}/sports/{sport}/scores/"
     resp = requests.get(url, params={"apiKey": api_key, "daysFrom": days_from}, timeout=15)
     if resp.status_code in (401,):
-        sys.exit("❌  Invalid ODDS_API_KEY")
+        print("⚠  Invalid ODDS_API_KEY — skipping results check.")
+        return []
     if resp.status_code in (404, 422):
         return []
     resp.raise_for_status()
