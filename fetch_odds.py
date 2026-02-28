@@ -332,6 +332,35 @@ def main():
                 elif market == "over_under" and "o25" in wh:
                     pick["odd"] = wh["o25"]
                 updated_md += 1
+        # Refresh betBuilder market odds + recompute totalOdd
+        bb = md.get("betBuilder", {})
+        bb_mid = bb.get("matchId", "")
+        if bb_mid and bb.get("markets"):
+            bb_match = next((m for m in md.get("upcoming", []) if m["id"] == bb_mid), None)
+            if bb_match:
+                wh = bb_match.get("odds_wh", {})
+                mkt_key = {
+                    "home win": "h",          "победа домакин": "h",
+                    "away win": "a",          "победа гост": "a",
+                    "draw": "x",              "равенство": "x",
+                    "btts yes": "btts",       "и двата вкарват": "btts",
+                    "over 1.5 goals": "o15",  "над 1.5 гола": "o15",
+                    "over 2.5 goals": "o25",  "над 2.5 гола": "o25",
+                }
+                changed = False
+                for mkt in bb["markets"]:
+                    key = mkt_key.get(mkt.get("marketEn", "").lower()) \
+                       or mkt_key.get(mkt.get("market", "").lower())
+                    if key and key in wh:
+                        mkt["odd"] = wh[key]
+                        changed = True
+                if changed:
+                    product = 1.0
+                    for mkt in bb["markets"]:
+                        product *= float(mkt["odd"])
+                    bb["totalOdd"] = str(round(product, 2))
+                    print(f"    ↻  betBuilder totalOdd refreshed → {bb['totalOdd']}")
+
         with open(MATCHDAY_FILE, "w", encoding="utf-8") as f:
             json.dump(md, f, ensure_ascii=False, indent=2)
         print(f"    Patched odds into matchday.json for {updated_md} matches\n")

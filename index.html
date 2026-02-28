@@ -425,7 +425,7 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 
 <!-- ═══ TODAY'S PICKS ═══ -->
 <div class="picks-header">
-  <div class="picks-title" data-t="todayTitle">ДНЕШНИ <em style="color:var(--green)">ПРОГНОЗИ</em></div>
+  <div class="picks-title" id="todayTitleEl">ПРОГНОЗИ</div>
   <div style="flex:1;height:1px;background:var(--border)"></div>
   <div class="picks-sub" id="picksSubEl">…</div>
 </div>
@@ -518,7 +518,6 @@ const T = {
   bg: {
     logoSub:"Само реални William Hill коефициенти",
     napBadge:"НАП Лицензирани",
-    todayTitle:'ПРОГНОЗИ <em style="color:var(--green)">ГВ28</em>',
     discTitle:"⚠️ Отговорна игра",
     discText:"Залагането носи риск. Играй отговорно. Всички оператори тук са лицензирани от НАП — Национална агенция за приходите на Република България. 18+",
     comboTitle:'КОМБИНИРАНИ <em>ЗАЛОЗИ</em>',
@@ -538,7 +537,6 @@ const T = {
   en: {
     logoSub:"Real William Hill Odds Only",
     napBadge:"NAP Licensed",
-    todayTitle:'GW28 <em style="color:var(--green)">PICKS</em>',
     discTitle:"⚠️ Responsible Gambling",
     discText:"Gambling carries risk. Play responsibly. All operators here are licensed by NAP — National Revenue Agency of Bulgaria. 18+",
     comboTitle:'COMBO <em>BUILDER</em>',
@@ -631,6 +629,16 @@ function renderHeader() {
       .replace('Gameweek', 'GW')
       .replace('Кръг', 'Кр');
     badgeEl.textContent = short || 'EPL';
+  }
+
+  // Picks section title — "ПРОГНОЗИ КР. 31" / "GW31 PICKS"
+  const titleEl = document.getElementById('todayTitleEl');
+  if (titleEl) {
+    const gwMatch = (MD.labelEn || '').match(/GW(\d+)/);
+    const gwNum = gwMatch ? gwMatch[1] : '';
+    titleEl.innerHTML = lang === 'bg'
+      ? `ПРОГНОЗИ <em style="color:var(--green)">КР. ${gwNum}</em>`
+      : `GW${gwNum} <em style="color:var(--green)">PICKS</em>`;
   }
 
   // Today's date
