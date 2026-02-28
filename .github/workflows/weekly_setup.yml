@@ -1,0 +1,34 @@
+name: Weekly Match Setup
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # Monday 06:00 UTC = 08:00 Sofia
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch matches + picks + betBuilder
+        env:
+          ODDS_API_KEY:          ${{ secrets.ODDS_API_KEY }}
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+          GROQ_API_KEY:          ${{ secrets.GROQ_API_KEY }}
+        run: python fetch_matches.py
+
+      - name: Commit updated matchday.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/matchday.json
+          git diff --cached --quiet || git commit -m "chore: weekly setup [$(date +%Y-%m-%d)]"
+          git push

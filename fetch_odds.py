@@ -156,10 +156,11 @@ def extract_h2h(market: dict, home_team: str) -> dict:
 
 
 def extract_totals(market: dict, point: float = 2.5) -> dict:
-    """Return {_o25} from a totals market at the requested line."""
+    """Return {_oNN} from a totals market at the requested line."""
+    key = "_o" + str(point).replace(".", "")   # 2.5→"_o25", 1.5→"_o15"
     for outcome in market.get("outcomes", []):
         if outcome.get("point") == point and outcome["name"] == "Over":
-            return {"_o25": str(round(outcome["price"], 2))}
+            return {key: str(round(outcome["price"], 2))}
     return {}
 
 
@@ -261,7 +262,9 @@ def build_odds_dict(events: list, sport: str) -> tuple[dict, dict]:
                 odds[f"{prefix}{k}"] = v
 
         if "totals" in markets:
-            for k, v in extract_totals(markets["totals"]).items():
+            for k, v in extract_totals(markets["totals"], 2.5).items():
+                odds[f"{prefix}{k}"] = v
+            for k, v in extract_totals(markets["totals"], 1.5).items():
                 odds[f"{prefix}{k}"] = v
 
         if "btts" in markets:
@@ -275,6 +278,7 @@ def build_odds_dict(events: list, sport: str) -> tuple[dict, dict]:
               f"X={odds.get(prefix+'_x','?')}  "
               f"2={odds.get(prefix+'_2','?')}  "
               f"O2.5={odds.get(prefix+'_o25','?')}  "
+              f"O1.5={odds.get(prefix+'_o15','?')}  "
               f"BTTS={odds.get(prefix+'_btts','?')}")
 
     return odds, event_map
@@ -370,6 +374,7 @@ def main():
             if f"{mid}_x"    in all_odds: wh["x"]    = all_odds[f"{mid}_x"]
             if f"{mid}_2"    in all_odds: wh["a"]    = all_odds[f"{mid}_2"]
             if f"{mid}_o25"  in all_odds: wh["o25"]  = all_odds[f"{mid}_o25"]
+            if f"{mid}_o15"  in all_odds: wh["o15"]  = all_odds[f"{mid}_o15"]
             if f"{mid}_btts" in all_odds: wh["btts"] = all_odds[f"{mid}_btts"]
             if wh:
                 match["odds_wh"] = {**match.get("odds_wh", {}), **wh}

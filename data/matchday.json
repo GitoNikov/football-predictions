@@ -322,6 +322,18 @@
       "aiCtx": "Arsenal are 2nd in the league, unbeaten in 14 consecutive home matches and have scored in all of them. Chelsea are 4th but have failed to win at the Emirates in their last 3 visits, losing twice. Arsenal have won 5 of the last 7 London derbies against Chelsea."
     }
   ],
+  "betBuilder": {
+    "matchId": "liv_whu",
+    "home": "Ливърпул", "homeEn": "Liverpool",
+    "away": "Уест Хем", "awayEn": "West Ham",
+    "markets": [
+      {"market": "Над 1.5 гола",    "marketEn": "Over 1.5 Goals", "odd": "1.25"},
+      {"market": "И двата вкарват", "marketEn": "BTTS Yes",       "odd": "1.72"},
+      {"market": "Победа домакин",  "marketEn": "Home Win",       "odd": "1.37"}
+    ],
+    "totalOdd": "2.89",
+    "reasoning": "", "reasoningEn": ""
+  },
   "results": [
     {
       "id": "stu_cel",

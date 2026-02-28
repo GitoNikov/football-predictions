@@ -10,6 +10,7 @@ Free tier: 14,400 requests/day · 30 req/min (no credit card required)
 Get a free key at: https://console.groq.com
 """
 
+import hashlib
 import json
 import os
 import sys
@@ -23,7 +24,7 @@ except ImportError:
 
 DATA_FILE  = Path("data/matchday.json")
 MODEL_NAME = "llama-3.3-70b-versatile"
-DELAY      = 2.5   # seconds between calls
+DELAY      = 1.5   # seconds between calls
 
 
 def build_prompt(match: dict, label: str) -> str:
@@ -60,6 +61,7 @@ def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
             model=MODEL_NAME,
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7,
+            max_tokens=500,
         )
         text = response.choices[0].message.content.strip()
         if "```" in text:
@@ -75,6 +77,10 @@ def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
     except Exception as e:
         print(f"\n    ⚠  API error: {e}")
         return "", ""
+
+
+def ctx_hash(match: dict) -> str:
+    return hashlib.md5(match.get("aiCtx", "").encode()).hexdigest()[:8]
 
 
 def main():
@@ -98,8 +104,9 @@ def main():
     updated = skipped = 0
     for i, match in enumerate(matches):
         name = f"{match.get('homeEn')} vs {match.get('awayEn')}"
-        if match.get("ai") and match.get("aiEn"):
-            print(f"  ↩  {name} — already has AI, skipping")
+        current_hash = ctx_hash(match)
+        if match.get("ai") and match.get("aiEn") and match.get("aiCtxHash") == current_hash:
+            print(f"  ↩  {name} — context unchanged, skipping")
             skipped += 1
             continue
 
@@ -107,8 +114,9 @@ def main():
         bg, en = generate_analysis(client, match, label)
 
         if bg and en:
-            match["ai"]   = bg
-            match["aiEn"] = en
+            match["ai"]        = bg
+            match["aiEn"]      = en
+            match["aiCtxHash"] = current_hash
             print("✓")
             updated += 1
         else:
@@ -117,6 +125,44 @@ def main():
 
         if i < total - 1:
             time.sleep(DELAY)
+
+    # ── betBuilder reasoning ──────────────────────────────────────────────────
+    bb = data.get("betBuilder")
+    if bb and bb.get("matchId") and bb.get("markets") and not bb.get("reasoning"):
+        mid = bb["matchId"]
+        src = next((m for m in matches if m["id"] == mid), None)
+        if src:
+            home = bb.get("homeEn", src.get("homeEn", ""))
+            away = bb.get("awayEn", src.get("awayEn", ""))
+            market_list = ", ".join(
+                mkt.get("marketEn", mkt.get("market", "")) for mkt in bb["markets"]
+            )
+            ai_ctx = src.get("aiCtx", "")
+            prompt = (
+                f'For {home} vs {away} bet builder [{market_list}], write 1-2 sentences '
+                f'in BG+EN explaining why these markets combine well. Context: {ai_ctx}. '
+                f'Return JSON: {{"bg": "...", "en": "..."}}'
+            )
+            print(f"\n  ⚙  betBuilder reasoning for {home} vs {away}… ", end="", flush=True)
+            try:
+                resp = client.chat.completions.create(
+                    model=MODEL_NAME,
+                    messages=[{"role": "user", "content": prompt}],
+                    temperature=0.7,
+                    max_tokens=250,
+                )
+                text = resp.choices[0].message.content.strip()
+                if "```" in text:
+                    text = text.split("```")[1]
+                    if text.startswith("json"):
+                        text = text[4:]
+                    text = text.strip()
+                result = json.loads(text)
+                bb["reasoning"]   = result.get("bg", "")
+                bb["reasoningEn"] = result.get("en", "")
+                print("✓")
+            except Exception as e:
+                print(f"⚠  {e}")
 
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
