@@ -94,9 +94,9 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 .prow{display:flex;align-items:center;gap:8px}
 .pval{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:2px;color:var(--green)}
 .pconf{display:flex;flex-direction:column;gap:2px;align-items:flex-end}
-.cbar{width:64px;height:3px;background:var(--dark3);border-radius:2px;overflow:hidden}
-.cfill{height:100%;border-radius:2px}
-.cf-high{background:linear-gradient(90deg,var(--green),#00ffaa)}
+.cbar{width:64px;height:5px;background:var(--dark3);border-radius:3px;overflow:hidden}
+.cfill{height:100%;border-radius:3px}
+.cf-high{background:linear-gradient(90deg,var(--green),#00ffaa);box-shadow:0 0 6px rgba(0,232,122,.55)}
 .cf-mid{background:linear-gradient(90deg,var(--yellow),#ffd700)}
 .cf-low{background:linear-gradient(90deg,var(--red),#ff9999)}
 .cpct{font-family:'DM Mono',monospace;font-size:10px;font-weight:500}
@@ -113,7 +113,7 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 .probpcts{display:flex;justify-content:space-between;font-size:9px;color:var(--muted)}
 
 /* PICK BANNER */
-.pick{padding:8px 18px;display:flex;align-items:center;gap:8px;background:rgba(0,232,122,.04);border-top:1px solid rgba(0,232,122,.08);border-bottom:1px solid rgba(0,232,122,.08)}
+.pick{padding:8px 18px 8px 15px;display:flex;align-items:center;gap:8px;background:rgba(0,232,122,.07);border-top:1px solid rgba(0,232,122,.13);border-bottom:1px solid rgba(0,232,122,.13);border-left:3px solid var(--green)}
 .pick-star{font-size:14px}
 .pick-text{font-size:12px;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
 .pick-bet{font-weight:600;color:var(--text)}
@@ -502,6 +502,16 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 </div>
 </main>
 
+<footer style="border-top:1px solid var(--border);margin-top:0;padding:18px 32px;max-width:1300px;margin-inline:auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+  <div style="font-size:10px;color:var(--muted);line-height:1.7">
+    <span data-t="footerData">Данни: </span>
+    <a href="https://www.williamhill.com" target="_blank" rel="noopener" style="color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border)">William Hill</a> ·
+    <a href="https://the-odds-api.com" target="_blank" rel="noopener" style="color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border)">The Odds API</a> ·
+    <a href="https://www.football-data.org" target="_blank" rel="noopener" style="color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border)">football-data.org</a>
+  </div>
+  <div style="font-size:10px;color:var(--muted)" data-t="footerDisclaimer">18+ · Играй отговорно · НАП лицензирани оператори</div>
+</footer>
+
 <script>
 // ─── STATE ───────────────────────────────────────────────────────────────────
 let currentLang = 'bg';
@@ -533,6 +543,8 @@ const T = {
     booksTitle:"🇧🇬 + 🌍 Букмейкъри:",
     systemTitle:'🎯 Система',
     bbTitle:'🔨 Бет Билдър',
+    footerData:'Данни: ',
+    footerDisclaimer:'18+ · Играй отговорно · НАП лицензирани оператори',
   },
   en: {
     logoSub:"Real William Hill Odds Only",
@@ -556,6 +568,8 @@ const T = {
     booksTitle:"🇧🇬 + 🌍 Bookmakers:",
     systemTitle:'🎯 System',
     bbTitle:'🔨 Bet Builder',
+    footerData:'Data: ',
+    footerDisclaimer:'18+ · Play responsibly · NAP licensed operators',
   }
 };
 
