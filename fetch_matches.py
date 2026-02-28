@@ -44,6 +44,13 @@ MODEL_NAME      = "llama-3.3-70b-versatile"
 FORM_SLEEP      = 6.5   # seconds between football-data.org team requests
 COMPETITION     = "PL"  # Premier League code
 
+# UEFA competitions to auto-populate (fixtures only, no AI analysis)
+UEFA_SPORTS = {
+    "soccer_uefa_champs_league":            {"bg": "Шампионска лига", "en": "Champions League"},
+    "soccer_uefa_europa_league":            {"bg": "Лига Европа",     "en": "Europa League"},
+    "soccer_uefa_europa_conference_league": {"bg": "Конференц лига",  "en": "Conference League"},
+}
+
 # ── Bulgarian team name mapping ────────────────────────────────────────────────
 TEAM_BG = {
     "Arsenal":           "Арсенал",
@@ -118,6 +125,64 @@ TEAM_ABBR = {
     "Wolverhampton Wanderers": "wol",
 }
 
+# BG names for common UEFA club teams (fallback to English if not found)
+UEFA_TEAM_BG = {
+    "Real Madrid":           "Реал Мадрид",
+    "Barcelona":             "Барселона",
+    "Atletico Madrid":       "Атлетико Мадрид",
+    "Real Sociedad":         "Реал Сосиедад",
+    "Real Betis":            "Реал Бетис",
+    "Athletic Club":         "Атлетик Билбао",
+    "Sevilla":               "Севиля",
+    "Villarreal":            "Вияреал",
+    "Valencia":              "Валенсия",
+    "Osasuna":               "Осасуна",
+    "Bayern Munich":         "Байерн",
+    "Borussia Dortmund":     "Дортмунд",
+    "Bayer Leverkusen":      "Леверкузен",
+    "RB Leipzig":            "Лайпциг",
+    "Eintracht Frankfurt":   "Айнтрахт Франкфурт",
+    "Stuttgart":             "Щутгарт",
+    "Union Berlin":          "Унион Берлин",
+    "Paris Saint Germain":   "ПСЖ",
+    "Lyon":                  "Лион",
+    "Marseille":             "Марсей",
+    "Monaco":                "Монако",
+    "Lille":                 "Лил",
+    "Rennes":                "Рен",
+    "AC Milan":              "Милан",
+    "Inter Milan":           "Интер",
+    "Juventus":              "Ювентус",
+    "Napoli":                "Наполи",
+    "Roma":                  "Рома",
+    "Lazio":                 "Лацио",
+    "Atalanta":              "Аталанта",
+    "Fiorentina":            "Фиорентина",
+    "Bologna":               "Болоня",
+    "Benfica":               "Бенфика",
+    "Porto":                 "Порто",
+    "Sporting CP":           "Спортинг",
+    "Braga":                 "Брага",
+    "Ajax":                  "Аякс",
+    "PSV Eindhoven":         "ПСВ",
+    "Feyenoord":             "Фейенорд",
+    "Club Brugge":           "Брюж",
+    "Anderlecht":            "Андерлехт",
+    "Celtic":                "Селтик",
+    "Rangers":               "Рейнджърс",
+    "Red Bull Salzburg":     "Залцбург",
+    "Rapid Vienna":          "Рапид Виена",
+    "Galatasaray":           "Галатасарай",
+    "Fenerbahce":            "Фенербахче",
+    "Besiktas":              "Бешикташ",
+    "Slavia Prague":         "Славия Прага",
+    "Shakhtar Donetsk":      "Шахтьор",
+    "Dynamo Kyiv":           "Динамо Киев",
+    "Olympiakos":            "Олимпиакос",
+    "PAOK":                  "ПАОК",
+    "Maccabi Tel Aviv":      "Маккаби Тел Авив",
+}
+
 # 3-char display abbreviations for homeA/awayA
 TEAM_ABBR_DISPLAY = {
     "ars": "ARS", "avl": "AVL", "bou": "BOU", "bre": "BRE", "bri": "BRI",
@@ -141,6 +206,15 @@ def team_bg(en_name: str) -> str:
         if key.lower() in en_name.lower() or en_name.lower() in key.lower():
             return bg
     return en_name
+
+
+def team_bg_uefa(en_name: str) -> str:
+    """BG name lookup: UEFA dict first, then EPL dict, then English fallback."""
+    name_lower = en_name.lower()
+    for key, bg in UEFA_TEAM_BG.items():
+        if key.lower() in name_lower or name_lower in key.lower():
+            return bg
+    return team_bg(en_name)
 
 
 def team_abbr(en_name: str) -> str:
@@ -174,6 +248,86 @@ def fetch_epl_events(api_key: str) -> list:
     remaining = resp.headers.get("x-requests-remaining", "?")
     print(f"  ✓  Odds API: {len(resp.json())} EPL events | quota remaining {remaining}")
     return resp.json()
+
+
+def fetch_uefa_fixtures(api_key: str, existing_ids: set) -> list:
+    """
+    Fetch upcoming CL/EL/ECL fixtures from Odds API /events (1 unit per sport).
+    Returns stub match entries — no aiCtx, no pick — ready for manual pick entry.
+    Odds get populated automatically by fetch_odds.py on its next run.
+    """
+    new_fixtures = []
+    now        = datetime.now(timezone.utc)
+    window_end = now + timedelta(days=14)
+
+    for sport_key, comp in UEFA_SPORTS.items():
+        url    = f"{ODDS_BASE}/sports/{sport_key}/events"
+        params = {"apiKey": api_key}
+        try:
+            resp = requests.get(url, params=params, timeout=15)
+            if resp.status_code in (404, 422):
+                print(f"  ⚠  {comp['en']}: no events (off-season or unavailable)")
+                continue
+            resp.raise_for_status()
+        except Exception as e:
+            print(f"  ⚠  {comp['en']} error: {e}")
+            continue
+
+        remaining = resp.headers.get("x-requests-remaining", "?")
+        events    = resp.json()
+        added     = 0
+
+        for ev in events:
+            ct = ev.get("commence_time", "")
+            try:
+                dt = datetime.fromisoformat(ct.replace("Z", "+00:00"))
+            except Exception:
+                continue
+            if not (now <= dt <= window_end):
+                continue
+
+            # Use Odds API event ID prefix as match ID — guaranteed unique & stable
+            match_id = ev["id"][:8]
+            if match_id in existing_ids:
+                continue
+
+            home_en = ev["home_team"]
+            away_en = ev["away_team"]
+            home_bg = team_bg_uefa(home_en)
+            away_bg = team_bg_uefa(away_en)
+
+            dt_sofia = dt + timedelta(hours=2)
+            date_str = dt_sofia.strftime("%Y-%m-%d")
+            time_str = dt_sofia.strftime("%H:%M")
+
+            new_fixtures.append({
+                "id":            match_id,
+                "home":          home_bg,
+                "homeEn":        home_en,
+                "homeA":         home_en[:3].upper(),
+                "away":          away_bg,
+                "awayEn":        away_en,
+                "awayA":         away_en[:3].upper(),
+                "date":          date_str,
+                "time":          time_str,
+                "competition":   comp["en"],
+                "competitionBG": comp["bg"],
+                "status":        "pending",
+                "pick": {
+                    "bet":       "—",
+                    "betEn":     "—",
+                    "conf":      0,
+                    "market":    "h2h",
+                    "selection": "home",
+                    "odd":       "?",
+                },
+                "odds_wh": {},
+            })
+            added += 1
+
+        print(f"  ✓  {comp['en']}: {added} new fixtures | quota remaining {remaining}")
+
+    return new_fixtures
 
 
 def extract_wh_odds(event: dict) -> dict:
@@ -560,20 +714,32 @@ def main():
         new_matches.append(match_entry)
         print("✓")
 
-    # ── Step 5: betBuilder selection ─────────────────────────────────────────
-    all_matches_for_bb = existing.get("upcoming", []) + new_matches
+    # ── Step 5: UEFA fixtures (fixtures only, no picks or analysis) ──────────
+    print("\n🏆  Fetching UEFA fixtures…")
+    all_existing_ids = existing_ids | {m["id"] for m in new_matches}
+    uefa_fixtures = fetch_uefa_fixtures(odds_key, all_existing_ids)
+    if uefa_fixtures:
+        print(f"  → {len(uefa_fixtures)} new UEFA fixtures added (picks needed manually)")
+    new_matches.extend(uefa_fixtures)
+
+    # ── Step 6: betBuilder selection ─────────────────────────────────────────
+    # Only consider EPL matches with real odds and picks (exclude UEFA stubs)
+    bb_candidates = [
+        m for m in existing.get("upcoming", []) + new_matches
+        if m.get("pick", {}).get("conf", 0) > 0 and m.get("odds_wh")
+    ]
     bb_result = None
-    if all_matches_for_bb:
+    if bb_candidates:
         print(f"\n  🤖  Groq betBuilder selection…", end=" ", flush=True)
-        bb_result = groq_bet_builder(groq_client, all_matches_for_bb)
+        bb_result = groq_bet_builder(groq_client, bb_candidates)
         if bb_result:
             print("✓")
 
-    # ── Step 6: Build betBuilder entry ────────────────────────────────────────
+    # ── Step 7: Build betBuilder entry ────────────────────────────────────────
     bet_builder = None
     if bb_result:
         mid = bb_result.get("matchId", "")
-        src = next((m for m in all_matches_for_bb if m["id"] == mid), None)
+        src = next((m for m in bb_candidates if m["id"] == mid), None)
         if src:
             markets = bb_result.get("markets", [])
             # Recompute totalOdd in Python (never trust AI arithmetic)
@@ -602,7 +768,7 @@ def main():
                 "reasoningEn": "",
             }
 
-    # ── Step 7: Update matchday.json ─────────────────────────────────────────
+    # ── Step 8: Update matchday.json ─────────────────────────────────────────
     # Determine label from matchday number
     gw_num  = current_matchday or existing.get("matchday", "")
     now_utc = datetime.now(timezone.utc)
