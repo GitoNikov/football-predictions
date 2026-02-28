@@ -1,12 +1,13 @@
 """
-generate_analysis.py — Generate AI match analysis using Google Gemini API
+generate_analysis.py — Generate AI match analysis using Groq API (free tier)
 and update data/matchday.json with fresh ai/aiEn fields.
 
 Usage:
-    export GEMINI_API_KEY=your_key_here
+    export GROQ_API_KEY=your_key_here
     python generate_analysis.py
 
-Free tier: 1,500 requests/day · 15 req/min
+Free tier: 14,400 requests/day · 30 req/min (no credit card required)
+Get a free key at: https://console.groq.com
 """
 
 import json
@@ -16,13 +17,13 @@ import time
 from pathlib import Path
 
 try:
-    from google import genai
+    from groq import Groq
 except ImportError:
-    sys.exit("❌  google-genai not installed. Run: pip install google-genai")
+    sys.exit("❌  groq not installed. Run: pip install groq")
 
 DATA_FILE  = Path("data/matchday.json")
-MODEL_NAME = "gemini-2.0-flash"
-DELAY      = 4.5   # seconds between calls — stays under 15 req/min
+MODEL_NAME = "llama-3.3-70b-versatile"
+DELAY      = 2.5   # seconds between calls
 
 
 def build_prompt(match: dict, label: str) -> str:
@@ -53,8 +54,12 @@ Rules:
 def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
     prompt = build_prompt(match, label)
     try:
-        response = client.models.generate_content(model=MODEL_NAME, contents=prompt)
-        text = response.text.strip()
+        response = client.chat.completions.create(
+            model=MODEL_NAME,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.7,
+        )
+        text = response.choices[0].message.content.strip()
         if "```" in text:
             text = text.split("```")[1]
             if text.startswith("json"):
@@ -71,14 +76,14 @@ def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
 
 
 def main():
-    api_key = os.environ.get("GEMINI_API_KEY", "")
+    api_key = os.environ.get("GROQ_API_KEY", "")
     if not api_key:
-        sys.exit("❌  Set GEMINI_API_KEY env var.\n    Free key: https://aistudio.google.com/app/apikey")
+        sys.exit("❌  Set GROQ_API_KEY env var.\n    Free key: https://console.groq.com")
 
     if not DATA_FILE.exists():
         sys.exit(f"❌  {DATA_FILE} not found.")
 
-    client = genai.Client(api_key=api_key)
+    client = Groq(api_key=api_key)
 
     with open(DATA_FILE, encoding="utf-8") as f:
         data = json.load(f)
@@ -91,7 +96,6 @@ def main():
     updated = skipped = 0
     for i, match in enumerate(matches):
         name = f"{match.get('homeEn')} vs {match.get('awayEn')}"
-        # Skip if AI already exists and match status is not pending
         if match.get("ai") and match.get("aiEn"):
             print(f"  ↩  {name} — already has AI, skipping")
             skipped += 1

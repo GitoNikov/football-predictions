@@ -37,8 +37,8 @@
         "d": 24,
         "a": 22
       },
-      "ai": "Борнемут са домакини с добра форма срещу Сундерланд — новак в Премиер лийг. Гостите не са победили като гост от 6 мача. William Hill предлага 1.75 за домакинска победа при ~54% реален шанс.",
-      "aiEn": "Bournemouth host Sunderland in good form — the visitors are yet to win away in 6 attempts. William Hill offers 1.75 for a home win at a real ~54% probability."
+      "ai": "Изборът ни е победа за Боурнмът с коефициент 1.75 при увереност 62%, поради големите шанси за домашна победа от 54%.",
+      "aiEn": "We pick Bournemouth to win at 1.75 odds with 62% confidence, given their 54% home win probability."
     },
     {
       "id": "bur_bre",
@@ -71,8 +71,8 @@
         "d": 26,
         "a": 48
       },
-      "ai": "Бърнли са в зоната на изпадане с лоша домашна форма. Брентфорд са в топ 10 с добра гостуваща форма. William Hill предлага 1.75 за гостите при ~48% реален шанс.",
-      "aiEn": "Burnley are in the relegation zone with poor home form. Brentford sit top 10 with solid away form. William Hill offers 1.75 for the visitors at ~48% real chance."
+      "ai": "Изборът на Brentford победа при коефициент 1.75 при 61% сигурност се обосновава с 48% вероятност за гостите, което надхвърля домашните 26%.",
+      "aiEn": "Brentford win at 1.75 with 61% confidence is backed by a 48% away win probability, surpassing Burnley's 26% home chance."
     },
     {
       "id": "liv_whu",
@@ -105,8 +105,8 @@
         "d": 15,
         "a": 11
       },
-      "ai": "Ливърпул са доминиращата сила вкъщи — Уест Хем са без победа гости от 7 мача. Лийдерите в Премиер лийг не са пропускали точки у дома. William Hill предлага 1.37.",
-      "aiEn": "Liverpool are the dominant force at home — West Ham are winless away in 7 games. The league leaders haven't dropped home points recently. William Hill offers 1.37."
+      "ai": "Изборът да спечели Ливърпул е логичен с 74% вероятност и коефициент 1.37 при Уилям Хил, което съответства на нашата увереност.",
+      "aiEn": "Picking Liverpool to win makes sense with a 74% probability and 1.37 odds at William Hill, matching our confidence level."
     },
     {
       "id": "new_eve",
@@ -139,8 +139,8 @@
         "d": 25,
         "a": 21
       },
-      "ai": "Нюкасъл са стабилни домакини срещу Евъртън в зоната на изпадане. Гостите не спечелиха гости от 5 мача. William Hill предлага 1.75 за домакините.",
-      "aiEn": "Newcastle are solid hosts against Everton, who are in the relegation zone. The visitors haven't won away in 5 games. William Hill offers 1.75 for the hosts."
+      "ai": "Изборът ни е победа за Нюкясъл при коефициент 1.75, гледайки вероятностите от 54% и нашата увереност от 62%.",
+      "aiEn": "We pick Newcastle to win at 1.75 odds, given 54% probability and 62% confidence, making it a solid bet."
     },
     {
       "id": "lee_mci",
@@ -173,8 +173,8 @@
         "d": 25,
         "a": 47
       },
-      "ai": "Ман Сити са в отлична гостуваща форма с голяма таблична преднина пред Лийдс. William Hill предлага 1.65 за гостите при ~47% реален шанс.",
-      "aiEn": "Man City are in excellent away form with a big table advantage over Leeds. William Hill offers 1.65 for the visitors at ~47% real chance."
+      "ai": "Изборът на Ман Сити да спечели при коэф. 1.65 при вероятност 47% и увереност 65% е логичен.",
+      "aiEn": "Man City win at 1.65 with 47% probability and 65% confidence is logical, given William Hill odds."
     },
     {
       "id": "bri_for",
@@ -207,8 +207,8 @@
         "d": 28,
         "a": 32
       },
-      "ai": "Нотингам Форест са в невероятна форма — без загуба от 11 мача. Брайтън са непредвидими вкъщи. При 4.20 за Форест — изключителна ценност за отбор на 2-ро място.",
-      "aiEn": "Nottingham Forest are in incredible form — unbeaten in 11! Brighton are inconsistent at home. At 4.20 for Forest — exceptional value for a 2nd-place side."
+      "ai": "Изборът на победа за Нотм Форест при коефициент 4.20 е привлекателен, тъй като вероятността за домакинска победа е 40%, а нашата увереност е 45%.",
+      "aiEn": "Forest win at 4.20 odds is a value pick, given the 40% home win probability, and our 45% confidence level supports this choice."
     },
     {
       "id": "mun_pal",
@@ -241,8 +241,8 @@
         "d": 26,
         "a": 22
       },
-      "ai": "Ман Юнайтед са домакини срещу Палас без победа гости от 6 мача. Олд Трафорд дава предимство — William Hill предлага 1.55 за домакинска победа.",
-      "aiEn": "Man United host Palace, who are without an away win in 6 games. Old Trafford advantage — William Hill offers 1.55 for a home win."
+      "ai": "Изборът ни е победа за Ман Юнайтед с коефициент 1.55 при доверие 65%, поради високите шансове за домакинска победа - 52%.",
+      "aiEn": "We pick Man United to win at 1.55 with 65% confidence, driven by their 52% home win probability."
     },
     {
       "id": "ful_tot",
@@ -275,8 +275,8 @@
         "d": 30,
         "a": 32
       },
-      "ai": "BTTS е паднало в 4 от последните 5 двубоя между Фулъм и Тотнъм. И двата отбора са с атакуваща игра. William Hill предлага 1.72 за BTTS при ~63% реален шанс.",
-      "aiEn": "BTTS has landed in 4 of the last 5 Fulham vs Tottenham head-to-heads. Both sides play attacking football. William Hill offers 1.72 for BTTS at ~63% real chance."
+      "ai": "Изборът ни е BTTS Yes при коефициент 1.72, с увереност 63%, тъй като вероятностите за домакинска и гост победа са близки.",
+      "aiEn": "Our pick is BTTS Yes at 1.72, with 63% confidence, as home and away win probabilities are closely matched."
     },
     {
       "id": "ars_che",
@@ -309,8 +309,8 @@
         "d": 24,
         "a": 20
       },
-      "ai": "Голямото лондонско дерби! Арсенал са лидери без загуба от 14 домашни мача. Челси са без победа на Емирейтс в последните 3 посещения. William Hill предлага 1.60.",
-      "aiEn": "The big London derby! Arsenal are leaders unbeaten in 14 home games. Chelsea haven't won at the Emirates in 3 visits. William Hill offers 1.60."
+      "ai": "Изборът ни е победа за Арсенал с коефициент 1.60 при увереност 70%, поради високите шансове за домакинска победа от 56%.",
+      "aiEn": "Our pick is Arsenal Win at 1.60 with 70% confidence, driven by their 56% home win probability."
     }
   ],
   "results": [
