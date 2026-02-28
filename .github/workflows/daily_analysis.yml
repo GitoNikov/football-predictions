@@ -22,6 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Check match results (Odds API scores)
+        continue-on-error: true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python fetch_results.py
@@ -32,6 +33,7 @@ jobs:
         run: python generate_analysis.py
 
       - name: Refresh live odds (William Hill)
+        continue-on-error: true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python fetch_odds.py
