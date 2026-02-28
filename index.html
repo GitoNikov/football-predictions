@@ -387,8 +387,8 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
   </div>
   <div class="hright">
     <div class="hbadge hbadge-bg">🇧🇬 <span data-t="napBadge">НАП Лицензирани</span></div>
-    <div class="hbadge hbadge-live"><div class="hbadge-dot"></div><span data-t="liveBadge">ПЛ · ГВ28</span></div>
-    <span class="hdate">28.02.2026</span>
+    <div class="hbadge hbadge-live"><div class="hbadge-dot"></div><span id="gwBadge">ПЛ · ГВ28</span></div>
+    <span class="hdate" id="headerDate"></span>
     <div class="lang-toggle">
       <button class="lang-btn active" id="btn-bg" onclick="setLang('bg')">БГ</button>
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
@@ -523,7 +523,7 @@ let expanded = {};
 const T = {
   bg: {
     logoSub:"Само реални William Hill коефициенти",
-    napBadge:"НАП Лицензирани", liveBadge:"ПЛ · ГВ28",
+    napBadge:"НАП Лицензирани",
     todayTitle:'ПРОГНОЗИ <em style="color:var(--green)">ГВ28</em>',
     trendTitle:"📊 ПЛ ТРЕНД ГВ28",
     trend1:"Ливърпул вкъщи — 7 поредни победи (ПЛ)",
@@ -548,7 +548,7 @@ const T = {
   },
   en: {
     logoSub:"Real William Hill Odds Only",
-    napBadge:"NAP Licensed", liveBadge:"EPL · GW28",
+    napBadge:"NAP Licensed",
     todayTitle:'GW28 <em style="color:var(--green)">PICKS</em>',
     trendTitle:"📊 EPL TRENDS GW28",
     trend1:"Liverpool at home — 7 straight wins (PL)",
@@ -621,16 +621,40 @@ function applyStaticLang() {
 // ─── HEADER SUBTITLES ─────────────────────────────────────────────────────────
 function renderHeader() {
   const lang = currentLang;
+
+  // Date range under picks title
   const dateRange = lang === 'bg' ? (MD.date_range || '') : (MD.date_rangeEn || MD.date_range || '');
   const el = document.getElementById('picksSubEl');
   if (el) el.textContent = dateRange;
 
+  // Performance subtitle
   const perfEl = document.getElementById('perfSubEl');
   if (perfEl && MD.record) {
     const r = MD.record;
     perfEl.textContent = lang === 'bg'
       ? `${r.correct} верни от ${r.total} прогнози · ${r.period || ''}`
       : `${r.correct} correct out of ${r.total} picks · ${r.period || ''}`;
+  }
+
+  // GW badge — derived from matchday.json label
+  const badgeEl = document.getElementById('gwBadge');
+  if (badgeEl) {
+    const raw = lang === 'bg' ? (MD.label || '') : (MD.labelEn || MD.label || '');
+    const short = raw
+      .replace('Premier League', 'EPL')
+      .replace('Висша лига', 'ВЛ')
+      .replace('Gameweek', 'GW')
+      .replace('Кръг', 'Кр');
+    badgeEl.textContent = short || 'EPL';
+  }
+
+  // Today's date
+  const dateEl = document.getElementById('headerDate');
+  if (dateEl) {
+    const now = new Date();
+    const dd   = String(now.getDate()).padStart(2, '0');
+    const mm   = String(now.getMonth() + 1).padStart(2, '0');
+    dateEl.textContent = `${dd}.${mm}.${now.getFullYear()}`;
   }
 }
 

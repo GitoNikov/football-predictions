@@ -41,103 +41,41 @@ MARKETS     = "h2h,totals"
 ODDS_FORMAT = "decimal"
 OUTPUT_FILE = Path("data/live_odds.json")
 
-# Prefixes for which to fetch BTTS via the per-event endpoint.
-# Costs 3 quota units per event — only list key picks/combos.
-BTTS_PREFIXES = {"stu", "bol", "for", "cel", "liv", "ars", "bri", "gen"}
-
-# ── Team-name → match-ID mapping ───────────────────────────────────────────
-# Keys are lowercase substrings that appear in the API team names.
-# The value is our short match prefix (e.g. "stu" → stu_1, stu_x, stu_2 …)
-# Both home AND away for a match map to the same prefix so that either
-# team name resolves correctly. Home is tried first via get_prefix(home).
-TEAM_TO_PREFIX = {
-    # ── EPL GW28 (27 Feb – 1 Mar 2026) ──────────────────────────────────
-    "wolverhampton":      "wol",
-    "wolves":             "wol",
-    "aston villa":        "wol",
-
-    "bournemouth":        "bou",
-    "sunderland":         "bou",
-
-    "burnley":            "bur",
-    "brentford":          "bur",
-
-    "newcastle":          "new",
-    "everton":            "new",
-
-    "liverpool":          "liv",
-    "west ham":           "liv",
-
-    "leeds":              "lee",
-    "manchester city":    "lee",
-
-    "brighton":           "bri",
-    # Nottm Forest away at Brighton — "brighton" is home, found first.
-    # "nottm forest" / "nottingham forest" → bri only needed as fallback:
-    "nottm forest":       "bri",
-
-    "manchester united":  "mun",
-    "crystal palace":     "mun",
-
-    "fulham":             "ful",
-    "tottenham":          "ful",
-
-    "arsenal":            "ars",
-    "chelsea":            "ars",
-
-    # ── EL 26.02.2026 ────────────────────────────────────────────────────
-    "stuttgart":          "stu",
-    "celtic":             "stu",
-
-    "bologna":            "bol",
-    "brann":              "bol",
-
-    # NOTE: "nottingham" key kept for Nottm Forest as EL *home* team (for).
-    # Brighton vs Nottm Forest (EPL) uses "brighton" → "bri" first.
-    "nottingham":         "for",
-    "fenerbahce":         "for",
-
-    "red star":           "red",
-    "crvena zvezda":      "red",
-    "lille":              "red",
-
-    "ferencvaros":        "fer",
-    "ferencvárosi":       "fer",
-    "ludogorets":         "fer",
-
-    "genk":               "gen",
-    "dinamo zagreb":      "gen",
-
-    "plzen":              "plz",
-    "viktoria plzen":     "plz",
-    "panathinaikos":      "plz",
-
-    "celta":              "cel",
-    "paok":               "cel",
-
-    # ── CL 25.02.2026 ────────────────────────────────────────────────────
-    "atalanta":           "atl",
-    "dortmund":           "atl",
-    "borussia dortmund":  "atl",
-
-    "juventus":           "juv",
-    "galatasaray":        "juv",
-
-    "paris saint":        "psg",
-    "psg":                "psg",
-    "monaco":             "psg",
-
-    "real madrid":        "rma",
-    "benfica":            "rma",
-}
+MATCHDAY_FILE = Path("data/matchday.json")
 
 
-def get_prefix(team_name: str) -> str | None:
-    """Match a team name (from API) to our short prefix."""
-    name = team_name.lower()
-    for key, prefix in TEAM_TO_PREFIX.items():
-        if key in name:
-            return prefix
+def load_upcoming() -> list:
+    """Load pending upcoming matches from matchday.json."""
+    if not MATCHDAY_FILE.exists():
+        return []
+    with open(MATCHDAY_FILE, encoding="utf-8") as f:
+        md = json.load(f)
+    return [m for m in md.get("upcoming", []) if m.get("status") == "pending"]
+
+
+def teams_match(api_name: str, json_name: str) -> bool:
+    """
+    True if the API team name and the matchday.json team name refer to the same club.
+    Uses substring check first, then significant-word overlap as fallback
+    (handles abbreviations like 'Man City' ↔ 'Manchester City').
+    """
+    a, j = api_name.lower(), json_name.lower()
+    if j in a or a in j:
+        return True
+    a_words = {w for w in a.split() if len(w) > 3}
+    j_words = {w for w in j.split() if len(w) > 3}
+    return bool(a_words & j_words)
+
+
+def find_match_id(home_api: str, away_api: str, upcoming: list) -> str | None:
+    """
+    Find the matchday.json match ID for an API event by fuzzy-matching
+    both the home and away team names simultaneously.
+    Returns the full match ID (e.g. 'liv_whu') or None.
+    """
+    for match in upcoming:
+        if teams_match(home_api, match["homeEn"]) and teams_match(away_api, match["awayEn"]):
+            return match["id"]
     return None
 
 
@@ -226,10 +164,11 @@ def is_today_or_weekend(commence_time_str: str) -> bool:
         return True  # include if we can't parse
 
 
-def build_odds_dict(events: list, sport: str) -> tuple[dict, dict]:
+def build_odds_dict(events: list, sport: str, upcoming: list) -> tuple[dict, dict]:
     """
     Convert a list of API events into our flat key→value odds dict.
-    Also returns event_map: {prefix → (sport, event_id)} for BTTS fetching.
+    prefix = full matchday.json match ID (e.g. 'liv_whu') so patching works directly.
+    Also returns event_map: {match_id → (sport, event_id)} for BTTS fetching.
     """
     odds: dict[str, str] = {}
     event_map: dict[str, tuple[str, str]] = {}
@@ -240,10 +179,10 @@ def build_odds_dict(events: list, sport: str) -> tuple[dict, dict]:
 
         home   = event["home_team"]
         away   = event["away_team"]
-        prefix = get_prefix(home) or get_prefix(away)
+        prefix = find_match_id(home, away, upcoming)
 
         if not prefix:
-            print(f"  ⚠  No mapping for: {home} vs {away}")
+            print(f"  ⚠  No matchday.json entry for: {home} vs {away}")
             continue
 
         # Find William Hill bookmaker entry
@@ -259,7 +198,7 @@ def build_odds_dict(events: list, sport: str) -> tuple[dict, dict]:
 
         if "h2h" in markets:
             for k, v in extract_h2h(markets["h2h"], home).items():
-                odds[f"{prefix}{k}"] = v
+                odds[f"{prefix}{k}"] = v   # e.g. liv_whu_1
 
         if "totals" in markets:
             for k, v in extract_totals(markets["totals"], 2.5).items():
@@ -284,16 +223,15 @@ def build_odds_dict(events: list, sport: str) -> tuple[dict, dict]:
     return odds, event_map
 
 
-def fetch_btts_for_events(api_key: str, event_map: dict, target_prefixes: set) -> dict:
+def fetch_btts_for_events(api_key: str, event_map: dict) -> dict:
     """
-    For each prefix in target_prefixes that was matched in the bulk fetch,
-    call the per-event endpoint to get the BTTS market.
+    Fetch BTTS market for all matched events via the per-event endpoint.
+    Costs 3 quota units per event.
     Returns partial odds dict with only _btts keys.
     """
     btts_odds: dict[str, str] = {}
     to_fetch = [(prefix, sport, eid)
-                for prefix, (sport, eid) in event_map.items()
-                if prefix in target_prefixes]
+                for prefix, (sport, eid) in event_map.items()]
 
     if not to_fetch:
         return btts_odds
@@ -333,21 +271,25 @@ def main():
 
     print(f"\n📡 Fetching William Hill odds for EPL + UEFA matches …\n")
 
+    # Load matchday.json once — used to map API team names → match IDs
+    upcoming = load_upcoming()
+    print(f"  📋 Loaded {len(upcoming)} pending matches from matchday.json\n")
+
     all_odds:   dict[str, str] = {}
-    all_events: dict[str, tuple[str, str]] = {}  # prefix → (sport, event_id)
+    all_events: dict[str, tuple[str, str]] = {}  # match_id → (sport, event_id)
 
     for sport in SPORTS:
         events = fetch_sport_odds(api_key, sport)
-        odds, event_map = build_odds_dict(events, sport)
+        odds, event_map = build_odds_dict(events, sport, upcoming)
         all_odds.update(odds)
-        all_events.update(event_map)  # later sport overwrites — fine, prefixes are unique
+        all_events.update(event_map)
 
     if not all_odds:
         print("\n⚠  No odds found. Check the date/window or API key.")
         sys.exit(1)
 
-    # Step 2: fetch BTTS for key events via per-event endpoint
-    btts = fetch_btts_for_events(api_key, all_events, BTTS_PREFIXES)
+    # Fetch BTTS for all matched events
+    btts = fetch_btts_for_events(api_key, all_events)
     all_odds.update(btts)
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
@@ -361,10 +303,9 @@ def main():
 
     print(f"\n✅  Saved {len(all_odds)} odds entries → {OUTPUT_FILE}")
 
-    # Also patch odds_wh into matchday.json upcoming matches
-    matchday_file = Path("data/matchday.json")
-    if matchday_file.exists():
-        with open(matchday_file, encoding="utf-8") as f:
+    # Patch odds_wh into matchday.json upcoming matches
+    if MATCHDAY_FILE.exists():
+        with open(MATCHDAY_FILE, encoding="utf-8") as f:
             md = json.load(f)
         updated_md = 0
         for match in md.get("upcoming", []):
@@ -391,7 +332,7 @@ def main():
                 elif market == "over_under" and "o25" in wh:
                     pick["odd"] = wh["o25"]
                 updated_md += 1
-        with open(matchday_file, "w", encoding="utf-8") as f:
+        with open(MATCHDAY_FILE, "w", encoding="utf-8") as f:
             json.dump(md, f, ensure_ascii=False, indent=2)
         print(f"    Patched odds into matchday.json for {updated_md} matches\n")
 
