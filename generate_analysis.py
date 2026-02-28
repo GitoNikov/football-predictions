@@ -21,7 +21,7 @@ except ImportError:
     sys.exit("❌  google-genai not installed. Run: pip install google-genai")
 
 DATA_FILE  = Path("data/matchday.json")
-MODEL_NAME = "gemini-1.5-flash"
+MODEL_NAME = "gemini-2.0-flash"
 DELAY      = 4.5   # seconds between calls — stays under 15 req/min
 
 

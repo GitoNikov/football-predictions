@@ -576,6 +576,7 @@ function render() {
   renderHeader();
   renderPicks();
   renderTopPick();
+  renderSidebarCombos();
   renderCombos();
   renderCCBPicks();
   renderPerf();
@@ -780,6 +781,48 @@ function renderTopPick() {
   </div>
   <div class="tp-conf">${lang==='bg'?'Увереност':'Confidence'}: ${top.pick.conf}%</div>
   ${ai?`<div style="margin-top:10px;font-size:11px;color:var(--muted);line-height:1.6;font-style:italic">${ai}</div>`:''}
+</div>`;
+}
+
+// ─── SIDEBAR COMBO SUMMARY ────────────────────────────────────────────────────
+function renderSidebarCombos() {
+  const box = document.getElementById('combosBox');
+  if (!box || !MD) return;
+  const upcoming = (MD.upcoming || []).filter(m => m.status === 'pending');
+  if (upcoming.length < 2) { box.innerHTML = ''; return; }
+
+  const lang = currentLang;
+  const sorted = [...upcoming].sort((a, b) => b.pick.conf - a.pick.conf);
+
+  const comboDefs = [
+    { picks: sorted.slice(0, 2), badge:'cb-safe', labelBG:'✅ Безопасна', labelEN:'✅ Safe' },
+    { picks: sorted.slice(0, 3), badge:'cb-val',  labelBG:'⚖ Балансирана', labelEN:'⚖ Balanced' },
+    { picks: sorted.slice(0, Math.min(5, sorted.length)), badge:'cb-risky', labelBG:'🔥 Голяма', labelEN:'🔥 Big' },
+  ].filter(c => c.picks.length >= 2);
+
+  box.innerHTML = `<div class="scard">
+  <div class="stitle">${lang==='bg'?'🎯 Бързи комбинации':'🎯 Quick Combos'}</div>
+  ${comboDefs.map(c => {
+    const totalOdd = c.picks.reduce((a, m) => a * parseFloat(m.pick.odd), 1).toFixed(2);
+    const label = lang === 'bg' ? c.labelBG : c.labelEN;
+    const idsJson = JSON.stringify(c.picks.map(m => m.id)).replace(/"/g,'&quot;');
+    return `<div style="background:var(--dark3);border:1px solid var(--border);border-radius:9px;padding:10px 12px;margin-bottom:8px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+    <span class="combo-badge ${c.badge}" style="font-size:8px">${label}</span>
+    <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--yellow);letter-spacing:1px">${totalOdd}</span>
+  </div>
+  <div style="font-size:10px;color:var(--muted);margin-bottom:8px;line-height:1.5">${c.picks.map(m=>{
+    const h = lang==='bg'?m.home:m.homeEn;
+    const a = lang==='bg'?m.away:m.awayEn;
+    const b = lang==='bg'?m.pick.bet:m.pick.betEn;
+    return `${h} – ${a}: <strong style="color:var(--text)">${b}</strong>`;
+  }).join('<br>')}</div>
+  <button onclick="addComboToBetslip('${idsJson}')"
+    style="width:100%;padding:5px;border-radius:6px;border:1px solid rgba(255,184,0,.3);background:rgba(255,184,0,.08);color:var(--yellow);font-size:10px;font-weight:700;cursor:pointer;letter-spacing:1px">
+    ${lang==='bg'?'+ Добави в бетслип':'+ Add to Betslip'}
+  </button>
+</div>`;
+  }).join('')}
 </div>`;
 }
 
