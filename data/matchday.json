@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-02-28T07:00:00Z",
-  "label": "Висша лига · Кръг 28",
-  "labelEn": "Premier League · GW28",
-  "date_range": "28 Февруари – 1 Март 2026",
-  "date_rangeEn": "28 February – 1 March 2026",
+  "updated_at": "2026-02-28T14:09:56Z",
+  "label": "Висша лига · Кръг 31",
+  "labelEn": "Premier League · GW31",
+  "date_range": "2026-03-03 – 2026-03-04",
+  "date_rangeEn": "2026-03-03 – 2026-03-04",
   "sport": "soccer_epl",
   "upcoming": [
     {
@@ -75,8 +75,7 @@
       },
       "ai": "Бърнли са в трудна серия, без победа в 7 мача и допускат 2+ гола средно на мач при домакинство, докато Брентфорд е спечелил 4 от последните 6 мача извън дома си. Тази форма и статистиката говорят в полза на Брентфорд, като топ реализатора им е отбелязал 3 гола в последните 4 мача извън дома си. Коефициентът на Уилям Хил за победа на Брентфорд е 1.75, с увереност 61%, което изглежда като добра стойност, имайки предвид вероятността за победа на гости да е 48%.",
       "aiEn": "Burnley are struggling with a winless run of 7 league games and conceding an average of 2+ goals per match at home, whereas Brentford have won 4 of their last 6 away fixtures. This form and statistical advantage favour Brentford, with their top scorer having netted 3 goals in his last 4 away games, making the pick tactically and statistically sound. The William Hill odds of 1.75 for a Brentford win, with a confidence level of 61%, appears to represent good value, given the away team's 48% probability of winning.",
-      "aiCtx": "Burnley are 19th, winless in 7 league games and conceding 2+ goals per match at home. Brentford sit 9th and have won 4 of their last 6 away fixtures. Brentford's top scorer has 3 goals in his last 4 away games.",
-      "aiCtxHash": "6c1e33f1"
+      "aiCtx": "Burnley are 19th in the Premier League (19 pts), form: D-D-L-L-W-D. Brentford are 7th (40 pts), form: L-L-W-W-D-L."
     },
     {
       "id": "liv_whu",
@@ -111,8 +110,7 @@
       },
       "ai": "Ливърпул е в изключителна форма, непобеден в последните 12 мача у дома, като е спечелил 10 от тях, докато Уест Хям има само 1 победи в последните 7 гостувания, което ги поставя на 14-то място. Тази статистика показва, че нашата прогноза за победа на Ливърпул е логична, тъй като те са отбелязали гол във всеки един мач у дома този сезон. Коефициентът при Уилям Хил за победа на Ливърпул е 1.37, което отразява нашата увереност от 74%, и представлява стойност, тъй като взема предвид доминирането на отбора в последните мачове.",
       "aiEn": "Liverpool are in exceptional form, having gone unbeaten in their last 12 home matches, winning 10 of them, while West Ham have only managed 1 win in their last 7 away games, leaving them in 14th place. This statistic supports our pick for a Liverpool win, as they have scored in every home game this season, making them a formidable opponent at Anfield. The William Hill odds of 1.37 for a Liverpool win reflect our 74% confidence level, and represent value given the team's dominance in recent matches.",
-      "aiCtx": "Liverpool lead the Premier League by 7 points and are unbeaten in their last 12 home matches, winning 10 of them. West Ham are 14th and have won just 1 of their last 7 away games. Liverpool have scored in every home game this season.",
-      "aiCtxHash": "0d379827"
+      "aiCtx": "Liverpool are 6th in the Premier League (45 pts), form: L-W-W-L-W-W. West Ham are 18th (25 pts), form: W-W-L-W-D-D."
     },
     {
       "id": "new_eve",
@@ -147,8 +145,7 @@
       },
       "ai": "Нюкасъл е в добра форма, спечелил 4 от последните 5 мача у дома, докато Евъртън все още търси първа победа извън дома в последните 8 опита. Изборът на Нюкасъл да спечели има смисъл от тактична и статистична гледна точка, тъй като отборът е получил едва 4 гола у дома в последните 7 мача. Коефициентът на Уилям Хил от 1.75 за победа на Нюкасъл при ниво на увереност 62% изглежда като стойност, имайки предвид домакинските успехи на отбора.",
       "aiEn": "Newcastle are in good form, having won 4 of their last 5 home games, while Everton are still seeking their first away win in their last 8 attempts. The pick of Newcastle to win makes sense tactically and statistically, as the team have conceded only 4 goals at home in their last 7 matches. The William Hill odds of 1.75 for a Newcastle win at a confidence level of 62% appears to be value, given the team's strong home record.",
-      "aiCtx": "Newcastle are 6th and pushing for European football, with 4 wins in their last 5 home games. Everton sit 18th in the relegation zone, without an away win in their last 8 attempts. Newcastle have conceded only 4 goals at home in their last 7 matches.",
-      "aiCtxHash": "1edd7c3d"
+      "aiCtx": "Newcastle are 12th in the Premier League (36 pts), form: L-L-W-W-L-W. Everton are 9th (37 pts), form: W-D-D-W-L-L."
     },
     {
       "id": "lee_mci",
@@ -183,8 +180,7 @@
       },
       "ai": "Лидс е 12-ти в класирането след завръщането си в Премиер лигата, с едва 2 победи у дома в последните 6 мача, докато Ман Сити е 3-ти и непобеден в 9 гостувания, с Холанд отбелязал 5 гола в последните 4 гостувания. Изборът на Ман Сити за победа прави смисъл от тактична и статистическа гледна точка, тъй като те са непобедени в последните 9 гостувания и са победили Лидс в последните 4 срещи между двата отбора. Коефициентът на Уилям Хил за победа на Ман Сити е 1.65, с ниво на увереност 65%, което представлява стойност, учитайки добрата форма на Холанд и слабата форма на Лидс у дома.",
       "aiEn": "Leeds are 12th in the standings after their return to the Premier League, with only 2 home wins in their last 6 matches, while Man City are 3rd and unbeaten in 9 away games, with Haaland scoring 5 goals in his last 4 away matches. The pick of a Man City win makes sense tactically and statistically, as they are unbeaten in their last 9 away games and have won their last 4 meetings against Leeds, with Haaland in good form. The William Hill odds of 1.65 for a Man City win, with a confidence level of 65%, represents value, considering Haaland's recent away form and Leeds' poor home record, with only 2 wins in their last 6 home matches.",
-      "aiCtx": "Leeds are 12th after their return to the Premier League, with only 2 home wins in their last 6. Man City are 3rd and unbeaten in 9 away games, with Haaland scoring 5 goals in his last 4 away matches. City have won their last 4 meetings against Leeds.",
-      "aiCtxHash": "220cc03f"
+      "aiCtx": "Leeds are 15th in the Premier League (31 pts), form: W-D-L-W-D-D. Manchester City are 2nd (56 pts), form: W-W-D-W-W-W."
     },
     {
       "id": "bri_for",
@@ -219,8 +215,7 @@
       },
       "ai": "Нотингам Форест е в изключителна форма, като е непобеден в последните 11 мача и има 4 чисти листа в последните 6 гостувания, докато Брайтън е спечелил едва 2 от последните 6 мача у дома. Тази форма и статистика правят нашата прогноза за победа на Нотингам Форест логична, тъй като те имат добра защита и стабилна игра. Ставката за победа на Нотингам Форест при Уилям Хил е 4.20, с ниво на увереност 45%, което представлява стойност, тъй като шансът за победа на отбора е 32%.",
       "aiEn": "Nottingham Forest are in exceptional form, being unbeaten in their last 11 matches and having 4 clean sheets in their last 6 away trips, while Brighton have won only 2 of their last 6 home games. This form and statistics make our pick for a Nottingham Forest win logical, as they have a solid defense and stable play, having gone 11 matches without a loss, including 7 wins and 4 draws. The odds for a Nottingham Forest win at William Hill are 4.20, with a confidence level of 45%, which represents value, given their 32% chance of winning.",
-      "aiCtx": "Nottingham Forest are 2nd in the league, unbeaten in their last 11 matches across all competitions — 7 wins and 4 draws. Brighton are 7th but have won only 2 of their last 6 home games. Forest have kept 4 clean sheets in their last 6 away trips.",
-      "aiCtxHash": "ee9d99d3"
+      "aiCtx": "Brighton are 14th in the Premier League (34 pts), form: D-L-D-L-L-W. Nottingham Forest are 17th (27 pts), form: D-W-D-L-D-L."
     },
     {
       "id": "mun_pal",
@@ -255,8 +250,7 @@
       },
       "ai": "Манчестър Юнайтед и Кристъл Палас се изправят един срещу друг, като гостите са без победа в последните 6 мача извън дома си и не са отбележили гол в 3 от тях, докато домакините са спечелили 4 от последните 5 срещи на Олд Трафорд. Тази форма и статистиката от последните 5 директни срещи, в които Манчестър Юнайтед е спечелил 4 пъти, говорят в полза на нашата прогноза за победа на домакините. Предлаганите от Уилям Хил одds от 1.55 за победа на Манчестър Юнайтед при ниво на увереност 65% изглеждат като добро стойност, имайки предвид текущата форма и статистиката.",
       "aiEn": "Manchester United and Crystal Palace face each other, with the visitors being winless in their last 6 away matches and failing to score in 3 of them, while the hosts have won 4 of their last 5 home games at Old Trafford. This form and the statistics from the last 5 head-to-head meetings, in which Manchester United have won 4 times, support our pick for a home win. The odds of 1.55 offered by William Hill for a Manchester United win at a confidence level of 65% appear to be good value, considering the current form and statistics.",
-      "aiCtx": "Manchester United are 8th and have won 4 of their last 5 home games at Old Trafford. Crystal Palace are 13th and winless in their last 6 away matches, failing to score in 3 of them. United have won 4 of the last 5 head-to-head meetings.",
-      "aiCtxHash": "bc7464d2"
+      "aiCtx": "Manchester United are 2nd in the Premier League (56 pts), form: W-W-D-W-W-W. Crystal Palace are 13th (35 pts), form: L-L-D-W-L-W."
     },
     {
       "id": "ful_tot",
@@ -291,8 +285,7 @@
       },
       "ai": "Фулъм и Тотнъм са в добра формация, като и двата отбора отбелязват над 1.5 гола на мач в последните си срещи, а Фулъм отбелязва гол в 80% от домакинските си мачове, а Тотнъм в 85% от гостуванията си. Изборът за гол при домакина и госта е логичен, тъй като в 4 от последните 5 срещи между двата отбора има гол при двата отбора, а и двата отбора не са успявали да запазят чиста листа в последните 4 си срещи. Ставката при Уилиям Хил е 1.72, с увереност 63%, което представлява стойност, тъй като вероятността за домашна победа е 38%, равенство 30%, а победа за госта 32%.",
       "aiEn": "Fulham and Tottenham are in good form, with both teams scoring over 1.5 goals per game in their recent matches, as Fulham scores in 80% of their home games and Tottenham in 85% of their away games. The pick for both teams to score makes sense tactically and statistically, given that 4 of the last 5 head-to-head meetings between the two teams have seen BTTS, and neither team has kept a clean sheet in their last 4 meetings. The odds at William Hill are 1.72, with a confidence level of 63%, which represents value, considering the probabilities of a home win at 38%, a draw at 30%, and an away win at 32%.",
-      "aiCtx": "Fulham and Tottenham have seen BTTS in 4 of their last 5 head-to-head meetings. Both sides average over 1.5 goals scored per game — Fulham score in 80% of home matches, Spurs in 85% of away games. Neither side has kept a clean sheet in their last 4 meetings.",
-      "aiCtxHash": "3531a217"
+      "aiCtx": "Fulham are 10th in the Premier League (37 pts), form: L-W-L-L-L-W. Tottenham are 16th (29 pts), form: D-W-D-L-L-L."
     },
     {
       "id": "ars_che",
@@ -327,8 +320,295 @@
       },
       "ai": "Арсенал и Челси се изправят един срещу друг във важен мач от 28-ия кръг на Висшата лига, където „топчията“ са на второ място и непобедени в 14 последователни домакински мача, като са отбелязали гол във всеки един от тях, докато Челси е на четвърто място, но не е успял да спечели на Емирейтс в последните три посещения, загубил дважды. Тази прогноза за победа на Арсенал има смисъл от тактична и статистическа гледна точка, като Арсенал е спечелил 5 от последните 7 лондонски дербита срещу Челси. Находящите се на 1.60 при Уилям Хил, тези коефициенти предлагат добра стойност, като нашата увереност е на ниво 70%. ",
       "aiEn": "Arsenal and Chelsea face off in a crucial match in the 28th round of the Premier League, where Arsenal are in second place and unbeaten in 14 consecutive home matches, having scored in all of them, while Chelsea are in fourth place but have failed to win at the Emirates in their last three visits, losing twice. This pick for an Arsenal win makes sense tactically and statistically, as Arsenal have won 5 of the last 7 London derbies against Chelsea. With odds of 1.60 at William Hill, this represents good value, with our confidence level at 70%.",
-      "aiCtx": "Arsenal are 2nd in the league, unbeaten in 14 consecutive home matches and have scored in all of them. Chelsea are 4th but have failed to win at the Emirates in their last 3 visits, losing twice. Arsenal have won 5 of the last 7 London derbies against Chelsea.",
-      "aiCtxHash": "49736a29"
+      "aiCtx": "Arsenal are 1st in the Premier League (61 pts), form: W-W-W-D-D-W. Chelsea are 5th (45 pts), form: W-W-W-W-D-D."
+    },
+    {
+      "id": "bou_bre",
+      "home": "Борнемут",
+      "homeEn": "Bournemouth",
+      "homeA": "BOU",
+      "away": "Брентфорд",
+      "awayEn": "Brentford",
+      "awayA": "BRE",
+      "date": "2026-03-03",
+      "time": "21:30",
+      "status": "pending",
+      "pick": {
+        "bet": "Тотал голови над 2.5",
+        "betEn": "Over 2.5 Goals",
+        "conf": 58,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.65"
+      },
+      "odds_wh": {
+        "h": "2.38",
+        "a": "2.75",
+        "x": "3.4",
+        "o25": "1.65"
+      },
+      "prob": {
+        "h": 42,
+        "d": 29,
+        "a": 36
+      },
+      "aiCtx": "Bournemouth are 8th in the Premier League (39 pts), form: D-W-W-D-W-D. Brentford are 7th (40 pts), form: L-L-W-W-D-L."
+    },
+    {
+      "id": "eve_bur",
+      "home": "Евъртън",
+      "homeEn": "Everton",
+      "homeA": "EVE",
+      "away": "Burnley",
+      "awayEn": "Burnley",
+      "awayA": "BUR",
+      "date": "2026-03-03",
+      "time": "21:30",
+      "status": "pending",
+      "pick": {
+        "bet": "Евертън победа",
+        "betEn": "Everton Win",
+        "conf": 65,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.67"
+      },
+      "odds_wh": {
+        "a": "5.0",
+        "h": "1.67",
+        "x": "3.5",
+        "o25": "1.85"
+      },
+      "prob": {
+        "h": 60,
+        "d": 29,
+        "a": 20
+      },
+      "aiCtx": "Everton are 9th in the Premier League (37 pts), form: W-D-D-W-L-L. Burnley are 19th (19 pts), form: D-D-L-L-W-D."
+    },
+    {
+      "id": "lee_sun",
+      "home": "Лийдс",
+      "homeEn": "Leeds",
+      "homeA": "LEE",
+      "away": "Съндърланд",
+      "awayEn": "Sunderland",
+      "awayA": "SUN",
+      "date": "2026-03-03",
+      "time": "21:30",
+      "status": "pending",
+      "pick": {
+        "bet": "Лийдс победа",
+        "betEn": "Leeds Win",
+        "conf": 58,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.85"
+      },
+      "odds_wh": {
+        "h": "1.85",
+        "a": "4.0",
+        "x": "3.4",
+        "o25": "2.0"
+      },
+      "prob": {
+        "h": 54,
+        "d": 29,
+        "a": 25
+      },
+      "aiCtx": "Leeds are 15th in the Premier League (31 pts), form: W-D-L-W-D-D. Sunderland are 11th (37 pts), form: W-L-W-L-L-L."
+    },
+    {
+      "id": "wol_liv",
+      "home": "Уулвърхямптън",
+      "homeEn": "Wolverhampton Wanderers",
+      "homeA": "WOL",
+      "away": "Ливърпул",
+      "awayEn": "Liverpool",
+      "awayA": "LIV",
+      "date": "2026-03-03",
+      "time": "22:15",
+      "status": "pending",
+      "pick": {
+        "bet": "Тотал голове над 2.5",
+        "betEn": "Over 2.5 Goals",
+        "conf": 70,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.5"
+      },
+      "odds_wh": {
+        "a": "1.44",
+        "h": "6.0",
+        "x": "4.6",
+        "o25": "1.5"
+      },
+      "prob": {
+        "h": 17,
+        "d": 22,
+        "a": 69
+      },
+      "aiCtx": "Wolverhampton Wanderers are 20th in the Premier League (13 pts), form: L-L-D-D-L-W. Liverpool are 6th (45 pts), form: L-W-W-L-W-W."
+    },
+    {
+      "id": "bri_ars",
+      "home": "Брайтън",
+      "homeEn": "Brighton",
+      "homeA": "BRI",
+      "away": "Арсенал",
+      "awayEn": "Arsenal",
+      "awayA": "ARS",
+      "date": "2026-03-04",
+      "time": "21:30",
+      "status": "pending",
+      "pick": {
+        "bet": "Арсенал победа",
+        "betEn": "Arsenal Win",
+        "conf": 70,
+        "market": "h2h",
+        "selection": "away",
+        "odd": "1.65"
+      },
+      "odds_wh": {
+        "a": "1.65",
+        "h": "4.6",
+        "x": "4.0",
+        "o25": "1.85"
+      },
+      "prob": {
+        "h": 22,
+        "d": 25,
+        "a": 61
+      },
+      "aiCtx": "Brighton are 14th in the Premier League (34 pts), form: D-L-D-L-L-W. Arsenal are 1st (61 pts), form: W-W-W-D-D-W."
+    },
+    {
+      "id": "avl_che",
+      "home": "Астън Вила",
+      "homeEn": "Aston Villa",
+      "homeA": "AVL",
+      "away": "Челси",
+      "awayEn": "Chelsea",
+      "awayA": "CHE",
+      "date": "2026-03-04",
+      "time": "21:30",
+      "status": "pending",
+      "pick": {
+        "bet": "Тотал над 2.5",
+        "betEn": "Over 2.5",
+        "conf": 70,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.65"
+      },
+      "odds_wh": {
+        "h": "2.62",
+        "a": "2.4",
+        "x": "3.5",
+        "o25": "1.65"
+      },
+      "prob": {
+        "h": 38,
+        "d": 29,
+        "a": 42
+      },
+      "aiCtx": "Aston Villa are 3rd in the Premier League (51 pts), form: W-L-D-W-D-L. Chelsea are 5th (45 pts), form: W-W-W-W-D-D."
+    },
+    {
+      "id": "ful_whu",
+      "home": "Фулъм",
+      "homeEn": "Fulham",
+      "homeA": "FUL",
+      "away": "Уест Хем",
+      "awayEn": "West Ham",
+      "awayA": "WHU",
+      "date": "2026-03-04",
+      "time": "21:30",
+      "status": "pending",
+      "pick": {
+        "bet": "Фулхам победа",
+        "betEn": "Fulham Win",
+        "conf": 58,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "2.0"
+      },
+      "odds_wh": {
+        "h": "2.0",
+        "a": "3.4",
+        "x": "3.4",
+        "o25": "1.73"
+      },
+      "prob": {
+        "h": 50,
+        "d": 29,
+        "a": 29
+      },
+      "aiCtx": "Fulham are 10th in the Premier League (37 pts), form: L-W-L-L-L-W. West Ham are 18th (25 pts), form: W-W-L-W-D-D."
+    },
+    {
+      "id": "mci_for",
+      "home": "Ман Сити",
+      "homeEn": "Manchester City",
+      "homeA": "MCI",
+      "away": "Нотингам Форест",
+      "awayEn": "Nottingham Forest",
+      "awayA": "FOR",
+      "date": "2026-03-04",
+      "time": "21:30",
+      "status": "pending",
+      "pick": {
+        "bet": "Тотал над 2.5",
+        "betEn": "Over 2.5",
+        "conf": 70,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.5"
+      },
+      "odds_wh": {
+        "h": "1.36",
+        "a": "7.0",
+        "x": "4.75",
+        "o25": "1.5"
+      },
+      "prob": {
+        "h": 74,
+        "d": 21,
+        "a": 14
+      },
+      "aiCtx": "Manchester City are 2nd in the Premier League (56 pts), form: W-W-D-W-W-W. Nottingham Forest are 17th (27 pts), form: D-W-D-L-D-L."
+    },
+    {
+      "id": "new_mun",
+      "home": "Нюкасъл",
+      "homeEn": "Newcastle",
+      "homeA": "NEW",
+      "away": "Ман Юнайтед",
+      "awayEn": "Manchester United",
+      "awayA": "MUN",
+      "date": "2026-03-04",
+      "time": "22:15",
+      "status": "pending",
+      "pick": {
+        "bet": "Тотал над 2.5",
+        "betEn": "Over 2.5",
+        "conf": 70,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.5"
+      },
+      "odds_wh": {
+        "a": "2.62",
+        "h": "2.4",
+        "x": "3.6",
+        "o25": "1.5"
+      },
+      "prob": {
+        "h": 42,
+        "d": 28,
+        "a": 38
+      },
+      "aiCtx": "Newcastle are 12th in the Premier League (36 pts), form: L-L-W-W-L-W. Manchester United are 2nd (56 pts), form: W-W-D-W-W-W."
     }
   ],
   "betBuilder": {
@@ -339,14 +619,14 @@
     "awayEn": "West Ham",
     "markets": [
       {
-        "market": "Над 1.5 гола",
-        "marketEn": "Over 1.5 Goals",
-        "odd": "1.25"
+        "market": "Над 2.5 гола",
+        "marketEn": "Over 2.5 Goals",
+        "odd": "1.60"
       },
       {
         "market": "И двата вкарват",
         "marketEn": "BTTS Yes",
-        "odd": "1.72"
+        "odd": "1.80"
       },
       {
         "market": "Победа домакин",
@@ -354,9 +634,9 @@
         "odd": "1.37"
       }
     ],
-    "totalOdd": "2.89",
-    "reasoning": "Тези пазари се съчетават добре, тъй като Ливърпул има изключително强а форма у дома и е отбелязал гол във всяка една от своята домашна среща през сезона, докато Уест Хям имат трудности в своята форма на път. ",
-    "reasoningEn": "These markets combine well as Liverpool are in exceptional home form and have scored in every home game this season, while West Ham have struggled with their away form."
+    "totalOdd": "3.95",
+    "reasoning": "",
+    "reasoningEn": ""
   },
   "results": [
     {
