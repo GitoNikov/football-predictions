@@ -438,13 +438,7 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
   <div id="combosBox"></div>
   <div id="betBuilderBox"></div>
 
-  <div class="scard">
-    <div class="stitle" data-t="trendTitle">📊 ПЛ ТРЕНД ГВ28</div>
-    <div class="srow"><span class="sname" data-t="trend1">Ливърпул вкъщи — 7 поредни победи (ПЛ)</span><span class="sbg sg">7/7</span></div>
-    <div class="srow"><span class="sname" data-t="trend2">Арсенал — 5 победи в последните 6</span><span class="sbg sg">5/6</span></div>
-    <div class="srow"><span class="sname" data-t="trend3">Форест — стойностна котировка (4.20)</span><span class="sbg sy">стойност</span></div>
-    <div class="srow"><span class="sname" data-t="trend4">Фулъм & Арсенал — BTTS тренд</span><span class="sbg sg">BTTS</span></div>
-  </div>
+  <div id="trendsCard"></div>
 
   <div class="disc">
     <strong data-t="discTitle">⚠️ Отговорна игра</strong><br>
@@ -525,11 +519,6 @@ const T = {
     logoSub:"Само реални William Hill коефициенти",
     napBadge:"НАП Лицензирани",
     todayTitle:'ПРОГНОЗИ <em style="color:var(--green)">ГВ28</em>',
-    trendTitle:"📊 ПЛ ТРЕНД ГВ28",
-    trend1:"Ливърпул вкъщи — 7 поредни победи (ПЛ)",
-    trend2:"Арсенал — 5 победи в последните 6",
-    trend3:"Форест — стойностна котировка (4.20)",
-    trend4:"Фулъм & Арсенал — BTTS тренд",
     discTitle:"⚠️ Отговорна игра",
     discText:"Залагането носи риск. Играй отговорно. Всички оператори тук са лицензирани от НАП — Национална агенция за приходите на Република България. 18+",
     comboTitle:'КОМБИНИРАНИ <em>ЗАЛОЗИ</em>',
@@ -550,11 +539,6 @@ const T = {
     logoSub:"Real William Hill Odds Only",
     napBadge:"NAP Licensed",
     todayTitle:'GW28 <em style="color:var(--green)">PICKS</em>',
-    trendTitle:"📊 EPL TRENDS GW28",
-    trend1:"Liverpool at home — 7 straight wins (PL)",
-    trend2:"Arsenal — 5 wins in last 6",
-    trend3:"Forest — value pick (4.20)",
-    trend4:"Fulham & Arsenal — BTTS trend",
     discTitle:"⚠️ Responsible Gambling",
     discText:"Gambling carries risk. Play responsibly. All operators here are licensed by NAP — National Revenue Agency of Bulgaria. 18+",
     comboTitle:'COMBO <em>BUILDER</em>',
@@ -597,6 +581,7 @@ function render() {
   renderTopPick();
   renderSystem();
   renderBetBuilder();
+  renderTrends();
   renderCombos();
   renderCCBPicks();
   renderPerf();
@@ -936,6 +921,93 @@ function renderBetBuilder() {
     </div>
     ${reasoning ? `<div style="font-size:10px;color:var(--muted);line-height:1.55;font-style:italic;padding-top:8px;border-top:1px solid var(--border)">${reasoning}</div>` : ''}
   </div>
+</div>`;
+}
+
+// ─── SIDEBAR TRENDS ───────────────────────────────────────────────────────────
+function renderTrends() {
+  const box = document.getElementById('trendsCard');
+  if (!box || !MD) return;
+  const lang = currentLang;
+  const allPending = (MD.upcoming || []).filter(m => m.status === 'pending');
+
+  // Same GW isolation as renderSystem()
+  const uniqueDates = [...new Set(allPending.map(m => m.date).filter(Boolean))].sort();
+  const gwDateSet = new Set(uniqueDates.slice(0, 1));
+  for (let i = 1; i < uniqueDates.length; i++) {
+    const gap = (new Date(uniqueDates[i] + 'T00:00:00Z') - new Date(uniqueDates[i-1] + 'T00:00:00Z')) / 86400000;
+    if (gap >= 2) break;
+    gwDateSet.add(uniqueDates[i]);
+  }
+  const gw = allPending.filter(m => !m.date || gwDateSet.has(m.date));
+  if (!gw.length) { box.innerHTML = ''; return; }
+
+  const usedIds = new Set();
+  const rows = [];
+
+  // Row 1: Highest confidence pick
+  const topConf = [...gw].sort((a, b) => b.pick.conf - a.pick.conf)[0];
+  if (topConf) {
+    const h = lang === 'bg' ? topConf.home : topConf.homeEn;
+    const a = lang === 'bg' ? topConf.away : topConf.awayEn;
+    const bet = lang === 'bg' ? topConf.pick.bet : topConf.pick.betEn;
+    rows.push({ text: `${h} – ${a}: ${bet}`, badge: `${topConf.pick.conf}%`, cls: 'sg' });
+    usedIds.add(topConf.id);
+  }
+
+  // Row 2: Value pick — highest odd ≥ 2.00 not already used
+  const valPick = [...gw]
+    .filter(m => !usedIds.has(m.id) && parseFloat(m.pick.odd) >= 2.00)
+    .sort((a, b) => parseFloat(b.pick.odd) - parseFloat(a.pick.odd))[0];
+  if (valPick) {
+    const h = lang === 'bg' ? valPick.home : valPick.homeEn;
+    const a = lang === 'bg' ? valPick.away : valPick.awayEn;
+    rows.push({
+      text: lang === 'bg' ? `${h} – ${a}: стойностна квота` : `${h} – ${a}: value pick`,
+      badge: valPick.pick.odd, cls: 'sy'
+    });
+    usedIds.add(valPick.id);
+  }
+
+  // Row 3: BTTS pick — match with btts market pick, or lowest btts odd
+  let bttsPick = gw.find(m => !usedIds.has(m.id) && m.pick.market === 'btts');
+  if (!bttsPick) {
+    bttsPick = [...gw]
+      .filter(m => !usedIds.has(m.id) && m.odds_wh && m.odds_wh.btts)
+      .sort((a, b) => parseFloat(a.odds_wh.btts) - parseFloat(b.odds_wh.btts))[0];
+  }
+  if (bttsPick) {
+    const h = lang === 'bg' ? bttsPick.home : bttsPick.homeEn;
+    const a = lang === 'bg' ? bttsPick.away : bttsPick.awayEn;
+    rows.push({ text: `${h} & ${a} — BTTS`, badge: 'BTTS', cls: 'sg' });
+    usedIds.add(bttsPick.id);
+  }
+
+  // Row 4: Over goals — lowest o25 odd (most likely to go over)
+  const overPick = [...gw]
+    .filter(m => !usedIds.has(m.id) && m.odds_wh && m.odds_wh.o25)
+    .sort((a, b) => parseFloat(a.odds_wh.o25) - parseFloat(b.odds_wh.o25))[0];
+  if (overPick) {
+    const h = lang === 'bg' ? overPick.home : overPick.homeEn;
+    const a = lang === 'bg' ? overPick.away : overPick.awayEn;
+    rows.push({
+      text: lang === 'bg' ? `${h} & ${a} — голове` : `${h} & ${a} — goals`,
+      badge: lang === 'bg' ? 'голове' : 'goals', cls: 'sb'
+    });
+  }
+
+  if (!rows.length) { box.innerHTML = ''; return; }
+
+  // Build title from label field
+  const rawLabel = lang === 'bg' ? (MD.label || '') : (MD.labelEn || '');
+  const trendLabel = rawLabel
+    .replace('Висша лига', 'ВЛ').replace('Кръг', 'Кр.')
+    .replace('Premier League', 'EPL');
+  const title = `📊 ${lang === 'bg' ? 'Тренд' : 'Trends'} · ${trendLabel}`;
+
+  box.innerHTML = `<div class="scard">
+  <div class="stitle">${title}</div>
+  ${rows.map(r => `<div class="srow"><span class="sname">${r.text}</span><span class="sbg ${r.cls}">${r.badge}</span></div>`).join('')}
 </div>`;
 }
 
