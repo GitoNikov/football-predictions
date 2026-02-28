@@ -30,14 +30,14 @@ def build_prompt(match: dict, label: str) -> str:
     pick = match["pick"]
     prob = match["prob"]
     ctx  = match.get("aiCtx") or f"{match.get('homeEn')} vs {match.get('awayEn')}"
-    return f"""You are a concise sports analyst for a football predictions website.
+    return f"""You are an expert football analyst writing for a predictions website.
 
 Match: {match['homeEn']} vs {match['awayEn']} ({label})
-Context: {ctx}
+Key context: {ctx}
 Probabilities: Home {prob['h']}% | Draw {prob['d']}% | Away {prob['a']}%
-Our pick: {pick['betEn']} @ {pick['odd']} (confidence {pick['conf']}%)
+Our pick: {pick['betEn']} @ {pick['odd']} William Hill (confidence {pick['conf']}%)
 
-Write a short analysis (2-3 sentences, max 55 words each) in TWO languages.
+Write an informative analysis of 3 sentences in TWO languages.
 Return ONLY valid JSON — no markdown, no extra text:
 {{
   "bg": "Анализ на български тук.",
@@ -45,9 +45,11 @@ Return ONLY valid JSON — no markdown, no extra text:
 }}
 
 Rules:
-- Explain WHY the pick makes sense using the probabilities
-- Mention the William Hill odds and confidence level
-- Be direct and confident, avoid vague filler phrases
+- Sentence 1: describe the current form/situation of both teams using the context facts
+- Sentence 2: explain why the pick makes sense tactically and statistically
+- Sentence 3: mention the William Hill odds, confidence level, and whether it represents value
+- Be specific — use team names, numbers, and facts from the context
+- Do NOT use vague phrases like "this is a good pick" or "the match will be interesting"
 - Bulgarian must use Cyrillic script"""
 
 
