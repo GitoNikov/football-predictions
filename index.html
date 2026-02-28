@@ -803,7 +803,15 @@ function renderSystem() {
   const box = document.getElementById('combosBox');
   if (!box || !MD) return;
   const lang = currentLang;
-  const upcoming = (MD.upcoming || []).filter(m => m.status === 'pending');
+  const allPending = (MD.upcoming || []).filter(m => m.status === 'pending');
+
+  // Restrict to the current GW: find earliest date and include only matches within 4 days of it
+  const gwDates = allPending.map(m => m.date).filter(Boolean).sort();
+  const firstDate = gwDates[0];
+  const cutoff = firstDate
+    ? new Date(new Date(firstDate + 'T00:00:00Z').getTime() + 4 * 86400000).toISOString().slice(0, 10)
+    : '9999-12-31';
+  const upcoming = allPending.filter(m => !m.date || m.date <= cutoff);
 
   // Filter qualifying picks: 1.40 ≤ odd ≤ 2.50
   const qualifying = [...upcoming]
