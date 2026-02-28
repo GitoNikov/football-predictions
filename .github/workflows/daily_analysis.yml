@@ -1,13 +1,12 @@
-name: Daily AI Analysis
+name: Daily Update
 
 on:
   schedule:
-    # Runs every day at 07:00 UTC (09:00 Sofia time)
-    - cron: "0 7 * * *"
-  workflow_dispatch:  # allows manual trigger from GitHub UI
+    - cron: "0 7 * * *"   # 07:00 UTC = 09:00 Sofia time
+  workflow_dispatch:       # manual trigger from GitHub UI
 
 jobs:
-  generate:
+  update:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,15 +21,25 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Generate AI analysis
+      - name: Check match results (Odds API scores)
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python fetch_results.py
+
+      - name: Generate AI analysis (Gemini)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python generate_analysis.py
 
-      - name: Commit and push updated matchday.json
+      - name: Refresh live odds (William Hill)
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python fetch_odds.py
+
+      - name: Commit and push updated data
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/matchday.json
-          git diff --cached --quiet || git commit -m "chore: auto-update AI analysis [$(date +%Y-%m-%d)]"
+          git add data/matchday.json data/live_odds.json
+          git diff --cached --quiet || git commit -m "chore: daily update [$(date +%Y-%m-%d)]"
           git push

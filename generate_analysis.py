@@ -6,8 +6,7 @@ Usage:
     export GEMINI_API_KEY=your_key_here
     python generate_analysis.py
 
-Free tier limits: 1,500 requests/day · 1M tokens/day · 15 req/min
-Typical cost per run: ~18 matches × 2 fields = ~36 requests, ~7,000 tokens
+Free tier: 1,500 requests/day · 15 req/min
 """
 
 import json
@@ -17,28 +16,25 @@ import time
 from pathlib import Path
 
 try:
-    import google.generativeai as genai
+    from google import genai
 except ImportError:
-    sys.exit("❌  google-generativeai not installed. Run: pip install google-generativeai")
+    sys.exit("❌  google-genai not installed. Run: pip install google-genai")
 
-# ── Config ──────────────────────────────────────────────────────────────────
 DATA_FILE  = Path("data/matchday.json")
 MODEL_NAME = "gemini-1.5-flash"
-DELAY      = 4.5   # seconds between calls — stays safely under 15 req/min
+DELAY      = 4.5   # seconds between calls — stays under 15 req/min
 
 
-# ── Prompt builder ──────────────────────────────────────────────────────────
-def build_prompt(match: dict, league_label: str) -> str:
+def build_prompt(match: dict, label: str) -> str:
     pick = match["pick"]
     prob = match["prob"]
-    ctx  = match.get("ctxEn") or match.get("ctx", "")
-
+    ctx  = match.get("aiCtx") or f"{match.get('homeEn')} vs {match.get('awayEn')}"
     return f"""You are a concise sports analyst for a football predictions website.
 
-Match: {match['homeEn']} vs {match['awayEn']} ({league_label})
-Context / first leg: {ctx}
+Match: {match['homeEn']} vs {match['awayEn']} ({label})
+Context: {ctx}
 Probabilities: Home {prob['h']}% | Draw {prob['d']}% | Away {prob['a']}%
-Our pick: {pick['betEn']} (confidence {pick['conf']}%)
+Our pick: {pick['betEn']} @ {pick['odd']} (confidence {pick['conf']}%)
 
 Write a short analysis (2-3 sentences, max 55 words each) in TWO languages.
 Return ONLY valid JSON — no markdown, no extra text:
@@ -48,93 +44,78 @@ Return ONLY valid JSON — no markdown, no extra text:
 }}
 
 Rules:
-- Explain WHY the pick makes sense using the context and probabilities
-- Mention odds value if confidence is high (≥65%)
+- Explain WHY the pick makes sense using the probabilities
+- Mention the William Hill odds and confidence level
 - Be direct and confident, avoid vague filler phrases
 - Bulgarian must use Cyrillic script"""
 
 
-# ── API call ────────────────────────────────────────────────────────────────
-def generate_analysis(model, match: dict, league_label: str) -> tuple[str, str]:
-    prompt = build_prompt(match, league_label)
+def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
+    prompt = build_prompt(match, label)
     try:
-        response = model.generate_content(prompt)
+        response = client.models.generate_content(model=MODEL_NAME, contents=prompt)
         text = response.text.strip()
-
-        # Strip markdown code fences if Gemini wraps in ```json ... ```
         if "```" in text:
             text = text.split("```")[1]
             if text.startswith("json"):
                 text = text[4:]
             text = text.strip()
-
         result = json.loads(text)
         return result.get("bg", ""), result.get("en", "")
-
     except json.JSONDecodeError as e:
-        print(f"\n    ⚠  JSON parse error: {e}\n    Raw: {text[:120]}")
+        print(f"\n    ⚠  JSON parse error: {e}")
         return "", ""
     except Exception as e:
         print(f"\n    ⚠  API error: {e}")
         return "", ""
 
 
-# ── Main ────────────────────────────────────────────────────────────────────
 def main():
     api_key = os.environ.get("GEMINI_API_KEY", "")
     if not api_key:
-        sys.exit(
-            "❌  No API key found.\n"
-            "    Set GEMINI_API_KEY env var.\n"
-            "    Get a free key at https://aistudio.google.com/app/apikey"
-        )
+        sys.exit("❌  Set GEMINI_API_KEY env var.\n    Free key: https://aistudio.google.com/app/apikey")
 
     if not DATA_FILE.exists():
-        sys.exit(f"❌  {DATA_FILE} not found. Run from the repo root.")
+        sys.exit(f"❌  {DATA_FILE} not found.")
 
-    genai.configure(api_key=api_key)
-    model = genai.GenerativeModel(MODEL_NAME)
+    client = genai.Client(api_key=api_key)
 
     with open(DATA_FILE, encoding="utf-8") as f:
         data = json.load(f)
 
-    leagues = data.get("leagues", [])
-    total   = sum(len(lg["matches"]) for lg in leagues)
+    matches = data.get("upcoming", [])
+    label   = data.get("labelEn", "Football")
+    total   = len(matches)
     print(f"\n🤖  Generating AI analysis for {total} matches via {MODEL_NAME}…\n")
 
-    updated = 0
-    skipped = 0
+    updated = skipped = 0
+    for i, match in enumerate(matches):
+        name = f"{match.get('homeEn')} vs {match.get('awayEn')}"
+        # Skip if AI already exists and match status is not pending
+        if match.get("ai") and match.get("aiEn"):
+            print(f"  ↩  {name} — already has AI, skipping")
+            skipped += 1
+            continue
 
-    for league in leagues:
-        label = league.get("labelEn") or league.get("label", "")
-        print(f"📋  {label}  ({len(league['matches'])} matches)")
+        print(f"  ⚙  {name}… ", end="", flush=True)
+        bg, en = generate_analysis(client, match, label)
 
-        for i, match in enumerate(league["matches"]):
-            name = f"{match.get('homeEn', match.get('home'))} vs {match.get('awayEn', match.get('away'))}"
-            print(f"  ⚙  {name}… ", end="", flush=True)
+        if bg and en:
+            match["ai"]   = bg
+            match["aiEn"] = en
+            print("✓")
+            updated += 1
+        else:
+            print("⚠  kept existing")
+            skipped += 1
 
-            bg, en = generate_analysis(model, match, label)
+        if i < total - 1:
+            time.sleep(DELAY)
 
-            if bg and en:
-                match["ai"]   = bg
-                match["aiEn"] = en
-                print("✓")
-                updated += 1
-            else:
-                print("⚠  kept existing")
-                skipped += 1
-
-            # Rate-limit: pause between calls (skip after last match)
-            if i < len(league["matches"]) - 1:
-                time.sleep(DELAY)
-
-        print()
-
-    # Save updated JSON
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"✅  Done! Updated {updated} matches, skipped {skipped}.")
+    print(f"\n✅  Done! Updated {updated}, skipped {skipped}.")
     print(f"    Saved → {DATA_FILE}\n")
 
 

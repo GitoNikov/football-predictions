@@ -1,0 +1,147 @@
+{
+  "updated_at": "2026-02-28T07:00:00Z",
+  "label": "Висша лига · Кръг 28",
+  "labelEn": "Premier League · GW28",
+  "date_range": "28 Февруари – 1 Март 2026",
+  "date_rangeEn": "28 February – 1 March 2026",
+  "sport": "soccer_epl",
+  "upcoming": [
+    {
+      "id": "bou_sun",
+      "home": "Борнемут", "homeEn": "Bournemouth", "homeA": "BOU",
+      "away": "Сундерланд", "awayEn": "Sunderland", "awayA": "SUN",
+      "date": "2026-02-28", "time": "12:30", "status": "pending",
+      "pick": { "bet": "Борнемут победа", "betEn": "Bournemouth Win", "conf": 62, "market": "h2h", "selection": "home", "odd": "1.75" },
+      "odds_wh": { "h": "1.75", "x": "3.70", "a": "4.50", "btts": "1.80", "o25": "1.90" },
+      "prob": { "h": 54, "d": 24, "a": 22 },
+      "ai": "Борнемут са домакини с добра форма срещу Сундерланд — новак в Премиер лийг. Гостите не са победили като гост от 6 мача. William Hill предлага 1.75 за домакинска победа при ~54% реален шанс.",
+      "aiEn": "Bournemouth host Sunderland in good form — the visitors are yet to win away in 6 attempts. William Hill offers 1.75 for a home win at a real ~54% probability."
+    },
+    {
+      "id": "bur_bre",
+      "home": "Бърнли", "homeEn": "Burnley", "homeA": "BUR",
+      "away": "Брентфорд", "awayEn": "Brentford", "awayA": "BRE",
+      "date": "2026-02-28", "time": "15:00", "status": "pending",
+      "pick": { "bet": "Брентфорд победа", "betEn": "Brentford Win", "conf": 61, "market": "h2h", "selection": "away", "odd": "1.75" },
+      "odds_wh": { "h": "4.50", "x": "3.60", "a": "1.75", "btts": "1.90", "o25": "1.85" },
+      "prob": { "h": 26, "d": 26, "a": 48 },
+      "ai": "Бърнли са в зоната на изпадане с лоша домашна форма. Брентфорд са в топ 10 с добра гостуваща форма. William Hill предлага 1.75 за гостите при ~48% реален шанс.",
+      "aiEn": "Burnley are in the relegation zone with poor home form. Brentford sit top 10 with solid away form. William Hill offers 1.75 for the visitors at ~48% real chance."
+    },
+    {
+      "id": "liv_whu",
+      "home": "Ливърпул", "homeEn": "Liverpool", "homeA": "LIV",
+      "away": "Уест Хем", "awayEn": "West Ham", "awayA": "WHU",
+      "date": "2026-02-28", "time": "16:00", "status": "pending",
+      "pick": { "bet": "Ливърпул победа", "betEn": "Liverpool Win", "conf": 74, "market": "h2h", "selection": "home", "odd": "1.37" },
+      "odds_wh": { "h": "1.37", "x": "5.50", "a": "9.00", "btts": "1.80", "o25": "1.60" },
+      "prob": { "h": 74, "d": 15, "a": 11 },
+      "ai": "Ливърпул са доминиращата сила вкъщи — Уест Хем са без победа гости от 7 мача. Лийдерите в Премиер лийг не са пропускали точки у дома. William Hill предлага 1.37.",
+      "aiEn": "Liverpool are the dominant force at home — West Ham are winless away in 7 games. The league leaders haven't dropped home points recently. William Hill offers 1.37."
+    },
+    {
+      "id": "new_eve",
+      "home": "Нюкасъл", "homeEn": "Newcastle", "homeA": "NEW",
+      "away": "Евъртън", "awayEn": "Everton", "awayA": "EVE",
+      "date": "2026-02-28", "time": "16:00", "status": "pending",
+      "pick": { "bet": "Нюкасъл победа", "betEn": "Newcastle Win", "conf": 62, "market": "h2h", "selection": "home", "odd": "1.75" },
+      "odds_wh": { "h": "1.75", "x": "3.50", "a": "4.50", "btts": "1.85", "o25": "1.95" },
+      "prob": { "h": 54, "d": 25, "a": 21 },
+      "ai": "Нюкасъл са стабилни домакини срещу Евъртън в зоната на изпадане. Гостите не спечелиха гости от 5 мача. William Hill предлага 1.75 за домакините.",
+      "aiEn": "Newcastle are solid hosts against Everton, who are in the relegation zone. The visitors haven't won away in 5 games. William Hill offers 1.75 for the hosts."
+    },
+    {
+      "id": "lee_mci",
+      "home": "Лийдс", "homeEn": "Leeds", "homeA": "LEE",
+      "away": "Ман Сити", "awayEn": "Man City", "awayA": "MCI",
+      "date": "2026-02-28", "time": "16:00", "status": "pending",
+      "pick": { "bet": "Ман Сити победа", "betEn": "Man City Win", "conf": 65, "market": "h2h", "selection": "away", "odd": "1.65" },
+      "odds_wh": { "h": "4.00", "x": "3.50", "a": "1.65", "btts": "1.85", "o25": "1.75" },
+      "prob": { "h": 28, "d": 25, "a": 47 },
+      "ai": "Ман Сити са в отлична гостуваща форма с голяма таблична преднина пред Лийдс. William Hill предлага 1.65 за гостите при ~47% реален шанс.",
+      "aiEn": "Man City are in excellent away form with a big table advantage over Leeds. William Hill offers 1.65 for the visitors at ~47% real chance."
+    },
+    {
+      "id": "bri_for",
+      "home": "Брайтън", "homeEn": "Brighton", "homeA": "BRI",
+      "away": "Нотингам Форест", "awayEn": "Nottm Forest", "awayA": "FOR",
+      "date": "2026-03-01", "time": "15:00", "status": "pending",
+      "pick": { "bet": "Форест победа (ценност)", "betEn": "Forest Win (value)", "conf": 45, "market": "h2h", "selection": "away", "odd": "4.20" },
+      "odds_wh": { "h": "2.20", "x": "3.40", "a": "4.20", "btts": "1.85", "o25": "2.00" },
+      "prob": { "h": 40, "d": 28, "a": 32 },
+      "ai": "Нотингам Форест са в невероятна форма — без загуба от 11 мача. Брайтън са непредвидими вкъщи. При 4.20 за Форест — изключителна ценност за отбор на 2-ро място.",
+      "aiEn": "Nottingham Forest are in incredible form — unbeaten in 11! Brighton are inconsistent at home. At 4.20 for Forest — exceptional value for a 2nd-place side."
+    },
+    {
+      "id": "mun_pal",
+      "home": "Ман Юнайтед", "homeEn": "Man United", "homeA": "MUN",
+      "away": "Кристъл Палас", "awayEn": "Crystal Palace", "awayA": "PAL",
+      "date": "2026-03-01", "time": "16:00", "status": "pending",
+      "pick": { "bet": "Ман Юнайтед победа", "betEn": "Man United Win", "conf": 65, "market": "h2h", "selection": "home", "odd": "1.55" },
+      "odds_wh": { "h": "1.55", "x": "3.80", "a": "5.50", "btts": "1.88", "o25": "2.10" },
+      "prob": { "h": 52, "d": 26, "a": 22 },
+      "ai": "Ман Юнайтед са домакини срещу Палас без победа гости от 6 мача. Олд Трафорд дава предимство — William Hill предлага 1.55 за домакинска победа.",
+      "aiEn": "Man United host Palace, who are without an away win in 6 games. Old Trafford advantage — William Hill offers 1.55 for a home win."
+    },
+    {
+      "id": "ful_tot",
+      "home": "Фулъм", "homeEn": "Fulham", "homeA": "FUL",
+      "away": "Тотнъм", "awayEn": "Tottenham", "awayA": "TOT",
+      "date": "2026-03-01", "time": "16:00", "status": "pending",
+      "pick": { "bet": "BTTS Да", "betEn": "BTTS Yes", "conf": 63, "market": "btts", "selection": "yes", "odd": "1.72" },
+      "odds_wh": { "h": "2.10", "x": "3.40", "a": "3.50", "btts": "1.72", "o25": "1.78" },
+      "prob": { "h": 38, "d": 30, "a": 32 },
+      "ai": "BTTS е паднало в 4 от последните 5 двубоя между Фулъм и Тотнъм. И двата отбора са с атакуваща игра. William Hill предлага 1.72 за BTTS при ~63% реален шанс.",
+      "aiEn": "BTTS has landed in 4 of the last 5 Fulham vs Tottenham head-to-heads. Both sides play attacking football. William Hill offers 1.72 for BTTS at ~63% real chance."
+    },
+    {
+      "id": "ars_che",
+      "home": "Арсенал", "homeEn": "Arsenal", "homeA": "ARS",
+      "away": "Челси", "awayEn": "Chelsea", "awayA": "CHE",
+      "date": "2026-03-01", "time": "17:30", "status": "pending",
+      "pick": { "bet": "Арсенал победа", "betEn": "Arsenal Win", "conf": 70, "market": "h2h", "selection": "home", "odd": "1.60" },
+      "odds_wh": { "h": "1.60", "x": "4.20", "a": "5.50", "btts": "1.72", "o25": "1.80" },
+      "prob": { "h": 56, "d": 24, "a": 20 },
+      "ai": "Голямото лондонско дерби! Арсенал са лидери без загуба от 14 домашни мача. Челси са без победа на Емирейтс в последните 3 посещения. William Hill предлага 1.60.",
+      "aiEn": "The big London derby! Arsenal are leaders unbeaten in 14 home games. Chelsea haven't won at the Emirates in 3 visits. William Hill offers 1.60."
+    }
+  ],
+  "results": [
+    {
+      "id": "stu_cel", "home": "Щутгарт", "homeEn": "Stuttgart",
+      "away": "Селтик", "awayEn": "Celtic",
+      "date": "2026-02-26", "competition": "ЛЕ", "competitionEn": "UEL",
+      "pick": { "bet": "Щутгарт победа", "betEn": "Stuttgart Win", "odd": "1.36" },
+      "result": "W"
+    },
+    {
+      "id": "bol_brn", "home": "Болоня", "homeEn": "Bologna",
+      "away": "Бран", "awayEn": "Brann",
+      "date": "2026-02-26", "competition": "ЛЕ", "competitionEn": "UEL",
+      "pick": { "bet": "Болоня победа", "betEn": "Bologna Win", "odd": "1.60" },
+      "result": "W"
+    },
+    {
+      "id": "for_fen", "home": "Нотингам Форест", "homeEn": "Nottm Forest",
+      "away": "Фенербахче", "awayEn": "Fenerbahce",
+      "date": "2026-02-26", "competition": "ЛЕ", "competitionEn": "UEL",
+      "pick": { "bet": "Над 2.5 гола", "betEn": "Over 2.5 Goals", "odd": "1.75" },
+      "result": "L"
+    },
+    {
+      "id": "fer_lud", "home": "Ференцварош", "homeEn": "Ferencvaros",
+      "away": "Лудогорец", "awayEn": "Ludogorets",
+      "date": "2026-02-26", "competition": "ЛЕ", "competitionEn": "UEL",
+      "pick": { "bet": "Ференцварош победа", "betEn": "Ferencvaros Win", "odd": "2.10" },
+      "result": "L"
+    },
+    {
+      "id": "red_lil", "home": "Чрв. Звезда", "homeEn": "Red Star",
+      "away": "Лил", "awayEn": "Lille",
+      "date": "2026-02-26", "competition": "ЛЕ", "competitionEn": "UEL",
+      "pick": { "bet": "Чрв. Звезда победа", "betEn": "Red Star Win", "odd": "2.30" },
+      "result": "L"
+    }
+  ],
+  "record": { "correct": 2, "total": 5, "period": "ЛЕ 26.02.2026" }
+}
