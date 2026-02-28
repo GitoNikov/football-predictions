@@ -466,7 +466,7 @@ def main():
         team_forms[name] = form
         print(f"  ✓  {name}: {form}")
 
-    # ── Step 4: Build new match entries ───────────────────────────────────────
+    # ── Step 4: Build new match entries / refresh aiCtx on existing ──────────
     groq_client = Groq(api_key=groq_key)
     new_matches = []
 
@@ -477,21 +477,26 @@ def main():
         away_en   = normalize_team(away_raw)
         match_id  = make_match_id(home_en, away_en)
 
+        home_st = find_standing(home_en, standings_map) or {"pos": 0, "pts": 0, "team_id": 0}
+        away_st = find_standing(away_en, standings_map) or {"pos": 0, "pts": 0, "team_id": 0}
+        home_form = team_forms.get(home_en, "N/A")
+        away_form = team_forms.get(away_en, "N/A")
+        ai_ctx = build_ai_ctx(home_en, away_en, home_st, away_st, home_form, away_form)
+
         if match_id in existing_ids:
-            print(f"  ↩  {home_en} vs {away_en} [{match_id}] — already in matchday.json, skipping")
+            # Refresh aiCtx on the existing entry so generate_analysis picks it up
+            for m in existing.get("upcoming", []):
+                if m["id"] == match_id and m.get("status") == "pending":
+                    m["aiCtx"] = ai_ctx
+                    # Clear aiCtxHash so generate_analysis.py regenerates the text
+                    m.pop("aiCtxHash", None)
+                    print(f"  ↻  {home_en} vs {away_en} — aiCtx refreshed with real standings")
             continue
 
         home_bg = team_bg(home_en)
         away_bg = team_bg(away_en)
         h_abbr  = team_abbr(home_en).upper()
         a_abbr  = team_abbr(away_en).upper()
-
-        home_st = find_standing(home_en, standings_map) or {"pos": 0, "pts": 0, "team_id": 0}
-        away_st = find_standing(away_en, standings_map) or {"pos": 0, "pts": 0, "team_id": 0}
-        home_form = team_forms.get(home_en, "N/A")
-        away_form = team_forms.get(away_en, "N/A")
-
-        ai_ctx = build_ai_ctx(home_en, away_en, home_st, away_st, home_form, away_form)
 
         # Parse date/time
         ct = ev.get("commence_time", "")
