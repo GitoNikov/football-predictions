@@ -7,150 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "bou_sun",
-      "home": "Борнемут",
-      "homeEn": "Bournemouth",
-      "homeA": "BOU",
-      "away": "Сундерланд",
-      "awayEn": "Sunderland",
-      "awayA": "SUN",
-      "date": "2026-02-28",
-      "time": "12:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Борнемут победа",
-        "betEn": "Bournemouth Win",
-        "conf": 62,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.75"
-      },
-      "odds_wh": {
-        "h": "1.75",
-        "x": "3.70",
-        "a": "4.50",
-        "btts": "1.80",
-        "o25": "1.90"
-      },
-      "prob": {
-        "h": 54,
-        "d": 24,
-        "a": 22
-      },
-      "ai": "Борнмът и Съндърланд се изправят един срещу друг в ключов мач, където домакините имат 3 победи в последните 5 домашни срещи, докато гостите са без победа в последните 6 мача на чужд терен, като са отбелязали едва 2 гола. Тази форма и статистика показват, че нашата прогноза за победа на Борнмът има солидни шанси за успех, тъй като отборът е показал добра защитна стабилност с 3 чисти листа у дома. При предложените от Уилям Хил цени от 1.75 и ниво на увереност 62%, тази прогноза изглежда като добра възможност за залагане, тъй като вероятността за победа на Борнмът е 54%.",
-      "aiEn": "Bournemouth and Sunderland face off in a key match, where the hosts have 3 wins in their last 5 home games, while the visitors are winless in their last 6 away matches, scoring just 2 goals on the road. This form and statistical trend indicate that our pick for a Bournemouth win has solid chances of success, as the team has shown good defensive stability with 3 clean sheets at home. With William Hill offering odds of 1.75 and a confidence level of 62%, this pick appears to be a good betting opportunity, given Bournemouth's 54% probability of winning.",
-      "aiCtx": "Bournemouth are 10th in the Premier League with 3 wins in their last 5 home games. Sunderland are newly promoted and winless in their last 6 away matches, scoring just 2 goals on the road. Bournemouth have kept 3 clean sheets at home this season.",
-      "aiCtxHash": "57d8ece9"
-    },
-    {
-      "id": "bur_bre",
-      "home": "Бърнли",
-      "homeEn": "Burnley",
-      "homeA": "BUR",
-      "away": "Брентфорд",
-      "awayEn": "Brentford",
-      "awayA": "BRE",
-      "date": "2026-02-28",
-      "time": "15:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Брентфорд победа",
-        "betEn": "Brentford Win",
-        "conf": 61,
-        "market": "h2h",
-        "selection": "away",
-        "odd": "1.75"
-      },
-      "odds_wh": {
-        "h": "4.50",
-        "x": "3.60",
-        "a": "1.75",
-        "btts": "1.90",
-        "o25": "1.85"
-      },
-      "prob": {
-        "h": 26,
-        "d": 26,
-        "a": 48
-      },
-      "ai": "Бърнли и Брентфорд се изправят един срещу друг, като домакините са на 19-то място с 19 точки и формата Д-Д-Л-Л-В-Д, докато гостьите са 7-ми с 40 точки и формата Л-Л-В-В-Д-Л. Изборът на Брентфорд да спечели има смисъл от тактическа и статистическа гледна точка, тъй като те имат по-висока вероятност за победа от 48% и по-добро класиране в лигата. Ставката на Уилям Хил за победа на Брентфорд при коефициент 1.75 и ниво на увереност 61% изглежда като стойност, тъй като отразява реалните шансове на отбора.",
-      "aiEn": "Burnley and Brentford face off, with the hosts sitting 19th with 19 points and a form of D-D-L-L-W-D, while the visitors are 7th with 40 points and a form of L-L-W-W-D-L. The pick of Brentford to win makes sense tactically and statistically, as they have a higher probability of winning at 48% and a better league standing. The William Hill odds of 1.75 for a Brentford win, with a confidence level of 61%, appears to represent value, as it reflects the team's genuine chances of success.",
-      "aiCtx": "Burnley are 19th in the Premier League (19 pts), form: D-D-L-L-W-D. Brentford are 7th (40 pts), form: L-L-W-W-D-L.",
-      "aiCtxHash": "fd49e8db"
-    },
-    {
-      "id": "liv_whu",
-      "home": "Ливърпул",
-      "homeEn": "Liverpool",
-      "homeA": "LIV",
-      "away": "Уест Хем",
-      "awayEn": "West Ham",
-      "awayA": "WHU",
-      "date": "2026-02-28",
-      "time": "16:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Ливърпул победа",
-        "betEn": "Liverpool Win",
-        "conf": 74,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.37"
-      },
-      "odds_wh": {
-        "h": "1.37",
-        "x": "5.50",
-        "a": "9.00",
-        "btts": "1.80",
-        "o25": "1.60"
-      },
-      "prob": {
-        "h": 74,
-        "d": 15,
-        "a": 11
-      },
-      "ai": "Ливъерпул и Уест Хям се състезават в 31-вия кръг на Висшата лига, като домакините са на 6-то място с 45 точки и формата Л-П-П-Л-П-П, а гостьорите са на 18-о място с 25 точки и формата П-П-З-П-Р-Р. Изборът за победа на Ливъерпул прави смисъл от тактична и статистическа гледна точка, тъй като те имат по-висока вероятност за победа от 74% според зададените вероятности. С коэффициент 1.37 при Уилям Хил и ниво на увереност 74%, тази става представлява стойност, тъй като отразява реалните шансове на Ливъерпул да спечели мача срещу Уест Хям.",
-      "aiEn": "Liverpool and West Ham are facing off in the 31st round of the Premier League, with the hosts sitting in 6th place with 45 points and a form of L-W-W-L-W-W, while the visitors are in 18th place with 25 points and a form of W-W-L-W-D-D. The pick for a Liverpool win makes sense tactically and statistically, as they have a higher probability of winning at 74% according to the given probabilities. With odds of 1.37 at William Hill and a confidence level of 74%, this bet represents value, as it reflects Liverpool's real chances of beating West Ham.",
-      "aiCtx": "Liverpool are 6th in the Premier League (45 pts), form: L-W-W-L-W-W. West Ham are 18th (25 pts), form: W-W-L-W-D-D.",
-      "aiCtxHash": "04caf4ca"
-    },
-    {
-      "id": "new_eve",
-      "home": "Нюкасъл",
-      "homeEn": "Newcastle",
-      "homeA": "NEW",
-      "away": "Евъртън",
-      "awayEn": "Everton",
-      "awayA": "EVE",
-      "date": "2026-02-28",
-      "time": "16:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Нюкасъл победа",
-        "betEn": "Newcastle Win",
-        "conf": 62,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.75"
-      },
-      "odds_wh": {
-        "h": "1.75",
-        "x": "3.50",
-        "a": "4.50",
-        "btts": "1.85",
-        "o25": "1.95"
-      },
-      "prob": {
-        "h": 54,
-        "d": 25,
-        "a": 21
-      },
-      "ai": "Нюкасъл и Евертън се сблъскват в ключов мач от 31-вия кръг на Висшата лига, като домакините идват след неравномерна форма от последните 6 мача с 3 победи и 3 загуби, докато гостите от Евертън имат 2 победи, 2 равни и 2 загуби. Нашата прогноза за победа на Нюкасъл се основава на статистически данни и тактически анализи, които показват, че домакините имат леко предимство с 54% вероятност за успех. С коэффициент 1.75 при Уилям Хил и нива на увереност 62%, нашата прогноза изглежда като добра стойност, имайки предвид позициите на отборите в класирането - 12-то място за Нюкасъл с 36 точки и 9-то място за Евертън с 37 точки.",
-      "aiEn": "Newcastle and Everton clash in a key match of the 31st round of the Premier League, with the hosts coming off an inconsistent form of 3 wins and 3 losses in their last 6 matches, while the visiting Everton side have 2 wins, 2 draws, and 2 losses. Our pick for a Newcastle win is based on statistical data and tactical analysis, which shows that the hosts have a slight advantage with a 54% probability of success. With odds of 1.75 at William Hill and a confidence level of 62%, our prediction appears to be good value, considering the teams' positions in the standings - 12th place for Newcastle with 36 points and 9th place for Everton with 37 points.",
-      "aiCtx": "Newcastle are 12th in the Premier League (36 pts), form: L-L-W-W-L-W. Everton are 9th (37 pts), form: W-D-D-W-L-L.",
-      "aiCtxHash": "7e16131b"
-    },
-    {
       "id": "lee_mci",
       "home": "Лийдс",
       "homeEn": "Leeds",
@@ -675,6 +531,86 @@
   },
   "results": [
     {
+      "id": "new_eve",
+      "home": "Нюкасъл",
+      "homeEn": "Newcastle",
+      "away": "Евъртън",
+      "awayEn": "Everton",
+      "date": "2026-02-28",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Нюкасъл победа",
+        "betEn": "Newcastle Win",
+        "conf": 62,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.75"
+      },
+      "result": "L",
+      "score": "2-3"
+    },
+    {
+      "id": "liv_whu",
+      "home": "Ливърпул",
+      "homeEn": "Liverpool",
+      "away": "Уест Хем",
+      "awayEn": "West Ham",
+      "date": "2026-02-28",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Ливърпул победа",
+        "betEn": "Liverpool Win",
+        "conf": 74,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.37"
+      },
+      "result": "W",
+      "score": "5-2"
+    },
+    {
+      "id": "bur_bre",
+      "home": "Бърнли",
+      "homeEn": "Burnley",
+      "away": "Брентфорд",
+      "awayEn": "Brentford",
+      "date": "2026-02-28",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Брентфорд победа",
+        "betEn": "Brentford Win",
+        "conf": 61,
+        "market": "h2h",
+        "selection": "away",
+        "odd": "1.75"
+      },
+      "result": "W",
+      "score": "3-4"
+    },
+    {
+      "id": "bou_sun",
+      "home": "Борнемут",
+      "homeEn": "Bournemouth",
+      "away": "Сундерланд",
+      "awayEn": "Sunderland",
+      "date": "2026-02-28",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Борнемут победа",
+        "betEn": "Bournemouth Win",
+        "conf": 62,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.75"
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
       "id": "stu_cel",
       "home": "Щутгарт",
       "homeEn": "Stuttgart",
@@ -756,8 +692,8 @@
     }
   ],
   "record": {
-    "correct": 2,
-    "total": 5,
+    "correct": 4,
+    "total": 9,
     "period": "ЛЕ 26.02.2026"
   }
 }
