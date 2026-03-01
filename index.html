@@ -725,7 +725,7 @@ function buildMatchCard(m) {
     <div class="mctr">
       <div class="mc-time">${m.time}</div>
       <div class="mc-ctx">${m.date.slice(5).replace('-','.')}</div>
-      <span class="mc-st st-today">WH</span>
+      <span class="mc-st ${ {'Champions League':'st-soon','Europa League':'st-soon','Conference League':'st-soon'}[m.competition] || 'st-today' }">${ {'Champions League':'CL','Europa League':'EL','Conference League':'ECL'}[m.competition] || 'WH' }</span>
     </div>
     <div class="team away">
       <div class="tname">${away}</div>
@@ -763,16 +763,23 @@ function buildMatchCard(m) {
     </span>
   </div>
   <div class="expand${isExp?' open':''}">
-    ${wh.h||wh.x||wh.a ? `<div class="odds-sec">
+    ${wh.h||wh.x||wh.a ? (() => {
+      const pm = pick.market, ps = pick.selection;
+      const pickKey = pm==='h2h' ? {home:'h',away:'a',draw:'x'}[ps]
+                    : pm==='btts' ? 'btts'
+                    : pm==='over_under' ? 'o25' : null;
+      const hi = k => k===pickKey ? 'background:rgba(0,232,122,.08);border:1px solid rgba(0,232,122,.28);border-radius:8px;padding:7px 10px' : 'padding:7px 10px';
+      return `<div class="odds-sec">
       <div class="odds-sec-title">William Hill</div>
-      <div style="display:flex;gap:24px;flex-wrap:wrap">
-        ${wh.h?`<div><div style="font-size:9px;color:var(--muted);margin-bottom:4px">1</div><div style="font-family:'DM Mono',monospace;font-size:20px;color:var(--green)">${wh.h}</div></div>`:''}
-        ${wh.x?`<div><div style="font-size:9px;color:var(--muted);margin-bottom:4px">X</div><div style="font-family:'DM Mono',monospace;font-size:20px;color:var(--yellow)">${wh.x}</div></div>`:''}
-        ${wh.a?`<div><div style="font-size:9px;color:var(--muted);margin-bottom:4px">2</div><div style="font-family:'DM Mono',monospace;font-size:20px;color:var(--red)">${wh.a}</div></div>`:''}
-        ${wh.btts?`<div><div style="font-size:9px;color:var(--muted);margin-bottom:4px">BTTS</div><div style="font-family:'DM Mono',monospace;font-size:20px;color:var(--blue)">${wh.btts}</div></div>`:''}
-        ${wh.o25?`<div><div style="font-size:9px;color:var(--muted);margin-bottom:4px">O2.5</div><div style="font-family:'DM Mono',monospace;font-size:20px;color:var(--blue)">${wh.o25}</div></div>`:''}
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end">
+        ${wh.h?`<div style="${hi('h')}"><div style="font-size:9px;color:var(--muted);margin-bottom:4px">1${pickKey==='h'?' ⭐':''}</div><div style="font-family:'DM Mono',monospace;font-size:20px;color:var(--green)">${wh.h}</div></div>`:''}
+        ${wh.x?`<div style="${hi('x')}"><div style="font-size:9px;color:var(--muted);margin-bottom:4px">X${pickKey==='x'?' ⭐':''}</div><div style="font-family:'DM Mono',monospace;font-size:20px;color:var(--yellow)">${wh.x}</div></div>`:''}
+        ${wh.a?`<div style="${hi('a')}"><div style="font-size:9px;color:var(--muted);margin-bottom:4px">2${pickKey==='a'?' ⭐':''}</div><div style="font-family:'DM Mono',monospace;font-size:20px;color:var(--red)">${wh.a}</div></div>`:''}
+        ${wh.btts?`<div style="${hi('btts')}"><div style="font-size:9px;color:var(--muted);margin-bottom:4px">BTTS${pickKey==='btts'?' ⭐':''}</div><div style="font-family:'DM Mono',monospace;font-size:20px;color:var(--blue)">${wh.btts}</div></div>`:''}
+        ${wh.o25?`<div style="${hi('o25')}"><div style="font-size:9px;color:var(--muted);margin-bottom:4px">O2.5${pickKey==='o25'?' ⭐':''}</div><div style="font-family:'DM Mono',monospace;font-size:20px;color:var(--blue)">${wh.o25}</div></div>`:''}
       </div>
-    </div>` : ''}
+    </div>`;
+    })() : ''}
     ${ai?`<div class="odds-sec" style="padding-top:4px">
       <div class="aibox">
         <div class="aibox-t">${lang==='bg'?'🤖 AI АНАЛИЗ':'🤖 AI ANALYSIS'}</div>
@@ -1148,10 +1155,9 @@ function renderPerf() {
     return `<div class="perf-card ${isW?'win':'loss'}">
   <div class="perf-status ${isW?'win':'loss'}">${isW?(lang==='bg'?'✓ Победа':'✓ Win'):(lang==='bg'?'✗ Неуспех':'✗ Loss')}</div>
   <div class="perf-match">${home} – ${away}</div>
+  ${r.score ? (() => { const [hs,as_] = r.score.split('-').map(Number); return `<div style="display:flex;align-items:center;gap:6px;margin-bottom:6px"><span style="font-family:'DM Mono',monospace;font-size:22px;font-weight:700;color:${hs>as_?'var(--green)':hs<as_?'var(--muted)':'var(--yellow)'}">${hs}</span><span style="font-size:12px;color:var(--muted)">–</span><span style="font-family:'DM Mono',monospace;font-size:22px;font-weight:700;color:${as_>hs?'var(--red)':as_<hs?'var(--muted)':'var(--yellow)'}">${as_}</span></div>`; })() : ''}
   <div class="perf-pick">${bet}</div>
-  <div class="perf-odd" style="font-size:10px;color:var(--muted)">${comp}${comp?' · ':''}${r.date.slice(5).replace('-','.')}</div>
-  <div class="perf-odd">${lang==='bg'?'Коеф':'Odds'}: ${r.pick.odd}</div>
-  ${r.score?`<div style="font-size:13px;font-family:'DM Mono',monospace;color:var(--text);margin-top:4px">${r.score}</div>`:''}
+  <div class="perf-odd" style="font-size:10px;color:var(--muted)">${comp}${comp?' · ':''}${r.date.slice(5).replace('-','.')} · ${lang==='bg'?'Коеф':'@'} ${r.pick.odd}</div>
 </div>`;
   }).join('');
 
