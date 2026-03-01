@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-03-01T08:16:42Z",
+  "updated_at": "2026-03-01T11:05:16Z",
   "bookmaker": "William Hill",
   "odds": {
-    "bri_for_1": "2.05",
-    "bri_for_2": "3.4",
-    "bri_for_x": "3.4",
+    "bri_for_1": "2.15",
+    "bri_for_2": "3.25",
+    "bri_for_x": "3.25",
     "bri_for_o25": "1.83",
     "mun_pal_2": "5.5",
     "mun_pal_1": "1.55",
@@ -31,7 +31,7 @@
     "lee_sun_x": "3.4",
     "lee_sun_o25": "2.0",
     "wol_liv_2": "1.4",
-    "wol_liv_1": "6.0",
+    "wol_liv_1": "6.5",
     "wol_liv_x": "4.8",
     "wol_liv_o25": "1.5",
     "bri_ars_2": "1.62",
@@ -42,8 +42,8 @@
     "avl_che_2": "2.4",
     "avl_che_x": "3.5",
     "avl_che_o25": "1.65",
-    "ful_whu_1": "1.95",
-    "ful_whu_2": "3.6",
+    "ful_whu_1": "2.05",
+    "ful_whu_2": "3.3",
     "ful_whu_x": "3.4",
     "ful_whu_o25": "1.73",
     "mci_for_1": "1.36",
@@ -54,9 +54,13 @@
     "new_mun_1": "2.4",
     "new_mun_x": "3.6",
     "new_mun_o25": "1.5",
+    "tot_pal_2": "3.0",
+    "tot_pal_1": "2.25",
+    "tot_pal_x": "3.25",
+    "tot_pal_o25": "1.85",
     "bri_for_btts": "1.7",
     "mun_pal_btts": "1.67",
-    "ful_tot_btts": "1.6",
+    "ful_tot_btts": "1.65",
     "ars_che_btts": "1.7",
     "bou_bre_btts": "1.5",
     "eve_bur_btts": "1.75",
@@ -66,6 +70,7 @@
     "avl_che_btts": "1.57",
     "ful_whu_btts": "1.62",
     "mci_for_btts": "1.7",
-    "new_mun_btts": "1.44"
+    "new_mun_btts": "1.44",
+    "tot_pal_btts": "1.67"
   }
 }
