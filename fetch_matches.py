@@ -125,6 +125,16 @@ TEAM_ABBR = {
     "Wolverhampton Wanderers": "wol",
 }
 
+# Market labels for betBuilder — Python controls BG/EN, Groq only picks the key
+MARKET_LABELS = {
+    "h":    {"market": "Победа домакин",  "marketEn": "Home Win"},
+    "x":    {"market": "Равенство",       "marketEn": "Draw"},
+    "a":    {"market": "Победа гост",     "marketEn": "Away Win"},
+    "btts": {"market": "И двата вкарват", "marketEn": "BTTS Yes"},
+    "o25":  {"market": "Над 2.5 гола",    "marketEn": "Over 2.5 Goals"},
+    "o15":  {"market": "Над 1.5 гола",    "marketEn": "Over 1.5 Goals"},
+}
+
 # BG names for common UEFA club teams (fallback to English if not found)
 UEFA_TEAM_BG = {
     "Real Madrid":           "Реал Мадрид",
@@ -269,7 +279,7 @@ def fetch_uefa_fixtures(api_key: str, existing_ids: set) -> list:
     """
     new_fixtures = []
     now        = datetime.now(timezone.utc)
-    window_end = now + timedelta(days=14)
+    window_end = now + timedelta(days=7)
 
     for sport_key, comp in UEFA_SPORTS.items():
         url    = f"{ODDS_BASE}/sports/{sport_key}/events"
@@ -551,16 +561,19 @@ def groq_bet_builder(client, matches: list) -> dict | None:
 Select ONE match and 2-3 markets that combine well. Use ONLY the provided odds.
 Matches: {json.dumps(summary)}
 
+Available market keys: h=Home Win, x=Draw, a=Away Win, btts=BTTS Yes, o25=Over 2.5 Goals, o15=Over 1.5 Goals
+Only use keys that exist in the match's odds_wh object.
+
 Return ONLY valid JSON, no markdown:
 {{
-  "matchId": "liv_whu",
+  "matchId": "match_id_here",
   "markets": [
-    {{"marketBG": "Над 1.5 гола", "marketEn": "Over 1.5 Goals", "odd": "1.25"}},
-    {{"marketBG": "И двата вкарват", "marketEn": "BTTS Yes", "odd": "1.72"}},
-    {{"marketBG": "Победа домакин", "marketEn": "Home Win", "odd": "1.37"}}
+    {{"key": "o15", "odd": "1.25"}},
+    {{"key": "btts", "odd": "1.72"}},
+    {{"key": "h", "odd": "1.37"}}
   ]
 }}
-Only use odds that exist in odds_wh. Prefer markets that logically combine (e.g., high-scoring game + BTTS)."""
+Prefer markets that logically combine (e.g., high-scoring game + BTTS + home win)."""
 
     try:
         resp = client.chat.completions.create(
@@ -772,9 +785,11 @@ def main():
                 "awayEn":      src.get("awayEn", ""),
                 "markets":     [
                     {
-                        "market":   mkt.get("marketBG", mkt.get("market", "")),
-                        "marketEn": mkt.get("marketEn", ""),
-                        "odd":      mkt.get("odd", ""),
+                        **MARKET_LABELS.get(mkt.get("key", ""), {
+                            "market":   mkt.get("key", ""),
+                            "marketEn": mkt.get("key", ""),
+                        }),
+                        "odd": mkt.get("odd", ""),
                     }
                     for mkt in markets
                 ],
