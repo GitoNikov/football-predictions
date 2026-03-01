@@ -752,9 +752,12 @@ def main():
 
     # ── Step 6: betBuilder selection ─────────────────────────────────────────
     # Only consider EPL matches with real odds and picks (exclude UEFA stubs)
+    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     bb_candidates = [
         m for m in existing.get("upcoming", []) + new_matches
-        if m.get("pick", {}).get("conf", 0) > 0 and m.get("odds_wh")
+        if m.get("pick", {}).get("conf", 0) > 0
+        and m.get("odds_wh")
+        and m.get("date", "") > today_str   # exclude today's matches
     ]
     bb_result = None
     if bb_candidates:

@@ -908,6 +908,8 @@ function renderBetBuilder() {
   if (!box || !MD) return;
   const bb = MD.betBuilder;
   if (!bb || !bb.markets || !bb.markets.length) { box.innerHTML = ''; return; }
+  const matchPending = (MD.upcoming || []).some(m => m.id === bb.matchId && m.status === 'pending');
+  if (!matchPending) { box.innerHTML = ''; return; }
 
   const lang = currentLang;
   const home = lang === 'bg' ? bb.home : bb.homeEn;
