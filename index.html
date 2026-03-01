@@ -491,8 +491,7 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
       <div class="perf-sub" id="perfSubEl">Натрупани резултати от прогнозите</div>
     </div>
   </div>
-  <div class="perf-grid" id="perfGrid"></div>
-  <div class="perf-summary" id="perfSummary"></div>
+  <div id="perfResults"></div>
 </div>
 </main>
 
@@ -1133,45 +1132,106 @@ function renderCCBPicks() {
 
 // ─── PERFORMANCE / RESULTS ────────────────────────────────────────────────────
 function renderPerf() {
-  const grid    = document.getElementById('perfGrid');
-  const summary = document.getElementById('perfSummary');
-  if (!grid || !MD) return;
-
+  const box = document.getElementById('perfResults');
+  if (!box || !MD) return;
   const results = MD.results || [];
-  const lang = currentLang;
+  const lang    = currentLang;
+  const rec     = MD.record || {};
+  const correct = rec.correct || 0;
+  const total   = rec.total   || 0;
 
   if (!results.length) {
-    grid.innerHTML = `<div style="color:var(--muted);font-size:12px;padding:8px 0">${lang==='bg'?'Няма завършени мачове.':'No finished matches yet.'}</div>`;
-    if (summary) summary.innerHTML = '';
+    box.innerHTML = `<div style="color:var(--muted);font-size:12px;padding:8px 0">${lang==='bg'?'Няма завършени мачове.':'No finished matches yet.'}</div>`;
     return;
   }
 
-  grid.innerHTML = results.slice(0, 8).map(r => {
-    const home = lang==='bg'?r.home:r.homeEn;
-    const away = lang==='bg'?r.away:r.awayEn;
-    const bet  = lang==='bg'?r.pick.bet:r.pick.betEn;
-    const isW  = r.result === 'W';
-    const comp = lang==='bg'?(r.competition||''):(r.competitionEn||r.competition||'');
-    return `<div class="perf-card ${isW?'win':'loss'}">
-  <div class="perf-status ${isW?'win':'loss'}">${isW?(lang==='bg'?'✓ Победа':'✓ Win'):(lang==='bg'?'✗ Неуспех':'✗ Loss')}</div>
-  <div class="perf-match">${home} – ${away}</div>
-  ${r.score ? (() => { const [hs,as_] = r.score.split('-').map(Number); return `<div style="display:flex;align-items:center;gap:6px;margin-bottom:6px"><span style="font-family:'DM Mono',monospace;font-size:22px;font-weight:700;color:${hs>as_?'var(--green)':hs<as_?'var(--muted)':'var(--yellow)'}">${hs}</span><span style="font-size:12px;color:var(--muted)">–</span><span style="font-family:'DM Mono',monospace;font-size:22px;font-weight:700;color:${as_>hs?'var(--red)':as_<hs?'var(--muted)':'var(--yellow)'}">${as_}</span></div>`; })() : ''}
-  <div class="perf-pick">${bet}</div>
-  <div class="perf-odd" style="font-size:10px;color:var(--muted)">${comp}${comp?' · ':''}${r.date.slice(5).replace('-','.')} · ${lang==='bg'?'Коеф':'@'} ${r.pick.odd}</div>
-</div>`;
+  // ── Stats ──────────────────────────────────────────────────────────────────
+  const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+
+  // Current streak (consecutive same result from newest)
+  let streak = 0, streakType = results[0]?.result || '';
+  for (const r of results) { if (r.result === streakType) streak++; else break; }
+  const streakHtml = streakType === 'W'
+    ? `<span style="color:var(--green)">${streak}${lang==='bg'?'П':'W'}</span>`
+    : `<span style="color:var(--red)">${streak}${lang==='bg'?'Н':'L'}</span>`;
+
+  // Average odds of winning picks
+  const winOdds = results.filter(r => r.result === 'W').map(r => parseFloat(r.pick.odd)).filter(o => !isNaN(o));
+  const avgOdd  = winOdds.length ? (winOdds.reduce((a,b)=>a+b,0)/winOdds.length).toFixed(2) : '—';
+
+  // ── Timeline — group by date ────────────────────────────────────────────────
+  const byDate = [];
+  let cur = null;
+  for (const r of results) {
+    if (r.date !== cur) { cur = r.date; byDate.push({ date: r.date, rows: [] }); }
+    byDate[byDate.length-1].rows.push(r);
+  }
+
+  const timelineHtml = byDate.map(group => {
+    const [y,m,d] = group.date.split('-');
+    const rows = group.rows.map(r => {
+      const home = lang==='bg' ? r.home : r.homeEn;
+      const away = lang==='bg' ? r.away : r.awayEn;
+      const bet  = lang==='bg' ? r.pick.bet : r.pick.betEn;
+      const isW  = r.result === 'W';
+      let scoreHtml = '';
+      if (r.score) {
+        const [hs, as_] = r.score.split('-').map(Number);
+        const hc = hs > as_ ? 'var(--green)' : hs < as_ ? 'var(--muted)' : 'var(--yellow)';
+        const ac = as_ > hs ? 'var(--red)'   : as_ < hs ? 'var(--muted)' : 'var(--yellow)';
+        scoreHtml = `<div style="flex-shrink:0;text-align:center;min-width:44px">
+          <span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:700;color:${hc}">${hs}</span>
+          <span style="color:var(--muted);font-size:11px;margin:0 2px">–</span>
+          <span style="font-family:'DM Mono',monospace;font-size:15px;font-weight:700;color:${ac}">${as_}</span>
+        </div>`;
+      }
+      return `<div style="display:flex;align-items:center;gap:10px;padding:8px 12px 8px 10px;border-left:3px solid ${isW?'var(--green)':'var(--red)'};background:${isW?'rgba(0,232,122,.03)':'rgba(255,59,92,.02)'};border-radius:0 8px 8px 0;margin-bottom:3px">
+        <div style="flex:1;min-width:0">
+          <div style="font-size:12px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${home} – ${away}</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:2px">${bet} <span style="font-family:'DM Mono',monospace;color:${isW?'var(--green)':'var(--red)'}">@ ${r.pick.odd}</span></div>
+        </div>
+        ${scoreHtml}
+        <div style="flex-shrink:0;font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;${isW?'background:rgba(0,232,122,.12);color:var(--green)':'background:rgba(255,59,92,.12);color:var(--red)'}">${isW?'✓':'✗'}</div>
+      </div>`;
+    }).join('');
+    return `<div style="margin-bottom:14px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;color:var(--muted);white-space:nowrap">${d}.${m}.${y}</span>
+        <div style="flex:1;height:1px;background:var(--border)"></div>
+      </div>
+      ${rows}
+    </div>`;
   }).join('');
 
-  const rec = MD.record || {};
-  const correct = rec.correct || 0;
-  const total   = rec.total || 0;
-  if (summary && total > 0) {
-    const pct = Math.round(correct / total * 100);
-    summary.innerHTML = `<div class="perf-score" style="color:${pct>=50?'var(--green)':'var(--red)'}">${correct}/${total}</div>
-<div>
-  <div class="perf-score-label">${lang==='bg'?'ВЕРНИ / ОБЩО':'CORRECT / TOTAL'}</div>
-  <div class="perf-note">${lang==='bg'?`${pct}% успеваемост · ${rec.period||''}`:`${pct}% accuracy · ${rec.period||''}`}</div>
+  // ── Render ─────────────────────────────────────────────────────────────────
+  box.innerHTML = `<div style="display:grid;grid-template-columns:1fr 196px;gap:16px;align-items:start">
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden">
+    <div style="max-height:480px;overflow-y:auto;padding:14px 14px 10px;scrollbar-width:thin;scrollbar-color:var(--border) transparent">
+      ${timelineHtml}
+    </div>
+  </div>
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:14px;position:sticky;top:76px">
+    <div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;letter-spacing:2px;line-height:1;color:${pct>=50?'var(--green)':'var(--red)'}">${correct}/${total}</div>
+      <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:3px">${lang==='bg'?'ВЕРНИ / ОБЩО':'CORRECT / TOTAL'}</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:11px">
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-bottom:1px solid var(--border)">
+        <span style="color:var(--muted)">${lang==='bg'?'Успеваемост':'Accuracy'}</span>
+        <span style="font-family:'DM Mono',monospace;font-weight:700;color:${pct>=50?'var(--green)':'var(--red)'}">${pct}%</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-bottom:1px solid var(--border)">
+        <span style="color:var(--muted)">${lang==='bg'?'Серия':'Streak'}</span>
+        <span style="font-family:'DM Mono',monospace;font-weight:700">${streakHtml}</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px">
+        <span style="color:var(--muted)">${lang==='bg'?'Ср. квота':'Avg odds'}</span>
+        <span style="font-family:'DM Mono',monospace;font-weight:700;color:var(--yellow)">${avgOdd}</span>
+      </div>
+    </div>
+    ${rec.period ? `<div style="font-size:9px;color:var(--muted);line-height:1.6;padding-top:4px;border-top:1px solid var(--border)">${rec.period}</div>` : ''}
+  </div>
 </div>`;
-  }
 }
 
 // ─── BETSLIP ─────────────────────────────────────────────────────────────────
