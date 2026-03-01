@@ -19,6 +19,7 @@ import argparse
 import json
 import os
 import sys
+import time
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -237,7 +238,9 @@ def fetch_btts_for_events(api_key: str, event_map: dict) -> dict:
         return btts_odds
 
     print(f"\n  🎯 Fetching BTTS for {len(to_fetch)} events via per-event endpoint…")
-    for prefix, sport, event_id in to_fetch:
+    for i, (prefix, sport, event_id) in enumerate(to_fetch):
+        if i > 0:
+            time.sleep(1)   # avoid 429 rate limit on per-event endpoint
         data = fetch_event_odds(api_key, sport, event_id, markets="btts")
         if not data:
             continue
