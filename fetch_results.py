@@ -39,11 +39,17 @@ def fetch_scores(api_key: str, sport: str, days_from: int = 3) -> list:
 
 
 def team_matches(api_home: str, api_away: str, our_home: str, our_away: str) -> bool:
-    """Fuzzy match team names."""
+    """Fuzzy match team names — substring check then significant-word overlap fallback."""
     def norm(s): return s.lower().replace("fc ", "").replace(" fc", "").strip()
+    def match_one(a: str, b: str) -> bool:
+        if b in a or a in b:
+            return True
+        a_words = {w for w in a.split() if len(w) > 3}
+        b_words = {w for w in b.split() if len(w) > 3}
+        return bool(a_words & b_words)
     ah, aa = norm(api_home), norm(api_away)
     oh, oa = norm(our_home), norm(our_away)
-    return (oh in ah or ah in oh) and (oa in aa or aa in oa)
+    return match_one(ah, oh) and match_one(aa, oa)
 
 
 def determine_result(match: dict, scores: dict) -> str | None:
