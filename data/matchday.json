@@ -7,42 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "lee_mci",
-      "home": "Лийдс",
-      "homeEn": "Leeds",
-      "homeA": "LEE",
-      "away": "Ман Сити",
-      "awayEn": "Man City",
-      "awayA": "MCI",
-      "date": "2026-02-28",
-      "time": "16:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Ман Сити победа",
-        "betEn": "Man City Win",
-        "conf": 65,
-        "market": "h2h",
-        "selection": "away",
-        "odd": "1.65"
-      },
-      "odds_wh": {
-        "h": "4.00",
-        "x": "3.50",
-        "a": "1.65",
-        "btts": "1.85",
-        "o25": "1.75"
-      },
-      "prob": {
-        "h": 28,
-        "d": 25,
-        "a": 47
-      },
-      "ai": "Лидс и Манчестър Сити се сблъскват в много महतен мач, където домакините идват с форма от две победи, три равенства и една загуба в последните шест мача, докато гостите имат пет победи и едно равенство в последните шест срещи. Изборът на Манчестър Сити да спечели има логика, тъй като те имат по-висока позиция в класирането и по-добра форма, което ги поставя в позиция на фаворити с 47% вероятност за победа. Ставката на Манчестър Сити да спечели при коефициент 1.65 в Уилям Хил с ниво на увереност 65% изглежда като стойност, тъй като отразява реалните шансове на отбора за победа.",
-      "aiEn": "Leeds and Manchester City clash in a crucial match, with the hosts coming into the game with a form of two wins, three draws, and one loss in their last six matches, while the visitors have five wins and one draw in their last six outings. The pick of Manchester City to win makes sense tactically and statistically, given their higher league position and superior form, which puts them in a favorable position with a 47% probability of winning. The odds of 1.65 for Manchester City to win at William Hill with a confidence level of 65% appear to represent value, as it reflects the team's genuine chances of emerging victorious.",
-      "aiCtx": "Leeds are 15th in the Premier League (31 pts), form: W-D-L-W-D-D. Manchester City are 2nd (56 pts), form: W-W-D-W-W-W.",
-      "aiCtxHash": "1962f839"
-    },
-    {
       "id": "bri_for",
       "home": "Брайтън",
       "homeEn": "Brighton",
@@ -59,14 +23,14 @@
         "conf": 45,
         "market": "h2h",
         "selection": "away",
-        "odd": "4.20"
+        "odd": "3.4"
       },
       "odds_wh": {
-        "h": "2.20",
-        "x": "3.40",
-        "a": "4.20",
-        "btts": "1.85",
-        "o25": "2.00"
+        "h": "2.05",
+        "x": "3.4",
+        "a": "3.4",
+        "btts": "1.7",
+        "o25": "1.83"
       },
       "prob": {
         "h": 40,
@@ -99,10 +63,10 @@
       },
       "odds_wh": {
         "h": "1.55",
-        "x": "3.80",
-        "a": "5.50",
-        "btts": "1.88",
-        "o25": "2.10"
+        "x": "4.0",
+        "a": "5.5",
+        "btts": "1.67",
+        "o25": "1.57"
       },
       "prob": {
         "h": 52,
@@ -131,14 +95,14 @@
         "conf": 63,
         "market": "btts",
         "selection": "yes",
-        "odd": "1.72"
+        "odd": "1.6"
       },
       "odds_wh": {
-        "h": "2.10",
-        "x": "3.40",
-        "a": "3.50",
-        "btts": "1.72",
-        "o25": "1.78"
+        "h": "1.95",
+        "x": "3.5",
+        "a": "3.6",
+        "btts": "1.6",
+        "o25": "1.73"
       },
       "prob": {
         "h": 38,
@@ -167,14 +131,14 @@
         "conf": 70,
         "market": "h2h",
         "selection": "home",
-        "odd": "1.60"
+        "odd": "1.57"
       },
       "odds_wh": {
-        "h": "1.60",
-        "x": "4.20",
-        "a": "5.50",
-        "btts": "1.72",
-        "o25": "1.80"
+        "h": "1.57",
+        "x": "4.0",
+        "a": "5.5",
+        "btts": "1.7",
+        "o25": "1.7"
       },
       "prob": {
         "h": 56,
@@ -203,13 +167,14 @@
         "conf": 58,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.65"
+        "odd": "1.57"
       },
       "odds_wh": {
-        "h": "2.38",
-        "a": "2.75",
+        "h": "2.3",
+        "a": "2.88",
         "x": "3.4",
-        "o25": "1.65"
+        "o25": "1.57",
+        "btts": "1.5"
       },
       "prob": {
         "h": 42,
@@ -243,8 +208,9 @@
       "odds_wh": {
         "a": "5.0",
         "h": "1.67",
-        "x": "3.5",
-        "o25": "1.85"
+        "x": "3.6",
+        "o25": "1.85",
+        "btts": "1.75"
       },
       "prob": {
         "h": 60,
@@ -273,13 +239,14 @@
         "conf": 58,
         "market": "h2h",
         "selection": "home",
-        "odd": "1.85"
+        "odd": "1.91"
       },
       "odds_wh": {
-        "h": "1.85",
-        "a": "4.0",
+        "h": "1.91",
+        "a": "3.9",
         "x": "3.4",
-        "o25": "2.0"
+        "o25": "2.0",
+        "btts": "1.85"
       },
       "prob": {
         "h": 54,
@@ -311,10 +278,11 @@
         "odd": "1.5"
       },
       "odds_wh": {
-        "a": "1.44",
+        "a": "1.4",
         "h": "6.0",
-        "x": "4.6",
-        "o25": "1.5"
+        "x": "4.8",
+        "o25": "1.5",
+        "btts": "1.67"
       },
       "prob": {
         "h": 17,
@@ -343,13 +311,14 @@
         "conf": 70,
         "market": "h2h",
         "selection": "away",
-        "odd": "1.65"
+        "odd": "1.62"
       },
       "odds_wh": {
-        "a": "1.65",
-        "h": "4.6",
+        "a": "1.62",
+        "h": "4.8",
         "x": "4.0",
-        "o25": "1.85"
+        "o25": "1.85",
+        "btts": "1.85"
       },
       "prob": {
         "h": 22,
@@ -384,7 +353,8 @@
         "h": "2.62",
         "a": "2.4",
         "x": "3.5",
-        "o25": "1.65"
+        "o25": "1.65",
+        "btts": "1.57"
       },
       "prob": {
         "h": 38,
@@ -413,13 +383,14 @@
         "conf": 58,
         "market": "h2h",
         "selection": "home",
-        "odd": "2.0"
+        "odd": "1.95"
       },
       "odds_wh": {
-        "h": "2.0",
-        "a": "3.4",
+        "h": "1.95",
+        "a": "3.6",
         "x": "3.4",
-        "o25": "1.73"
+        "o25": "1.73",
+        "btts": "1.62"
       },
       "prob": {
         "h": 50,
@@ -454,7 +425,8 @@
         "h": "1.36",
         "a": "7.0",
         "x": "4.75",
-        "o25": "1.5"
+        "o25": "1.5",
+        "btts": "1.7"
       },
       "prob": {
         "h": 74,
@@ -489,7 +461,8 @@
         "a": "2.62",
         "h": "2.4",
         "x": "3.6",
-        "o25": "1.5"
+        "o25": "1.5",
+        "btts": "1.44"
       },
       "prob": {
         "h": 42,
@@ -530,6 +503,26 @@
     "reasoningEn": "These markets combine well as Liverpool have a strong attack and often win their matches with over 2.5 goals, while West Ham have defensive issues, increasing the chances of goals in the match."
   },
   "results": [
+    {
+      "id": "lee_mci",
+      "home": "Лийдс",
+      "homeEn": "Leeds",
+      "away": "Ман Сити",
+      "awayEn": "Man City",
+      "date": "2026-02-28",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Ман Сити победа",
+        "betEn": "Man City Win",
+        "conf": 65,
+        "market": "h2h",
+        "selection": "away",
+        "odd": "1.65"
+      },
+      "result": "W",
+      "score": "0-1"
+    },
     {
       "id": "new_eve",
       "home": "Нюкасъл",
@@ -692,8 +685,8 @@
     }
   ],
   "record": {
-    "correct": 4,
-    "total": 9,
+    "correct": 5,
+    "total": 10,
     "period": "ЛЕ 26.02.2026"
   }
 }
