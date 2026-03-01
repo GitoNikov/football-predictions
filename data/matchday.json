@@ -74,7 +74,7 @@
       },
       "ai": "Манчестър Юнайтед и Кристъл Палас се срещат в 31-вия кръг на Висшата лига, като „червените дяволи“ са на 2ро място с 56 точки и имат серия от 6 мача без загуба, докато Кристъл Палас е на 13-то място с 35 точки и има неравномерна форма. Изборът за победа на Манчестър Юнайтед прави смисъл от тактическа и статистична гледна точка, тъй като те имат доминантна форма и силно домашно представяне, докато Кристъл Палас има трудности в последните мачове. Коефициентът при Уилям Хил за победа на Манчестър Юнайтед е 1.55, с ниво на увереност 65%, което представлява стойност, тъй като вероятността за домашна победа е 52%.",
       "aiEn": "Manchester United and Crystal Palace meet in the 31st round of the Premier League, with Manchester United in 2nd place with 56 points and a 6-match unbeaten run, while Crystal Palace are 13th with 35 points and an inconsistent form. The pick for a Manchester United win makes sense tactically and statistically, as they have a dominant form and strong home performance, while Crystal Palace have struggled in recent matches, with a 22% away win probability. The William Hill odds for a Manchester United win are 1.55, with a 65% confidence level, which represents value, given the 52% home win probability.",
-      "aiCtx": "Manchester United are 2nd in the Premier League (59 pts), form: W-D-W-W-W-W. Crystal Palace are 13th (35 pts), form: L-L-D-W-L-W."
+      "aiCtx": "Manchester United are 4th in the Premier League (48 pts), form: W-D-W-W-W-W. Crystal Palace are 13th (35 pts), form: L-L-D-W-L-W."
     },
     {
       "id": "ful_tot",
@@ -457,7 +457,7 @@
         "d": 28,
         "a": 38
       },
-      "aiCtx": "Newcastle are 12th in the Premier League (36 pts), form: L-W-W-L-W-L. Manchester United are 2nd (59 pts), form: W-D-W-W-W-W.",
+      "aiCtx": "Newcastle are 12th in the Premier League (36 pts), form: L-W-W-L-W-L. Manchester United are 4th (48 pts), form: W-D-W-W-W-W.",
       "ai": "Нюкасъл и Манчестър Юнайтед се срещат в 31-вия кръг на Висшата лига, като домакините идват след неравномерна форма от последните 6 мача, спечелили само 3 от тях, докато гостите са на 2ро място с 56 точки и серия от 5 мача без загуба. Изборът над 2.5 гола се оправдава тактически и статистически, тъй като Манчестър Юнайтед е отбор, известен с високото си атакуващо ниво, а Нюкасъл също има потенциал за гол в атака, като това вероятно ще доведе до динамичен и резултатен мач. Котите на Уилям Хил за над 2.5 гола са 1.5, което при нашата увереност от 70% представлява стойност, тъй кайто вероятността за такъв исход е относително висока.",
       "aiEn": "Newcastle and Manchester United face off in the 31st round of the Premier League, with the hosts coming off an inconsistent form, having won only 3 of their last 6 matches, while the visitors are in 2nd place with 56 points and a 5-match unbeaten streak. The pick of over 2.5 goals makes sense tactically and statistically, as Manchester United is a team known for their high attacking level, and Newcastle also has potential for goals in attack, likely leading to a dynamic and high-scoring match. The William Hill odds of 1.5 for over 2.5 goals, with our confidence level of 70%, represent value, as the probability of such an outcome is relatively high."
     },

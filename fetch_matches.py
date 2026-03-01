@@ -195,10 +195,21 @@ TEAM_ABBR_DISPLAY = {
 
 def normalize_team(name: str) -> str:
     """Return the canonical English short name for a team."""
+    name_lower = name.lower()
+    # 1. Exact substring check
     for key in TEAM_ABBR:
-        if key.lower() in name.lower() or name.lower() in key.lower():
+        kl = key.lower()
+        if kl in name_lower or name_lower in kl:
             return key
-    return name
+    # 2. Best word-overlap fallback (significant words only, len > 3)
+    name_words = {w for w in name_lower.split() if len(w) > 3}
+    best_key, best_score = None, 0
+    for key in TEAM_ABBR:
+        key_words = {w for w in key.lower().split() if len(w) > 3}
+        score = len(name_words & key_words)
+        if score > best_score:
+            best_score, best_key = score, key
+    return best_key if best_key else name
 
 
 def team_bg(en_name: str) -> str:
@@ -438,17 +449,21 @@ def fetch_team_form(team_id: int, fd_key: str, limit: int = 6) -> str:
 
 
 def find_standing(name_en: str, standings_map: dict) -> dict | None:
-    """Fuzzy-match a team name to standings."""
+    """Fuzzy-match a team name to standings, returning the best match."""
     name_lower = name_en.lower()
+    # 1. Exact substring check
     for key, val in standings_map.items():
         if key.lower() in name_lower or name_lower in key.lower():
             return val
-        # Try word overlap
-        name_words = set(name_lower.split())
-        key_words  = set(key.lower().split())
-        if name_words & key_words:
-            return val
-    return None
+    # 2. Best word-overlap (significant words only, len > 3)
+    name_words = {w for w in name_lower.split() if len(w) > 3}
+    best_val, best_score = None, 0
+    for key, val in standings_map.items():
+        key_words = {w for w in key.lower().split() if len(w) > 3}
+        score = len(name_words & key_words)
+        if score > best_score:
+            best_score, best_val = score, val
+    return best_val
 
 
 def ordinal(n: int) -> str:
