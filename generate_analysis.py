@@ -50,13 +50,19 @@ Context: {ctx}
 Probabilities: Home {prob['h']}% | Draw {prob['d']}% | Away {prob['a']}%
 Pick: {pick['betEn']} @ {pick['odd']} William Hill (confidence {pick['conf']}%)
 
+STRICT RULES — violating any of these invalidates the response:
+1. The odds figure in your analysis MUST be exactly {pick['odd']} — never round or alter it.
+2. Only cite facts explicitly stated in the Context above (positions, points, form letters).
+   Never invent goal averages, goal tallies, streaks, or any statistic not in Context.
+3. Derive form streaks by counting W/D/L letters directly from the form string — do not guess.
+
 Write a 3-sentence match analysis. Return ONLY valid JSON, no markdown:
 {{"bg": "...", "en": "..."}}
 
 ENGLISH — factual, journalistic tone:
-- Sentence 1: current form/position of both teams using exact numbers from context
-- Sentence 2: tactical/statistical reason the pick makes sense
-- Sentence 3: odds value and confidence assessment
+- Sentence 1: current league position, points, and form of both teams (from Context only)
+- Sentence 2: why the pick makes sense based on form/position (no invented stats)
+- Sentence 3: state the pick, exact odds {pick['odd']}, and confidence {pick['conf']}%
 
 BULGARIAN — write as a native Bulgarian football journalist, NOT a translation:
 - Use "{home_bg}" and "{away_bg}" as team names throughout
@@ -64,7 +70,8 @@ BULGARIAN — write as a native Bulgarian football journalist, NOT a translation
   котировка, залог, прогноза, резултат, точки, победа, равенство
 - Active voice, present tense, journalistic register
 - Mirror the same 3-sentence structure as English but phrased naturally in Bulgarian
-- Never translate word-for-word; rephrase each idea in idiomatic Bulgarian"""
+- Never translate word-for-word; rephrase each idea in idiomatic Bulgarian
+- The odds in Bulgarian must also be exactly {pick['odd']}"""
 
 
 def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
