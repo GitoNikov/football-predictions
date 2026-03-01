@@ -27,31 +27,44 @@ MODEL_NAME = "llama-3.3-70b-versatile"
 DELAY      = 1.5   # seconds between calls
 
 
+SYSTEM_MSG = (
+    "You are a professional football analyst fluent in English and Bulgarian. "
+    "Your Bulgarian writing sounds like a native Bulgarian sports journalist — "
+    "natural, direct, and idiomatic. You never translate mechanically from English; "
+    "you write each language independently."
+)
+
+
 def build_prompt(match: dict, label: str) -> str:
-    pick = match["pick"]
-    prob = match["prob"]
-    ctx  = match.get("aiCtx") or f"{match.get('homeEn')} vs {match.get('awayEn')}"
-    return f"""You are an expert football analyst writing for a predictions website.
+    pick    = match["pick"]
+    prob    = match.get("prob", {"h": 50, "d": 25, "a": 25})
+    ctx     = match.get("aiCtx") or f"{match.get('homeEn')} vs {match.get('awayEn')}"
+    home_en = match.get("homeEn", "")
+    away_en = match.get("awayEn", "")
+    home_bg = match.get("home", home_en)
+    away_bg = match.get("away", away_en)
 
-Match: {match['homeEn']} vs {match['awayEn']} ({label})
-Key context: {ctx}
+    return f"""Match: {home_en} vs {away_en} ({label})
+Bulgarian team names: {home_bg} срещу {away_bg}
+Context: {ctx}
 Probabilities: Home {prob['h']}% | Draw {prob['d']}% | Away {prob['a']}%
-Our pick: {pick['betEn']} @ {pick['odd']} William Hill (confidence {pick['conf']}%)
+Pick: {pick['betEn']} @ {pick['odd']} William Hill (confidence {pick['conf']}%)
 
-Write an informative analysis of 3 sentences in TWO languages.
-Return ONLY valid JSON — no markdown, no extra text:
-{{
-  "bg": "Анализ на български тук.",
-  "en": "Analysis in English here."
-}}
+Write a 3-sentence match analysis. Return ONLY valid JSON, no markdown:
+{{"bg": "...", "en": "..."}}
 
-Rules:
-- Sentence 1: describe the current form/situation of both teams using the context facts
-- Sentence 2: explain why the pick makes sense tactically and statistically
-- Sentence 3: mention the William Hill odds, confidence level, and whether it represents value
-- Be specific — use team names, numbers, and facts from the context
-- Do NOT use vague phrases like "this is a good pick" or "the match will be interesting"
-- Bulgarian must use Cyrillic script"""
+ENGLISH — factual, journalistic tone:
+- Sentence 1: current form/position of both teams using exact numbers from context
+- Sentence 2: tactical/statistical reason the pick makes sense
+- Sentence 3: odds value and confidence assessment
+
+BULGARIAN — write as a native Bulgarian football journalist, NOT a translation:
+- Use "{home_bg}" and "{away_bg}" as team names throughout
+- Natural Bulgarian football vocabulary: двубой, форма, домакините, гостите,
+  котировка, залог, прогноза, резултат, точки, победа, равенство
+- Active voice, present tense, journalistic register
+- Mirror the same 3-sentence structure as English but phrased naturally in Bulgarian
+- Never translate word-for-word; rephrase each idea in idiomatic Bulgarian"""
 
 
 def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
@@ -59,7 +72,10 @@ def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
     try:
         response = client.chat.completions.create(
             model=MODEL_NAME,
-            messages=[{"role": "user", "content": prompt}],
+            messages=[
+                {"role": "system", "content": SYSTEM_MSG},
+                {"role": "user",   "content": prompt},
+            ],
             temperature=0.7,
             max_tokens=500,
         )
@@ -132,22 +148,37 @@ def main():
         mid = bb["matchId"]
         src = next((m for m in matches if m["id"] == mid), None)
         if src:
-            home = bb.get("homeEn", src.get("homeEn", ""))
-            away = bb.get("awayEn", src.get("awayEn", ""))
-            market_list = ", ".join(
+            home_en = bb.get("homeEn", src.get("homeEn", ""))
+            away_en = bb.get("awayEn", src.get("awayEn", ""))
+            home_bg = bb.get("home", src.get("home", home_en))
+            away_bg = bb.get("away", src.get("away", away_en))
+            market_list_en = ", ".join(
                 mkt.get("marketEn", mkt.get("market", "")) for mkt in bb["markets"]
+            )
+            market_list_bg = ", ".join(
+                mkt.get("market", mkt.get("marketEn", "")) for mkt in bb["markets"]
             )
             ai_ctx = src.get("aiCtx", "")
             prompt = (
-                f'For {home} vs {away} bet builder [{market_list}], write 1-2 sentences '
-                f'in BG+EN explaining why these markets combine well. Context: {ai_ctx}. '
-                f'Return JSON: {{"bg": "...", "en": "..."}}'
+                f'Bet builder for {home_en} vs {away_en}: [{market_list_en}]\n'
+                f'Context: {ai_ctx}\n\n'
+                f'Write 1-2 sentences explaining why these markets combine well. '
+                f'Return ONLY valid JSON, no markdown:\n{{"bg": "...", "en": "..."}}\n\n'
+                f'ENGLISH — concise, journalistic: explain why the combination is statistically sound.\n\n'
+                f'BULGARIAN — write as a native Bulgarian football journalist, NOT a translation:\n'
+                f'- Use "{home_bg}" and "{away_bg}" as team names\n'
+                f'- Bulgarian markets: {market_list_bg}\n'
+                f'- Natural vocabulary: комбинация, пазари, залог, котировка, вероятност, форма\n'
+                f'- Never translate word-for-word; write each sentence originally in Bulgarian'
             )
-            print(f"\n  ⚙  betBuilder reasoning for {home} vs {away}… ", end="", flush=True)
+            print(f"\n  ⚙  betBuilder reasoning for {home_en} vs {away_en}… ", end="", flush=True)
             try:
                 resp = client.chat.completions.create(
                     model=MODEL_NAME,
-                    messages=[{"role": "user", "content": prompt}],
+                    messages=[
+                        {"role": "system", "content": SYSTEM_MSG},
+                        {"role": "user",   "content": prompt},
+                    ],
                     temperature=0.7,
                     max_tokens=250,
                 )
