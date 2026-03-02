@@ -148,6 +148,12 @@ def fetch_event_odds(api_key: str, sport: str, event_id: str, markets: str = "bt
     resp = requests.get(url, params=params, timeout=15)
     if resp.status_code in (404, 422):
         return {}
+    if resp.status_code == 429:
+        print("      ⚠  429 rate limit — sleeping 10s and retrying…")
+        time.sleep(10)
+        resp = requests.get(url, params=params, timeout=15)
+        if resp.status_code != 200:
+            return {}
     resp.raise_for_status()
     remaining = resp.headers.get("x-requests-remaining", "?")
     print(f"      event {event_id[:8]}… quota remaining {remaining}")
@@ -240,7 +246,7 @@ def fetch_btts_for_events(api_key: str, event_map: dict) -> dict:
     print(f"\n  🎯 Fetching BTTS for {len(to_fetch)} events via per-event endpoint…")
     for i, (prefix, sport, event_id) in enumerate(to_fetch):
         if i > 0:
-            time.sleep(1)   # avoid 429 rate limit on per-event endpoint
+            time.sleep(3)   # avoid 429 rate limit on per-event endpoint
         data = fetch_event_odds(api_key, sport, event_id, markets="btts")
         if not data:
             continue
