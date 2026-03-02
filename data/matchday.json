@@ -18,7 +18,7 @@
       "time": "21:30",
       "status": "pending",
       "pick": {
-        "bet": "Тотал голови над 2.5",
+        "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
         "conf": 58,
         "market": "over_under",
@@ -55,7 +55,7 @@
       "time": "21:30",
       "status": "pending",
       "pick": {
-        "bet": "Евертън победа",
+        "bet": "Евъртън победа",
         "betEn": "Everton Win",
         "conf": 65,
         "market": "h2h",
@@ -128,7 +128,7 @@
       "time": "22:15",
       "status": "pending",
       "pick": {
-        "bet": "Тотал голове над 2.5",
+        "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
         "conf": 70,
         "market": "over_under",
@@ -200,7 +200,7 @@
       "time": "21:30",
       "status": "pending",
       "pick": {
-        "bet": "Тотал над 2.5",
+        "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
         "conf": 70,
         "market": "over_under",
@@ -236,7 +236,7 @@
       "time": "21:30",
       "status": "pending",
       "pick": {
-        "bet": "Фулхам победа",
+        "bet": "Фулъм победа",
         "betEn": "Fulham Win",
         "conf": 58,
         "market": "h2h",
@@ -272,7 +272,7 @@
       "time": "21:30",
       "status": "pending",
       "pick": {
-        "bet": "Тотал над 2.5",
+        "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
         "conf": 70,
         "market": "over_under",
@@ -308,7 +308,7 @@
       "time": "22:15",
       "status": "pending",
       "pick": {
-        "bet": "Тотал над 2.5",
+        "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
         "conf": 70,
         "market": "over_under",
@@ -344,7 +344,7 @@
       "time": "22:00",
       "status": "pending",
       "pick": {
-        "bet": "Тотал голове над 2.5",
+        "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
         "conf": 58,
         "market": "over_under",

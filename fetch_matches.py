@@ -137,6 +137,19 @@ MARKET_LABELS = {
     "o15":  {"market": "Над 1.5 гола",    "marketEn": "Over 1.5 Goals"},
 }
 
+# Python-generated Bulgarian pick labels — never rely on Groq for these
+def bet_bg(market: str, selection: str, home_bg: str, away_bg: str) -> str:
+    if market == "h2h":
+        if selection == "home": return f"{home_bg} победа"
+        if selection == "away": return f"{away_bg} победа"
+        if selection == "draw": return "Равенство"
+    if market == "btts":
+        return "И двата вкарват" if selection == "yes" else "И двата не вкарват"
+    if market == "over_under":
+        if "2.5" in selection: return "Над 2.5 гола" if "over" in selection else "Под 2.5 гола"
+        if "1.5" in selection: return "Над 1.5 гола" if "over" in selection else "Под 1.5 гола"
+    return f"{home_bg} победа"
+
 # BG names for common UEFA club teams (fallback to English if not found)
 UEFA_TEAM_BG = {
     "Real Madrid":           "Реал Мадрид",
@@ -744,7 +757,7 @@ def main():
             "time":    time_str,
             "status":  "pending",
             "pick": {
-                "bet":       pick_raw.get("betBG", f"{home_bg} победа"),
+                "bet":       bet_bg(market, sel, home_bg, away_bg),
                 "betEn":     pick_raw.get("betEN", f"{home_en} Win"),
                 "conf":      int(pick_raw.get("conf", 55)),
                 "market":    market,
