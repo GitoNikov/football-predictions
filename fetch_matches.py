@@ -496,13 +496,28 @@ def build_ai_ctx(home_en: str, away_en: str, home_st: dict, away_st: dict,
     )
 
 
+# ── Web search ────────────────────────────────────────────────────────────────
+def search_team_news(home_en: str, away_en: str) -> str:
+    """Search DuckDuckGo for injuries, suspensions, and team news. Returns a short summary."""
+    try:
+        from duckduckgo_search import DDGS
+        query = f"{home_en} {away_en} team news injuries suspensions"
+        results = DDGS().text(query, max_results=3)
+        snippets = [r["body"] for r in results if r.get("body")]
+        return " | ".join(snippets[:3]) if snippets else "No recent news found."
+    except Exception as e:
+        print(f"    ⚠  News search failed: {e}")
+        return "News search unavailable."
+
+
 # ── Groq ──────────────────────────────────────────────────────────────────────
-def groq_pick(client, home_en: str, away_en: str, ai_ctx: str, odds_wh: dict) -> dict:
+def groq_pick(client, home_en: str, away_en: str, ai_ctx: str, odds_wh: dict, news: str = "") -> dict:
     """Ask Groq to suggest a pick. Returns pick dict."""
     odds_str = json.dumps(odds_wh)
     prompt = f"""You are an expert football analyst. Suggest one pick for:
 {home_en} vs {away_en}
 Context: {ai_ctx}
+Latest news (injuries/suspensions): {news}
 William Hill odds: {odds_str}
 
 Prefer odds between 1.40 and 2.50 (compatible with accumulator systems).
@@ -696,9 +711,12 @@ def main():
         # Odds
         odds_wh = extract_wh_odds(ev)
 
-        # Groq pick
-        print(f"\n  🤖  Groq pick for {home_en} vs {away_en}…", end=" ", flush=True)
-        pick_raw = groq_pick(groq_client, home_en, away_en, ai_ctx, odds_wh)
+        # News search + Groq pick
+        print(f"\n  🔎  Searching news for {home_en} vs {away_en}…", end=" ", flush=True)
+        news = search_team_news(home_en, away_en)
+        print("✓")
+        print(f"  🤖  Groq pick for {home_en} vs {away_en}…", end=" ", flush=True)
+        pick_raw = groq_pick(groq_client, home_en, away_en, ai_ctx, odds_wh, news)
 
         # Map selection → correct odd from odds_wh
         sel_to_key = {
