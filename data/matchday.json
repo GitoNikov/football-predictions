@@ -38,8 +38,10 @@
         "a": 36
       },
       "aiCtx": "Bournemouth are 10th in the Premier League (39 pts), form: W-W-D-W-D-D. Brentford are 7th (43 pts), form: L-W-W-D-L-W.",
-      "ai": "Двубоят между Борнемут и Брентфорд е между отбори с добра форма, като домакините заемат 9-то място с 39 точки и форма от победа, победа, равенство, победа, равенство, равенство, а гостите са на 7-мо място с 43 точки и форма от загуба, победа, победа, равенство, загуба, победа. Тази форма показва, че и двата отбора имат потенциал за голове, което прави прогнозата за над 2.5 гола доста вероятна. Прогнозата е за над 2.5 гола при котировка 1.57, с увереност 58%, което прави този залог доста привлекателен за този резултат.",
-      "aiEn": "Bournemouth are currently 9th in the league with 39 points and a form of W-W-D-W-D-D, while Brentford are 7th with 43 points and a form of L-W-W-D-L-W. Given their current form, it makes sense that the pick is for Over 2.5 Goals, as both teams have shown a mix of wins, draws, and losses. The pick is for Over 2.5 Goals at exactly 1.57, with a confidence of 58%."
+      "ai": "Борнемут заема 10-то място в лигата с 39 точки и форма П-П-Р-П-Р-Р, а Брентфорд е 7-ми с 43 точки и форма З-П-П-Р-З-П. Двубоят между домакините и гостите обещава да бъде интересен, тъй като и двете отбори показват добра форма в последните мачове. Прогнозата за над 2.5 гола при котировка 1.57 ми се струва убедителна, с увереност 58%.",
+      "aiEn": "Bournemouth are 10th in the Premier League with 39 points and form W-W-D-W-D-D, while Brentford are 7th with 43 points and form L-W-W-D-L-W. The pick of over 2.5 goals makes sense given the teams' recent form, with both sides having shown glimpses of strong attacking play. The pick is over 2.5 goals at odds of 1.57 with a confidence level of 58%.",
+      "newsCtx": "Bournemouth (/ ˈbɔːrnməθ / ⓘ BORN-məth) is a coastal resort town in the Bournemouth, Christchurch and Poole unitary authority … | Explore what's on, places to stay, beaches and activities in the vibrant resort of Bournemouth. Plan and book your day … | Discover the top things to do & attractions in Bournemouth, the beach-side town & cultural hub with a vibrant energy. Our …",
+      "aiCtxHash": "14485040"
     },
     {
       "id": "eve_bur",
@@ -73,8 +75,10 @@
         "a": 20
       },
       "aiCtx": "Everton are 8th in the Premier League (40 pts), form: D-D-W-L-L-W. Burnley are 19th (19 pts), form: D-L-L-W-D-L.",
-      "ai": "Двубоят Евъртън срещу Burnley е между отбори с различна форма и позиция в класирането - Евъртън е на 8-о място с 40 точки и форма Д-Д-В-Л-Л-В, докато Burnley е на 19-о място с 19 точки и форма Д-Л-Л-В-Д-Л. Домакините имат по-добра форма и позиция, което ги прави фаворити в този двубой, тъй като гостите все още се борят да излезнат от зоната на изпадане. Прогнозата ми е победа за Евъртън при котировка 1.67, която ми се струва добра възможност за залог с увереност 65%. ",
-      "aiEn": "Everton and Burnley are currently 8th and 19th in the league, with 40 and 19 points, and forms D-D-W-L-L-W and D-L-L-W-D-L, respectively. The pick of an Everton win makes sense given their superior position and form compared to Burnley. The pick is Everton to win at exactly 1.67, a bet I have 65% confidence in."
+      "ai": "Евъртън е на 8моя позиция в лигата с 40 точки и форма Р-Р-П-З-З-П, докато Бърнли заема 19та позиция с 19 точки и форма Р-З-З-П-Р-З. Формата на двата отбора показва, че домакините имат по-добра форма в последните мачове, което дава предимство пред гостите. Прогнозата ми е залог на Евъртън да спечели с котировка 1.6, която ми изглежда правдоподобна с увереност 65%. ",
+      "aiEn": "Everton are 8th in the Premier League with 40 points and form D-D-W-L-L-W, while Burnley are 19th with 19 points and form D-L-L-W-D-L. The form of both teams suggests that the home side has a better recent record, which gives them an advantage over the visitors. My pick is an Everton win at odds of 1.6 with a confidence level of 65%.",
+      "newsCtx": "The official Everton website, home of latest news, fixtures and live match coverage. | The official website of Everton Football Club All Men Women Under-21s Academy Ticket News Stadium EitC Galleries Long Read What The … | 500 Sorry, it looks like the page you are looking for isn't available right now.",
+      "aiCtxHash": "10a7b9f4"
     },
     {
       "id": "lee_sun",
@@ -108,8 +112,9 @@
         "a": 25
       },
       "aiCtx": "Leeds are 15th in the Premier League (31 pts), form: D-L-W-D-D-L. Sunderland are 12th (37 pts), form: L-W-L-L-L-D.",
-      "ai": "Лийдс и Съндърланд се изправят един срещу друг в двубой, в който домакините заемат 15-о място с 31 точки и форма Д-Л-П-П-Р-П, а гостите са на 11-а позиция с 37 точки и форма З-П-З-П-П-Р. Формата на Лийдс показва, че те все още имат потенциал за победа, което дава основание да се смята, че домакините имат добри шансове за успех. Прогнозата е Лийдс да спечели този мач с котировка 1.91 и увереност 58%, което прави този залог привлекателен за този резултат.",
-      "aiEn": "Leeds and Sunderland face off, with the home team currently 15th in the league with 31 points and a form of D-L-W-D-D-L, while the away team is 11th with 37 points and a form of L-W-L-L-L-D. The pick of a Leeds win makes sense given their position and form, as it suggests they still have the potential to secure a victory. The pick is for Leeds to win at exactly 1.91 odds with a confidence of 58%."
+      "ai": "Лийдс заема 15-то място в Пример Лига с 31 точка и форма Р-З-П-Р-Р-З, докато Съндърланд е на 12-то място с 37 точки и форма З-П-З-З-З-Р. Домакините имат леко предимство в този двубой, тъй като формата на Съндърланд в последните мачове е била нестабилна. Прогнозата ми е Лийдс да спечели този мач при котировка 1.91, като увереността ми е 58%.",
+      "aiEn": "Leeds are 15th in the Premier League with 31 points and form D-L-W-D-D-L, while Sunderland are 12th with 37 points and form L-W-L-L-L-D. The pick of Leeds to win makes sense given Sunderland's inconsistent form of late, which could give Leeds the edge they need. The pick is Leeds to win at 1.91 with William Hill, with a confidence level of 58%.",
+      "aiCtxHash": "fff08d25"
     },
     {
       "id": "wol_liv",
@@ -143,8 +148,9 @@
         "a": 69
       },
       "aiCtx": "Wolverhampton Wanderers are 20th in the Premier League (13 pts), form: L-L-D-D-L-W. Liverpool are 5th (48 pts), form: W-W-L-W-W-W.",
-      "ai": "Двубойят между Уулвърхямптън и Ливърпул е между отбори с коренно различна форма, като домакините заемат 20-о място с 13 точки и форма Л-Л-Д-Д-Л-В, а гостите са пети с 48 точки и форма В-В-Л-В-В-В. Тази несъответствие в формата и позициите в класирането дава основания да се очаква резултат с много голове, тъй като Ливърпул е в серия от победи. Прогнозата е за над 2.5 гола, котировка 1.5, с увереност 70%, което прави този залог привлекателен за този мач.",
-      "aiEn": "Wolverhampton Wanderers are currently 20th in the league with 13 points and a form of L-L-D-D-L-W, while Liverpool are 5th with 48 points and a form of W-W-L-W-W-W. The significant difference in form and league position between the two teams suggests that the pick makes sense, as Liverpool's recent wins indicate a strong attacking performance. The pick is Over 2.5 Goals at exactly 1.5 William Hill, with a confidence level of 70%."
+      "ai": "Уулвърхямптън заема 20-то място в лигата с 13 точки и форма З-З-Р-Р-З-П, докато Ливърпул е пети с 48 точки и форма П-П-З-П-П-П. Двубойът между домакините и гостите обещава да бъде интересен, тъй като формата на отборите показва, че са способни да вкарат голе в мрежата на противника. Прогнозата ми е за над 2.5 гола, като котировка 1.5 и увереност 70% в тази залог.",
+      "aiEn": "Wolverhampton Wanderers are 20th in the Premier League with 13 points and a form of L-L-D-D-L-W, while Liverpool are 5th with 48 points and a form of W-W-L-W-W-W. The pick of Over 2.5 Goals makes sense given the positioning and form of both teams, which indicates their capability to score goals. The pick is Over 2.5 Goals at odds of exactly 1.5 with William Hill, with a confidence level of 70%.",
+      "aiCtxHash": "dc5a4e1f"
     },
     {
       "id": "bri_ars",
@@ -178,8 +184,9 @@
         "a": 61
       },
       "aiCtx": "Brighton are 11th in the Premier League (37 pts), form: L-D-L-L-W-W. Arsenal are 1st (64 pts), form: W-W-D-D-W-W.",
-      "ai": "Брайтън заема 14-то място с 34 точки и форма Д-Л-Д-Л-Л-В, докато Арсенал е лидер с 61 точки и форма В-В-В-Д-Д-В. Домакините изглеждат в слаба форма, което дава предимство на гостите, които имат по-добра форма и заемат първо място. Прогнозата е победа за Арсенал при котировка 1.62, с увереност 70%, тъй като гостите имат по-голям шанс за успех в този двубой.",
-      "aiEn": "Brighton are currently 14th in the league with 34 points and a form of D-L-D-L-L-W, while Arsenal are 1st with 61 points and a form of W-W-W-D-D-W. The pick of an Arsenal win makes sense given their superior position and form, as Brighton's recent form has been inconsistent. The pick is Arsenal to win at exactly 1.62, with a confidence level of 70%."
+      "ai": "Двубойът между Брайтън и Арсенал е между отбори с много различна форма, като домакините са на 11-то място с 37 точки и форма З-Р-З-З-П-П, а гостите са лидери с 64 точки и форма П-П-Р-Р-П-П. Формата на Арсенал говори за тяхното превъзходство, което дава основания да се смята, че ще спечелят двубоя. Прогнозата е за победа на Арсенал при котировка 1.62, като увереността в този залог е 70%.",
+      "aiEn": "Brighton are 11th in the Premier League with 37 points and a form of L-D-L-L-W-W, while Arsenal are 1st with 64 points and a form of W-W-D-D-W-W. Arsenal's form suggests they have the upper hand, which makes sense given their league position and recent results. The pick is for an Arsenal win at odds of 1.62 with a confidence level of 70%.",
+      "aiCtxHash": "02ca045e"
     },
     {
       "id": "avl_che",
@@ -213,8 +220,9 @@
         "a": 42
       },
       "aiCtx": "Aston Villa are 4th in the Premier League (51 pts), form: W-L-D-W-D-L. Chelsea are 6th (45 pts), form: W-W-W-D-D-L.",
-      "ai": "Двубоят между Астън Вила и Челси е между отбора, заемащ трето място с 51 точки и форма W-L-D-W-D-L, и гостите, които са шести с 45 точки и форма W-W-W-W-D-D. Формата на двата отбора показва, че Астън Вила имат по-нестабилна форма, докато Челси показват по-голяма стабилност, което прави прогнозата за над 2.5 гола правдоподобна. Прогнозата е за над 2.5 гола при котировка 1.65, с увереност 70%, което прави този залог привлекателен за този резултат.",
-      "aiEn": "Aston Villa, currently third in the league with 51 points and a form of W-L-D-W-D-L, face Chelsea, who are sixth with 45 points and a form of W-W-W-W-D-D. The form of both teams suggests that Aston Villa have been more inconsistent, while Chelsea have shown more stability, which makes the pick of over 2.5 goals sensible given their positions and recent performances. The pick is over 2.5 goals at odds of 1.65, with a confidence of 70%."
+      "ai": "Астън Вила заемат 4то място във Висшата лига с 51 точки и форма П-З-Р-П-Р-З, докато Челси е 6ти с 45 точки и форма П-П-П-Р-Р-З. Двубойът между двата отбора обещава да бъде интересен, тъй като домакините и гостите имат изравнена форма в последните срещи. Прогнозата за над 2.5 гола в този мач изглежда добра, тъй като котировката е 1.65, а увереността в нея е 70%.",
+      "aiEn": "Aston Villa are 4th in the Premier League with 51 points and form W-L-D-W-D-L, while Chelsea are 6th with 45 points and form W-W-W-D-D-L. The pick of over 2.5 goals makes sense given the teams' current form and league positions, as both have shown inconsistency in their recent matches. The pick is over 2.5 goals at exact odds of 1.65 with a confidence level of 70%.",
+      "aiCtxHash": "f5925ab1"
     },
     {
       "id": "ful_whu",
@@ -248,8 +256,9 @@
         "a": 29
       },
       "aiCtx": "Fulham are 9th in the Premier League (40 pts), form: W-L-L-L-W-W. West Ham are 18th (25 pts), form: W-L-W-D-D-L.",
-      "ai": "Фулъм е на 10-то място с 37 точки и форма L-W-L-L-L-W, докато Уест Хем заема 18-а позиция с 25 точки и форма W-L-W-D-D-L. Домакините изглеждат по-уверено в своята форма, което дава основание да се смята, че ще вземат победата. Прогнозата е за победа на Фулъм с котировка 1.95, а увереността в този залог е 58%.",
-      "aiEn": "Fulham are 10th in the league with 37 points and a form of L-W-L-L-L-W, while West Ham are 18th with 25 points and a form of W-L-W-D-D-L. The pick makes sense as Fulham's position and form suggest they have an advantage, which could lead to a win. The pick is for Fulham to win at exactly 1.95, with a confidence level of 58%."
+      "ai": "Фулъм е на 9-то място в Пример Лига с 40 точки и форма П-З-З-З-П-П, докато Уест Хем заема 18-а позиция с 25 точки и форма П-З-П-Р-Р-З. Домакините изглеждат по-силен от гостите, което прави прогнозата за тяхна победа доста вероятна. Залогът за победа на Фулъм при котировка 2.05 изглежда привлекателен, тъй като прогнозата за тяхна победа е с увереност 58%.",
+      "aiEn": "Fulham are 9th in the Premier League with 40 points and form W-L-L-L-W-W, while West Ham are 18th with 25 points and form W-L-W-D-D-L. The pick of Fulham to win makes sense given their relatively stronger position and form compared to West Ham. The pick is Fulham to win at exactly 2.05 with William Hill, with a confidence level of 58%.",
+      "aiCtxHash": "19617abc"
     },
     {
       "id": "mci_for",
@@ -283,8 +292,9 @@
         "a": 14
       },
       "aiCtx": "Manchester City are 2nd in the Premier League (59 pts), form: W-D-W-W-W-W. Nottingham Forest are 17th (27 pts), form: W-D-L-D-L-L.",
-      "ai": "Ман Сити заема 2ро място с 59 точки и форма от победа-равенство-победа-победа-победа-победа, докато Нотингам Форест е на 17то място с 27 точки и форма от равенство-победа-равенство-загуба-равенство-загуба. Домакините имат по-добра форма и това дава основание да се смята, че двубойът ще завърши с резултат над 2.5 гола. Прогнозата е над 2.5 гола при котировка 1.5, а увереността в този залог е 70%",
-      "aiEn": "Manchester City are currently 2nd in the league with 59 points and a form of W-D-W-W-W-W, while Nottingham Forest are 17th with 27 points and a form of D-W-D-L-D-L. The home team's form suggests they have an advantage, which makes the pick of over 2.5 goals reasonable based on their current performance. The pick is over 2.5 at odds of 1.5 with a confidence level of 70%"
+      "ai": "Ман Сити заемат 2ро място в лигата с 59 точки и форма П-Р-П-П-П-П, докато Нотингам Форест е на 17то място с 27 точки и форма П-Р-З-Р-З-З. Домакините изглеждат в добра форма, което дава основания да се очаква много голова в двубоя. Прогнозата е над 2.5 гола, като котировка 1.53 и залог 70%.",
+      "aiEn": "Manchester City are 2nd in the Premier League with 59 points and form W-D-W-W-W-W, while Nottingham Forest are 17th with 27 points and form W-D-L-D-L-L. Given the strong form of Manchester City and the significant difference in league position, it makes sense to expect a high-scoring match. The pick is Over 2.5 goals at odds 1.53 with a confidence level of 70%.",
+      "aiCtxHash": "9da8ad95"
     },
     {
       "id": "new_mun",
@@ -318,8 +328,9 @@
         "a": 38
       },
       "aiCtx": "Newcastle are 13th in the Premier League (36 pts), form: L-W-W-L-W-L. Manchester United are 3rd (51 pts), form: W-W-W-D-W-W.",
-      "ai": "Нюкасъл заема 12-то място с 36 точки и форма Л-П-П-П-П, докато Ман Юнайтед е на 4-то място с 48 точки и форма П-Р-П-П-П-П. Двубоят между двата отбора обещава да бъде интересен, тъй като гостите имат по-добра форма в последните мачове, което ги прави фаворити в този двубой. Прогнозата ми е за над 2.5 гола, като котировката е 1.5, а увереността ми е 70%, което прави този залог доста вероятен за положителен резултат.",
-      "aiEn": "Newcastle are currently 12th in the league with 36 points and a form of L-W-W-L-W-L, while Manchester United are 4th with 48 points and a form of W-D-W-W-W-W. The pick of over 2.5 goals makes sense given the form of both teams, with Manchester United having a stronger recent run. The pick is over 2.5 goals at exactly 1.5 odds with a confidence of 70%."
+      "ai": "Нюкасъл заема 13-то място в премиершипа с 36 точки и форма З-П-П-З-П-З, докато Ман Юнайтед е на 3-то място с 51 точки и форма П-П-П-Р-П-П. Двубоят между домакините и гостите обещава да бъде интересен, тъй като формата на двата отбора показва, че са способни да вкарат много гола. Прогнозата ми е над 2.5 гола, като котировка 1.53 и залог от 70%.",
+      "aiEn": "Newcastle are 13th in the Premier League with 36 points and a form of L-W-W-L-W-L, while Manchester United are 3rd with 51 points and a form of W-W-W-D-W-W. The pick of over 2.5 goals makes sense given the form of both teams, with Newcastle and Manchester United showing an ability to score and concede goals. The recommended pick is over 2.5 goals at odds of 1.53 with William Hill, with a confidence level of 70%.",
+      "aiCtxHash": "a2f9052a"
     },
     {
       "id": "tot_pal",
@@ -353,8 +364,9 @@
         "a": 33
       },
       "aiCtx": "Tottenham are 16th in the Premier League (29 pts), form: W-D-L-L-L-L. Crystal Palace are 14th (35 pts), form: L-D-W-L-W-L.",
-      "ai": "Тотнъм срещу Кристъл Палас е двубой между двата отбора, като домакините заемат 16-то място с 29 точки и форма Д-П-Р-З-З-З, а гостите са на 13-то място с 35 точки и форма З-З-Р-П-З-П. Тази форма показва, че и двата отбора имат потенциал за голове, което прави прогнозата за над 2.5 гола доста вероятна. Прогнозата е над 2.5 гола с котировка 1.85 и увереност 58%, което прави този залог доста привлекателен.",
-      "aiEn": "Tottenham are currently 16th in the league with 29 points and a form of D-W-D-L-L-L, while Crystal Palace are 13th with 35 points and a form of L-L-D-W-L-W. The form of both teams suggests that they are capable of scoring and conceding goals, which makes the pick of over 2.5 goals a reasonable one. The pick is over 2.5 goals at exactly 1.85 odds with a confidence of 58%."
+      "ai": "Тотнъм заема 16-то място в лигата с 29 точки и форма П-Р-З-З-З-З, докато Кристъл Палас е на 14-то място с 35 точки и форма З-Р-П-З-П-З. Двубойът между двата отбора очаквано ще бъде оживен, тъй като домакините и гостите търсят точки в борбата си за по-добро позициониране. Прогнозата за мача е над 2.5 гола с котировка 1.85, която изглежда привлекателна с доверие 58%.",
+      "aiEn": "Tottenham are 16th in the Premier League with 29 points and a form of W-D-L-L-L-L, while Crystal Palace are 14th with 35 points and a form of L-D-W-L-W-L. The pick of over 2.5 goals makes sense given the current form and position of both teams, as they both need points to improve their standings. The pick is over 2.5 goals at odds of 1.85 with a confidence of 58%.",
+      "aiCtxHash": "806e8fd2"
     }
   ],
   "betBuilder": {
@@ -381,8 +393,8 @@
       }
     ],
     "totalOdd": "5.42",
-    "reasoning": "",
-    "reasoningEn": ""
+    "reasoning": "Тази комбинация от пазари се оказва статистически звучна, тъй като Борнемут и Брентфорд са отбори с добра форма и способност да вкарат гол, което увеличава вероятността за Над 2.5 гола, И двата вкарват и Победа домакин.",
+    "reasoningEn": "This combination of markets is statistically sound as Bournemouth and Brentford have been in good form, increasing the likelihood of over 2.5 goals, both teams scoring, and a home win."
   },
   "results": [
     {
