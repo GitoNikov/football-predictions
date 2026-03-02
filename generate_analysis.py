@@ -22,6 +22,25 @@ try:
 except ImportError:
     sys.exit("❌  groq not installed. Run: pip install groq")
 
+try:
+    from duckduckgo_search import DDGS
+    _DDGS_AVAILABLE = True
+except ImportError:
+    _DDGS_AVAILABLE = False
+
+
+def search_team_news(home_en: str, away_en: str) -> str:
+    """Search DuckDuckGo for injuries/suspensions. Returns a short snippet or empty string."""
+    if not _DDGS_AVAILABLE:
+        return ""
+    try:
+        query   = f"{home_en} {away_en} team news injuries suspensions"
+        results = DDGS().text(query, max_results=3)
+        snippets = [r["body"] for r in results if r.get("body")]
+        return " | ".join(snippets[:3]) if snippets else ""
+    except Exception:
+        return ""
+
 DATA_FILE  = Path("data/matchday.json")
 MODEL_NAME = "llama-3.3-70b-versatile"
 DELAY      = 1.5   # seconds between calls
@@ -43,10 +62,12 @@ def build_prompt(match: dict, label: str) -> str:
     away_en = match.get("awayEn", "")
     home_bg = match.get("home", home_en)
     away_bg = match.get("away", away_en)
+    news    = match.get("newsCtx", "")
+    news_line = f"\nLatest news (injuries/suspensions): {news}" if news else ""
 
     return f"""Match: {home_en} vs {away_en} ({label})
 Bulgarian team names: {home_bg} срещу {away_bg}
-Context: {ctx}
+Context: {ctx}{news_line}
 Probabilities: Home {prob['h']}% | Draw {prob['d']}% | Away {prob['a']}%
 Pick: {pick['betEn']} @ {pick['odd']} William Hill (confidence {pick['conf']}%)
 
@@ -103,7 +124,8 @@ def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
 
 
 def ctx_hash(match: dict) -> str:
-    return hashlib.md5(match.get("aiCtx", "").encode()).hexdigest()[:8]
+    content = match.get("aiCtx", "") + match.get("newsCtx", "")
+    return hashlib.md5(content.encode()).hexdigest()[:8]
 
 
 def main():
@@ -133,6 +155,9 @@ def main():
             skipped += 1
             continue
 
+        news = search_team_news(match.get("homeEn", ""), match.get("awayEn", ""))
+        if news:
+            match["newsCtx"] = news
         print(f"  ⚙  {name}… ", end="", flush=True)
         bg, en = generate_analysis(client, match, label)
 
