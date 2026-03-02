@@ -26,8 +26,8 @@
         "odd": "1.57"
       },
       "odds_wh": {
-        "h": "2.3",
-        "a": "2.75",
+        "h": "2.4",
+        "a": "2.7",
         "x": "3.4",
         "o25": "1.57",
         "btts": "1.5"
@@ -38,10 +38,10 @@
         "a": 36
       },
       "aiCtx": "Bournemouth are 10th in the Premier League (39 pts), form: W-W-D-W-D-D. Brentford are 7th (43 pts), form: L-W-W-D-L-W.",
-      "ai": "Борнемут заема 10-то място в лигата с 39 точки и форма П-П-Р-П-Р-Р, а Брентфорд е 7-ми с 43 точки и форма З-П-П-Р-З-П. Двубоят между домакините и гостите обещава да бъде интересен, тъй като и двете отбори показват добра форма в последните мачове. Прогнозата за над 2.5 гола при котировка 1.57 ми се струва убедителна, с увереност 58%.",
-      "aiEn": "Bournemouth are 10th in the Premier League with 39 points and form W-W-D-W-D-D, while Brentford are 7th with 43 points and form L-W-W-D-L-W. The pick of over 2.5 goals makes sense given the teams' recent form, with both sides having shown glimpses of strong attacking play. The pick is over 2.5 goals at odds of 1.57 with a confidence level of 58%.",
+      "ai": "Борнемут е на 10-то място в Пример лига с 39 точки и форма П-П-Р-П-Р-Р, докато Брентфорд е на 7-мо място с 43 точки и форма З-П-П-Р-З-П. Двубойът между домакините и гостите обещава да бъде интересен, тъй като и двете отбори имат добра форма в последните мачове. Прогнозата за над 2.5 гола при котировка 1.57 и залог 58% изглежда правдоподобна, тъй като и Борнемут, и Брентфорд са способни да вкарват гола в последните срещи.",
+      "aiEn": "Bournemouth are 10th in the Premier League with 39 points and form W-W-D-W-D-D, while Brentford are 7th with 43 points and form L-W-W-D-L-W. The pick of Over 2.5 Goals makes sense given the form of both teams, as they have been performing well in their recent matches. The pick is Over 2.5 Goals at exactly 1.57 with a confidence of 58%.",
       "newsCtx": "Bournemouth (/ ˈbɔːrnməθ / ⓘ BORN-məth) is a coastal resort town in the Bournemouth, Christchurch and Poole unitary authority … | Explore what's on, places to stay, beaches and activities in the vibrant resort of Bournemouth. Plan and book your day … | Discover the top things to do & attractions in Bournemouth, the beach-side town & cultural hub with a vibrant energy. Our …",
-      "aiCtxHash": "14485040"
+      "aiCtxHash": "bf40e139"
     },
     {
       "id": "eve_bur",
@@ -60,11 +60,11 @@
         "conf": 65,
         "market": "h2h",
         "selection": "home",
-        "odd": "1.6"
+        "odd": "1.57"
       },
       "odds_wh": {
-        "a": "5.0",
-        "h": "1.6",
+        "a": "5.5",
+        "h": "1.57",
         "x": "3.8",
         "o25": "1.85",
         "btts": "1.85"
@@ -75,10 +75,10 @@
         "a": 20
       },
       "aiCtx": "Everton are 8th in the Premier League (40 pts), form: D-D-W-L-L-W. Burnley are 19th (19 pts), form: D-L-L-W-D-L.",
-      "ai": "Евъртън е на 8моя позиция в лигата с 40 точки и форма Р-Р-П-З-З-П, докато Бърнли заема 19та позиция с 19 точки и форма Р-З-З-П-Р-З. Формата на двата отбора показва, че домакините имат по-добра форма в последните мачове, което дава предимство пред гостите. Прогнозата ми е залог на Евъртън да спечели с котировка 1.6, която ми изглежда правдоподобна с увереност 65%. ",
-      "aiEn": "Everton are 8th in the Premier League with 40 points and form D-D-W-L-L-W, while Burnley are 19th with 19 points and form D-L-L-W-D-L. The form of both teams suggests that the home side has a better recent record, which gives them an advantage over the visitors. My pick is an Everton win at odds of 1.6 with a confidence level of 65%.",
+      "ai": "Евъртън е на 8-мо място в лигата с 40 точки и форма Р-Р-П-З-З-П, докато Бърнли заема 19-та позиция с 19 точки и форма Р-З-З-П-Р-З. Домакините имат по-добра форма в последните срещи и това дава основание да се смята, че ще спечелят двубоя. Прогнозата е победа за Евъртън с котировка 1.6, която е доста привлекателна и има доверие 65%.",
+      "aiEn": "Everton are 8th in the Premier League with 40 points and a form of D-D-W-L-L-W, while Burnley are 19th with 19 points and a form of D-L-L-W-D-L. The pick of an Everton win makes sense given their relatively stronger form and league position compared to Burnley. The pick is an Everton win at odds of 1.6 with a confidence level of 65%.",
       "newsCtx": "The official Everton website, home of latest news, fixtures and live match coverage. | The official website of Everton Football Club All Men Women Under-21s Academy Ticket News Stadium EitC Galleries Long Read What The … | 500 Sorry, it looks like the page you are looking for isn't available right now.",
-      "aiCtxHash": "10a7b9f4"
+      "aiCtxHash": "dcd48c70"
     },
     {
       "id": "lee_sun",
@@ -136,9 +136,9 @@
         "odd": "1.5"
       },
       "odds_wh": {
-        "a": "1.4",
-        "h": "6.5",
-        "x": "4.8",
+        "a": "1.44",
+        "h": "6.0",
+        "x": "4.6",
         "o25": "1.5",
         "btts": "1.67"
       },
@@ -246,7 +246,7 @@
       "odds_wh": {
         "h": "2.05",
         "a": "3.3",
-        "x": "3.4",
+        "x": "3.5",
         "o25": "1.73",
         "btts": "1.62"
       },
@@ -280,7 +280,7 @@
         "odd": "1.53"
       },
       "odds_wh": {
-        "h": "1.36",
+        "h": "1.4",
         "a": "7.0",
         "x": "4.8",
         "o25": "1.53",
@@ -389,10 +389,10 @@
       {
         "market": "Победа домакин",
         "marketEn": "Home Win",
-        "odd": "2.3"
+        "odd": "2.4"
       }
     ],
-    "totalOdd": "5.42",
+    "totalOdd": "5.65",
     "reasoning": "Тази комбинация от пазари се оказва статистически звучна, тъй като Борнемут и Брентфорд са отбори с добра форма и способност да вкарат гол, което увеличава вероятността за Над 2.5 гола, И двата вкарват и Победа домакин.",
     "reasoningEn": "This combination of markets is statistically sound as Bournemouth and Brentford have been in good form, increasing the likelihood of over 2.5 goals, both teams scoring, and a home win."
   },
