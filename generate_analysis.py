@@ -45,6 +45,17 @@ DATA_FILE  = Path("data/matchday.json")
 MODEL_NAME = "llama-3.3-70b-versatile"
 DELAY      = 1.5   # seconds between calls
 
+FORM_BG = str.maketrans("WDL", "ПРЗ")
+
+def to_bg_form(ctx: str) -> str:
+    """Convert W/D/L form letters to Bulgarian П/Р/З inside a context string."""
+    import re
+    return re.sub(
+        r'(?<=form: )[\w-]+',
+        lambda m: m.group().translate(FORM_BG),
+        ctx,
+    )
+
 
 SYSTEM_MSG = (
     "You are a professional football analyst fluent in English and Bulgarian. "
@@ -64,18 +75,22 @@ def build_prompt(match: dict, label: str) -> str:
     away_bg = match.get("away", away_en)
     news    = match.get("newsCtx", "")
     news_line = f"\nLatest news (injuries/suspensions): {news}" if news else ""
+    bg_ctx  = to_bg_form(ctx)   # form letters already converted to П/Р/З
 
     return f"""Match: {home_en} vs {away_en} ({label})
-Bulgarian team names: {home_bg} срещу {away_bg}
-Context: {ctx}{news_line}
+Context (English): {ctx}{news_line}
+Context (Bulgarian — form letters already converted): {bg_ctx}
 Probabilities: Home {prob['h']}% | Draw {prob['d']}% | Away {prob['a']}%
 Pick: {pick['betEn']} @ {pick['odd']} William Hill (confidence {pick['conf']}%)
 
 STRICT RULES — violating any of these invalidates the response:
-1. The odds figure in your analysis MUST be exactly {pick['odd']} — never round or alter it.
-2. Only cite facts explicitly stated in the Context above (positions, points, form letters).
-   Never invent goal averages, goal tallies, streaks, or any statistic not in Context.
-3. Derive form streaks by counting W/D/L letters directly from the form string — do not guess.
+1. Odds MUST be exactly {pick['odd']} in both languages — never round or alter.
+2. Only cite facts from Context (positions, points, form). Never invent statistics.
+3. ENGLISH form letters: use W, D, L exactly as in Context (English).
+4. BULGARIAN form letters: copy exactly from the Bulgarian Context above (П, Р, З).
+   NEVER use W, D, L, В, Л, Д or any other variant in the Bulgarian text.
+5. Bulgarian team names MUST be exactly "{home_bg}" and "{away_bg}" — no other spelling.
+6. For goals use "гола" — never "голови".
 
 Write a 3-sentence match analysis. Return ONLY valid JSON, no markdown:
 {{"bg": "...", "en": "..."}}
@@ -86,13 +101,12 @@ ENGLISH — factual, journalistic tone:
 - Sentence 3: state the pick, exact odds {pick['odd']}, and confidence {pick['conf']}%
 
 BULGARIAN — write as a native Bulgarian football journalist, NOT a translation:
-- Use "{home_bg}" and "{away_bg}" as team names throughout
-- Natural Bulgarian football vocabulary: двубой, форма, домакините, гостите,
-  котировка, залог, прогноза, резултат, точки, победа, равенство
+- Use "{home_bg}" and "{away_bg}" as team names throughout — no exceptions
+- Use form letters П (win), Р (draw), З (loss) — copy from Bulgarian Context above
+- Natural vocabulary: двубой, форма, домакините, гостите, котировка, залог, прогноза
 - Active voice, present tense, journalistic register
-- Mirror the same 3-sentence structure as English but phrased naturally in Bulgarian
-- Never translate word-for-word; rephrase each idea in idiomatic Bulgarian
-- The odds in Bulgarian must also be exactly {pick['odd']}"""
+- Mirror the 3-sentence structure but phrased naturally — never translate word-for-word
+- Odds must also be exactly {pick['odd']}"""
 
 
 def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
