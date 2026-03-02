@@ -23,10 +23,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Check match results (Odds API scores)
+      - name: Check match results (football-data.org)
         continue-on-error: true
         env:
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
         run: python fetch_results.py
 
       - name: Generate AI analysis (Groq)
