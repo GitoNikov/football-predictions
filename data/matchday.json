@@ -1,155 +1,11 @@
 {
-  "updated_at": "2026-03-01T10:22:38Z",
+  "updated_at": "2026-03-02T07:00:00Z",
   "label": "Висша лига · Кръг 31",
   "labelEn": "Premier League · GW31",
   "date_range": "2026-03-05 – 2026-03-12",
   "date_rangeEn": "2026-03-05 – 2026-03-12",
   "sport": "soccer_epl",
   "upcoming": [
-    {
-      "id": "bri_for",
-      "home": "Брайтън",
-      "homeEn": "Brighton",
-      "homeA": "BRI",
-      "away": "Нотингам Форест",
-      "awayEn": "Nottm Forest",
-      "awayA": "FOR",
-      "date": "2026-03-01",
-      "time": "15:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Форест победа (ценност)",
-        "betEn": "Forest Win (value)",
-        "conf": 45,
-        "market": "h2h",
-        "selection": "away",
-        "odd": "3.4"
-      },
-      "odds_wh": {
-        "h": "2.1",
-        "x": "3.2",
-        "a": "3.4",
-        "btts": "1.7",
-        "o25": "1.83"
-      },
-      "prob": {
-        "h": 40,
-        "d": 28,
-        "a": 32
-      },
-      "ai": "Брайтън и Нотингам Форест се изправят един срещу друг в двубой от Premier League, като домакините заемат 14-то място с 34 точки и форма от пет мача без победа, а гостите са на 17-о място с 27 точки. Формата на двата отбора показва, че Нотингам Форест има шанс за победа, тъй като те успяват да спечелят точки в последните си мачове, докато Брайтън бележи слаба форма. Прогнозата ми е победа за Нотингам Форест при котировка 3.4, която ми се струва добра възможност за залог с увереност 45%.",
-      "aiEn": "Brighton and Nottingham Forest face off in a Premier League match, with the home team sitting 14th with 34 points and a form of D-L-D-L-L-W, while the visitors are 17th with 27 points and a form of D-W-D-L-D-L. The pick of a Forest win makes sense given the contrasting forms of the two teams, with Forest showing some resilience and Brighton struggling. The pick is a Forest Win at exactly 3.4 William Hill, a value bet that I have 45% confidence in.",
-      "aiCtx": "Brighton are 14th in the Premier League (34 pts), form: D-L-D-L-L-W. Nottingham Forest are 17th (27 pts), form: D-W-D-L-D-L.",
-      "aiCtxHash": "8b7f9f74"
-    },
-    {
-      "id": "mun_pal",
-      "home": "Ман Юнайтед",
-      "homeEn": "Man United",
-      "homeA": "MUN",
-      "away": "Кристъл Палас",
-      "awayEn": "Crystal Palace",
-      "awayA": "PAL",
-      "date": "2026-03-01",
-      "time": "16:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Ман Юнайтед победа",
-        "betEn": "Man United Win",
-        "conf": 65,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.55"
-      },
-      "odds_wh": {
-        "h": "1.55",
-        "x": "4.0",
-        "a": "5.5",
-        "btts": "1.67",
-        "o25": "1.62"
-      },
-      "prob": {
-        "h": 52,
-        "d": 26,
-        "a": 22
-      },
-      "ai": "Ман Юнайтед заема 4-то място с 48 точки и форма от победа-равенство-победа-победа-победа-победа, докато Кристъл Палас е на 13-о място с 35 точки и форма от загуба-загуба-равенство-победа-загуба-победа. Домакините изглеждат по-силни в този двубой, тъй като последователно бележат добри резултати и заемат по-високо място в класирането. Прогнозата е за победа на Ман Юнайтед с котировка 1.55, а увереността в този залог е 65%.",
-      "aiEn": "Manchester United are currently 4th in the league with 48 points and a form of W-D-W-W-W-W, while Crystal Palace are 13th with 35 points and a form of L-L-D-W-L-W. The pick makes sense given Manchester United's form and league position, as they have been performing consistently well and are placed higher in the standings. The pick is for a Manchester United win at exactly 1.55, with a confidence level of 65%.",
-      "aiCtx": "Manchester United are 4th in the Premier League (48 pts), form: W-D-W-W-W-W. Crystal Palace are 13th (35 pts), form: L-L-D-W-L-W.",
-      "aiCtxHash": "44a306a1"
-    },
-    {
-      "id": "ful_tot",
-      "home": "Фулъм",
-      "homeEn": "Fulham",
-      "homeA": "FUL",
-      "away": "Тотнъм",
-      "awayEn": "Tottenham",
-      "awayA": "TOT",
-      "date": "2026-03-01",
-      "time": "16:00",
-      "status": "pending",
-      "pick": {
-        "bet": "BTTS Да",
-        "betEn": "BTTS Yes",
-        "conf": 63,
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.65"
-      },
-      "odds_wh": {
-        "h": "2.05",
-        "x": "3.4",
-        "a": "3.4",
-        "btts": "1.65",
-        "o25": "1.75"
-      },
-      "prob": {
-        "h": 38,
-        "d": 30,
-        "a": 32
-      },
-      "ai": "Фулъм е на 10-то място с 37 точки и форма Л-В-Л-Л-Л-В, докато Тотнъм заема 16-то място с 29 точки и форма Д-В-Д-Л-Л-Л. Двубойът между двата отбора обещава да бъде интересен, тъй като и домакините, и гостите търсят победа, за да подобрят позицията си в класирането. Прогнозата ми е за резултат с голове в двата отбора при котировка 1.6, с увереност 63%, тъй като формата на отборите подсказва, че залогът ще бъде успешен.",
-      "aiEn": "Fulham are currently 10th in the league with 37 points and a form of L-W-L-L-L-W, while Tottenham are 16th with 29 points and a form of D-W-D-L-L-L. The pick of BTTS Yes makes sense given the current form and position of both teams, as they both look to secure a win to improve their league standing. The pick is BTTS Yes at odds of 1.6 with a confidence of 63%.",
-      "aiCtx": "Fulham are 10th in the Premier League (37 pts), form: L-W-L-L-L-W. Tottenham are 16th (29 pts), form: D-W-D-L-L-L.",
-      "aiCtxHash": "6216be63"
-    },
-    {
-      "id": "ars_che",
-      "home": "Арсенал",
-      "homeEn": "Arsenal",
-      "homeA": "ARS",
-      "away": "Челси",
-      "awayEn": "Chelsea",
-      "awayA": "CHE",
-      "date": "2026-03-01",
-      "time": "17:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Арсенал победа",
-        "betEn": "Arsenal Win",
-        "conf": 70,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.57"
-      },
-      "odds_wh": {
-        "h": "1.57",
-        "x": "4.0",
-        "a": "5.5",
-        "btts": "1.7",
-        "o25": "1.7"
-      },
-      "prob": {
-        "h": 56,
-        "d": 24,
-        "a": 20
-      },
-      "ai": "Арсенал е на първо място с 61 точки и форма от победите и равенствата W-W-W-D-D-W, докато Челси заема шесто място с 45 точки и форма W-W-W-W-D-D. Домакините имат по-добра форма и позиция в класирането, което ги прави фаворити в този двубой. Прогнозата е Арсенал да спечели с котировка 1.57, а увереността в този залог е 70%.",
-      "aiEn": "Arsenal are currently 1st in the league with 61 points and a form of W-W-W-D-D-W, while Chelsea are 6th with 45 points and a form of W-W-W-W-D-D. The pick of an Arsenal win makes sense given their superior form and league position. The pick is Arsenal to win at exactly 1.57 odds with a confidence level of 70%.",
-      "aiCtx": "Arsenal are 1st in the Premier League (61 pts), form: W-W-W-D-D-W. Chelsea are 6th (45 pts), form: W-W-W-W-D-D.",
-      "aiCtxHash": "cd0dc9c9"
-    },
     {
       "id": "bou_bre",
       "home": "Борнемут",
@@ -540,6 +396,86 @@
   },
   "results": [
     {
+      "id": "ars_che",
+      "home": "Арсенал",
+      "homeEn": "Arsenal",
+      "away": "Челси",
+      "awayEn": "Chelsea",
+      "date": "2026-03-01",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Арсенал победа",
+        "betEn": "Arsenal Win",
+        "conf": 70,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.57"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "ful_tot",
+      "home": "Фулъм",
+      "homeEn": "Fulham",
+      "away": "Тотнъм",
+      "awayEn": "Tottenham",
+      "date": "2026-03-01",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "BTTS Да",
+        "betEn": "BTTS Yes",
+        "conf": 63,
+        "market": "btts",
+        "selection": "yes",
+        "odd": "1.65"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "mun_pal",
+      "home": "Ман Юнайтед",
+      "homeEn": "Man United",
+      "away": "Кристъл Палас",
+      "awayEn": "Crystal Palace",
+      "date": "2026-03-01",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Ман Юнайтед победа",
+        "betEn": "Man United Win",
+        "conf": 65,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.55"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "bri_for",
+      "home": "Брайтън",
+      "homeEn": "Brighton",
+      "away": "Нотингам Форест",
+      "awayEn": "Nottm Forest",
+      "date": "2026-03-01",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Форест победа (ценност)",
+        "betEn": "Forest Win (value)",
+        "conf": 45,
+        "market": "h2h",
+        "selection": "away",
+        "odd": "3.4"
+      },
+      "result": "L",
+      "score": "2-1"
+    },
+    {
       "id": "lee_mci",
       "home": "Лийдс",
       "homeEn": "Leeds",
@@ -721,8 +657,8 @@
     }
   ],
   "record": {
-    "correct": 5,
-    "total": 10,
+    "correct": 8,
+    "total": 14,
     "period": "ЛЕ 26.02.2026"
   }
 }
