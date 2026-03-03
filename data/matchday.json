@@ -26,8 +26,8 @@
         "odd": "1.57"
       },
       "odds_wh": {
-        "h": "2.4",
-        "a": "2.7",
+        "h": "2.45",
+        "a": "2.62",
         "x": "3.4",
         "o25": "1.57",
         "btts": "1.5"
@@ -63,11 +63,11 @@
         "odd": "1.57"
       },
       "odds_wh": {
-        "a": "5.5",
+        "a": "5.8",
         "h": "1.57",
         "x": "3.8",
         "o25": "1.85",
-        "btts": "1.85"
+        "btts": "1.95"
       },
       "prob": {
         "h": 60,
@@ -97,12 +97,12 @@
         "conf": 58,
         "market": "h2h",
         "selection": "home",
-        "odd": "1.91"
+        "odd": "1.85"
       },
       "odds_wh": {
-        "h": "1.91",
-        "a": "3.9",
-        "x": "3.4",
+        "h": "1.85",
+        "a": "4.2",
+        "x": "3.3",
         "o25": "2.0",
         "btts": "1.85"
       },
@@ -133,13 +133,13 @@
         "conf": 70,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.5"
+        "odd": "1.57"
       },
       "odds_wh": {
-        "a": "1.44",
-        "h": "6.0",
-        "x": "4.6",
-        "o25": "1.5",
+        "a": "1.5",
+        "h": "5.5",
+        "x": "4.5",
+        "o25": "1.57",
         "btts": "1.67"
       },
       "prob": {
@@ -389,10 +389,10 @@
       {
         "market": "Победа домакин",
         "marketEn": "Home Win",
-        "odd": "2.4"
+        "odd": "2.45"
       }
     ],
-    "totalOdd": "5.65",
+    "totalOdd": "5.77",
     "reasoning": "Тази комбинация от пазари се оказва статистически звучна, тъй като Борнемут и Брентфорд са отбори с добра форма и способност да вкарат гол, което увеличава вероятността за Над 2.5 гола, И двата вкарват и Победа домакин.",
     "reasoningEn": "This combination of markets is statistically sound as Bournemouth and Brentford have been in good form, increasing the likelihood of over 2.5 goals, both teams scoring, and a home win."
   },
