@@ -711,6 +711,8 @@ function buildMatchCard(m) {
 
   const confCls  = conf >= 65 ? 'cf-high' : conf >= 55 ? 'cf-mid' : 'cf-low';
   const cpctCls  = conf >= 65 ? 'cpct-high' : conf >= 55 ? 'cpct-mid' : 'cpct-low';
+  const ev       = (conf / 100) * parseFloat(odd) - 1;
+  const evBadge  = ev > 0 ? `<span style="font-size:8px;font-weight:800;letter-spacing:.5px;color:var(--green);background:rgba(0,232,122,.12);border:1px solid rgba(0,232,122,.28);border-radius:4px;padding:1px 5px;margin-left:5px;vertical-align:middle">+EV</span>` : '';
 
   const safeHome = home.replace(/'/g, '&#39;');
   const safeAway = away.replace(/'/g, '&#39;');
@@ -758,7 +760,7 @@ function buildMatchCard(m) {
     <span class="pick-text">
       <span class="pick-bet">${bet}</span>
       <span class="pick-at">${lang==='bg'?'при':'@'}</span>
-      <span class="pick-odd">${odd}</span>
+      <span class="pick-odd">${odd}</span>${evBadge}
       <span class="pick-book">William Hill</span>
     </span>
   </div>
@@ -1173,6 +1175,39 @@ function renderPerf() {
   const yieldStr  = (yield_pct >= 0 ? '+' : '') + yield_pct.toFixed(1) + '%';
   const roiColor  = netProfit >= 0 ? 'var(--green)' : 'var(--red)';
 
+  // Market breakdown
+  const mktMap = {};
+  for (const r of results) {
+    const market = r.pick?.market || 'h2h';
+    const sel    = r.pick?.selection || 'home';
+    let label;
+    if (market === 'h2h') {
+      label = sel === 'home' ? (lang==='bg'?'Победа домакин':'Home Win')
+            : sel === 'away' ? (lang==='bg'?'Победа гост':'Away Win')
+            : (lang==='bg'?'Равенство':'Draw');
+    } else if (market === 'btts') {
+      label = 'BTTS';
+    } else if (market === 'over_under') {
+      label = sel.includes('2.5') ? 'O2.5' : 'O1.5';
+    } else {
+      label = market;
+    }
+    if (!mktMap[label]) mktMap[label] = { w: 0, t: 0 };
+    mktMap[label].t++;
+    if (r.result === 'W') mktMap[label].w++;
+  }
+  const mktRows = Object.entries(mktMap)
+    .sort((a, b) => b[1].t - a[1].t)
+    .map(([label, { w, t }], i, arr) => {
+      const pct   = Math.round(w / t * 100);
+      const color = pct >= 60 ? 'var(--green)' : pct >= 40 ? 'var(--yellow)' : 'var(--red)';
+      const border = i < arr.length - 1 ? 'border-bottom:1px solid var(--border);' : '';
+      return `<div style="display:flex;justify-content:space-between;align-items:center;padding:7px 12px;${border}">
+        <span style="color:var(--muted);font-size:10px">${label}</span>
+        <span style="font-family:'DM Mono',monospace;font-size:10px;font-weight:700;color:${color}">${w}/${t} <span style="opacity:.5">(${pct}%)</span></span>
+      </div>`;
+    }).join('');
+
   // ── Timeline — group by date ────────────────────────────────────────────────
   const byDate = [];
   let cur = null;
@@ -1248,6 +1283,10 @@ function renderPerf() {
       </div>
     </div>
     ${rec.period ? `<div style="font-size:9px;color:var(--muted);line-height:1.6;padding-top:4px;border-top:1px solid var(--border)">${rec.period}</div>` : ''}
+    ${mktRows ? `<div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
+      <div style="padding:6px 12px;border-bottom:1px solid var(--border);font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)">${lang==='bg'?'ПО ВИД ЗАЛОГ':'BY MARKET'}</div>
+      ${mktRows}
+    </div>` : ''}
   </div>
 </div>`;
 }
