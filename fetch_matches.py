@@ -514,11 +514,20 @@ def build_ai_ctx(home_en: str, away_en: str, home_st: dict, away_st: dict,
 # ── Web search ────────────────────────────────────────────────────────────────
 def search_team_news(home_en: str, away_en: str) -> str:
     """Search DuckDuckGo for injuries, suspensions, and team news. Returns a short summary."""
+    # Domains that never contain useful football team news
+    SKIP_DOMAINS = (
+        "wikipedia.org", "tripadvisor", "booking.com", "airbnb",
+        "visitbournemouth", "timeout.com", "yelp.com", "hotels.com",
+        "expedia.com", "lonelyplanet.com", "britannica.com",
+    )
     try:
         from duckduckgo_search import DDGS
-        query = f"{home_en} {away_en} team news injuries suspensions"
-        results = DDGS().text(query, max_results=3)
-        snippets = [r["body"] for r in results if r.get("body")]
+        query = f"{home_en} FC vs {away_en} FC premier league injury suspension team news"
+        results = DDGS().text(query, max_results=6)
+        snippets = [
+            r["body"] for r in results
+            if r.get("body") and not any(d in r.get("href", "") for d in SKIP_DOMAINS)
+        ]
         return " | ".join(snippets[:3]) if snippets else "No recent news found."
     except Exception as e:
         print(f"    ⚠  News search failed: {e}")

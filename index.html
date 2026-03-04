@@ -475,7 +475,8 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
           <input class="bs-stake-input" id="bsStake" type="number" placeholder="10" min="1" oninput="recalcBetslip()">
           <span class="bs-lv" data-t="bsCurrency">лв.</span>
         </div>
-        <div class="bs-total-row final"><span class="bs-total-label" data-t="bsWinLabel">Потенциална печалба</span><span class="bs-total-val" id="bsWin">0.00 лв.</span></div>
+        <div class="bs-total-row"><span class="bs-total-label" data-t="bsWinLabel">Евентуален приход</span><span class="bs-total-val" id="bsWin">0.00 лв.</span></div>
+        <div class="bs-total-row final"><span class="bs-total-label" data-t="bsProfitLabel">Нетна печалба</span><span class="bs-total-val" id="bsProfit" style="color:var(--green)">+0.00 лв.</span></div>
         <button class="bs-place-btn" onclick="placeBet()" data-t="bsPlaceBtn">ПОСТАВИ ЗАЛОГ →</button>
       </div>
     </div>
@@ -524,7 +525,7 @@ const T = {
     betslipTitle:"🎟 Бетслип",
     betslipEmpty:"Добавете избори от комбинациите или от таблицата",
     bsLegsLabel:"Брой избори", bsTotalOddsLabel:"Обща квота",
-    bsStakeLabel:"Залог:", bsCurrency:"лв.", bsWinLabel:"Потенциална печалба",
+    bsStakeLabel:"Залог:", bsCurrency:"лв.", bsWinLabel:"Евентуален приход", bsProfitLabel:"Нетна печалба",
     bsPlaceBtn:"ПОСТАВИ ЗАЛОГ →",
     statBooks:"Букмейкъра", statMatches:"Мача", statMarkets:"Пазара",
     booksTitle:"🇧🇬 + 🌍 Букмейкъри:",
@@ -543,7 +544,7 @@ const T = {
     betslipTitle:"🎟 Betslip",
     betslipEmpty:"Add picks from combos or the list",
     bsLegsLabel:"Picks", bsTotalOddsLabel:"Total Odds",
-    bsStakeLabel:"Stake:", bsCurrency:"BGN", bsWinLabel:"Potential Win",
+    bsStakeLabel:"Stake:", bsCurrency:"BGN", bsWinLabel:"Total Return", bsProfitLabel:"Net Profit",
     bsPlaceBtn:"PLACE BET →",
     statBooks:"Bookmakers", statMatches:"Matches", statMarkets:"Markets",
     booksTitle:"🇧🇬 + 🌍 Bookmakers:",
@@ -1161,6 +1162,18 @@ function renderPerf() {
   const winOdds = results.filter(r => r.result === 'W').map(r => parseFloat(r.pick.odd)).filter(o => !isNaN(o));
   const avgOdd  = winOdds.length ? (winOdds.reduce((a,b)=>a+b,0)/winOdds.length).toFixed(2) : '—';
 
+  // ROI — 1 unit staked per pick
+  const totalReturn = results.reduce((sum, r) => {
+    if (r.result !== 'W') return sum;
+    const o = parseFloat(r.pick?.odd);
+    return sum + (isNaN(o) ? 0 : o);
+  }, 0);
+  const netProfit = totalReturn - total;
+  const yield_pct = total > 0 ? (netProfit / total * 100) : 0;
+  const roiStr    = (netProfit >= 0 ? '+' : '') + netProfit.toFixed(2) + 'u';
+  const yieldStr  = (yield_pct >= 0 ? '+' : '') + yield_pct.toFixed(1) + '%';
+  const roiColor  = netProfit >= 0 ? 'var(--green)' : 'var(--red)';
+
   // ── Timeline — group by date ────────────────────────────────────────────────
   const byDate = [];
   let cur = null;
@@ -1226,9 +1239,13 @@ function renderPerf() {
         <span style="color:var(--muted)">${lang==='bg'?'Серия':'Streak'}</span>
         <span style="font-family:'DM Mono',monospace;font-weight:700">${streakHtml}</span>
       </div>
-      <div style="display:flex;justify-content:space-between;padding:8px 12px">
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-bottom:1px solid var(--border)">
         <span style="color:var(--muted)">${lang==='bg'?'Ср. квота':'Avg odds'}</span>
         <span style="font-family:'DM Mono',monospace;font-weight:700;color:var(--yellow)">${avgOdd}</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px">
+        <span style="color:var(--muted)">ROI</span>
+        <span style="font-family:'DM Mono',monospace;font-weight:700;color:${roiColor}" title="${lang==='bg'?'1 единица залог на прогноза':'1 unit staked per pick'}">${roiStr} (${yieldStr})</span>
       </div>
     </div>
     ${rec.period ? `<div style="font-size:9px;color:var(--muted);line-height:1.6;padding-top:4px;border-top:1px solid var(--border)">${rec.period}</div>` : ''}
@@ -1283,10 +1300,15 @@ function renderBetslip() {
 }
 
 function recalcBetslip() {
-  const stake    = parseFloat(document.getElementById('bsStake')?.value) || 10;
-  const totalOdd = betslip.reduce((a, b) => a * parseFloat(b.odd), 1);
-  const win      = document.getElementById('bsWin');
-  if (win) win.textContent = `${(stake * totalOdd).toFixed(2)} ${currentLang==='bg'?'лв.':'BGN'}`;
+  const stake     = parseFloat(document.getElementById('bsStake')?.value) || 10;
+  const totalOdd  = betslip.reduce((a, b) => a * parseFloat(b.odd), 1);
+  const curr      = currentLang === 'bg' ? 'лв.' : 'BGN';
+  const returnAmt = stake * totalOdd;
+  const profitAmt = stake * (totalOdd - 1);
+  const win    = document.getElementById('bsWin');
+  const profit = document.getElementById('bsProfit');
+  if (win)    win.textContent    = `${returnAmt.toFixed(2)} ${curr}`;
+  if (profit) profit.textContent = `+${profitAmt.toFixed(2)} ${curr}`;
 }
 
 function placeBet() {
