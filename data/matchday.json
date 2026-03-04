@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-03-02T10:07:05Z",
+  "updated_at": "2026-03-04T07:55:24Z",
   "label": "Висша лига · Кръг 31",
   "labelEn": "Premier League · GW31",
-  "date_range": "2026-03-05 – 2026-03-12",
-  "date_rangeEn": "2026-03-05 – 2026-03-12",
+  "date_range": "2026-03-10",
+  "date_rangeEn": "2026-03-10",
   "sport": "soccer_epl",
   "upcoming": [
     {
@@ -183,10 +183,9 @@
         "d": 25,
         "a": 61
       },
-      "aiCtx": "Brighton are 11th in the Premier League (37 pts), form: L-D-L-L-W-W. Arsenal are 1st (64 pts), form: W-W-D-D-W-W.",
+      "aiCtx": "Brighton are 12th in the Premier League (37 pts), form: L-D-L-L-W-W. Arsenal are 1st (64 pts), form: W-W-D-D-W-W.",
       "ai": "Двубойът между Брайтън и Арсенал е между отбори с много различна форма, като домакините са на 11-то място с 37 точки и форма З-Р-З-З-П-П, а гостите са лидери с 64 точки и форма П-П-Р-Р-П-П. Формата на Арсенал говори за тяхното превъзходство, което дава основания да се смята, че ще спечелят двубоя. Прогнозата е за победа на Арсенал при котировка 1.62, като увереността в този залог е 70%.",
-      "aiEn": "Brighton are 11th in the Premier League with 37 points and a form of L-D-L-L-W-W, while Arsenal are 1st with 64 points and a form of W-W-D-D-W-W. Arsenal's form suggests they have the upper hand, which makes sense given their league position and recent results. The pick is for an Arsenal win at odds of 1.62 with a confidence level of 70%.",
-      "aiCtxHash": "02ca045e"
+      "aiEn": "Brighton are 11th in the Premier League with 37 points and a form of L-D-L-L-W-W, while Arsenal are 1st with 64 points and a form of W-W-D-D-W-W. Arsenal's form suggests they have the upper hand, which makes sense given their league position and recent results. The pick is for an Arsenal win at odds of 1.62 with a confidence level of 70%."
     },
     {
       "id": "avl_che",
@@ -221,8 +220,7 @@
       },
       "aiCtx": "Aston Villa are 4th in the Premier League (51 pts), form: W-L-D-W-D-L. Chelsea are 6th (45 pts), form: W-W-W-D-D-L.",
       "ai": "Астън Вила заемат 4то място във Висшата лига с 51 точки и форма П-З-Р-П-Р-З, докато Челси е 6ти с 45 точки и форма П-П-П-Р-Р-З. Двубойът между двата отбора обещава да бъде интересен, тъй като домакините и гостите имат изравнена форма в последните срещи. Прогнозата за над 2.5 гола в този мач изглежда добра, тъй като котировката е 1.65, а увереността в нея е 70%.",
-      "aiEn": "Aston Villa are 4th in the Premier League with 51 points and form W-L-D-W-D-L, while Chelsea are 6th with 45 points and form W-W-W-D-D-L. The pick of over 2.5 goals makes sense given the teams' current form and league positions, as both have shown inconsistency in their recent matches. The pick is over 2.5 goals at exact odds of 1.65 with a confidence level of 70%.",
-      "aiCtxHash": "f5925ab1"
+      "aiEn": "Aston Villa are 4th in the Premier League with 51 points and form W-L-D-W-D-L, while Chelsea are 6th with 45 points and form W-W-W-D-D-L. The pick of over 2.5 goals makes sense given the teams' current form and league positions, as both have shown inconsistency in their recent matches. The pick is over 2.5 goals at exact odds of 1.65 with a confidence level of 70%."
     },
     {
       "id": "ful_whu",
@@ -255,10 +253,9 @@
         "d": 29,
         "a": 29
       },
-      "aiCtx": "Fulham are 9th in the Premier League (40 pts), form: W-L-L-L-W-W. West Ham are 18th (25 pts), form: W-L-W-D-D-L.",
+      "aiCtx": "Fulham are 10th in the Premier League (40 pts), form: W-L-L-L-W-W. West Ham are 18th (25 pts), form: W-L-W-D-D-L.",
       "ai": "Фулъм е на 9-то място в Пример Лига с 40 точки и форма П-З-З-З-П-П, докато Уест Хем заема 18-а позиция с 25 точки и форма П-З-П-Р-Р-З. Домакините изглеждат по-силен от гостите, което прави прогнозата за тяхна победа доста вероятна. Залогът за победа на Фулъм при котировка 2.05 изглежда привлекателен, тъй като прогнозата за тяхна победа е с увереност 58%.",
-      "aiEn": "Fulham are 9th in the Premier League with 40 points and form W-L-L-L-W-W, while West Ham are 18th with 25 points and form W-L-W-D-D-L. The pick of Fulham to win makes sense given their relatively stronger position and form compared to West Ham. The pick is Fulham to win at exactly 2.05 with William Hill, with a confidence level of 58%.",
-      "aiCtxHash": "19617abc"
+      "aiEn": "Fulham are 9th in the Premier League with 40 points and form W-L-L-L-W-W, while West Ham are 18th with 25 points and form W-L-W-D-D-L. The pick of Fulham to win makes sense given their relatively stronger position and form compared to West Ham. The pick is Fulham to win at exactly 2.05 with William Hill, with a confidence level of 58%."
     },
     {
       "id": "mci_for",
@@ -293,8 +290,7 @@
       },
       "aiCtx": "Manchester City are 2nd in the Premier League (59 pts), form: W-D-W-W-W-W. Nottingham Forest are 17th (27 pts), form: W-D-L-D-L-L.",
       "ai": "Ман Сити заемат 2ро място в лигата с 59 точки и форма П-Р-П-П-П-П, докато Нотингам Форест е на 17то място с 27 точки и форма П-Р-З-Р-З-З. Домакините изглеждат в добра форма, което дава основания да се очаква много голова в двубоя. Прогнозата е над 2.5 гола, като котировка 1.53 и залог 70%.",
-      "aiEn": "Manchester City are 2nd in the Premier League with 59 points and form W-D-W-W-W-W, while Nottingham Forest are 17th with 27 points and form W-D-L-D-L-L. Given the strong form of Manchester City and the significant difference in league position, it makes sense to expect a high-scoring match. The pick is Over 2.5 goals at odds 1.53 with a confidence level of 70%.",
-      "aiCtxHash": "9da8ad95"
+      "aiEn": "Manchester City are 2nd in the Premier League with 59 points and form W-D-W-W-W-W, while Nottingham Forest are 17th with 27 points and form W-D-L-D-L-L. Given the strong form of Manchester City and the significant difference in league position, it makes sense to expect a high-scoring match. The pick is Over 2.5 goals at odds 1.53 with a confidence level of 70%."
     },
     {
       "id": "new_mun",
@@ -329,8 +325,7 @@
       },
       "aiCtx": "Newcastle are 13th in the Premier League (36 pts), form: L-W-W-L-W-L. Manchester United are 3rd (51 pts), form: W-W-W-D-W-W.",
       "ai": "Нюкасъл заема 13-то място в премиершипа с 36 точки и форма З-П-П-З-П-З, докато Ман Юнайтед е на 3-то място с 51 точки и форма П-П-П-Р-П-П. Двубоят между домакините и гостите обещава да бъде интересен, тъй като формата на двата отбора показва, че са способни да вкарат много гола. Прогнозата ми е над 2.5 гола, като котировка 1.53 и залог от 70%.",
-      "aiEn": "Newcastle are 13th in the Premier League with 36 points and a form of L-W-W-L-W-L, while Manchester United are 3rd with 51 points and a form of W-W-W-D-W-W. The pick of over 2.5 goals makes sense given the form of both teams, with Newcastle and Manchester United showing an ability to score and concede goals. The recommended pick is over 2.5 goals at odds of 1.53 with William Hill, with a confidence level of 70%.",
-      "aiCtxHash": "a2f9052a"
+      "aiEn": "Newcastle are 13th in the Premier League with 36 points and a form of L-W-W-L-W-L, while Manchester United are 3rd with 51 points and a form of W-W-W-D-W-W. The pick of over 2.5 goals makes sense given the form of both teams, with Newcastle and Manchester United showing an ability to score and concede goals. The recommended pick is over 2.5 goals at odds of 1.53 with William Hill, with a confidence level of 70%."
     },
     {
       "id": "tot_pal",
@@ -365,36 +360,127 @@
       },
       "aiCtx": "Tottenham are 16th in the Premier League (29 pts), form: W-D-L-L-L-L. Crystal Palace are 14th (35 pts), form: L-D-W-L-W-L.",
       "ai": "Тотнъм заема 16-то място в лигата с 29 точки и форма П-Р-З-З-З-З, докато Кристъл Палас е на 14-то място с 35 точки и форма З-Р-П-З-П-З. Двубойът между двата отбора очаквано ще бъде оживен, тъй като домакините и гостите търсят точки в борбата си за по-добро позициониране. Прогнозата за мача е над 2.5 гола с котировка 1.85, която изглежда привлекателна с доверие 58%.",
-      "aiEn": "Tottenham are 16th in the Premier League with 29 points and a form of W-D-L-L-L-L, while Crystal Palace are 14th with 35 points and a form of L-D-W-L-W-L. The pick of over 2.5 goals makes sense given the current form and position of both teams, as they both need points to improve their standings. The pick is over 2.5 goals at odds of 1.85 with a confidence of 58%.",
-      "aiCtxHash": "806e8fd2"
+      "aiEn": "Tottenham are 16th in the Premier League with 29 points and a form of W-D-L-L-L-L, while Crystal Palace are 14th with 35 points and a form of L-D-W-L-W-L. The pick of over 2.5 goals makes sense given the current form and position of both teams, as they both need points to improve their standings. The pick is over 2.5 goals at odds of 1.85 with a confidence of 58%."
+    },
+    {
+      "id": "8bcd511f",
+      "home": "Галатасарай",
+      "homeEn": "Galatasaray",
+      "homeA": "GAL",
+      "away": "Ливърпул",
+      "awayEn": "Liverpool",
+      "awayA": "LIV",
+      "date": "2026-03-10",
+      "time": "19:45",
+      "competition": "Champions League",
+      "competitionBG": "Шампионска лига",
+      "status": "pending",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "odds_wh": {}
+    },
+    {
+      "id": "2a50d2be",
+      "home": "Аталанта",
+      "homeEn": "Atalanta BC",
+      "homeA": "ATA",
+      "away": "Байерн",
+      "awayEn": "Bayern Munich",
+      "awayA": "BAY",
+      "date": "2026-03-10",
+      "time": "22:00",
+      "competition": "Champions League",
+      "competitionBG": "Шампионска лига",
+      "status": "pending",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "odds_wh": {}
+    },
+    {
+      "id": "5e256c6e",
+      "home": "Atlético Madrid",
+      "homeEn": "Atlético Madrid",
+      "homeA": "ATL",
+      "away": "Тотнъм",
+      "awayEn": "Tottenham Hotspur",
+      "awayA": "TOT",
+      "date": "2026-03-10",
+      "time": "22:00",
+      "competition": "Champions League",
+      "competitionBG": "Шампионска лига",
+      "status": "pending",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "odds_wh": {}
+    },
+    {
+      "id": "1129cf84",
+      "home": "Нюкасъл",
+      "homeEn": "Newcastle United",
+      "homeA": "NEW",
+      "away": "Барселона",
+      "awayEn": "Barcelona",
+      "awayA": "BAR",
+      "date": "2026-03-10",
+      "time": "22:00",
+      "competition": "Champions League",
+      "competitionBG": "Шампионска лига",
+      "status": "pending",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "odds_wh": {}
     }
   ],
   "betBuilder": {
-    "matchId": "bou_bre",
-    "home": "Борнемут",
-    "homeEn": "Bournemouth",
-    "away": "Брентфорд",
-    "awayEn": "Brentford",
+    "matchId": "tot_pal",
+    "home": "Тотнъм",
+    "homeEn": "Tottenham",
+    "away": "Кристъл Палас",
+    "awayEn": "Crystal Palace",
     "markets": [
       {
         "market": "Над 2.5 гола",
         "marketEn": "Over 2.5 Goals",
-        "odd": "1.57"
+        "odd": "1.85"
       },
       {
         "market": "И двата вкарват",
         "marketEn": "BTTS Yes",
-        "odd": "1.5"
+        "odd": "1.62"
       },
       {
         "market": "Победа домакин",
         "marketEn": "Home Win",
-        "odd": "2.45"
+        "odd": "2.38"
       }
     ],
-    "totalOdd": "5.77",
-    "reasoning": "Тази комбинация от пазари се оказва статистически звучна, тъй като Борнемут и Брентфорд са отбори с добра форма и способност да вкарат гол, което увеличава вероятността за Над 2.5 гола, И двата вкарват и Победа домакин.",
-    "reasoningEn": "This combination of markets is statistically sound as Bournemouth and Brentford have been in good form, increasing the likelihood of over 2.5 goals, both teams scoring, and a home win."
+    "totalOdd": "7.13",
+    "reasoning": "",
+    "reasoningEn": ""
   },
   "results": [
     {
