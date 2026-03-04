@@ -287,19 +287,31 @@ def fetch_epl_events(api_key: str) -> list:
     return resp.json()
 
 
-def fetch_uefa_fixtures(api_key: str, existing_ids: set) -> list:
+def fetch_uefa_fixtures(api_key: str, existing_ids: set, groq_client) -> list:
     """
-    Fetch upcoming CL/EL/ECL fixtures from Odds API /events (1 unit per sport).
-    Returns stub match entries — no aiCtx, no pick — ready for manual pick entry.
-    Odds get populated automatically by fetch_odds.py on its next run.
+    Fetch upcoming CL/EL/ECL fixtures from Odds API /odds (includes WH odds).
+    Generates Groq picks when odds are available, so cards are fully populated.
     """
     new_fixtures = []
     now        = datetime.now(timezone.utc)
     window_end = now + timedelta(days=7)
 
+    sel_to_key = {
+        "home": "h", "away": "a", "draw": "x",
+        "yes": "btts", "no": "btts",
+        "over_2.5": "o25", "under_2.5": "o25",
+        "over_1.5": "o15", "under_1.5": "o15",
+    }
+
     for sport_key, comp in UEFA_SPORTS.items():
-        url    = f"{ODDS_BASE}/sports/{sport_key}/events"
-        params = {"apiKey": api_key}
+        url    = f"{ODDS_BASE}/sports/{sport_key}/odds/"
+        params = {
+            "apiKey":     api_key,
+            "regions":    "eu",
+            "markets":    "h2h,totals",
+            "oddsFormat": "decimal",
+            "bookmakers": "williamhill",
+        }
         try:
             resp = requests.get(url, params=params, timeout=15)
             if resp.status_code in (404, 422):
@@ -323,7 +335,6 @@ def fetch_uefa_fixtures(api_key: str, existing_ids: set) -> list:
             if not (now <= dt <= window_end):
                 continue
 
-            # Use Odds API event ID prefix as match ID — guaranteed unique & stable
             match_id = ev["id"][:8]
             if match_id in existing_ids:
                 continue
@@ -336,6 +347,37 @@ def fetch_uefa_fixtures(api_key: str, existing_ids: set) -> list:
             dt_sofia = dt + timedelta(hours=2)
             date_str = dt_sofia.strftime("%Y-%m-%d")
             time_str = dt_sofia.strftime("%H:%M")
+
+            odds_wh = extract_wh_odds(ev)
+            ai_ctx  = f"{home_en} vs {away_en} in the {comp['en']}."
+
+            if odds_wh:
+                print(f"\n  🔎  Searching news for {home_en} vs {away_en}…", end=" ", flush=True)
+                news = search_team_news(home_en, away_en)
+                print("✓")
+                print(f"  🤖  Groq pick for {home_en} vs {away_en}…", end=" ", flush=True)
+                pick_raw = groq_pick(groq_client, home_en, away_en, ai_ctx, odds_wh, news)
+                print("✓")
+
+                market = pick_raw.get("market", "h2h")
+                sel    = pick_raw.get("selection", "home")
+                resolved_odd = odds_wh.get(sel_to_key.get(sel, "h"), pick_raw.get("odd", "1.80"))
+                pick = {
+                    "bet":       bet_bg(market, sel, home_bg, away_bg),
+                    "betEn":     pick_raw.get("betEN", f"{home_en} Win"),
+                    "conf":      int(pick_raw.get("conf", 55)),
+                    "market":    market,
+                    "selection": sel,
+                    "odd":       str(resolved_odd),
+                }
+                prob = {
+                    "h": round(100 / float(odds_wh["h"])) if "h" in odds_wh else 50,
+                    "d": round(100 / float(odds_wh["x"])) if "x" in odds_wh else 25,
+                    "a": round(100 / float(odds_wh["a"])) if "a" in odds_wh else 25,
+                }
+            else:
+                pick = {"bet": "—", "betEn": "—", "conf": 0, "market": "h2h", "selection": "home", "odd": "?"}
+                prob = {"h": 50, "d": 25, "a": 25}
 
             new_fixtures.append({
                 "id":            match_id,
@@ -350,15 +392,10 @@ def fetch_uefa_fixtures(api_key: str, existing_ids: set) -> list:
                 "competition":   comp["en"],
                 "competitionBG": comp["bg"],
                 "status":        "pending",
-                "pick": {
-                    "bet":       "—",
-                    "betEn":     "—",
-                    "conf":      0,
-                    "market":    "h2h",
-                    "selection": "home",
-                    "odd":       "?",
-                },
-                "odds_wh": {},
+                "pick":          pick,
+                "odds_wh":       odds_wh,
+                "prob":          prob,
+                "aiCtx":         ai_ctx,
             })
             added += 1
 
@@ -856,7 +893,7 @@ def main():
     # ── Step 5: UEFA fixtures (fixtures only, no picks or analysis) ──────────
     print("\n🏆  Fetching UEFA fixtures…")
     all_existing_ids = existing_ids | {m["id"] for m in new_matches}
-    uefa_fixtures = fetch_uefa_fixtures(odds_key, all_existing_ids)
+    uefa_fixtures = fetch_uefa_fixtures(odds_key, all_existing_ids, groq_client)
     if uefa_fixtures:
         print(f"  → {len(uefa_fixtures)} new UEFA fixtures added (picks needed manually)")
     new_matches.extend(uefa_fixtures)

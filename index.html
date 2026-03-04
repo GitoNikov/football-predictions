@@ -430,6 +430,8 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
   <div class="picks-sub" id="picksSubEl">…</div>
 </div>
 
+<div id="compFilterBar" style="display:none;gap:8px;margin-bottom:12px;flex-wrap:wrap"></div>
+
 <div class="layout">
 <div id="container"></div>
 
@@ -515,6 +517,7 @@ let betslip = [];
 let expanded = {};
 let archiveIndex = [];
 let selectedGW = null;  // null = current (MD), object = historical GW data
+let picksFilter = 'all'; // 'all' | 'epl' | 'uefa'
 
 // ─── TRANSLATIONS ─────────────────────────────────────────────────────────────
 const T = {
@@ -665,11 +668,20 @@ function renderHeader() {
 
   // Performance subtitle
   const perfEl = document.getElementById('perfSubEl');
-  if (perfEl && MD.record) {
+  if (perfEl && MD.record && !selectedGW) {
     const r = MD.record;
+    const allResults = MD.results || [];
+    let periodStr = '';
+    if (allResults.length) {
+      const oldest = allResults[allResults.length - 1].date || '';
+      if (oldest) {
+        const [oy, om, od] = oldest.split('-');
+        periodStr = lang === 'bg' ? `от ${od}.${om}.${oy}` : `since ${od}.${om}.${oy}`;
+      }
+    }
     perfEl.textContent = lang === 'bg'
-      ? `${r.correct} верни от ${r.total} прогнози · ${r.period || ''}`
-      : `${r.correct} correct out of ${r.total} picks · ${r.period || ''}`;
+      ? `${r.correct} верни от ${r.total} прогнози${periodStr ? ' · ' + periodStr : ''}`
+      : `${r.correct} correct out of ${r.total} picks${periodStr ? ' · ' + periodStr : ''}`;
   }
 
   // GW badge — derived from matchday.json label
@@ -705,13 +717,38 @@ function renderHeader() {
 }
 
 // ─── MATCH CARDS ─────────────────────────────────────────────────────────────
+function setPicksFilter(f) {
+  picksFilter = f;
+  renderPicks();
+}
+
 function renderPicks() {
   const container = document.getElementById('container');
   if (!container || !MD) return;
 
-  const upcoming = (MD.upcoming || []).filter(m => m.status === 'pending');
+  const allUpcoming = (MD.upcoming || []).filter(m => m.status === 'pending');
+  const hasUefa = allUpcoming.some(m => m.competition);
+  const filterBar = document.getElementById('compFilterBar');
+  if (filterBar) {
+    if (hasUefa) {
+      const lang = currentLang;
+      const chip = (f, label) => {
+        const active = picksFilter === f;
+        return `<button onclick="setPicksFilter('${f}')" style="padding:5px 14px;border-radius:7px;border:1px solid ${active?'var(--green)':'var(--border)'};background:${active?'rgba(0,232,122,.12)':'var(--card)'};color:${active?'var(--green)':'var(--muted)'};font-size:11px;font-weight:700;letter-spacing:.5px;cursor:pointer;font-family:inherit;transition:all .15s">${label}</button>`;
+      };
+      filterBar.style.display = 'flex';
+      filterBar.innerHTML = chip('all', lang==='bg'?'Всички':'All') + chip('epl','EPL') + chip('uefa','UEFA');
+    } else {
+      filterBar.style.display = 'none';
+    }
+  }
+
+  let upcoming = allUpcoming;
+  if (picksFilter === 'epl')  upcoming = allUpcoming.filter(m => !m.competition);
+  if (picksFilter === 'uefa') upcoming = allUpcoming.filter(m =>  m.competition);
+
   if (!upcoming.length) {
-    container.innerHTML = '<div style="padding:24px;color:var(--muted)">Няма предстоящи мачове.</div>';
+    container.innerHTML = `<div style="padding:24px;color:var(--muted)">${currentLang==='bg'?'Няма предстоящи мачове.':'No upcoming matches.'}</div>`;
     return;
   }
 
@@ -1197,14 +1234,12 @@ function renderPerf() {
   const lang    = currentLang;
   const rec     = src.record || {};
 
-  // Update subtitle to reflect current vs historical view
-  const subEl = document.getElementById('perfSubEl');
-  if (subEl) {
-    if (selectedGW) {
+  // Update subtitle only when viewing a historical GW (current view handled by renderHeader)
+  if (selectedGW) {
+    const subEl = document.getElementById('perfSubEl');
+    if (subEl) {
       const dr = lang === 'bg' ? selectedGW.date_range : (selectedGW.date_rangeEn || selectedGW.date_range);
       subEl.textContent = (lang === 'bg' ? selectedGW.label : selectedGW.labelEn) + (dr ? ' · ' + dr : '');
-    } else {
-      subEl.textContent = lang === 'bg' ? 'Натрупани резултати от прогнозите' : 'Accumulated prediction results';
     }
   }
   const correct = rec.correct || 0;

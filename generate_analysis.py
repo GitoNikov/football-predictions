@@ -163,6 +163,13 @@ def main():
     updated = skipped = 0
     for i, match in enumerate(matches):
         name = f"{match.get('homeEn')} vs {match.get('awayEn')}"
+
+        # Skip stubs with no real pick (UEFA fixtures waiting for odds)
+        if match.get("pick", {}).get("conf", 0) == 0:
+            print(f"  ⚠  {name} — no pick yet, skipping")
+            skipped += 1
+            continue
+
         current_hash = ctx_hash(match)
         if match.get("ai") and match.get("aiEn") and match.get("aiCtxHash") == current_hash:
             print(f"  ↩  {name} — context unchanged, skipping")
