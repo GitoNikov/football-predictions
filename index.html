@@ -1170,7 +1170,6 @@ function renderPerf() {
   }, 0);
   const netProfit = totalReturn - total;
   const yield_pct = total > 0 ? (netProfit / total * 100) : 0;
-  const roiStr    = (netProfit >= 0 ? '+' : '') + netProfit.toFixed(2) + 'u';
   const yieldStr  = (yield_pct >= 0 ? '+' : '') + yield_pct.toFixed(1) + '%';
   const roiColor  = netProfit >= 0 ? 'var(--green)' : 'var(--red)';
 
@@ -1245,7 +1244,7 @@ function renderPerf() {
       </div>
       <div style="display:flex;justify-content:space-between;padding:8px 12px">
         <span style="color:var(--muted)">ROI</span>
-        <span style="font-family:'DM Mono',monospace;font-weight:700;color:${roiColor}" title="${lang==='bg'?'1 единица залог на прогноза':'1 unit staked per pick'}">${roiStr} (${yieldStr})</span>
+        <span style="font-family:'DM Mono',monospace;font-weight:700;color:${roiColor}">${yieldStr} <span style="font-size:9px;opacity:.6">(${lang==='bg'?`за ${total} залога`:`${total} picks`})</span></span>
       </div>
     </div>
     ${rec.period ? `<div style="font-size:9px;color:var(--muted);line-height:1.6;padding-top:4px;border-top:1px solid var(--border)">${rec.period}</div>` : ''}
