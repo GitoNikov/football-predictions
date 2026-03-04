@@ -491,6 +491,7 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
       <div class="perf-title">УСПЕВАЕМОСТ <em>НА ПРОГНОЗИТЕ</em></div>
       <div class="perf-sub" id="perfSubEl">Натрупани резултати от прогнозите</div>
     </div>
+    <div id="gwChips" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"></div>
   </div>
   <div id="perfResults"></div>
 </div>
@@ -512,6 +513,8 @@ let currentLang = 'bg';
 let MD = null;
 let betslip = [];
 let expanded = {};
+let archiveIndex = [];
+let selectedGW = null;  // null = current (MD), object = historical GW data
 
 // ─── TRANSLATIONS ─────────────────────────────────────────────────────────────
 const T = {
@@ -557,12 +560,61 @@ const T = {
 
 function tl(key) { return (T[currentLang][key] !== undefined ? T[currentLang] : T.bg)[key] || ''; }
 
+// ─── GW ARCHIVE ───────────────────────────────────────────────────────────────
+async function loadArchiveIndex() {
+  try {
+    const res = await fetch('data/history/index.json?t=' + Date.now());
+    if (!res.ok) return;
+    archiveIndex = await res.json();
+    renderGWChips();
+  } catch { /* no history yet — silently ignore */ }
+}
+
+function renderGWChips() {
+  const el = document.getElementById('gwChips');
+  if (!el || !MD) return;
+  const lang = currentLang;
+  const gwMatch = (MD.labelEn || '').match(/GW(\d+)/);
+  const currentGWNum = gwMatch ? parseInt(gwMatch[1]) : null;
+  const currentLabel = lang === 'bg' ? (MD.label || '') : (MD.labelEn || '');
+
+  const chip = (label, active, onclick, title) =>
+    `<button onclick="${onclick}" title="${title || ''}" style="padding:4px 11px;border-radius:6px;border:1px solid ${active ? 'var(--green)' : 'var(--border)'};background:${active ? 'rgba(0,232,122,.12)' : 'var(--card)'};color:${active ? 'var(--green)' : 'var(--muted)'};font-size:10px;font-weight:700;letter-spacing:.5px;cursor:pointer;font-family:inherit;transition:all .15s">${label}</button>`;
+
+  let html = chip(currentLabel, selectedGW === null, 'showCurrentGW()', '');
+  for (const entry of archiveIndex) {
+    if (entry.gw === currentGWNum) continue;
+    const pct   = entry.total > 0 ? Math.round(entry.correct / entry.total * 100) : 0;
+    const short = (lang === 'bg' ? `Кр.${entry.gw}` : `GW${entry.gw}`) + ` · ${pct}%`;
+    const full  = lang === 'bg' ? entry.label : entry.labelEn;
+    html += chip(short, selectedGW?.gw === entry.gw, `showHistoryGW(${entry.gw})`, `${full}: ${entry.correct}/${entry.total}`);
+  }
+  el.innerHTML = html;
+}
+
+async function showHistoryGW(gw) {
+  try {
+    const res = await fetch(`data/history/gw-${gw}.json?t=` + Date.now());
+    if (!res.ok) return;
+    selectedGW = await res.json();
+    renderPerf();
+    renderGWChips();
+  } catch(e) { console.error('Archive load failed:', e); }
+}
+
+function showCurrentGW() {
+  selectedGW = null;
+  renderPerf();
+  renderGWChips();
+}
+
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 async function init() {
   try {
     const resp = await fetch('data/matchday.json?v=' + Date.now());
     MD = await resp.json();
     render();
+    loadArchiveIndex();
   } catch(e) {
     document.getElementById('container').innerHTML =
       '<div style="padding:32px;color:var(--red)">⚠ Грешка при зареждане на данните. Опитайте пак.</div>';
@@ -589,6 +641,7 @@ function render() {
 function setLang(lang) {
   currentLang = lang;
   render();
+  renderGWChips();
 }
 
 function applyStaticLang() {
@@ -1139,9 +1192,21 @@ function renderCCBPicks() {
 function renderPerf() {
   const box = document.getElementById('perfResults');
   if (!box || !MD) return;
-  const results = MD.results || [];
+  const src     = selectedGW || MD;
+  const results = src.results || [];
   const lang    = currentLang;
-  const rec     = MD.record || {};
+  const rec     = src.record || {};
+
+  // Update subtitle to reflect current vs historical view
+  const subEl = document.getElementById('perfSubEl');
+  if (subEl) {
+    if (selectedGW) {
+      const dr = lang === 'bg' ? selectedGW.date_range : (selectedGW.date_rangeEn || selectedGW.date_range);
+      subEl.textContent = (lang === 'bg' ? selectedGW.label : selectedGW.labelEn) + (dr ? ' · ' + dr : '');
+    } else {
+      subEl.textContent = lang === 'bg' ? 'Натрупани резултати от прогнозите' : 'Accumulated prediction results';
+    }
+  }
   const correct = rec.correct || 0;
   const total   = rec.total   || 0;
 

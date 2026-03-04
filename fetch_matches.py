@@ -21,6 +21,7 @@ Usage:
 
 import json
 import os
+import re
 import sys
 import time
 from datetime import datetime, timezone, timedelta
@@ -633,6 +634,68 @@ Prefer markets that logically combine (e.g., high-scoring game + BTTS + home win
         return None
 
 
+# ── GW archive ────────────────────────────────────────────────────────────────
+def archive_current_gw(existing: dict) -> None:
+    """Save the current GW's results to data/history/ before starting a new GW."""
+    label_en = existing.get("labelEn", "")
+    m = re.search(r"GW(\d+)", label_en)
+    if not m:
+        print("  ⚠  Cannot determine GW number for archiving — skipping")
+        return
+    gw_num  = int(m.group(1))
+    gw_tag  = f"GW{gw_num}"
+
+    gw_results = [
+        r for r in existing.get("results", [])
+        if gw_tag in r.get("competitionEn", "")
+    ]
+    if not gw_results:
+        print(f"  ⚠  No results tagged {gw_tag} — skipping archive")
+        return
+
+    correct = sum(1 for r in gw_results if r.get("result") == "W")
+    total   = len(gw_results)
+
+    HISTORY_DIR = Path("data/history")
+    HISTORY_DIR.mkdir(parents=True, exist_ok=True)
+
+    archive = {
+        "gw":           gw_num,
+        "label":        existing.get("label", ""),
+        "labelEn":      label_en,
+        "date_range":   existing.get("date_range", ""),
+        "date_rangeEn": existing.get("date_rangeEn", ""),
+        "results":      gw_results,
+        "record":       {"correct": correct, "total": total},
+    }
+    archive_path = HISTORY_DIR / f"gw-{gw_num}.json"
+    with open(archive_path, "w", encoding="utf-8") as f:
+        json.dump(archive, f, ensure_ascii=False, indent=2)
+
+    # Update index
+    index_path = HISTORY_DIR / "index.json"
+    index = []
+    if index_path.exists():
+        try:
+            with open(index_path, encoding="utf-8") as f:
+                index = json.load(f)
+        except Exception:
+            pass
+    index = [e for e in index if e.get("gw") != gw_num]
+    index.insert(0, {
+        "gw":      gw_num,
+        "label":   existing.get("label", ""),
+        "labelEn": label_en,
+        "correct": correct,
+        "total":   total,
+    })
+    index.sort(key=lambda x: x.get("gw", 0), reverse=True)
+    with open(index_path, "w", encoding="utf-8") as f:
+        json.dump(index, f, ensure_ascii=False, indent=2)
+
+    print(f"  📦  Archived {gw_tag}: {correct}/{total} correct → {archive_path}")
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 def main():
     odds_key = os.environ.get("ODDS_API_KEY", "")
@@ -655,6 +718,12 @@ def main():
         with open(MATCHDAY_FILE, encoding="utf-8") as f:
             existing = json.load(f)
     existing_ids = {m["id"] for m in existing.get("upcoming", [])}
+
+    # ── Archive the current GW before overwriting ─────────────────────────────
+    if existing.get("results"):
+        print("📦  Archiving current GW…")
+        archive_current_gw(existing)
+        print()
 
     # ── Step 1: Get upcoming EPL events from Odds API ─────────────────────────
     print("📡  Fetching EPL events from Odds API…")
