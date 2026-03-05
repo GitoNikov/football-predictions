@@ -7,186 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "bri_ars",
-      "home": "Брайтън",
-      "homeEn": "Brighton",
-      "homeA": "BRI",
-      "away": "Арсенал",
-      "awayEn": "Arsenal",
-      "awayA": "ARS",
-      "date": "2026-03-04",
-      "time": "21:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Арсенал победа",
-        "betEn": "Arsenal Win",
-        "conf": 70,
-        "market": "h2h",
-        "selection": "away",
-        "odd": "1.65"
-      },
-      "odds_wh": {
-        "a": "1.65",
-        "h": "4.8",
-        "x": "3.8",
-        "o25": "1.85",
-        "btts": "1.85"
-      },
-      "prob": {
-        "h": 22,
-        "d": 25,
-        "a": 61
-      },
-      "aiCtx": "Brighton are 12th in the Premier League (37 pts), form: L-D-L-L-W-W. Arsenal are 1st (64 pts), form: W-W-D-D-W-W.",
-      "ai": "Брайтън е на 12-то място във Висшата лига с 37 точки и форма от З-Р-З-З-П-П, докато Арсенал е лидер с 64 точки и серия от П-П-Р-Р-П-П. Домакините имат трудна форма, което дава предимство на гостите в този двубой, тъй като Арсенал показва стабилна форма. Прогнозата е победа за Арсенал при котировка 1.62, а увереността в този залог е 70%.",
-      "aiEn": "Brighton are 12th in the Premier League with 37 points and a form of L-D-L-L-W-W, while Arsenal are 1st with 64 points and a form of W-W-D-D-W-W. The pick of an Arsenal win makes sense given their strong position and form, which contrasts with Brighton's inconsistent recent performances. The pick is Arsenal to win at exactly 1.62 odds with William Hill, with a confidence level of 70%.",
-      "aiCtxHash": "f295e002"
-    },
-    {
-      "id": "avl_che",
-      "home": "Астън Вила",
-      "homeEn": "Aston Villa",
-      "homeA": "AVL",
-      "away": "Челси",
-      "awayEn": "Chelsea",
-      "awayA": "CHE",
-      "date": "2026-03-04",
-      "time": "21:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.65"
-      },
-      "odds_wh": {
-        "h": "2.7",
-        "a": "2.45",
-        "x": "3.3",
-        "o25": "1.65",
-        "btts": "1.57"
-      },
-      "prob": {
-        "h": 38,
-        "d": 29,
-        "a": 42
-      },
-      "aiCtx": "Aston Villa are 4th in the Premier League (51 pts), form: W-L-D-W-D-L. Chelsea are 6th (45 pts), form: W-W-W-D-D-L.",
-      "ai": "Астън Вила заемат 4-то място в премиершипа с 51 точки и форма П-З-Р-П-Р-З, докато Челси е 6-и с 45 точки и форма П-П-П-Р-Р-З. Двубоят между двата отбора предвещда много гола, тъй като домакините и гостите имат добра форма в последните мачове. Прогнозата е за над 2.5 гола, с котировка 1.65 и залог от 70%.",
-      "aiEn": "Aston Villa are 4th in the Premier League with 51 points and form W-L-D-W-D-L, while Chelsea are 6th with 45 points and form W-W-W-D-D-L. The pick of over 2.5 goals makes sense given the teams' current form and league position, with both sides having experienced a mix of wins, draws, and losses recently. The pick is over 2.5 goals at exactly 1.65 with William Hill, with a confidence level of 70%.",
-      "aiCtxHash": "f5925ab1"
-    },
-    {
-      "id": "ful_whu",
-      "home": "Фулъм",
-      "homeEn": "Fulham",
-      "homeA": "FUL",
-      "away": "Уест Хем",
-      "awayEn": "West Ham",
-      "awayA": "WHU",
-      "date": "2026-03-04",
-      "time": "21:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Фулъм победа",
-        "betEn": "Fulham Win",
-        "conf": 58,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "2.05"
-      },
-      "odds_wh": {
-        "h": "2.05",
-        "a": "3.4",
-        "x": "3.4",
-        "o25": "1.67",
-        "btts": "1.57"
-      },
-      "prob": {
-        "h": 50,
-        "d": 29,
-        "a": 29
-      },
-      "aiCtx": "Fulham are 10th in the Premier League (40 pts), form: W-L-L-L-W-W. West Ham are 18th (25 pts), form: W-L-W-D-D-L.",
-      "ai": "Фулъм е на 10-то място в лигата с 40 точки и форма П-З-З-З-П-П, докато Уест Хем е на 18-о място с 25 точки и форма П-З-П-Р-Р-З. Домакините изглеждат по-perspektivni в този двубой, тъй като имат по-добра форма и позиция в класирането. Прогнозата ни е залог на Фулъм да спечели на котировка 2.05, с увереност 58%.",
-      "aiEn": "Fulham are 10th in the Premier League with 40 points and form W-L-L-L-W-W, while West Ham are 18th with 25 points and form W-L-W-D-D-L. The pick of Fulham makes sense given their relatively better form and league position compared to West Ham. The pick is Fulham to win at 2.05 William Hill, with a confidence level of 58%.",
-      "aiCtxHash": "69f0284a"
-    },
-    {
-      "id": "mci_for",
-      "home": "Ман Сити",
-      "homeEn": "Manchester City",
-      "homeA": "MCI",
-      "away": "Нотингам Форест",
-      "awayEn": "Nottingham Forest",
-      "awayA": "FOR",
-      "date": "2026-03-04",
-      "time": "21:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.53"
-      },
-      "odds_wh": {
-        "h": "1.44",
-        "a": "6.0",
-        "x": "4.5",
-        "o25": "1.53",
-        "btts": "1.73"
-      },
-      "prob": {
-        "h": 74,
-        "d": 21,
-        "a": 14
-      },
-      "aiCtx": "Manchester City are 2nd in the Premier League (59 pts), form: W-D-W-W-W-W. Nottingham Forest are 17th (27 pts), form: W-D-L-D-L-L.",
-      "ai": "Ман Сити заема 2-то място в лигата с 59 точки и форма П-Р-П-П-П-П, докато Нотингам Форест е на 17-то място с 27 точки и форма П-Р-З-Р-З-З. Домакините изглеждат в добра форма, което дава основания да се очакват много гола в двубоя. Прогнозата е над 2.5 гола при котировка 1.53, която изглежда добър залог с увереност 70%.",
-      "aiEn": "Manchester City are 2nd in the Premier League with 59 points and form W-D-W-W-W-W, while Nottingham Forest are 17th with 27 points and form W-D-L-D-L-L. The home team's strong form suggests a high-scoring match, making the pick reasonable based on their position and recent results. The pick is Over 2.5 goals at 1.53 William Hill with a confidence of 70%.",
-      "aiCtxHash": "9da8ad95"
-    },
-    {
-      "id": "new_mun",
-      "home": "Нюкасъл",
-      "homeEn": "Newcastle",
-      "homeA": "NEW",
-      "away": "Ман Юнайтед",
-      "awayEn": "Manchester United",
-      "awayA": "MUN",
-      "date": "2026-03-04",
-      "time": "22:15",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.53"
-      },
-      "odds_wh": {
-        "a": "2.4",
-        "h": "2.62",
-        "x": "3.5",
-        "o25": "1.53",
-        "btts": "1.44"
-      },
-      "prob": {
-        "h": 42,
-        "d": 28,
-        "a": 38
-      },
-      "aiCtx": "Newcastle are 13th in the Premier League (36 pts), form: L-W-W-L-W-L. Manchester United are 3rd (51 pts), form: W-W-W-D-W-W.",
-      "ai": "Нюкасъл заема 13-то място в премиершип с 36 точки и форма П-З-П-З-П-З, докато Ман Юнайтед е на 3-то място с 51 точки и форма П-П-П-Р-П-П. Двубойът между двата отбора обещава много голова, тъй като домакините и гостите имат добра форма в последните мачове. Прогнозата е за над 2.5 гола, с котировка 1.53 и залог от 70%",
-      "aiEn": "Newcastle are 13th in the Premier League with 36 points and form L-W-W-L-W-L, while Manchester United are 3rd with 51 points and form W-W-W-D-W-W. The pick of over 2.5 goals makes sense given the form of both teams, with Newcastle and Manchester United showing inconsistent and attacking displays. The pick is over 2.5 goals at exact odds 1.53 with a confidence level of 70%",
-      "aiCtxHash": "a2f9052a"
-    },
-    {
       "id": "tot_pal",
       "home": "Тотнъм",
       "homeEn": "Tottenham",
@@ -206,11 +26,11 @@
         "odd": "1.85"
       },
       "odds_wh": {
-        "a": "2.8",
-        "h": "2.3",
-        "x": "3.4",
+        "a": "2.9",
+        "h": "2.4",
+        "x": "3.2",
         "o25": "1.85",
-        "btts": "1.62"
+        "btts": "1.67"
       },
       "prob": {
         "h": 44,
@@ -218,10 +38,10 @@
         "a": 33
       },
       "aiCtx": "Tottenham are 16th in the Premier League (29 pts), form: W-D-L-L-L-L. Crystal Palace are 14th (35 pts), form: L-D-W-L-W-L.",
-      "ai": "Тотнъм заема 16-то място във Висшата лига с 29 точки и форма П-Р-З-З-З-З, докато Кристъл Палас е на 14-то място с 35 точки и форма З-Р-П-З-П-З. Двубойът между двата отбора обещава да бъде интересен, тъй като формата на домакините и гостите показва, че те са способни да вкарат гола в мрежата на противника. Прогнозата за над 2.5 гола при котировка 1.85 ми се струва убедителна с увереност 58%.",
-      "aiEn": "Tottenham are 16th in the Premier League with 29 points and a form of W-D-L-L-L-L, while Crystal Palace are 14th with 35 points and a form of L-D-W-L-W-L. The pick of over 2.5 goals makes sense given the recent form of both teams, which suggests they are capable of scoring goals. The pick is over 2.5 goals at exactly 1.85 with William Hill, a bet I am 58% confident in.",
+      "ai": "Тотнъм заема 16то място в лигата с 29 точки и форма П-Р-З-З-З-З, докато Кристъл Палас е на 14то място с 35 точки и форма З-Р-П-З-П-З. Двубоят между домакините и гостите обещава да бъде интересен, тъй като формата на двата отбора показва, че те са способни да вкарат гола. Прогнозата е над 2.5 гола, като котировка 1.85 и залог с увереност 58%.",
+      "aiEn": "Tottenham are 16th in the Premier League with 29 points and form W-D-L-L-L-L, while Crystal Palace are 14th with 35 points and form L-D-W-L-W-L. The pick of over 2.5 goals makes sense given the current form of both teams, with their league positions and recent results suggesting a potentially open game. The recommended pick is over 2.5 goals at odds of 1.85 with a confidence level of 58%.",
       "newsCtx": "Welcome to the official Tottenham Hotspur website. Explore the site, discover the latest Spurs news & matches and check out our … | Accessibility English Subscribe Search site Sign in / Register Tottenham Hotspur Stadium | Tottenham Hotspur mens team fixture details for the 2025/26 season. including Information from all competitions. Dates …",
-      "aiCtxHash": "806e8fd2"
+      "aiCtxHash": "73af4c0c"
     },
     {
       "id": "8bcd511f",
@@ -343,19 +163,119 @@
       {
         "market": "И двата вкарват",
         "marketEn": "BTTS Yes",
-        "odd": "1.62"
+        "odd": "1.67"
       },
       {
         "market": "Победа домакин",
         "marketEn": "Home Win",
-        "odd": "2.3"
+        "odd": "2.4"
       }
     ],
-    "totalOdd": "6.89",
+    "totalOdd": "7.41",
     "reasoning": "Комбинацията от Над 2.5 гола, И двата вкарват и Победа домакин звучи привлекателно, тъй като тя обединява добрата форма на Тотнъм и Кристъл Палас в атака с традиционно високоинтензивните срещи между двата отбора.",
     "reasoningEn": "This bet builder combination is statistically sound as it brings together the likelihood of an open, goal-filled match, with both teams scoring, and a home win, given the historical context of high-scoring encounters between Tottenham and Crystal Palace."
   },
   "results": [
+    {
+      "id": "new_mun",
+      "home": "Нюкасъл",
+      "homeEn": "Newcastle",
+      "away": "Ман Юнайтед",
+      "awayEn": "Manchester United",
+      "date": "2026-03-04",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 70,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.53"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "mci_for",
+      "home": "Ман Сити",
+      "homeEn": "Manchester City",
+      "away": "Нотингам Форест",
+      "awayEn": "Nottingham Forest",
+      "date": "2026-03-04",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 70,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.53"
+      },
+      "result": "W",
+      "score": "2-2"
+    },
+    {
+      "id": "ful_whu",
+      "home": "Фулъм",
+      "homeEn": "Fulham",
+      "away": "Уест Хем",
+      "awayEn": "West Ham",
+      "date": "2026-03-04",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Фулъм победа",
+        "betEn": "Fulham Win",
+        "conf": 58,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "2.05"
+      },
+      "result": "L",
+      "score": "0-1"
+    },
+    {
+      "id": "avl_che",
+      "home": "Астън Вила",
+      "homeEn": "Aston Villa",
+      "away": "Челси",
+      "awayEn": "Chelsea",
+      "date": "2026-03-04",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 70,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.65"
+      },
+      "result": "W",
+      "score": "1-4"
+    },
+    {
+      "id": "bri_ars",
+      "home": "Брайтън",
+      "homeEn": "Brighton",
+      "away": "Арсенал",
+      "awayEn": "Arsenal",
+      "date": "2026-03-04",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Арсенал победа",
+        "betEn": "Arsenal Win",
+        "conf": 70,
+        "market": "h2h",
+        "selection": "away",
+        "odd": "1.65"
+      },
+      "result": "W",
+      "score": "0-1"
+    },
     {
       "id": "wol_liv",
       "home": "Уулвърхямптън",
@@ -698,8 +618,8 @@
     }
   ],
   "record": {
-    "correct": 10,
-    "total": 18,
+    "correct": 14,
+    "total": 23,
     "period": "ЛЕ 26.02.2026"
   }
 }
