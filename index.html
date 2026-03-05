@@ -1540,7 +1540,7 @@ function recalcBetslip() {
   const kelly = b > 0 ? (combinedProb * b - (1 - combinedProb)) / b : 0;
 
   if (kelly <= 0) {
-    kellyVal.textContent = currentLang === 'bg' ? '⛔ Без математически ръб' : '⛔ No mathematical edge';
+    kellyVal.textContent = currentLang === 'bg' ? '⛔ Слаба стойност' : '⛔ No mathematical edge';
     kellyVal.style.color = 'var(--red)';
   } else {
     const suggest = (kelly * bankroll).toFixed(0);
