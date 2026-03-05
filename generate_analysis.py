@@ -33,10 +33,18 @@ def search_team_news(home_en: str, away_en: str) -> str:
     """Search DuckDuckGo for injuries/suspensions. Returns a short snippet or empty string."""
     if not _DDGS_AVAILABLE:
         return ""
+    SKIP_DOMAINS = (
+        "wikipedia.org", "tripadvisor", "booking.com", "airbnb",
+        "visitbournemouth", "timeout.com", "yelp.com", "hotels.com",
+        "expedia.com", "lonelyplanet.com", "britannica.com",
+    )
     try:
-        query   = f"{home_en} {away_en} team news injuries suspensions"
-        results = DDGS().text(query, max_results=3)
-        snippets = [r["body"] for r in results if r.get("body")]
+        query   = f"{home_en} FC vs {away_en} FC premier league injury suspension team news"
+        results = DDGS().text(query, max_results=6)
+        snippets = [
+            r["body"] for r in results
+            if r.get("body") and not any(d in r.get("href", "") for d in SKIP_DOMAINS)
+        ]
         return " | ".join(snippets[:3]) if snippets else ""
     except Exception:
         return ""
