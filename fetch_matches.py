@@ -485,30 +485,42 @@ def fetch_standings(fd_key: str) -> tuple[dict, int]:
         if table.get("type") == "TOTAL":
             for entry in table.get("table", []):
                 name = entry["team"]["name"]
+                played = entry.get("playedGames", 1) or 1
                 standings_map[name] = {
                     "pos":     entry["position"],
                     "pts":     entry["points"],
                     "team_id": entry["team"]["id"],
+                    "gf_pg":   round(entry.get("goalsFor", 0) / played, 2),
+                    "ga_pg":   round(entry.get("goalsAgainst", 0) / played, 2),
                 }
     print(f"  ✓  Standings: {len(standings_map)} teams | matchday {matchday}")
     return standings_map, matchday
 
 
 def fetch_team_form(team_id: int, fd_key: str, limit: int = 6) -> str:
-    """Return form string like 'W-W-D-L-W' for last N finished matches."""
+    """Return scored form string like 'W 2-0, D 1-1, L 0-2' for last N finished matches."""
     data = fd_get(f"/teams/{team_id}/matches?status=FINISHED&limit={limit}", fd_key)
     matches = data.get("matches", [])
     form_parts = []
     for match in matches[-limit:]:
-        home_id = match.get("homeTeam", {}).get("id")
-        score   = match.get("score", {}).get("winner")
-        if score == "HOME_TEAM":
-            form_parts.append("W" if team_id == home_id else "L")
-        elif score == "AWAY_TEAM":
-            form_parts.append("L" if team_id == home_id else "W")
-        elif score == "DRAW":
-            form_parts.append("D")
-    return "-".join(form_parts) if form_parts else "N/A"
+        home_id  = match.get("homeTeam", {}).get("id")
+        full     = match.get("score", {}).get("fullTime", {})
+        hg       = full.get("home", "?")
+        ag       = full.get("away", "?")
+        winner   = match.get("score", {}).get("winner")
+        is_home  = team_id == home_id
+        if winner == "HOME_TEAM":
+            result = "W" if is_home else "L"
+        elif winner == "AWAY_TEAM":
+            result = "L" if is_home else "W"
+        elif winner == "DRAW":
+            result = "D"
+        else:
+            continue
+        # Show score from the team's perspective (team goals first)
+        score_str = f"{hg}-{ag}" if is_home else f"{ag}-{hg}"
+        form_parts.append(f"{result} {score_str}")
+    return ", ".join(form_parts) if form_parts else "N/A"
 
 
 def find_standing(name_en: str, standings_map: dict) -> dict | None:
@@ -541,11 +553,17 @@ def build_ai_ctx(home_en: str, away_en: str, home_st: dict, away_st: dict,
     a_pos  = ordinal(away_st["pos"])
     h_pts  = home_st["pts"]
     a_pts  = away_st["pts"]
+    h_gf   = home_st.get("gf_pg", "?")
+    h_ga   = home_st.get("ga_pg", "?")
+    a_gf   = away_st.get("gf_pg", "?")
+    a_ga   = away_st.get("ga_pg", "?")
     return (
         f"{home_en} are {h_pos} in the Premier League ({h_pts} pts), "
-        f"form: {home_form}. "
+        f"scoring {h_gf} and conceding {h_ga} goals per game, "
+        f"form (last 6, scored first): {home_form}. "
         f"{away_en} are {a_pos} ({a_pts} pts), "
-        f"form: {away_form}."
+        f"scoring {a_gf} and conceding {a_ga} goals per game, "
+        f"form (last 6, scored first): {away_form}."
     )
 
 

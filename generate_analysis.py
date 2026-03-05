@@ -53,16 +53,17 @@ DATA_FILE  = Path("data/matchday.json")
 MODEL_NAME = "llama-3.3-70b-versatile"
 DELAY      = 1.5   # seconds between calls
 
-FORM_BG = str.maketrans("WDL", "ПРЗ")
-
 def to_bg_form(ctx: str) -> str:
-    """Convert W/D/L form letters to Bulgarian П/Р/З inside a context string."""
+    """Convert W/D/L form letters to Bulgarian П/Р/З inside form sections of the context."""
     import re
-    return re.sub(
-        r'(?<=form: )[\w-]+',
-        lambda m: m.group().translate(FORM_BG),
-        ctx,
-    )
+    def translate_segment(m):
+        s = m.group()
+        s = re.sub(r'\bW\b', 'П', s)
+        s = re.sub(r'\bD\b', 'Р', s)
+        s = re.sub(r'\bL\b', 'З', s)
+        return s
+    # Match each "form …." sentence and translate only W/D/L letters within it
+    return re.sub(r'form[^.]+\.', translate_segment, ctx)
 
 
 SYSTEM_MSG = (
@@ -93,9 +94,9 @@ Pick: {pick['betEn']} @ {pick['odd']} William Hill (confidence {pick['conf']}%)
 
 STRICT RULES — violating any of these invalidates the response:
 1. Odds MUST be exactly {pick['odd']} in both languages — never round or alter.
-2. Only cite facts from Context (positions, points, form). Never invent statistics.
-3. ENGLISH form letters: use W, D, L exactly as in Context (English).
-4. BULGARIAN form letters: copy exactly from the Bulgarian Context above (П, Р, З).
+2. Only cite facts from Context (positions, points, goals per game, form scores). Never invent statistics.
+3. ENGLISH form entries: each entry is "W/D/L score" e.g. "W 2-0" — use exactly as in Context (English).
+4. BULGARIAN form entries: copy exactly from the Bulgarian Context above (П, Р, З + score).
    NEVER use W, D, L, В, Л, Д or any other variant in the Bulgarian text.
 5. Bulgarian team names MUST be exactly "{home_bg}" and "{away_bg}" — no other spelling.
 6. For goals use "гола" — never "голови".
@@ -104,13 +105,14 @@ Write a 3-sentence match analysis. Return ONLY valid JSON, no markdown:
 {{"bg": "...", "en": "..."}}
 
 ENGLISH — factual, journalistic tone:
-- Sentence 1: current league position, points, and form of both teams (from Context only)
-- Sentence 2: why the pick makes sense based on form/position (no invented stats)
+- Sentence 1: league position, points, goals per game, and recent form (with scores) of both teams
+- Sentence 2: why the pick makes sense — reference scoring/conceding rates and form results
 - Sentence 3: state the pick, exact odds {pick['odd']}, and confidence {pick['conf']}%
 
 BULGARIAN — write as a native Bulgarian football journalist, NOT a translation:
 - Use "{home_bg}" and "{away_bg}" as team names throughout — no exceptions
 - Use form letters П (win), Р (draw), З (loss) — copy from Bulgarian Context above
+- Reference goals per game naturally: "вкарват X гола на мач", "допускат Y гола"
 - Natural vocabulary: двубой, форма, домакините, гостите, котировка, залог, прогноза
 - Active voice, present tense, journalistic register
 - Mirror the 3-sentence structure but phrased naturally — never translate word-for-word
