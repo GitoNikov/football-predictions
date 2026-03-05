@@ -465,7 +465,8 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
   <div class="picks-sub" id="picksSubEl">…</div>
 </div>
 
-<div id="compFilterBar" style="display:none;gap:8px;margin-bottom:12px;flex-wrap:wrap"></div>
+<div id="compFilterBar" style="display:none;gap:8px;margin-bottom:8px;flex-wrap:wrap"></div>
+<div id="picksControlBar" style="display:none;gap:8px;margin-bottom:12px;flex-wrap:wrap;align-items:center"></div>
 
 <div class="layout">
 <div id="container"></div>
@@ -514,6 +515,17 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
         </div>
         <div class="bs-total-row"><span class="bs-total-label" data-t="bsWinLabel">Евентуален приход</span><span class="bs-total-val" id="bsWin">0.00 лв.</span></div>
         <div class="bs-total-row final"><span class="bs-total-label" data-t="bsProfitLabel">Нетна печалба</span><span class="bs-total-val" id="bsProfit" style="color:var(--green)">+0.00 лв.</span></div>
+        <div id="bsKellyRow" style="border-top:1px solid var(--border);padding:10px 14px 4px;display:none">
+          <div class="bs-stake-row" style="margin-bottom:6px">
+            <span class="bs-stake-label">Банкрол:</span>
+            <input class="bs-stake-input" id="bsBankroll" type="number" placeholder="1000" min="100" oninput="recalcBetslip()">
+            <span class="bs-lv">лв.</span>
+          </div>
+          <div class="bs-total-row" style="padding:0">
+            <span class="bs-total-label" style="font-size:10px;letter-spacing:.5px">Kelly залог</span>
+            <span class="bs-total-val" id="bsKellyVal" style="font-size:12px">—</span>
+          </div>
+        </div>
         <button class="bs-place-btn" onclick="placeBet()" data-t="bsPlaceBtn">ПОСТАВИ ЗАЛОГ →</button>
       </div>
     </div>
@@ -553,6 +565,8 @@ let expanded = {};
 let archiveIndex = [];
 let selectedGW = null;  // null = current (MD), object = historical GW data
 let picksFilter = 'all'; // 'all' | 'epl' | 'uefa'
+let todayOnly  = false;
+let sortByConf = false;
 
 // ─── TRANSLATIONS ─────────────────────────────────────────────────────────────
 const T = {
@@ -756,6 +770,8 @@ function setPicksFilter(f) {
   picksFilter = f;
   renderPicks();
 }
+function setTodayOnly(v) { todayOnly = v; renderPicks(); }
+function setSortByConf(v) { sortByConf = v; renderPicks(); }
 
 function renderPicks() {
   const container = document.getElementById('container');
@@ -782,40 +798,63 @@ function renderPicks() {
   if (picksFilter === 'epl')  upcoming = allUpcoming.filter(m => !m.competition);
   if (picksFilter === 'uefa') upcoming = allUpcoming.filter(m =>  m.competition);
 
+  const today    = new Date().toISOString().slice(0, 10);
+  const tomorrow = new Date(Date.now() + 86400000).toISOString().slice(0, 10);
+  const lang     = currentLang;
+
+  // ── picks control bar (today / sort by confidence) ───────────────────────
+  const ctrlBar = document.getElementById('picksControlBar');
+  if (ctrlBar) {
+    const hasToday = allUpcoming.some(m => m.date === today);
+    const tbtn = (label, active, onclick) =>
+      `<button onclick="${onclick}" style="padding:4px 11px;border-radius:6px;border:1px solid ${active?'var(--green)':'var(--border)'};background:${active?'rgba(0,232,122,.12)':'var(--card)'};color:${active?'var(--green)':'var(--muted)'};font-size:10px;font-weight:700;letter-spacing:.5px;cursor:pointer;font-family:inherit;transition:all .15s">${label}</button>`;
+    ctrlBar.innerHTML =
+      (hasToday ? tbtn(lang==='bg'?'📅 Днес':'📅 Today', todayOnly, `setTodayOnly(${!todayOnly})`) : '') +
+      tbtn(lang==='bg'?'🔥 По увереност':'🔥 By Confidence', sortByConf, `setSortByConf(${!sortByConf})`);
+    ctrlBar.style.display = 'flex';
+  }
+
+  // ── today filter ─────────────────────────────────────────────────────────
+  if (todayOnly) upcoming = upcoming.filter(m => m.date === today);
+
   if (!upcoming.length) {
-    container.innerHTML = `<div style="padding:24px;color:var(--muted)">${currentLang==='bg'?'Няма предстоящи мачове.':'No upcoming matches.'}</div>`;
+    const msg = todayOnly
+      ? (lang==='bg' ? 'Няма мачове за днес.' : 'No matches today.')
+      : (lang==='bg' ? 'Няма предстоящи мачове.' : 'No upcoming matches.');
+    container.innerHTML = `<div style="padding:24px;color:var(--muted)">${msg}</div>`;
     return;
   }
 
-  const byDate = {};
-  upcoming.forEach(m => { (byDate[m.date] = byDate[m.date] || []).push(m); });
-
-  const today = new Date().toISOString().slice(0, 10);
-  const tomorrow = new Date(Date.now() + 86400000).toISOString().slice(0, 10);
-  const lang = currentLang;
-
-  const daysBG = ['Неделя','Понеделник','Вторник','Сряда','Четвъртък','Петък','Събота'];
-  const daysEN = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-  const monBG = ['Януари','Февруари','Март','Април','Май','Юни','Юли','Август','Септември','Октомври','Ноември','Декември'];
-
+  // ── sort by confidence or by date ────────────────────────────────────────
   let html = '';
-  Object.keys(byDate).sort().forEach(date => {
-    const d = new Date(date + 'T12:00:00Z');
-    const dayName = lang === 'bg' ? daysBG[d.getUTCDay()] : daysEN[d.getUTCDay()];
-    const mon = lang === 'bg' ? monBG[d.getUTCMonth()] : d.toLocaleString('en',{month:'long',timeZone:'UTC'});
-    const dateLabel = `${dayName}, ${d.getUTCDate()} ${mon} ${d.getUTCFullYear()}`;
-    const isToday = date === today;
-    const isTomorrow = date === tomorrow;
-    const badgeCls = isToday ? 'sb-today' : 'sb-next';
-    const badgeText = isToday ? (lang==='bg'?'ДНЕС':'TODAY') : isTomorrow ? (lang==='bg'?'УТРЕ':'TOMORROW') : '';
+  if (sortByConf) {
+    [...upcoming].sort((a, b) => b.pick.conf - a.pick.conf).forEach(m => { html += buildMatchCard(m); });
+  } else {
+    const byDate = {};
+    upcoming.forEach(m => { (byDate[m.date] = byDate[m.date] || []).push(m); });
 
-    html += `<div class="section-header">
-      <span class="sec-label">${dateLabel}</span>
-      <span class="sec-line"></span>
-      ${badgeText ? `<span class="sec-badge ${badgeCls}">${badgeText}</span>` : ''}
-    </div>`;
-    byDate[date].forEach(m => { html += buildMatchCard(m); });
-  });
+    const daysBG = ['Неделя','Понеделник','Вторник','Сряда','Четвъртък','Петък','Събота'];
+    const daysEN = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const monBG = ['Януари','Февруари','Март','Април','Май','Юни','Юли','Август','Септември','Октомври','Ноември','Декември'];
+
+    Object.keys(byDate).sort().forEach(date => {
+      const d = new Date(date + 'T12:00:00Z');
+      const dayName = lang === 'bg' ? daysBG[d.getUTCDay()] : daysEN[d.getUTCDay()];
+      const mon = lang === 'bg' ? monBG[d.getUTCMonth()] : d.toLocaleString('en',{month:'long',timeZone:'UTC'});
+      const dateLabel = `${dayName}, ${d.getUTCDate()} ${mon} ${d.getUTCFullYear()}`;
+      const isToday    = date === today;
+      const isTomorrow = date === tomorrow;
+      const badgeCls  = isToday ? 'sb-today' : 'sb-next';
+      const badgeText = isToday ? (lang==='bg'?'ДНЕС':'TODAY') : isTomorrow ? (lang==='bg'?'УТРЕ':'TOMORROW') : '';
+
+      html += `<div class="section-header">
+        <span class="sec-label">${dateLabel}</span>
+        <span class="sec-line"></span>
+        ${badgeText ? `<span class="sec-badge ${badgeCls}">${badgeText}</span>` : ''}
+      </div>`;
+      byDate[date].forEach(m => { html += buildMatchCard(m); });
+    });
+  }
 
   container.innerHTML = html;
 }
@@ -1482,6 +1521,33 @@ function recalcBetslip() {
   const profit = document.getElementById('bsProfit');
   if (win)    win.textContent    = `${returnAmt.toFixed(2)} ${curr}`;
   if (profit) profit.textContent = `+${profitAmt.toFixed(2)} ${curr}`;
+
+  // ── Kelly Criterion ───────────────────────────────────────────────────────
+  const kellyRow = document.getElementById('bsKellyRow');
+  const kellyVal = document.getElementById('bsKellyVal');
+  if (!kellyRow || !kellyVal) return;
+  if (!betslip.length) { kellyRow.style.display = 'none'; return; }
+  kellyRow.style.display = 'block';
+
+  const bankroll = parseFloat(document.getElementById('bsBankroll')?.value) || 1000;
+  // combined probability = product of individual win probabilities
+  const combinedProb = betslip.reduce((p, b) => {
+    const m = (MD?.upcoming || []).find(u => u.id === b.id);
+    const c = m ? (m.pick?.conf || 60) : 60;
+    return p * (c / 100);
+  }, 1);
+  const b = totalOdd - 1; // net odds
+  const kelly = b > 0 ? (combinedProb * b - (1 - combinedProb)) / b : 0;
+
+  if (kelly <= 0) {
+    kellyVal.textContent = currentLang === 'bg' ? '⛔ Без математически ръб' : '⛔ No mathematical edge';
+    kellyVal.style.color = 'var(--red)';
+  } else {
+    const suggest = (kelly * bankroll).toFixed(0);
+    const pct     = (kelly * 100).toFixed(1);
+    kellyVal.textContent = `${suggest} ${curr} (${pct}%)`;
+    kellyVal.style.color = 'var(--green)';
+  }
 }
 
 function placeBet() {
