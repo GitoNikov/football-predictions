@@ -73,6 +73,52 @@ SYSTEM_MSG = (
     "you write each language independently."
 )
 
+# Market-specific guidance for sentence 2 (EN / BG)
+_S2 = {
+    ("btts", None): (
+        "Sentence 2: make the BTTS case — reference both teams' goals scored and conceded per game to show both are likely to score",
+        "Изречение 2: обоснови двата гола — посочи средния брой вкарани и допуснати голове, за да покажеш, че двата отбора ще вкарат",
+    ),
+    ("over_under", None): (
+        "Sentence 2: make the Over 2.5 case — reference both teams' goals per game averages and high-scoring recent form results",
+        "Изречение 2: обоснови над 2.5 гола — средни голове на мач и скорошни резултати с много голове",
+    ),
+    ("h2h", "draw"): (
+        "Sentence 2: make the draw case — closeness in the table, evenly matched form, and H2H history if available",
+        "Изречение 2: обоснови равен — близки позиции в класирането, изравнена форма, история на двубоите",
+    ),
+    ("h2h", "away"): (
+        "Sentence 2: make the away win case — away team's quality, superior position, and recent form vs home team's weaknesses",
+        "Изречение 2: обоснови гостуваща победа — класа на госта, предимство в класирането, форма срещу слабостите на домакина",
+    ),
+    ("h2h", "home"): (
+        "Sentence 2: make the home win case — home team's position, scoring strength, and form advantage",
+        "Изречение 2: обоснови домакинска победа — позиция, голова сила и предимство на формата на домакина",
+    ),
+}
+
+
+def summarize_news(client, home_en: str, away_en: str, raw: str) -> str:
+    """Distill raw DuckDuckGo snippets into a clean injuries/suspensions summary."""
+    if not raw:
+        return ""
+    try:
+        resp = client.chat.completions.create(
+            model=MODEL_NAME,
+            messages=[{"role": "user", "content": (
+                f"Extract ONLY confirmed player injuries, suspensions, or absences for "
+                f"{home_en} and {away_en} from the text below. "
+                f"Format: '{home_en}: player (status); {away_en}: player (status)'. "
+                f"If nothing concrete found, reply with exactly: None\n\nText: {raw[:1200]}"
+            )}],
+            temperature=0.1,
+            max_tokens=120,
+        )
+        result = resp.choices[0].message.content.strip()
+        return "" if result.lower() == "none" else result
+    except Exception:
+        return raw[:300]  # fallback: truncated raw
+
 
 def build_prompt(match: dict, label: str) -> str:
     pick    = match["pick"]
@@ -85,6 +131,12 @@ def build_prompt(match: dict, label: str) -> str:
     news    = match.get("newsCtx", "")
     news_line = f"\nLatest news (injuries/suspensions): {news}" if news else ""
     bg_ctx  = to_bg_form(ctx)   # form letters already converted to П/Р/З
+
+    market = pick.get("market", "h2h")
+    sel    = pick.get("selection", "home")
+    # Look up market-specific S2 guidance; fall back to home-win default
+    s2_key = (market, sel if market == "h2h" else None)
+    s2_en, s2_bg = _S2.get(s2_key, _S2[("h2h", "home")])
 
     return f"""Match: {home_en} vs {away_en} ({label})
 Context (English): {ctx}{news_line}
@@ -106,7 +158,7 @@ Write a 3-sentence match analysis. Return ONLY valid JSON, no markdown:
 
 ENGLISH — factual, journalistic tone:
 - Sentence 1: league position, points, goals per game, and recent form (with scores) of both teams
-- Sentence 2: why the pick makes sense — reference scoring/conceding rates and form results
+- {s2_en}
 - Sentence 3: state the pick, exact odds {pick['odd']}, and confidence {pick['conf']}%
 
 BULGARIAN — write as a native Bulgarian football journalist, NOT a translation:
@@ -115,6 +167,7 @@ BULGARIAN — write as a native Bulgarian football journalist, NOT a translation
 - Reference goals per game naturally: "вкарват X гола на мач", "допускат Y гола"
 - Natural vocabulary: двубой, форма, домакините, гостите, котировка, залог, прогноза
 - Active voice, present tense, journalistic register
+- {s2_bg}
 - Mirror the 3-sentence structure but phrased naturally — never translate word-for-word
 - Odds must also be exactly {pick['odd']}"""
 
@@ -186,9 +239,12 @@ def main():
             skipped += 1
             continue
 
-        news = search_team_news(match.get("homeEn", ""), match.get("awayEn", ""))
-        if news:
-            match["newsCtx"] = news
+        home_en = match.get("homeEn", "")
+        away_en = match.get("awayEn", "")
+        raw_news = search_team_news(home_en, away_en)
+        if raw_news:
+            clean_news = summarize_news(client, home_en, away_en, raw_news)
+            match["newsCtx"] = clean_news or raw_news[:300]
         print(f"  ⚙  {name}… ", end="", flush=True)
         bg, en = generate_analysis(client, match, label)
 

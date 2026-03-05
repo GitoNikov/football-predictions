@@ -523,6 +523,35 @@ def fetch_team_form(team_id: int, fd_key: str, limit: int = 6) -> str:
     return ", ".join(form_parts) if form_parts else "N/A"
 
 
+def fetch_h2h(home_id: int, away_id: int, home_en: str, fd_key: str, limit: int = 5) -> str:
+    """Return H2H summary for last N meetings, from home team's perspective."""
+    data = fd_get(f"/teams/{home_id}/matches?status=FINISHED&limit=30", fd_key)
+    meetings = [
+        m for m in data.get("matches", [])
+        if {m.get("homeTeam", {}).get("id"), m.get("awayTeam", {}).get("id")} == {home_id, away_id}
+    ][:limit]
+    if not meetings:
+        return ""
+    wins = draws = losses = 0
+    total_goals = 0
+    for m in meetings:
+        is_home = m.get("homeTeam", {}).get("id") == home_id
+        full    = m.get("score", {}).get("fullTime", {})
+        total_goals += (full.get("home") or 0) + (full.get("away") or 0)
+        winner = m.get("score", {}).get("winner")
+        if winner == "HOME_TEAM":
+            if is_home: wins += 1
+            else: losses += 1
+        elif winner == "AWAY_TEAM":
+            if is_home: losses += 1
+            else: wins += 1
+        else:
+            draws += 1
+    n   = len(meetings)
+    avg = round(total_goals / n, 1) if n else 0
+    return f"H2H last {n}: {home_en} {wins}W-{draws}D-{losses}L, avg {avg} goals/game"
+
+
 def find_standing(name_en: str, standings_map: dict) -> dict | None:
     """Fuzzy-match a team name to standings, returning the best match."""
     name_lower = name_en.lower()
@@ -548,7 +577,7 @@ def ordinal(n: int) -> str:
 
 
 def build_ai_ctx(home_en: str, away_en: str, home_st: dict, away_st: dict,
-                 home_form: str, away_form: str) -> str:
+                 home_form: str, away_form: str, h2h: str = "") -> str:
     h_pos  = ordinal(home_st["pos"])
     a_pos  = ordinal(away_st["pos"])
     h_pts  = home_st["pts"]
@@ -557,7 +586,7 @@ def build_ai_ctx(home_en: str, away_en: str, home_st: dict, away_st: dict,
     h_ga   = home_st.get("ga_pg", "?")
     a_gf   = away_st.get("gf_pg", "?")
     a_ga   = away_st.get("ga_pg", "?")
-    return (
+    ctx = (
         f"{home_en} are {h_pos} in the Premier League ({h_pts} pts), "
         f"scoring {h_gf} and conceding {h_ga} goals per game, "
         f"form (last 6, scored first): {home_form}. "
@@ -565,6 +594,9 @@ def build_ai_ctx(home_en: str, away_en: str, home_st: dict, away_st: dict,
         f"scoring {a_gf} and conceding {a_ga} goals per game, "
         f"form (last 6, scored first): {away_form}."
     )
+    if h2h:
+        ctx += f" {h2h}."
+    return ctx
 
 
 # ── Web search ────────────────────────────────────────────────────────────────
@@ -811,6 +843,23 @@ def main():
         team_forms[name] = form
         print(f"  ✓  {name}: {form}")
 
+    # ── Step 3.5: Fetch H2H records for each match pair ──────────────────────
+    print(f"\n🔗  Fetching H2H for {len(gw_events)} pairs ({FORM_SLEEP}s sleep between)…")
+    h2h_map: dict[str, str] = {}
+    for i, ev in enumerate(gw_events):
+        h_en = normalize_team(ev["home_team"])
+        a_en = normalize_team(ev["away_team"])
+        h_st = find_standing(h_en, standings_map) or {}
+        a_st = find_standing(a_en, standings_map) or {}
+        h_id = h_st.get("team_id")
+        a_id = a_st.get("team_id")
+        if h_id and a_id:
+            if i > 0:
+                time.sleep(FORM_SLEEP)
+            h2h = fetch_h2h(h_id, a_id, h_en, fd_key)
+            h2h_map[f"{h_en} vs {a_en}"] = h2h
+            print(f"  ✓  {h_en} vs {a_en}: {h2h or 'no H2H found'}")
+
     # ── Step 4: Build new match entries / refresh aiCtx on existing ──────────
     groq_client = Groq(api_key=groq_key)
     new_matches = []
@@ -822,11 +871,12 @@ def main():
         away_en   = normalize_team(away_raw)
         match_id  = make_match_id(home_en, away_en)
 
-        home_st = find_standing(home_en, standings_map) or {"pos": 0, "pts": 0, "team_id": 0}
-        away_st = find_standing(away_en, standings_map) or {"pos": 0, "pts": 0, "team_id": 0}
+        home_st   = find_standing(home_en, standings_map) or {"pos": 0, "pts": 0, "team_id": 0}
+        away_st   = find_standing(away_en, standings_map) or {"pos": 0, "pts": 0, "team_id": 0}
         home_form = team_forms.get(home_en, "N/A")
         away_form = team_forms.get(away_en, "N/A")
-        ai_ctx = build_ai_ctx(home_en, away_en, home_st, away_st, home_form, away_form)
+        h2h       = h2h_map.get(f"{home_en} vs {away_en}", "")
+        ai_ctx    = build_ai_ctx(home_en, away_en, home_st, away_st, home_form, away_form, h2h)
 
         if match_id in existing_ids:
             # Refresh aiCtx on the existing entry so generate_analysis picks it up
