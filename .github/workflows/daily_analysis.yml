@@ -2,7 +2,7 @@ name: Daily Update
 
 on:
   schedule:
-    - cron: "0 7 * * *"   # 07:00 UTC = 09:00 Sofia time
+    - cron: "0 5 * * *"   # 05:00 UTC = 07:00 Sofia time
   workflow_dispatch:       # manual trigger from GitHub UI
 
 jobs:
