@@ -367,6 +367,7 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 .sure-stake-row{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
 .sure-stake-input{background:var(--dark3);border:1px solid var(--border);border-radius:7px;padding:6px 10px;font-family:'DM Mono',monospace;font-size:13px;color:var(--text);outline:none;width:90px;transition:border-color .15s}
 .sure-stake-input:focus{border-color:rgba(0,232,122,.4)}
+.combo-betslip-row{}
 
 @media(max-width:920px){
   .combo-cards{grid-template-columns:1fr}
@@ -375,6 +376,40 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
   .layout{grid-template-columns:1fr}.sidebar{display:none}
   main{padding:18px 14px}.mc-top{grid-template-columns:1fr 86px 1fr}.pside{display:none}
   header{padding:0 14px}.odds-cols{grid-template-columns:1fr}.exp-inner{grid-template-columns:1fr}
+  .hero{flex-direction:column;align-items:flex-start;gap:16px}
+  .hero-stats{flex-wrap:wrap}
+  .perf-grid{grid-template-columns:repeat(2,1fr)}
+  .hright{gap:6px}
+  .hbadge-bg{display:none}
+}
+@media(max-width:600px){
+  header{padding:0 10px;height:auto;min-height:54px;flex-wrap:wrap;gap:6px;padding-top:8px;padding-bottom:8px}
+  .hright{flex-wrap:wrap;gap:5px}
+  .hbadge-live{display:none}
+  .hdate{display:none}
+  main{padding:12px 10px}
+  .hero{padding:16px;margin-bottom:18px}
+  .hero h1{font-size:clamp(28px,8vw,42px)}
+  .hero-stats{gap:8px}
+  .hst{padding:10px 12px;min-width:70px}
+  .hst-v{font-size:22px}
+  .bg-books-bar{gap:6px;margin-bottom:16px}
+  .mc-top{grid-template-columns:1fr 72px 1fr}
+  .perf-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .perf-card{padding:12px}
+  .combo-section{padding:16px}
+  .sure-combo-row{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .hero-stats{display:none}
+  .mc-top{grid-template-columns:1fr}
+  .mc-team{text-align:center}
+  .mc-score{margin:6px auto}
+  .perf-grid{grid-template-columns:1fr}
+  .sure-stake-row{flex-direction:column;align-items:flex-start}
+  .lang-toggle{gap:2px}
+  .lang-btn{padding:4px 8px;font-size:10px}
+  .combo-betslip-row{grid-template-columns:1fr!important}
 }
 </style>
 </head>
@@ -458,7 +493,7 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
     </div>
   </div>
   <div class="combo-cards" id="comboCards"></div>
-  <div style="display:grid;grid-template-columns:1fr 320px;gap:14px;align-items:start">
+  <div style="display:grid;grid-template-columns:1fr min(320px,100%);gap:14px;align-items:start" class="combo-betslip-row">
     <div class="custom-combo-builder">
       <div class="ccb-title" data-t="buildComboTitle">🔧 Изгради своя комбинация</div>
       <div class="ccb-picks" id="ccbPicks"></div>
