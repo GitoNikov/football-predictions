@@ -967,11 +967,26 @@ function toggleExp(id) {
   renderPicks();
 }
 
+// ─── GW DATE CLUSTER HELPER ───────────────────────────────────────────────────
+function getCurrentGWDates() {
+  const allPending = (MD.upcoming || []).filter(m => m.status === 'pending');
+  const uniqueDates = [...new Set(allPending.map(m => m.date).filter(Boolean))].sort();
+  if (!uniqueDates.length) return new Set();
+  const gwDateSet = new Set([uniqueDates[0]]);
+  for (let i = 1; i < uniqueDates.length; i++) {
+    const gap = (new Date(uniqueDates[i]+'T00:00:00Z') - new Date(uniqueDates[i-1]+'T00:00:00Z')) / 86400000;
+    if (gap >= 2) break;
+    gwDateSet.add(uniqueDates[i]);
+  }
+  return gwDateSet;
+}
+
 // ─── TOP PICK SIDEBAR ─────────────────────────────────────────────────────────
 function renderTopPick() {
   const box = document.getElementById('topPickBox');
   if (!box || !MD) return;
-  const upcoming = (MD.upcoming || []).filter(m => m.status === 'pending');
+  const gwDates = getCurrentGWDates();
+  const upcoming = (MD.upcoming || []).filter(m => m.status === 'pending' && gwDates.has(m.date));
   if (!upcoming.length) { box.innerHTML = ''; return; }
 
   const top = [...upcoming].sort((a, b) => b.pick.conf - a.pick.conf)[0];
@@ -1007,17 +1022,8 @@ function renderSystem() {
   const box = document.getElementById('combosBox');
   if (!box || !MD) return;
   const lang = currentLang;
-  const allPending = (MD.upcoming || []).filter(m => m.status === 'pending');
-
-  // Restrict to the current GW: walk sorted unique dates, stop at first gap ≥2 days
-  const uniqueDates = [...new Set(allPending.map(m => m.date).filter(Boolean))].sort();
-  const gwDateSet = new Set(uniqueDates.slice(0, 1));
-  for (let i = 1; i < uniqueDates.length; i++) {
-    const gap = (new Date(uniqueDates[i] + 'T00:00:00Z') - new Date(uniqueDates[i-1] + 'T00:00:00Z')) / 86400000;
-    if (gap >= 2) break;
-    gwDateSet.add(uniqueDates[i]);
-  }
-  const upcoming = allPending.filter(m => !m.date || gwDateSet.has(m.date));
+  const gwDateSet = getCurrentGWDates();
+  const upcoming = (MD.upcoming || []).filter(m => m.status === 'pending' && (!m.date || gwDateSet.has(m.date)));
 
   // Filter qualifying picks: 1.40 ≤ odd ≤ 2.50
   const qualifying = [...upcoming]
@@ -1075,8 +1081,9 @@ function renderBetBuilder() {
   if (!box || !MD) return;
   const bb = MD.betBuilder;
   if (!bb || !bb.markets || !bb.markets.length) { box.innerHTML = ''; return; }
-  const matchPending = (MD.upcoming || []).some(m => m.id === bb.matchId && m.status === 'pending');
-  if (!matchPending) { box.innerHTML = ''; return; }
+  const gwDates = getCurrentGWDates();
+  const bbMatch = (MD.upcoming || []).find(m => m.id === bb.matchId && m.status === 'pending');
+  if (!bbMatch || !gwDates.has(bbMatch.date)) { box.innerHTML = ''; return; }
 
   const lang = currentLang;
   const home = lang === 'bg' ? bb.home : bb.homeEn;
