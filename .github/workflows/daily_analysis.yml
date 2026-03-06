@@ -37,7 +37,8 @@ jobs:
       - name: Refresh live odds (William Hill)
         continue-on-error: true
         env:
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}   # the-odds-api.com (EPL)
+          OAIO_API_KEY: ${{ secrets.OAIO_API_KEY }}   # odds-api.io (UEFA + expansion)
         run: python fetch_odds.py
 
       - name: Commit and push updated data
