@@ -7,42 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "tot_pal",
-      "home": "Тотнъм",
-      "homeEn": "Tottenham",
-      "homeA": "TOT",
-      "away": "Кристъл Палас",
-      "awayEn": "Crystal Palace",
-      "awayA": "PAL",
-      "date": "2026-03-05",
-      "time": "22:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 58,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.85"
-      },
-      "odds_wh": {
-        "a": "2.9",
-        "h": "2.4",
-        "x": "3.1",
-        "o25": "1.85",
-        "btts": "1.67"
-      },
-      "prob": {
-        "h": 44,
-        "d": 31,
-        "a": 33
-      },
-      "aiCtx": "Tottenham are 16th in the Premier League (29 pts), scoring 1.36 and conceding 1.54 goals per game, form (last 6, scored first): W 2-0, D 2-2, L 0-2, L 1-2, L 1-4, L 1-2. Crystal Palace are 14th (35 pts), scoring 1.07 and conceding 1.21 goals per game, form (last 6, scored first): L 1-3, D 1-1, W 1-0, L 2-3, W 1-0, L 1-2. H2H last 1: Tottenham 1W-0D-0L, avg 1.0 goals/game.",
-      "ai": "Тотнъм заема 16то място в лигата с 29 точки и форма П-Р-З-З-З-З, докато Кристъл Палас е на 14то място с 35 точки и форма З-Р-П-З-П-З. Двубоят между домакините и гостите обещава да бъде интересен, тъй като формата на двата отбора показва, че те са способни да вкарат гола. Прогнозата е над 2.5 гола, като котировка 1.85 и залог с увереност 58%.",
-      "aiEn": "Tottenham are 16th in the Premier League with 29 points and form W-D-L-L-L-L, while Crystal Palace are 14th with 35 points and form L-D-W-L-W-L. The pick of over 2.5 goals makes sense given the current form of both teams, with their league positions and recent results suggesting a potentially open game. The recommended pick is over 2.5 goals at odds of 1.85 with a confidence level of 58%.",
-      "newsCtx": "Welcome to the official Tottenham Hotspur website. Explore the site, discover the latest Spurs news & matches and check out our … | Accessibility English Subscribe Search site Sign in / Register Tottenham Hotspur Stadium | Tottenham Hotspur mens team fixture details for the 2025/26 season. including Information from all competitions. Dates …"
-    },
-    {
       "id": "8bcd511f",
       "home": "Галатасарай",
       "homeEn": "Galatasaray",
@@ -61,9 +25,15 @@
         "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "?"
+        "odd": "4.0"
       },
-      "odds_wh": {},
+      "odds_wh": {
+        "h": "4.0",
+        "x": "3.8",
+        "a": "1.75",
+        "o25": "1.55",
+        "btts": "1.55"
+      },
       "ai": "Двубойът между Галатасарай и Ливърпул е между две формиращи се отбори, домакините имат форма от ПРЗ, а гостите - от ППП. Формата на Галатасарай показва, че те са в добра форма, което дава основание да се спечели този мач. Прогнозата е за Галатасарай @ ? с котировка ? и увереност 0%.",
       "aiEn": "Galatasaray and Liverpool are currently in the Premier League with Galatasaray having a form of WDL and Liverpool having a form of WWD. The pick makes sense given Galatasaray's home form and Liverpool's away form, which suggests a closely contested match. The pick is Galatasaray @ ? with odds ? and a confidence of 0%.",
       "aiCtxHash": "d41d8cd9"
@@ -87,9 +57,15 @@
         "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "?"
+        "odd": "4.4"
       },
-      "odds_wh": {},
+      "odds_wh": {
+        "h": "4.4",
+        "x": "4.4",
+        "a": "1.62",
+        "o25": "1.44",
+        "btts": "1.5"
+      },
       "ai": "Двубойът между Аталанта и Байерн е много оспорван, като домакините имат добра форма от ППП, а гостите се представят със ЗРР. Формата на Аталанта говори за тяхното добро състояние, което дава основания да се смята, че домакините ще излезнат победители. Прогнозата е за победа на Аталанта при котировка ? и залог с увереност 0%.",
       "aiEn": "Atalanta BC and Bayern Munich are currently facing off, with Atalanta having a form of W and Bayern Munich having a form of L, and both teams having the same number of points. Given the form of both teams, it makes sense that the home team would have an advantage, which is reflected in their higher probability of winning. The pick is for Atalanta BC to win at odds of ? with a confidence of 0%.",
       "aiCtxHash": "d41d8cd9"
@@ -113,9 +89,15 @@
         "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "?"
+        "odd": "1.57"
       },
-      "odds_wh": {},
+      "odds_wh": {
+        "h": "1.57",
+        "x": "4.2",
+        "a": "5.0",
+        "o25": "1.7",
+        "btts": "1.7"
+      },
       "ai": "Двубойът между Atlético Madrid и Тотнъм е интересен, като домакините имат добра форма от ППП, а гостите се борят с форма от ППП. Формата на домакините говори за тяхна преднина, но котировката е равна и предлагана е от William Hill. Прогнозата е за равенство, но залогът е неуверен с котировка ? и увереност 0%.",
       "aiEn": "Atlético Madrid and Tottenham Hotspur are set to face off, with the home team having a strong form of WWD and the away team struggling with a form of DDL. The home team's form suggests they have an advantage, but the probabilities are evenly split, with a home win at 50%, a draw at 25%, and an away win at 25%. The pick is a draw @ ? with William Hill, but the confidence is 0%.",
       "aiCtxHash": "d41d8cd9"
@@ -139,9 +121,15 @@
         "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "?"
+        "odd": "2.8"
       },
-      "odds_wh": {},
+      "odds_wh": {
+        "h": "2.8",
+        "x": "3.75",
+        "a": "2.25",
+        "o25": "1.44",
+        "btts": "1.44"
+      },
       "ai": "Двубойът между Нюкасъл и Барселона е от големия интерес, като домакините имат добра форма, а гостите търсят изравнение. Формата на Нюкасъл показва, че те са в добра серия, което дава основание да се смята, че ще спечелят мача. Прогнозата е за победа на Нюкасъл с котировка ? и увереност 0%.",
       "aiEn": "Newcastle United and Barcelona face off in a highly anticipated match, with Newcastle having a strong form and Barcelona seeking to level the playing field. Newcastle's form suggests they are on a good run, which provides a basis to believe they will win the match. The pick is for Newcastle to win at odds ? with a confidence level of 0%.",
       "aiCtxHash": "d41d8cd9"
@@ -178,7 +166,10 @@
         "d": 25,
         "a": 64
       },
-      "aiCtx": "Bayer Leverkusen vs Arsenal in the Champions League."
+      "aiCtx": "Bayer Leverkusen vs Arsenal in the Champions League.",
+      "ai": "Двубойът между Леверкузен и Арсенал обещава да бъде интересен, като домакините вкарват 1.5 гола на мач, а гостите - 2.2 гола, а последните им резултати показват форма П 2-1, Р 1-1, З 0-2 и П 3-0, Р 2-2, З 1-3 съответно. Леверкузен и Арсенал имат склонност към високи резултати, като вкарват много гола в последните си мачове, което говори в полза на над 2.5 гола в този двубой. Прогнозата е над 2.5 гола с котировка 1.75, която представлява добра възможност за залог с увереност 68%.",
+      "aiEn": "Bayer Leverkusen and Arsenal are set to face off, with the home team averaging 1.5 goals per game and the away team averaging 2.2 goals per game, and their recent form showing W 2-0, D 1-1, L 0-2 and W 3-0, D 2-2, L 1-3 respectively. The case for Over 2.5 goals is strong, given both teams' high-scoring recent form results and their overall goals per game averages. The pick is Over 2.5 Goals at 1.75 with William Hill, with a confidence level of 68%.",
+      "aiCtxHash": "2ed8b18e"
     },
     {
       "id": "9116f649",
@@ -212,7 +203,10 @@
         "d": 28,
         "a": 40
       },
-      "aiCtx": "Bodø/Glimt vs Sporting Lisbon in the Champions League."
+      "aiCtx": "Bodø/Glimt vs Sporting Lisbon in the Champions League.",
+      "ai": "Двубойът между Bodø/Glimt и Sporting Lisbon обещава да бъде интересен, като домакините вкарват 2 гола на мач, а гостите - 2.5 гола. Двете отбора имат форма с много голове, което подсказва, че мачът ще бъде с над 2.5 гола, тъй като и двата отбора допускат около 1.5 гола на мач. Прогнозата ми е над 2.5 гола с котировка 1.6 и сигурност 70%.",
+      "aiEn": "Both Bodø/Glimt and Sporting Lisbon are coming into this match with recent form of W 2-0 and L 1-2 respectively, averaging 2 and 2.5 goals per game. The case for Over 2.5 goals is strong given both teams' high-scoring recent form results and their goals per game averages, which suggest an open and attacking game. My pick is Over 2.5 Goals at exactly 1.6 with William Hill, with a confidence level of 70%.",
+      "aiCtxHash": "a79a0e46"
     },
     {
       "id": "9effb0e7",
@@ -246,7 +240,10 @@
         "d": 26,
         "a": 25
       },
-      "aiCtx": "Paris Saint Germain vs Chelsea in the Champions League."
+      "aiCtx": "Paris Saint Germain vs Chelsea in the Champions League.",
+      "ai": "Двубойът между ПСЖ и Челси в Шампионската лига е особено интересен, като домакините вкарват 2 гола на мач, а гостите допускат 1.5 гола. ПСЖ имат добра форма и позиция, което ги прави фаворити в този двубой, тъй като домакините предлагат по-добра игра и голова сила. Прогнозата ми е ПСЖ да спечели този мач при котировка 1.8 и залог с увереност 58%.",
+      "aiEn": "Both teams are coming into this Champions League match with varying degrees of success, with Paris Saint Germain having a strong league position and Chelsea looking to catch up, and recent form including scores of W 2-0 and D 1-1 for Paris Saint Germain and W 1-0 and L 2-1 for Chelsea. Paris Saint Germain have the home advantage, with a higher scoring strength and better recent form, which gives them an edge in this match. My pick is Paris Saint Germain to win at odds of 1.8 with William Hill, with a confidence level of 58%.",
+      "aiCtxHash": "a5a02739"
     },
     {
       "id": "d507893e",
@@ -280,7 +277,11 @@
         "d": 29,
         "a": 45
       },
-      "aiCtx": "Real Madrid vs Manchester City in the Champions League."
+      "aiCtx": "Real Madrid vs Manchester City in the Champions League.",
+      "newsCtx": "The #1 site real estate professionals trust* Buy Rent Sell Pre-approval Just sold Home value | View homes for sale near you. See pricing and listing details of nearby real estate for sale. | Find real estate and homes for sale today. Use the most comprehensive source of MLS property listings on the ",
+      "ai": "Двубойът между Реал Мадрид и Ман Сити е много оспорван, като домакините вкарват 2 гола на мач, а гостите - 2.5 гола. Реал Мадрид и Ман Сити имат добра форма, вкарват много гола и допускат малко, което говори за над 2.5 гола в този мач. Прогнозата е за над 2.5 гола, с котировка 1.57 и залог 70%.",
+      "aiEn": "Both Real Madrid and Manchester City are in good form, with recent results showing high-scoring matches, and their goals per game averages are also impressive. The Over 2.5 case is strong given both teams' recent high-scoring form results and their overall goals per game averages. The pick is Over 2.5 Goals at 1.57 William Hill, with a confidence level of 70%.",
+      "aiCtxHash": "89ce5442"
     }
   ],
   "betBuilder": {
@@ -302,10 +303,30 @@
       }
     ],
     "totalOdd": "3.45",
-    "reasoning": "",
-    "reasoningEn": ""
+    "reasoning": "Тази комбинация от пазари изглежда привлекателна, тъй като Реал Мадрид и Ман Сити са две отбори с висока атакуваща форма, което увеличава вероятността за Над 2.5 гола, а котировката за Победа гост дава допълнителен стимул за залог.",
+    "reasoningEn": "This combination of markets is statistically sound as it leverages the high-scoring nature of both teams, increasing the likelihood of over 2.5 goals, while the away win adds an attractive layer of complexity to the bet."
   },
   "results": [
+    {
+      "id": "tot_pal",
+      "home": "Тотнъм",
+      "homeEn": "Tottenham",
+      "away": "Кристъл Палас",
+      "awayEn": "Crystal Palace",
+      "date": "2026-03-05",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 58,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
+      },
+      "result": "W",
+      "score": "1-3"
+    },
     {
       "id": "new_mun",
       "home": "Нюкасъл",
@@ -748,8 +769,8 @@
     }
   ],
   "record": {
-    "correct": 14,
-    "total": 23,
+    "correct": 15,
+    "total": 24,
     "period": "ЛЕ 26.02.2026"
   }
 }
