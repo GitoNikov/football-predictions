@@ -86,6 +86,7 @@ main{position:relative;z-index:1;max-width:1300px;margin:0 auto;padding:28px 32p
 .mc-st{display:inline-block;margin-top:3px;font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:2px 7px;border-radius:4px}
 .st-today{background:rgba(0,232,122,.1);color:var(--green)}
 .st-soon{background:rgba(59,139,255,.1);color:var(--blue)}
+.st-liga{background:rgba(255,180,0,.1);color:#f0a500}
 .st-fin{background:rgba(90,105,120,.12);color:var(--muted)}
 
 /* PRED SIDE */
@@ -564,7 +565,28 @@ let betslip = [];
 let expanded = {};
 let archiveIndex = [];
 let selectedGW = null;  // null = current (MD), object = historical GW data
-let picksFilter = 'all'; // 'all' | 'epl' | 'uefa'
+let picksFilter = 'all'; // 'all' | competition name string e.g. 'Premier League', 'La Liga'
+
+const COMP_BADGE = {
+  'Champions League':    'CL',
+  'Europa League':       'EL',
+  'Conference League':   'ECL',
+  'Premier League':      'EPL',
+  'La Liga':             'LaLiga',
+  'Bundesliga':          'Bund.',
+  'Ligue 1':             'L1',
+  'Serie A':             'SA',
+  'Eredivisie':          'Ere.',
+  'Primeira Liga':       'PL',
+  'Scottish Premiership':'SPL',
+  'Süper Lig':           'SL',
+};
+const COMP_CLASS = {
+  'Champions League':  'st-soon',
+  'Europa League':     'st-soon',
+  'Conference League': 'st-soon',
+  'Premier League':    'st-today',
+};
 let todayOnly  = false;
 let sortByConf = false;
 
@@ -778,25 +800,36 @@ function renderPicks() {
   if (!container || !MD) return;
 
   const allUpcoming = (MD.upcoming || []).filter(m => m.status === 'pending');
-  const hasUefa = allUpcoming.some(m => m.competition);
+  // Normalise: EPL matches have no competition field
+  const compOf = m => m.competition || 'Premier League';
+  const uniqComps = [...new Set(allUpcoming.map(compOf))];
+  // Reset filter if the selected competition is no longer present
+  if (picksFilter !== 'all' && !uniqComps.includes(picksFilter)) picksFilter = 'all';
+
   const filterBar = document.getElementById('compFilterBar');
   if (filterBar) {
-    if (hasUefa) {
+    if (uniqComps.length > 1) {
       const lang = currentLang;
       const chip = (f, label) => {
         const active = picksFilter === f;
         return `<button onclick="setPicksFilter('${f}')" style="padding:5px 14px;border-radius:7px;border:1px solid ${active?'var(--green)':'var(--border)'};background:${active?'rgba(0,232,122,.12)':'var(--card)'};color:${active?'var(--green)':'var(--muted)'};font-size:11px;font-weight:700;letter-spacing:.5px;cursor:pointer;font-family:inherit;transition:all .15s">${label}</button>`;
       };
+      // Order: All first, then domestic leagues, then UEFA
+      const UEFA = ['Champions League','Europa League','Conference League'];
+      const sorted = [
+        ...uniqComps.filter(c => !UEFA.includes(c)).sort(),
+        ...uniqComps.filter(c =>  UEFA.includes(c)).sort(),
+      ];
+      filterBar.innerHTML = chip('all', lang==='bg'?'Всички':'All')
+        + sorted.map(c => chip(c, COMP_BADGE[c] || c)).join('');
       filterBar.style.display = 'flex';
-      filterBar.innerHTML = chip('all', lang==='bg'?'Всички':'All') + chip('epl','EPL') + chip('uefa','UEFA');
     } else {
       filterBar.style.display = 'none';
     }
   }
 
   let upcoming = allUpcoming;
-  if (picksFilter === 'epl')  upcoming = allUpcoming.filter(m => !m.competition);
-  if (picksFilter === 'uefa') upcoming = allUpcoming.filter(m =>  m.competition);
+  if (picksFilter !== 'all') upcoming = allUpcoming.filter(m => compOf(m) === picksFilter);
 
   const today    = new Date().toISOString().slice(0, 10);
   const tomorrow = new Date(Date.now() + 86400000).toISOString().slice(0, 10);
@@ -891,7 +924,7 @@ function buildMatchCard(m) {
     <div class="mctr">
       <div class="mc-time">${m.time}</div>
       <div class="mc-ctx">${m.date.slice(5).replace('-','.')}</div>
-      <span class="mc-st ${ {'Champions League':'st-soon','Europa League':'st-soon','Conference League':'st-soon'}[m.competition] || 'st-today' }">${ {'Champions League':'CL','Europa League':'EL','Conference League':'ECL'}[m.competition] || 'WH' }</span>
+      <span class="mc-st ${COMP_CLASS[m.competition] || (m.competition ? 'st-liga' : 'st-today')}">${COMP_BADGE[m.competition || 'Premier League'] || m.competition || 'EPL'}</span>
     </div>
     <div class="team away">
       <div class="tname">${away}</div>
