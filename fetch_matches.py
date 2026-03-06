@@ -292,14 +292,22 @@ def fetch_epl_events(api_key: str) -> list:
     return resp.json()
 
 
-def fetch_uefa_fixtures(api_key: str, existing_ids: set, groq_client) -> list:
+def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> list:
     """
     Fetch upcoming CL/EL/ECL fixtures from Odds API /odds (includes WH odds).
     Generates Groq picks when odds are available, so cards are fully populated.
+    Also re-picks existing UEFA matches that previously had conf=0 (no odds at time of creation).
     """
     new_fixtures = []
     now        = datetime.now(timezone.utc)
     window_end = now + timedelta(days=7)
+
+    existing_ids   = {m["id"] for m in existing_upcoming}
+    # Existing pending UEFA matches with no pick yet — eligible for re-picking
+    conf0_map = {
+        m["id"]: m for m in existing_upcoming
+        if m.get("status") == "pending" and m.get("pick", {}).get("conf", 0) == 0
+    }
 
     sel_to_key = {
         "home": "h", "away": "a", "draw": "x",
@@ -341,7 +349,9 @@ def fetch_uefa_fixtures(api_key: str, existing_ids: set, groq_client) -> list:
                 continue
 
             match_id = ev["id"][:8]
-            if match_id in existing_ids:
+
+            # Skip matches that already have a proper pick
+            if match_id in existing_ids and match_id not in conf0_map:
                 continue
 
             home_en = ev["home_team"]
@@ -384,6 +394,18 @@ def fetch_uefa_fixtures(api_key: str, existing_ids: set, groq_client) -> list:
                 pick = {"bet": "—", "betEn": "—", "conf": 0, "market": "h2h", "selection": "home", "odd": "?"}
                 prob = {"h": 50, "d": 25, "a": 25}
 
+            # ── Re-pick existing conf=0 match in-place ────────────────────────
+            if match_id in conf0_map and odds_wh:
+                m = conf0_map[match_id]
+                m["pick"]    = pick
+                m["prob"]    = prob
+                m["odds_wh"] = odds_wh
+                m.pop("aiCtxHash", None)   # force AI regeneration
+                print(f"  ↻  Re-picked existing: {home_en} vs {away_en} (conf {pick['conf']}%)")
+                added += 1
+                continue
+
+            # ── New fixture ───────────────────────────────────────────────────
             new_fixtures.append({
                 "id":            match_id,
                 "home":          home_bg,
@@ -963,10 +985,10 @@ def main():
         new_matches.append(match_entry)
         print("✓")
 
-    # ── Step 5: UEFA fixtures (fixtures only, no picks or analysis) ──────────
+    # ── Step 5: UEFA fixtures — new + re-pick existing conf=0 ────────────────
     print("\n🏆  Fetching UEFA fixtures…")
-    all_existing_ids = existing_ids | {m["id"] for m in new_matches}
-    uefa_fixtures = fetch_uefa_fixtures(odds_key, all_existing_ids, groq_client)
+    all_existing_upcoming = existing.get("upcoming", []) + new_matches
+    uefa_fixtures = fetch_uefa_fixtures(odds_key, all_existing_upcoming, groq_client)
     if uefa_fixtures:
         print(f"  → {len(uefa_fixtures)} new UEFA fixtures added (picks needed manually)")
     new_matches.extend(uefa_fixtures)
