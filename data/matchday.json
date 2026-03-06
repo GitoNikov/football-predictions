@@ -31,15 +31,17 @@
         "h": "4.0",
         "a": "1.75",
         "x": "3.8",
-        "o25": "1.55"
+        "o25": "1.55",
+        "btts": "1.55"
       },
-      "ai": "Двубойът между Галатасарай и Ливърпул е между две формиращи се отбори, домакините имат форма от ПРЗ, а гостите - от ППП. Формата на Галатасарай показва, че те са в добра форма, което дава основание да се спечели този мач. Прогнозата е за Галатасарай @ ? с котировка ? и увереност 0%.",
-      "aiEn": "Galatasaray and Liverpool are currently in the Premier League with Galatasaray having a form of WDL and Liverpool having a form of WWD. The pick makes sense given Galatasaray's home form and Liverpool's away form, which suggests a closely contested match. The pick is Galatasaray @ ? with odds ? and a confidence of 0%.",
+      "ai": "Двубойът между Галатасарай и Ливърпул е много интересен, като домакините вкарват 1.5 гола на мач, а гостите - 2.2 гола, и двете отбори имат форма П 2-1, Р 1-1, З 1-2. Ливърпул вкарват много гола в последните си мачове, а Галатасарай допускат около 1.8 гола на мач, което говори в полза на прогнозата над 2.5 гола. Прогнозата ми е над 2.5 гола при котировка 1.55, на която бих казал, че имам доверие 70%.",
+      "aiEn": "Galatasaray and Liverpool are set to face off, with the home team averaging 1.5 goals per game and the visitors averaging 2.2 goals per game, and both teams having recent form of W 2-0, D 1-1, L 1-2. The Over 2.5 case is strong given both teams' high-scoring recent form results and their goals per game averages, with Liverpool scoring frequently and Galatasaray conceding around 1.8 goals per game. My pick is Over 2.5 Goals at exactly 1.55 with William Hill, a bet I have 70% confidence in.",
       "prob": {
         "h": 25,
         "d": 26,
         "a": 57
-      }
+      },
+      "aiCtxHash": "d41d8cd9"
     },
     {
       "id": "2a50d2be",
@@ -66,15 +68,18 @@
         "h": "4.4",
         "a": "1.62",
         "x": "4.4",
-        "o25": "1.44"
+        "o25": "1.44",
+        "btts": "1.5"
       },
-      "ai": "Двубойът между Аталанта и Байерн е много оспорван, като домакините имат добра форма от ППП, а гостите се представят със ЗРР. Формата на Аталанта говори за тяхното добро състояние, което дава основания да се смята, че домакините ще излезнат победители. Прогнозата е за победа на Аталанта при котировка ? и залог с увереност 0%.",
-      "aiEn": "Atalanta BC and Bayern Munich are currently facing off, with Atalanta having a form of W and Bayern Munich having a form of L, and both teams having the same number of points. Given the form of both teams, it makes sense that the home team would have an advantage, which is reflected in their higher probability of winning. The pick is for Atalanta BC to win at odds of ? with a confidence of 0%.",
+      "ai": "Двубойът между Аталанта и Байерн е много интересен, като домакините вкарват 1.5 гола на мач, а гостите - 2.2 гола, и имат добра форма в последните срещи. Формата на двата отбора показва, че те често вкарват много гола, което ни кара да сме склонни към прогноза над 2.5 гола, тъй като Аталанта допускат 1.2 гола, а Байерн вкарват средно 2.5 гола на мач. Нашата прогноза е над 2.5 гола при котировка 1.44, с което изразяваме залог с увереност 70%.",
+      "aiEn": "Atalanta BC and Bayern Munich are set to face off, with the home team having scored an average of 1.5 goals per game, while the away team has averaged 2.2 goals per game, and both teams have shown strong recent form with results like W 2-0 and L 3-2. The case for Over 2.5 goals is strong, given both teams' high-scoring recent form results and their average goals per game, with Atalanta conceding an average of 1.2 goals and Bayern Munich scoring an average of 2.5 goals per game. Our pick is Over 2.5 Goals at exactly 1.44 odds, with a confidence level of 70%.",
       "prob": {
         "h": 23,
         "d": 23,
         "a": 62
-      }
+      },
+      "newsCtx": "Jul 7, 2023 · Atalanta was a female hero renowned for her speed and strength. She distinguished herself in many heroic exploits, including the Calydonian boar hunt. | Mar 22, 2023 · Centaurs were hybrid creatures, human from the waist up but with the body and legs of a horse. They lived an untamed a",
+      "aiCtxHash": "d41d8cd9"
     },
     {
       "id": "5e256c6e",
@@ -101,15 +106,17 @@
         "h": "1.57",
         "a": "5.0",
         "x": "4.2",
-        "o25": "1.7"
+        "o25": "1.7",
+        "btts": "1.7"
       },
-      "ai": "Двубойът между Atlético Madrid и Тотнъм е интересен, като домакините имат добра форма от ППП, а гостите се борят с форма от ППП. Формата на домакините говори за тяхна преднина, но котировката е равна и предлагана е от William Hill. Прогнозата е за равенство, но залогът е неуверен с котировка ? и увереност 0%.",
-      "aiEn": "Atlético Madrid and Tottenham Hotspur are set to face off, with the home team having a strong form of WWD and the away team struggling with a form of DDL. The home team's form suggests they have an advantage, but the probabilities are evenly split, with a home win at 50%, a draw at 25%, and an away win at 25%. The pick is a draw @ ? with William Hill, but the confidence is 0%.",
+      "ai": "Двубойът между Атлетико Мадрид и Тотнъм е много интересен, като домакините вкарват 2 гола на мач, а гостите допускат 1.5 гола. Атлетико Мадрид е в добра форма, П 3-1, Р 1-1, З 0-1, което им дава предимство преди този мач, тъй като домакините имат по-силна атака и солидна защита. Прогнозата ми е победа за Атлетико Мадрид при котировка 1.57, с увереност 65%, което прави този залог много привлекателен.",
+      "aiEn": "Atlético Madrid and Tottenham Hotspur are set to clash, with the home team having a strong league position, accumulating points, and averaging 2 goals per game, while Tottenham has a recent form of W 2-0, D 1-1, L 0-1. The home team's position, scoring strength, and form advantage, including their recent wins, make a strong case for a home win. My pick is an Atlético Madrid win at 1.57 with William Hill, with a confidence level of 65%.",
       "prob": {
         "h": 64,
         "d": 24,
         "a": 20
-      }
+      },
+      "aiCtxHash": "d41d8cd9"
     },
     {
       "id": "1129cf84",
@@ -136,15 +143,17 @@
         "a": "2.25",
         "h": "2.8",
         "x": "3.75",
-        "o25": "1.44"
+        "o25": "1.44",
+        "btts": "1.44"
       },
-      "ai": "Двубойът между Нюкасъл и Барселона е от големия интерес, като домакините имат добра форма, а гостите търсят изравнение. Формата на Нюкасъл показва, че те са в добра серия, което дава основание да се смята, че ще спечелят мача. Прогнозата е за победа на Нюкасъл с котировка ? и увереност 0%.",
-      "aiEn": "Newcastle United and Barcelona face off in a highly anticipated match, with Newcastle having a strong form and Barcelona seeking to level the playing field. Newcastle's form suggests they are on a good run, which provides a basis to believe they will win the match. The pick is for Newcastle to win at odds ? with a confidence level of 0%.",
+      "ai": "Двубойът между Нюкасъл и Барселона е много оспорван, като домакините вкарват 1.5 гола на мач, а гостите - 2.2 гола. Формата на двата отбора сочи, че могат да вкарат над 2.5 гола, тъй като Нюкасъл допуска 1.8 гола, а Барселона вкарва много гола в скорошните си мачове. Прогнозата ни е над 2.5 гола при котировка 1.44, като залогът е с увереност 70%.",
+      "aiEn": "Newcastle United and Barcelona are set to clash, with the home team averaging 1.5 goals per game and the away team averaging 2.2 goals per game, and recent form showing W 2-0 and L 1-3 for Newcastle, and W 3-1 and D 2-2 for Barcelona. The Over 2.5 case is strong given both teams' goals per game averages and high-scoring recent form results, including Newcastle's loss with 4 goals and Barcelona's win with 4 goals. The pick is Over 2.5 Goals at 1.44 with William Hill, with a confidence level of 70%.",
       "prob": {
         "h": 36,
         "d": 27,
         "a": 44
-      }
+      },
+      "aiCtxHash": "d41d8cd9"
     },
     {
       "id": "963a779e",
@@ -291,9 +300,9 @@
       },
       "aiCtx": "Real Madrid vs Manchester City in the Champions League.",
       "newsCtx": "👻 SteamRiP Get free pre-installed Steam games for PC with a direct download. | Dec 5, 2023 · Real Debrid is an unrestricted multi hoster that allows you to stream and download videos instantly at the best of your speeds. The multi hoster does this by providing high-quality links hosted on … | r/1337",
-      "ai": "Двубойът между Реал Мадрид и Ман Сити е много оспорван, като домакините имат форма от П 2-0, а гостите показват добра форма с високи голове. Реал Мадрид вкарват 2 гола на мач, докато Ман Сити допускат 1.5 гола, което говори за над 2.5 гола в този мач, тъй като и двата отбора имат скорошни резултати с много голове. Прогнозата е над 2.5 гола при котировка 1.57, която е залог с доверие 70%.",
-      "aiEn": "Both Real Madrid and Manchester City have been performing well, with recent form of W 2-0, showcasing their goal-scoring ability. The case for Over 2.5 goals is strong, given both teams' high goals per game averages and recent high-scoring results. The pick is Over 2.5 Goals at exactly 1.57 odds, with a confidence level of 70%.",
-      "aiCtxHash": "9e9733f2"
+      "ai": "Двубойът между Реал Мадрид и Ман Сити е много оспорван, като домакините вкарват 2 гола на мач, а гостите допускат 1.5 гола. Формата на двата отбора сочи, че над 2.5 гола е реална възможност, тъй като Реал Мадрид и Ман Сити имат скорошни резултати с много гола. Прогнозата ми е над 2.5 гола при котировка 1.57, с увереност 70%.",
+      "aiEn": "Both Real Madrid and Manchester City are coming into this match with notable recent form, with Real Madrid scoring an average of 2 goals per game and Manchester City conceding an average of 1.5 goals per game. The case for Over 2.5 goals is strengthened by both teams' high-scoring recent results, showcasing their ability to find the net consistently. My pick is Over 2.5 Goals at exactly 1.57 odds, with a confidence level of 70%.",
+      "aiCtxHash": "23530eae"
     },
     {
       "id": "bur_bou",
@@ -326,8 +335,9 @@
         "a": 54
       },
       "aiCtx": "Burnley are 19th in the Premier League (19 pts), scoring 1.1 and conceding 2.0 goals per game, form (last 6, scored first): L 0-3, L 0-2, W 3-2, D 1-1, L 3-4, L 0-2. Bournemouth are 9th (40 pts), scoring 1.52 and conceding 1.59 goals per game, form (last 6, scored first): W 2-0, D 1-1, W 2-1, D 0-0, D 1-1, D 0-0. H2H last 1: Burnley 0W-1D-0L, avg 2.0 goals/game.",
-      "ai": "Бърнли заемат 19-то място в лигата с 19 точки, вкарват 1.1 гола и допускат 2.0 гола на мач, а формата им е З 0-3, З 0-2, П 3-2, Р 1-1, З 3-4, З 0-2, докато Борнемут е 9-ти с 40 точки, вкарват 1.52 гола и допускат 1.59 гола, а формата им е П 2-0, Р 1-1, П 2-1, Р 0-0, Р 1-1, Р 0-0. Борнемут има по-висока класа и предимство в класирането пред Бърнли, което го прави фаворит в двубоя, тъй като формата на гостите е по-стабилна и солидна в сравнение с домакините. Прогнозата е победа за Борнемут при котировка 1.85, като залогът е с увереност 58%.",
-      "aiEn": "Burnley are 19th in the league with 19 points, scoring 1.1 and conceding 2.0 goals per game, with a recent form of L 0-3, L 0-2, W 3-2, D 1-1, L 3-4, L 0-2, while Bournemouth are 9th with 40 points, scoring 1.52 and conceding 1.59 goals per game, with a form of W 2-0, D 1-1, W 2-1, D 0-0, D 1-1, D 0-0. Bournemouth's superior quality and league position make a strong case for an away win, given their more stable and solid form compared to Burnley's weaknesses. The pick is a Bournemouth win at odds of 1.85 with a confidence level of 58%."
+      "ai": "Бърнли заемат 19-то място в класирането с 19 точки, вкарват 1.1 гола и допускат 2.0 гола на мач, а формата им е З 0-3, З 0-2, П 3-2, Р 1-1, З 3-4, З 0-2, докато Борнемут е 9-ти с 40 точки, вкарват 1.52 гола и допускат 1.59 гола, с форма П 2-0, Р 1-1, П 2-1, Р 0-0, Р 1-1, Р 0-0. Борнемут има по-висока класа и е в по-добра форма, което го прави фаворит в двубоя, тъй като домакините Бърнли показват слаба форма и допускат много гола. Прогнозата ми е победа за Борнемут при котировка 1.85, с което аз съм на 58% сигурен в този залог.",
+      "aiEn": "Burnley are 19th in the Premier League with 19 points, scoring 1.1 and conceding 2.0 goals per game, with a recent form of L 0-3, L 0-2, W 3-2, D 1-1, L 3-4, L 0-2, while Bournemouth are 9th with 40 points, scoring 1.52 and conceding 1.59 goals per game, with a form of W 2-0, D 1-1, W 2-1, D 0-0, D 1-1, D 0-0. Bournemouth's superior quality, league position, and recent form make a strong case for an away win, especially given Burnley's weaknesses and poor form. My pick is a Bournemouth win at 1.85 with William Hill, with a confidence level of 58%.",
+      "aiCtxHash": "35d1fa4c"
     },
     {
       "id": "sun_bri",
@@ -359,7 +369,8 @@
         "d": 30,
         "a": 47
       },
-      "aiCtx": "Sunderland are 11th in the Premier League (40 pts), scoring 1.03 and conceding 1.17 goals per game, form (last 6, scored first): W 3-0, L 0-3, L 0-1, L 1-3, D 1-1, W 1-0. Brighton are 14th (37 pts), scoring 1.31 and conceding 1.24 goals per game, form (last 6, scored first): D 1-1, L 0-1, L 0-1, W 2-0, W 2-1, L 0-1. H2H last 1: Sunderland 0W-1D-0L, avg 0.0 goals/game."
+      "aiCtx": "Sunderland are 11th in the Premier League (40 pts), scoring 1.03 and conceding 1.17 goals per game, form (last 6, scored first): W 3-0, L 0-3, L 0-1, L 1-3, D 1-1, W 1-0. Brighton are 14th (37 pts), scoring 1.31 and conceding 1.24 goals per game, form (last 6, scored first): D 1-1, L 0-1, L 0-1, W 2-0, W 2-1, L 0-1. H2H last 1: Sunderland 0W-1D-0L, avg 0.0 goals/game.",
+      "newsCtx": "Hear from us about the latest news, offers and much more. By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our … | 3 days ago · View Sunderland scores, fixtures and results for matches played in all com"
     },
     {
       "id": "ars_eve",
@@ -392,8 +403,9 @@
         "a": 10
       },
       "aiCtx": "Arsenal are 1st in the Premier League (67 pts), scoring 1.97 and conceding 0.73 goals per game, form (last 6, scored first): W 3-0, D 1-1, D 2-2, W 4-1, W 2-1, W 1-0. Everton are 8th (43 pts), scoring 1.17 and conceding 1.14 goals per game, form (last 6, scored first): D 1-1, W 2-1, L 1-2, L 0-1, W 3-2, W 2-0. H2H last 1: Arsenal 1W-0D-0L, avg 1.0 goals/game.",
-      "ai": "Арсенал е на първо място във Висшата лига с 67 точки, вкарват 1.97 гола и допускат 0.73 гола на мач, а формата им е П 3-0, Р 1-1, Р 2-2, П 4-1, П 2-1, П 1-0, докато Евъртън е на осмо място с 43 точки, вкарват 1.17 гола и допускат 1.14 гола, а формата им е Р 1-1, П 2-1, З 1-2, З 0-1, П 3-2, П 2-0. Домакините имат предимство в формата и голова сила, което ги прави фаворити в двубоя. Прогнозата е Арсенал да спечели при котировка 1.3, с увереност 70%.",
-      "aiEn": "Arsenal are 1st in the Premier League with 67 points, scoring 1.97 and conceding 0.73 goals per game, with a recent form of W 3-0, D 1-1, D 2-2, W 4-1, W 2-1, W 1-0, while Everton are 8th with 43 points, scoring 1.17 and conceding 1.14 goals per game, with a recent form of D 1-1, W 2-1, L 1-2, L 0-1, W 3-2, W 2-0. The home team's position, scoring strength, and form advantage make a strong case for a home win. The pick is Arsenal to win at 1.3 William Hill, with a confidence level of 70%."
+      "ai": "Двубойът между Арсенал и Евъртън е между първия и осмия отбор в класирането, като Арсенал вкарват 1.97 гола на мач и допускат 0.73 гола, а формата им е П 3-0, Р 1-1, Р 2-2, П 4-1, П 2-1, П 1-0, докато Евъртън вкарват 1.17 гола на мач и допускат 1.14 гола, с форма Р 1-1, П 2-1, З 1-2, З 0-1, П 3-2, П 2-0. Домакините имат предимство в формата и голова сила, което ги прави фаворити в този двубой, тъй като заемат първо място в класирането. Прогнозата ми е Арсенал да спечели, на котировка 1.3, с увереност 70%.",
+      "aiEn": "Arsenal, in 1st position with 67 points, scoring 1.97 and conceding 0.73 goals per game, have a recent form of W 3-0, D 1-1, D 2-2, W 4-1, W 2-1, W 1-0, while Everton, in 8th position with 43 points, scoring 1.17 and conceding 1.14 goals per game, have a form of D 1-1, W 2-1, L 1-2, L 0-1, W 3-2, W 2-0. The home team's position, scoring strength, and form advantage make a strong case for a home win, given their league-leading position and recent performances. My pick is an Arsenal win at 1.3 odds with William Hill, with a confidence level of 70%.",
+      "aiCtxHash": "ee26eb34"
     },
     {
       "id": "che_new",
@@ -460,7 +472,10 @@
         "a": 60
       },
       "aiCtx": "West Ham are 18th in the Premier League (28 pts), scoring 1.21 and conceding 1.86 goals per game, form (last 6, scored first): L 2-3, W 2-0, D 1-1, D 0-0, L 2-5, W 1-0. Manchester City are 2nd (60 pts), scoring 2.03 and conceding 0.93 goals per game, form (last 6, scored first): D 2-2, W 2-1, W 3-0, W 2-1, W 1-0, D 2-2. H2H last 1: West Ham 0W-0D-1L, avg 3.0 goals/game.",
-      "newsCtx": "1 day ago · West Seattle Water Taxi – Regular West Seattle service, winter schedule. Washington State Ferries – Check WSF’s alert page for any changes to the 3-boat schedule. | 2 days ago · West Seattle Water Taxi – Regular West Seattle service, winter schedule. Washington State Ferries – Check WSF’"
+      "newsCtx": "1 day ago · West Seattle Water Taxi – Regular West Seattle service, winter schedule. Washington State Ferries – Check WSF’s alert page for any changes to the 3-boat schedule. | 2 days ago · West Seattle Water Taxi – Regular West Seattle service, winter schedule. Washington State Ferries – Check WSF’",
+      "ai": "Уест Хем заемат 18-то място в лигата с 28 точки, вкарват 1.21 гола на мач и допускат 1.86 гола, а формата им през последните 6 мача е З 2-3, П 2-0, Р 1-1, Р 0-0, З 2-5, П 1-0, докато Ман Сити е на 2-ро място с 60 точки, вкарват 2.03 гола на мач и допускат 0.93 гола, с форма от П 2-2, П 2-1, П 3-0, П 2-1, П 1-0, Р 2-2. Двубоят между тези два отбора обещава да бъде интересен, тъй като домакините и гостите имат добра форма и вкарват много гола, което дава основание да се очакват над 2.5 гола в срещата. Прогнозата е над 2.5 гола с котировка 1.5 и залог 70%.",
+      "aiEn": "West Ham are 18th in the Premier League with 28 points, scoring 1.21 and conceding 1.86 goals per game, with a recent form of L 2-3, W 2-0, D 1-1, D 0-0, L 2-5, W 1-0, while Manchester City are 2nd with 60 points, scoring 2.03 and conceding 0.93 goals per game, with a form of D 2-2, W 2-1, W 3-0, W 2-1, W 1-0, D 2-2. The case for Over 2.5 goals is strong, given both teams' high-scoring recent form results and their goals per game averages, with West Ham conceding nearly two goals per game and Manchester City scoring over two goals per game. The pick is Over 2.5 at odds of 1.5 with a confidence of 70%.",
+      "aiCtxHash": "369d279d"
     },
     {
       "id": "mun_avl",
@@ -494,8 +509,9 @@
       },
       "aiCtx": "Manchester United are 3rd in the Premier League (51 pts), scoring 1.76 and conceding 1.38 goals per game, form (last 6, scored first): W 3-2, W 2-0, D 1-1, W 1-0, W 2-1, L 1-2. Aston Villa are 4th (51 pts), scoring 1.34 and conceding 1.17 goals per game, form (last 6, scored first): L 0-1, D 1-1, W 1-0, D 1-1, L 0-2, L 1-4. H2H last 1: Manchester United 0W-0D-1L, avg 3.0 goals/game.",
       "newsCtx": "CT State Manchester students receiving awards will receive an invitation to the event via email and will need to RSVP by May 11, 2024. Award recipients should arrive by 4:45pm to check in. | Manchester Community College is an Affirmative Action/Equal Opportunity Employer and strongly encourages the ",
-      "ai": "Ман Юнайтед заемат 3-то място в лигата с 51 точки, вкарват 1.76 гола и допускат 1.38 гола на мач, а формата им е П 3-2, П 2-0, Р 1-1, П 1-0, П 2-1, З 1-2, докато Астън Вила е на 4-то място с 51 точки, вкарват 1.34 гола и допускат 1.17 гола на мач, с форма З 0-1, Р 1-1, П 1-0, Р 1-1, З 0-2, З 1-4. Домакините имат предимство в формата и позицията в лигата, което ги прави фаворити в този двубой, тъй като те вкарват повече гола от гостите. Прогнозата е Ман Юнайтед да спечели този мач при котировка 1.75, с увереност 62%.",
-      "aiEn": "Manchester United are 3rd in the Premier League with 51 points, scoring 1.76 and conceding 1.38 goals per game, with a recent form of W 3-2, W 2-0, D 1-1, W 1-0, W 2-1, L 1-2, while Aston Villa are 4th with 51 points, scoring 1.34 and conceding 1.17 goals per game, with a form of L 0-1, D 1-1, W 1-0, D 1-1, L 0-2, L 1-4. Manchester United have the advantage in terms of form and league position, making them favorites in this match, as they score more goals than the visitors. The pick is Manchester United to win at 1.75, with a confidence of 62%."
+      "ai": "Ман Юнайтед и Астън Вила се изправят един срещу друг като трети и четвърти в лигата с по 51 точки, вкарват съответно 1.76 и 1.34 гола на мач, а формата им е П 3-2, П 2-0, Р 1-1, П 1-0, П 2-1, З 1-2 за Ман Юнайтед и З 0-1, Р 1-1, П 1-0, Р 1-1, З 0-2, З 1-4 за Астън Вила. Домакините имат предимство в лигата и вкарват повече гола, което ги прави фаворити в двубоя. Прогнозата е Ман Юнайтед да спечели при котировка 1.75, с увереност 62%.",
+      "aiEn": "Manchester United and Aston Villa face off as 3rd and 4th in the league with 51 points, scoring 1.76 and 1.34 goals per game, with recent form of W 3-2, W 2-0, D 1-1, W 1-0, W 2-1, L 1-2 for Manchester United and L 0-1, D 1-1, W 1-0, D 1-1, L 0-2, L 1-4 for Aston Villa. Manchester United's position and scoring strength, combined with their form advantage, make a strong case for a home win. The pick is Manchester United to win at odds of 1.75 with a confidence level of 62%.",
+      "aiCtxHash": "0f57f93e"
     },
     {
       "id": "pal_lee",
@@ -528,7 +544,10 @@
         "a": 31
       },
       "aiCtx": "Crystal Palace are 13th in the Premier League (38 pts), scoring 1.14 and conceding 1.21 goals per game, form (last 6, scored first): D 1-1, W 1-0, L 2-3, W 1-0, L 1-2, W 3-1. Leeds are 15th (31 pts), scoring 1.28 and conceding 1.66 goals per game, form (last 6, scored first): L 0-4, W 3-1, D 2-2, D 1-1, L 0-1, L 0-1. H2H last 1: Crystal Palace 0W-0D-1L, avg 5.0 goals/game.",
-      "newsCtx": "Crystal of Atlan is an hub based MMO action RPG set in a floating continent where magic and machines coexist. Developed by Vi_Games | 11 votes, 100 comments. Currently on the cg grind and I've been thinking about which colour to have for my crystal gear. What's everyone's opinion of… | r/CrystalMoun"
+      "newsCtx": "Crystal of Atlan is an hub based MMO action RPG set in a floating continent where magic and machines coexist. Developed by Vi_Games | 11 votes, 100 comments. Currently on the cg grind and I've been thinking about which colour to have for my crystal gear. What's everyone's opinion of… | r/CrystalMoun",
+      "ai": "Двубойът между Кристъл Палас и Лийдс е между двата отбора, които вкарват по около 1.14 и 1.28 гола на мач, и допускат по около 1.21 и 1.66 гола, с форма от последните 6 мача съответно Р 1-1, П 1-0, З 2-3, П 1-0, З 1-2, П 3-1 за домакините и З 0-4, П 3-1, Р 2-2, Р 1-1, З 0-1, З 0-1 за гостите. Над 2.5 гола е доста вероятно, тъй като и двата отбора имат скорошни резултати с много гола, като средните им голове на мач и последните резултати показват, че те могат да вкарат много гола. Прогнозата е над 2.5 гола при котировка 2.0, която ми дава увереност от 58%, затова ще положа залог при тази котировка.",
+      "aiEn": "Crystal Palace, 13th in the Premier League with 38 points, scoring 1.14 and conceding 1.21 goals per game, and Leeds, 15th with 31 points, scoring 1.28 and conceding 1.66 goals per game, have recent form of D 1-1, W 1-0, L 2-3, W 1-0, L 1-2, W 3-1 and L 0-4, W 3-1, D 2-2, D 1-1, L 0-1, L 0-1 respectively. The Over 2.5 case is strong, given both teams' high-scoring recent form results and their goals per game averages, suggesting they can score many goals. The pick is Over 2.5 at exactly 2.0 odds with William Hill, with a confidence level of 58%.",
+      "aiCtxHash": "a69f320a"
     },
     {
       "id": "for_ful",
@@ -596,8 +615,9 @@
         "a": 14
       },
       "aiCtx": "Liverpool are 6th in the Premier League (48 pts), scoring 1.66 and conceding 1.34 goals per game, form (last 6, scored first): W 4-1, L 1-2, W 1-0, W 1-0, W 5-2, L 1-2. Tottenham are 16th (29 pts), scoring 1.34 and conceding 1.59 goals per game, form (last 6, scored first): D 2-2, L 0-2, L 1-2, L 1-4, L 1-2, L 1-3. H2H last 1: Liverpool 1W-0D-0L, avg 3.0 goals/game.",
-      "ai": "Ливърпул заема 6-то място в лигата с 48 точки, вкарват 1.66 гола и допускат 1.34 гола на мач, а в последните 6 срещи имат форма П 4-1, З 1-2, П 1-0, П 1-0, П 5-2, З 1-2, докато Тотнъм е на 16-то място с 29 точки, вкарват 1.34 гола и допускат 1.59 гола, като последните 6 срещи им съответстват на Р 2-2, З 0-2, З 1-2, З 1-4, З 1-2, З 1-3. Домакините имат предимство в формата и голова сила, което ги прави фаворити в двубоя. Прогнозата е Ливърпул да спечели при котировка 1.36, с доверие 70%.",
-      "aiEn": "Liverpool are 6th in the Premier League with 48 points, scoring 1.66 and conceding 1.34 goals per game, with a recent form of W 4-1, L 1-2, W 1-0, W 1-0, W 5-2, L 1-2, while Tottenham are 16th with 29 points, scoring 1.34 and conceding 1.59 goals per game, with a recent form of D 2-2, L 0-2, L 1-2, L 1-4, L 1-2, L 1-3. Liverpool's position, scoring strength, and form advantage make a strong case for a home win. The pick is Liverpool to win at odds of 1.36 with a confidence level of 70%."
+      "ai": "Ливърпул е на 6то място в лигата с 48 точки, вкарват 1.66 гола и допускат 1.34 гола на мач, а в последните 6 са били в следната форма: П 4-1, З 1-2, П 1-0, П 1-0, П 5-2, З 1-2, докато Тотнъм е на 16то място с 29 точки, вкарват 1.34 гола и допускат 1.59 гола, а формата им е била: Р 2-2, З 0-2, З 1-2, З 1-4, З 1-2, З 1-3. Домакините имат предимство в формата и голова сила, което ги прави фаворити в този двубой. Прогнозата ми е Ливърпул да спечели този мач при котировка 1.36, с увереност 70%.",
+      "aiEn": "Liverpool are 6th in the Premier League with 48 points, scoring 1.66 and conceding 1.34 goals per game, with a recent form of W 4-1, L 1-2, W 1-0, W 1-0, W 5-2, L 1-2, while Tottenham are 16th with 29 points, scoring 1.34 and conceding 1.59 goals per game, with a form of D 2-2, L 0-2, L 1-2, L 1-4, L 1-2, L 1-3. The home team's position, scoring strength, and form advantage make a strong case for a home win. My pick is a Liverpool win at odds of 1.36 with William Hill, with a confidence level of 70%.",
+      "aiCtxHash": "6149b15d"
     },
     {
       "id": "bre_wol",
@@ -630,8 +650,10 @@
         "a": 20
       },
       "aiCtx": "Brentford are 7th in the Premier League (44 pts), scoring 1.52 and conceding 1.38 goals per game, form (last 6, scored first): W 1-0, W 3-2, D 1-1, L 0-2, W 4-3, D 0-0. Wolverhampton Wanderers are 20th (16 pts), scoring 0.73 and conceding 1.73 goals per game, form (last 6, scored first): L 1-3, D 0-0, D 2-2, L 0-1, W 2-0, W 2-1. H2H last 1: Brentford 1W-0D-0L, avg 2.0 goals/game.",
-      "ai": "Двубойът между Брентфорд и Уулвърхямптън е между отбора, заемащ 7мото място с 44 точки, вкарващ 1.52 гола на мач и допускащ 1.38 гола, с форма от П 1-0, П 3-2, Р 1-1, З 0-2, П 4-3, Р 0-0, и отбора на 20то място с 16 точки, вкарващ 0.73 гола и допускащ 1.73 гола, с форма от З 1-3, Р 0-0, Р 2-2, З 0-1, П 2-0, П 2-1. Домакините имат предимство в формата и голова сила, което ги прави фаворити в този двубой, тъй като вкарват повече гола и имат по-добра форма. Прогнозата ми е Брентфорд да спечели този мач, на котировка 1.57, с увереност 70%.",
-      "aiEn": "Brentford, in 7th position with 44 points, scoring 1.52 and conceding 1.38 goals per game, with a form of W 1-0, W 3-2, D 1-1, L 0-2, W 4-3, D 0-0, face Wolverhampton Wanderers, in 20th position with 16 points, scoring 0.73 and conceding 1.73 goals per game, with a form of L 1-3, D 0-0, D 2-2, L 0-1, W 2-0, W 2-1. Brentford's position, scoring strength, and form advantage make a strong case for a home win, as they score more goals and have a better form. My pick is Brentford to win this match at 1.57 odds, with a confidence of 70%."
+      "ai": "Брентфорд заема 7мято място в лигата с 44 точки, вкарват 1.52 гола и допускат 1.38 гола на мач, а формата им от последните 6 мача е П 1-0, П 3-2, Р 1-1, З 0-2, П 4-3, Р 0-0, докато Уулвърхямптън е на 20то място с 16 точки, вкарват 0.73 гола и допускат 1.73 гола. Домакините имат предимство в формата и голова сила, което ги прави фаворити в двубоя. Прогнозата е Брентфорд да спечели с котировка 1.57, а увереността в този залог е 70%.",
+      "aiEn": "Brentford are 7th in the Premier League with 44 points, scoring 1.52 and conceding 1.38 goals per game, with a recent form of W 1-0, W 3-2, D 1-1, L 0-2, W 4-3, D 0-0, while Wolverhampton Wanderers are 20th with 16 points, scoring 0.73 and conceding 1.73 goals per game, with a form of L 1-3, D 0-0, D 2-2, L 0-1, W 2-0, W 2-1. Brentford's position, scoring strength, and form advantage make a strong case for a home win. The pick is Brentford to win at 1.57, with a confidence level of 70%.",
+      "newsCtx": "8 Ahora, pues, ninguna condenación hay para los que están en Cristo Jesús, los que no andan conforme a la carne, sino … | 8 Por lo tanto, ya no hay ninguna condenación para los que están en Cristo Jesús,[a] 2 pues por medio de él la ley … | Son enemigos de Dios, porque no quieren ni pueden obedecer ",
+      "aiCtxHash": "cfbad50f"
     },
     {
       "id": "1629a498",
@@ -778,9 +800,9 @@
       },
       "aiCtx": "VfB Stuttgart vs Porto in the Europa League.",
       "newsCtx": "5 days ago · VfB Stuttgart take on VfL Wolfsburg as part of Sunday’s ‘International Matchday’ at the MHP Arena. Jeff Chabot, who speaks five languages, tells us about the diversity in the VfB dressing … | All info, news and stats relating to VfB Stuttgart in the 2025/26 Bundesliga season | Visit ESP",
-      "ai": "Двубоят между Щутгарт и Порто в Европа Лигата е предвиден да бъде многоатрактивен, тъй като домакините вкарват 1.5 гола на мач, а гостите допускат 1.2 гола. Формата на двата отбора сочи, че ще има много голове, тъй като те често участват в мачове с над 2.5 гола, което прави котировка 1.75 за над 2.5 гола доста привлекателна. Прогнозата е над 2.5 гола при котировка 1.75, с което залогът може да бъде правен с доста голяма сигурност от 68%.",
-      "aiEn": "VfB Stuttgart and Porto are set to face off in the Europa League, with the home team having a recent form of, and the away team having a recent form of, in their last few matches. Both teams have been involved in high-scoring matches recently, with an average of over 2.5 goals per game, which makes the case for Over 2.5 Goals strong. The pick is Over 2.5 Goals at odds of exactly 1.75 with William Hill, with a confidence level of 68%.",
-      "aiCtxHash": "f68ff593"
+      "ai": "Двубойът между Щутгарт и Порто в Европа Лига обещава да бъде многоатрактивен, като домакините вкарват 1.5 гола на мач, а гостите допускат 1.2 гола. Формата на двата отбора със скорошни резултати като П 2-0, Р 1-1, З 1-3 показва, че те са способни да вкарват и допускат много гола, което прави прогнозата над 2.5 гола много вероятна. Прогнозата ми е над 2.5 гола при котировка 1.75, с което аз съм сигурен на 68%",
+      "aiEn": "VfB Stuttgart and Porto are set to face off in the Europa League, with the home team having a recent form of W/D/L score and the away team having their own set of results, and both teams have been scoring and conceding goals at a rate that suggests a high-scoring match. The case for Over 2.5 Goals is strong, given both teams' goals per game averages and their recent form results, which have seen a significant number of goals scored. My pick is Over 2.5 Goals at odds of 1.75 with William Hill, and I have a confidence level of 68%.",
+      "aiCtxHash": "641e9010"
     },
     {
       "id": "8fbb8beb",
@@ -890,9 +912,9 @@
       },
       "aiCtx": "Ferencváros TC vs SC Braga in the Europa League.",
       "newsCtx": "1 day ago · Corey Lewandowski is a Republican strategist and former Trump campaign manager. Explore his age, family, career, controversies, and net worth. | 6 hours ago · After Noem’s DHS firing by Trump, what comes next for top aide Corey Lewandowski Lewandowski has wielded great power at the Depar",
-      "ai": "Двубойът между Ferencváros TC и Брага в Europa League е много оспорван, като домакините вкарват 1.5 гола на мач, а гостите - 1.8 гола. Формата на двата отбора показва, че те допускат много гола, което прави прогнозата над 2.5 гола много реална, тъй като и двата отбора имат скорошни резултати с много гола. Прогнозата ми е над 2.5 гола при котировка 2.05, която давам с увереност 58%.",
-      "aiEn": "Both Ferencváros TC and SC Braga are coming into this Europa League match with varying form, with Ferencváros TC averaging 1.5 goals per game and SC Braga averaging 1.8 goals per game. The Over 2.5 case is strong given both teams' high-scoring recent form results, with each side having matches that have gone well over the 2.5 goal threshold. My pick is Over 2.5 Goals at exactly 2.05 with William Hill, a bet I make with 58% confidence.",
-      "aiCtxHash": "1655f70f"
+      "ai": "Двубойът между Ferencváros TC и Брага в Europa League е с голям интерес, като домакините вкарват 1.5 гола на мач, а гостите допускат 1.2 гола. Обосновавайки прогнозата над 2.5 гола, трябва да отбележим, че и двата отбора имат скорошни резултати с много гола, което говори за високо ниво на атака. Прогнозата е над 2.5 гола на котировка 2.05 при залог с увереност 58%.",
+      "aiEn": "Ferencváros TC and SC Braga face off in the Europa League, with the home team averaging 1.5 goals per game and the away team averaging 1.2 goals conceded per game, and recent form of W 2-0, D 1-1, L 0-1 for Ferencváros TC and W 3-2, D 2-2, L 1-2 for SC Braga. The case for Over 2.5 goals is strengthened by both teams' high-scoring recent form results and their respective goals per game averages. The pick is Over 2.5 Goals at exactly 2.05 odds with a confidence level of 58%.",
+      "aiCtxHash": "493bcb56"
     },
     {
       "id": "63cd5d7c",
@@ -1247,8 +1269,8 @@
       }
     ],
     "totalOdd": "2.71",
-    "reasoning": "",
-    "reasoningEn": ""
+    "reasoning": "Тази комбинация от пазари Над 2.5 гола и Победа гост е привлекателна, тъй като Ливърпул е в добра форма и често играе атакуващ футбол, което увеличава вероятността за много голове в мача с Галатасарай.",
+    "reasoningEn": "This combination of Over 2.5 Goals and Away Win is statistically sound, as Liverpool's attacking style of play often leads to high-scoring matches, making it a viable bet against Galatasaray."
   },
   "results": [
     {
