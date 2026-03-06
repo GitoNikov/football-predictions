@@ -2,9 +2,29 @@
   "gw": 31,
   "label": "Висша лига · Кръг 31",
   "labelEn": "Premier League · GW31",
-  "date_range": "2026-03-10",
-  "date_rangeEn": "2026-03-10",
+  "date_range": "2026-03-11",
+  "date_rangeEn": "2026-03-11",
   "results": [
+    {
+      "id": "tot_pal",
+      "home": "Тотнъм",
+      "homeEn": "Tottenham",
+      "away": "Кристъл Палас",
+      "awayEn": "Crystal Palace",
+      "date": "2026-03-05",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 58,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
+      },
+      "result": "W",
+      "score": "1-3"
+    },
     {
       "id": "new_mun",
       "home": "Нюкасъл",
@@ -367,7 +387,7 @@
     }
   ],
   "record": {
-    "correct": 12,
-    "total": 18
+    "correct": 13,
+    "total": 19
   }
 }

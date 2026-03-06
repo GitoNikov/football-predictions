@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-03-05T13:55:09Z",
+  "updated_at": "2026-03-06T07:58:14Z",
   "label": "Висша лига · Кръг 31",
   "labelEn": "Premier League · GW31",
-  "date_range": "2026-03-11",
-  "date_rangeEn": "2026-03-11",
+  "date_range": "2026-03-12 – 2026-03-16",
+  "date_rangeEn": "2026-03-12 – 2026-03-16",
   "sport": "soccer_epl",
   "upcoming": [
     {
@@ -282,29 +282,898 @@
       "ai": "Двубойът между Реал Мадрид и Ман Сити е много оспорван, като домакините вкарват 2 гола на мач, а гостите - 2.5 гола. Реал Мадрид и Ман Сити имат добра форма, вкарват много гола и допускат малко, което говори за над 2.5 гола в този мач. Прогнозата е за над 2.5 гола, с котировка 1.57 и залог 70%.",
       "aiEn": "Both Real Madrid and Manchester City are in good form, with recent results showing high-scoring matches, and their goals per game averages are also impressive. The Over 2.5 case is strong given both teams' recent high-scoring form results and their overall goals per game averages. The pick is Over 2.5 Goals at 1.57 William Hill, with a confidence level of 70%.",
       "aiCtxHash": "89ce5442"
+    },
+    {
+      "id": "bur_bou",
+      "home": "Бърнли",
+      "homeEn": "Burnley",
+      "homeA": "BUR",
+      "away": "Борнемут",
+      "awayEn": "Bournemouth",
+      "awayA": "BOU",
+      "date": "2026-03-14",
+      "time": "17:00",
+      "status": "pending",
+      "pick": {
+        "bet": "Борнемут победа",
+        "betEn": "Bournemouth Win",
+        "conf": 58,
+        "market": "h2h",
+        "selection": "away",
+        "odd": "1.85"
+      },
+      "odds_wh": {
+        "a": "1.85",
+        "h": "3.75",
+        "x": "3.7",
+        "o25": "1.73"
+      },
+      "prob": {
+        "h": 27,
+        "d": 27,
+        "a": 54
+      },
+      "aiCtx": "Burnley are 19th in the Premier League (19 pts), scoring 1.1 and conceding 2.0 goals per game, form (last 6, scored first): L 0-3, L 0-2, W 3-2, D 1-1, L 3-4, L 0-2. Bournemouth are 9th (40 pts), scoring 1.52 and conceding 1.59 goals per game, form (last 6, scored first): W 2-0, D 1-1, W 2-1, D 0-0, D 1-1, D 0-0. H2H last 1: Burnley 0W-1D-0L, avg 2.0 goals/game."
+    },
+    {
+      "id": "sun_bri",
+      "home": "Съндърланд",
+      "homeEn": "Sunderland",
+      "homeA": "SUN",
+      "away": "Брайтън",
+      "awayEn": "Brighton",
+      "awayA": "BRI",
+      "date": "2026-03-14",
+      "time": "17:00",
+      "status": "pending",
+      "pick": {
+        "bet": "Под 2.5 гола",
+        "betEn": "Under 2.5 Goals",
+        "conf": 58,
+        "market": "over_under",
+        "selection": "under_2.5",
+        "odd": "1.95"
+      },
+      "odds_wh": {
+        "a": "2.15",
+        "h": "3.25",
+        "x": "3.3",
+        "o25": "1.95"
+      },
+      "prob": {
+        "h": 31,
+        "d": 30,
+        "a": 47
+      },
+      "aiCtx": "Sunderland are 11th in the Premier League (40 pts), scoring 1.03 and conceding 1.17 goals per game, form (last 6, scored first): W 3-0, L 0-3, L 0-1, L 1-3, D 1-1, W 1-0. Brighton are 14th (37 pts), scoring 1.31 and conceding 1.24 goals per game, form (last 6, scored first): D 1-1, L 0-1, L 0-1, W 2-0, W 2-1, L 0-1. H2H last 1: Sunderland 0W-1D-0L, avg 0.0 goals/game."
+    },
+    {
+      "id": "ars_eve",
+      "home": "Арсенал",
+      "homeEn": "Arsenal",
+      "homeA": "ARS",
+      "away": "Евъртън",
+      "awayEn": "Everton",
+      "awayA": "EVE",
+      "date": "2026-03-14",
+      "time": "19:30",
+      "status": "pending",
+      "pick": {
+        "bet": "Арсенал победа",
+        "betEn": "Arsenal Win",
+        "conf": 70,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.3"
+      },
+      "odds_wh": {
+        "h": "1.3",
+        "a": "10.0",
+        "x": "4.8",
+        "o25": "1.73"
+      },
+      "prob": {
+        "h": 77,
+        "d": 21,
+        "a": 10
+      },
+      "aiCtx": "Arsenal are 1st in the Premier League (67 pts), scoring 1.97 and conceding 0.73 goals per game, form (last 6, scored first): W 3-0, D 1-1, D 2-2, W 4-1, W 2-1, W 1-0. Everton are 8th (43 pts), scoring 1.17 and conceding 1.14 goals per game, form (last 6, scored first): D 1-1, W 2-1, L 1-2, L 0-1, W 3-2, W 2-0. H2H last 1: Arsenal 1W-0D-0L, avg 1.0 goals/game."
+    },
+    {
+      "id": "che_new",
+      "home": "Челси",
+      "homeEn": "Chelsea",
+      "homeA": "CHE",
+      "away": "Нюкасъл",
+      "awayEn": "Newcastle",
+      "awayA": "NEW",
+      "date": "2026-03-14",
+      "time": "19:30",
+      "status": "pending",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 70,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.44"
+      },
+      "odds_wh": {
+        "h": "1.8",
+        "a": "3.8",
+        "x": "3.9",
+        "o25": "1.44"
+      },
+      "prob": {
+        "h": 56,
+        "d": 26,
+        "a": 26
+      },
+      "aiCtx": "Chelsea are 5th in the Premier League (48 pts), scoring 1.83 and conceding 1.17 goals per game, form (last 6, scored first): W 3-2, W 3-1, D 2-2, D 1-1, L 1-2, W 4-1. Newcastle are 12th (39 pts), scoring 1.45 and conceding 1.48 goals per game, form (last 6, scored first): W 2-1, W 6-1, L 1-2, W 3-2, L 2-3, W 2-1. H2H last 1: Chelsea 0W-1D-0L, avg 4.0 goals/game."
+    },
+    {
+      "id": "whu_mci",
+      "home": "Уест Хем",
+      "homeEn": "West Ham",
+      "homeA": "WHU",
+      "away": "Ман Сити",
+      "awayEn": "Manchester City",
+      "awayA": "MCI",
+      "date": "2026-03-14",
+      "time": "22:00",
+      "status": "pending",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 70,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.5"
+      },
+      "odds_wh": {
+        "a": "1.67",
+        "h": "4.4",
+        "x": "4.0",
+        "o25": "1.5"
+      },
+      "prob": {
+        "h": 23,
+        "d": 25,
+        "a": 60
+      },
+      "aiCtx": "West Ham are 18th in the Premier League (28 pts), scoring 1.21 and conceding 1.86 goals per game, form (last 6, scored first): L 2-3, W 2-0, D 1-1, D 0-0, L 2-5, W 1-0. Manchester City are 2nd (60 pts), scoring 2.03 and conceding 0.93 goals per game, form (last 6, scored first): D 2-2, W 2-1, W 3-0, W 2-1, W 1-0, D 2-2. H2H last 1: West Ham 0W-0D-1L, avg 3.0 goals/game."
+    },
+    {
+      "id": "mun_avl",
+      "home": "Ман Юнайтед",
+      "homeEn": "Manchester United",
+      "homeA": "MUN",
+      "away": "Астън Вила",
+      "awayEn": "Aston Villa",
+      "awayA": "AVL",
+      "date": "2026-03-15",
+      "time": "16:00",
+      "status": "pending",
+      "pick": {
+        "bet": "Ман Юнайтед победа",
+        "betEn": "Manchester United Win",
+        "conf": 62,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.75"
+      },
+      "odds_wh": {
+        "a": "3.9",
+        "h": "1.75",
+        "x": "3.9",
+        "o25": "1.62"
+      },
+      "prob": {
+        "h": 57,
+        "d": 26,
+        "a": 26
+      },
+      "aiCtx": "Manchester United are 3rd in the Premier League (51 pts), scoring 1.76 and conceding 1.38 goals per game, form (last 6, scored first): W 3-2, W 2-0, D 1-1, W 1-0, W 2-1, L 1-2. Aston Villa are 4th (51 pts), scoring 1.34 and conceding 1.17 goals per game, form (last 6, scored first): L 0-1, D 1-1, W 1-0, D 1-1, L 0-2, L 1-4. H2H last 1: Manchester United 0W-0D-1L, avg 3.0 goals/game."
+    },
+    {
+      "id": "pal_lee",
+      "home": "Кристъл Палас",
+      "homeEn": "Crystal Palace",
+      "homeA": "PAL",
+      "away": "Лийдс",
+      "awayEn": "Leeds",
+      "awayA": "LEE",
+      "date": "2026-03-15",
+      "time": "16:00",
+      "status": "pending",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 58,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.0"
+      },
+      "odds_wh": {
+        "h": "2.2",
+        "a": "3.2",
+        "x": "3.25",
+        "o25": "2.0"
+      },
+      "prob": {
+        "h": 45,
+        "d": 31,
+        "a": 31
+      },
+      "aiCtx": "Crystal Palace are 13th in the Premier League (38 pts), scoring 1.14 and conceding 1.21 goals per game, form (last 6, scored first): D 1-1, W 1-0, L 2-3, W 1-0, L 1-2, W 3-1. Leeds are 15th (31 pts), scoring 1.28 and conceding 1.66 goals per game, form (last 6, scored first): L 0-4, W 3-1, D 2-2, D 1-1, L 0-1, L 0-1. H2H last 1: Crystal Palace 0W-0D-1L, avg 5.0 goals/game."
+    },
+    {
+      "id": "for_ful",
+      "home": "Нотингам Форест",
+      "homeEn": "Nottingham Forest",
+      "homeA": "FOR",
+      "away": "Фулъм",
+      "awayEn": "Fulham",
+      "awayA": "FUL",
+      "date": "2026-03-15",
+      "time": "16:00",
+      "status": "pending",
+      "pick": {
+        "bet": "Под 2.5 гола",
+        "betEn": "Under 2.5 Goals",
+        "conf": 58,
+        "market": "over_under",
+        "selection": "under_2.5",
+        "odd": "1.8"
+      },
+      "odds_wh": {
+        "a": "3.25",
+        "h": "2.1",
+        "x": "3.4",
+        "o25": "1.8"
+      },
+      "prob": {
+        "h": 48,
+        "d": 29,
+        "a": 31
+      },
+      "aiCtx": "Nottingham Forest are 17th in the Premier League (28 pts), scoring 0.97 and conceding 1.48 goals per game, form (last 6, scored first): D 1-1, L 1-3, D 0-0, L 0-1, L 1-2, D 2-2. Fulham are 10th (40 pts), scoring 1.38 and conceding 1.48 goals per game, form (last 6, scored first): L 2-3, L 1-2, L 0-3, W 3-1, W 2-1, L 0-1. H2H last 1: Nottingham Forest 0W-0D-1L, avg 1.0 goals/game."
+    },
+    {
+      "id": "liv_tot",
+      "home": "Ливърпул",
+      "homeEn": "Liverpool",
+      "homeA": "LIV",
+      "away": "Тотнъм",
+      "awayEn": "Tottenham",
+      "awayA": "TOT",
+      "date": "2026-03-15",
+      "time": "18:30",
+      "status": "pending",
+      "pick": {
+        "bet": "Ливърпул победа",
+        "betEn": "Liverpool Win",
+        "conf": 70,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.36"
+      },
+      "odds_wh": {
+        "h": "1.36",
+        "a": "7.0",
+        "x": "5.0",
+        "o25": "1.44"
+      },
+      "prob": {
+        "h": 74,
+        "d": 20,
+        "a": 14
+      },
+      "aiCtx": "Liverpool are 6th in the Premier League (48 pts), scoring 1.66 and conceding 1.34 goals per game, form (last 6, scored first): W 4-1, L 1-2, W 1-0, W 1-0, W 5-2, L 1-2. Tottenham are 16th (29 pts), scoring 1.34 and conceding 1.59 goals per game, form (last 6, scored first): D 2-2, L 0-2, L 1-2, L 1-4, L 1-2, L 1-3. H2H last 1: Liverpool 1W-0D-0L, avg 3.0 goals/game."
+    },
+    {
+      "id": "bre_wol",
+      "home": "Брентфорд",
+      "homeEn": "Brentford",
+      "homeA": "BRE",
+      "away": "Уулвърхямптън",
+      "awayEn": "Wolverhampton Wanderers",
+      "awayA": "WOL",
+      "date": "2026-03-16",
+      "time": "22:00",
+      "status": "pending",
+      "pick": {
+        "bet": "Брентфорд победа",
+        "betEn": "Brentford Win",
+        "conf": 70,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.57"
+      },
+      "odds_wh": {
+        "h": "1.57",
+        "a": "5.0",
+        "x": "4.0",
+        "o25": "1.75"
+      },
+      "prob": {
+        "h": 64,
+        "d": 25,
+        "a": 20
+      },
+      "aiCtx": "Brentford are 7th in the Premier League (44 pts), scoring 1.52 and conceding 1.38 goals per game, form (last 6, scored first): W 1-0, W 3-2, D 1-1, L 0-2, W 4-3, D 0-0. Wolverhampton Wanderers are 20th (16 pts), scoring 0.73 and conceding 1.73 goals per game, form (last 6, scored first): L 1-3, D 0-0, D 2-2, L 0-1, W 2-0, W 2-1. H2H last 1: Brentford 1W-0D-0L, avg 2.0 goals/game."
+    },
+    {
+      "id": "1629a498",
+      "home": "Болоня",
+      "homeEn": "Bologna",
+      "homeA": "BOL",
+      "away": "Рома",
+      "awayEn": "AS Roma",
+      "awayA": "AS ",
+      "date": "2026-03-12",
+      "time": "19:45",
+      "competition": "Europa League",
+      "competitionBG": "Лига Европа",
+      "status": "pending",
+      "pick": {
+        "bet": "Рома победа",
+        "betEn": "AS Roma Win",
+        "conf": 58,
+        "market": "h2h",
+        "selection": "away",
+        "odd": "2.45"
+      },
+      "odds_wh": {
+        "a": "2.45",
+        "h": "3.0",
+        "x": "2.9",
+        "o25": "2.3"
+      },
+      "prob": {
+        "h": 33,
+        "d": 34,
+        "a": 41
+      },
+      "aiCtx": "Bologna vs AS Roma in the Europa League."
+    },
+    {
+      "id": "9c61fdfb",
+      "home": "Лил",
+      "homeEn": "Lille",
+      "homeA": "LIL",
+      "away": "Астън Вила",
+      "awayEn": "Aston Villa",
+      "awayA": "AST",
+      "date": "2026-03-12",
+      "time": "19:45",
+      "competition": "Europa League",
+      "competitionBG": "Лига Европа",
+      "status": "pending",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 58,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
+      },
+      "odds_wh": {
+        "a": "2.4",
+        "h": "2.8",
+        "x": "3.25",
+        "o25": "1.85"
+      },
+      "prob": {
+        "h": 36,
+        "d": 31,
+        "a": 42
+      },
+      "aiCtx": "Lille vs Aston Villa in the Europa League."
+    },
+    {
+      "id": "060b5c45",
+      "home": "Panathinaikos FC",
+      "homeEn": "Panathinaikos FC",
+      "homeA": "PAN",
+      "away": "Реал Бетис",
+      "awayEn": "Real Betis",
+      "awayA": "REA",
+      "date": "2026-03-12",
+      "time": "19:45",
+      "competition": "Europa League",
+      "competitionBG": "Лига Европа",
+      "status": "pending",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 58,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.25"
+      },
+      "odds_wh": {
+        "h": "3.5",
+        "a": "2.1",
+        "x": "3.1",
+        "o25": "2.25"
+      },
+      "prob": {
+        "h": 29,
+        "d": 32,
+        "a": 48
+      },
+      "aiCtx": "Panathinaikos FC vs Real Betis in the Europa League."
+    },
+    {
+      "id": "9b970604",
+      "home": "Щутгарт",
+      "homeEn": "VfB Stuttgart",
+      "homeA": "VFB",
+      "away": "Порто",
+      "awayEn": "Porto",
+      "awayA": "POR",
+      "date": "2026-03-12",
+      "time": "19:45",
+      "competition": "Europa League",
+      "competitionBG": "Лига Европа",
+      "status": "pending",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 68,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.75"
+      },
+      "odds_wh": {
+        "a": "3.25",
+        "h": "2.1",
+        "x": "3.3",
+        "o25": "1.75"
+      },
+      "prob": {
+        "h": 48,
+        "d": 30,
+        "a": 31
+      },
+      "aiCtx": "VfB Stuttgart vs Porto in the Europa League."
+    },
+    {
+      "id": "8fbb8beb",
+      "home": "Celta Vigo",
+      "homeEn": "Celta Vigo",
+      "homeA": "CEL",
+      "away": "Лион",
+      "awayEn": "Lyon",
+      "awayA": "LYO",
+      "date": "2026-03-12",
+      "time": "22:00",
+      "competition": "Europa League",
+      "competitionBG": "Лига Европа",
+      "status": "pending",
+      "pick": {
+        "bet": "Celta Vigo победа",
+        "betEn": "Celta Vigo Win",
+        "conf": 58,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "2.05"
+      },
+      "odds_wh": {
+        "h": "2.05",
+        "a": "3.3",
+        "x": "3.4",
+        "o25": "1.85"
+      },
+      "prob": {
+        "h": 49,
+        "d": 29,
+        "a": 30
+      },
+      "aiCtx": "Celta Vigo vs Lyon in the Europa League."
+    },
+    {
+      "id": "22809c05",
+      "home": "Нотингам Форест",
+      "homeEn": "Nottingham Forest",
+      "homeA": "NOT",
+      "away": "FC Midtjylland",
+      "awayEn": "FC Midtjylland",
+      "awayA": "FC ",
+      "date": "2026-03-12",
+      "time": "22:00",
+      "competition": "Europa League",
+      "competitionBG": "Лига Европа",
+      "status": "pending",
+      "pick": {
+        "bet": "Нотингам Форест победа",
+        "betEn": "Nottingham Forest Win",
+        "conf": 65,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.55"
+      },
+      "odds_wh": {
+        "a": "5.0",
+        "h": "1.55",
+        "x": "4.0",
+        "o25": "1.7"
+      },
+      "prob": {
+        "h": 65,
+        "d": 25,
+        "a": 20
+      },
+      "aiCtx": "Nottingham Forest vs FC Midtjylland in the Europa League."
+    },
+    {
+      "id": "b7950ae7",
+      "home": "Ferencváros TC",
+      "homeEn": "Ferencváros TC",
+      "homeA": "FER",
+      "away": "Брага",
+      "awayEn": "SC Braga",
+      "awayA": "SC ",
+      "date": "2026-03-12",
+      "time": "22:00",
+      "competition": "Europa League",
+      "competitionBG": "Лига Европа",
+      "status": "pending",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 58,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.05"
+      },
+      "odds_wh": {
+        "h": "3.0",
+        "a": "2.3",
+        "x": "3.25",
+        "o25": "2.05"
+      },
+      "prob": {
+        "h": 33,
+        "d": 31,
+        "a": 43
+      },
+      "aiCtx": "Ferencváros TC vs SC Braga in the Europa League."
+    },
+    {
+      "id": "63cd5d7c",
+      "home": "KRC Genk",
+      "homeEn": "KRC Genk",
+      "homeA": "KRC",
+      "away": "SC Freiburg",
+      "awayEn": "SC Freiburg",
+      "awayA": "SC ",
+      "date": "2026-03-12",
+      "time": "22:00",
+      "competition": "Europa League",
+      "competitionBG": "Лига Европа",
+      "status": "pending",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 70,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.8"
+      },
+      "odds_wh": {
+        "h": "2.62",
+        "a": "2.6",
+        "x": "3.25",
+        "o25": "1.8"
+      },
+      "prob": {
+        "h": 38,
+        "d": 31,
+        "a": 38
+      },
+      "aiCtx": "KRC Genk vs SC Freiburg in the Europa League."
+    },
+    {
+      "id": "eca03709",
+      "home": "AZ Alkmaar",
+      "homeEn": "AZ Alkmaar",
+      "homeA": "AZ ",
+      "away": "Sparta Prague",
+      "awayEn": "Sparta Prague",
+      "awayA": "SPA",
+      "date": "2026-03-12",
+      "time": "19:45",
+      "competition": "Conference League",
+      "competitionBG": "Конференц лига",
+      "status": "pending",
+      "pick": {
+        "bet": "AZ Alkmaar победа",
+        "betEn": "AZ Alkmaar Win",
+        "conf": 58,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "2.1"
+      },
+      "odds_wh": {
+        "h": "2.1",
+        "a": "3.3",
+        "x": "3.25",
+        "o25": "1.85"
+      },
+      "prob": {
+        "h": 48,
+        "d": 31,
+        "a": 30
+      },
+      "aiCtx": "AZ Alkmaar vs Sparta Prague in the Conference League."
+    },
+    {
+      "id": "de2cf40a",
+      "home": "HNK Rijeka",
+      "homeEn": "HNK Rijeka",
+      "homeA": "HNK",
+      "away": "Strasbourg",
+      "awayEn": "Strasbourg",
+      "awayA": "STR",
+      "date": "2026-03-12",
+      "time": "19:45",
+      "competition": "Conference League",
+      "competitionBG": "Конференц лига",
+      "status": "pending",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 58,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
+      },
+      "odds_wh": {
+        "h": "3.2",
+        "a": "2.05",
+        "x": "3.4",
+        "o25": "1.85"
+      },
+      "prob": {
+        "h": 31,
+        "d": 29,
+        "a": 49
+      },
+      "aiCtx": "HNK Rijeka vs Strasbourg in the Conference League."
+    },
+    {
+      "id": "47bbf201",
+      "home": "Lech Poznań",
+      "homeEn": "Lech Poznań",
+      "homeA": "LEC",
+      "away": "Шахтьор",
+      "awayEn": "Shakhtar Donetsk",
+      "awayA": "SHA",
+      "date": "2026-03-12",
+      "time": "19:45",
+      "competition": "Conference League",
+      "competitionBG": "Конференц лига",
+      "status": "pending",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 68,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
+      },
+      "odds_wh": {
+        "h": "2.5",
+        "a": "2.5",
+        "x": "3.2",
+        "o25": "1.85"
+      },
+      "prob": {
+        "h": 40,
+        "d": 31,
+        "a": 40
+      },
+      "aiCtx": "Lech Poznań vs Shakhtar Donetsk in the Conference League."
+    },
+    {
+      "id": "6e33aa23",
+      "home": "Samsunspor",
+      "homeEn": "Samsunspor",
+      "homeA": "SAM",
+      "away": "Rayo Vallecano",
+      "awayEn": "Rayo Vallecano",
+      "awayA": "RAY",
+      "date": "2026-03-12",
+      "time": "19:45",
+      "competition": "Conference League",
+      "competitionBG": "Конференц лига",
+      "status": "pending",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 70,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.91"
+      },
+      "odds_wh": {
+        "a": "2.3",
+        "h": "2.9",
+        "x": "3.1",
+        "o25": "1.91"
+      },
+      "prob": {
+        "h": 34,
+        "d": 32,
+        "a": 43
+      },
+      "aiCtx": "Samsunspor vs Rayo Vallecano in the Conference League."
+    },
+    {
+      "id": "2cd6b32c",
+      "home": "NK Celje",
+      "homeEn": "NK Celje",
+      "homeA": "NK ",
+      "away": "AEK Athens",
+      "awayEn": "AEK Athens",
+      "awayA": "AEK",
+      "date": "2026-03-12",
+      "time": "22:00",
+      "competition": "Conference League",
+      "competitionBG": "Конференц лига",
+      "status": "pending",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 68,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.75"
+      },
+      "odds_wh": {
+        "a": "2.05",
+        "h": "3.3",
+        "x": "3.25",
+        "o25": "1.75"
+      },
+      "prob": {
+        "h": 30,
+        "d": 31,
+        "a": 49
+      },
+      "aiCtx": "NK Celje vs AEK Athens in the Conference League."
+    },
+    {
+      "id": "364efb04",
+      "home": "Кристъл Палас",
+      "homeEn": "Crystal Palace",
+      "homeA": "CRY",
+      "away": "AEK Larnaca",
+      "awayEn": "AEK Larnaca",
+      "awayA": "AEK",
+      "date": "2026-03-12",
+      "time": "22:00",
+      "competition": "Conference League",
+      "competitionBG": "Конференц лига",
+      "status": "pending",
+      "pick": {
+        "bet": "Кристъл Палас победа",
+        "betEn": "Crystal Palace Win",
+        "conf": 80,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.22"
+      },
+      "odds_wh": {
+        "a": "12.0",
+        "h": "1.22",
+        "x": "5.5",
+        "o25": "1.6"
+      },
+      "prob": {
+        "h": 82,
+        "d": 18,
+        "a": 8
+      },
+      "aiCtx": "Crystal Palace vs AEK Larnaca in the Conference League."
+    },
+    {
+      "id": "fad5dfa5",
+      "home": "Sigma Olomouc",
+      "homeEn": "Sigma Olomouc",
+      "homeA": "SIG",
+      "away": "FSV Mainz 05",
+      "awayEn": "FSV Mainz 05",
+      "awayA": "FSV",
+      "date": "2026-03-12",
+      "time": "22:00",
+      "competition": "Conference League",
+      "competitionBG": "Конференц лига",
+      "status": "pending",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 58,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.91"
+      },
+      "odds_wh": {
+        "a": "1.85",
+        "h": "3.9",
+        "x": "3.3",
+        "o25": "1.91"
+      },
+      "prob": {
+        "h": 26,
+        "d": 30,
+        "a": 54
+      },
+      "aiCtx": "Sigma Olomouc vs FSV Mainz 05 in the Conference League."
+    },
+    {
+      "id": "8b0fb9ee",
+      "home": "Фиорентина",
+      "homeEn": "Fiorentina",
+      "homeA": "FIO",
+      "away": "Raków Częstochowa",
+      "awayEn": "Raków Częstochowa",
+      "awayA": "RAK",
+      "date": "2026-03-12",
+      "time": "22:00",
+      "competition": "Conference League",
+      "competitionBG": "Конференц лига",
+      "status": "pending",
+      "pick": {
+        "bet": "Фиорентина победа",
+        "betEn": "Fiorentina Win",
+        "conf": 65,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.67"
+      },
+      "odds_wh": {
+        "h": "1.67",
+        "a": "4.8",
+        "x": "3.5",
+        "o25": "1.8"
+      },
+      "prob": {
+        "h": 60,
+        "d": 29,
+        "a": 21
+      },
+      "aiCtx": "Fiorentina vs Raków Częstochowa in the Conference League."
     }
   ],
   "betBuilder": {
-    "matchId": "d507893e",
-    "home": "Реал Мадрид",
-    "homeEn": "Real Madrid",
-    "away": "Ман Сити",
-    "awayEn": "Manchester City",
+    "matchId": "963a779e",
+    "home": "Леверкузен",
+    "homeEn": "Bayer Leverkusen",
+    "away": "Арсенал",
+    "awayEn": "Arsenal",
     "markets": [
       {
         "market": "Над 2.5 гола",
         "marketEn": "Over 2.5 Goals",
-        "odd": "1.57"
+        "odd": "1.75"
+      },
+      {
+        "market": "Победа домакин",
+        "marketEn": "Home Win",
+        "odd": "5.5"
       },
       {
         "market": "Победа гост",
         "marketEn": "Away Win",
-        "odd": "2.2"
+        "odd": "1.57"
       }
     ],
-    "totalOdd": "3.45",
-    "reasoning": "Тази комбинация от пазари изглежда привлекателна, тъй като Реал Мадрид и Ман Сити са две отбори с висока атакуваща форма, което увеличава вероятността за Над 2.5 гола, а котировката за Победа гост дава допълнителен стимул за залог.",
-    "reasoningEn": "This combination of markets is statistically sound as it leverages the high-scoring nature of both teams, increasing the likelihood of over 2.5 goals, while the away win adds an attractive layer of complexity to the bet."
+    "totalOdd": "15.11",
+    "reasoning": "",
+    "reasoningEn": ""
   },
   "results": [
     {
