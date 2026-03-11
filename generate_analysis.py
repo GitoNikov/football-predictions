@@ -142,7 +142,7 @@ def build_prompt(match: dict, label: str) -> str:
 Context (English): {ctx}{news_line}
 Context (Bulgarian — form letters already converted): {bg_ctx}
 Probabilities: Home {prob['h']}% | Draw {prob['d']}% | Away {prob['a']}%
-Pick: {pick['betEn']} @ {pick['odd']} William Hill (confidence {pick['conf']}%)
+Pick: {pick['betEn']} @ {pick['odd']} William Hill
 
 STRICT RULES — violating any of these invalidates the response:
 1. Odds MUST be exactly {pick['odd']} in both languages — never round or alter.
@@ -152,6 +152,8 @@ STRICT RULES — violating any of these invalidates the response:
    NEVER use W, D, L, В, Л, Д or any other variant in the Bulgarian text.
 5. Bulgarian team names MUST be exactly "{home_bg}" and "{away_bg}" — no other spelling.
 6. For goals use "гола" — never "голови".
+7. NEVER use first-person pronouns (ми, аз, ни, my, our) — write in third-person journalistic style.
+8. Do NOT mention any confidence percentage in the text.
 
 Write a 3-sentence match analysis. Return ONLY valid JSON, no markdown:
 {{"bg": "...", "en": "..."}}
@@ -159,17 +161,17 @@ Write a 3-sentence match analysis. Return ONLY valid JSON, no markdown:
 ENGLISH — factual, journalistic tone:
 - Sentence 1: league position, points, goals per game, and recent form (with scores) of both teams
 - {s2_en}
-- Sentence 3: state the pick, exact odds {pick['odd']}, and confidence {pick['conf']}%
+- Sentence 3: state the pick and exact odds {pick['odd']} — do NOT mention any confidence percentage
 
 BULGARIAN — write as a native Bulgarian football journalist, NOT a translation:
 - Use "{home_bg}" and "{away_bg}" as team names throughout — no exceptions
 - Use form letters П (win), Р (draw), З (loss) — copy from Bulgarian Context above
 - Reference goals per game naturally: "вкарват X гола на мач", "допускат Y гола"
-- Natural vocabulary: двубой, форма, домакините, гостите, котировка, залог, прогноза
-- Active voice, present tense, journalistic register
+- Natural vocabulary: двубой, форма, домакините, гостите, котировка, прогноза
+- Active voice, present tense, third-person journalistic register — NEVER "ми", "аз", "ни"
 - {s2_bg}
 - Mirror the 3-sentence structure but phrased naturally — never translate word-for-word
-- Odds must also be exactly {pick['odd']}"""
+- Sentence 3: state the pick and exact odds {pick['odd']} — do NOT mention any confidence percentage"""
 
 
 def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
