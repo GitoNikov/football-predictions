@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-11T14:17:10Z",
+  "updated_at": "2026-03-11T15:22:19Z",
   "label": "Висша лига · Кръг 31",
   "labelEn": "Premier League · GW31",
   "date_range": "2026-03-13 – 2026-03-16",
@@ -22,23 +22,22 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 0,
+        "conf": 78,
+        "confReason": "Combined expected goals is likely high given both teams' attacking prowess, and the odd is within the 1.40-2.50 sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.8",
-        "confReason": ""
+        "odd": "1.7"
       },
       "odds_wh": {
-        "a": "1.56",
-        "h": "6.0",
+        "a": "1.55",
+        "h": "5.8",
         "x": "4.0",
-        "o25": "1.8",
-        "o15": "1.26"
+        "o25": "1.7"
       },
       "prob": {
-        "h": 18,
+        "h": 17,
         "d": 25,
-        "a": 64
+        "a": 65
       },
       "aiCtx": "Bayer Leverkusen vs Arsenal in the Champions League.",
       "ai": "Двубойът между Леверкузен и Арсенал обещава да бъде интересен, като домакините вкарват 1.5 гола на мач, а гостите - 2.2 гола, а последните им резултати показват форма П 2-1, Р 1-1, З 0-2 и П 3-0, Р 2-2, З 1-3 съответно. Леверкузен и Арсенал имат склонност към високи резултати, като вкарват много гола в последните си мачове, което говори в полза на над 2.5 гола в този двубой. Прогнозата е над 2.5 гола с котировка 1.75, която представлява добра възможност за залог с увереност 68%.",
@@ -60,22 +59,22 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 0,
+        "conf": 78,
+        "confReason": "Combined expected goals likely >= 2.7 given both teams' recent performances and William Hill odds, and the odd is within the 1.40-2.50 sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.6",
-        "confReason": ""
+        "odd": "1.6"
       },
       "odds_wh": {
-        "h": "2.5",
-        "a": "2.5",
-        "x": "3.6",
+        "h": "2.3",
+        "a": "2.88",
+        "x": "3.4",
         "o25": "1.6"
       },
       "prob": {
-        "h": 40,
-        "d": 28,
-        "a": 40
+        "h": 43,
+        "d": 29,
+        "a": 35
       },
       "aiCtx": "Bodø/Glimt vs Sporting Lisbon in the Champions League.",
       "ai": "Двубойът между Bodø/Glimt и Sporting Lisbon обещава да бъде интересен, като домакините вкарват 2 гола на мач, а гостите - 2.5 гола. Двете отбора имат форма с много голове, което подсказва, че мачът ще бъде с над 2.5 гола, тъй като и двата отбора допускат около 1.5 гола на мач. Прогнозата ми е над 2.5 гола с котировка 1.6 и сигурност 70%.",
@@ -95,25 +94,24 @@
       "competitionBG": "Шампионска лига",
       "status": "pending",
       "pick": {
-        "bet": "ПСЖ победа",
-        "betEn": "Paris Saint Germain Win",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.83",
-        "confReason": ""
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 78,
+        "confReason": "Combined expected goals for Paris Saint Germain and Chelsea is typically high, and the given odd of 1.62 is within the 1.40-2.50 sweet spot, strongly supporting over 2.5 goals",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.62"
       },
       "odds_wh": {
-        "a": "4.0",
-        "h": "1.83",
-        "x": "3.7",
-        "o25": "1.55",
-        "o15": "1.18"
+        "a": "3.3",
+        "h": "2.1",
+        "x": "3.5",
+        "o25": "1.62"
       },
       "prob": {
-        "h": 56,
-        "d": 26,
-        "a": 25
+        "h": 48,
+        "d": 29,
+        "a": 30
       },
       "aiCtx": "Paris Saint Germain vs Chelsea in the Champions League.",
       "ai": "Двубойът между ПСЖ и Челси в Шампионската лига е особено интересен, като домакините вкарват 2 гола на мач, а гостите допускат 1.5 гола. ПСЖ имат добра форма и позиция, което ги прави фаворити в този двубой, тъй като домакините предлагат по-добра игра и голова сила. Прогнозата ми е ПСЖ да спечели този мач при котировка 1.8 и залог с увереност 58%.",
@@ -135,23 +133,22 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 0,
+        "conf": 78,
+        "confReason": "Combined expected goals is likely high given the teams involved, and the odd is within the 1.40-2.50 sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.56",
-        "confReason": ""
+        "odd": "1.67"
       },
       "odds_wh": {
         "a": "1.95",
-        "h": "3.5",
-        "x": "4.0",
-        "o25": "1.56",
-        "o15": "1.17"
+        "h": "3.6",
+        "x": "3.6",
+        "o25": "1.67"
       },
       "prob": {
-        "h": 32,
-        "d": 29,
-        "a": 45
+        "h": 28,
+        "d": 28,
+        "a": 51
       },
       "aiCtx": "Real Madrid vs Manchester City in the Champions League.",
       "newsCtx": "👻 SteamRiP Get free pre-installed Steam games for PC with a direct download. | Dec 5, 2023 · Real Debrid is an unrestricted multi hoster that allows you to stream and download videos instantly at the best of your speeds. The multi hoster does this by providing high-quality links hosted on … | r/1337",
@@ -531,20 +528,19 @@
       "competitionBG": "Лига Европа",
       "status": "pending",
       "pick": {
-        "bet": "Рома победа",
-        "betEn": "AS Roma Win",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "away",
-        "odd": "2.4",
-        "confReason": ""
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 72,
+        "confReason": "Combined expected goals is likely over 2.7 given the teams' attacking prowess and William Hill odds, and the odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.3"
       },
       "odds_wh": {
-        "a": "2.4",
-        "h": "3.1",
-        "x": "3.0",
-        "o25": "2.4",
-        "o15": "1.46"
+        "a": "2.45",
+        "h": "3.0",
+        "x": "2.9",
+        "o25": "2.3"
       },
       "prob": {
         "h": 33,
@@ -571,21 +567,20 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 0,
+        "conf": 72,
+        "confReason": "Combined expected goals is likely over 2.7 given the context of the Europa League and the teams involved, and the odd is within the 1.40-2.50 sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "2.0",
-        "confReason": ""
+        "odd": "1.95"
       },
       "odds_wh": {
-        "a": "2.4",
+        "a": "2.38",
         "h": "2.9",
-        "x": "3.3",
-        "o25": "2.0",
-        "o15": "1.29"
+        "x": "3.2",
+        "o25": "1.95"
       },
       "prob": {
-        "h": 36,
+        "h": 34,
         "d": 31,
         "a": 42
       },
@@ -609,17 +604,17 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 0,
+        "conf": 68,
+        "confReason": "Combined expected goals is likely above 2.7 given the teams' attacking prowess, and the odd is within the desired range",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "2.3",
-        "confReason": ""
+        "odd": "2.25"
       },
       "odds_wh": {
-        "h": "3.6",
+        "h": "3.5",
         "a": "2.1",
         "x": "3.1",
-        "o25": "2.3"
+        "o25": "2.25"
       },
       "prob": {
         "h": 29,
@@ -646,22 +641,22 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 0,
+        "conf": 78,
+        "confReason": "Combined expected goals is likely >= 2.7 given the teams' attacking prowess and William Hill's odds, strongly supporting over 2.5 goals",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.75",
-        "confReason": ""
+        "odd": "1.75"
       },
       "odds_wh": {
         "a": "3.3",
-        "h": "2.1",
-        "x": "3.4",
+        "h": "2.05",
+        "x": "3.3",
         "o25": "1.75"
       },
       "prob": {
-        "h": 48,
+        "h": 49,
         "d": 30,
-        "a": 31
+        "a": 30
       },
       "aiCtx": "VfB Stuttgart vs Porto in the Europa League.",
       "newsCtx": "5 days ago · VfB Stuttgart take on VfL Wolfsburg as part of Sunday’s ‘International Matchday’ at the MHP Arena. Jeff Chabot, who speaks five languages, tells us about the diversity in the VfB dressing … | All info, news and stats relating to VfB Stuttgart in the 2025/26 Bundesliga season | Visit ESP",
@@ -682,23 +677,23 @@
       "competitionBG": "Лига Европа",
       "status": "pending",
       "pick": {
-        "bet": "Celta Vigo победа",
-        "betEn": "Celta Vigo Win",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "2.05",
-        "confReason": ""
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals is not explicitly given, but considering the odds and typical Europa League matches, it's likely above 2.7. The odd is within the 1.40-2.50 sweet spot, but there's a minor uncertainty due to lack of explicit expected goals and recent form data.",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
       },
       "odds_wh": {
-        "h": "2.05",
-        "a": "3.4",
-        "x": "3.4",
+        "h": "2.1",
+        "a": "3.3",
+        "x": "3.3",
         "o25": "1.85"
       },
       "prob": {
-        "h": 49,
-        "d": 29,
+        "h": 48,
+        "d": 30,
         "a": 30
       },
       "aiCtx": "Celta Vigo vs Lyon in the Europa League.",
@@ -721,18 +716,17 @@
       "pick": {
         "bet": "Нотингам Форест победа",
         "betEn": "Nottingham Forest Win",
-        "conf": 0,
+        "conf": 78,
+        "confReason": "Nottingham Forest is clearly dominant with a strong form and an 8+ place gap, the h2h odd is within the 1.40-2.10 range",
         "market": "h2h",
         "selection": "home",
-        "odd": "1.53",
-        "confReason": ""
+        "odd": "1.55"
       },
       "odds_wh": {
-        "a": "5.75",
-        "h": "1.53",
+        "a": "5.0",
+        "h": "1.55",
         "x": "4.0",
-        "o25": "1.74",
-        "o15": "1.25"
+        "o25": "1.7"
       },
       "prob": {
         "h": 65,
@@ -759,20 +753,20 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 0,
+        "conf": 68,
+        "confReason": "Combined expected goals is likely over 2.7 given the teams' recent performances, and the odd is within the 1.40-2.50 sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "2.05",
-        "confReason": ""
+        "odd": "2.05"
       },
       "odds_wh": {
-        "h": "3.0",
+        "h": "2.9",
         "a": "2.3",
         "x": "3.25",
         "o25": "2.05"
       },
       "prob": {
-        "h": 33,
+        "h": 34,
         "d": 31,
         "a": 43
       },
@@ -796,23 +790,22 @@
       "status": "pending",
       "pick": {
         "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 0,
+        "betEn": "Over 2.5",
+        "conf": 78,
+        "confReason": "Combined expected goals is likely over 2.7 given the context of Europa League and the provided odds, and the odd is within the 1.40-2.50 sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.83",
-        "confReason": ""
+        "odd": "1.8"
       },
       "odds_wh": {
-        "h": "2.55",
+        "h": "2.5",
         "a": "2.6",
         "x": "3.3",
-        "o25": "1.83",
-        "o15": "1.26"
+        "o25": "1.8"
       },
       "prob": {
-        "h": 38,
-        "d": 31,
+        "h": 40,
+        "d": 30,
         "a": 38
       },
       "aiCtx": "KRC Genk vs SC Freiburg in the Europa League.",
@@ -833,24 +826,24 @@
       "competitionBG": "Конференц лига",
       "status": "pending",
       "pick": {
-        "bet": "AZ Alkmaar победа",
-        "betEn": "AZ Alkmaar Win",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "2.1",
-        "confReason": ""
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 78,
+        "confReason": "Combined expected goals is likely >= 2.7 given the teams' recent form and the odds provided, and the odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
       },
       "odds_wh": {
         "h": "2.1",
-        "a": "3.3",
+        "a": "3.25",
         "x": "3.25",
-        "o25": "1.83"
+        "o25": "1.85"
       },
       "prob": {
         "h": 48,
         "d": 31,
-        "a": 30
+        "a": 31
       },
       "aiCtx": "AZ Alkmaar vs Sparta Prague in the Conference League.",
       "ai": "Двубойът между AZ Alkmaar и Sparta Prague в Conference League е много оспорван, като домакините вкарват 2 гола на мач, а гостите допускат 1.5 гола. Домакините имат форма П П Р и се намират на по-добра позиция от гостите, което ги прави фаворити в този двубой. Аз давам прогноза за победа на AZ Alkmaar при котировка 2.1, с увереност 58%, тъй като те имат предимство на формата и голова сила.",
@@ -872,22 +865,22 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 0,
+        "conf": 72,
+        "confReason": "Combined expected goals is likely above 2.7 given the context of a Conference League match and the provided odds, with both teams likely to score, but the exact data is not available, and the odd is within the sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.85",
-        "confReason": ""
+        "odd": "1.85"
       },
       "odds_wh": {
         "h": "3.7",
-        "a": "1.91",
-        "x": "3.4",
+        "a": "1.85",
+        "x": "3.5",
         "o25": "1.85"
       },
       "prob": {
-        "h": 31,
+        "h": 27,
         "d": 29,
-        "a": 49
+        "a": 54
       },
       "aiCtx": "HNK Rijeka vs Strasbourg in the Conference League.",
       "ai": "Двубойът между HNK Rijeka и Strasbourg в Conference League е много оспорван, като домакините имат форма от П 2-1, Р 1-1, З 1-2, а гостите - П 2-0, Р 1-1, З 1-3. Вкарват повече от 2.5 гола на мач, като HNK Rijeka вкарват 1.5 гола на мач и допускат 1.2 гола, а Strasbourg вкарват 1.8 гола на мач и допускат 1.5 гола, което говори за висок резултат. Прогнозата е над 2.5 гола при котировка 1.85, която е много привлекателна и има залог от 58%.",
@@ -909,15 +902,15 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 0,
+        "conf": 72,
+        "confReason": "Combined expected goals is likely over 2.7 given the teams' participation in the Conference League, and the odd is within the 1.40-2.50 sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.85",
-        "confReason": ""
+        "odd": "1.85"
       },
       "odds_wh": {
-        "h": "2.6",
-        "a": "2.55",
+        "h": "2.5",
+        "a": "2.5",
         "x": "3.2",
         "o25": "1.85"
       },
@@ -945,24 +938,23 @@
       "status": "pending",
       "pick": {
         "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 0,
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals is likely over 2.7 given the odds, and the market rule for over 2.5 fires cleanly with an odd in the sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.95",
-        "confReason": ""
+        "odd": "2.0"
       },
       "odds_wh": {
         "a": "2.2",
         "h": "3.1",
-        "x": "3.2",
-        "o25": "1.95",
-        "o15": "1.31"
+        "x": "3.1",
+        "o25": "2.0"
       },
       "prob": {
-        "h": 34,
+        "h": 32,
         "d": 32,
-        "a": 43
+        "a": 45
       },
       "aiCtx": "Samsunspor vs Rayo Vallecano in the Conference League.",
       "ai": "Двубойът между Samsunspor и Rayo Vallecano в Conference League е много оспорван, като домакините имат форма П 2-1, Р 1-1, З 2-3, а гостите - П 3-2, Р 0-0, З 1-2. Двете отбора вкарват много гола, като Samsunspor вкарват 1.8 гола на мач, а Rayo Vallecano - 2.1 гола, което прави прогнозата над 2.5 гола много реална. Прогнозата ми е над 2.5 гола при котировка 1.91, на която бих поставил залог с увереност 70%.",
@@ -984,22 +976,22 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 0,
+        "conf": 78,
+        "confReason": "Combined expected goals is not explicitly given but based on the odds provided, it can be inferred that the game has a high chance of having more than 2.5 goals, and the odd is within the 1.40–2.50 sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.75",
-        "confReason": ""
+        "odd": "1.67"
       },
       "odds_wh": {
-        "a": "2.05",
+        "a": "2.0",
         "h": "3.4",
-        "x": "3.25",
-        "o25": "1.75"
+        "x": "3.4",
+        "o25": "1.67"
       },
       "prob": {
-        "h": 30,
-        "d": 31,
-        "a": 49
+        "h": 29,
+        "d": 29,
+        "a": 50
       },
       "aiCtx": "NK Celje vs AEK Athens in the Conference League.",
       "ai": "Двубойът между NK Celje и AEK Athens е част от Conference League, където домакините са в добра форма, а гостите имат силна атака. NK Celje вкарват 1.5 гола на мач, докато AEK Athens допускат 1.2 гола, което говори за висока вероятност над 2.5 гола, тъй като и двата отбора имат скорошни резултати с много гола. Прогнозата ми е над 2.5 гола при котировка 1.75, с увереност 68%, което прави този залог привлекателен.",
@@ -1021,18 +1013,17 @@
       "pick": {
         "bet": "Кристъл Палас победа",
         "betEn": "Crystal Palace Win",
-        "conf": 0,
+        "conf": 78,
+        "confReason": "Clear dominance with 8+ place gap and strong home form, odd is within the sweet spot",
         "market": "h2h",
         "selection": "home",
-        "odd": "1.21",
-        "confReason": ""
+        "odd": "1.22"
       },
       "odds_wh": {
-        "a": "13.0",
-        "h": "1.21",
+        "a": "12.0",
+        "h": "1.22",
         "x": "5.5",
-        "o25": "1.63",
-        "o15": "1.2"
+        "o25": "1.6"
       },
       "prob": {
         "h": 82,
@@ -1058,23 +1049,23 @@
       "status": "pending",
       "pick": {
         "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
+        "betEn": "Over 2.5 Goals",
+        "conf": 68,
+        "confReason": "Combined expected goals is likely over 2.7 given the context of the Conference League and the teams involved, and the odd is within the preferred range",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.91",
-        "confReason": ""
+        "odd": "1.83"
       },
       "odds_wh": {
-        "a": "1.77",
-        "h": "4.4",
-        "x": "3.3",
-        "o25": "1.91"
+        "a": "1.75",
+        "h": "4.0",
+        "x": "3.5",
+        "o25": "1.83"
       },
       "prob": {
-        "h": 26,
-        "d": 30,
-        "a": 54
+        "h": 25,
+        "d": 29,
+        "a": 57
       },
       "aiCtx": "Sigma Olomouc vs FSV Mainz 05 in the Conference League.",
       "ai": "Двубойът между Sigma Olomouc и FSV Mainz 05 в Conference League е много оспорван, като домакините вкарват 1.2 гола на мач и допускат 1.5 гола, а гостите вкарват 1.8 гола и допускат 1.2 гола. Отходящата форма на двата отбора показва, че те са склонни към високи резултати, което оправдава прогнозата над 2.5 гола, тъй като Sigma Olomouc и FSV Mainz 05 имат скорошни резултати с много гола. Прогнозата ми е над 2.5 гола при котировка 1.91, с увереност 58%, което прави този залог много привлекателен.",
@@ -1094,24 +1085,24 @@
       "competitionBG": "Конференц лига",
       "status": "pending",
       "pick": {
-        "bet": "Фиорентина победа",
-        "betEn": "Fiorentina Win",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.67",
-        "confReason": ""
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 78,
+        "confReason": "Combined expected goals is likely over 2.7 given Fiorentina's strong form and Raków Częstochowa's ability to score, and the odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.8"
       },
       "odds_wh": {
-        "h": "1.67",
-        "a": "4.8",
+        "h": "1.73",
+        "a": "4.33",
         "x": "3.5",
         "o25": "1.8"
       },
       "prob": {
-        "h": 60,
+        "h": 58,
         "d": 29,
-        "a": 21
+        "a": 23
       },
       "aiCtx": "Fiorentina vs Raków Częstochowa in the Conference League.",
       "ai": "Двубойът между Фиорентина и Raków Częstochowa е част от Conference League, където домакините вкарват 1.5 гола на мач, а гостите допускат 1.2 гола. Фиорентина има форма от П 2-0, Р 1-1, З 0-1 и имат предимство пред Raków Częstochowa, която е в по-слаба форма от П 1-0, Р 0-0, З 1-2. Прогнозата е за победа на Фиорентина при котировка 1.67, като залогът е с увереност 65%.",
@@ -1469,29 +1460,24 @@
     }
   ],
   "betBuilder": {
-    "matchId": "che_new",
-    "home": "Челси",
-    "homeEn": "Chelsea",
-    "away": "Нюкасъл",
-    "awayEn": "Newcastle",
+    "matchId": "9b970604",
+    "home": "Щутгарт",
+    "homeEn": "VfB Stuttgart",
+    "away": "Порто",
+    "awayEn": "Porto",
     "markets": [
-      {
-        "market": "Над 2.5 гола",
-        "marketEn": "Over 2.5 Goals",
-        "odd": "1.44"
-      },
       {
         "market": "Победа домакин",
         "marketEn": "Home Win",
-        "odd": "1.75"
+        "odd": "2.05"
       },
       {
-        "market": "Победа гост",
-        "marketEn": "Away Win",
-        "odd": "3.9"
+        "market": "Над 2.5 гола",
+        "marketEn": "Over 2.5 Goals",
+        "odd": "1.75"
       }
     ],
-    "totalOdd": "9.83",
+    "totalOdd": "3.59",
     "reasoning": "",
     "reasoningEn": ""
   },
