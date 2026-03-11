@@ -270,6 +270,11 @@ def main():
                         afb_key,
                     )
                     all_afb  = payload.get("response", [])
+                    errors   = payload.get("errors", [])
+                    if errors:
+                        print(f"  ⚠  api-football errors: {errors}")
+                    print(f"  ℹ  api-football raw: {len(all_afb)} total fixtures, statuses: "
+                          f"{list({f.get('fixture',{}).get('status',{}).get('short') for f in all_afb})}")
                     # Accept FT (full time), AET (after extra time), PEN (penalties)
                     uefa_afb = [f for f in all_afb
                                 if f.get("fixture", {}).get("status", {}).get("short") in ("FT", "AET", "PEN")]
