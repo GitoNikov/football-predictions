@@ -712,6 +712,25 @@ def ordinal(n: int) -> str:
     return f"{n}{['th','st','nd','rd','th'][min(n%10,4)]}"
 
 
+def form_stats(form: str) -> dict:
+    """Parse form string 'W 2-0, D 1-1, L 0-2' → BTTS and over 2.5 counts."""
+    btts = over25 = n = 0
+    for g in form.split(","):
+        parts = g.strip().split()
+        if len(parts) < 2:
+            continue
+        try:
+            a, b = map(int, parts[1].split("-"))
+            if a > 0 and b > 0:
+                btts += 1
+            if a + b > 2:
+                over25 += 1
+            n += 1
+        except (ValueError, IndexError):
+            continue
+    return {"btts": btts, "over25": over25, "n": n}
+
+
 def build_ai_ctx(home_en: str, away_en: str, home_st: dict, away_st: dict,
                  home_form: str, away_form: str, h2h: str = "",
                  league_name: str = "Premier League") -> str:
@@ -723,13 +742,25 @@ def build_ai_ctx(home_en: str, away_en: str, home_st: dict, away_st: dict,
     h_ga   = home_st.get("ga_pg", "?")
     a_gf   = away_st.get("gf_pg", "?")
     a_ga   = away_st.get("ga_pg", "?")
+
+    h_fs   = form_stats(home_form)
+    a_fs   = form_stats(away_form)
+
+    try:
+        combined_xg = round(float(h_gf) + float(a_ga), 1)
+    except (ValueError, TypeError):
+        combined_xg = "?"
+
     ctx = (
         f"{home_en} are {h_pos} in the {league_name} ({h_pts} pts), "
         f"scoring {h_gf} and conceding {h_ga} goals per game, "
+        f"BTTS in {h_fs['btts']}/{h_fs['n']} and over 2.5 in {h_fs['over25']}/{h_fs['n']} recent games, "
         f"form (last 6, scored first): {home_form}. "
         f"{away_en} are {a_pos} ({a_pts} pts), "
         f"scoring {a_gf} and conceding {a_ga} goals per game, "
-        f"form (last 6, scored first): {away_form}."
+        f"BTTS in {a_fs['btts']}/{a_fs['n']} and over 2.5 in {a_fs['over25']}/{a_fs['n']} recent games, "
+        f"form (last 6, scored first): {away_form}. "
+        f"Combined expected goals (home scores + away concedes): ~{combined_xg}/game."
     )
     if h2h:
         ctx += f" {h2h}."
@@ -763,13 +794,20 @@ def search_team_news(home_en: str, away_en: str) -> str:
 def groq_pick(client, home_en: str, away_en: str, ai_ctx: str, odds_wh: dict, news: str = "") -> dict:
     """Ask Groq to suggest a pick. Returns pick dict."""
     odds_str = json.dumps(odds_wh)
-    prompt = f"""You are an expert football analyst. Suggest one pick for:
+    prompt = f"""You are an expert football betting analyst. Suggest the single best value pick for:
 {home_en} vs {away_en}
 Context: {ai_ctx}
 Latest news (injuries/suspensions): {news}
 William Hill odds: {odds_str}
 
-Prefer odds between 1.40 and 2.50 (compatible with accumulator systems).
+Market selection rules (follow strictly):
+1. If combined expected goals >= 2.7 AND both teams have BTTS in 4+/6 recent games → prefer btts/yes
+2. If combined expected goals >= 2.7 (but BTTS rate lower) → prefer over_under/over_2.5
+3. If combined expected goals >= 2.0 but < 2.7 → consider over_under/over_1.5
+4. If one team is clearly dominant (strong form + position gap >= 8 places) AND h2h odd 1.40–2.10 → h2h
+5. Only pick draw if both teams are very evenly matched AND draw odd <= 3.50
+6. Always prefer odds between 1.40 and 2.50.
+
 Return ONLY valid JSON, no markdown:
 {{
   "market": "h2h",
@@ -786,7 +824,7 @@ selection values: home | away | draw | yes | no | over_2.5 | under_2.5 | over_1.
         resp = client.chat.completions.create(
             model=MODEL_NAME,
             messages=[{"role": "user", "content": prompt}],
-            temperature=0.6,
+            temperature=0.3,
             max_tokens=200,
         )
         text = resp.choices[0].message.content.strip()
