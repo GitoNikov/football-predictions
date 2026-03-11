@@ -60,9 +60,9 @@ DOMESTIC_LEAGUES = {
 
 # UEFA competitions to auto-populate (fixtures only, no AI analysis)
 UEFA_SPORTS = {
-    "soccer_uefa_champs_league":            {"bg": "Шампионска лига", "en": "Champions League"},
-    "soccer_uefa_europa_league":            {"bg": "Лига Европа",     "en": "Europa League"},
-    "soccer_uefa_europa_conference_league": {"bg": "Конференц лига",  "en": "Conference League"},
+    "soccer_uefa_champs_league":            {"bg": "Шампионска лига", "en": "Champions League",   "fd_code": "CL"},
+    "soccer_uefa_europa_league":            {"bg": "Лига Европа",     "en": "Europa League",      "fd_code": "EL"},
+    "soccer_uefa_europa_conference_league": {"bg": "Конференц лига",  "en": "Conference League",  "fd_code": "ECL"},
 }
 
 # ── Bulgarian team name mapping ────────────────────────────────────────────────
@@ -401,11 +401,13 @@ def fetch_domestic_events(api_key: str, sport_key: str, league_name: str) -> lis
     return resp.json()
 
 
-def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> list:
+def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client, fd_key: str = "") -> list:
     """
     Fetch upcoming CL/EL/ECL fixtures from Odds API /odds (includes WH odds).
     Generates Groq picks when odds are available, so cards are fully populated.
     Also re-picks existing UEFA matches that previously had conf=0 (no odds at time of creation).
+    When fd_key is provided, fetches real standings + form from football-data.org
+    to build a rich aiCtx (same quality as domestic leagues).
     """
     new_fixtures = []
     now        = datetime.now(timezone.utc)
@@ -448,6 +450,45 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> l
         events    = resp.json()
         added     = 0
 
+        # ── Fetch UEFA standings once per competition (if fd_key available) ──
+        uefa_standings: dict = {}
+        if fd_key and comp.get("fd_code"):
+            try:
+                print(f"  📊  Fetching {comp['en']} standings from football-data.org…")
+                uefa_standings, _ = fetch_standings(comp["fd_code"], fd_key)
+            except Exception as e:
+                print(f"  ⚠  Could not fetch {comp['en']} standings: {e}")
+
+        # Pre-fetch form for all teams in this competition's upcoming events
+        uefa_forms: dict = {}
+        if fd_key and uefa_standings:
+            teams_needed: dict[str, int] = {}
+            for ev in events:
+                ct = ev.get("commence_time", "")
+                try:
+                    dt_check = datetime.fromisoformat(ct.replace("Z", "+00:00"))
+                except Exception:
+                    continue
+                if not (now <= dt_check <= window_end):
+                    continue
+                for team_name in (ev["home_team"], ev["away_team"]):
+                    norm = normalize_team(team_name)
+                    st = find_standing(norm, uefa_standings)
+                    if st and norm not in teams_needed:
+                        teams_needed[norm] = st["team_id"]
+            if teams_needed:
+                print(f"  ⚽  Fetching form for {len(teams_needed)} {comp['en']} teams…")
+                for i, (name, tid) in enumerate(teams_needed.items()):
+                    if i > 0:
+                        time.sleep(FORM_SLEEP)
+                    try:
+                        form = fetch_team_form(tid, fd_key)
+                        uefa_forms[name] = form
+                        print(f"    ✓  {name}: {form}")
+                    except Exception as e:
+                        print(f"    ⚠  Form fetch failed for {name}: {e}")
+                        uefa_forms[name] = "N/A"
+
         for ev in events:
             ct = ev.get("commence_time", "")
             try:
@@ -473,7 +514,21 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> l
             time_str = dt_sofia.strftime("%H:%M")
 
             odds_wh = extract_wh_odds(ev)
-            ai_ctx  = f"{home_en} vs {away_en} in the {comp['en']}."
+
+            # Build rich aiCtx if we have standings/form, else fall back to stub
+            home_norm = normalize_team(home_en)
+            away_norm = normalize_team(away_en)
+            home_st = find_standing(home_norm, uefa_standings) if uefa_standings else None
+            away_st = find_standing(away_norm, uefa_standings) if uefa_standings else None
+            if home_st and away_st:
+                home_form = uefa_forms.get(home_norm, "N/A")
+                away_form = uefa_forms.get(away_norm, "N/A")
+                ai_ctx = build_ai_ctx(
+                    home_en, away_en, home_st, away_st,
+                    home_form, away_form, "", comp["en"]
+                )
+            else:
+                ai_ctx = f"{home_en} vs {away_en} in the {comp['en']}."
 
             if odds_wh:
                 print(f"\n  🔎  Searching news for {home_en} vs {away_en}…", end=" ", flush=True)
@@ -1183,9 +1238,9 @@ def main():
     # ── Step 5: UEFA fixtures — new + re-pick existing conf=0 ────────────────
     print("\n🏆  Fetching UEFA fixtures…")
     all_existing_upcoming = existing.get("upcoming", []) + new_matches
-    uefa_fixtures = fetch_uefa_fixtures(odds_key, all_existing_upcoming, groq_client)
+    uefa_fixtures = fetch_uefa_fixtures(odds_key, all_existing_upcoming, groq_client, fd_key=fd_key)
     if uefa_fixtures:
-        print(f"  → {len(uefa_fixtures)} new UEFA fixtures added (picks needed manually)")
+        print(f"  → {len(uefa_fixtures)} new UEFA fixtures added")
     new_matches.extend(uefa_fixtures)
 
     # ── Step 6: betBuilder selection ─────────────────────────────────────────
