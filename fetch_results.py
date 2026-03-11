@@ -266,10 +266,13 @@ def main():
                 try:
                     payload  = afb_get(
                         f"/fixtures?league={league_id}&season={season}"
-                        f"&from={date_from}&to={date_to}&status=FT",
+                        f"&from={date_from}&to={date_to}",
                         afb_key,
                     )
-                    uefa_afb = payload.get("response", [])
+                    all_afb  = payload.get("response", [])
+                    # Accept FT (full time), AET (after extra time), PEN (penalties)
+                    uefa_afb = [f for f in all_afb
+                                if f.get("fixture", {}).get("status", {}).get("short") in ("FT", "AET", "PEN")]
                     print(f"  ✓  api-football returned {len(uefa_afb)} finished {comp_en} matches")
                 except Exception as e:
                     print(f"  ⚠  Could not fetch {comp_en} results: {e}")
@@ -349,10 +352,12 @@ def main():
                 try:
                     payload = afb_get(
                         f"/fixtures?league={league_id}&season={season}"
-                        f"&from={bb_date}&to={bb_date}&status=FT",
+                        f"&from={bb_date}&to={bb_date}",
                         afb_key,
                     )
-                    afb_fixtures = payload.get("response", [])
+                    all_fix      = payload.get("response", [])
+                    afb_fixtures = [f for f in all_fix
+                                    if f.get("fixture", {}).get("status", {}).get("short") in ("FT", "AET", "PEN")]
                     print(f"\n🏆  betBuilder {bb_comp}: {len(afb_fixtures)} finished matches on {bb_date}")
                 except Exception as e:
                     print(f"  ⚠  Could not fetch {bb_comp} results: {e}")
