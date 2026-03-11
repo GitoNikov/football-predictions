@@ -1613,7 +1613,10 @@
       "pick": {
         "bet": "Щутгарт победа",
         "betEn": "Stuttgart Win",
-        "odd": "1.36"
+        "odd": "1.36",
+        "conf": 55,
+        "market": "h2h",
+        "selection": "home"
       },
       "result": "W"
     },
@@ -1629,7 +1632,10 @@
       "pick": {
         "bet": "Болоня победа",
         "betEn": "Bologna Win",
-        "odd": "1.60"
+        "odd": "1.60",
+        "conf": 55,
+        "market": "h2h",
+        "selection": "home"
       },
       "result": "W"
     },
@@ -1645,7 +1651,10 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "odd": "1.75"
+        "odd": "1.75",
+        "conf": 55,
+        "market": "over_under",
+        "selection": "over_2.5"
       },
       "result": "L"
     },
@@ -1661,7 +1670,10 @@
       "pick": {
         "bet": "Ференцварош победа",
         "betEn": "Ferencvaros Win",
-        "odd": "2.10"
+        "odd": "2.10",
+        "conf": 55,
+        "market": "h2h",
+        "selection": "home"
       },
       "result": "L"
     },
@@ -1677,7 +1689,10 @@
       "pick": {
         "bet": "Чрв. Звезда победа",
         "betEn": "Red Star Win",
-        "odd": "2.30"
+        "odd": "2.30",
+        "conf": 55,
+        "market": "h2h",
+        "selection": "home"
       },
       "result": "L"
     }

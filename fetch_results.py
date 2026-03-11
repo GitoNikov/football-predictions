@@ -89,10 +89,22 @@ def determine_bb_result(markets: list, h: int, a: int) -> str:
     return "W"
 
 
+def infer_market_selection(pick: dict) -> tuple[str, str]:
+    """Infer market/selection from betEn when fields are missing."""
+    bet_en = pick.get("betEn", "")
+    if "Over 2.5" in bet_en:  return "over_under", "over_2.5"
+    if "Over 1.5" in bet_en:  return "over_under", "over_1.5"
+    if "Under 2.5" in bet_en: return "over_under", "under_2.5"
+    if "BTTS" in bet_en:      return "btts", "yes"
+    if "Draw" in bet_en:      return "h2h", "draw"
+    return "h2h", "home"  # default
+
+
 def determine_result(match: dict, home_score: int, away_score: int) -> str | None:
     """Return 'W', 'L', or None if the market/selection cannot be resolved."""
-    market    = match["pick"].get("market", "h2h")
-    selection = match["pick"].get("selection", "home")
+    pick      = match["pick"]
+    market    = pick.get("market") or infer_market_selection(pick)[0]
+    selection = pick.get("selection") or infer_market_selection(pick)[1]
     h, a      = home_score, away_score
 
     if market == "h2h":
