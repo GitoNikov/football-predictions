@@ -608,6 +608,7 @@ const T = {
     booksTitle:"🇧🇬 + 🌍 Букмейкъри:",
     systemTitle:'🎯 Система',
     bbTitle:'🔨 Бет Билдър',
+    bbPerf:'Успеваемост',
     footerData:'Данни: ',
     footerDisclaimer:'18+ · Играй отговорно · НАП лицензирани оператори',
   },
@@ -627,6 +628,7 @@ const T = {
     booksTitle:"🇧🇬 + 🌍 Bookmakers:",
     systemTitle:'🎯 System',
     bbTitle:'🔨 Bet Builder',
+    bbPerf:'Record',
     footerData:'Data: ',
     footerDisclaimer:'18+ · Play responsibly · NAP licensed operators',
   }
@@ -1144,6 +1146,15 @@ function renderBetBuilder() {
     </div>
     ${reasoning ? `<div style="font-size:10px;color:var(--muted);line-height:1.55;font-style:italic;padding-top:8px;border-top:1px solid var(--border)">${reasoning}</div>` : ''}
   </div>
+  ${MD.bbRecord && MD.bbRecord.total > 0 ? (() => {
+    const r = MD.bbRecord;
+    const pct = Math.round(r.correct / r.total * 100);
+    const col = pct >= 50 ? 'var(--green)' : 'var(--red)';
+    return `<div style="padding:7px 14px;border-top:1px solid rgba(59,139,255,.12);display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px">${tl('bbPerf')}</span>
+      <span style="font-family:'DM Mono',monospace;font-size:12px;font-weight:700;color:${col}">${r.correct}/${r.total} <span style="font-size:10px;opacity:.7">(${pct}%)</span></span>
+    </div>`;
+  })() : ''}
 </div>`;
 }
 

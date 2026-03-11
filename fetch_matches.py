@@ -43,7 +43,20 @@ ODDS_BASE       = "https://api.the-odds-api.com/v4"
 FD_BASE         = "https://api.football-data.org/v4"
 MODEL_NAME      = "llama-3.3-70b-versatile"
 FORM_SLEEP      = 6.5   # seconds between football-data.org team requests
-COMPETITION     = "PL"  # Premier League code
+
+# Domestic leagues processed every Monday
+DOMESTIC_LEAGUES = {
+    "soccer_epl": {
+        "fd_code": "PL",
+        "en":      "Premier League",
+        "bg":      "Висша лига",
+    },
+    "soccer_spain_la_liga": {
+        "fd_code": "PD",
+        "en":      "La Liga",
+        "bg":      "Ла Лига",
+    },
+}
 
 # UEFA competitions to auto-populate (fixtures only, no AI analysis)
 UEFA_SPORTS = {
@@ -126,6 +139,47 @@ TEAM_ABBR = {
     "West Ham United":   "whu",
     "Wolves":            "wol",
     "Wolverhampton Wanderers": "wol",
+    # La Liga
+    "Real Madrid":              "rma",
+    "Real Madrid CF":           "rma",
+    "FC Barcelona":             "bar",
+    "Barcelona":                "bar",
+    "Atletico Madrid":          "atm",
+    "Atlético Madrid":          "atm",
+    "Atletico de Madrid":       "atm",
+    "Atlético de Madrid":       "atm",
+    "Athletic Club":            "bil",
+    "Athletic Bilbao":          "bil",
+    "Real Sociedad":            "rso",
+    "Villarreal":               "vil",
+    "Villarreal CF":            "vil",
+    "Real Betis":               "bet",
+    "Betis":                    "bet",
+    "Sevilla":                  "sev",
+    "Sevilla FC":               "sev",
+    "Valencia":                 "val",
+    "Valencia CF":              "val",
+    "Osasuna":                  "osa",
+    "CA Osasuna":               "osa",
+    "Celta Vigo":               "cel",
+    "RC Celta de Vigo":         "cel",
+    "Rayo Vallecano":           "ray",
+    "Getafe":                   "get",
+    "Getafe CF":                "get",
+    "Girona":                   "gir",
+    "Girona FC":                "gir",
+    "Mallorca":                 "mal",
+    "RCD Mallorca":             "mal",
+    "Las Palmas":               "lpa",
+    "UD Las Palmas":            "lpa",
+    "Espanyol":                 "esp",
+    "RCD Espanyol":             "esp",
+    "Leganes":                  "leg",
+    "CD Leganés":               "leg",
+    "Real Valladolid":          "vll",
+    "Real Valladolid CF":       "vll",
+    "Alaves":                   "ala",
+    "Deportivo Alavés":         "ala",
 }
 
 # Market labels for betBuilder — Python controls BG/EN, Groq only picks the key
@@ -245,6 +299,23 @@ UEFA_TEAM_BG = {
     "Paris Saint-Germain":   "ПСЖ",
     "VfB Stuttgart":         "Щутгарт",
     "SC Braga":              "Брага",
+    # La Liga (teams not already covered above)
+    "Getafe":                "Хетафе",
+    "Getafe CF":             "Хетафе",
+    "Girona":                "Хирона",
+    "Girona FC":             "Хирона",
+    "Mallorca":              "Майорка",
+    "RCD Mallorca":          "Майорка",
+    "Las Palmas":            "Лас Палмас",
+    "UD Las Palmas":         "Лас Палмас",
+    "Espanyol":              "Еспаньол",
+    "RCD Espanyol":          "Еспаньол",
+    "Leganes":               "Леганес",
+    "CD Leganés":            "Леганес",
+    "Real Valladolid":       "Ваядолид",
+    "Real Valladolid CF":    "Ваядолид",
+    "Alaves":                "Алавес",
+    "Deportivo Alavés":      "Алавес",
 }
 
 # 3-char display abbreviations for homeA/awayA
@@ -254,6 +325,11 @@ TEAM_ABBR_DISPLAY = {
     "lee": "LEE", "lei": "LEI", "liv": "LIV", "mci": "MCI", "mun": "MUN",
     "new": "NEW", "for": "FOR", "sou": "SOU", "sun": "SUN", "tot": "TOT",
     "whu": "WHU", "wol": "WOL",
+    # La Liga
+    "rma": "RMA", "bar": "BAR", "atm": "ATM", "bil": "BIL", "rso": "RSO",
+    "vil": "VIL", "bet": "BET", "sev": "SEV", "val": "VAL", "osa": "OSA",
+    "cel": "CEL", "ray": "RAY", "get": "GET", "gir": "GIR", "mal": "MAL",
+    "lpa": "LPA", "esp": "ESP", "leg": "LEG", "vll": "VLL", "ala": "ALA",
 }
 
 
@@ -306,9 +382,9 @@ def make_match_id(home_en: str, away_en: str) -> str:
 
 
 # ── Odds API ──────────────────────────────────────────────────────────────────
-def fetch_epl_events(api_key: str) -> list:
-    """Fetch upcoming EPL events from The Odds API (next 14 days)."""
-    url = f"{ODDS_BASE}/sports/soccer_epl/odds/"
+def fetch_domestic_events(api_key: str, sport_key: str, league_name: str) -> list:
+    """Fetch upcoming domestic league events from The Odds API (next 14 days)."""
+    url = f"{ODDS_BASE}/sports/{sport_key}/odds/"
     params = {
         "apiKey":     api_key,
         "regions":    "eu",
@@ -321,7 +397,7 @@ def fetch_epl_events(api_key: str) -> list:
         sys.exit("❌  Invalid ODDS_API_KEY")
     resp.raise_for_status()
     remaining = resp.headers.get("x-requests-remaining", "?")
-    print(f"  ✓  Odds API: {len(resp.json())} EPL events | quota remaining {remaining}")
+    print(f"  ✓  Odds API: {len(resp.json())} {league_name} events | quota remaining {remaining}")
     return resp.json()
 
 
@@ -532,13 +608,13 @@ def fd_get(path: str, fd_key: str) -> dict:
     return resp.json()
 
 
-def fetch_standings(fd_key: str) -> tuple[dict, int]:
+def fetch_standings(competition: str, fd_key: str) -> tuple[dict, int]:
     """
     Returns:
         standings_map: {team_name_en: {pos, pts, team_id}}
         current_matchday: int
     """
-    data = fd_get(f"/competitions/{COMPETITION}/standings", fd_key)
+    data = fd_get(f"/competitions/{competition}/standings", fd_key)
     matchday = data.get("season", {}).get("currentMatchday", 0)
     standings_map = {}
     for table in data.get("standings", []):
@@ -637,7 +713,8 @@ def ordinal(n: int) -> str:
 
 
 def build_ai_ctx(home_en: str, away_en: str, home_st: dict, away_st: dict,
-                 home_form: str, away_form: str, h2h: str = "") -> str:
+                 home_form: str, away_form: str, h2h: str = "",
+                 league_name: str = "Premier League") -> str:
     h_pos  = ordinal(home_st["pos"])
     a_pos  = ordinal(away_st["pos"])
     h_pts  = home_st["pts"]
@@ -647,7 +724,7 @@ def build_ai_ctx(home_en: str, away_en: str, home_st: dict, away_st: dict,
     a_gf   = away_st.get("gf_pg", "?")
     a_ga   = away_st.get("ga_pg", "?")
     ctx = (
-        f"{home_en} are {h_pos} in the Premier League ({h_pts} pts), "
+        f"{home_en} are {h_pos} in the {league_name} ({h_pts} pts), "
         f"scoring {h_gf} and conceding {h_ga} goals per game, "
         f"form (last 6, scored first): {home_form}. "
         f"{away_en} are {a_pos} ({a_pts} pts), "
@@ -781,6 +858,161 @@ Prefer markets that logically combine (e.g., high-scoring game + BTTS + home win
         return None
 
 
+# ── Domestic league pipeline ──────────────────────────────────────────────────
+def process_domestic_league(
+    sport_key: str, fd_code: str, league_en: str, league_bg: str,
+    odds_key: str, fd_key: str, groq_client,
+    existing: dict,
+) -> tuple[list, int]:
+    """
+    Full pipeline for one domestic league: events → standings → form → H2H → picks.
+    Returns (new_matches, matchday_num).  Modifies existing upcoming matches in-place
+    to refresh aiCtx when the match already exists.
+    """
+    existing_ids      = {m["id"] for m in existing.get("upcoming", [])}
+    existing_upcoming = existing.get("upcoming", [])
+
+    print(f"\n📡  Fetching {league_en} events from Odds API…")
+    all_events = fetch_domestic_events(odds_key, sport_key, league_en)
+    gw_events  = filter_next_gameweek(all_events)
+    if not gw_events:
+        print(f"  ⚠  No upcoming {league_en} events found in next 14 days.")
+        return [], 0
+    print(f"  → {len(gw_events)} events in next gameweek window")
+
+    print(f"\n📊  Fetching {league_en} standings from football-data.org…")
+    standings_map, current_matchday = fetch_standings(fd_code, fd_key)
+
+    # Collect unique team IDs for form fetching
+    teams_needed: dict[str, int] = {}
+    for ev in gw_events:
+        for team_name in (ev["home_team"], ev["away_team"]):
+            norm = normalize_team(team_name)
+            st = find_standing(norm, standings_map)
+            if st and norm not in teams_needed:
+                teams_needed[norm] = st["team_id"]
+
+    print(f"\n⚽  Fetching form for {len(teams_needed)} teams ({FORM_SLEEP}s sleep between calls)…")
+    team_forms: dict[str, str] = {}
+    for i, (name, tid) in enumerate(teams_needed.items()):
+        if i > 0:
+            time.sleep(FORM_SLEEP)
+        form = fetch_team_form(tid, fd_key)
+        team_forms[name] = form
+        print(f"  ✓  {name}: {form}")
+
+    print(f"\n🔗  Fetching H2H for {len(gw_events)} pairs ({FORM_SLEEP}s sleep between)…")
+    h2h_map: dict[str, str] = {}
+    for i, ev in enumerate(gw_events):
+        h_en = normalize_team(ev["home_team"])
+        a_en = normalize_team(ev["away_team"])
+        h_st = find_standing(h_en, standings_map) or {}
+        a_st = find_standing(a_en, standings_map) or {}
+        h_id = h_st.get("team_id")
+        a_id = a_st.get("team_id")
+        if h_id and a_id:
+            if i > 0:
+                time.sleep(FORM_SLEEP)
+            h2h = fetch_h2h(h_id, a_id, h_en, fd_key)
+            h2h_map[f"{h_en} vs {a_en}"] = h2h
+            print(f"  ✓  {h_en} vs {a_en}: {h2h or 'no H2H found'}")
+
+    sel_to_key = {
+        "home": "h", "away": "a", "draw": "x",
+        "yes": "btts", "no": "btts",
+        "over_2.5": "o25", "under_2.5": "o25",
+        "over_1.5": "o15", "under_1.5": "o15",
+    }
+
+    new_matches = []
+    for ev in gw_events:
+        home_raw  = ev["home_team"]
+        away_raw  = ev["away_team"]
+        home_en   = normalize_team(home_raw)
+        away_en   = normalize_team(away_raw)
+        match_id  = make_match_id(home_en, away_en)
+
+        home_st   = find_standing(home_en, standings_map) or {"pos": 0, "pts": 0, "team_id": 0}
+        away_st   = find_standing(away_en, standings_map) or {"pos": 0, "pts": 0, "team_id": 0}
+        home_form = team_forms.get(home_en, "N/A")
+        away_form = team_forms.get(away_en, "N/A")
+        h2h       = h2h_map.get(f"{home_en} vs {away_en}", "")
+        ai_ctx    = build_ai_ctx(
+            home_en, away_en, home_st, away_st, home_form, away_form, h2h, league_en
+        )
+
+        if match_id in existing_ids:
+            for m in existing_upcoming:
+                if m["id"] == match_id and m.get("status") == "pending":
+                    m["aiCtx"] = ai_ctx
+                    m.pop("aiCtxHash", None)
+                    print(f"  ↻  {home_en} vs {away_en} — aiCtx refreshed with real standings")
+            continue
+
+        home_bg = team_bg_uefa(home_en)
+        away_bg = team_bg_uefa(away_en)
+        h_abbr  = team_abbr(home_en).upper()
+        a_abbr  = team_abbr(away_en).upper()
+
+        ct = ev.get("commence_time", "")
+        try:
+            dt       = datetime.fromisoformat(ct.replace("Z", "+00:00"))
+            dt_sofia = dt + timedelta(hours=2)
+            date_str = dt_sofia.strftime("%Y-%m-%d")
+            time_str = dt_sofia.strftime("%H:%M")
+        except Exception:
+            date_str = ""
+            time_str = ""
+
+        odds_wh = extract_wh_odds(ev)
+
+        print(f"\n  🔎  Searching news for {home_en} vs {away_en}…", end=" ", flush=True)
+        news = search_team_news(home_en, away_en)
+        print("✓")
+        print(f"  🤖  Groq pick for {home_en} vs {away_en}…", end=" ", flush=True)
+        pick_raw = groq_pick(groq_client, home_en, away_en, ai_ctx, odds_wh, news)
+
+        market       = pick_raw.get("market", "h2h")
+        sel          = pick_raw.get("selection", "home")
+        resolved_odd = odds_wh.get(sel_to_key.get(sel, "h"), pick_raw.get("odd", "1.80"))
+
+        match_entry = {
+            "id":      match_id,
+            "home":    home_bg,
+            "homeEn":  home_en,
+            "homeA":   h_abbr,
+            "away":    away_bg,
+            "awayEn":  away_en,
+            "awayA":   a_abbr,
+            "date":    date_str,
+            "time":    time_str,
+            "status":  "pending",
+            "pick": {
+                "bet":       bet_bg(market, sel, home_bg, away_bg),
+                "betEn":     pick_raw.get("betEN", f"{home_en} Win"),
+                "conf":      int(pick_raw.get("conf", 55)),
+                "market":    market,
+                "selection": sel,
+                "odd":       str(resolved_odd),
+            },
+            "odds_wh": odds_wh,
+            "prob": {
+                "h": round(100 / float(odds_wh["h"])) if "h" in odds_wh else 50,
+                "d": round(100 / float(odds_wh["x"])) if "x" in odds_wh else 25,
+                "a": round(100 / float(odds_wh["a"])) if "a" in odds_wh else 25,
+            },
+            "aiCtx": ai_ctx,
+        }
+        if league_en != "Premier League":
+            match_entry["competition"]   = league_en
+            match_entry["competitionBG"] = league_bg
+
+        new_matches.append(match_entry)
+        print("✓")
+
+    return new_matches, current_matchday
+
+
 # ── GW archive ────────────────────────────────────────────────────────────────
 def archive_current_gw(existing: dict) -> None:
     """Save the current GW's results to data/history/ before starting a new GW."""
@@ -864,159 +1096,39 @@ def main():
     if MATCHDAY_FILE.exists():
         with open(MATCHDAY_FILE, encoding="utf-8") as f:
             existing = json.load(f)
-    existing_ids = {m["id"] for m in existing.get("upcoming", [])}
-
     # ── Archive the current GW before overwriting ─────────────────────────────
     if existing.get("results"):
         print("📦  Archiving current GW…")
         archive_current_gw(existing)
         print()
 
-    # ── Step 1: Get upcoming EPL events from Odds API ─────────────────────────
-    print("📡  Fetching EPL events from Odds API…")
-    all_events = fetch_epl_events(odds_key)
-    gw_events  = filter_next_gameweek(all_events)
-    if not gw_events:
-        print("⚠  No upcoming EPL events found in next 14 days.")
+    # ── Steps 1–4: Process each domestic league ───────────────────────────────
+    groq_client     = Groq(api_key=groq_key)
+    new_matches     = []
+    primary_matchday = existing.get("matchday", 0)
+
+    for sport_key, league in DOMESTIC_LEAGUES.items():
+        matches, matchday = process_domestic_league(
+            sport_key  = sport_key,
+            fd_code    = league["fd_code"],
+            league_en  = league["en"],
+            league_bg  = league["bg"],
+            odds_key   = odds_key,
+            fd_key     = fd_key,
+            groq_client= groq_client,
+            existing   = existing,
+        )
+        new_matches.extend(matches)
+        if league["en"] == "Premier League" and matchday:
+            primary_matchday = matchday
+
+    if not new_matches and not any(
+        m.get("status") == "pending" for m in existing.get("upcoming", [])
+    ):
+        print("⚠  No upcoming matches found in any domestic league.")
         sys.exit(0)
-    print(f"  → {len(gw_events)} events in next gameweek window")
 
-    # ── Step 2: Get EPL standings from football-data.org ─────────────────────
-    print("\n📊  Fetching EPL standings from football-data.org…")
-    standings_map, current_matchday = fetch_standings(fd_key)
-
-    # ── Step 3: Collect unique team IDs for form fetching ────────────────────
-    teams_needed: dict[str, int] = {}  # name_en → team_id
-    for ev in gw_events:
-        for team_name in (ev["home_team"], ev["away_team"]):
-            norm = normalize_team(team_name)
-            st = find_standing(norm, standings_map)
-            if st and norm not in teams_needed:
-                teams_needed[norm] = st["team_id"]
-
-    print(f"\n⚽  Fetching form for {len(teams_needed)} teams (6.5s sleep between calls)…")
-    team_forms: dict[str, str] = {}
-    for i, (name, tid) in enumerate(teams_needed.items()):
-        if i > 0:
-            time.sleep(FORM_SLEEP)
-        form = fetch_team_form(tid, fd_key)
-        team_forms[name] = form
-        print(f"  ✓  {name}: {form}")
-
-    # ── Step 3.5: Fetch H2H records for each match pair ──────────────────────
-    print(f"\n🔗  Fetching H2H for {len(gw_events)} pairs ({FORM_SLEEP}s sleep between)…")
-    h2h_map: dict[str, str] = {}
-    for i, ev in enumerate(gw_events):
-        h_en = normalize_team(ev["home_team"])
-        a_en = normalize_team(ev["away_team"])
-        h_st = find_standing(h_en, standings_map) or {}
-        a_st = find_standing(a_en, standings_map) or {}
-        h_id = h_st.get("team_id")
-        a_id = a_st.get("team_id")
-        if h_id and a_id:
-            if i > 0:
-                time.sleep(FORM_SLEEP)
-            h2h = fetch_h2h(h_id, a_id, h_en, fd_key)
-            h2h_map[f"{h_en} vs {a_en}"] = h2h
-            print(f"  ✓  {h_en} vs {a_en}: {h2h or 'no H2H found'}")
-
-    # ── Step 4: Build new match entries / refresh aiCtx on existing ──────────
-    groq_client = Groq(api_key=groq_key)
-    new_matches = []
-
-    for ev in gw_events:
-        home_raw  = ev["home_team"]
-        away_raw  = ev["away_team"]
-        home_en   = normalize_team(home_raw)
-        away_en   = normalize_team(away_raw)
-        match_id  = make_match_id(home_en, away_en)
-
-        home_st   = find_standing(home_en, standings_map) or {"pos": 0, "pts": 0, "team_id": 0}
-        away_st   = find_standing(away_en, standings_map) or {"pos": 0, "pts": 0, "team_id": 0}
-        home_form = team_forms.get(home_en, "N/A")
-        away_form = team_forms.get(away_en, "N/A")
-        h2h       = h2h_map.get(f"{home_en} vs {away_en}", "")
-        ai_ctx    = build_ai_ctx(home_en, away_en, home_st, away_st, home_form, away_form, h2h)
-
-        if match_id in existing_ids:
-            # Refresh aiCtx on the existing entry so generate_analysis picks it up
-            for m in existing.get("upcoming", []):
-                if m["id"] == match_id and m.get("status") == "pending":
-                    m["aiCtx"] = ai_ctx
-                    # Clear aiCtxHash so generate_analysis.py regenerates the text
-                    m.pop("aiCtxHash", None)
-                    print(f"  ↻  {home_en} vs {away_en} — aiCtx refreshed with real standings")
-            continue
-
-        home_bg = team_bg(home_en)
-        away_bg = team_bg(away_en)
-        h_abbr  = team_abbr(home_en).upper()
-        a_abbr  = team_abbr(away_en).upper()
-
-        # Parse date/time
-        ct = ev.get("commence_time", "")
-        try:
-            dt = datetime.fromisoformat(ct.replace("Z", "+00:00"))
-            # Convert to Sofia time (UTC+2 in standard time, UTC+3 summer)
-            sofia_offset = timedelta(hours=2)
-            dt_sofia = dt + sofia_offset
-            date_str = dt_sofia.strftime("%Y-%m-%d")
-            time_str = dt_sofia.strftime("%H:%M")
-        except Exception:
-            date_str = ""
-            time_str = ""
-
-        # Odds
-        odds_wh = extract_wh_odds(ev)
-
-        # News search + Groq pick
-        print(f"\n  🔎  Searching news for {home_en} vs {away_en}…", end=" ", flush=True)
-        news = search_team_news(home_en, away_en)
-        print("✓")
-        print(f"  🤖  Groq pick for {home_en} vs {away_en}…", end=" ", flush=True)
-        pick_raw = groq_pick(groq_client, home_en, away_en, ai_ctx, odds_wh, news)
-
-        # Map selection → correct odd from odds_wh
-        sel_to_key = {
-            "home": "h", "away": "a", "draw": "x",
-            "yes": "btts", "no": "btts",
-            "over_2.5": "o25", "under_2.5": "o25",
-            "over_1.5": "o15", "under_1.5": "o15",
-        }
-        market = pick_raw.get("market", "h2h")
-        sel    = pick_raw.get("selection", "home")
-        odds_key_mapped = sel_to_key.get(sel, "h")
-        resolved_odd = odds_wh.get(odds_key_mapped, pick_raw.get("odd", "1.80"))
-
-        match_entry = {
-            "id":      match_id,
-            "home":    home_bg,
-            "homeEn":  home_en,
-            "homeA":   h_abbr,
-            "away":    away_bg,
-            "awayEn":  away_en,
-            "awayA":   a_abbr,
-            "date":    date_str,
-            "time":    time_str,
-            "status":  "pending",
-            "pick": {
-                "bet":       bet_bg(market, sel, home_bg, away_bg),
-                "betEn":     pick_raw.get("betEN", f"{home_en} Win"),
-                "conf":      int(pick_raw.get("conf", 55)),
-                "market":    market,
-                "selection": sel,
-                "odd":       str(resolved_odd),
-            },
-            "odds_wh": odds_wh,
-            "prob": {
-                "h": round(100 / float(odds_wh["h"])) if "h" in odds_wh else 50,
-                "d": round(100 / float(odds_wh["x"])) if "x" in odds_wh else 25,
-                "a": round(100 / float(odds_wh["a"])) if "a" in odds_wh else 25,
-            },
-            "aiCtx": ai_ctx,
-        }
-        new_matches.append(match_entry)
-        print("✓")
+    current_matchday = primary_matchday
 
     # ── Step 5: UEFA fixtures — new + re-pick existing conf=0 ────────────────
     print("\n🏆  Fetching UEFA fixtures…")

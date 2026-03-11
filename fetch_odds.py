@@ -11,8 +11,8 @@ Usage:
     python fetch_odds.py --list-leagues  # list odds-api.io league slugs
 
 Quota per run:
-  odds-api.io    : ~2 req/league × 3 UEFA leagues  = ~6 req  (free: 100/hour)
-  the-odds-api.com: 1 bulk call for EPL             = ~2 units (free: 500/month)
+  odds-api.io    : ~2 req/league × 4 leagues  = ~8 req  (free: 100/hour)
+  the-odds-api.com: 1 bulk call for EPL        = ~2 units (free: 500/month)
 
 odds-api.io response format differs from The Odds API v4:
   - bookmakers is a dict  {"WilliamHill": [...markets]}  not an array
@@ -56,7 +56,7 @@ LEAGUES: dict[str, str] = {
     "soccer_uefa_europa_league":                "international-clubs-uefa-europa-league",
     "soccer_uefa_europa_conference_league":     "international-clubs-uefa-conference-league",
     # Uncomment to expand (all verified free on odds-api.io):
-    # "soccer_spain_la_liga":                   "spain-laliga",
+    "soccer_spain_la_liga":                   "spain-laliga",
     # "soccer_germany_bundesliga":              "germany-bundesliga",
     # "soccer_france_ligue_1":                  "france-ligue-1",
     # "soccer_netherlands_eredivisie":          "netherlands-eredivisie",
