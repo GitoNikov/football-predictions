@@ -203,6 +203,16 @@ def bet_bg(market: str, selection: str, home_bg: str, away_bg: str) -> str:
     if market == "over_under":
         if "2.5" in selection: return "Над 2.5 гола" if "over" in selection else "Под 2.5 гола"
         if "1.5" in selection: return "Над 1.5 гола" if "over" in selection else "Под 1.5 гола"
+    if market == "asian_handicap":
+        parts = selection.split("_", 1)
+        side  = parts[0]
+        line  = parts[1] if len(parts) > 1 else "0"
+        team  = home_bg if side == "home" else away_bg
+        return f"{team} хендикап ({line})"
+    if market == "first_half":
+        if selection == "home": return f"{home_bg} - 1-во полувреме"
+        if selection == "away": return f"{away_bg} - 1-во полувреме"
+        if selection == "draw": return "Равенство - 1-во полувреме"
     return f"{home_bg} победа"
 
 # BG names for common UEFA club teams (fallback to English if not found)
@@ -421,6 +431,10 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> l
     sel_to_key = {
         "home": "h", "away": "a", "draw": "x",
         "yes": "btts", "no": "btts",
+        "home_-0.5": "ah_h", "home_-1.0": "ah_h", "home_-1.5": "ah_h",
+        "home_+0.5": "ah_h", "home_+1.0": "ah_h", "home_+1.5": "ah_h",
+        "away_-0.5": "ah_a", "away_-1.0": "ah_a", "away_-1.5": "ah_a",
+        "away_+0.5": "ah_a", "away_+1.0": "ah_a", "away_+1.5": "ah_a",
         "over_2.5": "o25", "under_2.5": "o25",
         "over_1.5": "o15", "under_1.5": "o15",
     }
@@ -485,7 +499,13 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> l
 
                 market = pick_raw.get("market", "h2h")
                 sel    = pick_raw.get("selection", "home")
-                resolved_odd = odds_wh.get(sel_to_key.get(sel, "h"), pick_raw.get("odd", "1.80"))
+                if market == "asian_handicap":
+                    side = sel.split("_")[0] if "_" in sel else "home"
+                    resolved_odd = odds_wh.get("ah_h" if side == "home" else "ah_a", pick_raw.get("odd", "1.80"))
+                elif market == "first_half":
+                    resolved_odd = odds_wh.get({"home": "ht_h", "away": "ht_a", "draw": "ht_x"}.get(sel, "ht_h"), pick_raw.get("odd", "1.80"))
+                else:
+                    resolved_odd = odds_wh.get(sel_to_key.get(sel, "h"), pick_raw.get("odd", "1.80"))
                 pick = {
                     "bet":       bet_bg(market, sel, home_bg, away_bg),
                     "betEn":     pick_raw.get("betEN", f"{home_en} Win"),
@@ -801,12 +821,17 @@ Latest news (injuries/suspensions): {news}
 William Hill odds: {odds_str}
 
 Market selection rules (follow strictly):
-1. If combined expected goals >= 2.7 AND both teams have BTTS in 4+/6 recent games → prefer btts/yes
-2. If combined expected goals >= 2.7 (but BTTS rate lower) → prefer over_under/over_2.5
-3. If combined expected goals >= 2.0 but < 2.7 → consider over_under/over_1.5
-4. If one team is clearly dominant (strong form + position gap >= 8 places) AND h2h odd 1.40–2.10 → h2h
-5. Only pick draw if both teams are very evenly matched AND draw odd <= 3.50
-6. Always prefer odds between 1.40 and 2.50.
+1. If combined expected goals >= 2.7 AND both teams BTTS in 4+/6 games → btts/yes
+2. If combined expected goals >= 2.7 → over_under/over_2.5
+3. If combined expected goals >= 2.0 but < 2.7 → over_under/over_1.5
+4. If one team clearly dominant (8+ place gap, strong form) AND h2h odd 1.40–2.10 → h2h
+5. If dominant team has asian handicap available with favorable line (odds 1.50–2.20) → asian_handicap
+6. If first half odds available AND one team historically strong starter → first_half
+7. Only draw if very evenly matched AND draw odd <= 3.50
+8. Always prefer odds 1.40–2.50.
+
+For asian_handicap: selection format is "home_LINE" or "away_LINE" where LINE is the handicap (e.g. "home_-1.5", "away_+0.5").
+For first_half: selection is home | away | draw.
 
 Return ONLY valid JSON, no markdown:
 {{
@@ -817,8 +842,8 @@ Return ONLY valid JSON, no markdown:
   "betBG": "Борнемут победа",
   "betEN": "Bournemouth Win"
 }}
-market values: h2h | btts | over_under
-selection values: home | away | draw | yes | no | over_2.5 | under_2.5 | over_1.5"""
+market values: h2h | btts | over_under | asian_handicap | first_half
+selection values: home | away | draw | yes | no | over_2.5 | under_2.5 | over_1.5 | home_-1.5 | home_-0.5 | away_+0.5 | away_+1.5 (etc for handicap)"""
 
     try:
         resp = client.chat.completions.create(
@@ -958,6 +983,10 @@ def process_domestic_league(
     sel_to_key = {
         "home": "h", "away": "a", "draw": "x",
         "yes": "btts", "no": "btts",
+        "home_-0.5": "ah_h", "home_-1.0": "ah_h", "home_-1.5": "ah_h",
+        "home_+0.5": "ah_h", "home_+1.0": "ah_h", "home_+1.5": "ah_h",
+        "away_-0.5": "ah_a", "away_-1.0": "ah_a", "away_-1.5": "ah_a",
+        "away_+0.5": "ah_a", "away_+1.0": "ah_a", "away_+1.5": "ah_a",
         "over_2.5": "o25", "under_2.5": "o25",
         "over_1.5": "o15", "under_1.5": "o15",
     }
@@ -1012,7 +1041,13 @@ def process_domestic_league(
 
         market       = pick_raw.get("market", "h2h")
         sel          = pick_raw.get("selection", "home")
-        resolved_odd = odds_wh.get(sel_to_key.get(sel, "h"), pick_raw.get("odd", "1.80"))
+        if market == "asian_handicap":
+            side = sel.split("_")[0] if "_" in sel else "home"
+            resolved_odd = odds_wh.get("ah_h" if side == "home" else "ah_a", pick_raw.get("odd", "1.80"))
+        elif market == "first_half":
+            resolved_odd = odds_wh.get({"home": "ht_h", "away": "ht_a", "draw": "ht_x"}.get(sel, "ht_h"), pick_raw.get("odd", "1.80"))
+        else:
+            resolved_odd = odds_wh.get(sel_to_key.get(sel, "h"), pick_raw.get("odd", "1.80"))
 
         match_entry = {
             "id":      match_id,
