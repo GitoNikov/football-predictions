@@ -398,7 +398,7 @@ def fetch_domestic_events(api_key: str, sport_key: str, league_name: str) -> lis
     params = {
         "apiKey":     api_key,
         "regions":    "eu",
-        "markets":    "h2h,totals",
+        "markets":    "h2h,totals,spreads,h2h_h1",
         "oddsFormat": "decimal",
         "bookmakers": "williamhill",
     }
@@ -444,7 +444,7 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> l
         params = {
             "apiKey":     api_key,
             "regions":    "eu",
-            "markets":    "h2h,totals",
+            "markets":    "h2h,totals,spreads,h2h_h1",
             "oddsFormat": "decimal",
             "bookmakers": "williamhill",
         }
@@ -561,17 +561,18 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> l
 
 
 def extract_wh_odds(event: dict) -> dict:
-    """Extract William Hill h2h + totals from a single event."""
+    """Extract William Hill h2h + totals + spreads + first half from a single event."""
     wh = next((bk for bk in event.get("bookmakers", []) if bk["key"] == "williamhill"), None)
     if not wh:
         return {}
     result = {}
+    home_team = event.get("home_team", "")
     for market in wh.get("markets", []):
         if market["key"] == "h2h":
             for o in market["outcomes"]:
                 if o["name"] == "Draw":
                     result["x"] = str(round(o["price"], 2))
-                elif o["name"] == event["home_team"]:
+                elif o["name"] == home_team:
                     result["h"] = str(round(o["price"], 2))
                 else:
                     result["a"] = str(round(o["price"], 2))
@@ -581,6 +582,21 @@ def extract_wh_odds(event: dict) -> dict:
                 for o in market["outcomes"]:
                     if o.get("point") == point and o["name"] == "Over":
                         result[key] = str(round(o["price"], 2))
+        elif market["key"] == "spreads":
+            for o in market["outcomes"]:
+                if o["name"] == home_team:
+                    result["ah_line"] = str(o.get("point", 0))
+                    result["ah_h"]    = str(round(o["price"], 2))
+                else:
+                    result["ah_a"] = str(round(o["price"], 2))
+        elif market["key"] == "h2h_h1":
+            for o in market["outcomes"]:
+                if o["name"] == "Draw":
+                    result["ht_x"] = str(round(o["price"], 2))
+                elif o["name"] == home_team:
+                    result["ht_h"] = str(round(o["price"], 2))
+                else:
+                    result["ht_a"] = str(round(o["price"], 2))
     return result
 
 
