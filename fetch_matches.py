@@ -395,20 +395,25 @@ def make_match_id(home_en: str, away_en: str) -> str:
 def fetch_domestic_events(api_key: str, sport_key: str, league_name: str) -> list:
     """Fetch upcoming domestic league events from The Odds API (next 14 days)."""
     url = f"{ODDS_BASE}/sports/{sport_key}/odds/"
-    params = {
-        "apiKey":     api_key,
-        "regions":    "eu",
-        "markets":    "h2h,totals,spreads,h2h_h1",
-        "oddsFormat": "decimal",
-        "bookmakers": "williamhill",
-    }
-    resp = requests.get(url, params=params, timeout=15)
-    if resp.status_code == 401:
-        sys.exit("❌  Invalid ODDS_API_KEY")
-    resp.raise_for_status()
-    remaining = resp.headers.get("x-requests-remaining", "?")
-    print(f"  ✓  Odds API: {len(resp.json())} {league_name} events | quota remaining {remaining}")
-    return resp.json()
+    for markets in ("h2h,totals,spreads,h2h_h1", "h2h,totals,spreads", "h2h,totals"):
+        params = {
+            "apiKey":     api_key,
+            "regions":    "eu",
+            "markets":    markets,
+            "oddsFormat": "decimal",
+            "bookmakers": "williamhill",
+        }
+        resp = requests.get(url, params=params, timeout=15)
+        if resp.status_code == 401:
+            sys.exit("❌  Invalid ODDS_API_KEY")
+        if resp.status_code == 422:
+            print(f"  ⚠  markets={markets!r} not supported, retrying with fewer markets…")
+            continue
+        resp.raise_for_status()
+        remaining = resp.headers.get("x-requests-remaining", "?")
+        print(f"  ✓  Odds API: {len(resp.json())} {league_name} events (markets: {markets}) | quota remaining {remaining}")
+        return resp.json()
+    return []
 
 
 def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> list:
