@@ -203,16 +203,6 @@ def bet_bg(market: str, selection: str, home_bg: str, away_bg: str) -> str:
     if market == "over_under":
         if "2.5" in selection: return "Над 2.5 гола" if "over" in selection else "Под 2.5 гола"
         if "1.5" in selection: return "Над 1.5 гола" if "over" in selection else "Под 1.5 гола"
-    if market == "asian_handicap":
-        parts = selection.split("_", 1)
-        side  = parts[0]
-        line  = parts[1] if len(parts) > 1 else "0"
-        team  = home_bg if side == "home" else away_bg
-        return f"{team} хендикап ({line})"
-    if market == "first_half":
-        if selection == "home": return f"{home_bg} - 1-во полувреме"
-        if selection == "away": return f"{away_bg} - 1-во полувреме"
-        if selection == "draw": return "Равенство - 1-во полувреме"
     return f"{home_bg} победа"
 
 # BG names for common UEFA club teams (fallback to English if not found)
@@ -395,25 +385,20 @@ def make_match_id(home_en: str, away_en: str) -> str:
 def fetch_domestic_events(api_key: str, sport_key: str, league_name: str) -> list:
     """Fetch upcoming domestic league events from The Odds API (next 14 days)."""
     url = f"{ODDS_BASE}/sports/{sport_key}/odds/"
-    for markets in ("h2h,totals,spreads,h2h_h1", "h2h,totals,spreads", "h2h,totals"):
-        params = {
-            "apiKey":     api_key,
-            "regions":    "eu",
-            "markets":    markets,
-            "oddsFormat": "decimal",
-            "bookmakers": "williamhill",
-        }
-        resp = requests.get(url, params=params, timeout=15)
-        if resp.status_code == 401:
-            sys.exit("❌  Invalid ODDS_API_KEY")
-        if resp.status_code == 422:
-            print(f"  ⚠  markets={markets!r} not supported, retrying with fewer markets…")
-            continue
-        resp.raise_for_status()
-        remaining = resp.headers.get("x-requests-remaining", "?")
-        print(f"  ✓  Odds API: {len(resp.json())} {league_name} events (markets: {markets}) | quota remaining {remaining}")
-        return resp.json()
-    return []
+    params = {
+        "apiKey":     api_key,
+        "regions":    "eu",
+        "markets":    "h2h,totals",
+        "oddsFormat": "decimal",
+        "bookmakers": "williamhill",
+    }
+    resp = requests.get(url, params=params, timeout=15)
+    if resp.status_code == 401:
+        sys.exit("❌  Invalid ODDS_API_KEY")
+    resp.raise_for_status()
+    remaining = resp.headers.get("x-requests-remaining", "?")
+    print(f"  ✓  Odds API: {len(resp.json())} {league_name} events | quota remaining {remaining}")
+    return resp.json()
 
 
 def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> list:
@@ -436,10 +421,6 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> l
     sel_to_key = {
         "home": "h", "away": "a", "draw": "x",
         "yes": "btts", "no": "btts",
-        "home_-0.5": "ah_h", "home_-1.0": "ah_h", "home_-1.5": "ah_h",
-        "home_+0.5": "ah_h", "home_+1.0": "ah_h", "home_+1.5": "ah_h",
-        "away_-0.5": "ah_a", "away_-1.0": "ah_a", "away_-1.5": "ah_a",
-        "away_+0.5": "ah_a", "away_+1.0": "ah_a", "away_+1.5": "ah_a",
         "over_2.5": "o25", "under_2.5": "o25",
         "over_1.5": "o15", "under_1.5": "o15",
     }
@@ -449,7 +430,7 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> l
         params = {
             "apiKey":     api_key,
             "regions":    "eu",
-            "markets":    "h2h,totals,spreads,h2h_h1",
+            "markets":    "h2h,totals",
             "oddsFormat": "decimal",
             "bookmakers": "williamhill",
         }
@@ -504,13 +485,7 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> l
 
                 market = pick_raw.get("market", "h2h")
                 sel    = pick_raw.get("selection", "home")
-                if market == "asian_handicap":
-                    side = sel.split("_")[0] if "_" in sel else "home"
-                    resolved_odd = odds_wh.get("ah_h" if side == "home" else "ah_a", pick_raw.get("odd", "1.80"))
-                elif market == "first_half":
-                    resolved_odd = odds_wh.get({"home": "ht_h", "away": "ht_a", "draw": "ht_x"}.get(sel, "ht_h"), pick_raw.get("odd", "1.80"))
-                else:
-                    resolved_odd = odds_wh.get(sel_to_key.get(sel, "h"), pick_raw.get("odd", "1.80"))
+                resolved_odd = odds_wh.get(sel_to_key.get(sel, "h"), pick_raw.get("odd", "1.80"))
                 pick = {
                     "bet":       bet_bg(market, sel, home_bg, away_bg),
                     "betEn":     pick_raw.get("betEN", f"{home_en} Win"),
@@ -566,18 +541,17 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> l
 
 
 def extract_wh_odds(event: dict) -> dict:
-    """Extract William Hill h2h + totals + spreads + first half from a single event."""
+    """Extract William Hill h2h + totals from a single event."""
     wh = next((bk for bk in event.get("bookmakers", []) if bk["key"] == "williamhill"), None)
     if not wh:
         return {}
     result = {}
-    home_team = event.get("home_team", "")
     for market in wh.get("markets", []):
         if market["key"] == "h2h":
             for o in market["outcomes"]:
                 if o["name"] == "Draw":
                     result["x"] = str(round(o["price"], 2))
-                elif o["name"] == home_team:
+                elif o["name"] == event["home_team"]:
                     result["h"] = str(round(o["price"], 2))
                 else:
                     result["a"] = str(round(o["price"], 2))
@@ -587,21 +561,6 @@ def extract_wh_odds(event: dict) -> dict:
                 for o in market["outcomes"]:
                     if o.get("point") == point and o["name"] == "Over":
                         result[key] = str(round(o["price"], 2))
-        elif market["key"] == "spreads":
-            for o in market["outcomes"]:
-                if o["name"] == home_team:
-                    result["ah_line"] = str(o.get("point", 0))
-                    result["ah_h"]    = str(round(o["price"], 2))
-                else:
-                    result["ah_a"] = str(round(o["price"], 2))
-        elif market["key"] == "h2h_h1":
-            for o in market["outcomes"]:
-                if o["name"] == "Draw":
-                    result["ht_x"] = str(round(o["price"], 2))
-                elif o["name"] == home_team:
-                    result["ht_h"] = str(round(o["price"], 2))
-                else:
-                    result["ht_a"] = str(round(o["price"], 2))
     return result
 
 
@@ -846,13 +805,8 @@ Market selection rules (follow strictly):
 2. If combined expected goals >= 2.7 → over_under/over_2.5
 3. If combined expected goals >= 2.0 but < 2.7 → over_under/over_1.5
 4. If one team clearly dominant (8+ place gap, strong form) AND h2h odd 1.40–2.10 → h2h
-5. If dominant team has asian handicap available with favorable line (odds 1.50–2.20) → asian_handicap
-6. If first half odds available AND one team historically strong starter → first_half
-7. Only draw if very evenly matched AND draw odd <= 3.50
-8. Always prefer odds 1.40–2.50.
-
-For asian_handicap: selection format is "home_LINE" or "away_LINE" where LINE is the handicap (e.g. "home_-1.5", "away_+0.5").
-For first_half: selection is home | away | draw.
+5. Only draw if very evenly matched AND draw odd <= 3.50
+6. Always prefer odds 1.40–2.50.
 
 Return ONLY valid JSON, no markdown:
 {{
@@ -863,8 +817,8 @@ Return ONLY valid JSON, no markdown:
   "betBG": "Борнемут победа",
   "betEN": "Bournemouth Win"
 }}
-market values: h2h | btts | over_under | asian_handicap | first_half
-selection values: home | away | draw | yes | no | over_2.5 | under_2.5 | over_1.5 | home_-1.5 | home_-0.5 | away_+0.5 | away_+1.5 (etc for handicap)"""
+market values: h2h | btts | over_under
+selection values: home | away | draw | yes | no | over_2.5 | under_2.5 | over_1.5"""
 
     try:
         resp = client.chat.completions.create(
@@ -1004,10 +958,6 @@ def process_domestic_league(
     sel_to_key = {
         "home": "h", "away": "a", "draw": "x",
         "yes": "btts", "no": "btts",
-        "home_-0.5": "ah_h", "home_-1.0": "ah_h", "home_-1.5": "ah_h",
-        "home_+0.5": "ah_h", "home_+1.0": "ah_h", "home_+1.5": "ah_h",
-        "away_-0.5": "ah_a", "away_-1.0": "ah_a", "away_-1.5": "ah_a",
-        "away_+0.5": "ah_a", "away_+1.0": "ah_a", "away_+1.5": "ah_a",
         "over_2.5": "o25", "under_2.5": "o25",
         "over_1.5": "o15", "under_1.5": "o15",
     }
@@ -1062,13 +1012,7 @@ def process_domestic_league(
 
         market       = pick_raw.get("market", "h2h")
         sel          = pick_raw.get("selection", "home")
-        if market == "asian_handicap":
-            side = sel.split("_")[0] if "_" in sel else "home"
-            resolved_odd = odds_wh.get("ah_h" if side == "home" else "ah_a", pick_raw.get("odd", "1.80"))
-        elif market == "first_half":
-            resolved_odd = odds_wh.get({"home": "ht_h", "away": "ht_a", "draw": "ht_x"}.get(sel, "ht_h"), pick_raw.get("odd", "1.80"))
-        else:
-            resolved_odd = odds_wh.get(sel_to_key.get(sel, "h"), pick_raw.get("odd", "1.80"))
+        resolved_odd = odds_wh.get(sel_to_key.get(sel, "h"), pick_raw.get("odd", "1.80"))
 
         match_entry = {
             "id":      match_id,

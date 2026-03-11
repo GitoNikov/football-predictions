@@ -123,22 +123,6 @@ def determine_result(match: dict, home_score: int, away_score: int) -> str | Non
         total = h + a
         if selection.startswith("over"):  return "W" if total > line else "L"
         if selection.startswith("under"): return "W" if total < line else "L"
-    elif market == "asian_handicap":
-        # selection format: "home_-1.5" or "away_+0.5"
-        parts = selection.split("_", 1)
-        if len(parts) < 2:
-            return None
-        side = parts[0]
-        try:
-            line = float(parts[1])
-        except ValueError:
-            return None
-        diff = (h + line - a) if side == "home" else (a + line - h)
-        if diff > 0: return "W"
-        if diff < 0: return "L"
-        return None  # push
-    elif market == "first_half":
-        pass  # scores handled in caller — should not reach here
     return None
 
 
@@ -217,13 +201,9 @@ def main():
                 remaining_upcoming.append(match)
                 continue
 
-            pick_market = match["pick"].get("market") or infer_market_selection(match["pick"])[0]
-            if pick_market == "first_half":
-                score_obj = matched_fd.get("score", {}).get("halfTime", {})
-            else:
-                score_obj = matched_fd.get("score", {}).get("fullTime", {})
-            home_score = score_obj.get("home")
-            away_score = score_obj.get("away")
+            ft = matched_fd.get("score", {}).get("fullTime", {})
+            home_score = ft.get("home")
+            away_score = ft.get("away")
 
             if home_score is None or away_score is None:
                 remaining_upcoming.append(match)

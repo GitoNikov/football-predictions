@@ -45,7 +45,7 @@ OAIO_BOOKMAKER = "WilliamHill"   # exact key as returned by /v3/bookmakers
 TODA_BASE      = "https://api.the-odds-api.com/v4"
 TODA_BOOKMAKER = "williamhill"
 TODA_REGIONS   = "eu"
-TODA_MARKETS   = "h2h,totals,spreads,h2h_h1"   # h2h_h1=first half, spreads=asian handicap
+TODA_MARKETS   = "h2h,totals"   # no per-event BTTS — saves quota
 
 # EPL sport key handled via the-odds-api.com
 EPL_SPORT = "soccer_epl"
@@ -141,25 +141,6 @@ def extract_from_event(event: dict) -> dict:
             v = _safe_price(o.get("yes") or o.get("home"))
             if v: out["_btts"] = v
 
-        elif name in ("Asian Handicap", "Handicap", "AH", "Asian Handicap 2-way"):
-            # Find entry with line closest to 0 (main line)
-            best = min(odds_list, key=lambda e: abs(float(e.get("hdp", 0) or 0)), default=None)
-            if best:
-                line = best.get("hdp", 0)
-                h = _safe_price(best.get("home"))
-                a = _safe_price(best.get("away"))
-                out["_ah_line"] = str(line)
-                if h: out["_ah_h"] = h
-                if a: out["_ah_a"] = a
-
-        elif name in ("1st Half", "HT Result", "Half Time", "First Half", "1H 1X2"):
-            h = _safe_price(o.get("home"))
-            x = _safe_price(o.get("draw"))
-            a = _safe_price(o.get("away"))
-            if h: out["_ht_h"] = h
-            if x: out["_ht_x"] = x
-            if a: out["_ht_a"] = a
-
     return out
 
 
@@ -205,35 +186,6 @@ def _toda_extract_totals(market: dict, point: float) -> dict:
     return {}
 
 
-def _toda_extract_spreads(market: dict, home_team: str) -> dict:
-    """Extract Asian/European handicap main line from spreads market."""
-    home_out = away_out = None
-    for outcome in market.get("outcomes", []):
-        if outcome["name"] == home_team:
-            home_out = outcome
-        elif outcome["name"] != "Draw":
-            away_out = outcome
-    if not home_out:
-        return {}
-    result = {
-        "_ah_line": str(home_out.get("point", 0)),
-        "_ah_h":    str(round(home_out["price"], 2)),
-    }
-    if away_out:
-        result["_ah_a"] = str(round(away_out["price"], 2))
-    return result
-
-
-def _toda_extract_h2h_h1(market: dict, home_team: str) -> dict:
-    """Extract first half 1X2 from h2h_h1 market."""
-    out = {}
-    for outcome in market.get("outcomes", []):
-        n, p = outcome["name"], str(round(outcome["price"], 2))
-        if n == "Draw":       out["_ht_x"] = p
-        elif n == home_team:  out["_ht_h"] = p
-        else:                 out["_ht_a"] = p
-    return out
-
 
 def fetch_epl_odds(epl_key: str, upcoming_md: list) -> dict:
     """
@@ -274,10 +226,6 @@ def fetch_epl_odds(epl_key: str, upcoming_md: list) -> dict:
         if "totals" in markets:
             all_odds.update({f"{prefix}{k}": v for k, v in _toda_extract_totals(markets["totals"], 2.5).items()})
             all_odds.update({f"{prefix}{k}": v for k, v in _toda_extract_totals(markets["totals"], 1.5).items()})
-        if "spreads" in markets:
-            all_odds.update({f"{prefix}{k}": v for k, v in _toda_extract_spreads(markets["spreads"], home).items()})
-        if "h2h_h1" in markets:
-            all_odds.update({f"{prefix}{k}": v for k, v in _toda_extract_h2h_h1(markets["h2h_h1"], home).items()})
 
         print(f"  ✓  {home} vs {away}  [{prefix}]  "
               f"1={all_odds.get(prefix+'_1','?')}  "
@@ -519,13 +467,7 @@ def main():
         if f"{mid}_2"    in all_odds: wh["a"]    = all_odds[f"{mid}_2"]
         if f"{mid}_o25"  in all_odds: wh["o25"]  = all_odds[f"{mid}_o25"]
         if f"{mid}_o15"  in all_odds: wh["o15"]  = all_odds[f"{mid}_o15"]
-        if f"{mid}_btts"    in all_odds: wh["btts"]    = all_odds[f"{mid}_btts"]
-        if f"{mid}_ah_line" in all_odds: wh["ah_line"] = all_odds[f"{mid}_ah_line"]
-        if f"{mid}_ah_h"    in all_odds: wh["ah_h"]    = all_odds[f"{mid}_ah_h"]
-        if f"{mid}_ah_a"    in all_odds: wh["ah_a"]    = all_odds[f"{mid}_ah_a"]
-        if f"{mid}_ht_h"    in all_odds: wh["ht_h"]    = all_odds[f"{mid}_ht_h"]
-        if f"{mid}_ht_x"    in all_odds: wh["ht_x"]    = all_odds[f"{mid}_ht_x"]
-        if f"{mid}_ht_a"    in all_odds: wh["ht_a"]    = all_odds[f"{mid}_ht_a"]
+        if f"{mid}_btts" in all_odds: wh["btts"] = all_odds[f"{mid}_btts"]
         if wh:
             match["odds_wh"] = {**match.get("odds_wh", {}), **wh}
             pick   = match.get("pick", {})
@@ -539,13 +481,6 @@ def main():
                 pick["odd"] = wh["btts"]
             elif market == "over_under" and "o25" in wh:
                 pick["odd"] = wh["o25"]
-            elif market == "asian_handicap":
-                side = sel.split("_")[0] if "_" in sel else sel
-                key = "ah_h" if side == "home" else "ah_a"
-                if key in wh: pick["odd"] = wh[key]
-            elif market == "first_half":
-                key = {"home": "ht_h", "away": "ht_a", "draw": "ht_x"}.get(sel)
-                if key and key in wh: pick["odd"] = wh[key]
             updated_md += 1
 
     # Refresh betBuilder market odds + recompute totalOdd
