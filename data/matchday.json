@@ -22,10 +22,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 68,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.8"
+        "odd": "1.8",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "1.56",
@@ -59,10 +60,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 70,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.6"
+        "odd": "1.6",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "2.5",
@@ -95,10 +97,11 @@
       "pick": {
         "bet": "ПСЖ победа",
         "betEn": "Paris Saint Germain Win",
-        "conf": 58,
+        "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "1.83"
+        "odd": "1.83",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "4.0",
@@ -132,10 +135,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 70,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.56"
+        "odd": "1.56",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "1.95",
@@ -168,10 +172,11 @@
       "pick": {
         "bet": "Борнемут победа",
         "betEn": "Bournemouth Win",
-        "conf": 58,
+        "conf": 0,
         "market": "h2h",
         "selection": "away",
-        "odd": "1.85"
+        "odd": "1.85",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "1.85",
@@ -202,10 +207,11 @@
       "pick": {
         "bet": "Под 2.5 гола",
         "betEn": "Under 2.5 Goals",
-        "conf": 58,
+        "conf": 0,
         "market": "over_under",
         "selection": "under_2.5",
-        "odd": "1.95"
+        "odd": "1.95",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "2.15",
@@ -237,10 +243,11 @@
       "pick": {
         "bet": "Арсенал победа",
         "betEn": "Arsenal Win",
-        "conf": 70,
+        "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "1.36"
+        "odd": "1.36",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "1.36",
@@ -272,10 +279,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 70,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.44"
+        "odd": "1.44",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "1.75",
@@ -307,10 +315,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
-        "conf": 70,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.5"
+        "odd": "1.5",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "1.67",
@@ -342,10 +351,11 @@
       "pick": {
         "bet": "Ман Юнайтед победа",
         "betEn": "Manchester United Win",
-        "conf": 62,
+        "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "1.75"
+        "odd": "1.75",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "4.0",
@@ -377,10 +387,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
-        "conf": 58,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "2.0"
+        "odd": "2.0",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "2.3",
@@ -412,10 +423,11 @@
       "pick": {
         "bet": "Под 2.5 гола",
         "betEn": "Under 2.5 Goals",
-        "conf": 58,
+        "conf": 0,
         "market": "over_under",
         "selection": "under_2.5",
-        "odd": "1.8"
+        "odd": "1.8",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "3.25",
@@ -447,10 +459,11 @@
       "pick": {
         "bet": "Ливърпул победа",
         "betEn": "Liverpool Win",
-        "conf": 70,
+        "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "1.33"
+        "odd": "1.33",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "1.33",
@@ -482,10 +495,11 @@
       "pick": {
         "bet": "Брентфорд победа",
         "betEn": "Brentford Win",
-        "conf": 70,
+        "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "1.57"
+        "odd": "1.57",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "1.57",
@@ -519,10 +533,11 @@
       "pick": {
         "bet": "Рома победа",
         "betEn": "AS Roma Win",
-        "conf": 58,
+        "conf": 0,
         "market": "h2h",
         "selection": "away",
-        "odd": "2.4"
+        "odd": "2.4",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "2.4",
@@ -556,10 +571,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 58,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "2.0"
+        "odd": "2.0",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "2.4",
@@ -593,10 +609,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 58,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "2.3"
+        "odd": "2.3",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "3.6",
@@ -629,10 +646,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 68,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.75"
+        "odd": "1.75",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "3.3",
@@ -666,10 +684,11 @@
       "pick": {
         "bet": "Celta Vigo победа",
         "betEn": "Celta Vigo Win",
-        "conf": 58,
+        "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "2.05"
+        "odd": "2.05",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "2.05",
@@ -702,10 +721,11 @@
       "pick": {
         "bet": "Нотингам Форест победа",
         "betEn": "Nottingham Forest Win",
-        "conf": 65,
+        "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "1.53"
+        "odd": "1.53",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "5.75",
@@ -739,10 +759,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 58,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "2.05"
+        "odd": "2.05",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "3.0",
@@ -776,10 +797,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 70,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.83"
+        "odd": "1.83",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "2.55",
@@ -813,10 +835,11 @@
       "pick": {
         "bet": "AZ Alkmaar победа",
         "betEn": "AZ Alkmaar Win",
-        "conf": 58,
+        "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "2.1"
+        "odd": "2.1",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "2.1",
@@ -849,10 +872,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 58,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.85"
+        "odd": "1.85",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "3.7",
@@ -885,10 +909,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 68,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.85"
+        "odd": "1.85",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "2.6",
@@ -921,10 +946,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 70,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.95"
+        "odd": "1.95",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "2.2",
@@ -958,10 +984,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
-        "conf": 68,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.75"
+        "odd": "1.75",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "2.05",
@@ -994,10 +1021,11 @@
       "pick": {
         "bet": "Кристъл Палас победа",
         "betEn": "Crystal Palace Win",
-        "conf": 80,
+        "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "1.21"
+        "odd": "1.21",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "13.0",
@@ -1031,10 +1059,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
-        "conf": 58,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.91"
+        "odd": "1.91",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "1.77",
@@ -1067,10 +1096,11 @@
       "pick": {
         "bet": "Фиорентина победа",
         "betEn": "Fiorentina Win",
-        "conf": 65,
+        "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "1.67"
+        "odd": "1.67",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "1.67",
@@ -1101,10 +1131,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
-        "conf": 70,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.95"
+        "odd": "1.95",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "3.3",
@@ -1135,10 +1166,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
-        "conf": 70,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "2.0"
+        "odd": "2.0",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "2.5",
@@ -1169,10 +1201,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
-        "conf": 70,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "2.3"
+        "odd": "2.3",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "1.55",
@@ -1203,10 +1236,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
-        "conf": 58,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "2.2"
+        "odd": "2.2",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "2.8",
@@ -1237,10 +1271,11 @@
       "pick": {
         "bet": "Реал Мадрид победа",
         "betEn": "Real Madrid Win",
-        "conf": 80,
+        "conf": 0,
         "market": "h2h",
         "selection": "home",
-        "odd": "1.22"
+        "odd": "1.22",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "10.0",
@@ -1271,10 +1306,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
-        "conf": 70,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "2.3"
+        "odd": "2.3",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "3.2",
@@ -1305,10 +1341,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
-        "conf": 70,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.29"
+        "odd": "1.29",
+        "confReason": ""
       },
       "odds_wh": {
         "h": "1.22",
@@ -1339,10 +1376,11 @@
       "pick": {
         "bet": "И двата вкарват",
         "betEn": "Both Teams to Score Yes",
-        "conf": 70,
+        "conf": 0,
         "market": "btts",
         "selection": "yes",
-        "odd": "1.75"
+        "odd": "1.75",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "3.3",
@@ -1373,10 +1411,11 @@
       "pick": {
         "bet": "И двата вкарват",
         "betEn": "Both Teams to Score Yes",
-        "conf": 70,
+        "conf": 0,
         "market": "btts",
         "selection": "yes",
-        "odd": "2.05"
+        "odd": "2.05",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "4.0",
@@ -1407,10 +1446,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
-        "conf": 70,
+        "conf": 0,
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.85"
+        "odd": "1.85",
+        "confReason": ""
       },
       "odds_wh": {
         "a": "4.8",

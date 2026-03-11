@@ -490,6 +490,7 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client) -> l
                     "bet":       bet_bg(market, sel, home_bg, away_bg),
                     "betEn":     pick_raw.get("betEN", f"{home_en} Win"),
                     "conf":      int(pick_raw.get("conf", 55)),
+                    "confReason": pick_raw.get("conf_reason", ""),
                     "market":    market,
                     "selection": sel,
                     "odd":       str(resolved_odd),
@@ -808,12 +809,19 @@ Market selection rules (follow strictly):
 5. Only draw if very evenly matched AND draw odd <= 3.50
 6. Always prefer odds 1.40–2.50.
 
+Confidence scoring (be precise — do not default to round numbers):
+- 75–80: Stats, form, and odds all strongly align. The market rule fires cleanly, both teams' recent results support it, and the odd is in the 1.40–2.50 sweet spot.
+- 65–74: Most factors point this way. One minor uncertainty (e.g. slightly weak form, odd at the edge of range, or thin BTTS data).
+- 55–64: Mixed signals — factors conflict, data is thin, or the best available odd is outside 1.40–2.50.
+- Below 55: No clear edge. Assign the lowest conf that honestly reflects the lack of signal.
+
 Return ONLY valid JSON, no markdown:
 {{
   "market": "h2h",
   "selection": "home",
   "odd": "1.75",
   "conf": 62,
+  "conf_reason": "8-place gap and home team W W W D W, but odd 1.75 is at top of sweet spot",
   "betBG": "Борнемут победа",
   "betEN": "Bournemouth Win"
 }}
@@ -825,7 +833,7 @@ selection values: home | away | draw | yes | no | over_2.5 | under_2.5 | over_1.
             model=MODEL_NAME,
             messages=[{"role": "user", "content": prompt}],
             temperature=0.3,
-            max_tokens=200,
+            max_tokens=280,
         )
         text = resp.choices[0].message.content.strip()
         if "```" in text:
@@ -833,7 +841,10 @@ selection values: home | away | draw | yes | no | over_2.5 | under_2.5 | over_1.
             if text.startswith("json"):
                 text = text[4:]
             text = text.strip()
-        return json.loads(text)
+        result = json.loads(text)
+        if result.get("conf_reason"):
+            print(f"    ℹ  conf {result.get('conf')}: {result['conf_reason']}")
+        return result
     except Exception as e:
         print(f"    ⚠  Groq pick error: {e}")
         # Fallback: pick home win if odds available
@@ -1026,12 +1037,13 @@ def process_domestic_league(
             "time":    time_str,
             "status":  "pending",
             "pick": {
-                "bet":       bet_bg(market, sel, home_bg, away_bg),
-                "betEn":     pick_raw.get("betEN", f"{home_en} Win"),
-                "conf":      int(pick_raw.get("conf", 55)),
-                "market":    market,
-                "selection": sel,
-                "odd":       str(resolved_odd),
+                "bet":        bet_bg(market, sel, home_bg, away_bg),
+                "betEn":      pick_raw.get("betEN", f"{home_en} Win"),
+                "conf":       int(pick_raw.get("conf", 55)),
+                "confReason": pick_raw.get("conf_reason", ""),
+                "market":     market,
+                "selection":  sel,
+                "odd":        str(resolved_odd),
             },
             "odds_wh": odds_wh,
             "prob": {
