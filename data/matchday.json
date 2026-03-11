@@ -7,158 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "8bcd511f",
-      "home": "Галатасарай",
-      "homeEn": "Galatasaray",
-      "homeA": "GAL",
-      "away": "Ливърпул",
-      "awayEn": "Liverpool",
-      "awayA": "LIV",
-      "date": "2026-03-10",
-      "time": "19:45",
-      "competition": "Champions League",
-      "competitionBG": "Шампионска лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.56"
-      },
-      "odds_wh": {
-        "h": "4.2",
-        "a": "1.8",
-        "x": "3.8",
-        "o25": "1.56",
-        "btts": "1.55",
-        "o15": "1.17"
-      },
-      "ai": "Двубойът между Галатасарай и Ливърпул е много интересен, като домакините вкарват 1.5 гола на мач, а гостите - 2.2 гола, и двете отбори имат форма П 2-1, Р 1-1, З 1-2. Ливърпул вкарват много гола в последните си мачове, а Галатасарай допускат около 1.8 гола на мач, което говори в полза на прогнозата над 2.5 гола. Прогнозата ми е над 2.5 гола при котировка 1.55, на която бих казал, че имам доверие 70%.",
-      "aiEn": "Galatasaray and Liverpool are set to face off, with the home team averaging 1.5 goals per game and the visitors averaging 2.2 goals per game, and both teams having recent form of W 2-0, D 1-1, L 1-2. The Over 2.5 case is strong given both teams' high-scoring recent form results and their goals per game averages, with Liverpool scoring frequently and Galatasaray conceding around 1.8 goals per game. My pick is Over 2.5 Goals at exactly 1.55 with William Hill, a bet I have 70% confidence in.",
-      "prob": {
-        "h": 25,
-        "d": 26,
-        "a": 57
-      },
-      "aiCtxHash": "d41d8cd9"
-    },
-    {
-      "id": "2a50d2be",
-      "home": "Аталанта",
-      "homeEn": "Atalanta BC",
-      "homeA": "ATA",
-      "away": "Байерн",
-      "awayEn": "Bayern Munich",
-      "awayA": "BAY",
-      "date": "2026-03-10",
-      "time": "22:00",
-      "competition": "Champions League",
-      "competitionBG": "Шампионска лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.44"
-      },
-      "odds_wh": {
-        "h": "4.8",
-        "a": "1.61",
-        "x": "4.4",
-        "o25": "1.44",
-        "btts": "1.5"
-      },
-      "ai": "Двубойът между Аталанта и Байерн е много интересен, като домакините вкарват 1.5 гола на мач, а гостите - 2.2 гола. Формата на двата отбора показва, че те допускат много гола, което говори в полза на нашата прогноза за над 2.5 гола. Нашата прогноза е над 2.5 гола при котировка 1.44, която ни дава залог от 70%.",
-      "aiEn": "Atalanta BC and Bayern Munich are set to clash, with the home team having scored an average of 1.5 goals per game, while the away team has averaged 2.2 goals per game, and their recent form includes results such as W 2-0 and D 1-1. The Over 2.5 case is strengthened by both teams' high-scoring recent form results and their goals per game averages, indicating a potentially high-scoring match. The pick is Over 2.5 Goals at exactly 1.44 with William Hill, a selection made with 70% confidence.",
-      "prob": {
-        "h": 23,
-        "d": 23,
-        "a": 62
-      },
-      "newsCtx": "Jul 7, 2023 · Atalanta was a female hero renowned for her speed and strength. She distinguished herself in many heroic exploits, including the Calydonian boar hunt. | Mar 22, 2023 · Centaurs were hybrid creatures, human from the waist up but with the body and legs of a horse. They lived an untamed a",
-      "aiCtxHash": "c9732dd2"
-    },
-    {
-      "id": "5e256c6e",
-      "home": "Атлетико Мадрид",
-      "homeEn": "Atlético Madrid",
-      "homeA": "ATL",
-      "away": "Тотнъм",
-      "awayEn": "Tottenham Hotspur",
-      "awayA": "TOT",
-      "date": "2026-03-10",
-      "time": "22:00",
-      "competition": "Champions League",
-      "competitionBG": "Шампионска лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Атлетико Мадрид победа",
-        "betEn": "Atlético Madrid Win",
-        "conf": 65,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.53"
-      },
-      "odds_wh": {
-        "h": "1.53",
-        "a": "6.0",
-        "x": "4.2",
-        "o25": "1.7",
-        "btts": "1.7",
-        "o15": "1.22"
-      },
-      "ai": "Двубойът между Атлетико Мадрид и Тотнъм е много интересен, като домакините вкарват 2 гола на мач, а гостите допускат 1.5 гола. Атлетико Мадрид е в добра форма, П 3-1, Р 1-1, З 0-1, което им дава предимство преди този мач, тъй като домакините имат по-силна атака и солидна защита. Прогнозата ми е победа за Атлетико Мадрид при котировка 1.57, с увереност 65%, което прави този залог много привлекателен.",
-      "aiEn": "Atlético Madrid and Tottenham Hotspur are set to clash, with the home team having a strong league position, accumulating points, and averaging 2 goals per game, while Tottenham has a recent form of W 2-0, D 1-1, L 0-1. The home team's position, scoring strength, and form advantage, including their recent wins, make a strong case for a home win. My pick is an Atlético Madrid win at 1.57 with William Hill, with a confidence level of 65%.",
-      "prob": {
-        "h": 64,
-        "d": 24,
-        "a": 20
-      },
-      "aiCtxHash": "d41d8cd9"
-    },
-    {
-      "id": "1129cf84",
-      "home": "Нюкасъл",
-      "homeEn": "Newcastle United",
-      "homeA": "NEW",
-      "away": "Барселона",
-      "awayEn": "Barcelona",
-      "awayA": "BAR",
-      "date": "2026-03-10",
-      "time": "22:00",
-      "competition": "Champions League",
-      "competitionBG": "Шампионска лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.53"
-      },
-      "odds_wh": {
-        "a": "2.25",
-        "h": "2.85",
-        "x": "3.75",
-        "o25": "1.53",
-        "btts": "1.44",
-        "o15": "1.14"
-      },
-      "ai": "Двубойът между Нюкасъл и Барселона е много оспорван, като домакините вкарват 1.5 гола на мач, а гостите - 2.2 гола. Формата на двата отбора сочи, че могат да вкарат над 2.5 гола, тъй като Нюкасъл допуска 1.8 гола, а Барселона вкарва много гола в скорошните си мачове. Прогнозата ни е над 2.5 гола при котировка 1.44, като залогът е с увереност 70%.",
-      "aiEn": "Newcastle United and Barcelona are set to clash, with the home team averaging 1.5 goals per game and the away team averaging 2.2 goals per game, and recent form showing W 2-0 and L 1-3 for Newcastle, and W 3-1 and D 2-2 for Barcelona. The Over 2.5 case is strong given both teams' goals per game averages and high-scoring recent form results, including Newcastle's loss with 4 goals and Barcelona's win with 4 goals. The pick is Over 2.5 Goals at 1.44 with William Hill, with a confidence level of 70%.",
-      "prob": {
-        "h": 36,
-        "d": 27,
-        "a": 44
-      },
-      "aiCtxHash": "d41d8cd9"
-    },
-    {
       "id": "963a779e",
       "home": "Леверкузен",
       "homeEn": "Bayer Leverkusen",
@@ -521,9 +369,9 @@
       },
       "aiCtx": "Manchester United are 3rd in the Premier League (51 pts), scoring 1.76 and conceding 1.38 goals per game, form (last 6, scored first): W 3-2, W 2-0, D 1-1, W 1-0, W 2-1, L 1-2. Aston Villa are 4th (51 pts), scoring 1.34 and conceding 1.17 goals per game, form (last 6, scored first): L 0-1, D 1-1, W 1-0, D 1-1, L 0-2, L 1-4. H2H last 1: Manchester United 0W-0D-1L, avg 3.0 goals/game.",
       "newsCtx": "Nov 11, 2006 · Manchester Community College extended its first-half lead to 28-4 (7:17 left), 41-10 (3:13) and 47-13 at the intermission. The Lady Buccaneers (0-1) cut their deficit to as low as 29 points with a … | Aug 8, 2015 · Manchester Community College is committed to providing a safe campus c",
-      "ai": "Ман Юнайтед и Астън Вила се изправят един срещу друг в двубой от 31-вия кръг на Висшата лига, като домакините заемат 3-то място с 51 точки, вкарват 1.76 гола на мач и допускат 1.38 гола, а формата им от последните 6 мача е П 3-2, П 2-0, Р 1-1, П 1-0, П 2-1, З 1-2. Домакините имат предимство в формата и голова сила, което ги прави фаворити в този двубой, тъй като гостите допускат 1.17 гола и вкарват 1.34 гола на мач. Прогнозата е Ман Юнайтед да спечели този мач на котировка 1.75, с увереност 62%.",
-      "aiEn": "Manchester United are 3rd in the Premier League with 51 points, scoring 1.76 and conceding 1.38 goals per game, with a recent form of W 3-2, W 2-0, D 1-1, W 1-0, W 2-1, L 1-2, while Aston Villa are 4th with the same points, scoring 1.34 and conceding 1.17 goals per game, with a form of L 0-1, D 1-1, W 1-0, D 1-1, L 0-2, L 1-4. Manchester United's strong scoring record and form advantage make a compelling case for a home win, given their position and recent performances. The pick is Manchester United to win at odds of 1.75 with a confidence level of 62%.",
-      "aiCtxHash": "a3ea72a0"
+      "ai": "Ман Юнайтед и Астън Вила са на равен брой точки, 51, в крайно конкурентната английска Висша лига, като домакините вкарват 1.76 гола на мач, а гостите - 1.34, а формата им е съответно П 3-2, П 2-0, Р 1-1, П 1-0, П 2-1, З 1-2 и З 0-1, Р 1-1, П 1-0, Р 1-1, З 0-2, З 1-4. Домакините имат предимство в формата и голова сила, което ги прави фаворити в този двубой, тъй като Ман Юнайтед е на трето място и допуска по-малко гола от Астън Вила. Прогнозата е Ман Юнайтед да спечели този мач при котировка 1.75, с увереност 62%, което прави този залог доста привлекателен.",
+      "aiEn": "Manchester United and Aston Villa are currently 3rd and 4th in the Premier League with 51 points, scoring 1.76 and 1.34 goals per game, and recent form of W 3-2, W 2-0, D 1-1, W 1-0, W 2-1, L 1-2 and L 0-1, D 1-1, W 1-0, D 1-1, L 0-2, L 1-4 respectively. Manchester United's position, scoring strength, and form advantage make a strong case for a home win, given their ability to score and concede fewer goals than Aston Villa. The pick is Manchester United to win at odds of 1.75 with a confidence level of 62%.",
+      "aiCtxHash": "b09d93e1"
     },
     {
       "id": "pal_lee",
@@ -1294,6 +1142,86 @@
   },
   "results": [
     {
+      "id": "1129cf84",
+      "home": "Нюкасъл",
+      "homeEn": "Newcastle United",
+      "away": "Барселона",
+      "awayEn": "Barcelona",
+      "date": "2026-03-10",
+      "competition": "Шампионска лига",
+      "competitionEn": "Champions League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 70,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.53"
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
+      "id": "5e256c6e",
+      "home": "Атлетико Мадрид",
+      "homeEn": "Atlético Madrid",
+      "away": "Тотнъм",
+      "awayEn": "Tottenham Hotspur",
+      "date": "2026-03-10",
+      "competition": "Шампионска лига",
+      "competitionEn": "Champions League",
+      "pick": {
+        "bet": "Атлетико Мадрид победа",
+        "betEn": "Atlético Madrid Win",
+        "conf": 65,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.53"
+      },
+      "result": "W",
+      "score": "5-2"
+    },
+    {
+      "id": "2a50d2be",
+      "home": "Аталанта",
+      "homeEn": "Atalanta BC",
+      "away": "Байерн",
+      "awayEn": "Bayern Munich",
+      "date": "2026-03-10",
+      "competition": "Шампионска лига",
+      "competitionEn": "Champions League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 70,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.44"
+      },
+      "result": "W",
+      "score": "1-6"
+    },
+    {
+      "id": "8bcd511f",
+      "home": "Галатасарай",
+      "homeEn": "Galatasaray",
+      "away": "Ливърпул",
+      "awayEn": "Liverpool",
+      "date": "2026-03-10",
+      "competition": "Шампионска лига",
+      "competitionEn": "Champions League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 70,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.56"
+      },
+      "result": "L",
+      "score": "1-0"
+    },
+    {
       "id": "tot_pal",
       "home": "Тотнъм",
       "homeEn": "Tottenham",
@@ -1755,8 +1683,8 @@
     }
   ],
   "record": {
-    "correct": 15,
-    "total": 24,
+    "correct": 17,
+    "total": 28,
     "period": "ЛЕ 26.02.2026"
   },
   "bbRecord": {
