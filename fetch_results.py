@@ -13,7 +13,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timezone, date
 from pathlib import Path
 
 try:
@@ -22,35 +22,24 @@ except ImportError:
     sys.exit("❌  requests not installed.")
 
 FD_BASE     = "https://api.football-data.org/v4"
-AFB_BASE    = "https://v3.football.api-sports.io"
+ODDS_BASE   = "https://api.the-odds-api.com/v4"
 DATA_FILE   = Path("data/matchday.json")
 COMPETITION = "PL"
 
-# api-football.com league IDs for UEFA competitions
-COMP_AFB_ID = {
-    "Champions League": 2,
-    "Europa League":    3,
-    "Conference League": 848,
+# The Odds API sport keys for UEFA competitions
+COMP_ODDS_SPORT = {
+    "Champions League": "soccer_uefa_champs_league",
+    "Europa League":    "soccer_uefa_europa_league",
+    "Conference League": "soccer_uefa_europa_conference_league",
 }
 
 
-def afb_get(path: str, afb_key: str) -> dict:
-    """Fetch from api-football.com (api-sports.io)."""
-    url     = f"{AFB_BASE}{path}"
-    headers = {"x-apisports-key": afb_key}
-    resp    = requests.get(url, headers=headers, timeout=15)
-    if resp.status_code == 429:
-        print("  ⚠  api-football rate limit, sleeping 65s…")
-        import time as _t; _t.sleep(65)
-        resp = requests.get(url, headers=headers, timeout=15)
+def odds_scores(sport: str, odds_key: str, days_from: int) -> list:
+    """Fetch completed scores from The Odds API scores endpoint."""
+    url  = f"{ODDS_BASE}/sports/{sport}/scores/"
+    resp = requests.get(url, params={"apiKey": odds_key, "daysFrom": days_from}, timeout=15)
     resp.raise_for_status()
     return resp.json()
-
-
-def afb_season(date_str: str) -> int:
-    """Return the season start year for a given date (e.g. 2026-03-10 → 2025)."""
-    year, month = int(date_str[:4]), int(date_str[5:7])
-    return year if month >= 7 else year - 1
 
 
 def fd_get(path: str, fd_key: str) -> dict:
@@ -240,45 +229,35 @@ def main():
         md["results"]  = results[:30]
         md["record"]   = record
 
-    # ── UEFA match results (api-football.com) ─────────────────────────────────
-    afb_key = os.environ.get("API_FOOTBALL_KEY", "")
+    # ── UEFA match results (The Odds API scores) ──────────────────────────────
+    odds_key = os.environ.get("ODDS_API_KEY", "")
     if pending_past_uefa:
-        if not afb_key:
-            print("⚠  API_FOOTBALL_KEY not set — skipping UEFA results.")
+        if not odds_key:
+            print("⚠  ODDS_API_KEY not set — skipping UEFA results.")
         else:
             by_comp: dict[str, list] = {}
             for m in pending_past_uefa:
                 by_comp.setdefault(m["competition"], []).append(m)
 
-            remaining_after_uefa = md.get("upcoming", remaining_upcoming)
+            remaining_after_uefa = list(md.get("upcoming", remaining_upcoming))
 
             for comp_en, comp_matches in by_comp.items():
-                league_id = COMP_AFB_ID.get(comp_en)
-                if not league_id:
-                    print(f"  ⚠  No api-football ID for {comp_en}, skipping")
+                sport = COMP_ODDS_SPORT.get(comp_en)
+                if not sport:
+                    print(f"  ⚠  No Odds API sport key for {comp_en}, skipping")
                     continue
 
                 date_from = min(m["date"] for m in comp_matches)
                 date_to   = max(m["date"] for m in comp_matches)
-                season    = afb_season(date_from)
+                days_ago  = (date.today() - date.fromisoformat(date_from)).days + 1
+                days_from = min(max(days_ago, 1), 3)
+
                 print(f"\n🏆  Checking {len(comp_matches)} pending past {comp_en} matches "
                       f"({date_from} – {date_to})…")
                 try:
-                    payload  = afb_get(
-                        f"/fixtures?league={league_id}&season={season}"
-                        f"&from={date_from}&to={date_to}",
-                        afb_key,
-                    )
-                    all_afb  = payload.get("response", [])
-                    errors   = payload.get("errors", [])
-                    if errors:
-                        print(f"  ⚠  api-football errors: {errors}")
-                    print(f"  ℹ  api-football raw: {len(all_afb)} total fixtures, statuses: "
-                          f"{list({f.get('fixture',{}).get('status',{}).get('short') for f in all_afb})}")
-                    # Accept FT (full time), AET (after extra time), PEN (penalties)
-                    uefa_afb = [f for f in all_afb
-                                if f.get("fixture", {}).get("status", {}).get("short") in ("FT", "AET", "PEN")]
-                    print(f"  ✓  api-football returned {len(uefa_afb)} finished {comp_en} matches")
+                    fixtures  = odds_scores(sport, odds_key, days_from)
+                    completed = [f for f in fixtures if f.get("completed")]
+                    print(f"  ✓  Odds API returned {len(completed)} finished {comp_en} matches")
                 except Exception as e:
                     print(f"  ⚠  Could not fetch {comp_en} results: {e}")
                     continue
@@ -290,10 +269,9 @@ def main():
                         continue
 
                     matched = None
-                    for fix in uefa_afb:
-                        afb_home = fix.get("teams", {}).get("home", {}).get("name", "")
-                        afb_away = fix.get("teams", {}).get("away", {}).get("name", "")
-                        if team_matches(afb_home, match["homeEn"]) and team_matches(afb_away, match["awayEn"]):
+                    for fix in completed:
+                        if team_matches(fix.get("home_team", ""), match["homeEn"]) and \
+                           team_matches(fix.get("away_team", ""), match["awayEn"]):
                             matched = fix
                             break
 
@@ -301,15 +279,17 @@ def main():
                         still_pending.append(match)
                         continue
 
-                    goals      = matched.get("goals", {})
-                    home_score = goals.get("home")
-                    away_score = goals.get("away")
+                    scores     = matched.get("scores") or []
+                    home_score = next((int(s["score"]) for s in scores
+                                      if team_matches(s["name"], match["homeEn"])), None)
+                    away_score = next((int(s["score"]) for s in scores
+                                      if team_matches(s["name"], match["awayEn"])), None)
 
                     if home_score is None or away_score is None:
                         still_pending.append(match)
                         continue
 
-                    result = determine_result(match, int(home_score), int(away_score))
+                    result = determine_result(match, home_score, away_score)
                     if result is None:
                         still_pending.append(match)
                         continue
@@ -350,35 +330,30 @@ def main():
         bb_date = bb_src.get("date") if bb_src else None
 
         if bb_comp and bb_date:
-            # UEFA match — use api-football
-            league_id = COMP_AFB_ID.get(bb_comp)
-            if league_id and afb_key:
-                season = afb_season(bb_date)
+            # UEFA match — use Odds API scores
+            sport = COMP_ODDS_SPORT.get(bb_comp)
+            if sport and odds_key:
+                days_ago  = (date.today() - date.fromisoformat(bb_date)).days + 1
+                days_from = min(max(days_ago, 1), 3)
                 try:
-                    payload = afb_get(
-                        f"/fixtures?league={league_id}&season={season}"
-                        f"&from={bb_date}&to={bb_date}",
-                        afb_key,
-                    )
-                    all_fix      = payload.get("response", [])
-                    afb_fixtures = [f for f in all_fix
-                                    if f.get("fixture", {}).get("status", {}).get("short") in ("FT", "AET", "PEN")]
-                    print(f"\n🏆  betBuilder {bb_comp}: {len(afb_fixtures)} finished matches on {bb_date}")
+                    fixtures     = odds_scores(sport, odds_key, days_from)
+                    bb_completed = [f for f in fixtures if f.get("completed")]
+                    print(f"\n🏆  betBuilder {bb_comp}: {len(bb_completed)} finished matches on {bb_date}")
                 except Exception as e:
                     print(f"  ⚠  Could not fetch {bb_comp} results: {e}")
-                    afb_fixtures = []
+                    bb_completed = []
             else:
-                afb_fixtures = []
+                bb_completed = []
 
-            for fix in afb_fixtures:
-                afb_home = fix.get("teams", {}).get("home", {}).get("name", "")
-                afb_away = fix.get("teams", {}).get("away", {}).get("name", "")
-                if team_matches(afb_home, bb["homeEn"]) and team_matches(afb_away, bb["awayEn"]):
-                    goals = fix.get("goals", {})
-                    h_s   = goals.get("home")
-                    a_s   = goals.get("away")
+            for fix in bb_completed:
+                if team_matches(fix.get("home_team", ""), bb["homeEn"]) and \
+                   team_matches(fix.get("away_team", ""), bb["awayEn"]):
+                    scores = fix.get("scores") or []
+                    h_s = next((int(s["score"]) for s in scores
+                                if team_matches(s["name"], bb["homeEn"])), None)
+                    a_s = next((int(s["score"]) for s in scores
+                                if team_matches(s["name"], bb["awayEn"])), None)
                     if h_s is not None and a_s is not None:
-                        h_s, a_s = int(h_s), int(a_s)
                         bb_res = determine_bb_result(bb.get("markets", []), h_s, a_s)
                         bb["result"] = bb_res
                         bb_record["correct"] = bb_record.get("correct", 0) + (1 if bb_res == "W" else 0)
