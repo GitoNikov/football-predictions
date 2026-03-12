@@ -45,7 +45,7 @@ OAIO_BOOKMAKER = "WilliamHill"   # exact key as returned by /v3/bookmakers
 TODA_BASE      = "https://api.the-odds-api.com/v4"
 TODA_BOOKMAKER = "williamhill"
 TODA_REGIONS   = "eu"
-TODA_MARKETS   = "h2h,totals"   # no per-event BTTS — saves quota
+TODA_MARKETS   = "h2h,totals,btts"
 
 # EPL sport key handled via the-odds-api.com
 EPL_SPORT = "soccer_epl"
@@ -186,6 +186,14 @@ def _toda_extract_totals(market: dict, point: float) -> dict:
     return {}
 
 
+def _toda_extract_btts(market: dict) -> dict:
+    """Parse BTTS Yes odd from the-odds-api.com format."""
+    for outcome in market.get("outcomes", []):
+        if outcome["name"] == "Yes":
+            return {"_btts": str(round(outcome["price"], 2))}
+    return {}
+
+
 
 def fetch_epl_odds(epl_key: str, upcoming_md: list) -> dict:
     """
@@ -226,13 +234,16 @@ def fetch_epl_odds(epl_key: str, upcoming_md: list) -> dict:
         if "totals" in markets:
             all_odds.update({f"{prefix}{k}": v for k, v in _toda_extract_totals(markets["totals"], 2.5).items()})
             all_odds.update({f"{prefix}{k}": v for k, v in _toda_extract_totals(markets["totals"], 1.5).items()})
+        if "btts" in markets:
+            all_odds.update({f"{prefix}{k}": v for k, v in _toda_extract_btts(markets["btts"]).items()})
 
         print(f"  ✓  {home} vs {away}  [{prefix}]  "
               f"1={all_odds.get(prefix+'_1','?')}  "
               f"X={all_odds.get(prefix+'_x','?')}  "
               f"2={all_odds.get(prefix+'_2','?')}  "
               f"O2.5={all_odds.get(prefix+'_o25','?')}  "
-              f"O1.5={all_odds.get(prefix+'_o15','?')}")
+              f"O1.5={all_odds.get(prefix+'_o15','?')}  "
+              f"BTTS={all_odds.get(prefix+'_btts','?')}")
 
     return all_odds
 

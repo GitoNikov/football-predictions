@@ -23,6 +23,7 @@ except ImportError:
 
 FD_BASE     = "https://api.football-data.org/v4"
 ODDS_BASE   = "https://api.the-odds-api.com/v4"
+AF_BASE     = "https://v3.football.api-sports.io"
 DATA_FILE   = Path("data/matchday.json")
 COMPETITION = "PL"
 
@@ -33,6 +34,13 @@ COMP_ODDS_SPORT = {
     "Conference League": "soccer_uefa_europa_conference_league",
 }
 
+# api-football.com league IDs for UEFA competitions (season = start year, e.g. 2025 for 2025-26)
+COMP_AF_LEAGUE = {
+    "Champions League": 2,
+    "Europa League":    3,
+    "Conference League": 848,
+}
+
 
 def odds_scores(sport: str, odds_key: str, days_from: int) -> list:
     """Fetch completed scores from The Odds API scores endpoint."""
@@ -40,6 +48,21 @@ def odds_scores(sport: str, odds_key: str, days_from: int) -> list:
     resp = requests.get(url, params={"apiKey": odds_key, "daysFrom": days_from}, timeout=15)
     resp.raise_for_status()
     return resp.json()
+
+
+def af_scores(league_id: int, af_key: str, date_from: str, date_to: str) -> list:
+    """Fetch finished fixtures from api-football.com for a UEFA league."""
+    # api-football uses season start year: 2025-26 season → season=2025
+    year = int(date_from[:4])
+    month = int(date_from[5:7])
+    season = year - 1 if month < 7 else year
+    url  = f"{AF_BASE}/fixtures"
+    headers = {"x-apisports-key": af_key}
+    params  = {"league": league_id, "season": season,
+               "from": date_from, "to": date_to, "status": "FT"}
+    resp = requests.get(url, headers=headers, params=params, timeout=15)
+    resp.raise_for_status()
+    return resp.json().get("response", [])
 
 
 def fd_get(path: str, fd_key: str) -> dict:
@@ -130,6 +153,7 @@ def main():
     fd_key = os.environ.get("FOOTBALL_DATA_API_KEY", "")
     if not fd_key:
         sys.exit("❌  Set FOOTBALL_DATA_API_KEY env var (free at football-data.org)")
+    af_key = os.environ.get("API_FOOTBALL_KEY", "")
 
     if not DATA_FILE.exists():
         sys.exit(f"❌  {DATA_FILE} not found.")
@@ -241,11 +265,11 @@ def main():
         md["results"]  = results[:30]
         md["record"]   = record
 
-    # ── UEFA match results (The Odds API scores) ──────────────────────────────
+    # ── UEFA match results (Odds API → api-football.com fallback) ────────────
     odds_key = os.environ.get("ODDS_API_KEY", "")
     if pending_past_uefa:
-        if not odds_key:
-            print("⚠  ODDS_API_KEY not set — skipping UEFA results.")
+        if not odds_key and not af_key:
+            print("⚠  Neither ODDS_API_KEY nor API_FOOTBALL_KEY set — skipping UEFA results.")
         else:
             by_comp: dict[str, list] = {}
             for m in pending_past_uefa:
@@ -254,24 +278,54 @@ def main():
             remaining_after_uefa = list(md.get("upcoming", remaining_upcoming))
 
             for comp_en, comp_matches in by_comp.items():
-                sport = COMP_ODDS_SPORT.get(comp_en)
-                if not sport:
-                    print(f"  ⚠  No Odds API sport key for {comp_en}, skipping")
-                    continue
-
                 date_from = min(m["date"] for m in comp_matches)
                 date_to   = max(m["date"] for m in comp_matches)
-                days_ago  = (date.today() - date.fromisoformat(date_from)).days + 1
-                days_from = min(max(days_ago, 1), 3)
 
                 print(f"\n🏆  Checking {len(comp_matches)} pending past {comp_en} matches "
                       f"({date_from} – {date_to})…")
-                try:
-                    fixtures  = odds_scores(sport, odds_key, days_from)
-                    completed = [f for f in fixtures if f.get("completed")]
-                    print(f"  ✓  Odds API returned {len(completed)} finished {comp_en} matches")
-                except Exception as e:
-                    print(f"  ⚠  Could not fetch {comp_en} results: {e}")
+
+                # Try The Odds API first, fall back to api-football.com
+                completed: list = []
+                source = ""
+                if odds_key:
+                    sport    = COMP_ODDS_SPORT.get(comp_en)
+                    days_ago = (date.today() - date.fromisoformat(date_from)).days + 1
+                    days_from_n = min(max(days_ago, 1), 3)
+                    try:
+                        fixtures  = odds_scores(sport, odds_key, days_from_n)
+                        completed = [f for f in fixtures if f.get("completed")]
+                        source    = "Odds API"
+                        print(f"  ✓  Odds API returned {len(completed)} finished {comp_en} matches")
+                    except Exception as e:
+                        print(f"  ⚠  Odds API failed: {e} — trying api-football.com…")
+
+                if not completed and af_key:
+                    league_id = COMP_AF_LEAGUE.get(comp_en)
+                    if not league_id:
+                        print(f"  ⚠  No api-football league ID for {comp_en}, skipping")
+                        continue
+                    try:
+                        af_fixtures = af_scores(league_id, af_key, date_from, date_to)
+                        # Normalise to same shape used below
+                        completed = [
+                            {
+                                "_af":       True,
+                                "home_team": f["teams"]["home"]["name"],
+                                "away_team": f["teams"]["away"]["name"],
+                                "home_score": f["goals"]["home"],
+                                "away_score": f["goals"]["away"],
+                            }
+                            for f in af_fixtures
+                            if f.get("goals", {}).get("home") is not None
+                        ]
+                        source = "api-football.com"
+                        print(f"  ✓  api-football.com returned {len(completed)} finished {comp_en} matches")
+                    except Exception as e:
+                        print(f"  ⚠  api-football.com failed: {e}")
+                        continue
+
+                if not completed:
+                    print(f"  ⚠  No results found for {comp_en}")
                     continue
 
                 still_pending = []
@@ -282,8 +336,10 @@ def main():
 
                     matched = None
                     for fix in completed:
-                        if team_matches(fix.get("home_team", ""), match["homeEn"]) and \
-                           team_matches(fix.get("away_team", ""), match["awayEn"]):
+                        h_name = fix.get("home_team", "")
+                        a_name = fix.get("away_team", "")
+                        if team_matches(h_name, match["homeEn"]) and \
+                           team_matches(a_name, match["awayEn"]):
                             matched = fix
                             break
 
@@ -291,17 +347,21 @@ def main():
                         still_pending.append(match)
                         continue
 
-                    scores     = matched.get("scores") or []
-                    home_score = next((int(s["score"]) for s in scores
-                                      if team_matches(s["name"], match["homeEn"])), None)
-                    away_score = next((int(s["score"]) for s in scores
-                                      if team_matches(s["name"], match["awayEn"])), None)
+                    if matched.get("_af"):
+                        home_score = matched["home_score"]
+                        away_score = matched["away_score"]
+                    else:
+                        scores     = matched.get("scores") or []
+                        home_score = next((int(s["score"]) for s in scores
+                                          if team_matches(s["name"], match["homeEn"])), None)
+                        away_score = next((int(s["score"]) for s in scores
+                                          if team_matches(s["name"], match["awayEn"])), None)
 
                     if home_score is None or away_score is None:
                         still_pending.append(match)
                         continue
 
-                    result = determine_result(match, home_score, away_score)
+                    result = determine_result(match, int(home_score), int(away_score))
                     if result is None:
                         still_pending.append(match)
                         continue
@@ -323,7 +383,7 @@ def main():
                     record["correct"] = record.get("correct", 0) + (1 if result == "W" else 0)
                     record["total"]   = record.get("total", 0) + 1
                     icon = "✓" if result == "W" else "✗"
-                    print(f"  {icon}  {match['homeEn']} vs {match['awayEn']} → {result} ({score_str})")
+                    print(f"  {icon}  {match['homeEn']} vs {match['awayEn']} → {result} ({score_str})  [{source}]")
                     moved += 1
 
                 remaining_after_uefa = still_pending
@@ -342,30 +402,51 @@ def main():
         bb_date = bb_src.get("date") if bb_src else None
 
         if bb_comp and bb_date:
-            # UEFA match — use Odds API scores
+            # UEFA match — try Odds API first, fall back to api-football.com
+            bb_completed: list = []
             sport = COMP_ODDS_SPORT.get(bb_comp)
             if sport and odds_key:
                 days_ago  = (date.today() - date.fromisoformat(bb_date)).days + 1
-                days_from = min(max(days_ago, 1), 3)
+                days_from_n = min(max(days_ago, 1), 3)
                 try:
-                    fixtures     = odds_scores(sport, odds_key, days_from)
+                    fixtures     = odds_scores(sport, odds_key, days_from_n)
                     bb_completed = [f for f in fixtures if f.get("completed")]
                     print(f"\n🏆  betBuilder {bb_comp}: {len(bb_completed)} finished matches on {bb_date}")
                 except Exception as e:
-                    print(f"  ⚠  Could not fetch {bb_comp} results: {e}")
-                    bb_completed = []
-            else:
-                bb_completed = []
+                    print(f"  ⚠  Odds API betBuilder failed: {e}")
+
+            if not bb_completed and af_key:
+                league_id = COMP_AF_LEAGUE.get(bb_comp)
+                if league_id:
+                    try:
+                        af_fix = af_scores(league_id, af_key, bb_date, bb_date)
+                        bb_completed = [
+                            {
+                                "_af": True,
+                                "home_team":  f["teams"]["home"]["name"],
+                                "away_team":  f["teams"]["away"]["name"],
+                                "home_score": f["goals"]["home"],
+                                "away_score": f["goals"]["away"],
+                            }
+                            for f in af_fix if f.get("goals", {}).get("home") is not None
+                        ]
+                        print(f"\n🏆  betBuilder {bb_comp} (api-football): {len(bb_completed)} matches")
+                    except Exception as e:
+                        print(f"  ⚠  api-football.com betBuilder failed: {e}")
 
             for fix in bb_completed:
                 if team_matches(fix.get("home_team", ""), bb["homeEn"]) and \
                    team_matches(fix.get("away_team", ""), bb["awayEn"]):
-                    scores = fix.get("scores") or []
-                    h_s = next((int(s["score"]) for s in scores
-                                if team_matches(s["name"], bb["homeEn"])), None)
-                    a_s = next((int(s["score"]) for s in scores
-                                if team_matches(s["name"], bb["awayEn"])), None)
+                    if fix.get("_af"):
+                        h_s, a_s = fix["home_score"], fix["away_score"]
+                    else:
+                        scores = fix.get("scores") or []
+                        h_s = next((int(s["score"]) for s in scores
+                                    if team_matches(s["name"], bb["homeEn"])), None)
+                        a_s = next((int(s["score"]) for s in scores
+                                    if team_matches(s["name"], bb["awayEn"])), None)
                     if h_s is not None and a_s is not None:
+                        h_s, a_s = int(h_s), int(a_s)
                         bb_res = determine_bb_result(bb.get("markets", []), h_s, a_s)
                         bb["result"] = bb_res
                         bb_record["correct"] = bb_record.get("correct", 0) + (1 if bb_res == "W" else 0)

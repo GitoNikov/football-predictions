@@ -388,7 +388,7 @@ def fetch_domestic_events(api_key: str, sport_key: str, league_name: str) -> lis
     params = {
         "apiKey":     api_key,
         "regions":    "eu",
-        "markets":    "h2h,totals",
+        "markets":    "h2h,totals,btts",
         "oddsFormat": "decimal",
         "bookmakers": "williamhill",
     }
@@ -432,7 +432,7 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client, fd_k
         params = {
             "apiKey":     api_key,
             "regions":    "eu",
-            "markets":    "h2h,totals",
+            "markets":    "h2h,totals,btts",
             "oddsFormat": "decimal",
             "bookmakers": "williamhill",
         }
@@ -597,7 +597,7 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client, fd_k
 
 
 def extract_wh_odds(event: dict) -> dict:
-    """Extract William Hill h2h + totals from a single event."""
+    """Extract William Hill h2h + totals + btts from a single event."""
     wh = next((bk for bk in event.get("bookmakers", []) if bk["key"] == "williamhill"), None)
     if not wh:
         return {}
@@ -617,6 +617,10 @@ def extract_wh_odds(event: dict) -> dict:
                 for o in market["outcomes"]:
                     if o.get("point") == point and o["name"] == "Over":
                         result[key] = str(round(o["price"], 2))
+        elif market["key"] == "btts":
+            for o in market["outcomes"]:
+                if o["name"] == "Yes":
+                    result["btts"] = str(round(o["price"], 2))
     return result
 
 
