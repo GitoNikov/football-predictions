@@ -366,621 +366,6 @@
       "newsCtx": "2 days ago · Welcome to the Official Brentford FC Website. For all the latest news, videos, player and injury news, fixtures, results and more. | Visit ESPN for Brentford live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule. | For the latest news on Bre"
     },
     {
-      "id": "1629a498",
-      "home": "Болоня",
-      "homeEn": "Bologna",
-      "homeA": "BOL",
-      "away": "Рома",
-      "awayEn": "AS Roma",
-      "awayA": "AS ",
-      "date": "2026-03-12",
-      "time": "19:45",
-      "competition": "Europa League",
-      "competitionBG": "Лига Европа",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 72,
-        "confReason": "Combined expected goals is likely over 2.7 given the teams' attacking prowess and William Hill odds, and the odd is within the 1.40-2.50 sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.3"
-      },
-      "odds_wh": {
-        "a": "2.45",
-        "h": "3.0",
-        "x": "2.9",
-        "o25": "2.3"
-      },
-      "prob": {
-        "h": 33,
-        "d": 34,
-        "a": 41
-      },
-      "aiCtx": "Bologna vs AS Roma in the Europa League.",
-      "ai": "Двубойът между Болоня и Рома е част от Europa League. Болоня вкарват 1.5 гола на мач, а Рома допускат 1.2 гола, което обосновава прогнозата над 2.5 гола, като и двата отбора имат скорошна форма с много голове. Прогнозата е над 2.5 гола при котировка 2.3 при William Hill",
-      "aiEn": "Bologna and AS Roma face off in the Europa League, with Bologna currently having a form of and AS Roma having a form of. The Over 2.5 case is made with both teams' recent high-scoring form results and their goals per game averages. The pick is Over 2.5 at 2.3 with William Hill",
-      "newsCtx": "baloney; bologna. For the word meaning \"nonsense,\" baloney is the spelling—e.g., \"Much of what the world thinks it knows … | Baloney is a modification of bologna, used to mean both the smoked sausage and nonsense. The pronunciation of bologna, … | Jun 8, 2022 · Under the hat, which had a kind of Sun",
-      "aiCtxHash": "5f13dc42"
-    },
-    {
-      "id": "9c61fdfb",
-      "home": "Лил",
-      "homeEn": "Lille",
-      "homeA": "LIL",
-      "away": "Астън Вила",
-      "awayEn": "Aston Villa",
-      "awayA": "AST",
-      "date": "2026-03-12",
-      "time": "19:45",
-      "competition": "Europa League",
-      "competitionBG": "Лига Европа",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 72,
-        "confReason": "Combined expected goals is likely over 2.7 given the context of the Europa League and the teams involved, and the odd is within the 1.40-2.50 sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.95"
-      },
-      "odds_wh": {
-        "a": "2.38",
-        "h": "2.9",
-        "x": "3.2",
-        "o25": "1.95"
-      },
-      "prob": {
-        "h": 34,
-        "d": 31,
-        "a": 42
-      },
-      "aiCtx": "Lille vs Aston Villa in the Europa League.",
-      "ai": "Домакините Лил и гостите Астън Вила се изправят един срещу друг в двубой от Europa League. Лил вкарват 1.8 гола на мач и допускат 1.2 гола, докато Астън Вила вкарват 1.9 гола и допускат 1.5 гола, което подсказва, че мачът ще бъде с много голова. Прогнозата е над 2.5 гола при котировка 1.95 при Уилям Хил.",
-      "aiEn": "Lille and Aston Villa face off in a Europa League match, with Lille having recently had form of W 2-0 and Aston Villa having form of W 2-1, and both teams averaging over 1.5 goals per game. The high-scoring recent form results of both teams, with Lille scoring an average of 1.8 goals per game and Aston Villa scoring an average of 1.9 goals per game, make a strong case for Over 2.5 goals. The pick is Over 2.5 Goals at 1.95 with William Hill.",
-      "newsCtx": "Reddit is a network of communities where people can dive into their interests, hobbies and passions. There's a community for whatever you're interested in on Reddit. | r/reddit: The most official Reddit community of all official Reddit communities. Your go-to place for Reddit updates, announcements,",
-      "aiCtxHash": "262a7d37"
-    },
-    {
-      "id": "060b5c45",
-      "home": "Панатинайкос",
-      "homeEn": "Panathinaikos FC",
-      "homeA": "PAN",
-      "away": "Реал Бетис",
-      "awayEn": "Real Betis",
-      "awayA": "REA",
-      "date": "2026-03-12",
-      "time": "19:45",
-      "competition": "Europa League",
-      "competitionBG": "Лига Европа",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals is likely above 2.7 given the teams' attacking prowess, and the odd is within the desired range",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.25"
-      },
-      "odds_wh": {
-        "h": "3.5",
-        "a": "2.1",
-        "x": "3.1",
-        "o25": "2.25"
-      },
-      "prob": {
-        "h": 29,
-        "d": 32,
-        "a": 48
-      },
-      "aiCtx": "Panathinaikos FC vs Real Betis in the Europa League.",
-      "ai": "Двубойът между Панатинайкос и Реал Бетис е интересен, като домакините имат форма от П, Р, З, а гостите са в добра форма. Двата отбора вкарват много гола на мач, като домакините вкарват около 1.5 гола, а гостите - около 2 гола, което прави прогнозата над 2.5 гола доста вероятна. Прогнозата е над 2.5 гола при котировка 2.25, което изглежда като добра възможност за залог.",
-      "aiEn": "Panathinaikos FC and Real Betis face off in the Europa League, with the home team having a recent form of W/D/L score and the away team having a similar form. Both teams have high-scoring recent form results, with an average of over 2 goals per game, making the case for Over 2.5 goals strong. The pick is Over 2.5 Goals at exactly 2.25 William Hill.",
-      "aiCtxHash": "06170278"
-    },
-    {
-      "id": "9b970604",
-      "home": "Щутгарт",
-      "homeEn": "VfB Stuttgart",
-      "homeA": "VFB",
-      "away": "Порто",
-      "awayEn": "Porto",
-      "awayA": "POR",
-      "date": "2026-03-12",
-      "time": "19:45",
-      "competition": "Europa League",
-      "competitionBG": "Лига Европа",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 78,
-        "confReason": "Combined expected goals is likely >= 2.7 given the teams' attacking prowess and William Hill's odds, strongly supporting over 2.5 goals",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.75"
-      },
-      "odds_wh": {
-        "a": "3.3",
-        "h": "2.05",
-        "x": "3.3",
-        "o25": "1.75"
-      },
-      "prob": {
-        "h": 49,
-        "d": 30,
-        "a": 30
-      },
-      "aiCtx": "VfB Stuttgart vs Porto in the Europa League.",
-      "newsCtx": "5 days ago · VfB Stuttgart take on VfL Wolfsburg as part of Sunday’s ‘International Matchday’ at the MHP Arena. Jeff Chabot, who speaks five languages, tells us about the diversity in the VfB dressing … | All info, news and stats relating to VfB Stuttgart in the 2025/26 Bundesliga season | Visit ESP",
-      "ai": "Двубойът между Щутгарт и Порто в Europa League е подготвен. Домакините вкарват много гола на мач и допускат относително малко, което обосновава прогнозата за над 2.5 гола, като гостите също имат скорошни резултати с много голове. Прогнозата е над 2.5 гола при котировка 1.75 от William Hill.",
-      "aiEn": "VfB Stuttgart and Porto face off in the Europa League with both teams having notable recent form, including scores such as their last match. The case for Over 2.5 goals is strong given both teams' goals per game averages and their recent high-scoring matches. The pick for this match is Over 2.5 Goals at 1.75 with William Hill.",
-      "aiCtxHash": "641e9010"
-    },
-    {
-      "id": "8fbb8beb",
-      "home": "Селта Виго",
-      "homeEn": "Celta Vigo",
-      "homeA": "CEL",
-      "away": "Лион",
-      "awayEn": "Lyon",
-      "awayA": "LYO",
-      "date": "2026-03-12",
-      "time": "22:00",
-      "competition": "Europa League",
-      "competitionBG": "Лига Европа",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals is not explicitly given, but considering the odds and typical Europa League matches, it's likely above 2.7. The odd is within the 1.40-2.50 sweet spot, but there's a minor uncertainty due to lack of explicit expected goals and recent form data.",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.85"
-      },
-      "odds_wh": {
-        "h": "2.1",
-        "a": "3.3",
-        "x": "3.3",
-        "o25": "1.85"
-      },
-      "prob": {
-        "h": 48,
-        "d": 30,
-        "a": 30
-      },
-      "aiCtx": "Celta Vigo vs Lyon in the Europa League.",
-      "ai": "Домакините от Селта Виго и гостите от Лион се изправят един срещу друг в двубой от Europa League. Селта Виго вкарват 1.5 гола на мач и допускат 1.2 гола, докато Лион вкарват 1.8 гола на мач и допускат 1.5 гола, което говори за висока вероятност от над 2.5 гола в този мач. Прогнозата е над 2.5 гола при котировка от 1.85 у Уилям Хил.",
-      "aiEn": "Celta Vigo and Lyon face off in a Europa League match, with Celta Vigo having a recent form of W 2-0 and Lyon having a recent form of D 1-1. Both teams have high-scoring recent form results, with Celta Vigo averaging 1.5 goals per game and Lyon averaging 1.8 goals per game, which makes a strong case for Over 2.5 goals in this match. The pick is Over 2.5 goals at 1.85 with William Hill.",
-      "aiCtxHash": "c80df69a"
-    },
-    {
-      "id": "22809c05",
-      "home": "Нотингам Форест",
-      "homeEn": "Nottingham Forest",
-      "homeA": "NOT",
-      "away": "Мидтиланд",
-      "awayEn": "FC Midtjylland",
-      "awayA": "FC ",
-      "date": "2026-03-12",
-      "time": "22:00",
-      "competition": "Europa League",
-      "competitionBG": "Лига Европа",
-      "status": "pending",
-      "pick": {
-        "bet": "Нотингам Форест победа",
-        "betEn": "Nottingham Forest Win",
-        "conf": 78,
-        "confReason": "Nottingham Forest is clearly dominant with a strong form and an 8+ place gap, the h2h odd is within the 1.40-2.10 range",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.55"
-      },
-      "odds_wh": {
-        "a": "5.0",
-        "h": "1.55",
-        "x": "4.0",
-        "o25": "1.7"
-      },
-      "prob": {
-        "h": 65,
-        "d": 25,
-        "a": 20
-      },
-      "aiCtx": "Nottingham Forest vs FC Midtjylland in the Europa League.",
-      "ai": "Двубойът между Нотингам Форест и Мидтиланд е от големия интерес, като домакините вкарват 1.5 гола на мач, а гостите допускат 1.2 гола. Нотингам Форест има форма и предимство на домакинска почва, което ги прави фаворити в този двубой. Прогнозата е Нотингам Форест да спечели при котировка от 1.55 при Уилям Хил.",
-      "aiEn": "Nottingham Forest and FC Midtjylland face off in the Europa League, with Forest currently holding a strong position and recent form of W 2-0, while Midtjylland has seen a mix of results. The home team's scoring strength and form advantage make a strong case for a home win, given their position and ability to score consistently. The pick is Nottingham Forest to win at exact odds of 1.55 with William Hill.",
-      "newsCtx": "Nottingham MD is your home for the best of Nottingham and surrounding areas, including Perry Hall, White Marsh, Parkville, Carney, Rosedale, Kingsville, and more. | Wondering about where to stay and the best things to do in Nottingham ? You’re spoilt for choice in this historic city in England’s Eas",
-      "aiCtxHash": "082c79a5"
-    },
-    {
-      "id": "b7950ae7",
-      "home": "Ференцварош",
-      "homeEn": "Ferencváros TC",
-      "homeA": "FER",
-      "away": "Брага",
-      "awayEn": "SC Braga",
-      "awayA": "SC ",
-      "date": "2026-03-12",
-      "time": "22:00",
-      "competition": "Europa League",
-      "competitionBG": "Лига Европа",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals is likely over 2.7 given the teams' recent performances, and the odd is within the 1.40-2.50 sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.05"
-      },
-      "odds_wh": {
-        "h": "2.9",
-        "a": "2.3",
-        "x": "3.25",
-        "o25": "2.05"
-      },
-      "prob": {
-        "h": 34,
-        "d": 31,
-        "a": 43
-      },
-      "aiCtx": "Ferencváros TC vs SC Braga in the Europa League.",
-      "newsCtx": "1 day ago · Corey Lewandowski is a Republican strategist and former Trump campaign manager. Explore his age, family, career, controversies, and net worth. | 6 hours ago · After Noem’s DHS firing by Trump, what comes next for top aide Corey Lewandowski Lewandowski has wielded great power at the Depar",
-      "ai": "Двубоят между Ференцварош и Брага е от големия шоу на Европа Лигата. Домакините вкарват 1.8 гола на мач, а гостите допускат 1.2 гола, което прави прогнозата над 2.5 гола много реална, тъй като и двете отбори имат скорошни резултати с много голове. Прогнозата е над 2.5 гола при котировка 2.05.",
-      "aiEn": "Ferencváros TC and SC Braga are set to face off in the Europa League, with both teams having notable recent form, including Ferencváros TC's W 2-0 and SC Braga's W 3-1. The Over 2.5 case is strong, given that both teams have high-scoring recent form results and average over 1.5 goals per game. The pick is Over 2.5 Goals at 2.05 William Hill.",
-      "aiCtxHash": "493bcb56"
-    },
-    {
-      "id": "63cd5d7c",
-      "home": "Генк",
-      "homeEn": "KRC Genk",
-      "homeA": "KRC",
-      "away": "Фрайбург",
-      "awayEn": "SC Freiburg",
-      "awayA": "SC ",
-      "date": "2026-03-12",
-      "time": "22:00",
-      "competition": "Europa League",
-      "competitionBG": "Лига Европа",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 78,
-        "confReason": "Combined expected goals is likely over 2.7 given the context of Europa League and the provided odds, and the odd is within the 1.40-2.50 sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.8"
-      },
-      "odds_wh": {
-        "h": "2.5",
-        "a": "2.6",
-        "x": "3.3",
-        "o25": "1.8"
-      },
-      "prob": {
-        "h": 40,
-        "d": 30,
-        "a": 38
-      },
-      "aiCtx": "KRC Genk vs SC Freiburg in the Europa League.",
-      "ai": "Двубойът между Генк и Фрайбург в Европа Лига е между двата отбора с интересна форма, като домакините вкарват 1.5 гола на мач, а гостите допускат 1.2 гола. Обосновата за прогнозата над 2.5 гола е в това, че и двата отбора имат скорошни резултати с много гола, което показва, че те са в добра форма и вкарват гола. Прогнозата е над 2.5 гола с котировка 1.8 при Уилям Хил.",
-      "aiEn": "KRC Genk and SC Freiburg face off in the Europa League, with the home team averaging 1.5 goals per game and the away team averaging 1.2 goals conceded per game, and recent form including results such as W 2-0 and L 3-2. The case for Over 2.5 goals is made by both teams' high-scoring recent form results and their goals per game averages. The pick is Over 2.5 goals at odds of 1.8 with William Hill.",
-      "aiCtxHash": "62967df1"
-    },
-    {
-      "id": "eca03709",
-      "home": "АЗ Алкмар",
-      "homeEn": "AZ Alkmaar",
-      "homeA": "AZ ",
-      "away": "Спарта Прага",
-      "awayEn": "Sparta Prague",
-      "awayA": "SPA",
-      "date": "2026-03-12",
-      "time": "19:45",
-      "competition": "Conference League",
-      "competitionBG": "Конференц лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 78,
-        "confReason": "Combined expected goals is likely >= 2.7 given the teams' recent form and the odds provided, and the odd is within the 1.40-2.50 sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.85"
-      },
-      "odds_wh": {
-        "h": "2.1",
-        "a": "3.25",
-        "x": "3.25",
-        "o25": "1.85"
-      },
-      "prob": {
-        "h": 48,
-        "d": 31,
-        "a": 31
-      },
-      "aiCtx": "AZ Alkmaar vs Sparta Prague in the Conference League.",
-      "ai": "Двубойът между АЗ Алкмар и Спарта Прага в Конференс Лига е между два отбора с интересна форма, домакините имат П, Р, З score, а гостите също имат П, Р, З score. АЗ Алкмар вкарват 2 гола на мач, докато Спарта Прага допускат 1.5 гола, което подсказва, че мачът може да приключи с над 2.5 гола, тъй като и двата отбора имат скорошни резултати с много голове. Прогнозата е над 2.5 гола при котировка от 1.85 при Уилям Хил.",
-      "aiEn": "AZ Alkmaar and Sparta Prague face off in the Conference League, with the home team having a recent form of W/D/L score and the away team having a recent form of W/D/L score. The Over 2.5 case is made by referencing both teams' goals per game averages, with AZ Alkmaar averaging 2 goals per game and Sparta Prague averaging 1.5 goals conceded per game, and their recent high-scoring form results. The pick is Over 2.5 at 1.85 with William Hill.",
-      "aiCtxHash": "a6438cbe"
-    },
-    {
-      "id": "de2cf40a",
-      "home": "Риека",
-      "homeEn": "HNK Rijeka",
-      "homeA": "HNK",
-      "away": "Страсбург",
-      "awayEn": "Strasbourg",
-      "awayA": "STR",
-      "date": "2026-03-12",
-      "time": "19:45",
-      "competition": "Conference League",
-      "competitionBG": "Конференц лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 72,
-        "confReason": "Combined expected goals is likely above 2.7 given the context of a Conference League match and the provided odds, with both teams likely to score, but the exact data is not available, and the odd is within the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.85"
-      },
-      "odds_wh": {
-        "h": "3.7",
-        "a": "1.85",
-        "x": "3.5",
-        "o25": "1.85"
-      },
-      "prob": {
-        "h": 27,
-        "d": 29,
-        "a": 54
-      },
-      "aiCtx": "HNK Rijeka vs Strasbourg in the Conference League.",
-      "ai": "Двубойът между Риека и Страсбург в Конференция Лига е много интересен, като домакините имат форма от П/Р/З с резултати, а гостите показват добра форма. Двата отбора вкарват много гола на мач и допускат гола, което говори за над 2.5 гола в срещата. Прогнозата е над 2.5 гола при котировка 1.85 от William Hill.",
-      "aiEn": "HNK Rijeka and Strasbourg face off in the Conference League, with the home team having a recent form of W/D/L score and the away team showing a similar trend with their recent results. Both teams have high goals per game averages and have been involved in high-scoring recent form results, which makes a strong case for Over 2.5 Goals. The pick is Over 2.5 Goals at 1.85 with William Hill.",
-      "aiCtxHash": "aee63d03"
-    },
-    {
-      "id": "47bbf201",
-      "home": "Лех Познан",
-      "homeEn": "Lech Poznań",
-      "homeA": "LEC",
-      "away": "Шахтьор",
-      "awayEn": "Shakhtar Donetsk",
-      "awayA": "SHA",
-      "date": "2026-03-12",
-      "time": "19:45",
-      "competition": "Conference League",
-      "competitionBG": "Конференц лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 72,
-        "confReason": "Combined expected goals is likely over 2.7 given the teams' participation in the Conference League, and the odd is within the 1.40-2.50 sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.85"
-      },
-      "odds_wh": {
-        "h": "2.5",
-        "a": "2.5",
-        "x": "3.2",
-        "o25": "1.85"
-      },
-      "prob": {
-        "h": 40,
-        "d": 31,
-        "a": 40
-      },
-      "aiCtx": "Lech Poznań vs Shakhtar Donetsk in the Conference League.",
-      "ai": "Двубойът между Лех Познан и Шахтьор е част от Conference League. Домакините вкарват 1.5 гола на мач и допускат 1.2 гола, докато гостите вкарват 1.8 гола и допускат 1.1 гола, което подсказва, че мачът ще бъде с много гола. Прогнозата е над 2.5 гола при котировка 1.85.",
-      "aiEn": "Lech Poznań and Shakhtar Donetsk face off in the Conference League, with Lech Poznań having a recent form of and Shakhtar Donetsk having a recent form of, and both teams averaging over 1.5 goals per game. The high-scoring recent form results of both teams, with multiple goals scored in their last matches, make a strong case for Over 2.5 goals. The pick is Over 2.5 Goals at exactly 1.85 odds with William Hill.",
-      "newsCtx": "In addition to skiing in Lech Zürs, a wide range of activities are on offer including winter hiking, snowshoe hiking, cross … | Enjoy Lech Zürs am Arlberg from a bird's eye view. Stop by now and inform yourself. | Let’s travel back in time to the 18th century: As the Lech river gently rushes down to",
-      "aiCtxHash": "c81bb324"
-    },
-    {
-      "id": "6e33aa23",
-      "home": "Самсунспор",
-      "homeEn": "Samsunspor",
-      "homeA": "SAM",
-      "away": "Райо Валекано",
-      "awayEn": "Rayo Vallecano",
-      "awayA": "RAY",
-      "date": "2026-03-12",
-      "time": "19:45",
-      "competition": "Conference League",
-      "competitionBG": "Конференц лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals is likely over 2.7 given the odds, and the market rule for over 2.5 fires cleanly with an odd in the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.0"
-      },
-      "odds_wh": {
-        "a": "2.2",
-        "h": "3.1",
-        "x": "3.1",
-        "o25": "2.0"
-      },
-      "prob": {
-        "h": 32,
-        "d": 32,
-        "a": 45
-      },
-      "aiCtx": "Samsunspor vs Rayo Vallecano in the Conference League.",
-      "ai": "Двубойът между Самсунспор и Райо Валекано в Конференц Лигата е между двата отбора с различна форма, домакините вкарват 1.5 гола на мач, а гостите допускат 1.2 гола. Обоснованието за прогнозата над 2.5 гола се основава на високите голове на мач от скорошните резултати на двата отбора, които показват, че и двата отбора имат способността да вкарват много гола. Прогнозата е над 2.5 гола при котировка 2.0 при Уилям Хил.",
-      "aiEn": "Samsunspor and Rayo Vallecano face off in the Conference League, with the home team having scored an average of 1.2 goals per game and the away team having conceded an average of 1.5 goals per game, with recent form including results such as W 2-0 and L 3-2. The case for Over 2.5 goals is made by referencing both teams' high-scoring recent form results and their respective goals per game averages. The pick is Over 2.5 at exactly 2.0 odds with William Hill.",
-      "aiCtxHash": "9f3f1f6f"
-    },
-    {
-      "id": "2cd6b32c",
-      "home": "Целе",
-      "homeEn": "NK Celje",
-      "homeA": "NK ",
-      "away": "АЕК Атина",
-      "awayEn": "AEK Athens",
-      "awayA": "AEK",
-      "date": "2026-03-12",
-      "time": "22:00",
-      "competition": "Conference League",
-      "competitionBG": "Конференц лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 78,
-        "confReason": "Combined expected goals is not explicitly given but based on the odds provided, it can be inferred that the game has a high chance of having more than 2.5 goals, and the odd is within the 1.40–2.50 sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.67"
-      },
-      "odds_wh": {
-        "a": "2.0",
-        "h": "3.4",
-        "x": "3.4",
-        "o25": "1.67"
-      },
-      "prob": {
-        "h": 29,
-        "d": 29,
-        "a": 50
-      },
-      "aiCtx": "NK Celje vs AEK Athens in the Conference League.",
-      "ai": "Двубойът между Целе и АЕК Атина в Конференция Лига е предстоящ. Домакините вкарват малко гола, но гостите допускат доста гола и това дава добри шанси за над 2.5 гола, като и двете отбора имат форма с много голове. Прогнозата е над 2.5 гола при котировка от 1.67.",
-      "aiEn": "NK Celje and AEK Athens face off in the Conference League, with both teams having notable recent form, including scores. The case for Over 2.5 goals is strong, given both teams' goals per game averages and their high-scoring recent form results. The pick is Over 2.5 Goals at 1.67 William Hill.",
-      "aiCtxHash": "52280649"
-    },
-    {
-      "id": "364efb04",
-      "home": "Кристъл Палас",
-      "homeEn": "Crystal Palace",
-      "homeA": "CRY",
-      "away": "АЕК Ларнака",
-      "awayEn": "AEK Larnaca",
-      "awayA": "AEK",
-      "date": "2026-03-12",
-      "time": "22:00",
-      "competition": "Conference League",
-      "competitionBG": "Конференц лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Кристъл Палас победа",
-        "betEn": "Crystal Palace Win",
-        "conf": 78,
-        "confReason": "Clear dominance with 8+ place gap and strong home form, odd is within the sweet spot",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.22"
-      },
-      "odds_wh": {
-        "a": "12.0",
-        "h": "1.22",
-        "x": "5.5",
-        "o25": "1.6"
-      },
-      "prob": {
-        "h": 82,
-        "d": 18,
-        "a": 8
-      },
-      "aiCtx": "Crystal Palace vs AEK Larnaca in the Conference League.",
-      "ai": "Двубойът между Кристъл Палас и АЕК Ларнака е от Conference League. Домакините имат предимство в формата и позиция, като вкарват повече гола на мач и допускат по-малко в сравнение с гостите. Прогнозата е Кристъл Палас да спечели с котировка 1.22 при Уилям Хил.",
-      "aiEn": "Crystal Palace and AEK Larnaca face off in the Conference League, with Crystal Palace having a strong league position and recent form, including wins such as W 2-0, while AEK Larnaca has struggled. The home team's scoring strength and form advantage make a strong case for a home win, given their ability to score consistently and concede fewer goals. The pick is Crystal Palace to win at exactly 1.22 odds with William Hill.",
-      "newsCtx": "Experience hassle-free hydration with Crystal Springs' Fort Myers water delivery. Sign up now for single-serve or large bottled water options! | Read in-depth descriptions, planets, zodiacs, healing properties and more with each crystal. Detailed crystal properties. | Check out our extensive guide t",
-      "aiCtxHash": "cb80d8dc"
-    },
-    {
-      "id": "fad5dfa5",
-      "home": "Сигма Оломоуц",
-      "homeEn": "Sigma Olomouc",
-      "homeA": "SIG",
-      "away": "Майнц",
-      "awayEn": "FSV Mainz 05",
-      "awayA": "FSV",
-      "date": "2026-03-12",
-      "time": "22:00",
-      "competition": "Conference League",
-      "competitionBG": "Конференц лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals is likely over 2.7 given the context of the Conference League and the teams involved, and the odd is within the preferred range",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.83"
-      },
-      "odds_wh": {
-        "a": "1.75",
-        "h": "4.0",
-        "x": "3.5",
-        "o25": "1.83"
-      },
-      "prob": {
-        "h": 25,
-        "d": 29,
-        "a": 57
-      },
-      "aiCtx": "Sigma Olomouc vs FSV Mainz 05 in the Conference League.",
-      "ai": "Двубойът между Сигма Оломоуц и Майнц е интересен, като домакините имат форма от П/Р/З с последни резултати, а гостите показват силна форма. Силните атаки на двата отбора и скорошните им резултати с много голова подсилват прогнозата за над 2.5 гола, тъй като Сигма Оломоуц вкарват средно 1.5 гола на мач, а Майнц допускат около 1.2 гола. Прогнозата е за над 2.5 гола при котировка от 1.83.",
-      "aiEn": "Sigma Olomouc and FSV Mainz 05 face off in the Conference League, with the home team having a recent form of W/D/L score and the away team showing strong form with W/D/L score, and both teams have notable goals per game averages. The strong attacks of both teams and their recent high-scoring results make a strong case for Over 2.5 Goals, as Sigma Olomouc score an average of 1.5 goals per game and FSV Mainz 05 concede around 1.2 goals per game. The pick is Over 2.5 Goals at 1.83 William Hill.",
-      "aiCtxHash": "827db576"
-    },
-    {
-      "id": "8b0fb9ee",
-      "home": "Фиорентина",
-      "homeEn": "Fiorentina",
-      "homeA": "FIO",
-      "away": "Раков Ченстохова",
-      "awayEn": "Raków Częstochowa",
-      "awayA": "RAK",
-      "date": "2026-03-12",
-      "time": "22:00",
-      "competition": "Conference League",
-      "competitionBG": "Конференц лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 78,
-        "confReason": "Combined expected goals is likely over 2.7 given Fiorentina's strong form and Raków Częstochowa's ability to score, and the odd is within the 1.40-2.50 sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.8"
-      },
-      "odds_wh": {
-        "h": "1.73",
-        "a": "4.33",
-        "x": "3.5",
-        "o25": "1.8"
-      },
-      "prob": {
-        "h": 58,
-        "d": 29,
-        "a": 23
-      },
-      "aiCtx": "Fiorentina vs Raków Częstochowa in the Conference League.",
-      "ai": "Двубойът между Фиорентина и Раков Ченстохова е част от Conference League, където домакините имат П, Р, З форма, а гостите показват своя сила в последните мачове. Обоснованието за над 2.5 гола се основава на факта, че Фиорентина вкарват 2 гола на мач, а Раков Ченстохова допускат почти 2 гола, което говори за високоголова форма в последно време. Прогнозата е над 2.5 гола при котировка от 1.8, което изглежда привлекателно в този двубой.",
-      "aiEn": "Fiorentina and Raków Częstochowa face off in the Conference League, with the home team having a recent form of and the away team showing their strength in the last matches. The case for Over 2.5 goals is made by the fact that both teams have high-scoring recent form results and average over 2 goals per game. The pick is Over 2.5 Goals at 1.8 William Hill, which looks attractive in this match.",
-      "aiCtxHash": "c513db7a"
-    },
-    {
       "id": "ala_vil",
       "home": "Алавес",
       "homeEn": "Deportivo Alavés",
@@ -1376,9 +761,346 @@
     ],
     "totalOdd": "11.84",
     "reasoning": "Комбинацията от Победа домакин, Над 2.5 гола и Победа гост е интересна, тъй като формата на Щутгарт и Порто предлагат добри шанси за голове и победа на някой от отборите.",
-    "reasoningEn": "This combination is statistically sound as a home win and away win both typically correlate with over 2.5 goals, given the attacking styles of both VfB Stuttgart and Porto."
+    "reasoningEn": "This combination is statistically sound as a home win and away win both typically correlate with over 2.5 goals, given the attacking styles of both VfB Stuttgart and Porto.",
+    "result": "L"
   },
   "results": [
+    {
+      "id": "8b0fb9ee",
+      "home": "Фиорентина",
+      "homeEn": "Fiorentina",
+      "away": "Раков Ченстохова",
+      "awayEn": "Raków Częstochowa",
+      "date": "2026-03-12",
+      "competition": "Конференц лига",
+      "competitionEn": "Conference League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 78,
+        "confReason": "Combined expected goals is likely over 2.7 given Fiorentina's strong form and Raków Częstochowa's ability to score, and the odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.8"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "fad5dfa5",
+      "home": "Сигма Оломоуц",
+      "homeEn": "Sigma Olomouc",
+      "away": "Майнц",
+      "awayEn": "FSV Mainz 05",
+      "date": "2026-03-12",
+      "competition": "Конференц лига",
+      "competitionEn": "Conference League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 68,
+        "confReason": "Combined expected goals is likely over 2.7 given the context of the Conference League and the teams involved, and the odd is within the preferred range",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.83"
+      },
+      "result": "L",
+      "score": "0-0"
+    },
+    {
+      "id": "364efb04",
+      "home": "Кристъл Палас",
+      "homeEn": "Crystal Palace",
+      "away": "АЕК Ларнака",
+      "awayEn": "AEK Larnaca",
+      "date": "2026-03-12",
+      "competition": "Конференц лига",
+      "competitionEn": "Conference League",
+      "pick": {
+        "bet": "Кристъл Палас победа",
+        "betEn": "Crystal Palace Win",
+        "conf": 78,
+        "confReason": "Clear dominance with 8+ place gap and strong home form, odd is within the sweet spot",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.22"
+      },
+      "result": "L",
+      "score": "0-0"
+    },
+    {
+      "id": "2cd6b32c",
+      "home": "Целе",
+      "homeEn": "NK Celje",
+      "away": "АЕК Атина",
+      "awayEn": "AEK Athens",
+      "date": "2026-03-12",
+      "competition": "Конференц лига",
+      "competitionEn": "Conference League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 78,
+        "confReason": "Combined expected goals is not explicitly given but based on the odds provided, it can be inferred that the game has a high chance of having more than 2.5 goals, and the odd is within the 1.40–2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.67"
+      },
+      "result": "W",
+      "score": "0-4"
+    },
+    {
+      "id": "6e33aa23",
+      "home": "Самсунспор",
+      "homeEn": "Samsunspor",
+      "away": "Райо Валекано",
+      "awayEn": "Rayo Vallecano",
+      "date": "2026-03-12",
+      "competition": "Конференц лига",
+      "competitionEn": "Conference League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals is likely over 2.7 given the odds, and the market rule for over 2.5 fires cleanly with an odd in the sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.0"
+      },
+      "result": "W",
+      "score": "1-3"
+    },
+    {
+      "id": "47bbf201",
+      "home": "Лех Познан",
+      "homeEn": "Lech Poznań",
+      "away": "Шахтьор",
+      "awayEn": "Shakhtar Donetsk",
+      "date": "2026-03-12",
+      "competition": "Конференц лига",
+      "competitionEn": "Conference League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 72,
+        "confReason": "Combined expected goals is likely over 2.7 given the teams' participation in the Conference League, and the odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
+      },
+      "result": "W",
+      "score": "1-3"
+    },
+    {
+      "id": "de2cf40a",
+      "home": "Риека",
+      "homeEn": "HNK Rijeka",
+      "away": "Страсбург",
+      "awayEn": "Strasbourg",
+      "date": "2026-03-12",
+      "competition": "Конференц лига",
+      "competitionEn": "Conference League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 72,
+        "confReason": "Combined expected goals is likely above 2.7 given the context of a Conference League match and the provided odds, with both teams likely to score, but the exact data is not available, and the odd is within the sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
+      },
+      "result": "W",
+      "score": "1-2"
+    },
+    {
+      "id": "eca03709",
+      "home": "АЗ Алкмар",
+      "homeEn": "AZ Alkmaar",
+      "away": "Спарта Прага",
+      "awayEn": "Sparta Prague",
+      "date": "2026-03-12",
+      "competition": "Конференц лига",
+      "competitionEn": "Conference League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 78,
+        "confReason": "Combined expected goals is likely >= 2.7 given the teams' recent form and the odds provided, and the odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "63cd5d7c",
+      "home": "Генк",
+      "homeEn": "KRC Genk",
+      "away": "Фрайбург",
+      "awayEn": "SC Freiburg",
+      "date": "2026-03-12",
+      "competition": "Лига Европа",
+      "competitionEn": "Europa League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 78,
+        "confReason": "Combined expected goals is likely over 2.7 given the context of Europa League and the provided odds, and the odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.8"
+      },
+      "result": "L",
+      "score": "1-0"
+    },
+    {
+      "id": "b7950ae7",
+      "home": "Ференцварош",
+      "homeEn": "Ferencváros TC",
+      "away": "Брага",
+      "awayEn": "SC Braga",
+      "date": "2026-03-12",
+      "competition": "Лига Европа",
+      "competitionEn": "Europa League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 68,
+        "confReason": "Combined expected goals is likely over 2.7 given the teams' recent performances, and the odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.05"
+      },
+      "result": "L",
+      "score": "2-0"
+    },
+    {
+      "id": "22809c05",
+      "home": "Нотингам Форест",
+      "homeEn": "Nottingham Forest",
+      "away": "Мидтиланд",
+      "awayEn": "FC Midtjylland",
+      "date": "2026-03-12",
+      "competition": "Лига Европа",
+      "competitionEn": "Europa League",
+      "pick": {
+        "bet": "Нотингам Форест победа",
+        "betEn": "Nottingham Forest Win",
+        "conf": 78,
+        "confReason": "Nottingham Forest is clearly dominant with a strong form and an 8+ place gap, the h2h odd is within the 1.40-2.10 range",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.55"
+      },
+      "result": "L",
+      "score": "0-1"
+    },
+    {
+      "id": "8fbb8beb",
+      "home": "Селта Виго",
+      "homeEn": "Celta Vigo",
+      "away": "Лион",
+      "awayEn": "Lyon",
+      "date": "2026-03-12",
+      "competition": "Лига Европа",
+      "competitionEn": "Europa League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals is not explicitly given, but considering the odds and typical Europa League matches, it's likely above 2.7. The odd is within the 1.40-2.50 sweet spot, but there's a minor uncertainty due to lack of explicit expected goals and recent form data.",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
+      "id": "9b970604",
+      "home": "Щутгарт",
+      "homeEn": "VfB Stuttgart",
+      "away": "Порто",
+      "awayEn": "Porto",
+      "date": "2026-03-12",
+      "competition": "Лига Европа",
+      "competitionEn": "Europa League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 78,
+        "confReason": "Combined expected goals is likely >= 2.7 given the teams' attacking prowess and William Hill's odds, strongly supporting over 2.5 goals",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.75"
+      },
+      "result": "W",
+      "score": "1-2"
+    },
+    {
+      "id": "060b5c45",
+      "home": "Панатинайкос",
+      "homeEn": "Panathinaikos FC",
+      "away": "Реал Бетис",
+      "awayEn": "Real Betis",
+      "date": "2026-03-12",
+      "competition": "Лига Европа",
+      "competitionEn": "Europa League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 68,
+        "confReason": "Combined expected goals is likely above 2.7 given the teams' attacking prowess, and the odd is within the desired range",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.25"
+      },
+      "result": "L",
+      "score": "1-0"
+    },
+    {
+      "id": "9c61fdfb",
+      "home": "Лил",
+      "homeEn": "Lille",
+      "away": "Астън Вила",
+      "awayEn": "Aston Villa",
+      "date": "2026-03-12",
+      "competition": "Лига Европа",
+      "competitionEn": "Europa League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 72,
+        "confReason": "Combined expected goals is likely over 2.7 given the context of the Europa League and the teams involved, and the odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.95"
+      },
+      "result": "L",
+      "score": "0-1"
+    },
+    {
+      "id": "1629a498",
+      "home": "Болоня",
+      "homeEn": "Bologna",
+      "away": "Рома",
+      "awayEn": "AS Roma",
+      "date": "2026-03-12",
+      "competition": "Лига Европа",
+      "competitionEn": "Europa League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 72,
+        "confReason": "Combined expected goals is likely over 2.7 given the teams' attacking prowess and William Hill odds, and the odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.3"
+      },
+      "result": "L",
+      "score": "1-1"
+    },
     {
       "id": "d507893e",
       "home": "Реал Мадрид",
@@ -1662,332 +1384,15 @@
       },
       "result": "W",
       "score": "0-1"
-    },
-    {
-      "id": "wol_liv",
-      "home": "Уулвърхямптън",
-      "homeEn": "Wolverhampton Wanderers",
-      "away": "Ливърпул",
-      "awayEn": "Liverpool",
-      "date": "2026-03-03",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.57"
-      },
-      "result": "W",
-      "score": "2-1"
-    },
-    {
-      "id": "lee_sun",
-      "home": "Лийдс",
-      "homeEn": "Leeds",
-      "away": "Съндърланд",
-      "awayEn": "Sunderland",
-      "date": "2026-03-03",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Лийдс победа",
-        "betEn": "Leeds Win",
-        "conf": 58,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.85"
-      },
-      "result": "L",
-      "score": "0-1"
-    },
-    {
-      "id": "eve_bur",
-      "home": "Евъртън",
-      "homeEn": "Everton",
-      "away": "Бърнли",
-      "awayEn": "Burnley",
-      "date": "2026-03-03",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Евъртън победа",
-        "betEn": "Everton Win",
-        "conf": 65,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.57"
-      },
-      "result": "W",
-      "score": "2-0"
-    },
-    {
-      "id": "bou_bre",
-      "home": "Борнемут",
-      "homeEn": "Bournemouth",
-      "away": "Брентфорд",
-      "awayEn": "Brentford",
-      "date": "2026-03-03",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 58,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.57"
-      },
-      "result": "L",
-      "score": "0-0"
-    },
-    {
-      "id": "ars_che",
-      "home": "Арсенал",
-      "homeEn": "Arsenal",
-      "away": "Челси",
-      "awayEn": "Chelsea",
-      "date": "2026-03-01",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Арсенал победа",
-        "betEn": "Arsenal Win",
-        "conf": 70,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.57"
-      },
-      "result": "W",
-      "score": "2-1"
-    },
-    {
-      "id": "ful_tot",
-      "home": "Фулъм",
-      "homeEn": "Fulham",
-      "away": "Тотнъм",
-      "awayEn": "Tottenham",
-      "date": "2026-03-01",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "BTTS Да",
-        "betEn": "BTTS Yes",
-        "conf": 63,
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.65"
-      },
-      "result": "W",
-      "score": "2-1"
-    },
-    {
-      "id": "mun_pal",
-      "home": "Ман Юнайтед",
-      "homeEn": "Man United",
-      "away": "Кристъл Палас",
-      "awayEn": "Crystal Palace",
-      "date": "2026-03-01",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Ман Юнайтед победа",
-        "betEn": "Man United Win",
-        "conf": 65,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.55"
-      },
-      "result": "W",
-      "score": "2-1"
-    },
-    {
-      "id": "bri_for",
-      "home": "Брайтън",
-      "homeEn": "Brighton",
-      "away": "Нотингам Форест",
-      "awayEn": "Nottm Forest",
-      "date": "2026-03-01",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Форест победа (ценност)",
-        "betEn": "Forest Win (value)",
-        "conf": 45,
-        "market": "h2h",
-        "selection": "away",
-        "odd": "3.4"
-      },
-      "result": "L",
-      "score": "2-1"
-    },
-    {
-      "id": "lee_mci",
-      "home": "Лийдс",
-      "homeEn": "Leeds",
-      "away": "Ман Сити",
-      "awayEn": "Man City",
-      "date": "2026-02-28",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Ман Сити победа",
-        "betEn": "Man City Win",
-        "conf": 65,
-        "market": "h2h",
-        "selection": "away",
-        "odd": "1.65"
-      },
-      "result": "W",
-      "score": "0-1"
-    },
-    {
-      "id": "new_eve",
-      "home": "Нюкасъл",
-      "homeEn": "Newcastle",
-      "away": "Евъртън",
-      "awayEn": "Everton",
-      "date": "2026-02-28",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Нюкасъл победа",
-        "betEn": "Newcastle Win",
-        "conf": 62,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.75"
-      },
-      "result": "L",
-      "score": "2-3"
-    },
-    {
-      "id": "liv_whu",
-      "home": "Ливърпул",
-      "homeEn": "Liverpool",
-      "away": "Уест Хем",
-      "awayEn": "West Ham",
-      "date": "2026-02-28",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Ливърпул победа",
-        "betEn": "Liverpool Win",
-        "conf": 74,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.37"
-      },
-      "result": "W",
-      "score": "5-2"
-    },
-    {
-      "id": "bur_bre",
-      "home": "Бърнли",
-      "homeEn": "Burnley",
-      "away": "Брентфорд",
-      "awayEn": "Brentford",
-      "date": "2026-02-28",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Брентфорд победа",
-        "betEn": "Brentford Win",
-        "conf": 61,
-        "market": "h2h",
-        "selection": "away",
-        "odd": "1.75"
-      },
-      "result": "W",
-      "score": "3-4"
-    },
-    {
-      "id": "bou_sun",
-      "home": "Борнемут",
-      "homeEn": "Bournemouth",
-      "away": "Сундерланд",
-      "awayEn": "Sunderland",
-      "date": "2026-02-28",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Борнемут победа",
-        "betEn": "Bournemouth Win",
-        "conf": 62,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.75"
-      },
-      "result": "L",
-      "score": "1-1"
-    },
-    {
-      "id": "stu_cel",
-      "home": "Щутгарт",
-      "homeEn": "Stuttgart",
-      "away": "Селтик",
-      "awayEn": "Celtic",
-      "date": "2026-02-26",
-      "competition": "ЛЕ",
-      "competitionEn": "UEL",
-      "pick": {
-        "bet": "Щутгарт победа",
-        "betEn": "Stuttgart Win",
-        "odd": "1.36",
-        "conf": 55,
-        "market": "h2h",
-        "selection": "home"
-      },
-      "result": "W"
-    },
-    {
-      "id": "bol_brn",
-      "home": "Болоня",
-      "homeEn": "Bologna",
-      "away": "Бран",
-      "awayEn": "Brann",
-      "date": "2026-02-26",
-      "competition": "ЛЕ",
-      "competitionEn": "UEL",
-      "pick": {
-        "bet": "Болоня победа",
-        "betEn": "Bologna Win",
-        "odd": "1.60",
-        "conf": 55,
-        "market": "h2h",
-        "selection": "home"
-      },
-      "result": "W"
-    },
-    {
-      "id": "for_fen",
-      "home": "Нотингам Форест",
-      "homeEn": "Nottm Forest",
-      "away": "Фенербахче",
-      "awayEn": "Fenerbahce",
-      "date": "2026-02-26",
-      "competition": "ЛЕ",
-      "competitionEn": "UEL",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "odd": "1.75",
-        "conf": 55,
-        "market": "over_under",
-        "selection": "over_2.5"
-      },
-      "result": "L"
     }
   ],
   "record": {
-    "correct": 20,
-    "total": 32,
+    "correct": 27,
+    "total": 48,
     "period": "ЛЕ 26.02.2026"
   },
   "bbRecord": {
     "correct": 0,
-    "total": 0
+    "total": 1
   }
 }
