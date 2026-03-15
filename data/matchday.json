@@ -7,185 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "bur_bou",
-      "home": "Бърнли",
-      "homeEn": "Burnley",
-      "homeA": "BUR",
-      "away": "Борнемут",
-      "awayEn": "Bournemouth",
-      "awayA": "BOU",
-      "date": "2026-03-14",
-      "time": "17:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Борнемут победа",
-        "betEn": "Bournemouth Win",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "away",
-        "odd": "1.85",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "a": "1.85",
-        "h": "3.8",
-        "x": "3.75",
-        "o25": "1.73"
-      },
-      "prob": {
-        "h": 27,
-        "d": 27,
-        "a": 54
-      },
-      "aiCtx": "Burnley are 19th in the Premier League (19 pts), scoring 1.1 and conceding 2.0 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-3, L 0-2, W 3-2, D 1-1, L 3-4, L 0-2. Bournemouth are 9th (40 pts), scoring 1.52 and conceding 1.59 goals per game, BTTS in 3/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): W 2-0, D 1-1, W 2-1, D 0-0, D 1-1, D 0-0. Combined expected goals (home scores + away concedes): ~2.7/game. H2H last 1: Burnley 0W-1D-0L, avg 2.0 goals/game.",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
-      "id": "sun_bri",
-      "home": "Съндърланд",
-      "homeEn": "Sunderland",
-      "homeA": "SUN",
-      "away": "Брайтън",
-      "awayEn": "Brighton",
-      "awayA": "BRI",
-      "date": "2026-03-14",
-      "time": "17:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Под 2.5 гола",
-        "betEn": "Under 2.5 Goals",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "under_2.5",
-        "odd": "1.95",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "a": "2.15",
-        "h": "3.3",
-        "x": "3.25",
-        "o25": "1.95"
-      },
-      "prob": {
-        "h": 31,
-        "d": 30,
-        "a": 47
-      },
-      "aiCtx": "Sunderland are 11th in the Premier League (40 pts), scoring 1.03 and conceding 1.17 goals per game, BTTS in 2/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 3-0, L 0-3, L 0-1, L 1-3, D 1-1, W 1-0. Brighton are 14th (37 pts), scoring 1.31 and conceding 1.24 goals per game, BTTS in 2/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): D 1-1, L 0-1, L 0-1, W 2-0, W 2-1, L 0-1. Combined expected goals (home scores + away concedes): ~2.3/game. H2H last 1: Sunderland 0W-1D-0L, avg 0.0 goals/game.",
-      "newsCtx": "Dec 19, 2025 · Sports Mole rounds up all of the latest team news ahead of Saturday’s Premier … | Dec 16, 2025 · Brighton and Sunderland have injury, suspension and AFCON concerns as they … | 2 days ago · See which players are missing from every team, with our injury list guide to all 20 clubs. …",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
-      "id": "ars_eve",
-      "home": "Арсенал",
-      "homeEn": "Arsenal",
-      "homeA": "ARS",
-      "away": "Евъртън",
-      "awayEn": "Everton",
-      "awayA": "EVE",
-      "date": "2026-03-14",
-      "time": "19:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Арсенал победа",
-        "betEn": "Arsenal Win",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.36",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "h": "1.36",
-        "a": "9.0",
-        "x": "4.5",
-        "o25": "1.8"
-      },
-      "prob": {
-        "h": 77,
-        "d": 21,
-        "a": 10
-      },
-      "aiCtx": "Arsenal are 1st in the Premier League (67 pts), scoring 1.97 and conceding 0.73 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 3-0, D 1-1, D 2-2, W 4-1, W 2-1, W 1-0. Everton are 8th (43 pts), scoring 1.17 and conceding 1.14 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): D 1-1, W 2-1, L 1-2, L 0-1, W 3-2, W 2-0. Combined expected goals (home scores + away concedes): ~3.1/game. H2H last 1: Arsenal 1W-0D-0L, avg 1.0 goals/game.",
-      "ai": "",
-      "aiEn": "",
-      "newsCtx": "Feb 19, 2025 · I went ahead and just put on an adjustable block while working through that list. It runs very well and is a perfect little ranch pistol that won't cost my life when it jams/breaks an extractor. My … | Sep 30, 2025 · Brought to you by Carl's Jr. (Travis) Rideout Arsenal - Dragon (pist"
-    },
-    {
-      "id": "che_new",
-      "home": "Челси",
-      "homeEn": "Chelsea",
-      "homeA": "CHE",
-      "away": "Нюкасъл",
-      "awayEn": "Newcastle",
-      "awayA": "NEW",
-      "date": "2026-03-14",
-      "time": "19:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.44",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "h": "1.75",
-        "a": "3.9",
-        "x": "4.0",
-        "o25": "1.44"
-      },
-      "prob": {
-        "h": 56,
-        "d": 26,
-        "a": 26
-      },
-      "aiCtx": "Chelsea are 5th in the Premier League (48 pts), scoring 1.83 and conceding 1.17 goals per game, BTTS in 6/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): W 3-2, W 3-1, D 2-2, D 1-1, L 1-2, W 4-1. Newcastle are 12th (39 pts), scoring 1.45 and conceding 1.48 goals per game, BTTS in 6/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): W 6-1, L 1-2, W 3-2, L 2-3, W 2-1, D 1-1. Combined expected goals (home scores + away concedes): ~3.3/game. H2H last 1: Chelsea 0W-1D-0L, avg 4.0 goals/game.",
-      "ai": "",
-      "aiEn": "",
-      "newsCtx": "Welcome to the official Chelsea FC website. All the latest news, videos and ticket information as well as player profiles and information about Stamford Bridge, the home of the Blues. | Visit ESPN for Chelsea live scores, video highlights, and latest news. Find standings and the full 2025-26 season "
-    },
-    {
-      "id": "whu_mci",
-      "home": "Уест Хем",
-      "homeEn": "West Ham",
-      "homeA": "WHU",
-      "away": "Ман Сити",
-      "awayEn": "Manchester City",
-      "awayA": "MCI",
-      "date": "2026-03-14",
-      "time": "22:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.5",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "a": "1.67",
-        "h": "4.33",
-        "x": "4.0",
-        "o25": "1.5"
-      },
-      "prob": {
-        "h": 23,
-        "d": 25,
-        "a": 60
-      },
-      "aiCtx": "West Ham are 18th in the Premier League (28 pts), scoring 1.21 and conceding 1.86 goals per game, BTTS in 3/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 2-3, W 2-0, D 1-1, D 0-0, L 2-5, W 1-0. Manchester City are 2nd (60 pts), scoring 2.03 and conceding 0.93 goals per game, BTTS in 4/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): D 2-2, W 2-1, W 3-0, W 2-1, W 1-0, D 2-2. Combined expected goals (home scores + away concedes): ~2.1/game. H2H last 1: West Ham 0W-0D-1L, avg 3.0 goals/game.",
-      "newsCtx": "1 day ago · West Seattle Water Taxi – Regular West Seattle service, winter schedule. Washington State Ferries – Check WSF’s alert page for any changes to the 3-boat schedule. | 2 days ago · West Seattle Water Taxi – Regular West Seattle service, winter schedule. Washington State Ferries – Check WSF’",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
       "id": "mun_avl",
       "home": "Ман Юнайтед",
       "homeEn": "Manchester United",
@@ -766,6 +587,111 @@
   },
   "results": [
     {
+      "id": "whu_mci",
+      "home": "Уест Хем",
+      "homeEn": "West Ham",
+      "away": "Ман Сити",
+      "awayEn": "Manchester City",
+      "date": "2026-03-14",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.5",
+        "confReason": ""
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
+      "id": "che_new",
+      "home": "Челси",
+      "homeEn": "Chelsea",
+      "away": "Нюкасъл",
+      "awayEn": "Newcastle",
+      "date": "2026-03-14",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.44",
+        "confReason": ""
+      },
+      "result": "L",
+      "score": "0-1"
+    },
+    {
+      "id": "ars_eve",
+      "home": "Арсенал",
+      "homeEn": "Arsenal",
+      "away": "Евъртън",
+      "awayEn": "Everton",
+      "date": "2026-03-14",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Арсенал победа",
+        "betEn": "Arsenal Win",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.36",
+        "confReason": ""
+      },
+      "result": "W",
+      "score": "2-0"
+    },
+    {
+      "id": "sun_bri",
+      "home": "Съндърланд",
+      "homeEn": "Sunderland",
+      "away": "Брайтън",
+      "awayEn": "Brighton",
+      "date": "2026-03-14",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Под 2.5 гола",
+        "betEn": "Under 2.5 Goals",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "under_2.5",
+        "odd": "1.95",
+        "confReason": ""
+      },
+      "result": "W",
+      "score": "0-1"
+    },
+    {
+      "id": "bur_bou",
+      "home": "Бърнли",
+      "homeEn": "Burnley",
+      "away": "Борнемут",
+      "awayEn": "Bournemouth",
+      "date": "2026-03-14",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Борнемут победа",
+        "betEn": "Bournemouth Win",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "away",
+        "odd": "1.85",
+        "confReason": ""
+      },
+      "result": "L",
+      "score": "0-0"
+    },
+    {
       "id": "8b0fb9ee",
       "home": "Фиорентина",
       "homeEn": "Fiorentina",
@@ -1284,111 +1210,11 @@
       },
       "result": "W",
       "score": "1-3"
-    },
-    {
-      "id": "new_mun",
-      "home": "Нюкасъл",
-      "homeEn": "Newcastle",
-      "away": "Ман Юнайтед",
-      "awayEn": "Manchester United",
-      "date": "2026-03-04",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.53"
-      },
-      "result": "W",
-      "score": "2-1"
-    },
-    {
-      "id": "mci_for",
-      "home": "Ман Сити",
-      "homeEn": "Manchester City",
-      "away": "Нотингам Форест",
-      "awayEn": "Nottingham Forest",
-      "date": "2026-03-04",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.53"
-      },
-      "result": "W",
-      "score": "2-2"
-    },
-    {
-      "id": "ful_whu",
-      "home": "Фулъм",
-      "homeEn": "Fulham",
-      "away": "Уест Хем",
-      "awayEn": "West Ham",
-      "date": "2026-03-04",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Фулъм победа",
-        "betEn": "Fulham Win",
-        "conf": 58,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "2.05"
-      },
-      "result": "L",
-      "score": "0-1"
-    },
-    {
-      "id": "avl_che",
-      "home": "Астън Вила",
-      "homeEn": "Aston Villa",
-      "away": "Челси",
-      "awayEn": "Chelsea",
-      "date": "2026-03-04",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.65"
-      },
-      "result": "W",
-      "score": "1-4"
-    },
-    {
-      "id": "bri_ars",
-      "home": "Брайтън",
-      "homeEn": "Brighton",
-      "away": "Арсенал",
-      "awayEn": "Arsenal",
-      "date": "2026-03-04",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Арсенал победа",
-        "betEn": "Arsenal Win",
-        "conf": 70,
-        "market": "h2h",
-        "selection": "away",
-        "odd": "1.65"
-      },
-      "result": "W",
-      "score": "0-1"
     }
   ],
   "record": {
-    "correct": 27,
-    "total": 48,
+    "correct": 29,
+    "total": 53,
     "period": "ЛЕ 26.02.2026"
   },
   "bbRecord": {
