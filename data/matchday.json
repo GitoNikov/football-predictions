@@ -7,150 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "mun_avl",
-      "home": "Ман Юнайтед",
-      "homeEn": "Manchester United",
-      "homeA": "MUN",
-      "away": "Астън Вила",
-      "awayEn": "Aston Villa",
-      "awayA": "AVL",
-      "date": "2026-03-15",
-      "time": "16:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Ман Юнайтед победа",
-        "betEn": "Manchester United Win",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.73",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "a": "4.0",
-        "h": "1.73",
-        "x": "3.9",
-        "o25": "1.62"
-      },
-      "prob": {
-        "h": 57,
-        "d": 26,
-        "a": 26
-      },
-      "aiCtx": "Manchester United are 3rd in the Premier League (51 pts), scoring 1.76 and conceding 1.38 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 3-2, W 2-0, D 1-1, W 1-0, W 2-1, L 1-2. Aston Villa are 4th (51 pts), scoring 1.34 and conceding 1.17 goals per game, BTTS in 3/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): L 0-1, D 1-1, W 1-0, D 1-1, L 0-2, L 1-4. Combined expected goals (home scores + away concedes): ~2.9/game. H2H last 1: Manchester United 0W-0D-1L, avg 3.0 goals/game.",
-      "newsCtx": "Nov 11, 2006 · Manchester Community College extended its first-half lead to 28-4 (7:17 left), 41-10 (3:13) and 47-13 at the intermission. The Lady Buccaneers (0-1) cut their deficit to as low as 29 points with a … | Aug 8, 2015 · Manchester Community College is committed to providing a safe campus c",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
-      "id": "pal_lee",
-      "home": "Кристъл Палас",
-      "homeEn": "Crystal Palace",
-      "homeA": "PAL",
-      "away": "Лийдс",
-      "awayEn": "Leeds",
-      "awayA": "LEE",
-      "date": "2026-03-15",
-      "time": "16:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.0",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "h": "2.3",
-        "a": "3.0",
-        "x": "3.2",
-        "o25": "2.0"
-      },
-      "prob": {
-        "h": 45,
-        "d": 31,
-        "a": 31
-      },
-      "aiCtx": "Crystal Palace are 13th in the Premier League (38 pts), scoring 1.14 and conceding 1.21 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): D 1-1, W 1-0, L 2-3, W 1-0, L 1-2, W 3-1. Leeds are 15th (31 pts), scoring 1.28 and conceding 1.66 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-4, W 3-1, D 2-2, D 1-1, L 0-1, L 0-1. Combined expected goals (home scores + away concedes): ~2.8/game. H2H last 1: Crystal Palace 0W-0D-1L, avg 5.0 goals/game.",
-      "newsCtx": "Stay slopeside at Crystal Mountain Hotels, mere steps from the Mt. Rainier Gondola and chairlift. Enjoy a cozy, comfortable, and convenient … | Read in-depth descriptions, planets, zodiacs, healing properties and more with each crystal. Detailed crystal properties. | Mar 28, 2020 · A crystal is a so",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
-      "id": "for_ful",
-      "home": "Нотингам Форест",
-      "homeEn": "Nottingham Forest",
-      "homeA": "FOR",
-      "away": "Фулъм",
-      "awayEn": "Fulham",
-      "awayA": "FUL",
-      "date": "2026-03-15",
-      "time": "16:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Под 2.5 гола",
-        "betEn": "Under 2.5 Goals",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "under_2.5",
-        "odd": "1.8",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "a": "3.25",
-        "h": "2.15",
-        "x": "3.25",
-        "o25": "1.8"
-      },
-      "prob": {
-        "h": 48,
-        "d": 29,
-        "a": 31
-      },
-      "aiCtx": "Nottingham Forest are 17th in the Premier League (28 pts), scoring 0.97 and conceding 1.48 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): D 1-1, L 1-3, D 0-0, L 0-1, L 1-2, D 2-2. Fulham are 10th (40 pts), scoring 1.38 and conceding 1.48 goals per game, BTTS in 4/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): L 2-3, L 1-2, L 0-3, W 3-1, W 2-1, L 0-1. Combined expected goals (home scores + away concedes): ~2.5/game. H2H last 1: Nottingham Forest 0W-0D-1L, avg 1.0 goals/game.",
-      "newsCtx": "Planning a trip to Nottingham? Be inspired by the official tourism guide & discover why we love Nottingham, the best things to … | Explore historic Nottingham Castle and its unique City of Caves, roam around Sherwood Forest and enjoy some of the …",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
-      "id": "liv_tot",
-      "home": "Ливърпул",
-      "homeEn": "Liverpool",
-      "homeA": "LIV",
-      "away": "Тотнъм",
-      "awayEn": "Tottenham",
-      "awayA": "TOT",
-      "date": "2026-03-15",
-      "time": "18:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Ливърпул победа",
-        "betEn": "Liverpool Win",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.33",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "h": "1.33",
-        "a": "7.5",
-        "x": "5.5",
-        "o25": "1.44"
-      },
-      "prob": {
-        "h": 74,
-        "d": 20,
-        "a": 14
-      },
-      "aiCtx": "Liverpool are 6th in the Premier League (48 pts), scoring 1.66 and conceding 1.34 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 1-2, W 1-0, W 1-0, W 5-2, L 1-2, L 0-1. Tottenham are 16th (29 pts), scoring 1.34 and conceding 1.59 goals per game, BTTS in 5/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): L 0-2, L 1-2, L 1-4, L 1-2, L 1-3, L 2-5. Combined expected goals (home scores + away concedes): ~3.2/game. H2H last 1: Liverpool 1W-0D-0L, avg 3.0 goals/game.",
-      "ai": "",
-      "aiEn": "",
-      "newsCtx": "The official Liverpool FC website. The only place to visit for all your LFC news, videos, history and match information. Full stats … | 6 days ago · The only place for all your official Liverpool Football Club news. Find out about the latest injury updates, … | Explore the full fixture list for Live"
-    },
-    {
       "id": "bre_wol",
       "home": "Брентфорд",
       "homeEn": "Brentford",
@@ -586,6 +442,90 @@
     "result": "L"
   },
   "results": [
+    {
+      "id": "liv_tot",
+      "home": "Ливърпул",
+      "homeEn": "Liverpool",
+      "away": "Тотнъм",
+      "awayEn": "Tottenham",
+      "date": "2026-03-15",
+      "competition": "Висша лига · Кръг ",
+      "competitionEn": "Premier League · GW",
+      "pick": {
+        "bet": "Ливърпул победа",
+        "betEn": "Liverpool Win",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.33",
+        "confReason": ""
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
+      "id": "for_ful",
+      "home": "Нотингам Форест",
+      "homeEn": "Nottingham Forest",
+      "away": "Фулъм",
+      "awayEn": "Fulham",
+      "date": "2026-03-15",
+      "competition": "Висша лига · Кръг ",
+      "competitionEn": "Premier League · GW",
+      "pick": {
+        "bet": "Под 2.5 гола",
+        "betEn": "Under 2.5 Goals",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "under_2.5",
+        "odd": "1.8",
+        "confReason": ""
+      },
+      "result": "W",
+      "score": "0-0"
+    },
+    {
+      "id": "pal_lee",
+      "home": "Кристъл Палас",
+      "homeEn": "Crystal Palace",
+      "away": "Лийдс",
+      "awayEn": "Leeds",
+      "date": "2026-03-15",
+      "competition": "Висша лига · Кръг ",
+      "competitionEn": "Premier League · GW",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.0",
+        "confReason": ""
+      },
+      "result": "L",
+      "score": "0-0"
+    },
+    {
+      "id": "mun_avl",
+      "home": "Ман Юнайтед",
+      "homeEn": "Manchester United",
+      "away": "Астън Вила",
+      "awayEn": "Aston Villa",
+      "date": "2026-03-15",
+      "competition": "Висша лига · Кръг ",
+      "competitionEn": "Premier League · GW",
+      "pick": {
+        "bet": "Ман Юнайтед победа",
+        "betEn": "Manchester United Win",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.73",
+        "confReason": ""
+      },
+      "result": "W",
+      "score": "3-1"
+    },
     {
       "id": "whu_mci",
       "home": "Уест Хем",
@@ -1130,91 +1070,15 @@
       },
       "result": "L",
       "score": "1-1"
-    },
-    {
-      "id": "5e256c6e",
-      "home": "Атлетико Мадрид",
-      "homeEn": "Atlético Madrid",
-      "away": "Тотнъм",
-      "awayEn": "Tottenham Hotspur",
-      "date": "2026-03-10",
-      "competition": "Шампионска лига",
-      "competitionEn": "Champions League",
-      "pick": {
-        "bet": "Атлетико Мадрид победа",
-        "betEn": "Atlético Madrid Win",
-        "conf": 65,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.53"
-      },
-      "result": "W",
-      "score": "5-2"
-    },
-    {
-      "id": "2a50d2be",
-      "home": "Аталанта",
-      "homeEn": "Atalanta BC",
-      "away": "Байерн",
-      "awayEn": "Bayern Munich",
-      "date": "2026-03-10",
-      "competition": "Шампионска лига",
-      "competitionEn": "Champions League",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.44"
-      },
-      "result": "W",
-      "score": "1-6"
-    },
-    {
-      "id": "8bcd511f",
-      "home": "Галатасарай",
-      "homeEn": "Galatasaray",
-      "away": "Ливърпул",
-      "awayEn": "Liverpool",
-      "date": "2026-03-10",
-      "competition": "Шампионска лига",
-      "competitionEn": "Champions League",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.56"
-      },
-      "result": "L",
-      "score": "1-0"
-    },
-    {
-      "id": "tot_pal",
-      "home": "Тотнъм",
-      "homeEn": "Tottenham",
-      "away": "Кристъл Палас",
-      "awayEn": "Crystal Palace",
-      "date": "2026-03-05",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 58,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.85"
-      },
-      "result": "W",
-      "score": "1-3"
     }
   ],
   "record": {
-    "correct": 29,
-    "total": 53,
+    "correct": 31,
+    "total": 57,
     "period": "ЛЕ 26.02.2026"
+  },
+  "bbRecord": {
+    "correct": 0,
+    "total": 0
   }
 }
