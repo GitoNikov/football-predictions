@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-16T06:57:17Z",
+  "updated_at": "2026-03-16T09:46:21Z",
   "label": "Висша лига · Кръг ",
   "labelEn": "Premier League · GW",
   "date_range": "2026-03-13 – 2026-03-16",
@@ -1076,9 +1076,5 @@
     "correct": 31,
     "total": 57,
     "period": "ЛЕ 26.02.2026"
-  },
-  "bbRecord": {
-    "correct": 0,
-    "total": 0
   }
 }
