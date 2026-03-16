@@ -6,6 +6,111 @@
   "date_rangeEn": "2026-03-13 – 2026-03-16",
   "results": [
     {
+      "id": "whu_mci",
+      "home": "Уест Хем",
+      "homeEn": "West Ham",
+      "away": "Ман Сити",
+      "awayEn": "Manchester City",
+      "date": "2026-03-14",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.5",
+        "confReason": ""
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
+      "id": "che_new",
+      "home": "Челси",
+      "homeEn": "Chelsea",
+      "away": "Нюкасъл",
+      "awayEn": "Newcastle",
+      "date": "2026-03-14",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.44",
+        "confReason": ""
+      },
+      "result": "L",
+      "score": "0-1"
+    },
+    {
+      "id": "ars_eve",
+      "home": "Арсенал",
+      "homeEn": "Arsenal",
+      "away": "Евъртън",
+      "awayEn": "Everton",
+      "date": "2026-03-14",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Арсенал победа",
+        "betEn": "Arsenal Win",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.36",
+        "confReason": ""
+      },
+      "result": "W",
+      "score": "2-0"
+    },
+    {
+      "id": "sun_bri",
+      "home": "Съндърланд",
+      "homeEn": "Sunderland",
+      "away": "Брайтън",
+      "awayEn": "Brighton",
+      "date": "2026-03-14",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Под 2.5 гола",
+        "betEn": "Under 2.5 Goals",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "under_2.5",
+        "odd": "1.95",
+        "confReason": ""
+      },
+      "result": "W",
+      "score": "0-1"
+    },
+    {
+      "id": "bur_bou",
+      "home": "Бърнли",
+      "homeEn": "Burnley",
+      "away": "Борнемут",
+      "awayEn": "Bournemouth",
+      "date": "2026-03-14",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Борнемут победа",
+        "betEn": "Bournemouth Win",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "away",
+        "odd": "1.85",
+        "confReason": ""
+      },
+      "result": "L",
+      "score": "0-0"
+    },
+    {
       "id": "tot_pal",
       "home": "Тотнъм",
       "homeEn": "Tottenham",
@@ -24,370 +129,10 @@
       },
       "result": "W",
       "score": "1-3"
-    },
-    {
-      "id": "new_mun",
-      "home": "Нюкасъл",
-      "homeEn": "Newcastle",
-      "away": "Ман Юнайтед",
-      "awayEn": "Manchester United",
-      "date": "2026-03-04",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.53"
-      },
-      "result": "W",
-      "score": "2-1"
-    },
-    {
-      "id": "mci_for",
-      "home": "Ман Сити",
-      "homeEn": "Manchester City",
-      "away": "Нотингам Форест",
-      "awayEn": "Nottingham Forest",
-      "date": "2026-03-04",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.53"
-      },
-      "result": "W",
-      "score": "2-2"
-    },
-    {
-      "id": "ful_whu",
-      "home": "Фулъм",
-      "homeEn": "Fulham",
-      "away": "Уест Хем",
-      "awayEn": "West Ham",
-      "date": "2026-03-04",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Фулъм победа",
-        "betEn": "Fulham Win",
-        "conf": 58,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "2.05"
-      },
-      "result": "L",
-      "score": "0-1"
-    },
-    {
-      "id": "avl_che",
-      "home": "Астън Вила",
-      "homeEn": "Aston Villa",
-      "away": "Челси",
-      "awayEn": "Chelsea",
-      "date": "2026-03-04",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.65"
-      },
-      "result": "W",
-      "score": "1-4"
-    },
-    {
-      "id": "bri_ars",
-      "home": "Брайтън",
-      "homeEn": "Brighton",
-      "away": "Арсенал",
-      "awayEn": "Arsenal",
-      "date": "2026-03-04",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Арсенал победа",
-        "betEn": "Arsenal Win",
-        "conf": 70,
-        "market": "h2h",
-        "selection": "away",
-        "odd": "1.65"
-      },
-      "result": "W",
-      "score": "0-1"
-    },
-    {
-      "id": "wol_liv",
-      "home": "Уулвърхямптън",
-      "homeEn": "Wolverhampton Wanderers",
-      "away": "Ливърпул",
-      "awayEn": "Liverpool",
-      "date": "2026-03-03",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.57"
-      },
-      "result": "W",
-      "score": "2-1"
-    },
-    {
-      "id": "lee_sun",
-      "home": "Лийдс",
-      "homeEn": "Leeds",
-      "away": "Съндърланд",
-      "awayEn": "Sunderland",
-      "date": "2026-03-03",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Лийдс победа",
-        "betEn": "Leeds Win",
-        "conf": 58,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.85"
-      },
-      "result": "L",
-      "score": "0-1"
-    },
-    {
-      "id": "eve_bur",
-      "home": "Евъртън",
-      "homeEn": "Everton",
-      "away": "Бърнли",
-      "awayEn": "Burnley",
-      "date": "2026-03-03",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Евъртън победа",
-        "betEn": "Everton Win",
-        "conf": 65,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.57"
-      },
-      "result": "W",
-      "score": "2-0"
-    },
-    {
-      "id": "bou_bre",
-      "home": "Борнемут",
-      "homeEn": "Bournemouth",
-      "away": "Брентфорд",
-      "awayEn": "Brentford",
-      "date": "2026-03-03",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 58,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.57"
-      },
-      "result": "L",
-      "score": "0-0"
-    },
-    {
-      "id": "ars_che",
-      "home": "Арсенал",
-      "homeEn": "Arsenal",
-      "away": "Челси",
-      "awayEn": "Chelsea",
-      "date": "2026-03-01",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Арсенал победа",
-        "betEn": "Arsenal Win",
-        "conf": 70,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.57"
-      },
-      "result": "W",
-      "score": "2-1"
-    },
-    {
-      "id": "ful_tot",
-      "home": "Фулъм",
-      "homeEn": "Fulham",
-      "away": "Тотнъм",
-      "awayEn": "Tottenham",
-      "date": "2026-03-01",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "BTTS Да",
-        "betEn": "BTTS Yes",
-        "conf": 63,
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.65"
-      },
-      "result": "W",
-      "score": "2-1"
-    },
-    {
-      "id": "mun_pal",
-      "home": "Ман Юнайтед",
-      "homeEn": "Man United",
-      "away": "Кристъл Палас",
-      "awayEn": "Crystal Palace",
-      "date": "2026-03-01",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Ман Юнайтед победа",
-        "betEn": "Man United Win",
-        "conf": 65,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.55"
-      },
-      "result": "W",
-      "score": "2-1"
-    },
-    {
-      "id": "bri_for",
-      "home": "Брайтън",
-      "homeEn": "Brighton",
-      "away": "Нотингам Форест",
-      "awayEn": "Nottm Forest",
-      "date": "2026-03-01",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Форест победа (ценност)",
-        "betEn": "Forest Win (value)",
-        "conf": 45,
-        "market": "h2h",
-        "selection": "away",
-        "odd": "3.4"
-      },
-      "result": "L",
-      "score": "2-1"
-    },
-    {
-      "id": "lee_mci",
-      "home": "Лийдс",
-      "homeEn": "Leeds",
-      "away": "Ман Сити",
-      "awayEn": "Man City",
-      "date": "2026-02-28",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Ман Сити победа",
-        "betEn": "Man City Win",
-        "conf": 65,
-        "market": "h2h",
-        "selection": "away",
-        "odd": "1.65"
-      },
-      "result": "W",
-      "score": "0-1"
-    },
-    {
-      "id": "new_eve",
-      "home": "Нюкасъл",
-      "homeEn": "Newcastle",
-      "away": "Евъртън",
-      "awayEn": "Everton",
-      "date": "2026-02-28",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Нюкасъл победа",
-        "betEn": "Newcastle Win",
-        "conf": 62,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.75"
-      },
-      "result": "L",
-      "score": "2-3"
-    },
-    {
-      "id": "liv_whu",
-      "home": "Ливърпул",
-      "homeEn": "Liverpool",
-      "away": "Уест Хем",
-      "awayEn": "West Ham",
-      "date": "2026-02-28",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Ливърпул победа",
-        "betEn": "Liverpool Win",
-        "conf": 74,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.37"
-      },
-      "result": "W",
-      "score": "5-2"
-    },
-    {
-      "id": "bur_bre",
-      "home": "Бърнли",
-      "homeEn": "Burnley",
-      "away": "Брентфорд",
-      "awayEn": "Brentford",
-      "date": "2026-02-28",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Брентфорд победа",
-        "betEn": "Brentford Win",
-        "conf": 61,
-        "market": "h2h",
-        "selection": "away",
-        "odd": "1.75"
-      },
-      "result": "W",
-      "score": "3-4"
-    },
-    {
-      "id": "bou_sun",
-      "home": "Борнемут",
-      "homeEn": "Bournemouth",
-      "away": "Сундерланд",
-      "awayEn": "Sunderland",
-      "date": "2026-02-28",
-      "competition": "Висша лига · Кръг 31",
-      "competitionEn": "Premier League · GW31",
-      "pick": {
-        "bet": "Борнемут победа",
-        "betEn": "Bournemouth Win",
-        "conf": 62,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.75"
-      },
-      "result": "L",
-      "score": "1-1"
     }
   ],
   "record": {
-    "correct": 13,
-    "total": 19
+    "correct": 3,
+    "total": 6
   }
 }

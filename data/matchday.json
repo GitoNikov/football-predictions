@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-03-11T15:56:45Z",
-  "label": "Висша лига · Кръг 31",
-  "labelEn": "Premier League · GW31",
+  "updated_at": "2026-03-16T06:57:17Z",
+  "label": "Висша лига · Кръг ",
+  "labelEn": "Premier League · GW",
   "date_range": "2026-03-13 – 2026-03-16",
   "date_rangeEn": "2026-03-13 – 2026-03-16",
   "sport": "soccer_epl",
@@ -1216,9 +1216,5 @@
     "correct": 29,
     "total": 53,
     "period": "ЛЕ 26.02.2026"
-  },
-  "bbRecord": {
-    "correct": 0,
-    "total": 1
   }
 }
