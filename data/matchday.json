@@ -7,42 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "bre_wol",
-      "home": "Брентфорд",
-      "homeEn": "Brentford",
-      "homeA": "BRE",
-      "away": "Уулвърхямптън",
-      "awayEn": "Wolverhampton Wanderers",
-      "awayA": "WOL",
-      "date": "2026-03-16",
-      "time": "22:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Брентфорд победа",
-        "betEn": "Brentford Win",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.57",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "h": "1.57",
-        "a": "5.0",
-        "x": "4.0",
-        "o25": "1.75"
-      },
-      "prob": {
-        "h": 64,
-        "d": 25,
-        "a": 20
-      },
-      "aiCtx": "Brentford are 7th in the Premier League (44 pts), scoring 1.52 and conceding 1.38 goals per game, BTTS in 3/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): W 1-0, W 3-2, D 1-1, L 0-2, W 4-3, D 0-0. Wolverhampton Wanderers are 20th (16 pts), scoring 0.73 and conceding 1.73 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 1-3, D 0-0, D 2-2, L 0-1, W 2-0, W 2-1. Combined expected goals (home scores + away concedes): ~3.2/game. H2H last 1: Brentford 1W-0D-0L, avg 2.0 goals/game.",
-      "ai": "",
-      "aiEn": "",
-      "newsCtx": "2 days ago · Welcome to the Official Brentford FC Website. For all the latest news, videos, player and injury news, fixtures, results and more. | Visit ESPN for Brentford live scores, video highlights, and latest news. Find standings and the full 2025-26 season schedule. | For the latest news on Bre"
-    },
-    {
       "id": "ala_vil",
       "home": "Алавес",
       "homeEn": "Deportivo Alavés",
@@ -442,6 +406,27 @@
     "result": "L"
   },
   "results": [
+    {
+      "id": "bre_wol",
+      "home": "Брентфорд",
+      "homeEn": "Brentford",
+      "away": "Уулвърхямптън",
+      "awayEn": "Wolverhampton Wanderers",
+      "date": "2026-03-16",
+      "competition": "Висша лига · Кръг ",
+      "competitionEn": "Premier League · GW",
+      "pick": {
+        "bet": "Брентфорд победа",
+        "betEn": "Brentford Win",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.57",
+        "confReason": ""
+      },
+      "result": "L",
+      "score": "2-2"
+    },
     {
       "id": "liv_tot",
       "home": "Ливърпул",
@@ -1050,31 +1035,15 @@
       },
       "result": "L",
       "score": "1-1"
-    },
-    {
-      "id": "1129cf84",
-      "home": "Нюкасъл",
-      "homeEn": "Newcastle United",
-      "away": "Барселона",
-      "awayEn": "Barcelona",
-      "date": "2026-03-10",
-      "competition": "Шампионска лига",
-      "competitionEn": "Champions League",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 70,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.53"
-      },
-      "result": "L",
-      "score": "1-1"
     }
   ],
   "record": {
     "correct": 31,
-    "total": 57,
+    "total": 58,
     "period": "ЛЕ 26.02.2026"
+  },
+  "bbRecord": {
+    "correct": 0,
+    "total": 0
   }
 }
