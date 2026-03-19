@@ -396,7 +396,7 @@ def fetch_domestic_events(api_key: str, sport_key: str, league_name: str) -> lis
     if resp.status_code == 401:
         sys.exit("❌  Invalid ODDS_API_KEY")
     if not resp.ok:
-        print(f"  ⚠  Odds API returned {resp.status_code} for {league_name} — skipping odds.")
+        print(f"  ⚠  Odds API returned {resp.status_code} for {league_name} — skipping odds. Body: {resp.text[:300]}")
         return []
     remaining = resp.headers.get("x-requests-remaining", "?")
     print(f"  ✓  Odds API: {len(resp.json())} {league_name} events | quota remaining {remaining}")
