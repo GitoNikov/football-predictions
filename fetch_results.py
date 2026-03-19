@@ -32,6 +32,7 @@ COMP_ODDS_SPORT = {
     "Champions League": "soccer_uefa_champs_league",
     "Europa League":    "soccer_uefa_europa_league",
     "Conference League": "soccer_uefa_europa_conference_league",
+    "La Liga":          "soccer_spain_la_liga",
 }
 
 # api-football.com league IDs for UEFA competitions (season = start year, e.g. 2025 for 2025-26)
@@ -39,6 +40,7 @@ COMP_AF_LEAGUE = {
     "Champions League": 2,
     "Europa League":    3,
     "Conference League": 848,
+    "La Liga":          140,
 }
 
 
