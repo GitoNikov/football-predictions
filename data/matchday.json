@@ -338,43 +338,6 @@
       "competitionBG": "Ла Лига",
       "ai": "",
       "aiEn": ""
-    },
-    {
-      "id": "ray_lev",
-      "home": "Райо Валекано",
-      "homeEn": "Rayo Vallecano",
-      "homeA": "RAY",
-      "away": "Levante",
-      "awayEn": "Levante",
-      "awayA": "LEV",
-      "date": "2026-03-16",
-      "time": "22:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.85",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "a": "4.8",
-        "h": "1.67",
-        "x": "3.7",
-        "o25": "1.85"
-      },
-      "prob": {
-        "h": 60,
-        "d": 27,
-        "a": 21
-      },
-      "aiCtx": "Rayo Vallecano are 13th in the La Liga (31 pts), scoring 1.0 and conceding 1.22 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 1-2, W 3-0, D 1-1, D 1-1, W 3-0, D 1-1. Levante are 19th (22 pts), scoring 1.07 and conceding 1.67 goals per game, BTTS in 2/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 2-4, L 0-2, L 0-1, L 0-3, W 2-0, D 1-1. Combined expected goals (home scores + away concedes): ~2.7/game. H2H last 1: Rayo Vallecano 1W-0D-0L, avg 3.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "ai": "",
-      "aiEn": ""
     }
   ],
   "betBuilder": {
@@ -406,6 +369,27 @@
     "result": "L"
   },
   "results": [
+    {
+      "id": "ray_lev",
+      "home": "Райо Валекано",
+      "homeEn": "Rayo Vallecano",
+      "away": "Levante",
+      "awayEn": "Levante",
+      "date": "2026-03-16",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85",
+        "confReason": ""
+      },
+      "result": "L",
+      "score": "1-1"
+    },
     {
       "id": "bre_wol",
       "home": "Брентфорд",
@@ -1014,32 +998,11 @@
       },
       "result": "W",
       "score": "3-0"
-    },
-    {
-      "id": "963a779e",
-      "home": "Леверкузен",
-      "homeEn": "Bayer Leverkusen",
-      "away": "Арсенал",
-      "awayEn": "Arsenal",
-      "date": "2026-03-11",
-      "competition": "Шампионска лига",
-      "competitionEn": "Champions League",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 78,
-        "confReason": "Combined expected goals is likely high given both teams' attacking prowess, and the odd is within the 1.40-2.50 sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.7"
-      },
-      "result": "L",
-      "score": "1-1"
     }
   ],
   "record": {
     "correct": 31,
-    "total": 58,
+    "total": 59,
     "period": "ЛЕ 26.02.2026"
   },
   "bbRecord": {
