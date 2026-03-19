@@ -7,339 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "ala_vil",
-      "home": "Алавес",
-      "homeEn": "Deportivo Alavés",
-      "homeA": "ALA",
-      "away": "Вияреал",
-      "awayEn": "Villarreal",
-      "awayA": "VIL",
-      "date": "2026-03-13",
-      "time": "22:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.95",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "h": "3.3",
-        "a": "2.1",
-        "x": "3.3",
-        "o25": "1.95"
-      },
-      "prob": {
-        "h": 30,
-        "d": 30,
-        "a": 48
-      },
-      "aiCtx": "Deportivo Alavés are 16th in the La Liga (27 pts), scoring 0.93 and conceding 1.37 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 2-1, L 0-2, D 1-1, D 2-2, L 0-2, L 2-3. Villarreal are 4th (54 pts), scoring 1.85 and conceding 1.19 goals per game, BTTS in 5/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): W 4-1, L 1-2, W 1-0, W 2-1, L 1-4, W 2-1. Combined expected goals (home scores + away concedes): ~2.1/game. H2H last 1: Deportivo Alavés 0W-0D-1L, avg 4.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
-      "id": "gir_bil",
-      "home": "Хирона",
-      "homeEn": "Girona",
-      "homeA": "GIR",
-      "away": "Athletic Bilbao",
-      "awayEn": "Athletic Bilbao",
-      "awayA": "BIL",
-      "date": "2026-03-14",
-      "time": "15:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.0",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "a": "2.5",
-        "h": "2.7",
-        "x": "3.2",
-        "o25": "2.0"
-      },
-      "prob": {
-        "h": 37,
-        "d": 31,
-        "a": 40
-      },
-      "aiCtx": "Girona are 15th in the La Liga (31 pts), scoring 1.04 and conceding 1.59 goals per game, BTTS in 5/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-1, D 1-1, W 2-1, D 2-2, L 1-2, D 1-1. Athletic Bilbao are 10th (35 pts), scoring 1.11 and conceding 1.37 goals per game, BTTS in 5/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): D 1-1, W 4-2, W 2-1, W 2-1, D 1-1, L 0-1. Combined expected goals (home scores + away concedes): ~2.4/game. H2H last 1: Girona 0W-1D-0L, avg 2.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
-      "id": "atm_get",
-      "home": "Атлетико Мадрид",
-      "homeEn": "Atlético Madrid",
-      "homeA": "ATM",
-      "away": "Хетафе",
-      "awayEn": "Getafe",
-      "awayA": "GET",
-      "date": "2026-03-14",
-      "time": "17:15",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.3",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "h": "1.55",
-        "a": "6.5",
-        "x": "3.5",
-        "o25": "2.3"
-      },
-      "prob": {
-        "h": 65,
-        "d": 29,
-        "a": 15
-      },
-      "aiCtx": "Atlético Madrid are 3rd in the La Liga (54 pts), scoring 1.7 and conceding 0.93 goals per game, BTTS in 5/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): D 3-3, W 4-2, W 4-1, W 1-0, W 3-2, W 5-2. Getafe are 9th (35 pts), scoring 0.85 and conceding 1.07 goals per game, BTTS in 1/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): D 0-0, W 2-0, W 2-1, L 0-1, W 1-0, W 2-0. Combined expected goals (home scores + away concedes): ~2.8/game. H2H last 1: Atlético Madrid 1W-0D-0L, avg 1.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
-      "id": "ovi_val",
-      "home": "Oviedo",
-      "homeEn": "Oviedo",
-      "homeA": "OVI",
-      "away": "Валенсия",
-      "awayEn": "Valencia",
-      "awayA": "VAL",
-      "date": "2026-03-14",
-      "time": "19:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.2",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "h": "2.8",
-        "a": "2.5",
-        "x": "3.0",
-        "o25": "2.2"
-      },
-      "prob": {
-        "h": 36,
-        "d": 33,
-        "a": 40
-      },
-      "aiCtx": "Oviedo are 20th in the La Liga (18 pts), scoring 0.63 and conceding 1.63 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 1-0, L 1-2, D 3-3, L 0-1, L 0-3, D 1-1. Valencia are 12th (32 pts), scoring 1.11 and conceding 1.52 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 1-2, L 0-2, W 2-0, L 1-2, W 1-0, W 3-2. Combined expected goals (home scores + away concedes): ~2.1/game. H2H last 1: Oviedo 1W-0D-0L, avg 3.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
-      "id": "rma_elc",
-      "home": "Реал Мадрид",
-      "homeEn": "Real Madrid",
-      "homeA": "RMA",
-      "away": "Elche CF",
-      "awayEn": "Elche CF",
-      "awayA": "ELC",
-      "date": "2026-03-14",
-      "time": "22:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Реал Мадрид победа",
-        "betEn": "Real Madrid Win",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.22",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "a": "10.0",
-        "h": "1.22",
-        "x": "6.5",
-        "o25": "1.4"
-      },
-      "prob": {
-        "h": 82,
-        "d": 15,
-        "a": 10
-      },
-      "aiCtx": "Real Madrid are 2nd in the La Liga (63 pts), scoring 2.07 and conceding 0.85 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 4-1, W 1-0, L 1-2, W 2-1, L 0-1, W 2-1. Elche CF are 17th (26 pts), scoring 1.3 and conceding 1.52 goals per game, BTTS in 5/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): L 1-3, L 1-3, D 0-0, L 1-2, D 2-2, L 1-2. Combined expected goals (home scores + away concedes): ~3.6/game. H2H last 1: Real Madrid 0W-1D-0L, avg 4.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
-      "id": "mal_esp",
-      "home": "Майорка",
-      "homeEn": "Mallorca",
-      "homeA": "MAL",
-      "away": "Еспаньол",
-      "awayEn": "Espanyol",
-      "awayA": "ESP",
-      "date": "2026-03-15",
-      "time": "15:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.3",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "a": "3.2",
-        "h": "2.3",
-        "x": "3.0",
-        "o25": "2.3"
-      },
-      "prob": {
-        "h": 43,
-        "d": 33,
-        "a": 31
-      },
-      "aiCtx": "Mallorca are 18th in the La Liga (25 pts), scoring 1.15 and conceding 1.63 goals per game, BTTS in 3/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 4-1, L 0-3, L 1-2, L 0-2, L 0-1, D 2-2. Espanyol are 7th (37 pts), scoring 1.26 and conceding 1.48 goals per game, BTTS in 6/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): L 1-2, L 1-4, D 2-2, L 2-4, D 2-2, D 1-1. Combined expected goals (home scores + away concedes): ~2.6/game. H2H last 1: Mallorca 0W-0D-1L, avg 5.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
-      "id": "bar_sev",
-      "home": "Барселона",
-      "homeEn": "FC Barcelona",
-      "homeA": "BAR",
-      "away": "Севиля",
-      "awayEn": "Sevilla",
-      "awayA": "SEV",
-      "date": "2026-03-15",
-      "time": "17:15",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.29",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "h": "1.22",
-        "a": "9.5",
-        "x": "6.5",
-        "o25": "1.29"
-      },
-      "prob": {
-        "h": 82,
-        "d": 15,
-        "a": 11
-      },
-      "aiCtx": "FC Barcelona are 1st in the La Liga (67 pts), scoring 2.67 and conceding 0.96 goals per game, BTTS in 3/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 3-0, L 1-2, W 3-0, W 4-1, W 1-0, D 1-1. Sevilla are 14th (31 pts), scoring 1.3 and conceding 1.56 goals per game, BTTS in 5/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 1-4, D 1-1, D 1-1, W 1-0, D 2-2, D 1-1. Combined expected goals (home scores + away concedes): ~4.2/game. H2H last 1: FC Barcelona 0W-0D-1L, avg 5.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
-      "id": "bet_cel",
-      "home": "Реал Бетис",
-      "homeEn": "Real Betis",
-      "homeA": "BET",
-      "away": "Селта Виго",
-      "awayEn": "Celta Vigo",
-      "awayA": "CEL",
-      "date": "2026-03-15",
-      "time": "19:30",
-      "status": "pending",
-      "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score Yes",
-        "conf": 0,
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.75",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "a": "3.3",
-        "h": "2.2",
-        "x": "3.1",
-        "o25": "1.91"
-      },
-      "prob": {
-        "h": 45,
-        "d": 32,
-        "a": 30
-      },
-      "aiCtx": "Real Betis are 5th in the La Liga (43 pts), scoring 1.56 and conceding 1.26 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 2-1, W 1-0, W 2-1, D 1-1, D 2-2, L 0-2. Celta Vigo are 6th (40 pts), scoring 1.37 and conceding 1.11 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): D 0-0, L 1-2, D 2-2, W 2-0, W 2-1, L 1-2. Combined expected goals (home scores + away concedes): ~2.7/game. H2H last 1: Real Betis 0W-1D-0L, avg 2.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
-      "id": "rso_osa",
-      "home": "Реал Сосиедад",
-      "homeEn": "Real Sociedad",
-      "homeA": "RSO",
-      "away": "Осасуна",
-      "awayEn": "Osasuna",
-      "awayA": "OSA",
-      "date": "2026-03-15",
-      "time": "22:00",
-      "status": "pending",
-      "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score Yes",
-        "conf": 0,
-        "market": "btts",
-        "selection": "yes",
-        "odd": "2.05",
-        "confReason": ""
-      },
-      "odds_wh": {
-        "a": "4.0",
-        "h": "1.91",
-        "x": "3.3",
-        "o25": "2.05"
-      },
-      "prob": {
-        "h": 52,
-        "d": 30,
-        "a": 25
-      },
-      "aiCtx": "Real Sociedad are 8th in the La Liga (35 pts), scoring 1.48 and conceding 1.52 goals per game, BTTS in 5/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): D 1-1, W 3-1, L 1-4, D 3-3, W 1-0, L 2-3. Osasuna are 11th (34 pts), scoring 1.19 and conceding 1.19 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): D 2-2, W 2-1, D 0-0, W 2-1, L 0-1, D 2-2. Combined expected goals (home scores + away concedes): ~2.7/game. H2H last 1: Real Sociedad 1W-0D-0L, avg 4.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "ai": "",
-      "aiEn": ""
-    },
-    {
       "id": "bou_mun",
       "home": "Борнемут",
       "homeEn": "Bournemouth",
@@ -372,9 +39,9 @@
       },
       "aiCtx": "Bournemouth are 10th in the Premier League (41 pts), scoring 1.47 and conceding 1.53 goals per game, BTTS in 3/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): D 1-1, W 2-1, D 0-0, D 1-1, D 0-0, D 0-0. Manchester United are 3rd (54 pts), scoring 1.8 and conceding 1.37 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 2-0, D 1-1, W 1-0, W 2-1, L 1-2, W 3-1. Combined expected goals (home scores + away concedes): ~2.8/game. H2H last 1: Bournemouth 0W-1D-0L, avg 8.0 goals/game.",
       "newsCtx": "Explore what's on, places to stay, beaches and activities in the vibrant resort of Bournemouth. Plan and book your day … | Discover the top things to do & attractions in Bournemouth, the beach-side town & cultural hub with a vibrant energy. Our … | Jul 29, 2025 · Plenty of surprising attractions and",
-      "ai": "Борнемут заема 10-то място в лигата с 41 точка, вкарват 1.47 гола и допускат 1.53 гола на мач, а формата им от последните 6 мача е Р 1-1, П 2-1, Р 0-0, Р 1-1, Р 0-0, Р 0-0. Домакините и гостите, Ман Юнайтед, имат добра форма и вкарват много гола, което прави двубоя подходящ за прогноза над 2.5 гола. Прогнозата е над 2.5 гола при котировка 1.53.",
-      "aiEn": "Bournemouth are 10th in the Premier League with 41 points, scoring 1.47 and conceding 1.53 goals per game, with a recent form of D 1-1, W 2-1, D 0-0, D 1-1, D 0-0, D 0-0, while Manchester United are 3rd with 54 points, scoring 1.8 and conceding 1.37 goals per game, with a form of W 2-0, D 1-1, W 1-0, W 2-1, L 1-2, W 3-1. The high-scoring recent form results of both teams, combined with their goals per game averages, make a strong case for Over 2.5 goals. The pick is Over 2.5 Goals at 1.53 William Hill.",
-      "aiCtxHash": "71654638"
+      "ai": "Домакините Борнемут заемат 10то място с 41 точка, вкарват 1.47 гола и допускат 1.53 гола на мач, а гостите Ман Юнайтед са на 3то място с 54 точки, вкарват 1.8 гола и допускат 1.37 гола на мач, с форма от последните 6 мача съответно Р 1-1, П 2-1, Р 0-0, Р 1-1, Р 0-0, Р 0-0 и П 2-0, Р 1-1, П 1-0, П 2-1, З 1-2, П 3-1. Общата форма и головете, вкарвани от двата отбора, говорят за над 2.5 гола в този двубой, тъй като Борнемут и Ман Юнайтед имат силни атаки и скорошни резултати с много голове. Прогнозата е над 2.5 гола при котировка 1.53.",
+      "aiEn": "Bournemouth are 10th in the Premier League with 41 points, scoring 1.47 and conceding 1.53 goals per game, with recent form of D 1-1, W 2-1, D 0-0, D 1-1, D 0-0, D 0-0, while Manchester United are 3rd with 54 points, scoring 1.8 and conceding 1.37 goals per game, with recent form of W 2-0, D 1-1, W 1-0, W 2-1, L 1-2, W 3-1. The high-scoring recent form results and goals per game averages of both teams make a strong case for over 2.5 goals in this match, given their strong attacks and recent high-scoring results. The pick is Over 2.5 Goals at odds of 1.53.",
+      "aiCtxHash": "23ee1967"
     },
     {
       "id": "bri_liv",
@@ -445,9 +112,9 @@
       },
       "aiCtx": "Fulham are 11th in the Premier League (41 pts), scoring 1.33 and conceding 1.43 goals per game, BTTS in 3/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 1-2, L 0-3, W 3-1, W 2-1, L 0-1, D 0-0. Burnley are 19th (20 pts), scoring 1.07 and conceding 1.93 goals per game, BTTS in 3/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 0-2, W 3-2, D 1-1, L 3-4, L 0-2, D 0-0. Combined expected goals (home scores + away concedes): ~3.3/game. H2H last 1: Fulham 1W-0D-0L, avg 5.0 goals/game.",
       "newsCtx": "The Official Website of Fulham Football Club: get the latest news, highlights, fixtures and results, tickets, Club shop and more. | Add to Calendar Fixtures Results Table Next Match Fulham FC 08:00 Sat 21 Mar Craven Cottage Burnley 02 Days | The Official Website of Fulham Football Club: get the late",
-      "ai": "Фулъм заема 11-то място в Премиершип с 41 точка, вкарват 1.33 гола на мач и допускат 1.43 гола, а в последните 6 мача имат форма П 3-1, П 2-1, З 0-1, Р 0-0, З 1-2, З 0-3, докато Бърнли е на 19-то място с 20 точки, вкарват 1.07 гола на мач и допускат 1.93 гола, с форма З 0-2, П 3-2, Р 1-1, З 3-4, З 0-2, Р 0-0. Двубойът между домакините и гостите обещава да бъде оживен, тъй като и двете отбори имат скорошни резултати с много голове, което подсказва, че над 2.5 гола е реална прогноза. Прогнозата е над 2.5 гола при котировка 1.75.",
-      "aiEn": "Fulham are 11th in the Premier League with 41 points, scoring 1.33 and conceding 1.43 goals per game, with a recent form of L 1-2, L 0-3, W 3-1, W 2-1, L 0-1, D 0-0, while Burnley are 19th with 20 points, scoring 1.07 and conceding 1.93 goals per game, with a form of L 0-2, W 3-2, D 1-1, L 3-4, L 0-2, D 0-0. The case for Over 2.5 goals is made by both teams' high-scoring recent form results and their goals per game averages, suggesting a high-scoring match. The pick is Over 2.5 Goals at 1.75.",
-      "aiCtxHash": "de8c618c"
+      "ai": "Фулъм заема 11-то място в лигата с 41 точки, вкарват 1.33 гола на мач и допускат 1.43 гола, а в последните 6 мача имат форма от З 1-2, З 0-3, П 3-1, П 2-1, З 0-1, Р 0-0, докато Бърнли е на 19-то място с 20 точки, вкарват 1.07 гола на мач и допускат 1.93 гола, с форма от З 0-2, П 3-2, Р 1-1, З 3-4, З 0-2, Р 0-0. Двубоят между домакините и гостите обещава да бъде многорезултатен, тъй като и двете отбори имат скорошни резултати с много голове. Прогнозата е над 2.5 гола на котировка 1.75",
+      "aiEn": "Fulham are 11th in the Premier League with 41 points, scoring 1.33 and conceding 1.43 goals per game, with a recent form of L 1-2, L 0-3, W 3-1, W 2-1, L 0-1, D 0-0, while Burnley are 19th with 20 points, scoring 1.07 and conceding 1.93 goals per game, with a form of L 0-2, W 3-2, D 1-1, L 3-4, L 0-2, D 0-0. The case for Over 2.5 goals is strong given both teams' goals per game averages and their recent high-scoring form results. The pick is Over 2.5 Goals at 1.75 odds.",
+      "aiCtxHash": "5a681828"
     },
     {
       "id": "eve_che",
@@ -893,7 +560,10 @@
       "aiCtx": "FC Barcelona are 1st in the La Liga (70 pts), scoring 2.75 and conceding 1.0 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 3-0, W 4-1, W 1-0, D 1-1, W 5-2, W 7-2. Rayo Vallecano are 13th (32 pts), scoring 1.0 and conceding 1.21 goals per game, BTTS in 4/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): W 3-0, D 1-1, D 1-1, W 3-0, D 1-1, D 1-1. Combined expected goals (home scores + away concedes): ~4.0/game.",
       "competition": "La Liga",
       "competitionBG": "Ла Лига",
-      "newsCtx": "Jun 22, 2025 · FC的成功跟DQ无关，早在1984年FC就已经击败两个对手了，之后马里奥1让FC快速普及成为全民娱乐，论功臣马里奥绝对是首位，然而很快JRPG … | FC时代任天堂虽然在主机上一家独大，但除去文首就提到的那个游戏，值得新手入坑的第一方作品其实并不多，卡比梦泉是当中佼佼者。发售于FC末期的它基本 … | 35 FC游戏带给你哪些乐趣？ FC经典游戏中蕴含着大量的趣味性的内容，以及深厚的怀旧游戏文化底蕴，值得怀旧游戏玩家朋友去挖掘，去探索，去思考，去实 …"
+      "newsCtx": "Jun 22, 2025 · FC的成功跟DQ无关，早在1984年FC就已经击败两个对手了，之后马里奥1让FC快速普及成为全民娱乐，论功臣马里奥绝对是首位，然而很快JRPG … | FC时代任天堂虽然在主机上一家独大，但除去文首就提到的那个游戏，值得新手入坑的第一方作品其实并不多，卡比梦泉是当中佼佼者。发售于FC末期的它基本 … | 35 FC游戏带给你哪些乐趣？ FC经典游戏中蕴含着大量的趣味性的内容，以及深厚的怀旧游戏文化底蕴，值得怀旧游戏玩家朋友去挖掘，去探索，去思考，去实 …",
+      "ai": "Барселона заема 1ва позиция в ла лига с 70 точки, вкарват 2.75 гола и допускат 1.0 гол на мач, с форма от П 3-0, П 4-1, П 1-0, Р 1-1, П 5-2, П 7-2, докато Райо Валекано е 13ти с 32 точки, вкарват 1.0 гол и допускат 1.21 гола на мач, с форма от П 3-0, Р 1-1, Р 1-1, П 3-0, Р 1-1, Р 1-1. Двубойът между домакините и гостите обещава да бъде с много голове, тъй като Барселона вкарват много гола, а Райо Валекано допускат относително повече гола в последните си мачове. Прогнозата е над 2.5 гола с котировка 1.33 при Уилям Хил.",
+      "aiEn": "FC Barcelona are 1st in the La Liga with 70 points, scoring 2.75 and conceding 1.0 goals per game, with a recent form of W 3-0, W 4-1, W 1-0, D 1-1, W 5-2, W 7-2, while Rayo Vallecano are 13th with 32 points, scoring 1.0 and conceding 1.21 goals per game, with a recent form of W 3-0, D 1-1, D 1-1, W 3-0, D 1-1, D 1-1. The match between the two teams is likely to be high-scoring, given FC Barcelona's high scoring average and Rayo Vallecano's recent form results with multiple goals. The pick is Over 2.5 at 1.33 with William Hill.",
+      "aiCtxHash": "db470b31"
     },
     {
       "id": "cel_ala",
@@ -1606,6 +1276,195 @@
   },
   "results": [
     {
+      "id": "rso_osa",
+      "home": "Реал Сосиедад",
+      "homeEn": "Real Sociedad",
+      "away": "Осасуна",
+      "awayEn": "Osasuna",
+      "date": "2026-03-15",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "И двата вкарват",
+        "betEn": "Both Teams to Score Yes",
+        "conf": 0,
+        "market": "btts",
+        "selection": "yes",
+        "odd": "2.05",
+        "confReason": ""
+      },
+      "result": "W",
+      "score": "3-1"
+    },
+    {
+      "id": "bet_cel",
+      "home": "Реал Бетис",
+      "homeEn": "Real Betis",
+      "away": "Селта Виго",
+      "awayEn": "Celta Vigo",
+      "date": "2026-03-15",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "И двата вкарват",
+        "betEn": "Both Teams to Score Yes",
+        "conf": 0,
+        "market": "btts",
+        "selection": "yes",
+        "odd": "1.75",
+        "confReason": ""
+      },
+      "result": "W",
+      "score": "1-1"
+    },
+    {
+      "id": "bar_sev",
+      "home": "Барселона",
+      "homeEn": "FC Barcelona",
+      "away": "Севиля",
+      "awayEn": "Sevilla",
+      "date": "2026-03-15",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.29",
+        "confReason": ""
+      },
+      "result": "W",
+      "score": "5-2"
+    },
+    {
+      "id": "mal_esp",
+      "home": "Майорка",
+      "homeEn": "Mallorca",
+      "away": "Еспаньол",
+      "awayEn": "Espanyol",
+      "date": "2026-03-15",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.3",
+        "confReason": ""
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "rma_elc",
+      "home": "Реал Мадрид",
+      "homeEn": "Real Madrid",
+      "away": "Elche CF",
+      "awayEn": "Elche CF",
+      "date": "2026-03-14",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Реал Мадрид победа",
+        "betEn": "Real Madrid Win",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.22",
+        "confReason": ""
+      },
+      "result": "W",
+      "score": "4-1"
+    },
+    {
+      "id": "ovi_val",
+      "home": "Oviedo",
+      "homeEn": "Oviedo",
+      "away": "Валенсия",
+      "awayEn": "Valencia",
+      "date": "2026-03-14",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.2",
+        "confReason": ""
+      },
+      "result": "L",
+      "score": "1-0"
+    },
+    {
+      "id": "atm_get",
+      "home": "Атлетико Мадрид",
+      "homeEn": "Atlético Madrid",
+      "away": "Хетафе",
+      "awayEn": "Getafe",
+      "date": "2026-03-14",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.3",
+        "confReason": ""
+      },
+      "result": "L",
+      "score": "1-0"
+    },
+    {
+      "id": "gir_bil",
+      "home": "Хирона",
+      "homeEn": "Girona",
+      "away": "Athletic Bilbao",
+      "awayEn": "Athletic Bilbao",
+      "date": "2026-03-14",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.0",
+        "confReason": ""
+      },
+      "result": "W",
+      "score": "3-0"
+    },
+    {
+      "id": "ala_vil",
+      "home": "Алавес",
+      "homeEn": "Deportivo Alavés",
+      "away": "Вияреал",
+      "awayEn": "Villarreal",
+      "date": "2026-03-13",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 0,
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.95",
+        "confReason": ""
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
       "id": "ray_lev",
       "home": "Райо Валекано",
       "homeEn": "Rayo Vallecano",
@@ -2045,200 +1904,11 @@
       },
       "result": "L",
       "score": "2-0"
-    },
-    {
-      "id": "22809c05",
-      "home": "Нотингам Форест",
-      "homeEn": "Nottingham Forest",
-      "away": "Мидтиланд",
-      "awayEn": "FC Midtjylland",
-      "date": "2026-03-12",
-      "competition": "Лига Европа",
-      "competitionEn": "Europa League",
-      "pick": {
-        "bet": "Нотингам Форест победа",
-        "betEn": "Nottingham Forest Win",
-        "conf": 78,
-        "confReason": "Nottingham Forest is clearly dominant with a strong form and an 8+ place gap, the h2h odd is within the 1.40-2.10 range",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.55"
-      },
-      "result": "L",
-      "score": "0-1"
-    },
-    {
-      "id": "8fbb8beb",
-      "home": "Селта Виго",
-      "homeEn": "Celta Vigo",
-      "away": "Лион",
-      "awayEn": "Lyon",
-      "date": "2026-03-12",
-      "competition": "Лига Европа",
-      "competitionEn": "Europa League",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals is not explicitly given, but considering the odds and typical Europa League matches, it's likely above 2.7. The odd is within the 1.40-2.50 sweet spot, but there's a minor uncertainty due to lack of explicit expected goals and recent form data.",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.85"
-      },
-      "result": "L",
-      "score": "1-1"
-    },
-    {
-      "id": "9b970604",
-      "home": "Щутгарт",
-      "homeEn": "VfB Stuttgart",
-      "away": "Порто",
-      "awayEn": "Porto",
-      "date": "2026-03-12",
-      "competition": "Лига Европа",
-      "competitionEn": "Europa League",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 78,
-        "confReason": "Combined expected goals is likely >= 2.7 given the teams' attacking prowess and William Hill's odds, strongly supporting over 2.5 goals",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.75"
-      },
-      "result": "W",
-      "score": "1-2"
-    },
-    {
-      "id": "060b5c45",
-      "home": "Панатинайкос",
-      "homeEn": "Panathinaikos FC",
-      "away": "Реал Бетис",
-      "awayEn": "Real Betis",
-      "date": "2026-03-12",
-      "competition": "Лига Европа",
-      "competitionEn": "Europa League",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals is likely above 2.7 given the teams' attacking prowess, and the odd is within the desired range",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.25"
-      },
-      "result": "L",
-      "score": "1-0"
-    },
-    {
-      "id": "9c61fdfb",
-      "home": "Лил",
-      "homeEn": "Lille",
-      "away": "Астън Вила",
-      "awayEn": "Aston Villa",
-      "date": "2026-03-12",
-      "competition": "Лига Европа",
-      "competitionEn": "Europa League",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 72,
-        "confReason": "Combined expected goals is likely over 2.7 given the context of the Europa League and the teams involved, and the odd is within the 1.40-2.50 sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.95"
-      },
-      "result": "L",
-      "score": "0-1"
-    },
-    {
-      "id": "1629a498",
-      "home": "Болоня",
-      "homeEn": "Bologna",
-      "away": "Рома",
-      "awayEn": "AS Roma",
-      "date": "2026-03-12",
-      "competition": "Лига Европа",
-      "competitionEn": "Europa League",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 72,
-        "confReason": "Combined expected goals is likely over 2.7 given the teams' attacking prowess and William Hill odds, and the odd is within the 1.40-2.50 sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.3"
-      },
-      "result": "L",
-      "score": "1-1"
-    },
-    {
-      "id": "d507893e",
-      "home": "Реал Мадрид",
-      "homeEn": "Real Madrid",
-      "away": "Ман Сити",
-      "awayEn": "Manchester City",
-      "date": "2026-03-11",
-      "competition": "Шампионска лига",
-      "competitionEn": "Champions League",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 78,
-        "confReason": "Combined expected goals is likely high given the teams involved, and the odd is within the 1.40-2.50 sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.67"
-      },
-      "result": "W",
-      "score": "3-0"
-    },
-    {
-      "id": "9effb0e7",
-      "home": "ПСЖ",
-      "homeEn": "Paris Saint Germain",
-      "away": "Челси",
-      "awayEn": "Chelsea",
-      "date": "2026-03-11",
-      "competition": "Шампионска лига",
-      "competitionEn": "Champions League",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 78,
-        "confReason": "Combined expected goals for Paris Saint Germain and Chelsea is typically high, and the given odd of 1.62 is within the 1.40-2.50 sweet spot, strongly supporting over 2.5 goals",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.62"
-      },
-      "result": "W",
-      "score": "5-2"
-    },
-    {
-      "id": "9116f649",
-      "home": "Бодьо/Глимт",
-      "homeEn": "Bodø/Glimt",
-      "away": "Спортинг",
-      "awayEn": "Sporting Lisbon",
-      "date": "2026-03-11",
-      "competition": "Шампионска лига",
-      "competitionEn": "Champions League",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 78,
-        "confReason": "Combined expected goals likely >= 2.7 given both teams' recent performances and William Hill odds, and the odd is within the 1.40-2.50 sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.6"
-      },
-      "result": "W",
-      "score": "3-0"
     }
   ],
   "record": {
-    "correct": 31,
-    "total": 59,
+    "correct": 37,
+    "total": 68,
     "period": "ЛЕ 26.02.2026"
   },
   "bbRecord": {
