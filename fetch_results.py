@@ -40,7 +40,11 @@ COMP_AF_LEAGUE = {
     "Champions League": 2,
     "Europa League":    3,
     "Conference League": 848,
-    "La Liga":          140,
+}
+
+# football-data.org competition codes for domestic leagues (same API as EPL)
+COMP_FD_CODE = {
+    "La Liga": "PD",
 }
 
 
@@ -286,11 +290,35 @@ def main():
                 print(f"\n🏆  Checking {len(comp_matches)} pending past {comp_en} matches "
                       f"({date_from} – {date_to})…")
 
-                # Try The Odds API first (if sport key defined), fall back to api-football.com
+                # Domestic leagues (e.g. La Liga) use football-data.org directly
                 completed: list = []
                 source = ""
+                fd_comp_code = COMP_FD_CODE.get(comp_en)
+                if fd_comp_code and fd_key:
+                    try:
+                        path = (f"/competitions/{fd_comp_code}/matches"
+                                f"?status=FINISHED&dateFrom={date_from}&dateTo={date_to}")
+                        payload   = fd_get(path, fd_key)
+                        fd_raw    = payload.get("matches", [])
+                        completed = [
+                            {
+                                "_fd":        True,
+                                "home_team":  m["homeTeam"]["name"],
+                                "away_team":  m["awayTeam"]["name"],
+                                "home_score": m["score"]["fullTime"]["home"],
+                                "away_score": m["score"]["fullTime"]["away"],
+                            }
+                            for m in fd_raw
+                            if m.get("score", {}).get("fullTime", {}).get("home") is not None
+                        ]
+                        source = "football-data.org"
+                        print(f"  ✓  football-data.org returned {len(completed)} finished {comp_en} matches")
+                    except Exception as e:
+                        print(f"  ⚠  football-data.org failed for {comp_en}: {e}")
+
+                # UEFA: Try The Odds API first (if sport key defined), fall back to api-football.com
                 sport = COMP_ODDS_SPORT.get(comp_en)
-                if odds_key and sport:
+                if not completed and odds_key and sport:
                     days_ago = (date.today() - date.fromisoformat(date_from)).days + 1
                     days_from_n = min(max(days_ago, 1), 3)
                     try:
@@ -349,7 +377,7 @@ def main():
                         still_pending.append(match)
                         continue
 
-                    if matched.get("_af"):
+                    if matched.get("_af") or matched.get("_fd"):
                         home_score = matched["home_score"]
                         away_score = matched["away_score"]
                     else:
