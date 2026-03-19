@@ -32,7 +32,7 @@ COMP_ODDS_SPORT = {
     "Champions League": "soccer_uefa_champs_league",
     "Europa League":    "soccer_uefa_europa_league",
     "Conference League": "soccer_uefa_europa_conference_league",
-    "La Liga":          "soccer_spain_la_liga",
+    # La Liga uses api-football.com directly (Odds API /scores free tier capped at 3 days)
 }
 
 # api-football.com league IDs for UEFA competitions (season = start year, e.g. 2025 for 2025-26)
@@ -286,11 +286,11 @@ def main():
                 print(f"\n🏆  Checking {len(comp_matches)} pending past {comp_en} matches "
                       f"({date_from} – {date_to})…")
 
-                # Try The Odds API first, fall back to api-football.com
+                # Try The Odds API first (if sport key defined), fall back to api-football.com
                 completed: list = []
                 source = ""
-                if odds_key:
-                    sport    = COMP_ODDS_SPORT.get(comp_en)
+                sport = COMP_ODDS_SPORT.get(comp_en)
+                if odds_key and sport:
                     days_ago = (date.today() - date.fromisoformat(date_from)).days + 1
                     days_from_n = min(max(days_ago, 1), 3)
                     try:

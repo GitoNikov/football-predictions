@@ -1004,7 +1004,8 @@ function toggleExp(id) {
 
 // ─── GW DATE CLUSTER HELPER ───────────────────────────────────────────────────
 function getCurrentGWDates() {
-  const allPending = (MD.upcoming || []).filter(m => m.status === 'pending');
+  const today = new Date().toISOString().slice(0, 10);
+  const allPending = (MD.upcoming || []).filter(m => m.status === 'pending' && m.date >= today);
   const uniqueDates = [...new Set(allPending.map(m => m.date).filter(Boolean))].sort();
   if (!uniqueDates.length) return new Set();
   const gwDateSet = new Set([uniqueDates[0]]);
