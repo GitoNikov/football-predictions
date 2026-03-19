@@ -388,7 +388,7 @@ def fetch_domestic_events(api_key: str, sport_key: str, league_name: str) -> lis
     params = {
         "apiKey":     api_key,
         "regions":    "eu",
-        "markets":    "h2h,totals,btts",
+        "markets":    "h2h,totals",
         "oddsFormat": "decimal",
         "bookmakers": "williamhill",
     }
@@ -396,7 +396,7 @@ def fetch_domestic_events(api_key: str, sport_key: str, league_name: str) -> lis
     if resp.status_code == 401:
         sys.exit("❌  Invalid ODDS_API_KEY")
     if not resp.ok:
-        print(f"  ⚠  Odds API returned {resp.status_code} for {league_name} — skipping odds. Body: {resp.text[:300]}")
+        print(f"  ⚠  Odds API returned {resp.status_code} for {league_name} — skipping odds.")
         return []
     remaining = resp.headers.get("x-requests-remaining", "?")
     print(f"  ✓  Odds API: {len(resp.json())} {league_name} events | quota remaining {remaining}")
@@ -434,7 +434,7 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client, fd_k
         params = {
             "apiKey":     api_key,
             "regions":    "eu",
-            "markets":    "h2h,totals,btts",
+            "markets":    "h2h,totals",
             "oddsFormat": "decimal",
             "bookmakers": "williamhill",
         }
