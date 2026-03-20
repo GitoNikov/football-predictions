@@ -1052,11 +1052,32 @@ def process_domestic_league(
         )
 
         if match_id in existing_ids:
+            odds_wh  = extract_wh_odds(ev)
+            home_bg  = team_bg_uefa(home_en)
+            away_bg  = team_bg_uefa(away_en)
             for m in existing_upcoming:
                 if m["id"] == match_id and m.get("status") == "pending":
                     m["aiCtx"] = ai_ctx
                     m.pop("aiCtxHash", None)
-                    print(f"  ↻  {home_en} vs {away_en} — aiCtx refreshed with real standings")
+                    if odds_wh:
+                        pick_raw     = groq_pick(groq_client, home_en, away_en, ai_ctx, odds_wh)
+                        market       = pick_raw.get("market", "h2h")
+                        sel          = pick_raw.get("selection", "home")
+                        resolved_odd = odds_wh.get(sel_to_key.get(sel, "h"), pick_raw.get("odd", "1.80"))
+                        m["pick"] = {
+                            "bet":        bet_bg(market, sel, home_bg, away_bg),
+                            "betEn":      pick_raw.get("betEN", f"{home_en} Win"),
+                            "conf":       int(pick_raw.get("conf", 55)),
+                            "confReason": pick_raw.get("conf_reason", ""),
+                            "market":     market,
+                            "selection":  sel,
+                            "odd":        str(resolved_odd),
+                        }
+                        m.pop("ai", None)
+                        m.pop("aiEn", None)
+                        print(f"  ↻  Re-picked: {home_en} vs {away_en} → {market}/{sel} @ {resolved_odd}")
+                    else:
+                        print(f"  ↻  {home_en} vs {away_en} — aiCtx refreshed (no odds to re-pick)")
             continue
 
         home_bg = team_bg_uefa(home_en)
