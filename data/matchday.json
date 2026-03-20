@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-20T08:37:40Z",
+  "updated_at": "2026-03-20T17:52:02Z",
   "label": "Висша лига · Кръг 31",
   "labelEn": "Premier League · GW31",
   "date_range": "2026-03-19 – 2026-03-22",
@@ -21,10 +21,10 @@
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
         "conf": 68,
-        "confReason": "Combined expected goals ~2.8, recent BTTS and over 2.5 trends for Manchester United, but not strong enough to fire BTTS rule; over 2.5 odd is within the sweet spot",
+        "confReason": "Combined expected goals ~2.8, recent BTTS and over 2.5 trends for Manchester United, and the odd is within the sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.53"
+        "odd": "1.55"
       },
       "odds_wh": {
         "h": "3.1",
@@ -55,10 +55,10 @@
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
         "conf": 68,
-        "confReason": "Combined expected goals ~2.6, recent BTTS and over 2.5 trends are not strong enough to fire the btts or over_2.5 rule cleanly, but the odd is within the sweet spot and the context suggests a decent chance of a high-scoring game",
+        "confReason": "Combined expected goals ~2.6, recent over 2.5 in 1/6 and 3/6 games respectively, but no clear h2h or btts edge. The odd is within the sweet spot and the teams' scoring and conceding rates suggest a potential for a high-scoring game.",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.65"
+        "odd": "1.75"
       },
       "odds_wh": {
         "h": "3.0",
@@ -88,7 +88,7 @@
         "bet": "Фулъм победа",
         "betEn": "Fulham Win",
         "conf": 78,
-        "confReason": "8-place gap, Fulham's recent form shows scoring ability, and Burnley's defensive struggles, odd 1.55 is within the sweet spot",
+        "confReason": "Fulham are 8 places above Burnley, recent form is not extremely one-sided but Fulham's overall stats and home advantage give them a clear edge, and the odd is within the 1.40-2.50 sweet spot",
         "market": "h2h",
         "selection": "home",
         "odd": "1.55"
@@ -122,7 +122,7 @@
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
         "conf": 68,
-        "confReason": "Combined expected goals ~2.3, recent BTTS and over 2.5 trends in both teams, but not strong enough to fire BTTS rule; over 2.5 odd is in the sweet spot",
+        "confReason": "Combined expected goals ~2.3, BTTS in 4/6 Chelsea and 3/6 Everton recent games, and both teams scoring/conceding rates support over 2.5, but not a perfect fit due to xG being below 3.0 threshold",
         "market": "over_under",
         "selection": "over_2.5",
         "odd": "1.75"
@@ -158,7 +158,7 @@
         "confReason": "Combined expected goals ~2.6, recent BTTS and over 2.5 trends for both teams, but not strong enough to fire BTTS rule; odd is within the sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.8"
+        "odd": "1.83"
       },
       "odds_wh": {
         "a": "2.7",
@@ -185,13 +185,13 @@
       "time": "14:00",
       "status": "pending",
       "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
+        "bet": "И двата вкарват",
+        "betEn": "Both Teams to Score Yes",
         "conf": 68,
-        "confReason": "Combined expected goals ~2.6, Newcastle's recent games have BTTS in 5/6 and over 2.5 in 4/6, but no clear h2h edge and Sunderland's recent games have weaker scoring",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.83"
+        "confReason": "Newcastle have BTTS in 5/6 recent games and Sunderland have a weaker but still present BTTS history, combined expected goals are ~2.6 which supports the possibility of both teams scoring",
+        "market": "btts",
+        "selection": "yes",
+        "odd": "1.85"
       },
       "odds_wh": {
         "h": "1.65",
@@ -222,10 +222,10 @@
         "bet": "Астън Вила победа",
         "betEn": "Aston Villa Win",
         "conf": 68,
-        "confReason": "Aston Villa are 14 places above West Ham and have a form advantage, with the head-to-head odd being within the preferred range",
+        "confReason": "Aston Villa are 4th and West Ham are 18th, an 14-place gap, recent form is mixed but Aston Villa have a slight edge, and the odd is within the 1.40-2.50 sweet spot",
         "market": "h2h",
         "selection": "home",
-        "odd": "2.0"
+        "odd": "1.91"
       },
       "odds_wh": {
         "h": "1.95",
@@ -255,10 +255,10 @@
         "bet": "И двата вкарват",
         "betEn": "Both Teams to Score",
         "conf": 68,
-        "confReason": "Tottenham's recent games have BTTS in 6/6, and Nottingham Forest's games have BTTS in 3/6. Combined expected goals are ~2.8, which supports the BTTS selection. The odd is within the 1.40-2.50 sweet spot.",
+        "confReason": "Tottenham's recent BTTS in 6/6 and over 2.5 in 5/6 games, combined expected goals ~2.8, and Nottingham Forest's decent scoring and conceding rates support this pick, but Forest's BTTS in only 3/6 recent games introduces some uncertainty",
         "market": "btts",
         "selection": "yes",
-        "odd": "1.85"
+        "odd": "1.91"
       },
       "odds_wh": {
         "a": "3.1",
@@ -285,12 +285,12 @@
       "time": "22:00",
       "status": "pending",
       "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score",
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
         "conf": 78,
-        "confReason": "Both teams scored in 5/6 recent games, strong BTTS history, and combined expected goals support it, with the odd in the sweet spot",
-        "market": "btts",
-        "selection": "yes",
+        "confReason": "Combined expected goals ~3.3, BTTS in 5/6 recent games for both teams, and recent form supports high-scoring match",
+        "market": "over_under",
+        "selection": "over_2.5",
         "odd": "1.75"
       },
       "odds_wh": {
@@ -322,11 +322,11 @@
       "pick": {
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
-        "conf": 73,
-        "confReason": "Combined expected goals ~2.9, recent BTTS and over 2.5 trends in both teams, and odd within the sweet spot",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.9, recent BTTS and over 2.5 trends in both teams, and no clear h2h edge",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "2.05"
+        "odd": "2.1"
       },
       "odds_wh": {
         "h": "2.1",
@@ -356,12 +356,12 @@
       "status": "pending",
       "pick": {
         "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score Yes",
+        "betEn": "Both Teams to Score",
         "conf": 72,
-        "confReason": "Espanyol have BTTS in 6/6 recent games and Getafe have a low scoring record, but Espanyol's high BTTS frequency makes this a strong bet",
+        "confReason": "Espanyol have BTTS in 6/6 recent games, and while Getafe's BTTS record is weaker, the combined expected goals and Espanyol's scoring/conceding trends suggest a strong chance of both teams scoring",
         "market": "btts",
         "selection": "yes",
-        "odd": "1.75"
+        "odd": "1.73"
       },
       "odds_wh": {
         "h": "2.4",
@@ -391,12 +391,12 @@
       "status": "pending",
       "pick": {
         "bet": "И двата вкарват",
-        "betEn": "Both Teams To Score",
+        "betEn": "Both Teams to Score Yes",
         "conf": 72,
         "confReason": "Both teams scored in 4+/6 recent games and strong BTTS history, combined expected goals ~2.7/game supports this pick, odd is within the 1.40-2.50 sweet spot",
         "market": "btts",
         "selection": "yes",
-        "odd": "1.70"
+        "odd": "1.67"
       },
       "odds_wh": {
         "h": "2.15",
@@ -428,7 +428,7 @@
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
         "conf": 68,
-        "confReason": "Combined expected goals ~2.6/game is close to the threshold, but recent BTTS and over 2.5 trends are not strong enough to confidently pick btts or over 2.5. However, given the lack of a clear h2h edge and the relatively high combined xG, over 2.5 is the most appealing option, with an odd within the desired range.",
+        "confReason": "Combined expected goals ~2.6/game is close to the threshold for over 2.5, and recent games show some promise for goals, but not enough to confidently pick btts or h2h",
         "market": "over_under",
         "selection": "over_2.5",
         "odd": "2.05"
@@ -463,7 +463,7 @@
         "bet": "Над 1.5 гола",
         "betEn": "Over 1.5",
         "conf": 68,
-        "confReason": "Combined expected goals ~2.8, recent BTTS and over 2.5 trends are not strong enough to fire the btts or over_2.5 rules, but over 1.5 is a reasonable expectation given the xG and the relatively even match-up",
+        "confReason": "Combined expected goals ~2.8, recent BTTS and over 2.5 trends are not strong enough to prefer btts/yes or over_2.5, but over 1.5 is a reasonable expectation given the xG and recent form",
         "market": "over_under",
         "selection": "over_1.5",
         "odd": "1.44"
@@ -499,10 +499,10 @@
         "bet": "Барселона победа",
         "betEn": "Barcelona Win",
         "conf": 78,
-        "confReason": "Large 8-place gap, strong home form with 5 wins in last 6, and favorable odd within the 1.40-2.50 sweet spot",
+        "confReason": "Large 8-place gap, home team strong form with 5 wins in last 6, and favorable odd within the 1.40-2.50 range",
         "market": "h2h",
         "selection": "home",
-        "odd": "1.22"
+        "odd": "1.25"
       },
       "odds_wh": {
         "h": "1.22",
@@ -532,13 +532,13 @@
       "time": "17:15",
       "status": "pending",
       "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score Yes",
-        "conf": 72,
-        "confReason": "Both teams have BTTS in 4/6 and 5/6 recent games respectively, and the combined expected goals is ~2.7, which supports a strong BTTS history",
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.73"
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.7, recent BTTS in 5/6 for Celta Vigo and 4/6 for Deportivo Alavés, and over 2.5 in 4/6 recent games for Celta Vigo",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.38"
       },
       "odds_wh": {
         "a": "4.6",
@@ -568,9 +568,9 @@
       "status": "pending",
       "pick": {
         "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score",
+        "betEn": "Both Teams to Score Yes",
         "conf": 72,
-        "confReason": "Both teams scored in 4/6 recent games, and combined expected goals is ~2.3, which is close to the threshold of 2.5. The odd is within the 1.40-2.50 sweet spot.",
+        "confReason": "Both teams scored in 4/6 recent games, combined expected goals ~2.3, and recent form supports BTTS",
         "market": "btts",
         "selection": "yes",
         "odd": "1.70"
@@ -603,9 +603,9 @@
       "status": "pending",
       "pick": {
         "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
+        "betEn": "Over 2.5",
         "conf": 78,
-        "confReason": "Combined expected goals ~3.0, recent BTTS and over 2.5 trends for both teams, and the odd is within the 1.40-2.50 sweet spot",
+        "confReason": "Combined expected goals ~3.0, both teams have strong BTTS history and recent form supports high-scoring game, odd is within the sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
         "odd": "1.57"
@@ -627,29 +627,29 @@
     }
   ],
   "betBuilder": {
-    "matchId": "ful_bur",
-    "home": "Фулъм",
-    "homeEn": "Fulham",
-    "away": "Бърнли",
-    "awayEn": "Burnley",
+    "matchId": "bri_liv",
+    "home": "Брайтън",
+    "homeEn": "Brighton",
+    "away": "Ливърпул",
+    "awayEn": "Liverpool",
     "markets": [
-      {
-        "market": "Победа домакин",
-        "marketEn": "Home Win",
-        "odd": "1.55"
-      },
       {
         "market": "Над 2.5 гола",
         "marketEn": "Over 2.5 Goals",
-        "odd": "1.75"
+        "odd": "1.65"
+      },
+      {
+        "market": "И двата вкарват",
+        "marketEn": "BTTS Yes",
+        "odd": "1.65"
       },
       {
         "market": "Победа гост",
         "marketEn": "Away Win",
-        "odd": "6.0"
+        "odd": "2.2"
       }
     ],
-    "totalOdd": "16.27",
+    "totalOdd": "5.99",
     "reasoning": "",
     "reasoningEn": ""
   },
