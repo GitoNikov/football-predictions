@@ -862,13 +862,13 @@ Context: {ai_ctx}
 Latest news (injuries/suspensions): {news}
 William Hill odds: {odds_str}
 
-Market selection rules (follow strictly):
-1. If combined expected goals >= 2.7 AND both teams BTTS in 4+/6 games → btts/yes
-2. If combined expected goals >= 2.7 → over_under/over_2.5
-3. If combined expected goals >= 2.0 but < 2.7 → over_under/over_1.5
-4. If one team clearly dominant (8+ place gap, strong form) AND h2h odd 1.40–2.10 → h2h
-5. Only draw if very evenly matched AND draw odd <= 3.50
-6. Always prefer odds 1.40–2.50.
+Market selection rules — evaluate ALL options, pick the single best value:
+1. h2h (home/away win): prefer when one team is clearly stronger — 5+ place gap OR form advantage of 4W or more in last 6 — AND h2h odd is 1.30–2.20. This is the most precise bet; use it when the edge is real.
+2. btts/yes: use when BOTH teams scored in 4+/6 recent games AND combined expected goals >= 2.5. Strong BTTS history is more reliable than raw xG.
+3. over_under/over_2.5: only use when combined expected goals >= 3.0 AND no clear h2h or btts edge. Do NOT default to this — reserve it for genuinely high-scoring contexts.
+4. over_under/over_1.5: use when combined expected goals 2.0–2.9 AND no better option from above.
+5. draw: only when very evenly matched AND draw odd <= 3.50.
+6. Always prefer odds 1.40–2.50. Aim for variety — avoid picking over_2.5 for every match.
 
 Confidence scoring (be precise — do not default to round numbers):
 - 75–80: Stats, form, and odds all strongly align. The market rule fires cleanly, both teams' recent results support it, and the odd is in the 1.40–2.50 sweet spot.
