@@ -938,16 +938,22 @@ Matches: {json.dumps(summary)}
 Available market keys: h=Home Win, x=Draw, a=Away Win, btts=BTTS Yes, o25=Over 2.5 Goals, o15=Over 1.5 Goals
 Only use keys that exist in the match's odds_wh object.
 
+STRICT RULES — violating these makes the bet invalid:
+- NEVER combine h + a (mutually exclusive)
+- NEVER combine h + x (mutually exclusive)
+- NEVER combine a + x (mutually exclusive)
+- NEVER combine o25 + o15 (redundant)
+- Valid combos: (h + btts), (h + o25), (a + btts), (a + o25), (btts + o25), (h + btts + o25), (a + btts + o25)
+
 Return ONLY valid JSON, no markdown:
 {{
   "matchId": "match_id_here",
   "markets": [
-    {{"key": "o15", "odd": "1.25"}},
-    {{"key": "btts", "odd": "1.72"}},
+    {{"key": "o25", "odd": "1.72"}},
+    {{"key": "btts", "odd": "1.65"}},
     {{"key": "h", "odd": "1.37"}}
   ]
-}}
-Prefer markets that logically combine (e.g., high-scoring game + BTTS + home win)."""
+}}"""
 
     try:
         resp = client.chat.completions.create(
@@ -1287,6 +1293,18 @@ def main():
             print("✓")
 
     # ── Step 7: Build betBuilder entry ────────────────────────────────────────
+    # Validate: strip mutually exclusive h2h keys before building
+    MUTEX_GROUPS = [{"h", "x", "a"}]  # only one from each group allowed
+    if bb_result:
+        keys = [m.get("key") for m in bb_result.get("markets", [])]
+        for grp in MUTEX_GROUPS:
+            found = [k for k in keys if k in grp]
+            if len(found) > 1:
+                print(f"  ⚠  betBuilder has conflicting markets {found} — keeping first only")
+                keep = found[0]
+                bb_result["markets"] = [m for m in bb_result["markets"]
+                                        if m.get("key") not in grp or m.get("key") == keep]
+
     bet_builder = None
     if bb_result:
         mid = bb_result.get("matchId", "")
