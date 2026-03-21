@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-20T17:52:02Z",
+  "updated_at": "2026-03-21T13:14:48Z",
   "label": "Висша лига · Кръг 31",
   "labelEn": "Premier League · GW31",
   "date_range": "2026-03-19 – 2026-03-22",
@@ -58,10 +58,10 @@
         "bet": "Фулъм победа",
         "betEn": "Fulham Win",
         "conf": 78,
-        "confReason": "Fulham are 8 places above Burnley, recent form is not extremely one-sided but Fulham's overall stats and home advantage give them a clear edge, and the odd is within the 1.40-2.50 sweet spot",
+        "confReason": "Fulham are 8 places above Burnley, recent form shows Fulham's ability to score and win, and the odd is within the sweet spot",
         "market": "h2h",
         "selection": "home",
-        "odd": "1.55"
+        "odd": "1.53"
       },
       "odds_wh": {
         "a": "6.0",
@@ -74,11 +74,8 @@
         "d": 26,
         "a": 17
       },
-      "aiCtx": "Fulham are 11th in the Premier League (41 pts), scoring 1.33 and conceding 1.43 goals per game, BTTS in 3/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 1-2, L 0-3, W 3-1, W 2-1, L 0-1, D 0-0. Burnley are 19th (20 pts), scoring 1.07 and conceding 1.93 goals per game, BTTS in 3/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 0-2, W 3-2, D 1-1, L 3-4, L 0-2, D 0-0. Combined expected goals (home scores + away concedes): ~3.3/game. H2H last 1: Fulham 1W-0D-0L, avg 5.0 goals/game.",
-      "newsCtx": "The Official Website of Fulham Football Club: get the latest news, highlights, fixtures and results, tickets, Club shop and more. | Add to Calendar Fixtures Results Table Next Match Fulham FC 08:00 Sat 21 Mar Craven Cottage Burnley 02 Days | The Official Website of Fulham Football Club: get the late",
-      "ai": "Фулъм заема 11-то място във Висшата лига с 41 точки, вкарват 1.33 гола на мач и допускат 1.43 гола, с форма от З 1-2, З 0-3, П 3-1, П 2-1, З 0-1, Р 0-0, докато Бърнли е на 19-то място с 20 точки, вкарват 1.07 гола и допускат 1.93 гола, с форма от З 0-2, П 3-2, Р 1-1, З 3-4, З 0-2, Р 0-0. Домакините имат предимство в формата и голова сила, което ги прави фаворити в двубоя. Прогнозата е победа за Фулъм при котировка 1.55.",
-      "aiEn": "Fulham are 11th in the Premier League with 41 points, scoring 1.33 and conceding 1.43 goals per game, with a recent form of L 1-2, L 0-3, W 3-1, W 2-1, L 0-1, D 0-0, while Burnley are 19th with 20 points, scoring 1.07 and conceding 1.93 goals per game, with a form of L 0-2, W 3-2, D 1-1, L 3-4, L 0-2, D 0-0. Fulham's position and scoring strength, combined with their form advantage, make a strong case for a home win. The pick is Fulham Win at 1.55.",
-      "aiCtxHash": "5a681828"
+      "aiCtx": "Fulham are 12th in the Premier League (41 pts), scoring 1.33 and conceding 1.43 goals per game, BTTS in 3/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 1-2, L 0-3, W 3-1, W 2-1, L 0-1, D 0-0. Burnley are 19th (20 pts), scoring 1.07 and conceding 1.93 goals per game, BTTS in 3/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 0-2, W 3-2, D 1-1, L 3-4, L 0-2, D 0-0. Combined expected goals (home scores + away concedes): ~3.3/game. H2H last 1: Fulham 1W-0D-0L, avg 5.0 goals/game.",
+      "newsCtx": "The Official Website of Fulham Football Club: get the latest news, highlights, fixtures and results, tickets, Club shop and more. | Add to Calendar Fixtures Results Table Next Match Fulham FC 08:00 Sat 21 Mar Craven Cottage Burnley 02 Days | The Official Website of Fulham Football Club: get the late"
     },
     {
       "id": "eve_che",
@@ -95,10 +92,10 @@
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
         "conf": 68,
-        "confReason": "Combined expected goals ~2.3, BTTS in 4/6 Chelsea and 3/6 Everton recent games, and both teams scoring/conceding rates support over 2.5, but not a perfect fit due to xG being below 3.0 threshold",
+        "confReason": "Combined expected goals ~2.3/game is below the 3.0 threshold, but recent games show BTTS in 3/6 for Everton and 4/6 for Chelsea, and over 2.5 in 3/6 for Everton and 4/6 for Chelsea, suggesting a decent chance of a high-scoring game",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.75"
+        "odd": "1.85"
       },
       "odds_wh": {
         "a": "2.1",
@@ -111,10 +108,7 @@
         "d": 29,
         "a": 48
       },
-      "aiCtx": "Everton are 8th in the Premier League (43 pts), scoring 1.13 and conceding 1.17 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 2-1, L 1-2, L 0-1, W 3-2, W 2-0, L 0-2. Chelsea are 6th (48 pts), scoring 1.77 and conceding 1.17 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): D 1-1, L 1-2, W 4-1, L 2-5, L 0-1, L 0-3. Combined expected goals (home scores + away concedes): ~2.3/game. H2H last 1: Everton 0W-0D-1L, avg 2.0 goals/game.",
-      "ai": "Евъртън заема 8миято място в лигата с 43 точки, вкарват 1.13 гола на мач и допускат 1.17 гола, а в последните 6 срещи имат форма от П 2-1, З 1-2, З 0-1, П 3-2, П 2-0, З 0-2, докато Челси е 6и с 48 точки, вкарват 1.77 гола и допускат 1.17 гола с форма от Р 1-1, З 1-2, П 4-1, З 2-5, З 0-1, З 0-3. Двубойът между тези два отбора обещава да бъде привлекателен, тъй като домакините и гостите имат добра форма и вкарват много гола в последните си срещи, което говори за прогноза над 2.5 гола. Прогнозата е над 2.5 гола при котировка 1.75.",
-      "aiEn": "Everton are 8th in the Premier League with 43 points, scoring 1.13 and conceding 1.17 goals per game, with a recent form of W 2-1, L 1-2, L 0-1, W 3-2, W 2-0, L 0-2, while Chelsea are 6th with 48 points, scoring 1.77 and conceding 1.17 goals per game, with a form of D 1-1, L 1-2, W 4-1, L 2-5, L 0-1, L 0-3. The case for Over 2.5 goals is strong, given both teams' high-scoring recent form results and their goals per game averages, suggesting an entertaining match. The pick is Over 2.5 at 1.75 William Hill.",
-      "aiCtxHash": "e4afc5fd"
+      "aiCtx": "Everton are 8th in the Premier League (43 pts), scoring 1.13 and conceding 1.17 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 2-1, L 1-2, L 0-1, W 3-2, W 2-0, L 0-2. Chelsea are 6th (48 pts), scoring 1.77 and conceding 1.17 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): D 1-1, L 1-2, W 4-1, L 2-5, L 0-1, L 0-3. Combined expected goals (home scores + away concedes): ~2.3/game. H2H last 1: Everton 0W-0D-1L, avg 2.0 goals/game."
     },
     {
       "id": "lee_bre",
@@ -128,12 +122,12 @@
       "time": "22:00",
       "status": "pending",
       "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
+        "bet": "И двата вкарват",
+        "betEn": "Both Teams to Score",
         "conf": 68,
-        "confReason": "Combined expected goals ~2.6, recent BTTS and over 2.5 trends for both teams, but not strong enough to fire BTTS rule; odd is within the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
+        "confReason": "Brentford has BTTS in 4/6 recent games and Leeds in 3/6, combined expected goals is ~2.6, which is close to the required 2.5, and the odd is within the 1.40-2.50 range",
+        "market": "btts",
+        "selection": "yes",
         "odd": "1.83"
       },
       "odds_wh": {
@@ -148,10 +142,7 @@
         "a": 37
       },
       "aiCtx": "Leeds are 15th in the Premier League (32 pts), scoring 1.23 and conceding 1.6 goals per game, BTTS in 3/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): W 3-1, D 2-2, D 1-1, L 0-1, L 0-1, D 0-0. Brentford are 7th (45 pts), scoring 1.53 and conceding 1.4 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 3-2, D 1-1, L 0-2, W 4-3, D 0-0, D 2-2. Combined expected goals (home scores + away concedes): ~2.6/game. H2H last 1: Leeds 0W-1D-0L, avg 2.0 goals/game.",
-      "newsCtx": "在利兹大学（University of Leeds） 上学是怎样一番体验？ 利兹大学（The University of Leeds）位于英国利兹市，始建于1831年，世界百强名校，与曼彻斯特大学等大学并称为英国“红砖大学”，… 显示 … | 利兹大学（ The University of Leeds）是英国名校联盟罗素大学集团的创始成员，英国著名的六所“红砖大学”之一，世界大学联盟成员， 在1904年获英国国王爱德华七世正式授予利兹大学的名号， 拥有6位 … | 在利兹读HRM研：像在“贴心副本”里打怪升级 首先恭喜！利兹的HRM读研体验，大概是“舒服又有压力”的平衡感。 利兹城市不大但够用",
-      "ai": "Лийдс заемат 15-то място в лигата с 32 точки, вкарват 1.23 гола на мач и допускат 1.6 гола, като имат форма от П 3-1, Р 2-2, Р 1-1, З 0-1, З 0-1, Р 0-0, а Брентфорд е 7-ми с 45 точки, вкарват 1.53 гола и допускат 1.4 гола с форма от П 3-2, Р 1-1, З 0-2, П 4-3, Р 0-0, Р 2-2. Двубойът между Лийдс и Брентфорд обещава да бъде с много голове, тъй като домакините и гостите имат скорошна форма с много голове и средно вкарват над 2.5 гола на мач. Прогнозата е над 2.5 гола при котировка 1.83.",
-      "aiEn": "Leeds are 15th in the Premier League with 32 points, scoring 1.23 and conceding 1.6 goals per game, with a recent form of W 3-1, D 2-2, D 1-1, L 0-1, L 0-1, D 0-0, while Brentford are 7th with 45 points, scoring 1.53 and conceding 1.4 goals per game, with a form of W 3-2, D 1-1, L 0-2, W 4-3, D 0-0, D 2-2. The match between Leeds and Brentford is likely to be high-scoring, given both teams' recent form and goals per game averages, with both teams often involved in matches with over 2.5 goals. The pick is Over 2.5 Goals at 1.83.",
-      "aiCtxHash": "413c090f"
+      "newsCtx": "在利兹大学（University of Leeds） 上学是怎样一番体验？ 利兹大学（The University of Leeds）位于英国利兹市，始建于1831年，世界百强名校，与曼彻斯特大学等大学并称为英国“红砖大学”，… 显示 … | 利兹大学（ The University of Leeds）是英国名校联盟罗素大学集团的创始成员，英国著名的六所“红砖大学”之一，世界大学联盟成员， 在1904年获英国国王爱德华七世正式授予利兹大学的名号， 拥有6位 … | 在利兹读HRM研：像在“贴心副本”里打怪升级 首先恭喜！利兹的HRM读研体验，大概是“舒服又有压力”的平衡感。 利兹城市不大但够用"
     },
     {
       "id": "new_sun",
@@ -165,12 +156,12 @@
       "time": "14:00",
       "status": "pending",
       "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score Yes",
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
         "conf": 68,
-        "confReason": "Newcastle have BTTS in 5/6 recent games and Sunderland have a weaker but still present BTTS history, combined expected goals are ~2.6 which supports the possibility of both teams scoring",
-        "market": "btts",
-        "selection": "yes",
+        "confReason": "Combined expected goals ~2.6, Newcastle's recent games have BTTS in 5/6 and over 2.5 in 4/6, Sunderland's defensive record is a concern, but the odd is within the sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
         "odd": "1.85"
       },
       "odds_wh": {
@@ -185,10 +176,7 @@
         "a": 21
       },
       "aiCtx": "Newcastle are 9th in the Premier League (42 pts), scoring 1.43 and conceding 1.43 goals per game, BTTS in 5/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 3-2, L 2-3, W 2-1, D 1-1, W 1-0, L 2-7. Sunderland are 13th (40 pts), scoring 1.0 and conceding 1.17 goals per game, BTTS in 2/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 0-3, L 0-1, L 1-3, D 1-1, W 1-0, L 0-1. Combined expected goals (home scores + away concedes): ~2.6/game. H2H last 1: Newcastle 0W-0D-1L, avg 1.0 goals/game.",
-      "newsCtx": "The official website of Newcastle United Football Club. Get the latest news, fixtures and results, tickets, hospitality and membership information. | Discover the Newcastle United Mens Team, squad profiles, stats, and the latest team news on your favourite players. | Men 11 hours ago News Eddie Howe",
-      "ai": "Нюкасъл заема 9то място в Пример Лига с 42 точки, вкарват 1.43 гола на мач и допускат 1.43 гола, като формата им от последните 6 мача е П 3-2, З 2-3, П 2-1, Р 1-1, П 1-0, З 2-7, а Съндърланд е на 13то място с 40 точки, вкарват 1.0 гол на мач и допускат 1.17 гола, с форма от Последните 6 мача З 0-3, З 0-1, З 1-3, Р 1-1, П 1-0, З 0-1. Двубойът между тези два отбора вероятно ще бъде с гол за двата отбора, тъй като домакините вкарват много гола, а гостите допускат относително голям брой гола, което говори за открит футболен мач. Прогнозата е, че двата отбора ще вкарат гол, а котировка за това е 1.85.",
-      "aiEn": "Newcastle are 9th in the Premier League with 42 points, scoring 1.43 and conceding 1.43 goals per game, with a recent form of W 3-2, L 2-3, W 2-1, D 1-1, W 1-0, L 2-7, while Sunderland are 13th with 40 points, scoring 1.0 and conceding 1.17 goals per game, with a recent form of L 0-3, L 0-1, L 1-3, D 1-1, W 1-0, L 0-1. The case for both teams to score is made by the fact that Newcastle score a significant number of goals, while Sunderland concede a relatively high number of goals, suggesting an open game. The pick is for both teams to score, with odds of 1.85.",
-      "aiCtxHash": "fb6b739d"
+      "newsCtx": "The official website of Newcastle United Football Club. Get the latest news, fixtures and results, tickets, hospitality and membership information. | Discover the Newcastle United Mens Team, squad profiles, stats, and the latest team news on your favourite players. | Men 11 hours ago News Eddie Howe"
     },
     {
       "id": "avl_whu",
@@ -204,8 +192,8 @@
       "pick": {
         "bet": "Астън Вила победа",
         "betEn": "Aston Villa Win",
-        "conf": 68,
-        "confReason": "Aston Villa are 4th and West Ham are 18th, an 14-place gap, recent form is mixed but Aston Villa have a slight edge, and the odd is within the 1.40-2.50 sweet spot",
+        "conf": 72,
+        "confReason": "Aston Villa are 8 places above West Ham, recent form is mixed but Aston Villa have a clear strength advantage, and the head-to-head odd is within the preferred range",
         "market": "h2h",
         "selection": "home",
         "odd": "1.91"
@@ -221,10 +209,7 @@
         "d": 29,
         "a": 27
       },
-      "aiCtx": "Aston Villa are 4th in the Premier League (51 pts), scoring 1.33 and conceding 1.23 goals per game, BTTS in 4/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): D 1-1, W 1-0, D 1-1, L 0-2, L 1-4, L 1-3. West Ham are 18th (29 pts), scoring 1.2 and conceding 1.83 goals per game, BTTS in 3/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): W 2-0, D 1-1, D 0-0, L 2-5, W 1-0, D 1-1. Combined expected goals (home scores + away concedes): ~3.2/game. H2H last 1: Aston Villa 1W-0D-0L, avg 5.0 goals/game.",
-      "ai": "Астън Вила заемат 4-то място в премиершипа с 51 точки, вкарват 1.33 гола на мач и допускат 1.23 гола, като формата им изглежда така: Р 1-1, П 1-0, Р 1-1, З 0-2, З 1-4, З 1-3, докато Уест Хем е на 18-о място с 29 точки, вкарват 1.2 гола и допускат 1.83 гола, с форма: П 2-0, Р 1-1, Р 0-0, З 2-5, П 1-0, Р 1-1. Домакините имат предимство в позиция, голова сила и форма, което ги прави фаворити в двубоя. Прогнозата е Астън Вила да спечели при котировка 1.91.",
-      "aiEn": "Aston Villa are 4th in the Premier League with 51 points, scoring 1.33 and conceding 1.23 goals per game, with recent form of D 1-1, W 1-0, D 1-1, L 0-2, L 1-4, L 1-3, while West Ham are 18th with 29 points, scoring 1.2 and conceding 1.83 goals per game, with form of W 2-0, D 1-1, D 0-0, L 2-5, W 1-0, D 1-1. Aston Villa's position, scoring strength, and form advantage make a strong case for a home win. The pick is Aston Villa to win at 1.91.",
-      "aiCtxHash": "4ea755b0"
+      "aiCtx": "Aston Villa are 4th in the Premier League (51 pts), scoring 1.33 and conceding 1.23 goals per game, BTTS in 4/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): D 1-1, W 1-0, D 1-1, L 0-2, L 1-4, L 1-3. West Ham are 18th (29 pts), scoring 1.2 and conceding 1.83 goals per game, BTTS in 3/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): W 2-0, D 1-1, D 0-0, L 2-5, W 1-0, D 1-1. Combined expected goals (home scores + away concedes): ~3.2/game. H2H last 1: Aston Villa 1W-0D-0L, avg 5.0 goals/game."
     },
     {
       "id": "tot_for",
@@ -241,7 +226,7 @@
         "bet": "И двата вкарват",
         "betEn": "Both Teams to Score",
         "conf": 68,
-        "confReason": "Tottenham's recent BTTS in 6/6 and over 2.5 in 5/6 games, combined expected goals ~2.8, and Nottingham Forest's decent scoring and conceding rates support this pick, but Forest's BTTS in only 3/6 recent games introduces some uncertainty",
+        "confReason": "Tottenham's recent games have BTTS in 6/6, and Nottingham Forest's games have BTTS in 3/6. Combined expected goals are ~2.8, which supports the possibility of both teams scoring. The odd is within the 1.40-2.50 sweet spot.",
         "market": "btts",
         "selection": "yes",
         "odd": "1.91"
@@ -258,10 +243,7 @@
         "a": 32
       },
       "aiCtx": "Tottenham are 16th in the Premier League (30 pts), scoring 1.33 and conceding 1.57 goals per game, BTTS in 6/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): L 1-4, L 1-2, L 1-3, L 2-5, D 1-1, W 3-2. Nottingham Forest are 17th (29 pts), scoring 0.93 and conceding 1.43 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 1-3, D 0-0, L 0-1, L 1-2, D 2-2, D 0-0. Combined expected goals (home scores + away concedes): ~2.8/game. H2H last 1: Tottenham 0W-0D-1L, avg 3.0 goals/game.",
-      "newsCtx": "Welcome to the official Tottenham Hotspur website. Explore the site, discover the latest Spurs news & matches and check out our new … | Latest official news and video from Tottenham Hotspur | Tottenham Hotspur mens team fixture details for the 2025/26 season. including Information from all competiti",
-      "ai": "Тотнъм заема 16-то място в лигата с 30 точки, вкарват 1.33 гола на мач и допускат 1.57, а Нотингам Форест е на 17-то място с 29 точки, вкарват 0.93 гола и допускат 1.43. Двубойът между тях обещава да бъде интересен, тъй като домакините вкарват много гола, а гостите често допускат, което говори за голяма вероятност и двата отбора да вкарат гола. Прогнозата е, че и двата отбора ще вкарат поне по един гол, а котировка за това е 1.91.",
-      "aiEn": "Tottenham are 16th in the league with 30 points, scoring 1.33 and conceding 1.57 goals per game, with a recent form of L 1-4, L 1-2, L 1-3, L 2-5, D 1-1, W 3-2, while Nottingham Forest are 17th with 29 points, scoring 0.93 and conceding 1.43 goals per game, with a recent form of L 1-3, D 0-0, L 0-1, L 1-2, D 2-2, D 0-0. Given that both teams have been scoring and conceding goals regularly, with Tottenham scoring 1.33 goals per game and Nottingham Forest conceding 1.43, it is likely that both teams will score. The pick is Both Teams to Score at 1.91 William Hill.",
-      "aiCtxHash": "a3462008"
+      "newsCtx": "Welcome to the official Tottenham Hotspur website. Explore the site, discover the latest Spurs news & matches and check out our new … | Latest official news and video from Tottenham Hotspur | Tottenham Hotspur mens team fixture details for the 2025/26 season. including Information from all competiti"
     },
     {
       "id": "elc_mal",
@@ -315,8 +297,8 @@
       "pick": {
         "bet": "И двата вкарват",
         "betEn": "Both Teams to Score",
-        "conf": 72,
-        "confReason": "Espanyol have BTTS in 6/6 recent games, and while Getafe's BTTS record is weaker, the combined expected goals and Espanyol's scoring/conceding trends suggest a strong chance of both teams scoring",
+        "conf": 78,
+        "confReason": "Espanyol have BTTS in 6/6 recent games and Getafe have a low scoring record, but Espanyol's high BTTS frequency makes this a strong bet",
         "market": "btts",
         "selection": "yes",
         "odd": "1.73"
@@ -352,10 +334,10 @@
         "bet": "И двата вкарват",
         "betEn": "Both Teams to Score Yes",
         "conf": 72,
-        "confReason": "Both teams scored in 4+/6 recent games and strong BTTS history, combined expected goals ~2.7/game supports this pick, odd is within the 1.40-2.50 sweet spot",
+        "confReason": "Both teams scored in 4+/6 recent games and strong BTTS history, combined expected goals ~2.7 supports this, odd is within the sweet spot",
         "market": "btts",
         "selection": "yes",
-        "odd": "1.67"
+        "odd": "1.75"
       },
       "odds_wh": {
         "h": "2.15",
@@ -388,7 +370,7 @@
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5 Goals",
         "conf": 68,
-        "confReason": "Combined expected goals ~2.6/game is close to the threshold for over 2.5, and recent games show some promise for goals, but not enough to confidently pick btts or h2h",
+        "confReason": "Combined expected goals ~2.6/game, recent BTTS and over 2.5 trends are not strong enough to fire the btts or over_2.5 rules cleanly, but the xG suggests a decent chance of a higher-scoring game, and the odd is within the desired range",
         "market": "over_under",
         "selection": "over_2.5",
         "odd": "2.05"
@@ -406,10 +388,7 @@
       },
       "aiCtx": "Levante are 19th in the La Liga (23 pts), scoring 1.07 and conceding 1.64 goals per game, BTTS in 2/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): L 0-2, L 0-1, L 0-3, W 2-0, D 1-1, D 1-1. Oviedo are 20th (21 pts), scoring 0.64 and conceding 1.57 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 1-2, D 3-3, L 0-1, L 0-3, D 1-1, W 1-0. Combined expected goals (home scores + away concedes): ~2.6/game. H2H last 1: Levante 1W-0D-0L, avg 2.0 goals/game.",
       "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "ai": "Двубойът между Levante и Oviedo е между два отбора с трудна форма, като домакините заемат 19-то място с 23 точки, вкарват 1.07 гола на мач и допускат 1.64 гола, а гостите са на 20-то място с 21 точка, вкарват 0.64 гола и допускат 1.57 гола, с последна форма от П 2-0, Р 1-1, Р 1-1, З 0-3, З 0-1, З 0-2 за Levante и П 1-0, Р 1-1, З 0-3, З 0-1, Р 3-3, З 1-2 за Oviedo. Формата на двата отбора и средният брой голове, които вкарват и допускат, говори за над 2.5 гола, тъй като Levante и Oviedo имат последни резултати с много голови. Прогнозата е над 2.5 гола при котировка от 2.05.",
-      "aiEn": "Levante and Oviedo are two teams struggling with form, with the home team sitting 19th with 23 points, scoring 1.07 goals per game and conceding 1.64 goals, while the away team is 20th with 21 points, scoring 0.64 goals and conceding 1.57 goals, with recent form of L 0-2, L 0-1, L 0-3, W 2-0, D 1-1, D 1-1 for Levante and L 1-2, D 3-3, L 0-1, L 0-3, D 1-1, W 1-0 for Oviedo. The teams' form and goals per game averages suggest an Over 2.5 scenario, given the recent high-scoring results. The pick is Over 2.5 Goals at 2.05 William Hill.",
-      "aiCtxHash": "d4699424"
+      "competitionBG": "Ла Лига"
     },
     {
       "id": "sev_val",
@@ -426,7 +405,7 @@
         "bet": "Над 1.5 гола",
         "betEn": "Over 1.5",
         "conf": 68,
-        "confReason": "Combined expected goals ~2.8, recent BTTS and over 2.5 trends are not strong enough to prefer btts/yes or over_2.5, but over 1.5 is a reasonable expectation given the xG and recent form",
+        "confReason": "Combined expected goals ~2.8, recent BTTS and over 2.5 trends are not strong enough to prefer btts/yes or over_2.5, but over 1.5 is a safer option given the scoring rates",
         "market": "over_under",
         "selection": "over_1.5",
         "odd": "1.44"
@@ -445,10 +424,7 @@
       "aiCtx": "Sevilla are 15th in the La Liga (31 pts), scoring 1.32 and conceding 1.68 goals per game, BTTS in 5/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): D 1-1, D 1-1, W 1-0, D 2-2, D 1-1, L 2-5. Valencia are 14th (32 pts), scoring 1.07 and conceding 1.5 goals per game, BTTS in 2/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 0-2, W 2-0, L 1-2, W 1-0, W 3-2, L 0-1. Combined expected goals (home scores + away concedes): ~2.8/game. H2H last 1: Sevilla 0W-1D-0L, avg 2.0 goals/game.",
       "competition": "La Liga",
       "competitionBG": "Ла Лига",
-      "newsCtx": "Discover the best things to do in the city. Experience Seville, land of feelings. Seville is a city that never ceases to amaze. Sporting events, festivals, culture galore. Discover the best things to do in the city. | May 18, 2024 · Strolling the streets of the historic old town, visiting the Cathed",
-      "ai": "Севиля заема 15-то място в-La Liga с 31 точка, вкарват 1.32 гола и допускат 1.68 гола на мач, а формата им е Р 1-1, Р 1-1, П 1-0, Р 2-2, Р 1-1, З 2-5, докато Валенсия е на 14-то място с 32 точки, вкарват 1.07 гола и допускат 1.5 гола на мач, с форма З 0-2, П 2-0, З 1-2, П 1-0, П 3-2, З 0-1. Двубоят между домакините и гостите обещава да бъде високорезултатен, тъй като Севиля и Валенсия имат средни голове на мач, които предрича над 2.5 гола. Прогнозата е над 1.5 гола при котировка 1.44.",
-      "aiEn": "Sevilla are 15th in the La Liga with 31 points, scoring 1.32 and conceding 1.68 goals per game, with a recent form of D 1-1, D 1-1, W 1-0, D 2-2, D 1-1, L 2-5, while Valencia are 14th with 32 points, scoring 1.07 and conceding 1.5 goals per game, with a form of L 0-2, W 2-0, L 1-2, W 1-0, W 3-2, L 0-1. The match between the two teams is likely to be high-scoring, as both teams' goals per game averages and recent high-scoring form results suggest over 2.5 goals. The pick is Over 1.5 at 1.44 William Hill.",
-      "aiCtxHash": "47fca226"
+      "newsCtx": "Discover the best things to do in the city. Experience Seville, land of feelings. Seville is a city that never ceases to amaze. Sporting events, festivals, culture galore. Discover the best things to do in the city. | May 18, 2024 · Strolling the streets of the historic old town, visiting the Cathed"
     },
     {
       "id": "bar_ray",
@@ -465,7 +441,7 @@
         "bet": "Барселона победа",
         "betEn": "Barcelona Win",
         "conf": 78,
-        "confReason": "Large 8-place gap, home team strong form with 5 wins in last 6, and favorable odd within the 1.40-2.50 range",
+        "confReason": "Large 8-place gap, strong home form with 5 wins in last 6, and favorable odd within the 1.40-2.50 sweet spot",
         "market": "h2h",
         "selection": "home",
         "odd": "1.25"
@@ -484,10 +460,7 @@
       "aiCtx": "FC Barcelona are 1st in the La Liga (70 pts), scoring 2.75 and conceding 1.0 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 3-0, W 4-1, W 1-0, D 1-1, W 5-2, W 7-2. Rayo Vallecano are 13th (32 pts), scoring 1.0 and conceding 1.21 goals per game, BTTS in 4/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): W 3-0, D 1-1, D 1-1, W 3-0, D 1-1, D 1-1. Combined expected goals (home scores + away concedes): ~4.0/game.",
       "competition": "La Liga",
       "competitionBG": "Ла Лига",
-      "newsCtx": "Jun 22, 2025 · FC的成功跟DQ无关，早在1984年FC就已经击败两个对手了，之后马里奥1让FC快速普及成为全民娱乐，论功臣马里奥绝对是首位，然而很快JRPG … | FC时代任天堂虽然在主机上一家独大，但除去文首就提到的那个游戏，值得新手入坑的第一方作品其实并不多，卡比梦泉是当中佼佼者。发售于FC末期的它基本 … | 35 FC游戏带给你哪些乐趣？ FC经典游戏中蕴含着大量的趣味性的内容，以及深厚的怀旧游戏文化底蕴，值得怀旧游戏玩家朋友去挖掘，去探索，去思考，去实 …",
-      "ai": "Барселона заемат първо място в Ла Лига с 70 точки, вкарват 2.75 гола на мач и допускат 1.0 гол, с форма от последните 6 мача П 3-0, П 4-1, П 1-0, Р 1-1, П 5-2, П 7-2, докато Райо Валекано е на 13-то място с 32 точки, вкарват 1.0 гол на мач и допускат 1.21 гола, с форма от последните 6 мача П 3-0, Р 1-1, Р 1-1, П 3-0, Р 1-1, Р 1-1. Домакините имат предимство в формата и голова сила, което ги прави фаворити в двубоя. Прогнозата е победа за Барселона при котировка 1.25",
-      "aiEn": "FC Barcelona are 1st in the La Liga with 70 points, scoring 2.75 and conceding 1.0 goals per game, with a recent form of W 3-0, W 4-1, W 1-0, D 1-1, W 5-2, W 7-2, while Rayo Vallecano are 13th with 32 points, scoring 1.0 and conceding 1.21 goals per game, with a recent form of W 3-0, D 1-1, D 1-1, W 3-0, D 1-1, D 1-1. The home team's position, scoring strength, and form advantage make a strong case for a home win. The pick is a Barcelona win at 1.25 odds",
-      "aiCtxHash": "db470b31"
+      "newsCtx": "Jun 22, 2025 · FC的成功跟DQ无关，早在1984年FC就已经击败两个对手了，之后马里奥1让FC快速普及成为全民娱乐，论功臣马里奥绝对是首位，然而很快JRPG … | FC时代任天堂虽然在主机上一家独大，但除去文首就提到的那个游戏，值得新手入坑的第一方作品其实并不多，卡比梦泉是当中佼佼者。发售于FC末期的它基本 … | 35 FC游戏带给你哪些乐趣？ FC经典游戏中蕴含着大量的趣味性的内容，以及深厚的怀旧游戏文化底蕴，值得怀旧游戏玩家朋友去挖掘，去探索，去思考，去实 …"
     },
     {
       "id": "cel_ala",
@@ -501,13 +474,13 @@
       "time": "17:15",
       "status": "pending",
       "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.7, recent BTTS in 5/6 for Celta Vigo and 4/6 for Deportivo Alavés, and over 2.5 in 4/6 recent games for Celta Vigo",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.38"
+        "bet": "И двата вкарват",
+        "betEn": "Both Teams to Score",
+        "conf": 72,
+        "confReason": "Celta Vigo have BTTS in 5/6 recent games and Deportivo Alavés in 4/6, combined expected goals is ~2.7, which supports the BTTS pick, but the odd is slightly outside the ideal range",
+        "market": "btts",
+        "selection": "yes",
+        "odd": "1.73"
       },
       "odds_wh": {
         "a": "4.6",
@@ -523,10 +496,7 @@
       "aiCtx": "Celta Vigo are 6th in the La Liga (41 pts), scoring 1.36 and conceding 1.11 goals per game, BTTS in 5/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 1-2, D 2-2, W 2-0, W 2-1, L 1-2, D 1-1. Deportivo Alavés are 17th (28 pts), scoring 0.93 and conceding 1.36 goals per game, BTTS in 4/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 0-2, D 1-1, D 2-2, L 0-2, L 2-3, D 1-1. Combined expected goals (home scores + away concedes): ~2.7/game. H2H last 1: Celta Vigo 1W-0D-0L, avg 1.0 goals/game.",
       "competition": "La Liga",
       "competitionBG": "Ла Лига",
-      "newsCtx": "Get the classroom practice and essential skills to start teaching English with CELTA, the TEFL qualification that employers around the world ask for. | Learn more about the topics covered in the CELTA (Certificate in Teaching English to Speakers of Other Languages) course and how you will be assesse",
-      "ai": "Селта Виго заемат 6-то място в ла лига с 41 точки, вкарват 1.36 гола на мач и допускат 1.11 гола, а в последните 6 мача имат форма от З 1-2, Р 2-2, П 2-0, П 2-1, З 1-2, Р 1-1, докато Алавес е на 17-о място с 28 точки, вкарват 0.93 гола и допускат 1.36 гола, с форма от З 0-2, Р 1-1, Р 2-2, З 0-2, З 2-3, Р 1-1. Домакините и гостите имат високи показатели за вкарвани голови в последните мачове, което дава основания да се очакват над 2.5 гола в този двубой. Прогнозата е над 2.5 гола при котировка 2.38.",
-      "aiEn": "Celta Vigo are 6th in the La Liga with 41 points, scoring 1.36 and conceding 1.11 goals per game, with a recent form of L 1-2, D 2-2, W 2-0, W 2-1, L 1-2, D 1-1, while Deportivo Alavés are 17th with 28 points, scoring 0.93 and conceding 1.36 goals per game, with a form of L 0-2, D 1-1, D 2-2, L 0-2, L 2-3, D 1-1. Both teams' high-scoring recent form results and goals per game averages make a strong case for Over 2.5 goals in this match. The pick is Over 2.5 at 2.38 William Hill.",
-      "aiCtxHash": "070f6e84"
+      "newsCtx": "Get the classroom practice and essential skills to start teaching English with CELTA, the TEFL qualification that employers around the world ask for. | Learn more about the topics covered in the CELTA (Certificate in Teaching English to Speakers of Other Languages) course and how you will be assesse"
     },
     {
       "id": "bil_bet",
@@ -541,7 +511,7 @@
       "status": "pending",
       "pick": {
         "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score Yes",
+        "betEn": "Both Teams to Score",
         "conf": 72,
         "confReason": "Both teams scored in 4/6 recent games, combined expected goals ~2.3, and recent form supports BTTS",
         "market": "btts",
@@ -561,10 +531,7 @@
       },
       "aiCtx": "Athletic Bilbao are 10th in the La Liga (35 pts), scoring 1.07 and conceding 1.43 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 4-2, W 2-1, W 2-1, D 1-1, L 0-1, L 0-3. Real Betis are 5th (44 pts), scoring 1.54 and conceding 1.25 goals per game, BTTS in 4/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): W 1-0, W 2-1, D 1-1, D 2-2, L 0-2, D 1-1. Combined expected goals (home scores + away concedes): ~2.3/game.",
       "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "ai": "Athletic Bilbao заемат 10-то място в ла лигата с 35 точки, вкарват 1.07 гола на мач и допускат 1.43 гола, като техният последен шест мача е П 4-2, П 2-1, П 2-1, Р 1-1, З 0-1, З 0-3, докато Реал Бетис е на 5-то място с 44 точки, вкарват 1.54 гола и допускат 1.25 гола, с форма от П 1-0, П 2-1, Р 1-1, Р 2-2, З 0-2, Р 1-1. Домакините вкарват около 1.07 гола на мач, а гостите допускат около 1.25 гола, което показва, че двубоят е с голяма вероятност да завърши с двата отбора да вкарат гола. Прогнозата е да се запишат голове и в двата отбора при котировка от 1.70.",
-      "aiEn": "Athletic Bilbao are 10th in the La Liga with 35 points, scoring 1.07 and conceding 1.43 goals per game, with their last six games being W 4-2, W 2-1, W 2-1, D 1-1, L 0-1, L 0-3, while Real Betis are 5th with 44 points, scoring 1.54 and conceding 1.25 goals per game, with a form of W 1-0, W 2-1, D 1-1, D 2-2, L 0-2, D 1-1. Both teams have a high likelihood of scoring as Athletic Bilbao score around 1.07 goals per game and Real Betis concede around 1.25 goals per game. The pick is Both Teams to Score Yes at odds of 1.70.",
-      "aiCtxHash": "34a2d8fb"
+      "competitionBG": "Ла Лига"
     },
     {
       "id": "rma_atm",
@@ -581,7 +548,7 @@
         "bet": "Над 2.5 гола",
         "betEn": "Over 2.5",
         "conf": 78,
-        "confReason": "Combined expected goals ~3.0, both teams have strong BTTS history and recent form supports high-scoring game, odd is within the sweet spot",
+        "confReason": "Combined expected goals ~3.0, both teams have recent history of BTTS and over 2.5 in 4+/6 games, and the odd is within the sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
         "odd": "1.57"
@@ -597,37 +564,32 @@
         "d": 27,
         "a": 28
       },
-      "aiCtx": "Real Madrid are 2nd in the La Liga (66 pts), scoring 2.14 and conceding 0.86 goals per game, BTTS in 4/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): W 2-1, L 0-1, W 2-1, W 3-0, W 4-1, W 2-1. Atlético Madrid are 3rd (57 pts), scoring 1.68 and conceding 0.89 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 4-1, W 1-0, W 3-2, W 5-2, W 1-0, L 2-3. Combined expected goals (home scores + away concedes): ~3.0/game.",
+      "aiCtx": "Real Madrid are 2nd in the La Liga (66 pts), scoring 2.14 and conceding 0.86 goals per game, BTTS in 4/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): W 2-1, L 0-1, W 2-1, W 3-0, W 4-1, W 2-1. Atlético Madrid are 4th (57 pts), scoring 1.68 and conceding 0.89 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 4-1, W 1-0, W 3-2, W 5-2, W 1-0, L 2-3. Combined expected goals (home scores + away concedes): ~3.0/game.",
       "competition": "La Liga",
       "competitionBG": "Ла Лига"
     }
   ],
   "betBuilder": {
-    "matchId": "bri_liv",
-    "home": "Брайтън",
-    "homeEn": "Brighton",
-    "away": "Ливърпул",
-    "awayEn": "Liverpool",
+    "matchId": "avl_whu",
+    "home": "Астън Вила",
+    "homeEn": "Aston Villa",
+    "away": "Уест Хем",
+    "awayEn": "West Ham",
     "markets": [
+      {
+        "market": "Победа домакин",
+        "marketEn": "Home Win",
+        "odd": "1.95"
+      },
       {
         "market": "Над 2.5 гола",
         "marketEn": "Over 2.5 Goals",
-        "odd": "1.65"
-      },
-      {
-        "market": "И двата вкарват",
-        "marketEn": "BTTS Yes",
-        "odd": "1.65"
-      },
-      {
-        "market": "Победа гост",
-        "marketEn": "Away Win",
-        "odd": "2.2"
+        "odd": "1.7"
       }
     ],
-    "totalOdd": "5.99",
-    "reasoning": "Комбинацията от Над 2.5 гола, И двата вкарват и Победа гост е статистически оправдана, тъй като формата на Ливърпул и котировките предричат висока вероятност за голеадна среща, в която гостите да излезнат победители.",
-    "reasoningEn": "This combination is statistically sound as Liverpool's form and the expected goals data suggest a high-scoring affair, making it likely that the visitors will win with both teams scoring and over 2.5 goals."
+    "totalOdd": "3.31",
+    "reasoning": "",
+    "reasoningEn": ""
   },
   "results": [
     {
@@ -1265,9 +1227,5 @@
     "correct": 48,
     "total": 85,
     "period": "ЛЕ 26.02.2026"
-  },
-  "bbRecord": {
-    "correct": 0,
-    "total": 0
   }
 }
