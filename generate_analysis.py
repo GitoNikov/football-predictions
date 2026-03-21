@@ -184,7 +184,7 @@ def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
                 {"role": "user",   "content": prompt},
             ],
             temperature=0.7,
-            max_tokens=500,
+            max_tokens=700,
         )
         text = response.choices[0].message.content.strip()
         if "```" in text:
