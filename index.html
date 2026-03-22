@@ -987,6 +987,25 @@ function buildMatchCard(m) {
         <div class="aitext">${ai}</div>
       </div>
     </div>`:''}
+    ${(m.sidePicks && m.sidePicks.length) ? `<div class="odds-sec" style="padding-top:4px;padding-bottom:4px">
+      <div class="odds-sec-title">${lang==='bg'?'Допълнителни прогнози':'Side Picks'}</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        ${m.sidePicks.map(sp => {
+          const icon  = sp.market === 'cards' ? '🟨' : '🚩';
+          const label = sp.market === 'cards' ? (lang==='bg'?'Картони':'Cards') : (lang==='bg'?'Корнери':'Corners');
+          const bet   = lang === 'bg' ? sp.bet : sp.betEn;
+          const rsn   = lang === 'bg' ? sp.reasoning : sp.reasoningEn;
+          const color = sp.market === 'cards' ? 'var(--yellow)' : 'var(--blue)';
+          const bg2   = sp.market === 'cards' ? 'rgba(255,184,0,.07)' : 'rgba(59,139,255,.07)';
+          const bdr   = sp.market === 'cards' ? 'rgba(255,184,0,.2)' : 'rgba(59,139,255,.2)';
+          return `<div style="flex:1;min-width:180px;background:${bg2};border:1px solid ${bdr};border-radius:10px;padding:10px 12px">
+            <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:${color};margin-bottom:5px">${icon} ${label}</div>
+            <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:5px">${bet}</div>
+            ${rsn?`<div style="font-size:10px;color:var(--muted);line-height:1.5;font-style:italic">${rsn}</div>`:''}
+          </div>`;
+        }).join('')}
+      </div>
+    </div>` : ''}
     <div style="padding:10px 18px 14px">
       <button onclick="toggleBetslip('${m.id}','${safeHome} – ${safeAway}','${safeBet}','${odd}')"
         style="padding:7px 16px;border-radius:8px;border:1px solid ${inBS?'rgba(255,184,0,.4)':'var(--border)'};background:${inBS?'rgba(255,184,0,.1)':'var(--dark3)'};color:${inBS?'var(--yellow)':'var(--muted)'};font-size:11px;font-weight:700;cursor:pointer;letter-spacing:1px;transition:all .15s">

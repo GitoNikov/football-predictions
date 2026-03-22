@@ -207,6 +207,83 @@ def ctx_hash(match: dict) -> str:
     return hashlib.md5(content.encode()).hexdigest()[:8]
 
 
+def generate_side_picks(client, match: dict) -> list:
+    """Generate Cards and Corners side picks for a match using Groq."""
+    ctx     = match.get("aiCtx") or f"{match.get('homeEn')} vs {match.get('awayEn')}"
+    home_en = match.get("homeEn", "")
+    away_en = match.get("awayEn", "")
+    home_bg = match.get("home", home_en)
+    away_bg = match.get("away", away_en)
+
+    prompt = f"""Match: {home_en} vs {away_en}
+Context: {ctx}
+
+Based on the teams' positions, form, and playing style, predict:
+1. CARDS: Over or Under cards (choose threshold: 2.5, 3.5, or 4.5)
+2. CORNERS: Over or Under corners (choose threshold: 8.5, 9.5, 10.5, or 11.5)
+
+Reasoning hints:
+- Relegation battles, physical/defensive teams, derbies → more cards
+- Attacking, wide-play, possession teams → more corners
+- One-sided matches where one team chases the game → more corners
+- Disciplined, low-block teams → fewer cards and corners
+
+Return ONLY valid JSON, no markdown:
+{{
+  "cards": {{
+    "bet": "Над 3.5 картона",
+    "betEn": "Over 3.5 Cards",
+    "reasoning": "1 sentence in Bulgarian — native journalist style, use '{home_bg}' and '{away_bg}'",
+    "reasoningEn": "1 sentence in English"
+  }},
+  "corners": {{
+    "bet": "Над 9.5 ъглови",
+    "betEn": "Over 9.5 Corners",
+    "reasoning": "1 sentence in Bulgarian — native journalist style, use '{home_bg}' and '{away_bg}'",
+    "reasoningEn": "1 sentence in English"
+  }}
+}}
+
+Rules:
+- bet must be in Bulgarian (e.g. "Над 3.5 картона", "Под 9.5 ъглови")
+- betEn in English (e.g. "Over 3.5 Cards", "Under 9.5 Corners")
+- Bulgarian team names MUST be exactly "{home_bg}" and "{away_bg}"
+- reasoning: 1 short sentence, third-person journalistic, no first-person pronouns
+- Never use "голови" — use "гола" for goals if mentioned"""
+
+    try:
+        resp = client.chat.completions.create(
+            model=MODEL_NAME,
+            messages=[
+                {"role": "system", "content": SYSTEM_MSG},
+                {"role": "user",   "content": prompt},
+            ],
+            temperature=0.5,
+            max_tokens=350,
+        )
+        text = resp.choices[0].message.content.strip()
+        if "```" in text:
+            text = text.split("```")[1]
+            if text.startswith("json"):
+                text = text[4:]
+            text = text.strip()
+        result = json.loads(text)
+        picks = []
+        for market in ("cards", "corners"):
+            if market in result:
+                picks.append({
+                    "market":      market,
+                    "bet":         result[market].get("bet", ""),
+                    "betEn":       result[market].get("betEn", ""),
+                    "reasoning":   result[market].get("reasoning", ""),
+                    "reasoningEn": result[market].get("reasoningEn", ""),
+                })
+        return picks
+    except Exception as e:
+        print(f"\n    ⚠  Side picks error: {e}")
+        return []
+
+
 def main():
     api_key = os.environ.get("GROQ_API_KEY", "")
     if not api_key:
@@ -236,32 +313,45 @@ def main():
             continue
 
         current_hash = ctx_hash(match)
-        if match.get("ai") and match.get("aiEn") and match.get("aiCtxHash") == current_hash:
+        analysis_ok   = match.get("ai") and match.get("aiEn") and match.get("aiCtxHash") == current_hash
+        side_picks_ok = bool(match.get("sidePicks"))
+
+        if analysis_ok and side_picks_ok:
             print(f"  ↩  {name} — context unchanged, skipping")
             skipped += 1
             continue
 
         home_en = match.get("homeEn", "")
         away_en = match.get("awayEn", "")
-        raw_news = search_team_news(home_en, away_en)
-        if raw_news:
-            clean_news = summarize_news(client, home_en, away_en, raw_news)
-            match["newsCtx"] = clean_news or raw_news[:300]
-        print(f"  ⚙  {name}… ", end="", flush=True)
-        bg, en = generate_analysis(client, match, label)
 
-        if bg and en:
-            match["ai"]        = bg
-            match["aiEn"]      = en
-            match["aiCtxHash"] = current_hash
-            print("✓")
-            updated += 1
-        else:
-            print("⚠  kept existing")
-            skipped += 1
-
-        if i < total - 1:
+        if not analysis_ok:
+            raw_news = search_team_news(home_en, away_en)
+            if raw_news:
+                clean_news = summarize_news(client, home_en, away_en, raw_news)
+                match["newsCtx"] = clean_news or raw_news[:300]
+            print(f"  ⚙  {name}… ", end="", flush=True)
+            bg, en = generate_analysis(client, match, label)
+            if bg and en:
+                match["ai"]        = bg
+                match["aiEn"]      = en
+                match["aiCtxHash"] = current_hash
+                print("✓")
+                updated += 1
+            else:
+                print("⚠  kept existing")
+                skipped += 1
             time.sleep(DELAY)
+
+        if not side_picks_ok:
+            print(f"  🃏  {name} side picks… ", end="", flush=True)
+            picks = generate_side_picks(client, match)
+            if picks:
+                match["sidePicks"] = picks
+                print("✓")
+            else:
+                print("⚠  skipped")
+            if i < total - 1:
+                time.sleep(DELAY)
 
     # ── betBuilder reasoning ──────────────────────────────────────────────────
     bb = data.get("betBuilder")
