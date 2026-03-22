@@ -7,153 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "bri_liv",
-      "home": "Брайтън",
-      "homeEn": "Brighton",
-      "homeA": "BRI",
-      "away": "Ливърпул",
-      "awayEn": "Liverpool",
-      "awayA": "LIV",
-      "date": "2026-03-21",
-      "time": "14:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.6, recent over 2.5 in 1/6 and 3/6 games respectively, but no clear h2h or btts edge. The odd is within the sweet spot and the teams' scoring and conceding rates suggest a potential for a high-scoring game.",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.75"
-      },
-      "odds_wh": {
-        "h": "3.0",
-        "a": "2.2",
-        "x": "3.4",
-        "o25": "1.65"
-      },
-      "prob": {
-        "h": 33,
-        "d": 29,
-        "a": 45
-      },
-      "aiCtx": "Brighton are 12th in the Premier League (40 pts), scoring 1.3 and conceding 1.2 goals per game, BTTS in 1/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): L 0-1, L 0-1, W 2-0, W 2-1, L 0-1, W 1-0. Liverpool are 5th (49 pts), scoring 1.63 and conceding 1.33 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 1-0, W 5-2, L 1-2, L 0-1, D 1-1, W 4-0. Combined expected goals (home scores + away concedes): ~2.6/game. H2H last 1: Brighton 0W-0D-1L, avg 2.0 goals/game.",
-      "newsCtx": "Brighton is known for its exquisitely crafted women's handbags, jewelry, and charms for bracelets, along with many other stylish accessories. | Whether you are drawn to a statement necklace, a stack of bracelets, a pair of earrings, or the perfect ring, there is a Brighton piece for every look. With",
-      "ai": "Домакините Брайтън заемат 12-о място с 40 точки, вкарват 1.3 гола и допускат 1.2 гола на мач, с форма от последните 6 мача: З 0-1, З 0-1, П 2-0, П 2-1, З 0-1, П 1-0, докато гостите Ливърпул са 5-и с 49 точки, вкарват 1.63 гола и допускат 1.33 гола на мач, с форма от последните 6 мача: П 1-0, П 5-2, З 1-2, З 0-1, Р 1-1, П 4-0. Двубойът между тези два отбора обещава да бъде с много голови, тъй като домакините и гостите имат солидни показатели за вкарвани и допуснати гола, а скорошните им резултати показват, че са в добра форма. Прогнозата е над 2.5 гола, а котировка при този изход е 1.75.",
-      "aiEn": "Brighton are 12th in the Premier League with 40 points, scoring 1.3 and conceding 1.2 goals per game, with a recent form of L 0-1, L 0-1, W 2-0, W 2-1, L 0-1, W 1-0, while Liverpool are 5th with 49 points, scoring 1.63 and conceding 1.33 goals per game, with a recent form of W 1-0, W 5-2, L 1-2, L 0-1, D 1-1, W 4-0. The case for Over 2.5 goals is strong, given both teams' high-scoring averages and recent form results, which suggest an open and attacking game. The pick is Over 2.5 goals at exact odds of 1.75.",
-      "aiCtxHash": "96cc5137"
-    },
-    {
-      "id": "ful_bur",
-      "home": "Фулъм",
-      "homeEn": "Fulham",
-      "homeA": "FUL",
-      "away": "Бърнли",
-      "awayEn": "Burnley",
-      "awayA": "BUR",
-      "date": "2026-03-21",
-      "time": "17:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Фулъм победа",
-        "betEn": "Fulham Win",
-        "conf": 78,
-        "confReason": "Fulham are 8 places above Burnley, recent form shows Fulham's ability to score and win, and the odd is within the sweet spot",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.53"
-      },
-      "odds_wh": {
-        "a": "6.0",
-        "h": "1.55",
-        "x": "3.8",
-        "o25": "1.75"
-      },
-      "prob": {
-        "h": 65,
-        "d": 26,
-        "a": 17
-      },
-      "aiCtx": "Fulham are 12th in the Premier League (41 pts), scoring 1.33 and conceding 1.43 goals per game, BTTS in 3/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 1-2, L 0-3, W 3-1, W 2-1, L 0-1, D 0-0. Burnley are 19th (20 pts), scoring 1.07 and conceding 1.93 goals per game, BTTS in 3/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 0-2, W 3-2, D 1-1, L 3-4, L 0-2, D 0-0. Combined expected goals (home scores + away concedes): ~3.3/game. H2H last 1: Fulham 1W-0D-0L, avg 5.0 goals/game.",
-      "newsCtx": "The Official Website of Fulham Football Club: get the latest news, highlights, fixtures and results, tickets, Club shop and more. | The Official Website of Fulham Football Club: get the latest news, highlights, fixtures and results, tickets, Club shop and more. | See all the MEN matches 08:00 Sat 21",
-      "ai": "Фулъм заемат 12-то място с 41 точка, вкарват 1.33 гола на мач и допускат 1.43 гола, а формата им е З 1-2, З 0-3, П 3-1, П 2-1, З 0-1, Р 0-0, докато Бърнли са на 19-то място с 20 точки, вкарват 1.07 гола и допускат 1.93 гола с форма З 0-2, П 3-2, Р 1-1, З 3-4, З 0-2, Р 0-0. Домакините имат предимство в формата и голова сила, което ги прави фаворити в този двубой. Прогнозата е Фулъм да спечели този мач при котировка 1.53.",
-      "aiEn": "Fulham are 12th in the Premier League with 41 points, scoring 1.33 and conceding 1.43 goals per game, with a recent form of L 1-2, L 0-3, W 3-1, W 2-1, L 0-1, D 0-0, while Burnley are 19th with 20 points, scoring 1.07 and conceding 1.93 goals per game, with a form of L 0-2, W 3-2, D 1-1, L 3-4, L 0-2, D 0-0. Fulham's position and scoring strength, combined with their form advantage, make a strong case for a home win. The pick is Fulham to win at 1.53.",
-      "aiCtxHash": "f5805934"
-    },
-    {
-      "id": "eve_che",
-      "home": "Евъртън",
-      "homeEn": "Everton",
-      "homeA": "EVE",
-      "away": "Челси",
-      "awayEn": "Chelsea",
-      "awayA": "CHE",
-      "date": "2026-03-21",
-      "time": "19:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.3/game is below the 3.0 threshold, but recent games show BTTS in 3/6 for Everton and 4/6 for Chelsea, and over 2.5 in 3/6 for Everton and 4/6 for Chelsea, suggesting a decent chance of a high-scoring game",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.85"
-      },
-      "odds_wh": {
-        "a": "2.1",
-        "h": "3.3",
-        "x": "3.4",
-        "o25": "1.75"
-      },
-      "prob": {
-        "h": 30,
-        "d": 29,
-        "a": 48
-      },
-      "aiCtx": "Everton are 8th in the Premier League (43 pts), scoring 1.13 and conceding 1.17 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 2-1, L 1-2, L 0-1, W 3-2, W 2-0, L 0-2. Chelsea are 6th (48 pts), scoring 1.77 and conceding 1.17 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): D 1-1, L 1-2, W 4-1, L 2-5, L 0-1, L 0-3. Combined expected goals (home scores + away concedes): ~2.3/game. H2H last 1: Everton 0W-0D-1L, avg 2.0 goals/game.",
-      "ai": "Евъртън е на 8-о място във Висшата лига с 43 точки, вкарват 1.13 гола на мач и допускат 1.17 гола, като последните им резултати са П 2-1, З 1-2, З 0-1, П 3-2, П 2-0, З 0-2, а Челси е на 6-о място с 48 точки, вкарват 1.77 гола на мач и допускат 1.17 гола, с форма Р 1-1, З 1-2, П 4-1, З 2-5, З 0-1, З 0-3. Двубойът между тях обещава много гола, тъй като домакините и гостите имат скорошни резултати с над 2.5 гола, а средniят им резултат е над 2 гола на мач. Прогнозата е над 2.5 гола при котировка 1.85.",
-      "aiEn": "Everton are 8th in the Premier League with 43 points, scoring 1.13 and conceding 1.17 goals per game, with recent form of W 2-1, L 1-2, L 0-1, W 3-2, W 2-0, L 0-2, while Chelsea are 6th with 48 points, scoring 1.77 and conceding 1.17 goals per game, with form of D 1-1, L 1-2, W 4-1, L 2-5, L 0-1, L 0-3. The match between them is likely to see over 2.5 goals, given both teams' high-scoring recent form results and their goals per game averages. The pick is Over 2.5 at 1.85 William Hill.",
-      "aiCtxHash": "e4afc5fd"
-    },
-    {
-      "id": "lee_bre",
-      "home": "Лийдс",
-      "homeEn": "Leeds",
-      "homeA": "LEE",
-      "away": "Брентфорд",
-      "awayEn": "Brentford",
-      "awayA": "BRE",
-      "date": "2026-03-21",
-      "time": "22:00",
-      "status": "pending",
-      "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score",
-        "conf": 68,
-        "confReason": "Brentford has BTTS in 4/6 recent games and Leeds in 3/6, combined expected goals is ~2.6, which is close to the required 2.5, and the odd is within the 1.40-2.50 range",
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.83"
-      },
-      "odds_wh": {
-        "a": "2.7",
-        "h": "2.45",
-        "x": "3.3",
-        "o25": "1.8"
-      },
-      "prob": {
-        "h": 41,
-        "d": 30,
-        "a": 37
-      },
-      "aiCtx": "Leeds are 15th in the Premier League (32 pts), scoring 1.23 and conceding 1.6 goals per game, BTTS in 3/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): W 3-1, D 2-2, D 1-1, L 0-1, L 0-1, D 0-0. Brentford are 7th (45 pts), scoring 1.53 and conceding 1.4 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 3-2, D 1-1, L 0-2, W 4-3, D 0-0, D 2-2. Combined expected goals (home scores + away concedes): ~2.6/game. H2H last 1: Leeds 0W-1D-0L, avg 2.0 goals/game.",
-      "newsCtx": "在利兹大学（University of Leeds） 上学是怎样一番体验？ 利兹大学（The University of Leeds）位于英国利兹市，始建于1831年，世界百强名校，与曼彻斯特大学等大学并称为英国“红砖大学”，… 显示 … | 利兹大学（ The University of Leeds）是英国名校联盟罗素大学集团的创始成员，英国著名的六所“红砖大学”之一，世界大学联盟成员， 在1904年获英国国王爱德华七世正式授予利兹大学的名号， 拥有6位 … | 在利兹读HRM研：像在“贴心副本”里打怪升级 首先恭喜！利兹的HRM读研体验，大概是“舒服又有压力”的平衡感。 利兹城市不大但够用",
-      "ai": "Лийдс заема 15-то място в лигата с 32 точки, вкарват 1.23 гола на мач и допускат 1.6 гола, а Брентфорд е 7-ми с 45 точки, вкарват 1.53 гола и допускат 1.4 гола, като формата им от последните 6 мача е П 3-1, Р 2-2, Р 1-1, З 0-1, З 0-1, Р 0-0 за Лийдс и П 3-2, Р 1-1, З 0-2, П 4-3, Р 0-0, Р 2-2 за Брентфорд. Двубойът между тях обещава голове, тъй като домакините вкарват средно 1.23 гола, а гостите допускат 1.4 гола, а от друга страна Брентфорд вкарват 1.53 гола, а Лийдс допуска 1.6 гола. Прогнозата е за мач с голове и на двата отбора при котировка 1.83",
-      "aiEn": "Leeds are 15th in the Premier League with 32 points, scoring 1.23 and conceding 1.6 goals per game, with a recent form of W 3-1, D 2-2, D 1-1, L 0-1, L 0-1, D 0-0, while Brentford are 7th with 45 points, scoring 1.53 and conceding 1.4 goals per game, with a recent form of W 3-2, D 1-1, L 0-2, W 4-3, D 0-0, D 2-2. The case for both teams to score is strong, given that Leeds score an average of 1.23 goals and Brentford concede an average of 1.4 goals, while Brentford score an average of 1.53 goals and Leeds concede an average of 1.6 goals. The pick is for both teams to score at odds of 1.83",
-      "aiCtxHash": "fc8934e3"
-    },
-    {
       "id": "new_sun",
       "home": "Нюкасъл",
       "homeEn": "Newcastle",
@@ -263,200 +116,6 @@
       "ai": "Тотнъм заема 16-то място в лигата с 30 точки, вкарват 1.33 гола на мач и допускат 1.57, последните им шест мача са З 1-4, З 1-2, З 1-3, З 2-5, Р 1-1, П 3-2, докато Нотингам Форест е на 17-то място с 29 точки, вкарват 0.93 гола и допускат 1.43. Домакините и гостите имат добра форма за двубой с гол, тъй като Тотнъм вкарват много гола, а Нотингам Форест допуска средно много гола, което прави двата гола много вероятни. Прогнозата е двете отбора да вкарат гол, на котировка 1.91",
       "aiEn": "Tottenham are 16th in the Premier League with 30 points, scoring 1.33 and conceding 1.57 goals per game, with their last six games being L 1-4, L 1-2, L 1-3, L 2-5, D 1-1, W 3-2, while Nottingham Forest are 17th with 29 points, scoring 0.93 and conceding 1.43 goals per game. Both teams are likely to score as Tottenham score many goals and Nottingham Forest concede an average of many goals, making both teams to score a probable outcome. The pick is Both Teams to Score at 1.91 William Hill",
       "aiCtxHash": "6b04d6cb"
-    },
-    {
-      "id": "elc_mal",
-      "home": "Elche CF",
-      "homeEn": "Elche CF",
-      "homeA": "ELC",
-      "away": "Майорка",
-      "awayEn": "Mallorca",
-      "awayA": "MAL",
-      "date": "2026-03-21",
-      "time": "15:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.9, recent BTTS and over 2.5 trends in both teams, and no clear h2h edge",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.1"
-      },
-      "odds_wh": {
-        "h": "2.1",
-        "a": "3.4",
-        "x": "3.2",
-        "o25": "2.05"
-      },
-      "prob": {
-        "h": 48,
-        "d": 31,
-        "a": 29
-      },
-      "aiCtx": "Elche CF are 18th in the La Liga (26 pts), scoring 1.29 and conceding 1.61 goals per game, BTTS in 5/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): L 1-3, D 0-0, L 1-2, D 2-2, L 1-2, L 1-4. Mallorca are 16th (28 pts), scoring 1.18 and conceding 1.61 goals per game, BTTS in 3/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 0-3, L 1-2, L 0-2, L 0-1, D 2-2, W 2-1. Combined expected goals (home scores + away concedes): ~2.9/game. H2H last 1: Elche CF 0W-0D-1L, avg 4.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "ai": "Домакините Elche CF заемат 18-о място с 26 точки, вкарват 1.29 гола на мач и допускат 1.61 гола, а Майорка е на 16-о място с 28 точки, вкарват 1.18 гола и допускат 1.61 гола, като формата им е съответно З 1-3, Р 0-0, З 1-2, Р 2-2, З 1-2, З 1-4 и З 0-3, З 1-2, З 0-2, З 0-1, Р 2-2, П 2-1. Обединените очаквани голове и високите резултати в последните мачове говорят за прогноза над 2.5 гола, тъй като Elche CF и Майорка имат скорошна форма с множество голове. Прогнозата е над 2.5 гола на котировка 2.1 при William Hill.",
-      "aiEn": "Elche CF are 18th in the La Liga with 26 points, scoring 1.29 and conceding 1.61 goals per game, with a recent form of L 1-3, D 0-0, L 1-2, D 2-2, L 1-2, L 1-4, while Mallorca are 16th with 28 points, scoring 1.18 and conceding 1.61 goals per game, with a form of L 0-3, L 1-2, L 0-2, L 0-1, D 2-2, W 2-1. The high-scoring recent form results and the teams' goals per game averages make a strong case for Over 2.5 goals. The pick is Over 2.5 at exact odds 2.1 with William Hill.",
-      "aiCtxHash": "7801fab6"
-    },
-    {
-      "id": "esp_get",
-      "home": "Еспаньол",
-      "homeEn": "Espanyol",
-      "homeA": "ESP",
-      "away": "Хетафе",
-      "awayEn": "Getafe",
-      "awayA": "GET",
-      "date": "2026-03-21",
-      "time": "17:15",
-      "status": "pending",
-      "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score",
-        "conf": 78,
-        "confReason": "Espanyol have BTTS in 6/6 recent games and Getafe have a low scoring record, but Espanyol's high BTTS frequency makes this a strong bet",
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.73"
-      },
-      "odds_wh": {
-        "h": "2.4",
-        "a": "3.25",
-        "x": "2.8",
-        "o25": "2.8"
-      },
-      "prob": {
-        "h": 42,
-        "d": 36,
-        "a": 31
-      },
-      "aiCtx": "Espanyol are 8th in the La Liga (37 pts), scoring 1.25 and conceding 1.5 goals per game, BTTS in 6/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): L 1-4, D 2-2, L 2-4, D 2-2, D 1-1, L 1-2. Getafe are 9th (35 pts), scoring 0.82 and conceding 1.07 goals per game, BTTS in 1/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): W 2-0, W 2-1, L 0-1, W 1-0, W 2-0, L 0-1. Combined expected goals (home scores + away concedes): ~2.3/game. H2H last 1: Espanyol 1W-0D-0L, avg 1.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "newsCtx": "美容・ダイエット・フィットネスの商品一覧を見る ショップスターバリュー整体師が本気で考えた健康スニーカー キャスト 赤堀  … | 野村 尚宏 番組を見る 5:00 ありがとう30周年まるごとショップスターバリューデイ ショップスターバリュートウキョウファク … | ファッション デビューブランド オールスタージュエリーウィーク 金プラチナ特集 ADMJフェスタ 密本セレクト 10年先の …",
-      "ai": "Еспаньол заемат 8моя позиция в Ла Лига с 37 точки, вкарват 1.25 гола на мач и допускат 1.5 гола, а последните им шест мача са З 1-4, Р 2-2, З 2-4, Р 2-2, Р 1-1, З 1-2, докато Хетафе е на 9мая позиция с 35 точки, вкарват 0.82 гола на мач и допускат 1.07 гола, а последните им шест мача са П 2-0, П 2-1, З 0-1, П 1-0, П 2-0, З 0-1. Двубойът между двата отбора обещава да бъде интересен, тъй като домакините вкарват много гола, а гостите допускат относително малко, но все пак имат шанс да вкарат, тъй като Еспаньол допуска 1.5 гола, а Хетафе вкарват 0.82 гола на мач. Прогнозата е, че двата отбора ще вкарат голове, а котировка при този изход е 1.73.",
-      "aiEn": "Espanyol are 8th in the La Liga with 37 points, scoring 1.25 and conceding 1.5 goals per game, with their last six games being L 1-4, D 2-2, L 2-4, D 2-2, D 1-1, L 1-2, while Getafe are 9th with 35 points, scoring 0.82 and conceding 1.07 goals per game, with their last six games being W 2-0, W 2-1, L 0-1, W 1-0, W 2-0, L 0-1. The case for both teams to score is strong, given Espanyol's high scoring and conceding rates, as well as Getafe's ability to score, with Espanyol conceding 1.5 goals per game and Getafe scoring 0.82 goals per game. The pick is for both teams to score, with odds of 1.73 at William Hill.",
-      "aiCtxHash": "49c9067a"
-    },
-    {
-      "id": "osa_gir",
-      "home": "Осасуна",
-      "homeEn": "Osasuna",
-      "homeA": "OSA",
-      "away": "Хирона",
-      "awayEn": "Girona",
-      "awayA": "GIR",
-      "date": "2026-03-21",
-      "time": "19:30",
-      "status": "pending",
-      "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score Yes",
-        "conf": 72,
-        "confReason": "Both teams scored in 4+/6 recent games and strong BTTS history, combined expected goals ~2.7 supports this, odd is within the sweet spot",
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.75"
-      },
-      "odds_wh": {
-        "h": "2.15",
-        "a": "3.3",
-        "x": "3.3",
-        "o25": "1.95"
-      },
-      "prob": {
-        "h": 47,
-        "d": 30,
-        "a": 30
-      },
-      "aiCtx": "Osasuna are 11th in the La Liga (34 pts), scoring 1.18 and conceding 1.25 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 2-1, D 0-0, W 2-1, L 0-1, D 2-2, L 1-3. Girona are 12th (34 pts), scoring 1.11 and conceding 1.54 goals per game, BTTS in 5/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): D 1-1, W 2-1, D 2-2, L 1-2, D 1-1, W 3-0. Combined expected goals (home scores + away concedes): ~2.7/game. H2H last 1: Osasuna 0W-0D-1L, avg 1.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "newsCtx": "1 day ago · ⭐️ Víctor Muñoz es el duodécimo futbolista en la historia de Osasuna que es convocado por el combinado nacional. ¡Un nuevo rojillo en la @sefutbol! 🎙️ Víctor Muñoz: \"Es un sueño poder ir … | CA Osasuna - Voici l’aperçu du club de LaLiga, comprenant ses stats, ses valeurs marchandes, ses ",
-      "ai": "Осасуна заемат 11-то място в ла лига с 34 точки, вкарват 1.18 гола на мач и допускат 1.25 гола, като формата им от последните 6 мача е П 2-1, Р 0-0, П 2-1, З 0-1, Р 2-2, З 1-3, докато Хирона е на 12-то място с 34 точки, вкарват 1.11 гола на мач и допускат 1.54 гола, с форма от последните 6 мача Р 1-1, П 2-1, Р 2-2, З 1-2, Р 1-1, П 3-0. Двубойът между тези два отбора обещава да бъде интересен, тъй като домакините вкарват средно 1.18 гола на мач, а гостите допускат средно 1.54 гола, което показва, че и двата отбора ще вкарат гола. Прогнозата е, че двата отбора ще вкарат гола, а котировка за този прогноз е 1.75.",
-      "aiEn": "Osasuna are 11th in the La Liga with 34 points, scoring 1.18 and conceding 1.25 goals per game, with a recent form of W 2-1, D 0-0, W 2-1, L 0-1, D 2-2, L 1-3, while Girona are 12th with 34 points, scoring 1.11 and conceding 1.54 goals per game, with a recent form of D 1-1, W 2-1, D 2-2, L 1-2, D 1-1, W 3-0. Both teams are likely to score, given Osasuna's average of 1.18 goals scored per game and Girona's average of 1.54 goals conceded per game, which suggests that both teams will find the net. The pick is Both Teams to Score Yes at odds of 1.75.",
-      "aiCtxHash": "60b03bc3"
-    },
-    {
-      "id": "lev_ovi",
-      "home": "Levante",
-      "homeEn": "Levante",
-      "homeA": "LEV",
-      "away": "Oviedo",
-      "awayEn": "Oviedo",
-      "awayA": "OVI",
-      "date": "2026-03-21",
-      "time": "19:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.6/game, recent BTTS and over 2.5 trends are not strong enough to fire the btts or over_2.5 rules cleanly, but the xG suggests a decent chance of a higher-scoring game, and the odd is within the desired range",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.05"
-      },
-      "odds_wh": {
-        "h": "2.15",
-        "a": "3.3",
-        "x": "3.25",
-        "o25": "2.05"
-      },
-      "prob": {
-        "h": 47,
-        "d": 31,
-        "a": 30
-      },
-      "aiCtx": "Levante are 19th in the La Liga (23 pts), scoring 1.07 and conceding 1.64 goals per game, BTTS in 2/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): L 0-2, L 0-1, L 0-3, W 2-0, D 1-1, D 1-1. Oviedo are 20th (21 pts), scoring 0.64 and conceding 1.57 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 1-2, D 3-3, L 0-1, L 0-3, D 1-1, W 1-0. Combined expected goals (home scores + away concedes): ~2.6/game. H2H last 1: Levante 1W-0D-0L, avg 2.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "newsCtx": "Edición digital de Levante-EMV, líder en Valencia, con las últimas noticias de Valencia, Castellón y Alicante. | Toda la última hora de Valencia y la Comunidad Valenciana en Levante-emv. Últimas noticias sobre política, economía, sociedad, cultura… | Lee toda la actualidad con el diario Levante-EMV ",
-      "ai": "Двубойът между Levante и Oviedo е между два отбора с трудна форма, като домакините заемат 19то място с 23 точки и вкарват 1.07 гола на мач, а гостите са на 20то място с 21 точки и допускат 1.57 гола. Формата на двата отбора показва, че те често влизат в двубои с много голове, като Levante имат форма от З 0-2, З 0-1, З 0-3, П 2-0, Р 1-1, Р 1-1, а Oviedo - З 1-2, Р 3-3, З 0-1, З 0-3, Р 1-1, П 1-0. Прогнозата е над 2.5 гола при котировка 2.05, тъй като средният брой голове на мач при двата отбора дава основания да се очакват много голове в този двубой.",
-      "aiEn": "Levante, in 19th position with 23 points, scoring 1.07 and conceding 1.64 goals per game, have a recent form of L 0-2, L 0-1, L 0-3, W 2-0, D 1-1, D 1-1, while Oviedo, in 20th place with 21 points, scoring 0.64 and conceding 1.57 goals per game, have a form of L 1-2, D 3-3, L 0-1, L 0-3, D 1-1, W 1-0. The case for Over 2.5 goals is strong, given both teams' goals per game averages and high-scoring recent form results, such as Oviedo's 3-3 draw and Levante's ability to score and concede regularly. The pick is Over 2.5 Goals at exactly 2.05 odds.",
-      "aiCtxHash": "d4699424"
-    },
-    {
-      "id": "sev_val",
-      "home": "Севиля",
-      "homeEn": "Sevilla",
-      "homeA": "SEV",
-      "away": "Валенсия",
-      "awayEn": "Valencia",
-      "awayA": "VAL",
-      "date": "2026-03-21",
-      "time": "22:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 1.5 гола",
-        "betEn": "Over 1.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.8, recent BTTS and over 2.5 trends are not strong enough to prefer btts/yes or over_2.5, but over 1.5 is a safer option given the scoring rates",
-        "market": "over_under",
-        "selection": "over_1.5",
-        "odd": "1.44"
-      },
-      "odds_wh": {
-        "h": "2.2",
-        "a": "3.3",
-        "x": "3.0",
-        "o25": "2.3"
-      },
-      "prob": {
-        "h": 45,
-        "d": 33,
-        "a": 30
-      },
-      "aiCtx": "Sevilla are 15th in the La Liga (31 pts), scoring 1.32 and conceding 1.68 goals per game, BTTS in 5/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): D 1-1, D 1-1, W 1-0, D 2-2, D 1-1, L 2-5. Valencia are 14th (32 pts), scoring 1.07 and conceding 1.5 goals per game, BTTS in 2/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 0-2, W 2-0, L 1-2, W 1-0, W 3-2, L 0-1. Combined expected goals (home scores + away concedes): ~2.8/game. H2H last 1: Sevilla 0W-1D-0L, avg 2.0 goals/game.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "newsCtx": "Discover the best things to do in the city. Experience Seville, land of feelings. Seville is a city that never ceases to amaze. Sporting events, festivals, culture galore. Discover the best things to do in the city. | May 18, 2024 · Strolling the streets of the historic old town, visiting the Cathed",
-      "ai": "Севиля заема 15то място в ла лига с 31 точка, вкарват 1.32 гола на мач и допускат 1.68 гола, а Валенсия е на 14то място с 32 точки, вкарват 1.07 гола и допускат 1.5 гола, форми на двата отбора са съответно Р 1-1, Р 1-1, П 1-0, Р 2-2, Р 1-1, З 2-5 и З 0-2, П 2-0, З 1-2, П 1-0, П 3-2, З 0-1. Двубоят между Севиля и Валенсия обещава да бъде с много голове, тъй като домакините вкарват много гола, а гостите допускат относително много, което прави прогнозата над 2.5 гола доста вероятна. Прогнозата е над 1.5 гола при котировка 1.44.",
-      "aiEn": "Sevilla are 15th in the La Liga with 31 points, scoring 1.32 and conceding 1.68 goals per game, with a recent form of D 1-1, D 1-1, W 1-0, D 2-2, D 1-1, L 2-5, while Valencia are 14th with 32 points, scoring 1.07 and conceding 1.5 goals per game, with a form of L 0-2, W 2-0, L 1-2, W 1-0, W 3-2, L 0-1. The match between Sevilla and Valencia is likely to be high-scoring, given Sevilla's goals per game average and Valencia's recent high-scoring form results, making the Over 2.5 case a strong one. The pick is Over 1.5 at 1.44 William Hill.",
-      "aiCtxHash": "47fca226"
     },
     {
       "id": "bar_ray",
@@ -637,6 +296,195 @@
     "reasoningEn": "The combination of a home win and over 2.5 goals is statistically sound, given Aston Villa's strong form and West Ham's struggles, along with their high-scoring head-to-head history."
   },
   "results": [
+    {
+      "id": "sev_val",
+      "home": "Севиля",
+      "homeEn": "Sevilla",
+      "away": "Валенсия",
+      "awayEn": "Valencia",
+      "date": "2026-03-21",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 1.5 гола",
+        "betEn": "Over 1.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.8, recent BTTS and over 2.5 trends are not strong enough to prefer btts/yes or over_2.5, but over 1.5 is a safer option given the scoring rates",
+        "market": "over_under",
+        "selection": "over_1.5",
+        "odd": "1.44"
+      },
+      "result": "W",
+      "score": "0-2"
+    },
+    {
+      "id": "lev_ovi",
+      "home": "Levante",
+      "homeEn": "Levante",
+      "away": "Oviedo",
+      "awayEn": "Oviedo",
+      "date": "2026-03-21",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.6/game, recent BTTS and over 2.5 trends are not strong enough to fire the btts or over_2.5 rules cleanly, but the xG suggests a decent chance of a higher-scoring game, and the odd is within the desired range",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.05"
+      },
+      "result": "W",
+      "score": "4-2"
+    },
+    {
+      "id": "osa_gir",
+      "home": "Осасуна",
+      "homeEn": "Osasuna",
+      "away": "Хирона",
+      "awayEn": "Girona",
+      "date": "2026-03-21",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "И двата вкарват",
+        "betEn": "Both Teams to Score Yes",
+        "conf": 72,
+        "confReason": "Both teams scored in 4+/6 recent games and strong BTTS history, combined expected goals ~2.7 supports this, odd is within the sweet spot",
+        "market": "btts",
+        "selection": "yes",
+        "odd": "1.75"
+      },
+      "result": "L",
+      "score": "1-0"
+    },
+    {
+      "id": "esp_get",
+      "home": "Еспаньол",
+      "homeEn": "Espanyol",
+      "away": "Хетафе",
+      "awayEn": "Getafe",
+      "date": "2026-03-21",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "И двата вкарват",
+        "betEn": "Both Teams to Score",
+        "conf": 78,
+        "confReason": "Espanyol have BTTS in 6/6 recent games and Getafe have a low scoring record, but Espanyol's high BTTS frequency makes this a strong bet",
+        "market": "btts",
+        "selection": "yes",
+        "odd": "1.73"
+      },
+      "result": "W",
+      "score": "1-2"
+    },
+    {
+      "id": "elc_mal",
+      "home": "Elche CF",
+      "homeEn": "Elche CF",
+      "away": "Майорка",
+      "awayEn": "Mallorca",
+      "date": "2026-03-21",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.9, recent BTTS and over 2.5 trends in both teams, and no clear h2h edge",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.1"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "lee_bre",
+      "home": "Лийдс",
+      "homeEn": "Leeds",
+      "away": "Брентфорд",
+      "awayEn": "Brentford",
+      "date": "2026-03-21",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "И двата вкарват",
+        "betEn": "Both Teams to Score",
+        "conf": 68,
+        "confReason": "Brentford has BTTS in 4/6 recent games and Leeds in 3/6, combined expected goals is ~2.6, which is close to the required 2.5, and the odd is within the 1.40-2.50 range",
+        "market": "btts",
+        "selection": "yes",
+        "odd": "1.83"
+      },
+      "result": "L",
+      "score": "0-0"
+    },
+    {
+      "id": "eve_che",
+      "home": "Евъртън",
+      "homeEn": "Everton",
+      "away": "Челси",
+      "awayEn": "Chelsea",
+      "date": "2026-03-21",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.3/game is below the 3.0 threshold, but recent games show BTTS in 3/6 for Everton and 4/6 for Chelsea, and over 2.5 in 3/6 for Everton and 4/6 for Chelsea, suggesting a decent chance of a high-scoring game",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
+      },
+      "result": "W",
+      "score": "3-0"
+    },
+    {
+      "id": "ful_bur",
+      "home": "Фулъм",
+      "homeEn": "Fulham",
+      "away": "Бърнли",
+      "awayEn": "Burnley",
+      "date": "2026-03-21",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Фулъм победа",
+        "betEn": "Fulham Win",
+        "conf": 78,
+        "confReason": "Fulham are 8 places above Burnley, recent form shows Fulham's ability to score and win, and the odd is within the sweet spot",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.53"
+      },
+      "result": "W",
+      "score": "3-1"
+    },
+    {
+      "id": "bri_liv",
+      "home": "Брайтън",
+      "homeEn": "Brighton",
+      "away": "Ливърпул",
+      "awayEn": "Liverpool",
+      "date": "2026-03-21",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.6, recent over 2.5 in 1/6 and 3/6 games respectively, but no clear h2h or btts edge. The odd is within the sweet spot and the teams' scoring and conceding rates suggest a potential for a high-scoring game.",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.75"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
     {
       "id": "vil_rso",
       "home": "Вияреал",
@@ -1077,200 +925,15 @@
       },
       "result": "W",
       "score": "2-1"
-    },
-    {
-      "id": "rma_elc",
-      "home": "Реал Мадрид",
-      "homeEn": "Real Madrid",
-      "away": "Elche CF",
-      "awayEn": "Elche CF",
-      "date": "2026-03-14",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Реал Мадрид победа",
-        "betEn": "Real Madrid Win",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.22",
-        "confReason": ""
-      },
-      "result": "W",
-      "score": "4-1"
-    },
-    {
-      "id": "ovi_val",
-      "home": "Oviedo",
-      "homeEn": "Oviedo",
-      "away": "Валенсия",
-      "awayEn": "Valencia",
-      "date": "2026-03-14",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.2",
-        "confReason": ""
-      },
-      "result": "L",
-      "score": "1-0"
-    },
-    {
-      "id": "atm_get",
-      "home": "Атлетико Мадрид",
-      "homeEn": "Atlético Madrid",
-      "away": "Хетафе",
-      "awayEn": "Getafe",
-      "date": "2026-03-14",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.3",
-        "confReason": ""
-      },
-      "result": "L",
-      "score": "1-0"
-    },
-    {
-      "id": "gir_bil",
-      "home": "Хирона",
-      "homeEn": "Girona",
-      "away": "Athletic Bilbao",
-      "awayEn": "Athletic Bilbao",
-      "date": "2026-03-14",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.0",
-        "confReason": ""
-      },
-      "result": "W",
-      "score": "3-0"
-    },
-    {
-      "id": "ala_vil",
-      "home": "Алавес",
-      "homeEn": "Deportivo Alavés",
-      "away": "Вияреал",
-      "awayEn": "Villarreal",
-      "date": "2026-03-13",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.95",
-        "confReason": ""
-      },
-      "result": "L",
-      "score": "1-1"
-    },
-    {
-      "id": "ray_lev",
-      "home": "Райо Валекано",
-      "homeEn": "Rayo Vallecano",
-      "away": "Levante",
-      "awayEn": "Levante",
-      "date": "2026-03-16",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.85",
-        "confReason": ""
-      },
-      "result": "L",
-      "score": "1-1"
-    },
-    {
-      "id": "bre_wol",
-      "home": "Брентфорд",
-      "homeEn": "Brentford",
-      "away": "Уулвърхямптън",
-      "awayEn": "Wolverhampton Wanderers",
-      "date": "2026-03-16",
-      "competition": "Висша лига · Кръг ",
-      "competitionEn": "Premier League · GW",
-      "pick": {
-        "bet": "Брентфорд победа",
-        "betEn": "Brentford Win",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.57",
-        "confReason": ""
-      },
-      "result": "L",
-      "score": "2-2"
-    },
-    {
-      "id": "liv_tot",
-      "home": "Ливърпул",
-      "homeEn": "Liverpool",
-      "away": "Тотнъм",
-      "awayEn": "Tottenham",
-      "date": "2026-03-15",
-      "competition": "Висша лига · Кръг ",
-      "competitionEn": "Premier League · GW",
-      "pick": {
-        "bet": "Ливърпул победа",
-        "betEn": "Liverpool Win",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.33",
-        "confReason": ""
-      },
-      "result": "L",
-      "score": "1-1"
-    },
-    {
-      "id": "for_ful",
-      "home": "Нотингам Форест",
-      "homeEn": "Nottingham Forest",
-      "away": "Фулъм",
-      "awayEn": "Fulham",
-      "date": "2026-03-15",
-      "competition": "Висша лига · Кръг ",
-      "competitionEn": "Premier League · GW",
-      "pick": {
-        "bet": "Под 2.5 гола",
-        "betEn": "Under 2.5 Goals",
-        "conf": 0,
-        "market": "over_under",
-        "selection": "under_2.5",
-        "odd": "1.8",
-        "confReason": ""
-      },
-      "result": "W",
-      "score": "0-0"
     }
   ],
   "record": {
-    "correct": 48,
-    "total": 85,
+    "correct": 55,
+    "total": 94,
     "period": "ЛЕ 26.02.2026"
+  },
+  "bbRecord": {
+    "correct": 0,
+    "total": 0
   }
 }
