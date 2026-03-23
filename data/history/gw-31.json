@@ -6,6 +6,153 @@
   "date_rangeEn": "2026-03-19 – 2026-03-22",
   "results": [
     {
+      "id": "tot_for",
+      "home": "Тотнъм",
+      "homeEn": "Tottenham",
+      "away": "Нотингам Форест",
+      "awayEn": "Nottingham Forest",
+      "date": "2026-03-22",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "И двата вкарват",
+        "betEn": "Both Teams to Score",
+        "conf": 68,
+        "confReason": "Tottenham's recent games have BTTS in 6/6, and Nottingham Forest's games have BTTS in 3/6. Combined expected goals are ~2.8, which supports the possibility of both teams scoring. The odd is within the 1.40-2.50 sweet spot.",
+        "market": "btts",
+        "selection": "yes",
+        "odd": "1.91"
+      },
+      "result": "L",
+      "score": "0-3"
+    },
+    {
+      "id": "avl_whu",
+      "home": "Астън Вила",
+      "homeEn": "Aston Villa",
+      "away": "Уест Хем",
+      "awayEn": "West Ham",
+      "date": "2026-03-22",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Астън Вила победа",
+        "betEn": "Aston Villa Win",
+        "conf": 72,
+        "confReason": "Aston Villa are 8 places above West Ham, recent form is mixed but Aston Villa have a clear strength advantage, and the head-to-head odd is within the preferred range",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.91"
+      },
+      "result": "W",
+      "score": "2-0"
+    },
+    {
+      "id": "new_sun",
+      "home": "Нюкасъл",
+      "homeEn": "Newcastle",
+      "away": "Съндърланд",
+      "awayEn": "Sunderland",
+      "date": "2026-03-22",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.6, Newcastle's recent games have BTTS in 5/6 and over 2.5 in 4/6, Sunderland's defensive record is a concern, but the odd is within the sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
+      },
+      "result": "W",
+      "score": "1-2"
+    },
+    {
+      "id": "lee_bre",
+      "home": "Лийдс",
+      "homeEn": "Leeds",
+      "away": "Брентфорд",
+      "awayEn": "Brentford",
+      "date": "2026-03-21",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "И двата вкарват",
+        "betEn": "Both Teams to Score",
+        "conf": 68,
+        "confReason": "Brentford has BTTS in 4/6 recent games and Leeds in 3/6, combined expected goals is ~2.6, which is close to the required 2.5, and the odd is within the 1.40-2.50 range",
+        "market": "btts",
+        "selection": "yes",
+        "odd": "1.83"
+      },
+      "result": "L",
+      "score": "0-0"
+    },
+    {
+      "id": "eve_che",
+      "home": "Евъртън",
+      "homeEn": "Everton",
+      "away": "Челси",
+      "awayEn": "Chelsea",
+      "date": "2026-03-21",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.3/game is below the 3.0 threshold, but recent games show BTTS in 3/6 for Everton and 4/6 for Chelsea, and over 2.5 in 3/6 for Everton and 4/6 for Chelsea, suggesting a decent chance of a high-scoring game",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
+      },
+      "result": "W",
+      "score": "3-0"
+    },
+    {
+      "id": "ful_bur",
+      "home": "Фулъм",
+      "homeEn": "Fulham",
+      "away": "Бърнли",
+      "awayEn": "Burnley",
+      "date": "2026-03-21",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Фулъм победа",
+        "betEn": "Fulham Win",
+        "conf": 78,
+        "confReason": "Fulham are 8 places above Burnley, recent form shows Fulham's ability to score and win, and the odd is within the sweet spot",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.53"
+      },
+      "result": "W",
+      "score": "3-1"
+    },
+    {
+      "id": "bri_liv",
+      "home": "Брайтън",
+      "homeEn": "Brighton",
+      "away": "Ливърпул",
+      "awayEn": "Liverpool",
+      "date": "2026-03-21",
+      "competition": "Висша лига · Кръг 31",
+      "competitionEn": "Premier League · GW31",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.6, recent over 2.5 in 1/6 and 3/6 games respectively, but no clear h2h or btts edge. The odd is within the sweet spot and the teams' scoring and conceding rates suggest a potential for a high-scoring game.",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.75"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
       "id": "bou_mun",
       "home": "Борнемут",
       "homeEn": "Bournemouth",
@@ -28,7 +175,7 @@
     }
   ],
   "record": {
-    "correct": 1,
-    "total": 1
+    "correct": 6,
+    "total": 8
   }
 }
