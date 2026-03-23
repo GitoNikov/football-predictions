@@ -534,7 +534,7 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client, fd_k
 
             if odds_wh:
                 print(f"\n  🔎  Searching news for {home_en} vs {away_en}…", end=" ", flush=True)
-                news = search_team_news(home_en, away_en)
+                news = search_team_news(home_en, away_en, comp["en"])
                 print("✓")
                 print(f"  🤖  Groq pick for {home_en} vs {away_en}…", end=" ", flush=True)
                 pick_raw = groq_pick(groq_client, home_en, away_en, ai_ctx, odds_wh, news)
@@ -590,6 +590,7 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client, fd_k
                 "odds_wh":       odds_wh,
                 "prob":          prob,
                 "aiCtx":         ai_ctx,
+                "newsCtx":       news,
             })
             added += 1
 
@@ -830,9 +831,8 @@ def build_ai_ctx(home_en: str, away_en: str, home_st: dict, away_st: dict,
 
 
 # ── Web search ────────────────────────────────────────────────────────────────
-def search_team_news(home_en: str, away_en: str) -> str:
-    """Search DuckDuckGo for injuries, suspensions, and team news. Returns a short summary."""
-    # Domains that never contain useful football team news
+def search_team_news(home_en: str, away_en: str, competition: str = "football") -> str:
+    """Search DuckDuckGo for injuries/suspensions per team. Returns a short summary."""
     SKIP_DOMAINS = (
         "wikipedia.org", "tripadvisor", "booking.com", "airbnb",
         "visitbournemouth", "timeout.com", "yelp.com", "hotels.com",
@@ -840,16 +840,19 @@ def search_team_news(home_en: str, away_en: str) -> str:
     )
     try:
         from duckduckgo_search import DDGS
-        query = f"{home_en} FC vs {away_en} FC premier league injury suspension team news"
-        results = DDGS().text(query, max_results=6)
-        snippets = [
-            r["body"] for r in results
-            if r.get("body") and not any(d in r.get("href", "") for d in SKIP_DOMAINS)
-        ]
-        return " | ".join(snippets[:3]) if snippets else "No recent news found."
+        snippets = []
+        for team in (home_en, away_en):
+            query   = f"{team} injury suspension team news {competition}"
+            results = DDGS().text(query, max_results=4)
+            team_snippets = [
+                r["body"] for r in results
+                if r.get("body") and not any(d in r.get("href", "") for d in SKIP_DOMAINS)
+            ]
+            snippets.extend(team_snippets[:2])
+        return " | ".join(snippets[:4]) if snippets else ""
     except Exception as e:
         print(f"    ⚠  News search failed: {e}")
-        return "News search unavailable."
+        return ""
 
 
 # ── Groq ──────────────────────────────────────────────────────────────────────
@@ -1104,7 +1107,7 @@ def process_domestic_league(
         odds_wh = extract_wh_odds(ev)
 
         print(f"\n  🔎  Searching news for {home_en} vs {away_en}…", end=" ", flush=True)
-        news = search_team_news(home_en, away_en)
+        news = search_team_news(home_en, away_en, league_en)
         print("✓")
         print(f"  🤖  Groq pick for {home_en} vs {away_en}…", end=" ", flush=True)
         pick_raw = groq_pick(groq_client, home_en, away_en, ai_ctx, odds_wh, news)
@@ -1139,7 +1142,8 @@ def process_domestic_league(
                 "d": round(100 / float(odds_wh["x"])) if "x" in odds_wh else 25,
                 "a": round(100 / float(odds_wh["a"])) if "a" in odds_wh else 25,
             },
-            "aiCtx": ai_ctx,
+            "aiCtx":    ai_ctx,
+            "newsCtx":  news,
         }
         if league_en != "Premier League":
             match_entry["competition"]   = league_en

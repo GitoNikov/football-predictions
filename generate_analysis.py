@@ -29,8 +29,8 @@ except ImportError:
     _DDGS_AVAILABLE = False
 
 
-def search_team_news(home_en: str, away_en: str) -> str:
-    """Search DuckDuckGo for injuries/suspensions. Returns a short snippet or empty string."""
+def search_team_news(home_en: str, away_en: str, competition: str = "football") -> str:
+    """Search DuckDuckGo for injuries/suspensions per team. Returns a short snippet or empty string."""
     if not _DDGS_AVAILABLE:
         return ""
     SKIP_DOMAINS = (
@@ -39,13 +39,16 @@ def search_team_news(home_en: str, away_en: str) -> str:
         "expedia.com", "lonelyplanet.com", "britannica.com",
     )
     try:
-        query   = f"{home_en} FC vs {away_en} FC premier league injury suspension team news"
-        results = DDGS().text(query, max_results=6)
-        snippets = [
-            r["body"] for r in results
-            if r.get("body") and not any(d in r.get("href", "") for d in SKIP_DOMAINS)
-        ]
-        return " | ".join(snippets[:3]) if snippets else ""
+        snippets = []
+        for team in (home_en, away_en):
+            query   = f"{team} injury suspension team news {competition}"
+            results = DDGS().text(query, max_results=4)
+            team_snippets = [
+                r["body"] for r in results
+                if r.get("body") and not any(d in r.get("href", "") for d in SKIP_DOMAINS)
+            ]
+            snippets.extend(team_snippets[:2])
+        return " | ".join(snippets[:4]) if snippets else ""
     except Exception:
         return ""
 
@@ -325,7 +328,8 @@ def main():
         away_en = match.get("awayEn", "")
 
         if not analysis_ok:
-            raw_news = search_team_news(home_en, away_en)
+            competition = match.get("competition", "Premier League")
+            raw_news = search_team_news(home_en, away_en, competition)
             if raw_news:
                 clean_news = summarize_news(client, home_en, away_en, raw_news)
                 match["newsCtx"] = clean_news or raw_news[:300]
