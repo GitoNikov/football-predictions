@@ -1,5 +1,12 @@
 [
   {
+    "gw": 32,
+    "label": "Висша лига · Кръг 32",
+    "labelEn": "Premier League · GW32",
+    "correct": 4,
+    "total": 9
+  },
+  {
     "gw": 31,
     "label": "Висша лига · Кръг 31",
     "labelEn": "Premier League · GW31",
