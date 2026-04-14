@@ -7,108 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "mun_lee",
-      "home": "Ман Юнайтед",
-      "homeEn": "Manchester United",
-      "homeA": "MUN",
-      "away": "Лийдс",
-      "awayEn": "Leeds",
-      "awayA": "LEE",
-      "date": "2026-04-13",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Ман Юнайтед победа",
-        "betEn": "Manchester United Win",
-        "conf": 78,
-        "confReason": "Manchester United are 8 places above Leeds, recent form is strong with 4 wins in last 6, and the odd is within the 1.40-2.50 sweet spot",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.57"
-      },
-      "odds_wh": {
-        "a": "5.0",
-        "h": "1.62",
-        "x": "4.0",
-        "o25": "1.67"
-      },
-      "prob": {
-        "h": 62,
-        "d": 25,
-        "a": 20
-      },
-      "aiCtx": "Manchester United are 3rd in the Premier League (55 pts), scoring 1.81 and conceding 1.39 goals per game, BTTS in 5/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): D 1-1, W 1-0, W 2-1, L 1-2, W 3-1, D 2-2. Leeds are 15th (33 pts), scoring 1.19 and conceding 1.55 goals per game, BTTS in 2/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): D 2-2, D 1-1, L 0-1, L 0-1, D 0-0, D 0-0. Combined expected goals (home scores + away concedes): ~3.4/game. H2H last 1: Manchester United 0W-1D-0L, avg 2.0 goals/game.",
-      "newsCtx": "Attending an information session is the first step in the admission process for each program. The program coordinator for each program will … | Aug 19, 2020 · Manchester Community College offers non-credit courses in Workforce Development as well as Personal …",
-      "sidePicks": [
-        {
-          "market": "cards",
-          "bet": "Над 3.5 картона",
-          "betEn": "Over 3.5 Cards",
-          "reasoning": "Мачът между Ман Юнайтед и Лийдс вероятно ще бъде интензивен и с много фоли, което би довело до над 3.5 картона.",
-          "reasoningEn": "The match between Manchester United and Leeds is likely to be intense with many fouls, leading to over 3.5 cards."
-        },
-        {
-          "market": "corners",
-          "bet": "Над 9.5 ъглови",
-          "betEn": "Over 9.5 Corners",
-          "reasoning": "Атакуващият стил на Ман Юнайтед и нуждата на Лийдс да преследва резултат ще генерират много ъглови в мача.",
-          "reasoningEn": "Manchester United's attacking style and Leeds' need to chase the result will generate many corners in the match."
-        }
-      ]
-    },
-    {
-      "id": "lev_get",
-      "home": "Levante",
-      "homeEn": "Levante",
-      "homeA": "LEV",
-      "away": "Хетафе",
-      "awayEn": "Getafe",
-      "awayA": "GET",
-      "date": "2026-04-13",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 1.5 гола",
-        "betEn": "Over 1.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.2/game, no clear h2h or btts edge, and the odd is within the 1.40-2.50 range",
-        "market": "over_under",
-        "selection": "over_1.5",
-        "odd": "2.7"
-      },
-      "odds_wh": {
-        "a": "2.8",
-        "h": "2.62",
-        "x": "3.0",
-        "o25": "2.7"
-      },
-      "prob": {
-        "h": 38,
-        "d": 33,
-        "a": 36
-      },
-      "aiCtx": "Levante are 20th in the La Liga (26 pts), scoring 1.13 and conceding 1.67 goals per game, BTTS in 3/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 0-3, W 2-0, D 1-1, D 1-1, W 4-2, L 0-2. Getafe are 8th (41 pts), scoring 0.9 and conceding 1.03 goals per game, BTTS in 1/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): L 0-1, W 1-0, W 2-0, L 0-1, W 2-1, W 2-0. Combined expected goals (home scores + away concedes): ~2.2/game. H2H last 1: Levante 0W-1D-0L, avg 2.0 goals/game.",
-      "newsCtx": "Mar 2, 2026 · Sports Mole rounds up all of the latest injury and suspension news ahead of Monday's La Liga clash between Real Madrid and Getafe. | Track football injuries and suspensions across Premier League, La Liga, Serie A, Bundesliga, Ligue 1, and Süper Lig. Real-time updates on player availabi",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "sidePicks": [
-        {
-          "market": "cards",
-          "bet": "Над 3.5 картона",
-          "betEn": "Over 3.5 Cards",
-          "reasoning": "Мачът между отборите с по-слаба форма като Levante и солидния Хетафе вероятно ще бъде много физичен и с много прекъсвания.",
-          "reasoningEn": "The match between the struggling Levante and solid Getafe is likely to be very physical with many interruptions."
-        },
-        {
-          "market": "corners",
-          "bet": "Над 9.5 ъглови",
-          "betEn": "Over 9.5 Corners",
-          "reasoning": "Ако Levante се опитат да преследват резултата срещу Хетафе, това вероятно ще доведе до повече ъглови в мача.",
-          "reasoningEn": "If Levante try to chase the result against Getafe, this will likely lead to more corners in the match."
-        }
-      ]
-    },
-    {
       "id": "e39a51d0",
       "home": "Атлетико Мадрид",
       "homeEn": "Atlético Madrid",
@@ -793,10 +691,52 @@
       }
     ],
     "totalOdd": "5.0",
-    "reasoning": "",
-    "reasoningEn": ""
+    "reasoning": "Комбинацията от Над 2.5 гола, И двата вкарват и Победа домакин е статистически обоснована, тъй като Атлетико Мадрид и Барселона имат форма, която предполага високогодови срещи с много вкарвани голове. Тази котировка предлага добра вероятност за залог, като пазарите се допълват добре поради високите показатели за вкарвани голове от двете отбори.",
+    "reasoningEn": "This combination is statistically sound as Atlético Madrid and Barcelona's recent form suggests high-scoring matches with plenty of goals, making it a viable bet with a good probability of success."
   },
   "results": [
+    {
+      "id": "lev_get",
+      "home": "Levante",
+      "homeEn": "Levante",
+      "away": "Хетафе",
+      "awayEn": "Getafe",
+      "date": "2026-04-13",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 1.5 гола",
+        "betEn": "Over 1.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.2/game, no clear h2h or btts edge, and the odd is within the 1.40-2.50 range",
+        "market": "over_under",
+        "selection": "over_1.5",
+        "odd": "2.7"
+      },
+      "result": "L",
+      "score": "1-0"
+    },
+    {
+      "id": "mun_lee",
+      "home": "Ман Юнайтед",
+      "homeEn": "Manchester United",
+      "away": "Лийдс",
+      "awayEn": "Leeds",
+      "date": "2026-04-13",
+      "competition": "Висша лига · Кръг 32",
+      "competitionEn": "Premier League · GW32",
+      "pick": {
+        "bet": "Ман Юнайтед победа",
+        "betEn": "Manchester United Win",
+        "conf": 78,
+        "confReason": "Manchester United are 8 places above Leeds, recent form is strong with 4 wins in last 6, and the odd is within the 1.40-2.50 sweet spot",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.57"
+      },
+      "result": "L",
+      "score": "1-2"
+    },
     {
       "id": "bil_vil",
       "home": "Athletic Bilbao",
@@ -1384,53 +1324,15 @@
       },
       "result": "L",
       "score": "0-2"
-    },
-    {
-      "id": "59fe57b2",
-      "home": "Реал Мадрид",
-      "homeEn": "Real Madrid",
-      "away": "Байерн",
-      "awayEn": "Bayern Munich",
-      "date": "2026-04-07",
-      "competition": "Шампионска лига",
-      "competitionEn": "Champions League",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 78,
-        "confReason": "Combined expected goals ~3.6, both teams have strong BTTS and over 2.5 history, and the odd is within the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.44"
-      },
-      "result": "W",
-      "score": "1-2"
-    },
-    {
-      "id": "59588b6a",
-      "home": "Спортинг",
-      "homeEn": "Sporting Lisbon",
-      "away": "Арсенал",
-      "awayEn": "Arsenal",
-      "date": "2026-04-07",
-      "competition": "Шампионска лига",
-      "competitionEn": "Champions League",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 72,
-        "confReason": "Combined expected goals ~2.6, recent over 2.5 in 6/6 Sporting Lisbon games and strong scoring form, but Arsenal's defense is solid, introducing some uncertainty",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.85"
-      },
-      "result": "L",
-      "score": "0-1"
     }
   ],
   "record": {
     "correct": 81,
-    "total": 141,
+    "total": 143,
     "period": "ЛЕ 26.02.2026"
+  },
+  "bbRecord": {
+    "correct": 0,
+    "total": 0
   }
 }
