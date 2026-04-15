@@ -6,6 +6,27 @@
   "date_rangeEn": "2026-04-14 – 2026-04-16",
   "results": [
     {
+      "id": "mun_lee",
+      "home": "Ман Юнайтед",
+      "homeEn": "Manchester United",
+      "away": "Лийдс",
+      "awayEn": "Leeds",
+      "date": "2026-04-13",
+      "competition": "Висша лига · Кръг 32",
+      "competitionEn": "Premier League · GW32",
+      "pick": {
+        "bet": "Ман Юнайтед победа",
+        "betEn": "Manchester United Win",
+        "conf": 78,
+        "confReason": "Manchester United are 8 places above Leeds, recent form is strong with 4 wins in last 6, and the odd is within the 1.40-2.50 sweet spot",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.57"
+      },
+      "result": "L",
+      "score": "1-2"
+    },
+    {
       "id": "che_mci",
       "home": "Челси",
       "homeEn": "Chelsea",
@@ -197,6 +218,6 @@
   ],
   "record": {
     "correct": 4,
-    "total": 9
+    "total": 10
   }
 }
