@@ -2,8 +2,8 @@
   "gw": 32,
   "label": "Висша лига · Кръг 32",
   "labelEn": "Premier League · GW32",
-  "date_range": "2026-04-14 – 2026-04-16",
-  "date_rangeEn": "2026-04-14 – 2026-04-16",
+  "date_range": "2026-04-18 – 2026-04-25",
+  "date_rangeEn": "2026-04-18 – 2026-04-25",
   "results": [
     {
       "id": "mun_lee",
@@ -193,31 +193,10 @@
       },
       "result": "L",
       "score": "1-2"
-    },
-    {
-      "id": "whu_wol",
-      "home": "Уест Хем",
-      "homeEn": "West Ham",
-      "away": "Уулвърхямптън",
-      "awayEn": "Wolverhampton Wanderers",
-      "date": "2026-04-10",
-      "competition": "Висша лига · Кръг 32",
-      "competitionEn": "Premier League · GW32",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.9, recent over 2.5 in 3/6 games for Wolverhampton and 1/6 for West Ham, with no clear h2h or btts edge, and the odd is within the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.8"
-      },
-      "result": "W",
-      "score": "4-0"
     }
   ],
   "record": {
-    "correct": 4,
-    "total": 10
+    "correct": 3,
+    "total": 9
   }
 }
