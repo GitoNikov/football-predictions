@@ -1,0 +1,202 @@
+{
+  "gw": 33,
+  "label": "Висша лига · Кръг 33",
+  "labelEn": "Premier League · GW33",
+  "date_range": "2026-04-18 – 2026-04-25",
+  "date_rangeEn": "2026-04-18 – 2026-04-25",
+  "results": [
+    {
+      "id": "mci_ars",
+      "home": "Ман Сити",
+      "homeEn": "Manchester City",
+      "away": "Арсенал",
+      "awayEn": "Arsenal",
+      "date": "2026-04-19",
+      "competition": "Висша лига · Кръг 33",
+      "competitionEn": "Premier League · GW33",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.8, recent over 2.5 in 4/6 Manchester City games, and no clear h2h or btts edge",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.91"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "eve_liv",
+      "home": "Евъртън",
+      "homeEn": "Everton",
+      "away": "Ливърпул",
+      "awayEn": "Liverpool",
+      "date": "2026-04-19",
+      "competition": "Висша лига · Кръг 33",
+      "competitionEn": "Premier League · GW33",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.5, recent BTTS and over 2.5 trends are not strong enough to fire the respective market rules, but the odd is within the desired range",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.85"
+      },
+      "result": "W",
+      "score": "1-2"
+    },
+    {
+      "id": "for_bur",
+      "home": "Нотингам Форест",
+      "homeEn": "Nottingham Forest",
+      "away": "Бърнли",
+      "awayEn": "Burnley",
+      "date": "2026-04-19",
+      "competition": "Висша лига · Кръг 33",
+      "competitionEn": "Premier League · GW33",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 72,
+        "confReason": "Combined expected goals ~3.0, recent BTTS and over 2.5 trends for both teams are decent, but not strong enough to prefer BTTS; odd is within the sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.75"
+      },
+      "result": "W",
+      "score": "4-1"
+    },
+    {
+      "id": "avl_sun",
+      "home": "Астън Вила",
+      "homeEn": "Aston Villa",
+      "away": "Съндърланд",
+      "awayEn": "Sunderland",
+      "date": "2026-04-19",
+      "competition": "Висша лига · Кръг 33",
+      "competitionEn": "Premier League · GW33",
+      "pick": {
+        "bet": "Астън Вила победа",
+        "betEn": "Aston Villa Win",
+        "conf": 68,
+        "confReason": "Aston Villa are 6 places above Sunderland in the league, and their recent form, although not perfect, still indicates a stronger team. The odd of 1.65 is within the preferred range, making this the best value pick.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.65"
+      },
+      "result": "W",
+      "score": "4-3"
+    },
+    {
+      "id": "che_mun",
+      "home": "Челси",
+      "homeEn": "Chelsea",
+      "away": "Ман Юнайтед",
+      "awayEn": "Manchester United",
+      "date": "2026-04-18",
+      "competition": "Висша лига · Кръг 33",
+      "competitionEn": "Premier League · GW33",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 78,
+        "confReason": "Combined expected goals ~3.1, both teams have high recent over 2.5 frequency (5/6), and the odd is within the sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.55"
+      },
+      "result": "L",
+      "score": "0-1"
+    },
+    {
+      "id": "tot_bri",
+      "home": "Тотнъм",
+      "homeEn": "Tottenham",
+      "away": "Брайтън",
+      "awayEn": "Brighton",
+      "date": "2026-04-18",
+      "competition": "Висша лига · Кръг 33",
+      "competitionEn": "Premier League · GW33",
+      "pick": {
+        "bet": "И двата вкарват",
+        "betEn": "Both Teams to Score",
+        "conf": 68,
+        "confReason": "Tottenham's recent BTTS in 4/6 and Brighton's decent scoring record, but Brighton's BTTS in only 2/6 recent games introduces some uncertainty",
+        "market": "btts",
+        "selection": "yes",
+        "odd": "1.95"
+      },
+      "result": "W",
+      "score": "2-2"
+    },
+    {
+      "id": "lee_wol",
+      "home": "Лийдс",
+      "homeEn": "Leeds",
+      "away": "Уулвърхямптън",
+      "awayEn": "Wolverhampton Wanderers",
+      "date": "2026-04-18",
+      "competition": "Висша лига · Кръг 33",
+      "competitionEn": "Premier League · GW33",
+      "pick": {
+        "bet": "Лийдс победа",
+        "betEn": "Leeds Win",
+        "conf": 78,
+        "confReason": "Leeds are 8 places above Wolverhampton, recent form is not strongly in favor but the gap in the standings and the odds of 1.62 are within the sweet spot, making it the best value pick",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.62"
+      },
+      "result": "W",
+      "score": "3-0"
+    },
+    {
+      "id": "new_bou",
+      "home": "Нюкасъл",
+      "homeEn": "Newcastle",
+      "away": "Борнемут",
+      "awayEn": "Bournemouth",
+      "date": "2026-04-18",
+      "competition": "Висша лига · Кръг 33",
+      "competitionEn": "Premier League · GW33",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 78,
+        "confReason": "Combined expected goals ~2.9/game is close to 3.0 threshold, recent BTTS and over 2.5 trends for Newcastle are strong, and the odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.44"
+      },
+      "result": "W",
+      "score": "1-2"
+    },
+    {
+      "id": "bre_ful",
+      "home": "Брентфорд",
+      "homeEn": "Brentford",
+      "away": "Фулъм",
+      "awayEn": "Fulham",
+      "date": "2026-04-18",
+      "competition": "Висша лига · Кръг 33",
+      "competitionEn": "Premier League · GW33",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 72,
+        "confReason": "Combined expected goals ~2.9, recent BTTS and over 2.5 trends for both teams, and odd is within the sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.75"
+      },
+      "result": "L",
+      "score": "0-0"
+    }
+  ],
+  "record": {
+    "correct": 7,
+    "total": 9
+  }
+}
