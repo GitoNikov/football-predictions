@@ -2,9 +2,51 @@
   "gw": 33,
   "label": "Висша лига · Кръг 33",
   "labelEn": "Premier League · GW33",
-  "date_range": "2026-04-18 – 2026-04-25",
-  "date_rangeEn": "2026-04-18 – 2026-04-25",
+  "date_range": "2026-04-24",
+  "date_rangeEn": "2026-04-24",
   "results": [
+    {
+      "id": "bri_che",
+      "home": "Брайтън",
+      "homeEn": "Brighton",
+      "away": "Челси",
+      "awayEn": "Chelsea",
+      "date": "2026-04-21",
+      "competition": "Висша лига · Кръг 33",
+      "competitionEn": "Premier League · GW33",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.6, recent over 2.5 in 3/6 for Brighton and 4/6 for Chelsea, but not enough to fire over_2.5 rule strongly; however, it's the best available option given the context and odds within the 1.40-2.50 range",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.65"
+      },
+      "result": "W",
+      "score": "3-0"
+    },
+    {
+      "id": "pal_whu",
+      "home": "Кристъл Палас",
+      "homeEn": "Crystal Palace",
+      "away": "Уест Хем",
+      "awayEn": "West Ham",
+      "date": "2026-04-20",
+      "competition": "Висша лига · Кръг 33",
+      "competitionEn": "Premier League · GW33",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.9/game, recent BTTS and over 2.5 trends in both teams, and the odd is within the sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.8"
+      },
+      "result": "L",
+      "score": "0-0"
+    },
     {
       "id": "mci_ars",
       "home": "Ман Сити",
@@ -196,7 +238,7 @@
     }
   ],
   "record": {
-    "correct": 7,
-    "total": 9
+    "correct": 8,
+    "total": 11
   }
 }
