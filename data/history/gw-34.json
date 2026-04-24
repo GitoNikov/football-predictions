@@ -1,0 +1,55 @@
+{
+  "gw": 34,
+  "label": "Висша лига · Кръг 34",
+  "labelEn": "Premier League · GW34",
+  "date_range": "2026-04-25 – 2026-04-28",
+  "date_rangeEn": "2026-04-25 – 2026-04-28",
+  "results": [
+    {
+      "id": "bur_mci",
+      "home": "Бърнли",
+      "homeEn": "Burnley",
+      "away": "Ман Сити",
+      "awayEn": "Manchester City",
+      "date": "2026-04-22",
+      "competition": "Висша лига · Кръг 34",
+      "competitionEn": "Premier League · GW34",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 72,
+        "confReason": "Combined expected goals is ~1.9, but recent games and H2H suggest high-scoring context, with 5/6 Manchester City games and 3/6 Burnley games going over 2.5, and the last H2H having 6.0 goals/game on average",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.3"
+      },
+      "result": "L",
+      "score": "0-1"
+    },
+    {
+      "id": "bou_lee",
+      "home": "Борнемут",
+      "homeEn": "Bournemouth",
+      "away": "Лийдс",
+      "awayEn": "Leeds",
+      "date": "2026-04-22",
+      "competition": "Висша лига · Кръг 34",
+      "competitionEn": "Premier League · GW34",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 72,
+        "confReason": "Combined expected goals ~3.0/game, recent BTTS and over 2.5 trends for Bournemouth, and no clear h2h or btts edge",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.7"
+      },
+      "result": "W",
+      "score": "2-2"
+    }
+  ],
+  "record": {
+    "correct": 1,
+    "total": 2
+  }
+}
