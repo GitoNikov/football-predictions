@@ -7,226 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "ray_rso",
-      "home": "Райо Валекано",
-      "homeEn": "Rayo Vallecano",
-      "homeA": "RAY",
-      "away": "Реал Сосиедад",
-      "awayEn": "Real Sociedad",
-      "awayA": "RSO",
-      "date": "2026-04-26",
-      "time": "14:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.5, recent BTTS and over 2.5 trends for Real Sociedad, and no clear h2h edge",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.91"
-      },
-      "odds_wh": {
-        "h": "2.2",
-        "a": "3.2",
-        "x": "3.1",
-        "o25": "1.91"
-      },
-      "prob": {
-        "h": 45,
-        "d": 32,
-        "a": 31
-      },
-      "aiCtx": "Rayo Vallecano are 13th in the La Liga (38 pts), scoring 0.94 and conceding 1.19 goals per game, BTTS in 2/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): D 1-1, D 1-1, L 0-1, W 1-0, L 0-3, W 1-0. Real Sociedad are 8th (42 pts), scoring 1.53 and conceding 1.53 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 2-3, W 3-1, L 1-3, W 2-0, D 3-3, L 0-1. Combined expected goals (home scores + away concedes): ~2.5/game. H2H last 1: Rayo Vallecano 1W-0D-0L, avg 1.0 goals/game.",
-      "newsCtx": "Say hello to Rayo! Discover your favourite radio stations and podcasts all in one place. | El primer paso de la seguridad es comprender cómo los desarrolladores recopilan y comparten tus datos. Las prácticas de privacidad y …",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "sidePicks": [
-        {
-          "market": "cards",
-          "bet": "Над 3.5 картона",
-          "betEn": "Over 3.5 Cards",
-          "reasoning": "Мачът между Райо Валекано и Реал Сосиедад ще бъде интензивен и с много борби за топката, което ще доведе до повече картони.",
-          "reasoningEn": "The match between Rayo Vallecano and Real Sociedad will be intense with many battles for the ball, leading to more cards."
-        },
-        {
-          "market": "corners",
-          "bet": "Над 9.5 ъглови",
-          "betEn": "Over 9.5 Corners",
-          "reasoning": "Атакуващият стил на Реал Сосиедад и противата тактика на Райо Валекано ще доведат до много атаки от крилото и следователно повече ъглови.",
-          "reasoningEn": "Real Sociedad's attacking style and Rayo Vallecano's counterattacking tactics will lead to many wide attacks and consequently more corners."
-        }
-      ],
-      "ai": "Райо Валекано заемат 13-то място в Ла Лига с 38 точки, вкарват 0.94 гола на мач и допускат 1.19 гола, като формата им от последните 6 мача е Р 1-1, Р 1-1, З 0-1, П 1-0, З 0-3, П 1-0, а Реал Сосиедад е на 8-о място с 42 точки, вкарват 1.53 гола на мач и допускат 1.53 гола, с форма от последните 6 мача З 2-3, П 3-1, З 1-3, П 2-0, Р 3-3, З 0-1. Двубойът между тези два отбора обещава да бъде богат на голове, тъй като домакините и гостите имат скорошни резултати с много голове, което подтазва прогнозата за над 2.5 гола. Прогнозата за този мач е над 2.5 гола с котировка 1.91.",
-      "aiEn": "Rayo Vallecano are 13th in the La Liga with 38 points, scoring 0.94 and conceding 1.19 goals per game, with a recent form of D 1-1, D 1-1, L 0-1, W 1-0, L 0-3, W 1-0, while Real Sociedad are 8th with 42 points, scoring 1.53 and conceding 1.53 goals per game, with a recent form of L 2-3, W 3-1, L 1-3, W 2-0, D 3-3, L 0-1. The match between these two teams is expected to be high-scoring, as both teams have had recent results with many goals, which supports the case for Over 2.5 goals. The pick for this match is Over 2.5 goals at odds of 1.91.",
-      "aiCtxHash": "7609c06b"
-    },
-    {
-      "id": "ovi_elc",
-      "home": "Oviedo",
-      "homeEn": "Oviedo",
-      "homeA": "OVI",
-      "away": "Elche CF",
-      "awayEn": "Elche CF",
-      "awayA": "ELC",
-      "date": "2026-04-26",
-      "time": "16:15",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.3, Elche CF recent games have BTTS in 4/6 and over 2.5 in 4/6, but not meeting the 3.0 threshold for over_2.5, however, Oviedo's recent form and Elche CF's scoring/conceding rate support this pick",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.05"
-      },
-      "odds_wh": {
-        "a": "3.1",
-        "h": "2.3",
-        "x": "3.1",
-        "o25": "2.05"
-      },
-      "prob": {
-        "h": 43,
-        "d": 32,
-        "a": 32
-      },
-      "aiCtx": "Oviedo are 20th in the La Liga (28 pts), scoring 0.78 and conceding 1.53 goals per game, BTTS in 3/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): D 1-1, W 1-0, L 2-4, W 1-0, W 3-0, D 1-1. Elche CF are 16th (35 pts), scoring 1.31 and conceding 1.53 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 1-2, L 1-4, W 2-1, L 0-1, W 1-0, W 3-2. Combined expected goals (home scores + away concedes): ~2.3/game. H2H last 1: Oviedo 0W-0D-1L, avg 1.0 goals/game.",
-      "newsCtx": "Elche is a must for many reasons, such as its many nature reserves, its coastal towns and its prestigious gastronomy, to name a few. To learn of the origins of this city in the province of Alicante, you should … | Apr 9, 2025 · Where is Elche? Elche, or Elx in Valencian, is a town in southeast Spain",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "sidePicks": [
-        {
-          "market": "cards",
-          "bet": "Над 3.5 картона",
-          "betEn": "Over 3.5 Cards",
-          "reasoning": "Мачът между Oviedo и Elche CF ще бъде много интензивен и с много борби, което ще доведе до повече картони.",
-          "reasoningEn": "The match between Oviedo and Elche CF will be very intense with a lot of battles, leading to more cards."
-        },
-        {
-          "market": "corners",
-          "bet": "Над 9.5 ъглови",
-          "betEn": "Over 9.5 Corners",
-          "reasoning": "Играятите на Oviedo и Elche CF често използват крилата и това ще доведе до повече ъглови в мача.",
-          "reasoningEn": "Oviedo and Elche CF often use wide play, which will lead to more corners in the match."
-        }
-      ],
-      "ai": "Двубойът между Oviedo и Elche CF е между двата отбора, които се намират на 20-то и 16-то място в лигата, като домакините вкарват 0.78 гола на мач и допускат 1.53 гола, а гостите вкарват 1.31 гола и допускат 1.53 гола, с форма от П 1-0, З 2-4, П 1-0, П 3-0, Р 1-1 за Oviedo и З 1-2, З 1-4, П 2-1, З 0-1, П 1-0, П 3-2 за Elche CF. Формата на двата отбора и средният брой голове, които вкарват и допускат, говори за над 2.5 гола в този двубой, тъй като и двата отбора имат скорошни резултати с много голове. Прогнозата е над 2.5 гола при котировка 2.05.",
-      "aiEn": "Oviedo, 20th in the league with 28 points, scoring 0.78 and conceding 1.53 goals per game, and recent form of D 1-1, W 1-0, L 2-4, W 1-0, W 3-0, D 1-1, face Elche CF, 16th with 35 points, scoring 1.31 and conceding 1.53 goals per game, with recent form of L 1-2, L 1-4, W 2-1, L 0-1, W 1-0, W 3-2. The Over 2.5 case is made by both teams' goals per game averages and high-scoring recent form results, suggesting a potentially open and attacking game. The pick is Over 2.5 Goals at exact odds 2.05.",
-      "aiCtxHash": "47063e01"
-    },
-    {
-      "id": "osa_sev",
-      "home": "Осасуна",
-      "homeEn": "Osasuna",
-      "homeA": "OSA",
-      "away": "Севиля",
-      "awayEn": "Sevilla",
-      "awayA": "SEV",
-      "date": "2026-04-26",
-      "time": "18:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 1.5 гола",
-        "betEn": "Over 1.5",
-        "conf": 68,
-        "confReason": "Combined expected goals is ~2.8, which is within the 2.0-2.9 range, and no clear h2h or btts edge, making over 1.5 a reasonable choice",
-        "market": "over_under",
-        "selection": "over_1.5",
-        "odd": "1.44"
-      },
-      "odds_wh": {
-        "h": "2.1",
-        "a": "3.3",
-        "x": "3.3",
-        "o25": "2.05"
-      },
-      "prob": {
-        "h": 48,
-        "d": 30,
-        "a": 30
-      },
-      "aiCtx": "Osasuna are 10th in the La Liga (39 pts), scoring 1.16 and conceding 1.22 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): D 2-2, L 1-3, W 1-0, D 2-2, D 1-1, L 0-1. Sevilla are 17th (34 pts), scoring 1.22 and conceding 1.66 goals per game, BTTS in 3/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): D 1-1, L 2-5, L 0-2, L 0-1, W 2-1, L 0-2. Combined expected goals (home scores + away concedes): ~2.8/game. H2H last 1: Osasuna 0W-0D-1L, avg 1.0 goals/game.",
-      "newsCtx": "Discover the city’s rich history, get practical travel tips, and book the best tours for the Alcázar, the Cathedral, and more. Seville is … | The Alcazar de Sevilla rivals the Alhambra in Granada. The Seville Cathedral is the largest in the world and the Plaza de España is probably …",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "sidePicks": [
-        {
-          "market": "cards",
-          "bet": "Над 3.5 картона",
-          "betEn": "Over 3.5 Cards",
-          "reasoning": "Мачът между Осасуна и Севиля вероятно ще бъде физически и интензивен, което би могло да доведе до повече картони.",
-          "reasoningEn": "The match between Osasuna and Sevilla is likely to be physical and intense, which could lead to more cards."
-        },
-        {
-          "market": "corners",
-          "bet": "Над 9.5 ъглови",
-          "betEn": "Over 9.5 Corners",
-          "reasoning": "Осасуна и Севиля обикновено играят атакувайки по фланговете, което би могло да доведе до повече ъглови в този мач.",
-          "reasoningEn": "Osasuna and Sevilla usually play with wide attacking style, which could lead to more corners in this match."
-        }
-      ],
-      "ai": "Осасуна заемат 10-то място в ла лига с 39 точки, вкарват 1.16 гола на мач и допускат 1.22 гола, последните 6 мача са били Р 2-2, З 1-3, П 1-0, Р 2-2, Р 1-1, З 0-1, докато Севиля е на 17-то място с 34 точки, вкарват 1.22 гола на мач и допускат 1.66 гола, последните 6 мача са били Р 1-1, З 2-5, З 0-2, З 0-1, П 2-1, З 0-2. Двубойът между тези два отбора обещава да бъде с много голове, тъй като Осасуна вкарват средно 1.16 гола, а Севиля допуска средно 1.66 гола на мач, а в последните мачове има много резултати с над 2.5 гола. Прогнозата е над 1.5 гола с котировка 1.44 при Уилям Хил.",
-      "aiEn": "Osasuna are 10th in the La Liga with 39 points, scoring 1.16 and conceding 1.22 goals per game, with recent form of D 2-2, L 1-3, W 1-0, D 2-2, D 1-1, L 0-1, while Sevilla are 17th with 34 points, scoring 1.22 and conceding 1.66 goals per game, with recent form of D 1-1, L 2-5, L 0-2, L 0-1, W 2-1, L 0-2. The match between these two teams is likely to be high-scoring, as Osasuna score an average of 1.16 goals per game, while Sevilla concede an average of 1.66 goals per game, and recent form has seen several high-scoring results. The pick is Over 1.5 at 1.44 with William Hill.",
-      "aiCtxHash": "b91cec41"
-    },
-    {
-      "id": "vil_cel",
-      "home": "Вияреал",
-      "homeEn": "Villarreal",
-      "homeA": "VIL",
-      "away": "Селта Виго",
-      "awayEn": "Celta Vigo",
-      "awayA": "CEL",
-      "date": "2026-04-26",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 78,
-        "confReason": "Combined expected goals ~3.1, recent BTTS and over 2.5 trends for both teams, and the odd is within the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.75"
-      },
-      "odds_wh": {
-        "a": "3.5",
-        "h": "1.95",
-        "x": "3.4",
-        "o25": "1.75"
-      },
-      "prob": {
-        "h": 51,
-        "d": 29,
-        "a": 29
-      },
-      "aiCtx": "Villarreal are 3rd in the La Liga (62 pts), scoring 1.78 and conceding 1.16 goals per game, BTTS in 5/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 2-1, D 1-1, W 3-1, L 0-1, W 2-1, D 1-1. Celta Vigo are 7th (44 pts), scoring 1.38 and conceding 1.28 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 1-2, D 1-1, L 3-4, W 3-2, L 0-3, L 0-1. Combined expected goals (home scores + away concedes): ~3.1/game.",
-      "newsCtx": "2 days ago · Página web oficial del Villarreal CF. Información del club amarillo, jugadores, calendario, venta de entradas, tienda online y … | Youth Football Villarreal C vs Atzeneta, live on V Play Villarreal will broadcast the match against the Valencian side free of charge (Sunday, …",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "sidePicks": [
-        {
-          "market": "cards",
-          "bet": "Над 3.5 картона",
-          "betEn": "Over 3.5 Cards",
-          "reasoning": "Мачът между Вияреал и Селта Виго обещава да бъде интензивен и с много контракции, което увеличава вероятността за над 3.5 картона.",
-          "reasoningEn": "The match between Villarreal and Celta Vigo is expected to be intense with many confrontations, increasing the likelihood of over 3.5 cards."
-        },
-        {
-          "market": "corners",
-          "bet": "Над 9.5 ъглови",
-          "betEn": "Over 9.5 Corners",
-          "reasoning": "Играта на Вияреал и Селта Виго често включва широка игра и атаки по крилата, което би трябвало да доведе до над 9.5 ъглови.",
-          "reasoningEn": "The gameplay of Villarreal and Celta Vigo often involves wide play and wing attacks, which should lead to over 9.5 corners."
-        }
-      ],
-      "ai": "Вияреал заема 3-то място в ла лига с 62 точки, вкарват 1.78 гола на мач и допускат 1.16 гола, а Селта Виго е 7-ма с 44 точки, вкарват 1.38 гола и допускат 1.28 гола, като формата им в последните 6 мача е съответно П 2-1, Р 1-1, П 3-1, З 0-1, П 2-1, Р 1-1 за Вияреал и З 1-2, Р 1-1, З 3-4, П 3-2, З 0-3, З 0-1 за Селта Виго. Двубойът между домакините и гостите обещава да бъде многорезултатен, тъй като Вияреал вкарват почти 2 гола на мач, а Селта Виго допускат над 1.2 гола, а и последните им мачове са били с много голове. Прогнозата е над 2.5 гола с котировка 1.75.",
-      "aiEn": "Villarreal are 3rd in the La Liga with 62 points, scoring 1.78 and conceding 1.16 goals per game, with a recent form of W 2-1, D 1-1, W 3-1, L 0-1, W 2-1, D 1-1, while Celta Vigo are 7th with 44 points, scoring 1.38 and conceding 1.28 goals per game, with a recent form of L 1-2, D 1-1, L 3-4, W 3-2, L 0-3, L 0-1. The match between the two teams is expected to be high-scoring, as Villarreal score almost 2 goals per game, while Celta Vigo concede over 1.2 goals per game, and their recent matches have had many goals. The pick is Over 2.5 at 1.75.",
-      "aiCtxHash": "8efcb89d"
-    },
-    {
       "id": "9ee53c45",
       "home": "ПСЖ",
       "homeEn": "Paris Saint Germain",
@@ -589,9 +369,9 @@
       },
       "aiCtx": "Shakhtar Donetsk vs Crystal Palace in the Conference League.",
       "newsCtx": "Crystal of Atlan is an hub based MMO action RPG set in a floating continent where magic and machines coexist. Developed by Vi_Games | May 3, 2023 · Recently, I've been researching alternative launchers to Tlauncher, as some YouTubers and Reddit users have claimed it to be a spyware. Since I run a Mi",
-      "ai": "Двубойът между Шахтьор и Кристъл Палас в Конференс Лига е много оспорван, като домакините вкарват 1.5 гола на мач, а гостите допускат 1.2 гола. Шахтьор има форма П 2-1, Р 1-1, З 0-2 и има предимство на своя терен, което ги прави фаворити за този мач. Прогнозата е Шахтьор да спечели при котировка 3.6 при Уилям Хил.",
-      "aiEn": "Shakhtar Donetsk and Crystal Palace face off in the Conference League, with Shakhtar scoring an average of 1.5 goals per game and Crystal Palace conceding 1.2 goals per game, and their recent form is W 2-0, D 1-1, L 0-2. Shakhtar has a home advantage and a strong scoring record, making a strong case for a home win. The pick is Shakhtar Donetsk to win at odds of 3.6 with William Hill.",
-      "aiCtxHash": "4453d4ec",
+      "ai": "Двубойът между Шахтьор и Кристъл Палас е от Conference League, където домакините вкарват 1.5 гола на мач, а гостите допускат 1.2 гола. Шахтьор има добра форма и позиция, което им дава предимство в срещата, тъй като домакините са в добра форма и имат голова сила. Прогнозата е Шахтьор да спечели при котировка 3.6",
+      "aiEn": "Shakhtar Donetsk and Crystal Palace face off in the Conference League, with Shakhtar Donetsk having recent form of and Crystal Palace having recent form of. Shakhtar Donetsk has a strong position and scoring strength, giving them a form advantage that makes a home win likely. The pick is Shakhtar Donetsk to win at exactly 3.6 odds.",
+      "aiCtxHash": "84f08cc7",
       "sidePicks": [
         {
           "market": "cards",
@@ -693,6 +473,90 @@
     "reasoningEn": "This combination of markets appears statistically sound, given the recent form of both Deportivo Alavés and Mallorca, with their respective scoring and conceding patterns aligning with the over 2.5 goals, BTTS, and home win markets."
   },
   "results": [
+    {
+      "id": "vil_cel",
+      "home": "Вияреал",
+      "homeEn": "Villarreal",
+      "away": "Селта Виго",
+      "awayEn": "Celta Vigo",
+      "date": "2026-04-26",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 78,
+        "confReason": "Combined expected goals ~3.1, recent BTTS and over 2.5 trends for both teams, and the odd is within the sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.75"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "osa_sev",
+      "home": "Осасуна",
+      "homeEn": "Osasuna",
+      "away": "Севиля",
+      "awayEn": "Sevilla",
+      "date": "2026-04-26",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 1.5 гола",
+        "betEn": "Over 1.5",
+        "conf": 68,
+        "confReason": "Combined expected goals is ~2.8, which is within the 2.0-2.9 range, and no clear h2h or btts edge, making over 1.5 a reasonable choice",
+        "market": "over_under",
+        "selection": "over_1.5",
+        "odd": "1.44"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "ovi_elc",
+      "home": "Oviedo",
+      "homeEn": "Oviedo",
+      "away": "Elche CF",
+      "awayEn": "Elche CF",
+      "date": "2026-04-26",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.3, Elche CF recent games have BTTS in 4/6 and over 2.5 in 4/6, but not meeting the 3.0 threshold for over_2.5, however, Oviedo's recent form and Elche CF's scoring/conceding rate support this pick",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.05"
+      },
+      "result": "W",
+      "score": "1-2"
+    },
+    {
+      "id": "ray_rso",
+      "home": "Райо Валекано",
+      "homeEn": "Rayo Vallecano",
+      "away": "Реал Сосиедад",
+      "awayEn": "Real Sociedad",
+      "date": "2026-04-26",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.5, recent BTTS and over 2.5 trends for Real Sociedad, and no clear h2h edge",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.91"
+      },
+      "result": "W",
+      "score": "3-3"
+    },
     {
       "id": "atm_bil",
       "home": "Атлетико Мадрид",
@@ -1238,95 +1102,11 @@
       },
       "result": "W",
       "score": "2-1"
-    },
-    {
-      "id": "eve_liv",
-      "home": "Евъртън",
-      "homeEn": "Everton",
-      "away": "Ливърпул",
-      "awayEn": "Liverpool",
-      "date": "2026-04-19",
-      "competition": "Висша лига · Кръг 33",
-      "competitionEn": "Premier League · GW33",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.5, recent BTTS and over 2.5 trends are not strong enough to fire the respective market rules, but the odd is within the desired range",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.85"
-      },
-      "result": "W",
-      "score": "1-2"
-    },
-    {
-      "id": "for_bur",
-      "home": "Нотингам Форест",
-      "homeEn": "Nottingham Forest",
-      "away": "Бърнли",
-      "awayEn": "Burnley",
-      "date": "2026-04-19",
-      "competition": "Висша лига · Кръг 33",
-      "competitionEn": "Premier League · GW33",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 72,
-        "confReason": "Combined expected goals ~3.0, recent BTTS and over 2.5 trends for both teams are decent, but not strong enough to prefer BTTS; odd is within the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.75"
-      },
-      "result": "W",
-      "score": "4-1"
-    },
-    {
-      "id": "avl_sun",
-      "home": "Астън Вила",
-      "homeEn": "Aston Villa",
-      "away": "Съндърланд",
-      "awayEn": "Sunderland",
-      "date": "2026-04-19",
-      "competition": "Висша лига · Кръг 33",
-      "competitionEn": "Premier League · GW33",
-      "pick": {
-        "bet": "Астън Вила победа",
-        "betEn": "Aston Villa Win",
-        "conf": 68,
-        "confReason": "Aston Villa are 6 places above Sunderland in the league, and their recent form, although not perfect, still indicates a stronger team. The odd of 1.65 is within the preferred range, making this the best value pick.",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.65"
-      },
-      "result": "W",
-      "score": "4-3"
-    },
-    {
-      "id": "che_mun",
-      "home": "Челси",
-      "homeEn": "Chelsea",
-      "away": "Ман Юнайтед",
-      "awayEn": "Manchester United",
-      "date": "2026-04-18",
-      "competition": "Висша лига · Кръг 33",
-      "competitionEn": "Premier League · GW33",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 78,
-        "confReason": "Combined expected goals ~3.1, both teams have high recent over 2.5 frequency (5/6), and the odd is within the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.55"
-      },
-      "result": "L",
-      "score": "0-1"
     }
   ],
   "record": {
-    "correct": 110,
-    "total": 189,
+    "correct": 114,
+    "total": 193,
     "period": "ЛЕ 26.02.2026"
   },
   "bbRecord": {
