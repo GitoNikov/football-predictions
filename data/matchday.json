@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-24T08:21:49Z",
+  "updated_at": "2026-04-27T08:19:23Z",
   "label": "Висша лига · Кръг 34",
   "labelEn": "Premier League · GW34",
-  "date_range": "2026-04-27 – 2026-04-30",
-  "date_rangeEn": "2026-04-27 – 2026-04-30",
+  "date_range": "2026-05-01",
+  "date_rangeEn": "2026-05-01",
   "sport": "soccer_epl",
   "upcoming": [
     {
@@ -74,9 +74,9 @@
       "status": "pending",
       "pick": {
         "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 78,
-        "confReason": "Combined expected goals ~3.1, recent BTTS and over 2.5 trends for Manchester United, and the odd is within the 1.40-2.50 sweet spot",
+        "betEn": "Over 2.5",
+        "conf": 72,
+        "confReason": "Combined expected goals ~3.1, recent BTTS and over 2.5 trends for Manchester United, and odd is within the 1.40-2.50 sweet spot",
         "market": "over_under",
         "selection": "over_2.5",
         "odd": "1.57"
@@ -94,9 +94,6 @@
       },
       "aiCtx": "Manchester United are 3rd in the Premier League (58 pts), scoring 1.76 and conceding 1.36 goals per game, BTTS in 5/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): W 2-1, L 1-2, W 3-1, D 2-2, L 1-2, W 1-0. Brentford are 9th (48 pts), scoring 1.45 and conceding 1.33 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 4-3, D 0-0, D 2-2, D 0-0, D 2-2, D 0-0. Combined expected goals (home scores + away concedes): ~3.1/game. H2H last 1: Manchester United 0W-0D-1L, avg 4.0 goals/game.",
       "newsCtx": "",
-      "ai": "Ман Юнайтед заемат 3-то място в Пример Лига с 58 точки, вкарват 1.76 гола на мач и допускат 1.36 гола, с форма от П 2-1, З 1-2, П 3-1, Р 2-2, З 1-2, П 1-0, докато Брентфорд е 9-ти с 48 точки, вкарват 1.45 гола на мач и допускат 1.33 гола, с форма от П 4-3, Р 0-0, Р 2-2, Р 0-0, Р 2-2, Р 0-0. Двубойът между домакините и гостите обещава да бъде с много голове, тъй като Ман Юнайтед и Брентфорд имат скорошни резултати с много голове. Прогнозата е над 2.5 гола с котировка 1.57.",
-      "aiEn": "Manchester United are 3rd in the Premier League with 58 points, scoring 1.76 and conceding 1.36 goals per game, with recent form of W 2-1, L 1-2, W 3-1, D 2-2, L 1-2, W 1-0, while Brentford are 9th with 48 points, scoring 1.45 and conceding 1.33 goals per game, with recent form of W 4-3, D 0-0, D 2-2, D 0-0, D 2-2, D 0-0. The match between the two teams is likely to be high-scoring, given both teams' goals per game averages and recent high-scoring form results. The pick is Over 2.5 Goals at 1.57.",
-      "aiCtxHash": "db233f9a",
       "sidePicks": [
         {
           "market": "cards",
@@ -127,12 +124,12 @@
       "status": "pending",
       "pick": {
         "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
+        "betEn": "Over 2.5 Goals",
         "conf": 68,
-        "confReason": "Combined expected goals ~2.7, recent BTTS in 4/6 for Espanyol and 3/6 for Levante, but not enough to fire BTTS rule; over 2.5 odd is in the sweet spot, but context not extremely high-scoring",
+        "confReason": "Combined expected goals ~2.7, recent BTTS in 4/6 for Espanyol and 3/6 for Levante, but not enough to fire BTTS rule; over 2.5 odd is in sweet spot, but context not extremely high-scoring",
         "market": "over_under",
         "selection": "over_2.5",
-        "odd": "1.85"
+        "odd": "2.05"
       },
       "odds_wh": {
         "h": "2.05",
@@ -145,13 +142,10 @@
         "d": 29,
         "a": 29
       },
-      "aiCtx": "Espanyol are 12th in the La Liga (38 pts), scoring 1.16 and conceding 1.53 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): D 1-1, L 1-2, L 1-2, D 0-0, L 1-4, L 0-1. Levante are 19th (32 pts), scoring 1.16 and conceding 1.56 goals per game, BTTS in 3/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): D 1-1, D 1-1, W 4-2, L 0-2, W 1-0, W 2-0. Combined expected goals (home scores + away concedes): ~2.7/game. H2H last 1: Espanyol 0W-1D-0L, avg 2.0 goals/game.",
+      "aiCtx": "Espanyol are 14th in the La Liga (38 pts), scoring 1.16 and conceding 1.53 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): D 1-1, L 1-2, L 1-2, D 0-0, L 1-4, L 0-1. Levante are 19th (32 pts), scoring 1.16 and conceding 1.56 goals per game, BTTS in 3/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): D 1-1, D 1-1, W 4-2, L 0-2, W 1-0, W 2-0. Combined expected goals (home scores + away concedes): ~2.7/game. H2H last 1: Espanyol 0W-1D-0L, avg 2.0 goals/game.",
       "newsCtx": "",
       "competition": "La Liga",
       "competitionBG": "Ла Лига",
-      "ai": "Домакините Еспаньол заемат 12-то място в ла лига с 38 точки, вкарват 1.16 гола на мач и допускат 1.53 гола, а формата им в последните 6 мача е Р 1-1, З 1-2, З 1-2, Р 0-0, З 1-4, З 0-1, докато гостите Levante са на 19-то място с 32 точки, вкарват 1.16 гола на мач и допускат 1.56 гола, с форма П 1-1, Р 1-1, П 4-2, З 0-2, П 1-0, П 2-0. Двубоят между Еспаньол и Levante обещава да бъде богат на голове, тъй като и двата отбора имат скорошни резултати с много голове и средно вкарват над 1.1 гола на мач. Прогнозата е над 2.5 гола при котировка 1.85.",
-      "aiEn": "Espanyol are 12th in the La Liga with 38 points, scoring 1.16 and conceding 1.53 goals per game, with a recent form of D 1-1, L 1-2, L 1-2, D 0-0, L 1-4, L 0-1, while Levante are 19th with 32 points, scoring 1.16 and conceding 1.56 goals per game, with a form of D 1-1, D 1-1, W 4-2, L 0-2, W 1-0, W 2-0. The match between Espanyol and Levante is likely to be high-scoring, as both teams have recent results with multiple goals and average over 1.1 goals per game. The pick is Over 2.5 at 1.85.",
-      "aiCtxHash": "bffb0731",
       "sidePicks": [
         {
           "market": "cards",
@@ -443,34 +437,104 @@
           "reasoningEn": "The attacking style of Rayo Vallecano and Strasbourg will generate many corner opportunities, leading to over 9.5 corners."
         }
       ]
+    },
+    {
+      "id": "lee_bur",
+      "home": "Лийдс",
+      "homeEn": "Leeds",
+      "homeA": "LEE",
+      "away": "Бърнли",
+      "awayEn": "Burnley",
+      "awayA": "BUR",
+      "date": "2026-05-01",
+      "time": "21:00",
+      "status": "pending",
+      "pick": {
+        "bet": "Лийдс победа",
+        "betEn": "Leeds Win",
+        "conf": 78,
+        "confReason": "Leeds are 15th and Burnley are 19th, an 8-place gap, and Leeds have a form advantage with 3 wins in their last 6 games, while Burnley have lost 5 of their last 6 games. The odd is within the 1.40-2.50 sweet spot.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.44"
+      },
+      "odds_wh": {
+        "a": "6.5",
+        "h": "1.44",
+        "x": "4.4",
+        "o25": "1.7"
+      },
+      "prob": {
+        "h": 69,
+        "d": 23,
+        "a": 15
+      },
+      "aiCtx": "Leeds are 15th in the Premier League (40 pts), scoring 1.29 and conceding 1.5 goals per game, BTTS in 2/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-1, D 0-0, D 0-0, W 2-1, W 3-0, D 2-2. Burnley are 19th (20 pts), scoring 1.0 and conceding 2.0 goals per game, BTTS in 2/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 0-2, D 0-0, L 1-3, L 0-2, L 1-4, L 0-1. Combined expected goals (home scores + away concedes): ~3.3/game. H2H last 1: Leeds 0W-0D-1L, avg 2.0 goals/game.",
+      "newsCtx": "在利兹大学（University of Leeds） 上学是怎样一番体验？ 利兹大学（The University of Leeds）位于英国利兹市，始建于1831 … | 知乎 - 有问题，就会有答案 | The best place for all your Burnley FC news, tickets, fixtures, results and videos | All fixtures and Results for Burnley FC Mens, Womens, U21s and U18s"
+    },
+    {
+      "id": "gir_mal",
+      "home": "Хирона",
+      "homeEn": "Girona",
+      "homeA": "GIR",
+      "away": "Майорка",
+      "awayEn": "Mallorca",
+      "awayA": "MAL",
+      "date": "2026-05-01",
+      "time": "21:00",
+      "status": "pending",
+      "pick": {
+        "bet": "И двата вкарват",
+        "betEn": "Both Teams to Score",
+        "conf": 72,
+        "confReason": "Mallorca have BTTS in 5/6 recent games and Girona in 3/6, combined expected goals is ~2.6, which is close to the required 2.5 for btts, and the odd is within the 1.40-2.50 range",
+        "market": "btts",
+        "selection": "yes",
+        "odd": "1.61"
+      },
+      "odds_wh": {
+        "h": "2.05",
+        "a": "3.5",
+        "x": "3.3",
+        "o25": "1.8"
+      },
+      "prob": {
+        "h": 49,
+        "d": 30,
+        "a": 29
+      },
+      "aiCtx": "Girona are 15th in the La Liga (38 pts), scoring 1.09 and conceding 1.52 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 3-0, L 0-1, W 1-0, D 1-1, L 2-3, L 1-2. Mallorca are 17th (35 pts), scoring 1.24 and conceding 1.55 goals per game, BTTS in 5/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): W 2-1, L 1-2, W 2-1, W 3-0, D 1-1, L 1-2. Combined expected goals (home scores + away concedes): ~2.6/game. H2H last 1: Girona 1W-0D-0L, avg 3.0 goals/game.",
+      "newsCtx": "",
+      "competition": "La Liga",
+      "competitionBG": "Ла Лига"
     }
   ],
   "betBuilder": {
-    "matchId": "ala_mal",
-    "home": "Алавес",
-    "homeEn": "Deportivo Alavés",
-    "away": "Майорка",
-    "awayEn": "Mallorca",
+    "matchId": "9ee53c45",
+    "home": "ПСЖ",
+    "homeEn": "Paris Saint Germain",
+    "away": "Байерн",
+    "awayEn": "Bayern Munich",
     "markets": [
+      {
+        "market": "Победа домакин",
+        "marketEn": "Home Win",
+        "odd": "2.2"
+      },
       {
         "market": "Над 2.5 гола",
         "marketEn": "Over 2.5 Goals",
-        "odd": "2.2"
+        "odd": "1.36"
       },
       {
         "market": "И двата вкарват",
         "marketEn": "BTTS Yes",
-        "odd": "not available, using h instead"
-      },
-      {
-        "market": "Победа домакин",
-        "marketEn": "Home Win",
-        "odd": "2.05"
+        "odd": "1.65"
       }
     ],
-    "totalOdd": "4.51",
-    "reasoning": "Тази комбинация от пазари изглежда много перспективна, тъй като и Алавес, и Майорка демонстрират добра форма в последните си мачове, а котировките показват, че залогът Над 2.5 гола, И двата вкарват и Победа домакин е с добра вероятност за успех.",
-    "reasoningEn": "This combination of markets appears statistically sound, given the recent form of both Deportivo Alavés and Mallorca, with their respective scoring and conceding patterns aligning with the over 2.5 goals, BTTS, and home win markets."
+    "totalOdd": "4.94",
+    "reasoning": "",
+    "reasoningEn": ""
   },
   "results": [
     {
@@ -1108,9 +1172,5 @@
     "correct": 114,
     "total": 193,
     "period": "ЛЕ 26.02.2026"
-  },
-  "bbRecord": {
-    "correct": 0,
-    "total": 0
   }
 }
