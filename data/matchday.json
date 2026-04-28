@@ -62,108 +62,6 @@
       ]
     },
     {
-      "id": "mun_bre",
-      "home": "Ман Юнайтед",
-      "homeEn": "Manchester United",
-      "homeA": "MUN",
-      "away": "Брентфорд",
-      "awayEn": "Brentford",
-      "awayA": "BRE",
-      "date": "2026-04-27",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 72,
-        "confReason": "Combined expected goals ~3.1, recent BTTS and over 2.5 trends for Manchester United, and odd is within the 1.40-2.50 sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.57"
-      },
-      "odds_wh": {
-        "a": "3.9",
-        "h": "1.83",
-        "x": "3.7",
-        "o25": "1.57"
-      },
-      "prob": {
-        "h": 55,
-        "d": 27,
-        "a": 26
-      },
-      "aiCtx": "Manchester United are 3rd in the Premier League (58 pts), scoring 1.76 and conceding 1.36 goals per game, BTTS in 5/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): W 2-1, L 1-2, W 3-1, D 2-2, L 1-2, W 1-0. Brentford are 9th (48 pts), scoring 1.45 and conceding 1.33 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 4-3, D 0-0, D 2-2, D 0-0, D 2-2, D 0-0. Combined expected goals (home scores + away concedes): ~3.1/game. H2H last 1: Manchester United 0W-0D-1L, avg 4.0 goals/game.",
-      "newsCtx": "",
-      "sidePicks": [
-        {
-          "market": "cards",
-          "bet": "Над 3.5 картона",
-          "betEn": "Over 3.5 Cards",
-          "reasoning": "Мачът между Ман Юнайтед и Брентфорд обещава да бъде интензивен и с много тактически фоли, което ще доведе до над 3.5 картона.",
-          "reasoningEn": "The match between Manchester United and Brentford promises to be intense with many tactical fouls, leading to over 3.5 cards."
-        },
-        {
-          "market": "corners",
-          "bet": "Над 9.5 ъглови",
-          "betEn": "Over 9.5 Corners",
-          "reasoning": "Атакуващият стил на Ман Юнайтед и способността на Брентфорд да играе широко ще доведат до много ъглови в мача.",
-          "reasoningEn": "Manchester United's attacking style and Brentford's ability to play wide will lead to many corners in the match."
-        }
-      ]
-    },
-    {
-      "id": "esp_lev",
-      "home": "Еспаньол",
-      "homeEn": "Espanyol",
-      "homeA": "ESP",
-      "away": "Levante",
-      "awayEn": "Levante",
-      "awayA": "LEV",
-      "date": "2026-04-27",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.7, recent BTTS in 4/6 for Espanyol and 3/6 for Levante, but not enough to fire BTTS rule; over 2.5 odd is in sweet spot, but context not extremely high-scoring",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.05"
-      },
-      "odds_wh": {
-        "h": "2.05",
-        "a": "3.4",
-        "x": "3.4",
-        "o25": "1.85"
-      },
-      "prob": {
-        "h": 49,
-        "d": 29,
-        "a": 29
-      },
-      "aiCtx": "Espanyol are 14th in the La Liga (38 pts), scoring 1.16 and conceding 1.53 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): D 1-1, L 1-2, L 1-2, D 0-0, L 1-4, L 0-1. Levante are 19th (32 pts), scoring 1.16 and conceding 1.56 goals per game, BTTS in 3/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): D 1-1, D 1-1, W 4-2, L 0-2, W 1-0, W 2-0. Combined expected goals (home scores + away concedes): ~2.7/game. H2H last 1: Espanyol 0W-1D-0L, avg 2.0 goals/game.",
-      "newsCtx": "",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "sidePicks": [
-        {
-          "market": "cards",
-          "bet": "Над 3.5 картона",
-          "betEn": "Over 3.5 Cards",
-          "reasoning": "Мачът между Еспаньол и Levante вероятно ще бъде физически и интензивен, което би довело до повече картони.",
-          "reasoningEn": "The match between Espanyol and Levante is likely to be physical and intense, leading to more cards."
-        },
-        {
-          "market": "corners",
-          "bet": "Над 9.5 ъглови",
-          "betEn": "Over 9.5 Corners",
-          "reasoning": "Играятите на Еспаньол и Levante често използват широките коридори, което би генерирало повече ъглови.",
-          "reasoningEn": "Espanyol and Levante often use the wide areas, which would generate more corners."
-        }
-      ]
-    },
-    {
       "id": "aec5613e",
       "home": "Атлетико Мадрид",
       "homeEn": "Atlético Madrid",
@@ -470,7 +368,26 @@
         "a": 15
       },
       "aiCtx": "Leeds are 15th in the Premier League (40 pts), scoring 1.29 and conceding 1.5 goals per game, BTTS in 2/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-1, D 0-0, D 0-0, W 2-1, W 3-0, D 2-2. Burnley are 19th (20 pts), scoring 1.0 and conceding 2.0 goals per game, BTTS in 2/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 0-2, D 0-0, L 1-3, L 0-2, L 1-4, L 0-1. Combined expected goals (home scores + away concedes): ~3.3/game. H2H last 1: Leeds 0W-0D-1L, avg 2.0 goals/game.",
-      "newsCtx": "在利兹大学（University of Leeds） 上学是怎样一番体验？ 利兹大学（The University of Leeds）位于英国利兹市，始建于1831 … | 知乎 - 有问题，就会有答案 | The best place for all your Burnley FC news, tickets, fixtures, results and videos | All fixtures and Results for Burnley FC Mens, Womens, U21s and U18s"
+      "newsCtx": "在利兹大学（University of Leeds） 上学是怎样一番体验？ 利兹大学（The University of Leeds）位于英国利兹市，始建于1831 … | 知乎 - 有问题，就会有答案 | The best place for all your Burnley FC news, tickets, fixtures, results and videos | All fixtures and Results for Burnley FC Mens, Womens, U21s and U18s",
+      "ai": "Лийдс заема 15-то място в лигата с 40 точки, вкарват 1,29 гола на мач и допускат 1,5 гола, а Бърнли е на 19-то място с 20 точки, вкарват 1,0 гола и допускат 2,0 гола, като формата им е съответно П 2-1, П 3-0, Р 2-2, З 0-1, Р 0-0, Р 0-0 и З 0-2, З 1-3, З 0-2, З 1-4, З 0-1, Р 0-0. Домакините имат предимство в формата и голова сила, което ги прави фаворити в двубоя, тъй като Лийдс е в по-добра форма с П 2-1, П 3-0, Р 2-2 срещу З 0-2, З 1-3, З 0-2 на Бърнли. Прогнозата е Лийдс да спечели мача, а котировка на тази прогноза е 1.44",
+      "aiEn": "Leeds are 15th in the Premier League with 40 points, scoring 1.29 and conceding 1.5 goals per game, while Burnley are 19th with 20 points, scoring 1.0 and conceding 2.0 goals per game, with recent form of W 2-1, W 3-0, D 2-2, L 0-1, D 0-0, D 0-0 and L 0-2, L 1-3, L 0-2, L 1-4, L 0-1, D 0-0 respectively. The home team has an advantage in form and scoring strength, making them favorites in the match, as Leeds have a better form with W 2-1, W 3-0, D 2-2 compared to Burnley's L 0-2, L 1-3, L 0-2. The pick is Leeds to win the match, with odds of 1.44",
+      "aiCtxHash": "7e8045ee",
+      "sidePicks": [
+        {
+          "market": "cards",
+          "bet": "Над 3.5 картона",
+          "betEn": "Over 3.5 Cards",
+          "reasoning": "Мачът между Лийдс и Бърнли вероятно ще бъде много физичен и интензивен, което ще доведе до повече картони.",
+          "reasoningEn": "The match between Leeds and Burnley is likely to be very physical and intense, leading to more cards."
+        },
+        {
+          "market": "corners",
+          "bet": "Над 9.5 ъглови",
+          "betEn": "Over 9.5 Corners",
+          "reasoning": "Атакуващият стил на Лийдс и нуждата на Бърнли да преследва играта ще генерират много ъглови.",
+          "reasoningEn": "Leeds' attacking style and Burnley's need to chase the game will generate many corners."
+        }
+      ]
     },
     {
       "id": "gir_mal",
@@ -504,9 +421,28 @@
         "a": 29
       },
       "aiCtx": "Girona are 15th in the La Liga (38 pts), scoring 1.09 and conceding 1.52 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 3-0, L 0-1, W 1-0, D 1-1, L 2-3, L 1-2. Mallorca are 17th (35 pts), scoring 1.24 and conceding 1.55 goals per game, BTTS in 5/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): W 2-1, L 1-2, W 2-1, W 3-0, D 1-1, L 1-2. Combined expected goals (home scores + away concedes): ~2.6/game. H2H last 1: Girona 1W-0D-0L, avg 3.0 goals/game.",
-      "newsCtx": "",
+      "newsCtx": "Oct 12, 2016 · Girona, located in Catalonia, Spain, sits between Barcelona and Costa Brava. It’s a gorgeous place to visit, with medieval walls, … | Jan 18, 2025 · The absolute best things to do in Girona whether you're coming for a day trip from Barcelona or you want to stay a while.",
       "competition": "La Liga",
-      "competitionBG": "Ла Лига"
+      "competitionBG": "Ла Лига",
+      "ai": "Двубойът между Хирона и Майорка е между отборите на 15-то и 17-то място в Ла Лига, като Хирона има 38 точки и вкарват 1.09 гола на мач, а Майорка има 35 точки и вкарват 1.24 гола. Формата на двата отбора показва, че Хирона имат форма от П 3-0, З 0-1, П 1-0, Р 1-1, З 2-3, З 1-2, а Майорка - П 2-1, З 1-2, П 2-1, П 3-0, Р 1-1, З 1-2, което подсказва, че двата отбора ще вкарат гола, тъй като домакините допускат 1.52 гола, а гостите вкарват 1.24 гола. Прогнозата е, че двата отбора ще вкарат гола, а котировка при този изход е 1.61.",
+      "aiEn": "Girona, 15th in the La Liga with 38 points, score 1.09 and concede 1.52 goals per game, with a recent form of W 3-0, L 0-1, W 1-0, D 1-1, L 2-3, L 1-2, while Mallorca, 17th with 35 points, score 1.24 and concede 1.55 goals per game, with a form of W 2-1, L 1-2, W 2-1, W 3-0, D 1-1, L 1-2. Given that both teams score and concede a significant number of goals per game, it is likely that both will score, as Girona concede 1.52 goals and Mallorca score 1.24 goals per game. The pick is Both Teams to Score at odds of 1.61.",
+      "aiCtxHash": "ba3a0f9d",
+      "sidePicks": [
+        {
+          "market": "cards",
+          "bet": "Над 3.5 картона",
+          "betEn": "Over 3.5 Cards",
+          "reasoning": "Мачът между Хирона и Майорка ще бъде много интензивен и с много борби, което би трябвало да доведе до над 3.5 картона.",
+          "reasoningEn": "The match between Girona and Mallorca will be very intense with a lot of battles, which should lead to over 3.5 cards."
+        },
+        {
+          "market": "corners",
+          "bet": "Над 9.5 ъглови",
+          "betEn": "Over 9.5 Corners",
+          "reasoning": "Играчите на Хирона и Майорка обичат да играят широко и да атакуват, което би трябвало да доведе до много ъглови в мача.",
+          "reasoningEn": "Girona and Mallorca players like to play wide and attack, which should lead to many corners in the match."
+        }
+      ]
     }
   ],
   "betBuilder": {
@@ -533,10 +469,52 @@
       }
     ],
     "totalOdd": "4.94",
-    "reasoning": "",
-    "reasoningEn": ""
+    "reasoning": "Комбинацията от Победа домакин, Над 2.5 гола и И двата вкарват пазари изглежда привлекателна, тъй като формата на ПСЖ и Байерн подсказва висока вероятност за голове и активна игра от двете страни. Тази комбинация предлага добра котировка, като вероятността за успех е повишена от статистиката на двата отбора.",
+    "reasoningEn": "This combination of Home Win, Over 2.5 Goals, and BTTS is statistically sound as both Paris Saint Germain and Bayern Munich have shown a tendency for high-scoring games and conceding goals, with their recent forms and goal-scoring records supporting this bet."
   },
   "results": [
+    {
+      "id": "esp_lev",
+      "home": "Еспаньол",
+      "homeEn": "Espanyol",
+      "away": "Levante",
+      "awayEn": "Levante",
+      "date": "2026-04-27",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.7, recent BTTS in 4/6 for Espanyol and 3/6 for Levante, but not enough to fire BTTS rule; over 2.5 odd is in sweet spot, but context not extremely high-scoring",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.05"
+      },
+      "result": "L",
+      "score": "0-0"
+    },
+    {
+      "id": "mun_bre",
+      "home": "Ман Юнайтед",
+      "homeEn": "Manchester United",
+      "away": "Брентфорд",
+      "awayEn": "Brentford",
+      "date": "2026-04-27",
+      "competition": "Висша лига · Кръг 34",
+      "competitionEn": "Premier League · GW34",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 72,
+        "confReason": "Combined expected goals ~3.1, recent BTTS and over 2.5 trends for Manchester United, and odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.57"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
     {
       "id": "vil_cel",
       "home": "Вияреал",
@@ -1124,53 +1102,15 @@
       },
       "result": "W",
       "score": "3-0"
-    },
-    {
-      "id": "pal_whu",
-      "home": "Кристъл Палас",
-      "homeEn": "Crystal Palace",
-      "away": "Уест Хем",
-      "awayEn": "West Ham",
-      "date": "2026-04-20",
-      "competition": "Висша лига · Кръг 33",
-      "competitionEn": "Premier League · GW33",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.9/game, recent BTTS and over 2.5 trends in both teams, and the odd is within the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.8"
-      },
-      "result": "L",
-      "score": "0-0"
-    },
-    {
-      "id": "mci_ars",
-      "home": "Ман Сити",
-      "homeEn": "Manchester City",
-      "away": "Арсенал",
-      "awayEn": "Arsenal",
-      "date": "2026-04-19",
-      "competition": "Висша лига · Кръг 33",
-      "competitionEn": "Premier League · GW33",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.8, recent over 2.5 in 4/6 Manchester City games, and no clear h2h or btts edge",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.91"
-      },
-      "result": "W",
-      "score": "2-1"
     }
   ],
   "record": {
-    "correct": 114,
-    "total": 193,
+    "correct": 115,
+    "total": 195,
     "period": "ЛЕ 26.02.2026"
+  },
+  "bbRecord": {
+    "correct": 0,
+    "total": 0
   }
 }
