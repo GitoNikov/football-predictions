@@ -2,9 +2,30 @@
   "gw": 34,
   "label": "Висша лига · Кръг 34",
   "labelEn": "Premier League · GW34",
-  "date_range": "2026-04-27 – 2026-04-30",
-  "date_rangeEn": "2026-04-27 – 2026-04-30",
+  "date_range": "2026-05-01",
+  "date_rangeEn": "2026-05-01",
   "results": [
+    {
+      "id": "mun_bre",
+      "home": "Ман Юнайтед",
+      "homeEn": "Manchester United",
+      "away": "Брентфорд",
+      "awayEn": "Brentford",
+      "date": "2026-04-27",
+      "competition": "Висша лига · Кръг 34",
+      "competitionEn": "Premier League · GW34",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 72,
+        "confReason": "Combined expected goals ~3.1, recent BTTS and over 2.5 trends for Manchester United, and odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.57"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
     {
       "id": "ars_new",
       "home": "Арсенал",
@@ -175,7 +196,7 @@
     }
   ],
   "record": {
-    "correct": 4,
-    "total": 8
+    "correct": 5,
+    "total": 9
   }
 }
