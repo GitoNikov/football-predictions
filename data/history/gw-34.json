@@ -2,8 +2,8 @@
   "gw": 34,
   "label": "Висша лига · Кръг 34",
   "labelEn": "Premier League · GW34",
-  "date_range": "2026-05-01",
-  "date_rangeEn": "2026-05-01",
+  "date_range": "2026-05-02 – 2026-05-04",
+  "date_rangeEn": "2026-05-02 – 2026-05-04",
   "results": [
     {
       "id": "mun_bre",
@@ -172,31 +172,10 @@
       },
       "result": "L",
       "score": "0-1"
-    },
-    {
-      "id": "bou_lee",
-      "home": "Борнемут",
-      "homeEn": "Bournemouth",
-      "away": "Лийдс",
-      "awayEn": "Leeds",
-      "date": "2026-04-22",
-      "competition": "Висша лига · Кръг 34",
-      "competitionEn": "Premier League · GW34",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 72,
-        "confReason": "Combined expected goals ~3.0/game, recent BTTS and over 2.5 trends for Bournemouth, and no clear h2h or btts edge",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.7"
-      },
-      "result": "W",
-      "score": "2-2"
     }
   ],
   "record": {
-    "correct": 5,
-    "total": 9
+    "correct": 4,
+    "total": 8
   }
 }
