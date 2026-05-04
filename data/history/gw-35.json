@@ -1,0 +1,181 @@
+{
+  "gw": 35,
+  "label": "Висша лига · Кръг 35",
+  "labelEn": "Premier League · GW35",
+  "date_range": "2026-05-05 – 2026-05-07",
+  "date_rangeEn": "2026-05-05 – 2026-05-07",
+  "results": [
+    {
+      "id": "avl_tot",
+      "home": "Астън Вила",
+      "homeEn": "Aston Villa",
+      "away": "Тотнъм",
+      "awayEn": "Tottenham",
+      "date": "2026-05-03",
+      "competition": "Висша лига · Кръг 35",
+      "competitionEn": "Premier League · GW35",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 72,
+        "confReason": "Combined expected goals ~2.9, recent BTTS and over 2.5 trends in both teams, and the odd is within the sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.7"
+      },
+      "result": "W",
+      "score": "1-2"
+    },
+    {
+      "id": "mun_liv",
+      "home": "Ман Юнайтед",
+      "homeEn": "Manchester United",
+      "away": "Ливърпул",
+      "awayEn": "Liverpool",
+      "date": "2026-05-03",
+      "competition": "Висша лига · Кръг 35",
+      "competitionEn": "Premier League · GW35",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 78,
+        "confReason": "Combined expected goals ~3.0, recent BTTS and over 2.5 trends in both teams, and odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.44"
+      },
+      "result": "W",
+      "score": "3-2"
+    },
+    {
+      "id": "bou_pal",
+      "home": "Борнемут",
+      "homeEn": "Bournemouth",
+      "away": "Кристъл Палас",
+      "awayEn": "Crystal Palace",
+      "date": "2026-05-03",
+      "competition": "Висша лига · Кръг 35",
+      "competitionEn": "Premier League · GW35",
+      "pick": {
+        "bet": "И двата вкарват",
+        "betEn": "Both Teams To Score Yes",
+        "conf": 72,
+        "confReason": "Both teams scored in 4/6 recent games, combined expected goals ~2.7, and strong BTTS history",
+        "market": "btts",
+        "selection": "yes",
+        "odd": "1.75"
+      },
+      "result": "L",
+      "score": "3-0"
+    },
+    {
+      "id": "ars_ful",
+      "home": "Арсенал",
+      "homeEn": "Arsenal",
+      "away": "Фулъм",
+      "awayEn": "Fulham",
+      "date": "2026-05-02",
+      "competition": "Висша лига · Кръг 35",
+      "competitionEn": "Premier League · GW35",
+      "pick": {
+        "bet": "Арсенал победа",
+        "betEn": "Arsenal Win",
+        "conf": 78,
+        "confReason": "8-place gap, home team stronger, and recent form supports the pick, with the odd being within the 1.40-2.50 sweet spot",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.44"
+      },
+      "result": "W",
+      "score": "3-0"
+    },
+    {
+      "id": "wol_sun",
+      "home": "Уулвърхямптън",
+      "homeEn": "Wolverhampton Wanderers",
+      "away": "Съндърланд",
+      "awayEn": "Sunderland",
+      "date": "2026-05-02",
+      "competition": "Висша лига · Кръг 35",
+      "competitionEn": "Premier League · GW35",
+      "pick": {
+        "bet": "Над 1.5 гола",
+        "betEn": "Over 1.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.0, recent over 2.5 in 4/6 and 3/6 games respectively, and no clear h2h or btts edge",
+        "market": "over_under",
+        "selection": "over_1.5",
+        "odd": "1.44"
+      },
+      "result": "W",
+      "score": "1-1"
+    },
+    {
+      "id": "new_bri",
+      "home": "Нюкасъл",
+      "homeEn": "Newcastle",
+      "away": "Брайтън",
+      "awayEn": "Brighton",
+      "date": "2026-05-02",
+      "competition": "Висша лига · Кръг 35",
+      "competitionEn": "Premier League · GW35",
+      "pick": {
+        "bet": "И двата вкарват",
+        "betEn": "Both Teams to Score",
+        "conf": 68,
+        "confReason": "Newcastle's recent BTTS in 4/6 and Brighton's scoring/conceding rates, but Brighton's BTTS is only 2/6 and combined xG is ~2.5, not extremely high",
+        "market": "btts",
+        "selection": "yes",
+        "odd": "1.91"
+      },
+      "result": "W",
+      "score": "3-1"
+    },
+    {
+      "id": "bre_whu",
+      "home": "Брентфорд",
+      "homeEn": "Brentford",
+      "away": "Уест Хем",
+      "awayEn": "West Ham",
+      "date": "2026-05-02",
+      "competition": "Висша лига · Кръг 35",
+      "competitionEn": "Premier League · GW35",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~3.1/game, recent form shows some high-scoring games, and the odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.67"
+      },
+      "result": "W",
+      "score": "3-0"
+    },
+    {
+      "id": "lee_bur",
+      "home": "Лийдс",
+      "homeEn": "Leeds",
+      "away": "Бърнли",
+      "awayEn": "Burnley",
+      "date": "2026-05-01",
+      "competition": "Висша лига · Кръг 35",
+      "competitionEn": "Premier League · GW35",
+      "pick": {
+        "bet": "Лийдс победа",
+        "betEn": "Leeds Win",
+        "conf": 78,
+        "confReason": "Leeds are 15th and Burnley are 19th, an 8-place gap, and Leeds have a form advantage with 3 wins in their last 6 games, while Burnley have lost 5 of their last 6 games. The odd is within the sweet spot and strongly favors the home team.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.36"
+      },
+      "result": "W",
+      "score": "3-1"
+    }
+  ],
+  "record": {
+    "correct": 7,
+    "total": 8
+  }
+}
