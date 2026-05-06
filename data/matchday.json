@@ -7,61 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "f3df07dd",
-      "home": "Арсенал",
-      "homeEn": "Arsenal",
-      "homeA": "ARS",
-      "away": "Атлетико Мадрид",
-      "awayEn": "Atlético Madrid",
-      "awayA": "ATL",
-      "date": "2026-05-05",
-      "time": "21:00",
-      "competition": "Champions League",
-      "competitionBG": "Шампионска лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Арсенал победа",
-        "betEn": "Arsenal Win",
-        "conf": 78,
-        "confReason": "11-place gap, home team strong form and defense, and odd is within the sweet spot",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.62"
-      },
-      "odds_wh": {
-        "h": "1.62",
-        "a": "5.0",
-        "x": "3.8",
-        "o25": "1.85"
-      },
-      "prob": {
-        "h": 62,
-        "d": 26,
-        "a": 20
-      },
-      "aiCtx": "Arsenal are 1st in the Champions League (24 pts), scoring 2.88 and conceding 0.5 goals per game, BTTS in 3/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): W 1-0, L 1-2, D 0-0, L 1-2, W 1-0, D 1-1. Atlético Madrid are 14th (13 pts), scoring 2.12 and conceding 1.88 goals per game, BTTS in 5/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 2-0, L 1-2, L 1-2, L 2-3, W 3-2, D 1-1. Combined expected goals (home scores + away concedes): ~4.8/game.",
-      "newsCtx": "3 days ago · Sports Mole rounds up all the latest team news ahead of Wednesday’s Champions League semi-final first-leg … | 4 days ago · Arsenal have several injury doubts of their own but can take solace from a blow for their Champions League …",
-      "ai": "Арсенал е на първо място в Шампионската лига с 24 точки, вкарват 2.88 гола и допускат 0.5 гола на мач, а формата им в последните 6 мача е П 1-0, З 1-2, Р 0-0, З 1-2, П 1-0, Р 1-1, докато Атлетико Мадрид е на 14-то място с 13 точки, вкарват 2.12 гола и допускат 1.88 гола на мач, с форма П 2-0, З 1-2, З 1-2, З 2-3, П 3-2, Р 1-1. Домакините имат предимство в формата и головата сила, което ги прави фаворити в двубоя. Прогнозата е Арсенал да спечели при котировка 1.62",
-      "aiEn": "Arsenal are 1st in the Champions League with 24 points, scoring 2.88 and conceding 0.5 goals per game, with a recent form of W 1-0, L 1-2, D 0-0, L 1-2, W 1-0, D 1-1, while Atlético Madrid are 14th with 13 points, scoring 2.12 and conceding 1.88 goals per game, with a form of W 2-0, L 1-2, L 1-2, L 2-3, W 3-2, D 1-1. The home team's position and scoring strength give them an advantage, making them favorites to win. The pick is Arsenal to win at 1.62 odds",
-      "aiCtxHash": "07b222a1",
-      "sidePicks": [
-        {
-          "market": "cards",
-          "bet": "Над 3.5 картона",
-          "betEn": "Over 3.5 Cards",
-          "reasoning": "Мачът между Арсенал и Атлетико Мадрид ще бъде интензивен и с много борби за топката, което увеличава шансовете за над 3.5 картона.",
-          "reasoningEn": "The match between Arsenal and Atlético Madrid will be intense with many battles for the ball, increasing the chances of over 3.5 cards."
-        },
-        {
-          "market": "corners",
-          "bet": "Над 9.5 ъглови",
-          "betEn": "Over 9.5 Corners",
-          "reasoning": "Атакуващият стил на Арсенал и Атлетико Мадрид, както и това, че единият от отборите вероятно ще търси равенство, ще доведе до много ъглови в мача.",
-          "reasoningEn": "The attacking style of Arsenal and Atlético Madrid, as well as the fact that one of the teams will likely be chasing the game, will lead to many corners in the match."
-        }
-      ]
-    },
-    {
       "id": "541c5e45",
       "home": "Байерн",
       "homeEn": "Bayern Munich",
@@ -371,9 +316,9 @@
       "newsCtx": "Edición digital de Levante-EMV, líder en Valencia, con las últimas noticias de Valencia, Castellón y Alicante. Noticias de la Comunidad Valenciana, deportes, política, opinión, economía ... | Mantente al día con las últimas noticias y actualidad en Valencia, incluyendo accidentes y eventos, con el p",
       "competition": "La Liga",
       "competitionBG": "Ла Лига",
-      "ai": "Домакините Levante заемат 19то място в ла лига с 33 точки, вкарват 1.12 гола на мач и допускат 1.62 гола, последните им шест мача са П 4-2, З 0-2, П 1-0, П 2-0, Р 0-0, З 1-5, а гостите Осасуна са на 10то място с 42 точки, вкарват 1.18 гола и допускат 1.24 гола, с форма от П 1-0, Р 2-2, Р 1-1, З 0-1, П 2-1, З 1-2. Двубойът между тези два отбора обещава да бъде с много голове, тъй като домакините и гостите имат добра форма и високи средни голове на мач. Прогнозата е над 2.5 гола с котировка 2.0 при William Hill.",
-      "aiEn": "Levante are 19th in the La Liga with 33 points, scoring 1.12 and conceding 1.62 goals per game, with recent form of W 4-2, L 0-2, W 1-0, W 2-0, D 0-0, L 1-5, while Osasuna are 10th with 42 points, scoring 1.18 and conceding 1.24 goals per game, with form of W 1-0, D 2-2, D 1-1, L 0-1, W 2-1, L 1-2. The case for Over 2.5 goals is strong, given both teams' high-scoring recent form results and their goals per game averages. The pick is Over 2.5 at exactly 2.0 odds with William Hill.",
-      "aiCtxHash": "0b163303",
+      "ai": "Levante заемат 19-то място в Ла Лига с 33 точки, вкарват 1.12 гола на мач и допускат 1.62 гола, след последните си резултати: П 4-2, З 0-2, П 1-0, П 2-0, Р 0-0, З 1-5, докато Осасуна е на 10-то място с 42 точки, вкарват 1.18 гола и допускат 1.24 гола, след форма: П 1-0, Р 2-2, Р 1-1, З 0-1, П 2-1, З 1-2. Двубоят между тези два отбора обещава да бъде с много голове, тъй като домакините и гостите имат добра форма и вкарват много гола в последните си мачове. Прогнозата е над 2.5 гола с котировка 2.0 при Уилям Хил.",
+      "aiEn": "Levante are 19th in the La Liga with 33 points, scoring 1.12 and conceding 1.62 goals per game, with recent form of W 4-2, L 0-2, W 1-0, W 2-0, D 0-0, L 1-5, while Osasuna are 10th with 42 points, scoring 1.18 and conceding 1.24 goals per game, with form of W 1-0, D 2-2, D 1-1, L 0-1, W 2-1, L 1-2. The case for Over 2.5 goals is strong, given both teams' high-scoring recent form results and their goals per game averages. The pick is Over 2.5 at exact odds 2.0 with William Hill.",
+      "aiCtxHash": "10fe9847",
       "sidePicks": [
         {
           "market": "cards",
@@ -412,9 +357,31 @@
     ],
     "totalOdd": "3.0",
     "reasoning": "Комбинацията от Победа домакин и Над 2.5 гола изглежда много перспективна, тъй като Арсенал и Атлетико Мадрид имат добра форма и способност да вкарат множество голове, което увеличава вероятността залогът да бъде спечелен. Тази комбинация от пазари предлага добра котировка и е добро предложение за този мач.",
-    "reasoningEn": "The combination of Home Win and Over 2.5 Goals is statistically sound due to Arsenal's strong defensive record and Atlético Madrid's propensity for high-scoring games, making this bet a viable option."
+    "reasoningEn": "The combination of Home Win and Over 2.5 Goals is statistically sound due to Arsenal's strong defensive record and Atlético Madrid's propensity for high-scoring games, making this bet a viable option.",
+    "result": "L"
   },
   "results": [
+    {
+      "id": "f3df07dd",
+      "home": "Арсенал",
+      "homeEn": "Arsenal",
+      "away": "Атлетико Мадрид",
+      "awayEn": "Atlético Madrid",
+      "date": "2026-05-05",
+      "competition": "Шампионска лига",
+      "competitionEn": "Champions League",
+      "pick": {
+        "bet": "Арсенал победа",
+        "betEn": "Arsenal Win",
+        "conf": 78,
+        "confReason": "11-place gap, home team strong form and defense, and odd is within the sweet spot",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.62"
+      },
+      "result": "W",
+      "score": "1-0"
+    },
     {
       "id": "sev_rso",
       "home": "Севиля",
@@ -1023,36 +990,15 @@
       },
       "result": "W",
       "score": "2-1"
-    },
-    {
-      "id": "osa_sev",
-      "home": "Осасуна",
-      "homeEn": "Osasuna",
-      "away": "Севиля",
-      "awayEn": "Sevilla",
-      "date": "2026-04-26",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 1.5 гола",
-        "betEn": "Over 1.5",
-        "conf": 68,
-        "confReason": "Combined expected goals is ~2.8, which is within the 2.0-2.9 range, and no clear h2h or btts edge, making over 1.5 a reasonable choice",
-        "market": "over_under",
-        "selection": "over_1.5",
-        "odd": "1.44"
-      },
-      "result": "W",
-      "score": "2-1"
     }
   ],
   "record": {
-    "correct": 133,
-    "total": 221,
+    "correct": 134,
+    "total": 222,
     "period": "ЛЕ 26.02.2026"
   },
   "bbRecord": {
     "correct": 0,
-    "total": 0
+    "total": 1
   }
 }
