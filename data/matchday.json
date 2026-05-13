@@ -60,171 +60,6 @@
       "aiCtxHash": "b41786c9"
     },
     {
-      "id": "cel_lev",
-      "home": "Селта Виго",
-      "homeEn": "Celta Vigo",
-      "homeA": "CEL",
-      "away": "Levante",
-      "awayEn": "Levante",
-      "awayA": "LEV",
-      "date": "2026-05-12",
-      "time": "19:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Селта Виго победа",
-        "betEn": "Celta Vigo Win",
-        "conf": 62,
-        "confReason": "8-place gap and home team recent form, but odd 1.75 is at top of sweet spot and Levante's form is not extremely weak",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.75"
-      },
-      "odds_wh": {
-        "h": "1.75",
-        "a": "4.2",
-        "x": "3.8",
-        "o25": "1.75"
-      },
-      "prob": {
-        "h": 57,
-        "d": 26,
-        "a": 24
-      },
-      "aiCtx": "Celta Vigo are 6th in the La Liga (50 pts), scoring 1.4 and conceding 1.26 goals per game, BTTS in 3/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 3-2, L 0-3, L 0-1, L 1-2, W 3-1, W 1-0. Levante are 19th (36 pts), scoring 1.17 and conceding 1.63 goals per game, BTTS in 2/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 0-2, W 1-0, W 2-0, D 0-0, L 1-5, W 3-2. Combined expected goals (home scores + away concedes): ~3.0/game. H2H last 1: Celta Vigo 1W-0D-0L, avg 3.0 goals/game.",
-      "newsCtx": "",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "sidePicks": [
-        {
-          "market": "cards",
-          "bet": "Над 3.5 картона",
-          "betEn": "Over 3.5 Cards",
-          "reasoning": "Мачът между Селта Виго и Levante вероятно ще има повече картони поради борбата за точки в класирането.",
-          "reasoningEn": "The match between Celta Vigo and Levante is likely to have more cards due to the battle for points in the standings."
-        },
-        {
-          "market": "corners",
-          "bet": "Над 9.5 ъглови",
-          "betEn": "Over 9.5 Corners",
-          "reasoning": "Атакуваният стил на Селта Виго и Levante ще доведе до повече ъглови в мача.",
-          "reasoningEn": "The attacking style of Celta Vigo and Levante will lead to more corners in the match."
-        }
-      ],
-      "ai": "Селта Виго заемат 6-то място в ла лига с 50 точки, вкарват 1.4 гола на мач и допускат 1.26 гола, като имат форма от П 3-2, З 0-3, З 0-1, З 1-2, П 3-1, П 1-0, докато Levante е на 19-то място с 36 точки, вкарват 1.17 гола на мач и допускат 1.63 гола, с форма от З 0-2, П 1-0, П 2-0, Р 0-0, З 1-5, П 3-2. Домакините имат предимство в формата и позицията в класирането, което ги прави фаворити в този двубой. Прогнозата е Селта Виго да спечели при котировка 1.75.",
-      "aiEn": "Celta Vigo are 6th in the La Liga with 50 points, scoring 1.4 and conceding 1.26 goals per game, with a recent form of W 3-2, L 0-3, L 0-1, L 1-2, W 3-1, W 1-0, while Levante are 19th with 36 points, scoring 1.17 and conceding 1.63 goals per game, with a form of L 0-2, W 1-0, W 2-0, D 0-0, L 1-5, W 3-2. Celta Vigo's position and scoring strength give them an advantage, making a strong case for a home win. The pick is Celta Vigo to win at 1.75.",
-      "aiCtxHash": "1039e7c1"
-    },
-    {
-      "id": "bet_elc",
-      "home": "Реал Бетис",
-      "homeEn": "Real Betis",
-      "homeA": "BET",
-      "away": "Elche CF",
-      "awayEn": "Elche CF",
-      "awayA": "ELC",
-      "date": "2026-05-12",
-      "time": "20:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Реал Бетис победа",
-        "betEn": "Real Betis Win",
-        "conf": 78,
-        "confReason": "Real Betis are 8 places above Elche CF, recent form is decent, and the odd is within the sweet spot",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.62"
-      },
-      "odds_wh": {
-        "a": "4.75",
-        "h": "1.65",
-        "x": "3.9",
-        "o25": "1.7"
-      },
-      "prob": {
-        "h": 61,
-        "d": 26,
-        "a": 21
-      },
-      "aiCtx": "Real Betis are 5th in the La Liga (54 pts), scoring 1.54 and conceding 1.23 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): D 0-0, D 1-1, W 3-2, D 1-1, W 3-0, D 2-2. Elche CF are 16th (39 pts), scoring 1.31 and conceding 1.54 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-1, W 1-0, W 3-2, W 2-1, L 1-3, D 1-1. Combined expected goals (home scores + away concedes): ~3.1/game.",
-      "newsCtx": "Search homes for sale, new construction homes, apartments, and houses for rent. See property values. Shop mortgages. | Buy & sell bags, jewelry, and clothing from designers like Chanel, Gucci, Louis Vuitton, and Prada. The RealReal is the leader in luxury resale and consignment.",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "sidePicks": [
-        {
-          "market": "cards",
-          "bet": "Над 3.5 картона",
-          "betEn": "Over 3.5 Cards",
-          "reasoning": "Мачът между Реал Бетис и Elche CF обещава да бъде интензивен и с много фоли, което ще доведе до над 3.5 картона.",
-          "reasoningEn": "The match between Real Betis and Elche CF is expected to be intense with many fouls, leading to over 3.5 cards."
-        },
-        {
-          "market": "corners",
-          "bet": "Над 9.5 ъглови",
-          "betEn": "Over 9.5 Corners",
-          "reasoning": "Атакувайкият стил на Реал Бетис и желанието на Elche CF да спечелят точки ще доведат до много ъглови в този мач.",
-          "reasoningEn": "The attacking style of Real Betis and Elche CF's desire to gain points will lead to many corners in this match."
-        }
-      ],
-      "ai": "Реал Бетис заема 5-то място в ла лига с 54 точки, вкарват 1.54 гола на мач и допускат 1.23 гола, а формата им е Р 0-0, Р 1-1, П 3-2, Р 1-1, П 3-0, Р 2-2, докато Elche CF е на 16-то място с 39 точки, вкарват 1.31 гола и допускат 1.54 гола с форма З 0-1, П 1-0, П 3-2, П 2-1, З 1-3, Р 1-1. Домакините имат предимство в формата и голова сила, което ги прави фаворити в двубоя. Прогнозата е Реал Бетис да спечели при котировка 1.62",
-      "aiEn": "Real Betis are 5th in the La Liga with 54 points, scoring 1.54 and conceding 1.23 goals per game, with a form of D 0-0, D 1-1, W 3-2, D 1-1, W 3-0, D 2-2, while Elche CF are 16th with 39 points, scoring 1.31 and conceding 1.54 goals per game, with a form of L 0-1, W 1-0, W 3-2, W 2-1, L 1-3, D 1-1. The home team's position and scoring strength give them an advantage, making a strong case for a home win. The pick is Real Betis to win at 1.62 odds",
-      "aiCtxHash": "e09ce1ab"
-    },
-    {
-      "id": "osa_atm",
-      "home": "Осасуна",
-      "homeEn": "Osasuna",
-      "homeA": "OSA",
-      "away": "Атлетико Мадрид",
-      "awayEn": "Atlético Madrid",
-      "awayA": "ATM",
-      "date": "2026-05-12",
-      "time": "21:30",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 1.5 гола",
-        "betEn": "Over 1.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.3, recent BTTS in 5/6 for Osasuna and 3/6 for Atlético Madrid, and no clear h2h or btts edge",
-        "market": "over_under",
-        "selection": "over_1.5",
-        "odd": "1.28"
-      },
-      "odds_wh": {
-        "a": "2.5",
-        "h": "2.5",
-        "x": "3.4",
-        "o25": "1.8"
-      },
-      "prob": {
-        "h": 40,
-        "d": 29,
-        "a": 40
-      },
-      "aiCtx": "Osasuna are 10th in the La Liga (42 pts), scoring 1.2 and conceding 1.29 goals per game, BTTS in 5/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): D 2-2, D 1-1, L 0-1, W 2-1, L 1-2, L 2-3. Atlético Madrid are 4th (63 pts), scoring 1.66 and conceding 1.09 goals per game, BTTS in 3/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 2-3, W 3-2, D 1-1, W 2-0, L 0-1, L 0-1. Combined expected goals (home scores + away concedes): ~2.3/game. H2H last 1: Osasuna 0W-0D-1L, avg 1.0 goals/game.",
-      "newsCtx": "2 days ago · Partido completo entre Osasuna y Barça correspondiente a la 34ª jornada de LALIGA EASPORTS. Partido completo entre Osasuna Femenino y Alavés de Primera Federación Femenina. El … | Breaking Osasuna news and in-depth analysis from the best newsroom in sports. Follow your favorite clubs. G",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "sidePicks": [
-        {
-          "market": "cards",
-          "bet": "Над 3.5 картона",
-          "betEn": "Over 3.5 Cards",
-          "reasoning": "Мачът между Осасуна и Атлетико Мадрид обещава да бъде интензивен и с много борби за топката, което ще доведе до повече картони.",
-          "reasoningEn": "The match between Osasuna and Atlético Madrid is expected to be intense and physically demanding, leading to more cards."
-        },
-        {
-          "market": "corners",
-          "bet": "Над 9.5 ъглови",
-          "betEn": "Over 9.5 Corners",
-          "reasoning": "Атакуващият стил на Осасуна и Атлетико Мадрид, както и тяхната способност да играят широко, ще доведе до повече ъглови в този мач.",
-          "reasoningEn": "The attacking style of Osasuna and Atlético Madrid, as well as their ability to play wide, will lead to more corners in this match."
-        }
-      ],
-      "ai": "Домакините Осасуна заемат 10то място в Ла Лига с 42 точки, вкарват 1.2 гола на мач и допускат 1.29 гола, като последните 6 мача им бяха Р 2-2, Р 1-1, З 0-1, П 2-1, З 1-2, З 2-3, а гостите Атлетико Мадрид са на 4то място с 63 точки, вкарват 1.66 гола на мач и допускат 1.09 гола, с форма от П 3-2, Р 1-1, П 2-0, З 0-1, З 0-1, З 2-3. Общите средни голове на мач и скорошните резултати с много голове правят двубоя между Осасуна и Атлетико Мадрид подходящ за над 2.5 гола, тъй като домакините често вкарват гола, а гостите имат солидна форма. Прогнозата е над 1.5 гола, като котировка е 1.28 при Уилям Хил.",
-      "aiEn": "Osasuna are 10th in the La Liga with 42 points, scoring 1.2 and conceding 1.29 goals per game, with a recent form of D 2-2, D 1-1, L 0-1, W 2-1, L 1-2, L 2-3, while Atlético Madrid are 4th with 63 points, scoring 1.66 and conceding 1.09 goals per game, with a form of L 2-3, W 3-2, D 1-1, W 2-0, L 0-1, L 0-1. The high-scoring recent form results and the teams' goals per game averages make a strong case for Over 2.5 goals, as Osasuna often score and Atlético Madrid have a solid form. The pick is Over 1.5 at 1.28 with William Hill.",
-      "aiCtxHash": "9488da2f"
-    },
-    {
       "id": "avl_liv",
       "home": "Астън Вила",
       "homeEn": "Aston Villa",
@@ -257,9 +92,9 @@
       },
       "aiCtx": "Aston Villa are 5th in the Premier League (59 pts), scoring 1.39 and conceding 1.28 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 2-0, D 1-1, W 4-3, L 0-1, L 1-2, D 2-2. Liverpool are 4th (59 pts), scoring 1.67 and conceding 1.33 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 2-0, L 0-2, W 2-1, W 3-1, L 2-3, D 1-1. Combined expected goals (home scores + away concedes): ~2.7/game. H2H last 1: Aston Villa 0W-0D-1L, avg 2.0 goals/game.",
       "newsCtx": "Aston Martin - the luxury British sports car manufacturer. Find your local dealer, explore our rich heritage, and discover our model range. | Aug 14, 2025 · 2026 Aston Martin Vantage After refreshing the Vantage with major upgrades for 2025, Aston Martin returns with a new 2026 … | The official Live",
-      "ai": "Астън Вила заемат 5-то място в премиершипа с 59 точки, вкарват 1.39 гола на мач и допускат 1.28 гола, а формата им от последните 6 мача е П 2-0, Р 1-1, П 4-3, З 0-1, З 1-2, Р 2-2, докато Ливърпул е на 4-то място с 59 точки, вкарват 1.67 гола и допускат 1.33 гола, с форма от П 2-0, З 0-2, П 2-1, П 3-1, З 2-3, Р 1-1. Двубоят между двата отбора обещава да бъде с много голове, тъй като и домакините, и гостите имат висок темп на вкарване на голови и скорошни резултати с над 2.5 гола. Прогнозата е над 2.5 гола при котировка 1.5.",
-      "aiEn": "Aston Villa are 5th in the Premier League with 59 points, scoring 1.39 and conceding 1.28 goals per game, with a recent form of W 2-0, D 1-1, W 4-3, L 0-1, L 1-2, D 2-2, while Liverpool are 4th with 59 points, scoring 1.67 and conceding 1.33 goals per game, with a form of W 2-0, L 0-2, W 2-1, W 3-1, L 2-3, D 1-1. The match between the two teams is likely to be high-scoring, as both teams have a high average of goals per game and recent form results with over 2.5 goals. The pick is Over 2.5 at odds of 1.5.",
-      "aiCtxHash": "74383d14",
+      "ai": "Астън Вила заемат 5то място в лигата с 59 точки, вкарват 1,39 гола и допускат 1,28 гола на мач, а формата им от последните 6 мача е П 2-0, Р 1-1, П 4-3, З 0-1, З 1-2, Р 2-2, докато Ливърпул е на 4то място с 59 точки, вкарват 1,67 гола и допускат 1,33 гола, с форма от П 2-0, З 0-2, П 2-1, П 3-1, З 2-3, Р 1-1. Двубоят между домакините и гостите обещава да бъде с много голове, тъй като и двете отбори имат скорошна форма с много голове и средно вкарват над 1,5 гола на мач. Прогнозата е над 2,5 гола при котировка 1.5 у Уилям Хил.",
+      "aiEn": "Aston Villa are 5th in the Premier League with 59 points, scoring 1.39 and conceding 1.28 goals per game, with a recent form of W 2-0, D 1-1, W 4-3, L 0-1, L 1-2, D 2-2, while Liverpool are 4th with 59 points, scoring 1.67 and conceding 1.33 goals per game, with a form of W 2-0, L 0-2, W 2-1, W 3-1, L 2-3, D 1-1. The match between the two teams is likely to be high-scoring, given both teams' recent form with high-scoring results and their average goals per game. The pick is Over 2.5 at 1.5 with William Hill.",
+      "aiCtxHash": "3cb57ba1",
       "sidePicks": [
         {
           "market": "cards",
@@ -312,9 +147,9 @@
       "newsCtx": "We host events of any magnitude, with facilities that are fully prepared to adapt to all formats. World-renowned and prestigious artists have performed here. RCD Espanyol de Barcelona has a large number … | RCD Espanyol de Barcelona plays its home games at the RCDE Stadium, located in Cornellà de Ll",
       "competition": "La Liga",
       "competitionBG": "Ла Лига",
-      "ai": "Двубойът между Еспаньол и Athletic Bilbao е между две отбора с различна форма, като Еспаньол заема 14-то място с 39 точки, вкарват 1.09 гола на мач и допускат 1.51 гола, с форма от последните 6 мача: П 0-0, З 1-4, З 0-1, Р 0-0, З 0-2, З 1-2, а Athletic Bilbao е 9-ти с 44 точки, вкарват 1.14 гола на мач и допускат 1.46 гола, с форма от последните 6 мача: З 0-2, З 1-2, П 1-0, З 2-3, П 4-2, З 0-1. Домакините и гостите имат скорошна форма с много голове, което обосновава прогнозата над 2.5 гола, тъй като Еспаньол и Athletic Bilbao имат средно голове на мач, които предвещават високорезултатен двубой. Прогнозата е над 2.5 гола при котировка 2.1 при William Hill.",
-      "aiEn": "Espanyol are 14th in the La Liga with 39 points, scoring 1.09 and conceding 1.51 goals per game, with a recent form of D 0-0, L 1-4, L 0-1, D 0-0, L 0-2, L 1-2, while Athletic Bilbao are 9th with 44 points, scoring 1.14 and conceding 1.46 goals per game, with a recent form of L 0-2, L 1-2, W 1-0, L 2-3, W 4-2, L 0-1. Both teams' goals per game averages and recent high-scoring form results, such as Athletic Bilbao's 4-2 win, make a strong case for Over 2.5 goals. The pick is Over 2.5 at 2.1 with William Hill.",
-      "aiCtxHash": "fbfb13e9",
+      "ai": "Двубойът между Еспаньол и Athletic Bilbao е между два отбора с различна форма, като Еспаньол заема 14-то място с 39 точки, вкарват 1.09 гола на мач и допускат 1.51 гола, а в последните 6 мача имат форма Р 0-0, З 1-4, З 0-1, Р 0-0, З 0-2, З 1-2, а Athletic Bilbao е 9-ти с 44 точки, вкарват 1.14 гола на мач и допускат 1.46 гола, с форма З 0-2, З 1-2, П 1-0, З 2-3, П 4-2, З 0-1. Домакините и гостите имат скорошни резултати с много голове, което прави прогнозата над 2.5 гола доста вероятна, тъй като и двата отбора имат средно голове на мач над 2.5. Прогнозата е над 2.5 гола при котировка 2.1",
+      "aiEn": "Espanyol are 14th in the league with 39 points, scoring 1.09 and conceding 1.51 goals per game, with a recent form of D 0-0, L 1-4, L 0-1, D 0-0, L 0-2, L 1-2, while Athletic Bilbao are 9th with 44 points, scoring 1.14 and conceding 1.46 goals per game, with a form of L 0-2, L 1-2, W 1-0, L 2-3, W 4-2, L 0-1. The Over 2.5 case is strong given both teams' goals per game averages and high-scoring recent form results. The pick is Over 2.5 at exact odds 2.1.",
+      "aiCtxHash": "9ca4fd19",
       "sidePicks": [
         {
           "market": "cards",
@@ -367,9 +202,9 @@
       "newsCtx": "The Alcazar de Sevilla rivals the Alhambra in Granada. The Seville Cathedral is the largest in the world and the Plaza de España is probably the most beautiful square in Spain. These are just a few of the … | May 18, 2024 · Strolling the streets of the historic old town, visiting the Cathedral and t",
       "competition": "La Liga",
       "competitionBG": "Ла Лига",
-      "ai": "Вияреал заема 3-то място в Ла Лига с 69 точки, вкарват 1.86 гола и допускат 1.14 гола на мач, а Севиля е 13-та с 40 точки, вкарват 1.23 гола и допускат 1.6 гола, формата им е З 0-1, П 2-1, З 0-2, З 1-2, П 1-0, П 2-1. Домакините имат предимство в формата и голова сила, което ги прави фаворити в двубоя, тъй като Вияреал е в добра форма с П 2-1, Р 1-1, П 2-1, П 5-1, Р 1-1. Прогнозата е Вияреал да спечели с котировка 2.15.",
-      "aiEn": "Villarreal are 3rd in the La Liga with 69 points, scoring 1.86 and conceding 1.14 goals per game, with a recent form of L 0-1, W 2-1, D 1-1, W 2-1, W 5-1, D 1-1, while Sevilla are 13th with 40 points, scoring 1.23 and conceding 1.6 goals per game, with a form of L 0-1, W 2-1, L 0-2, L 1-2, W 1-0, W 2-1. Villarreal's position and scoring strength, combined with their form advantage, make a strong case for a home win. The pick is Villarreal to win at 2.15.",
-      "aiCtxHash": "e2625a5c",
+      "ai": "Вияреал заема 3то място в لا Лига с 69 точки, вкарват 1.86 гола на мач и допускат 1.14 гола, като формата им е П 2-1, Р 1-1, З 0-1, П 2-1, П 5-1, Р 1-1, докато Севиля е на 13та позиция с 40 точки, вкарват 1.23 гола и допускат 1.6 гола, с форма З 0-1, П 2-1, З 0-2, З 1-2, П 1-0, П 2-1. Домакините имат предимство в формата и головата сила, което ги прави фаворити в двубоя. Прогнозата е Вияреал да спечели при котировка 2.15.",
+      "aiEn": "Villarreal are 3rd in the La Liga with 69 points, scoring 1.86 and conceding 1.14 goals per game, with a recent form of L 0-1, W 2-1, D 1-1, W 2-1, W 5-1, D 1-1, while Sevilla are 13th with 40 points, scoring 1.23 and conceding 1.6 goals per game, with a form of L 0-1, W 2-1, L 0-2, L 1-2, W 1-0, W 2-1. Villarreal's position and scoring strength give them a form advantage, making a strong case for a home win. The pick is Villarreal to win at 2.15.",
+      "aiCtxHash": "7515a27b",
       "sidePicks": [
         {
           "market": "cards",
@@ -474,12 +309,12 @@
         "a": 29
       },
       "aiCtx": "Getafe are 7th in the La Liga (45 pts), scoring 0.8 and conceding 1.03 goals per game, BTTS in 0/6 and over 2.5 in 0/6 recent games, form (last 6, scored first): W 2-0, L 0-1, W 1-0, L 0-2, L 0-2, D 0-0. Mallorca are 15th (39 pts), scoring 1.23 and conceding 1.49 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 2-1, W 3-0, D 1-1, L 1-2, W 1-0, D 1-1. Combined expected goals (home scores + away concedes): ~2.3/game. H2H last 1: Getafe 0W-0D-1L, avg 1.0 goals/game.",
-      "newsCtx": "The schedule for the match against Elche CF has been confirmed. | Getafe is located 18 km south of Madrid, in the Manzanares River basin. This city, with over 185,000 inhabitants (as of 2023), has …",
+      "newsCtx": "The schedule for the match against Elche CF has been confirmed.",
       "competition": "La Liga",
       "competitionBG": "Ла Лига",
-      "ai": "Двубоят между Хетафе и Майорка е между двата отбора, които имат различна форма в последните срещи, като домакините вкарват 0.8 гола на мач и допускат 1.03 гола, а гостите - 1.23 гола и допускат 1.49 гола. Обаче, последните резултати на двата отбора показват, че има възможност за много голове, тъй като Майорка е спечелила с 2-1 и 3-0 в последните си срещи. Прогнозата е под 2.5 гола с котировка 2.45.",
-      "aiEn": "Getafe, 7th in the league with 45 points, scoring 0.8 and conceding 1.03 goals per game, and recent form of W 2-0, L 0-1, W 1-0, L 0-2, L 0-2, D 0-0, face Mallorca, who are 15th with 39 points, scoring 1.23 and conceding 1.49 goals per game, with form of W 2-1, W 3-0, D 1-1, L 1-2, W 1-0, D 1-1. The Over 2.5 case can be made considering both teams' goals per game averages and high-scoring recent form results, such as Mallorca's wins with 2-1 and 3-0 scores. The pick is Under 2.5 Goals at exact odds of 2.45.",
-      "aiCtxHash": "31d117ef",
+      "ai": "Домакините Хетафе заемат 7-то място в ла лига с 45 точки, вкарват 0.8 гола на мач и допускат 1.03 гола, като формата им от последните 6 мача е П 2-0, З 0-1, П 1-0, З 0-2, З 0-2, Р 0-0, докато Майорка е на 15-то място с 39 точки, вкарват 1.23 гола на мач и допускат 1.49 гола, с форма от П 2-1, П 3-0, Р 1-1, З 1-2, П 1-0, Р 1-1. Обаче, двубойът между тези отбори може да приключи с над 2.5 гола, тъй като домакините и гостите имат добра форма и вкарват много гола в последните си мачове. Прогнозата е под 2.5 гола при котировка 2.45",
+      "aiEn": "Getafe are 7th in the La Liga with 45 points, scoring 0.8 and conceding 1.03 goals per game, with a recent form of W 2-0, L 0-1, W 1-0, L 0-2, L 0-2, D 0-0, while Mallorca are 15th with 39 points, scoring 1.23 and conceding 1.49 goals per game, with a form of W 2-1, W 3-0, D 1-1, L 1-2, W 1-0, D 1-1. The Over 2.5 case can be made as both teams have high-scoring recent form results and average a significant number of goals per game. The pick is Under 2.5 Goals at 2.45 William Hill",
+      "aiCtxHash": "a604482e",
       "sidePicks": [
         {
           "market": "cards",
@@ -691,6 +526,69 @@
     "reasoningEn": "This combination of Home Win, Over 2.5 Goals, and BTTS Yes is statistically sound, given Manchester City's strong form and Crystal Palace's tendency to concede goals, with their recent matches often featuring multiple scores. The teams' high expected goals and recent trends make this bet builder a viable option."
   },
   "results": [
+    {
+      "id": "osa_atm",
+      "home": "Осасуна",
+      "homeEn": "Osasuna",
+      "away": "Атлетико Мадрид",
+      "awayEn": "Atlético Madrid",
+      "date": "2026-05-12",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Над 1.5 гола",
+        "betEn": "Over 1.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.3, recent BTTS in 5/6 for Osasuna and 3/6 for Atlético Madrid, and no clear h2h or btts edge",
+        "market": "over_under",
+        "selection": "over_1.5",
+        "odd": "1.28"
+      },
+      "result": "W",
+      "score": "1-2"
+    },
+    {
+      "id": "bet_elc",
+      "home": "Реал Бетис",
+      "homeEn": "Real Betis",
+      "away": "Elche CF",
+      "awayEn": "Elche CF",
+      "date": "2026-05-12",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Реал Бетис победа",
+        "betEn": "Real Betis Win",
+        "conf": 78,
+        "confReason": "Real Betis are 8 places above Elche CF, recent form is decent, and the odd is within the sweet spot",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.62"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "cel_lev",
+      "home": "Селта Виго",
+      "homeEn": "Celta Vigo",
+      "away": "Levante",
+      "awayEn": "Levante",
+      "date": "2026-05-12",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Селта Виго победа",
+        "betEn": "Celta Vigo Win",
+        "conf": 62,
+        "confReason": "8-place gap and home team recent form, but odd 1.75 is at top of sweet spot and Levante's form is not extremely weak",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.75"
+      },
+      "result": "L",
+      "score": "2-3"
+    },
     {
       "id": "ray_gir",
       "home": "Райо Валекано",
@@ -1257,74 +1155,11 @@
       },
       "result": "L",
       "score": "1-0"
-    },
-    {
-      "id": "eve_mci",
-      "home": "Евъртън",
-      "homeEn": "Everton",
-      "away": "Ман Сити",
-      "awayEn": "Manchester City",
-      "date": "2026-05-04",
-      "competition": "Висша лига · Кръг 35",
-      "competitionEn": "Premier League · GW35",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.1, recent BTTS and over 2.5 trends in both teams, but not strong enough to fire BTTS rule; odd is within the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.6"
-      },
-      "result": "W",
-      "score": "3-3"
-    },
-    {
-      "id": "che_for",
-      "home": "Челси",
-      "homeEn": "Chelsea",
-      "away": "Нотингам Форест",
-      "awayEn": "Nottingham Forest",
-      "date": "2026-05-04",
-      "competition": "Висша лига · Кръг 35",
-      "competitionEn": "Premier League · GW35",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.9/game is close to the 3.0 threshold, and recent form of both teams suggests a potential for goals, but not a clear h2h or btts edge",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.67"
-      },
-      "result": "W",
-      "score": "1-3"
-    },
-    {
-      "id": "esp_rma",
-      "home": "Еспаньол",
-      "homeEn": "Espanyol",
-      "away": "Реал Мадрид",
-      "awayEn": "Real Madrid",
-      "date": "2026-05-03",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.1, recent BTTS in 3/6 for Espanyol and 6/6 for Real Madrid, and over 2.5 in 3/6 and 4/6 recent games respectively, but not enough to fire the btts rule cleanly, and the h2h odd is not in the preferred range",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.55"
-      },
-      "result": "L",
-      "score": "0-2"
     }
   ],
   "record": {
-    "correct": 147,
-    "total": 247,
+    "correct": 149,
+    "total": 250,
     "period": "ЛЕ 26.02.2026"
   },
   "bbRecord": {
