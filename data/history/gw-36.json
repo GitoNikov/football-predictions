@@ -2,9 +2,30 @@
   "gw": 36,
   "label": "Висша лига · Кръг 36",
   "labelEn": "Premier League · GW36",
-  "date_range": "2026-05-09 – 2026-05-13",
-  "date_rangeEn": "2026-05-09 – 2026-05-13",
+  "date_range": "2026-05-13 – 2026-05-15",
+  "date_rangeEn": "2026-05-13 – 2026-05-15",
   "results": [
+    {
+      "id": "tot_lee",
+      "home": "Тотнъм",
+      "homeEn": "Tottenham",
+      "away": "Лийдс",
+      "awayEn": "Leeds",
+      "date": "2026-05-11",
+      "competition": "Висша лига · Кръг 36",
+      "competitionEn": "Premier League · GW36",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Tottenham - Leeds over 2.5 goals",
+        "conf": 72,
+        "confReason": "Combined expected goals ~2.8, both teams have BTTS in 3/6 and over 2.5 in 4/6 recent games, odd is in the sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.75"
+      },
+      "result": "L",
+      "score": "1-1"
+    },
     {
       "id": "whu_ars",
       "home": "Уест Хем",
@@ -197,6 +218,6 @@
   ],
   "record": {
     "correct": 6,
-    "total": 9
+    "total": 10
   }
 }
