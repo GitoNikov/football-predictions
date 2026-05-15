@@ -2,9 +2,30 @@
   "gw": 36,
   "label": "Висша лига · Кръг 36",
   "labelEn": "Premier League · GW36",
-  "date_range": "2026-05-13 – 2026-05-15",
-  "date_rangeEn": "2026-05-13 – 2026-05-15",
+  "date_range": "2026-05-17",
+  "date_rangeEn": "2026-05-17",
   "results": [
+    {
+      "id": "mci_pal",
+      "home": "Ман Сити",
+      "homeEn": "Manchester City",
+      "away": "Кристъл Палас",
+      "awayEn": "Crystal Palace",
+      "date": "2026-05-13",
+      "competition": "Висша лига · Кръг 36",
+      "competitionEn": "Premier League · GW36",
+      "pick": {
+        "bet": "Ман Сити победа",
+        "betEn": "Manchester City Win",
+        "conf": 78,
+        "confReason": "Manchester City are clearly stronger with an 8-place gap and recent form advantage, and the h2h odd is within the preferred range",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.2"
+      },
+      "result": "W",
+      "score": "3-0"
+    },
     {
       "id": "tot_lee",
       "home": "Тотнъм",
@@ -217,7 +238,7 @@
     }
   ],
   "record": {
-    "correct": 6,
-    "total": 10
+    "correct": 7,
+    "total": 11
   }
 }
