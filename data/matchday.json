@@ -55,62 +55,9 @@
           "reasoningEn": "Manchester City usually dominates possession and uses the width of the field, which will lead to many corners against Bournemouth."
         }
       ],
-      "ai": "Борнемут заема 6-то място в лигата с 55 точки, вкарват 1.56 гола на мач и допускат 1.44 гола, а Ман Сити е на 2-ро място с 77 точки, вкарват 2.08 гола на мач и допускат 0.89 гола, като формата на двата отбора в последните 6 мача е съответно Р 2-2, П 2-1, П 2-1, Р 2-2, П 3-0, П 1-0 за Борнемут и П 3-0, П 2-1, П 1-0, Р 3-3, П 3-0, П 3-0 за Ман Сити. Двубойът обещава да бъде с много голове, тъй като домакините вкарват много гола в последните си мачове, а гостите допускат малко, но формата им показва, че те също могат да вкарат много гола. Прогнозата е над 2.5 гола, а котировка при Уилям Хил е 1.44",
-      "aiEn": "Bournemouth are 6th in the Premier League with 55 points, scoring 1.56 and conceding 1.44 goals per game, with a recent form of D 2-2, W 2-1, W 2-1, D 2-2, W 3-0, W 1-0, while Manchester City are 2nd with 77 points, scoring 2.08 and conceding 0.89 goals per game, with a recent form of W 3-0, W 2-1, W 1-0, D 3-3, W 3-0, W 3-0. The match is likely to see plenty of goals, given both teams' high-scoring recent form results and their goals per game averages, with Bournemouth scoring frequently and Manchester City also capable of scoring many goals. The pick is Over 2.5 at 1.44 with William Hill",
-      "aiCtxHash": "d5f19a84"
-    },
-    {
-      "id": "che_tot",
-      "home": "Челси",
-      "homeEn": "Chelsea",
-      "homeA": "CHE",
-      "away": "Тотнъм",
-      "awayEn": "Tottenham",
-      "awayA": "TOT",
-      "date": "2026-05-19",
-      "time": "21:15",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 72,
-        "confReason": "Combined expected goals of ~3.1/game and recent over 2.5 trends in both teams' games, with a favorable odd within the 1.40-2.50 range",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.6"
-      },
-      "odds_wh": {
-        "h": "2.05",
-        "a": "3.25",
-        "x": "3.6",
-        "o25": "1.55"
-      },
-      "prob": {
-        "h": 49,
-        "d": 28,
-        "a": 31
-      },
-      "aiCtx": "Chelsea are 10th in the Premier League (49 pts), scoring 1.53 and conceding 1.36 goals per game, BTTS in 2/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 0-3, L 0-3, L 0-1, L 0-3, L 1-3, D 1-1. Tottenham are 17th (38 pts), scoring 1.28 and conceding 1.53 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-3, L 0-1, D 2-2, W 1-0, W 2-1, D 1-1. Combined expected goals (home scores + away concedes): ~3.1/game.",
-      "newsCtx": "Welcome to the official Chelsea FC website. All the latest news, videos and ticket information as well as player profiles and … | 8 hours ago · Futur entraîneur de Chelsea pour la saison prochaine, Xabi Alonso pourrait contribuer à finaliser un dossier …",
-      "sidePicks": [
-        {
-          "market": "cards",
-          "bet": "Над 3.5 картона",
-          "betEn": "Over 3.5 Cards",
-          "reasoning": "Мачът между Челси и Тотнъм обещава да бъде интензивен и с много борби, което ще доведе до повече картони.",
-          "reasoningEn": "The match between Chelsea and Tottenham promises to be intense and physically demanding, leading to more cards."
-        },
-        {
-          "market": "corners",
-          "bet": "Над 9.5 ъглови",
-          "betEn": "Over 9.5 Corners",
-          "reasoning": "Атакуващият стил на Челси и Тотнъм ще генерира много възможности за ъглови удари.",
-          "reasoningEn": "The attacking style of Chelsea and Tottenham will generate many opportunities for corner kicks."
-        }
-      ],
-      "ai": "Двубойът между Челси и Тотнъм е между две отбори с различна форма, като Челси заема 10-то място с 49 точки, вкарват 1.53 гола на мач и допускат 1.36 гола, а Тотнъм е на 17-то място с 38 точки, вкарват 1.28 гола и допускат 1.53 гола, с последна форма от З 0-3, З 0-3, З 0-1, З 0-3, З 1-3, Р 1-1 за Челси и З 0-3, З 0-1, Р 2-2, П 1-0, П 2-1, Р 1-1 за Тотнъм. Домакините и гостите имат средно голове на мач, които предполагат, че двубоят може да приключи с над 2.5 гола, тъй като Челси вкарват много гола у дома, а Тотнъм допуска гола на мач. Прогнозата е над 2.5 гола с котировка 1.6.",
-      "aiEn": "Chelsea and Tottenham are 10th and 17th in the league with 49 and 38 points, scoring 1.53 and 1.28 goals per game and conceding 1.36 and 1.53 goals per game, with recent form of L 0-3, L 0-3, L 0-1, L 0-3, L 1-3, D 1-1 for Chelsea and L 0-3, L 0-1, D 2-2, W 1-0, W 2-1, D 1-1 for Tottenham. Both teams' goals per game averages and recent high-scoring form results, such as Chelsea's 1-3 loss and Tottenham's 2-1 win, make a strong case for over 2.5 goals. The pick is Over 2.5 Goals at exactly 1.6 odds.",
-      "aiCtxHash": "b9d1af26"
+      "ai": "Борнемут заема 6-то място в премиершипа с 55 точки, вкарват 1.56 гола на мач и допускат 1.44 гола, а Ман Сити е на 2-ро място с 77 точки, вкарват 2.08 гола и допускат 0.89 гола, като формите им съответно са Р 2-2, П 2-1, П 2-1, Р 2-2, П 3-0, П 1-0 и П 3-0, П 2-1, П 1-0, Р 3-3, П 3-0, П 3-0. Двубоят между тях обещава да бъде с много голове, тъй като домакините вкарват много гола и допускат доста гола, а гостите са в добра форма и вкарват много гола. Прогнозата е над 2.5 гола при котировка 1.44",
+      "aiEn": "Bournemouth are 6th in the Premier League with 55 points, scoring 1.56 and conceding 1.44 goals per game, with recent form of D 2-2, W 2-1, W 2-1, D 2-2, W 3-0, W 1-0, while Manchester City are 2nd with 77 points, scoring 2.08 and conceding 0.89 goals per game, with recent form of W 3-0, W 2-1, W 1-0, D 3-3, W 3-0, W 3-0. The match between them is likely to be high-scoring, given Bournemouth's recent form with many goals scored and conceded, and Manchester City's high-scoring form. The pick is Over 2.5 at 1.44 William Hill",
+      "aiCtxHash": "88ec614d"
     },
     {
       "id": "8beebe69",
@@ -199,12 +146,12 @@
         "a": 32
       },
       "aiCtx": "Deportivo Alavés are 14th in the La Liga (43 pts), scoring 1.16 and conceding 1.46 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 1-2, W 2-1, L 2-4, D 1-1, W 1-0, W 1-0. Rayo Vallecano are 8th (47 pts), scoring 1.05 and conceding 1.16 goals per game, BTTS in 3/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): W 1-0, D 3-3, W 2-0, D 1-1, D 1-1, W 2-0. Combined expected goals (home scores + away concedes): ~2.3/game. H2H last 1: Deportivo Alavés 0W-0D-1L, avg 1.0 goals/game.",
-      "newsCtx": "Rayo Vallecano plays its home games at the Vallecas Stadium, located in Madrid, Spain. Vallecas is a stadium that has been the … | Breaking Rayo Vallecano news and in-depth analysis from the best newsroom in sports. Follow your favorite clubs. Get the latest …",
+      "newsCtx": "Deportivo Alavés injury and suspension updates are listed on this page. Before La Liga matches, unavailable players and … | Get the latest Deportivo Alavés injuries update, including current player injury status, expected return dates, and a full … | Breaking Rayo Vallecano news and in-depth analysi",
       "competition": "La Liga",
       "competitionBG": "Ла Лига",
-      "ai": "Алавес заема 14-то място в ла лига с 43 точки, вкарват 1.16 гола на мач и допускат 1.46 гола, а Райо Валекано е 8-ми с 47 точки, вкарват 1.05 гола на мач и допускат 1.16 гола, като формата на двата отбора в последните 6 мача е З 1-2, П 2-1, З 2-4, Р 1-1, П 1-0, П 1-0 за Алавес и П 1-0, Р 3-3, П 2-0, Р 1-1, Р 1-1, П 2-0 за Райо Валекано. Двубойът между тях обещава да бъде с много голове, тъй като домакините и гостите имат скорошни резултати с над 2.5 гола, а средният им резултат е над 2 гола на мач. Прогнозата е над 2.5 гола при котировка 1.95.",
-      "aiEn": "Deportivo Alavés are 14th in the La Liga with 43 points, scoring 1.16 and conceding 1.46 goals per game, with a recent form of L 1-2, W 2-1, L 2-4, D 1-1, W 1-0, W 1-0, while Rayo Vallecano are 8th with 47 points, scoring 1.05 and conceding 1.16 goals per game, with a recent form of W 1-0, D 3-3, W 2-0, D 1-1, D 1-1, W 2-0. The match between the two teams is likely to be high-scoring, given their recent form results with over 2.5 goals, and their combined goals per game average of over 2.3. The pick is Over 2.5 at 1.95 William Hill.",
-      "aiCtxHash": "9c15c9c2",
+      "ai": "Двубойът между Алавес и Райо Валекано обединява домакините, заемащи 14-то място с 43 точки, вкарват 1.16 гола на мач и допускат 1.46 гола, с форма от последните 6 мача: З 1-2, П 2-1, З 2-4, Р 1-1, П 1-0, П 1-0, и гостите, които са 8-ми с 47 точки, вкарват 1.05 гола на мач и допускат 1.16 гола, с форма от последните 6 мача: П 1-0, Р 3-3, П 2-0, Р 1-1, Р 1-1, П 2-0. Формата на двата отбора показва, че могат да се очакват много гола, тъй като Алавес вкарват много гола у дома, а Райо Валекано имат скорошни резултати с много гола. Прогнозата е над 2.5 гола при котировка 1.95.",
+      "aiEn": "Deportivo Alavés, in 14th place with 43 points, scoring 1.16 and conceding 1.46 goals per game, with a recent form of L 1-2, W 2-1, L 2-4, D 1-1, W 1-0, W 1-0, face Rayo Vallecano, who are 8th with 47 points, scoring 1.05 and conceding 1.16 goals per game, with a recent form of W 1-0, D 3-3, W 2-0, D 1-1, D 1-1, W 2-0. Both teams' averages and recent high-scoring results make a strong case for Over 2.5 goals, given Deportivo Alavés' goal-scoring record and Rayo Vallecano's ability to score and concede. The pick is Over 2.5 at exact odds 1.95.",
+      "aiCtxHash": "a4d64b6b",
       "sidePicks": [
         {
           "market": "cards",
@@ -422,9 +369,9 @@
       "newsCtx": "The Alcazar de Sevilla rivals the Alhambra in Granada. The Seville Cathedral is the largest in the world and the Plaza de España is probably the most beautiful square in Spain. These are just a few of the … | May 18, 2024 · Strolling the streets of the historic old town, visiting the Cathedral and t",
       "competition": "La Liga",
       "competitionBG": "Ла Лига",
-      "ai": "Домакините Селта Виго заемат 6-то място в ла лига с 51 точки, вкарват 1.41 гола на мач и допускат 1.3 гола, а формата им е П 3-1, П 1-0, З 2-3, Р 1-1, З 1-2, З 0-1, докато гостите Севиля са на 13-то място с 43 точки, вкарват 1.24 гола и допускат 1.59 гола, като формата им е П 3-2, П 2-1, П 1-0, З 0-1, З 1-2, З 0-2. Двубоят между тези два отбора обещава да бъде с много голове, тъй като Селта Виго и Севиля имат скорошни резултати с над 2.5 гола, а средният им резултат е около 3 гола на мач. Прогнозата е над 2.5 гола с котировка 1.91.",
-      "aiEn": "Celta Vigo are 6th in the La Liga with 51 points, scoring 1.41 and conceding 1.3 goals per game, with a recent form of L 0-1, L 1-2, W 3-1, W 1-0, L 2-3, D 1-1, while Sevilla are 13th with 43 points, scoring 1.24 and conceding 1.59 goals per game, with a form of L 0-2, L 1-2, W 1-0, W 2-1, W 3-2, L 0-1. The case for Over 2.5 goals is strong, given both teams' goals per game averages and high-scoring recent form results, such as Celta Vigo's W 3-1 and Sevilla's W 3-2. The pick is Over 2.5 at 1.91.",
-      "aiCtxHash": "c28040e8",
+      "ai": "Домакините Селта Виго заемат 6-то място в ла лига с 51 точки, вкарват 1.41 гола на мач и допускат 1.3 гола, а формата им е П 3-1, П 1-0, З 2-3, Р 1-1, З 1-2, З 0-1, докато гостите Севиля са на 13-то място с 43 точки, вкарват 1.24 гола и допускат 1.59 гола, с форма З 0-2, З 1-2, П 1-0, П 2-1, П 3-2, З 0-1. Двубоят между тях обещава да бъде с много голове, тъй като Селта Виго вкарват средно 1.41 гола, а Севиля допускат 1.59 гола на мач, а в скорошното време и двата отбора имат резултати с много голове. Прогнозата е над 2.5 гола с котировка 1.91",
+      "aiEn": "Celta Vigo are 6th in the La Liga with 51 points, scoring 1.41 and conceding 1.3 goals per game, with a recent form of L 0-1, L 1-2, W 3-1, W 1-0, L 2-3, D 1-1, while Sevilla are 13th with 43 points, scoring 1.24 and conceding 1.59 goals per game, with a form of L 0-2, L 1-2, W 1-0, W 2-1, W 3-2, L 0-1. The match between them is likely to be high-scoring, as Celta Vigo score an average of 1.41 goals, and Sevilla concede an average of 1.59 goals per game, with both teams having had recent high-scoring results. The pick is Over 2.5 goals at 1.91 odds",
+      "aiCtxHash": "1104d8fb",
       "sidePicks": [
         {
           "market": "cards",
@@ -642,9 +589,9 @@
       "newsCtx": "Nov 16, 2025 · Oviedo is the capital of Asturias, the north-westerly region of Spain perhaps best known for its cider. From a … | Oviedo is a welcoming and friendly city, historic and full of life, where everything is easy, stress-free and always with a smile …",
       "competition": "La Liga",
       "competitionBG": "Ла Лига",
-      "ai": "Майорка заемат 19-то място в ла лига с 39 точки, вкарват 1.19 гола на мач и допускат 1.54 гола, с форма от П 1-1, З 1-2, П 1-0, Р 1-1, З 1-3, З 0-2, докато Oviedo е на 20-то място с 29 точки, вкарват 0.7 гола на мач и допускат 1.54 гола, с форма от Р 1-1, З 1-2, З 0-3, Р 0-0, З 0-2, З 0-1. Домакините имат предимство в формата и голова сила, което ги прави фаворити в двубоя. Прогнозата е Майорка да спечели с котировка 1.5.",
-      "aiEn": "Mallorca are 19th in the La Liga with 39 points, scoring 1.19 and conceding 1.54 goals per game, with recent form of D 1-1, L 1-2, W 1-0, D 1-1, L 1-3, L 0-2, while Oviedo are 20th with 29 points, scoring 0.7 and conceding 1.54 goals per game, with recent form of D 1-1, L 1-2, L 0-3, D 0-0, L 0-2, L 0-1. Mallorca's position and scoring strength, combined with their form advantage, make a strong case for a home win. The pick is Mallorca to win at 1.5 odds.",
-      "aiCtxHash": "ee14f967",
+      "ai": "Майорка заема 19то място в ла лига с 39 точки, вкарват 1.19 гола и допускат 1.54 гола на мач, с форма от Р 1-1, З 1-2, П 1-0, Р 1-1, З 1-3, З 0-2, докато Oviedo е на 20то място с 29 точки, вкарват 0.7 гола и допускат 1.54 гола на мач, с форма от Р 1-1, З 1-2, З 0-3, Р 0-0, З 0-2, З 0-1. Домакините имат предимство в формата и голова сила, което ги прави фаворити в двубоя. Прогнозата е победа за Майорка при котировка 1.5",
+      "aiEn": "Mallorca are 19th in the La Liga with 39 points, scoring 1.19 and conceding 1.54 goals per game, with a recent form of D 1-1, L 1-2, W 1-0, D 1-1, L 1-3, L 0-2, while Oviedo are 20th with 29 points, scoring 0.7 and conceding 1.54 goals per game, with a recent form of D 1-1, L 1-2, L 0-3, D 0-0, L 0-2, L 0-1. Mallorca have a form advantage and scoring strength, making them favorites in the match. The pick is Mallorca Win at 1.5 odds",
+      "aiCtxHash": "6274d65e",
       "sidePicks": [
         {
           "market": "cards",
@@ -694,12 +641,12 @@
         "a": 41
       },
       "aiCtx": "Villarreal are 3rd in the La Liga (69 pts), scoring 1.81 and conceding 1.22 goals per game, BTTS in 5/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): D 1-1, W 2-1, W 5-1, D 1-1, L 2-3, L 0-2. Atlético Madrid are 4th (69 pts), scoring 1.65 and conceding 1.05 goals per game, BTTS in 2/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): D 1-1, W 2-0, L 0-1, L 0-1, W 2-1, W 1-0. Combined expected goals (home scores + away concedes): ~2.9/game.",
-      "newsCtx": "1 day ago · Villarreal 2-Sevilla 3 Marcelino: “Pudimos evitar los silbidos, pero nos metimos solos en el laberinto” Javier Mata 13/05/2026 21:58 Villarreal 2 - Sevilla 3 Luis García: “¿Europa? | 1 day ago · Noticias del Villarreal en Estadio Deportivo. Noticias, partidos, plantilla, goleadores, esta",
+      "newsCtx": "vs 2 - 3 UEFA Champions League | Matchday 6 PSV Eindhoven Atlético de Madrid Tuesday, December 9 (21:00h) | Philips Stadion SUMMARY vs | 1 day ago · Sigue la actualidad del Atlético de Madrid al minuto. Resultados, fichajes, crónicas de partidos y toda la información sobre el Atlético en un solo lug",
       "competition": "La Liga",
       "competitionBG": "Ла Лига",
-      "ai": "Вияреал и Атлетико Мадрид заемат 3-то и 4-то място в ла лига с по 69 точки, като домакините вкарват 1.81 гола на мач и допускат 1.22 гола, а гостите - 1.65 и 1.05 гола, а формата им е съответно Р 1-1, П 2-1, П 5-1, Р 1-1, З 2-3, З 0-2 и Р 1-1, П 2-0, З 0-1, З 0-1, П 2-1, П 1-0. Двубоят между тях обещава да бъде богат на голове, тъй като и двата отбора имат висок среден резултат и скорошни резултати с много голове. Прогнозата е над 2.5 гола при котировка 1.44.",
-      "aiEn": "Villarreal and Atlético Madrid are 3rd and 4th in the La Liga with 69 points, scoring 1.81 and 1.65 goals per game and conceding 1.22 and 1.05 goals per game, with recent form of D 1-1, W 2-1, W 5-1, D 1-1, L 2-3, L 0-2 and D 1-1, W 2-0, L 0-1, L 0-1, W 2-1, W 1-0. The match between them is likely to be high-scoring, given both teams' high goals per game averages and recent high-scoring form results. The pick is Over 2.5 at 1.44.",
-      "aiCtxHash": "e782c016",
+      "ai": "Вияреал и Атлетико Мадрид заемат 3-то и 4-то място в Ла Лига с по 69 точки, като домакините вкарват 1.81 гола на мач и допускат 1.22 гола, а гостите - 1.65 гола и допускат 1.05 гола, с последна форма от П 1-1, П 2-1, П 5-1, Р 1-1, З 2-3, З 0-2 за Вияреал и П 1-1, П 2-0, З 0-1, З 0-1, П 2-1, П 1-0 за Атлетико Мадрид. Двубойът между тях обещава да бъде многорезултатен, тъй като Вияреал вкарват много гола в последните си мачове, а Атлетико Мадрид допускат относително малко гола, но все пак имат скорошни резултати с много гола. Прогнозата е над 2.5 гола с котировка 1.44.",
+      "aiEn": "Villarreal and Atlético Madrid are 3rd and 4th in the La Liga with 69 points, scoring 1.81 and 1.65 goals per game and conceding 1.22 and 1.05 goals per game, with recent form of D 1-1, W 2-1, W 5-1, D 1-1, L 2-3, L 0-2 for Villarreal and D 1-1, W 2-0, L 0-1, L 0-1, W 2-1, W 1-0 for Atlético Madrid. The match between them is likely to be high-scoring, as Villarreal have scored many goals in their recent games, and Atlético Madrid have conceded relatively few goals, but still have recent results with many goals. The pick is Over 2.5 at 1.44 odds.",
+      "aiCtxHash": "f5d69613",
       "sidePicks": [
         {
           "market": "cards",
@@ -746,6 +693,27 @@
     "reasoningEn": "This combination of markets is statistically sound as Bournemouth and Manchester City have been involved in high-scoring games, with a high likelihood of both teams scoring and over 2.5 goals, making an away win a plausible outcome given Manchester City's strong form."
   },
   "results": [
+    {
+      "id": "che_tot",
+      "home": "Челси",
+      "homeEn": "Chelsea",
+      "away": "Тотнъм",
+      "awayEn": "Tottenham",
+      "date": "2026-05-19",
+      "competition": "Висша лига · Кръг 37",
+      "competitionEn": "Premier League · GW37",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 72,
+        "confReason": "Combined expected goals of ~3.1/game and recent over 2.5 trends in both teams' games, with a favorable odd within the 1.40-2.50 range",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.6"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
     {
       "id": "ars_bur",
       "home": "Арсенал",
@@ -1354,32 +1322,11 @@
       },
       "result": "L",
       "score": "2-3"
-    },
-    {
-      "id": "ray_gir",
-      "home": "Райо Валекано",
-      "homeEn": "Rayo Vallecano",
-      "away": "Хирона",
-      "awayEn": "Girona",
-      "date": "2026-05-11",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.5, recent BTTS and over 2.5 trends are not strong enough to fire the respective rules, but the odd is within the desired range and there's no clear h2h or btts edge",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.95"
-      },
-      "result": "L",
-      "score": "1-1"
     }
   ],
   "record": {
-    "correct": 162,
-    "total": 276,
+    "correct": 163,
+    "total": 277,
     "period": "ЛЕ 26.02.2026"
   },
   "bbRecord": {
