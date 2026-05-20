@@ -2,9 +2,51 @@
   "gw": 37,
   "label": "Висша лига · Кръг 37",
   "labelEn": "Premier League · GW37",
-  "date_range": "2026-05-18 – 2026-05-20",
-  "date_rangeEn": "2026-05-18 – 2026-05-20",
+  "date_range": "2026-05-23 – 2026-05-24",
+  "date_rangeEn": "2026-05-23 – 2026-05-24",
   "results": [
+    {
+      "id": "che_tot",
+      "home": "Челси",
+      "homeEn": "Chelsea",
+      "away": "Тотнъм",
+      "awayEn": "Tottenham",
+      "date": "2026-05-19",
+      "competition": "Висша лига · Кръг 37",
+      "competitionEn": "Premier League · GW37",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 72,
+        "confReason": "Combined expected goals of ~3.1/game and recent over 2.5 trends in both teams' games, with a favorable odd within the 1.40-2.50 range",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.6"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "ars_bur",
+      "home": "Арсенал",
+      "homeEn": "Arsenal",
+      "away": "Бърнли",
+      "awayEn": "Burnley",
+      "date": "2026-05-18",
+      "competition": "Висша лига · Кръг 37",
+      "competitionEn": "Premier League · GW37",
+      "pick": {
+        "bet": "Арсенал победа",
+        "betEn": "Arsenal Win",
+        "conf": 78,
+        "confReason": "Large 18-place gap, strong home form, and recent Burnley struggles, but odd 1.08 is below the preferred range",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.08"
+      },
+      "result": "W",
+      "score": "1-0"
+    },
     {
       "id": "new_whu",
       "home": "Нюкасъл",
@@ -154,7 +196,7 @@
     }
   ],
   "record": {
-    "correct": 5,
-    "total": 7
+    "correct": 7,
+    "total": 9
   }
 }
