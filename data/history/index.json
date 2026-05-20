@@ -1,5 +1,47 @@
 [
   {
+    "gw": 37,
+    "label": "Висша лига · Кръг 37",
+    "labelEn": "Premier League · GW37",
+    "correct": 7,
+    "total": 9
+  },
+  {
+    "gw": 36,
+    "label": "Висша лига · Кръг 36",
+    "labelEn": "Premier League · GW36",
+    "correct": 7,
+    "total": 11
+  },
+  {
+    "gw": 35,
+    "label": "Висша лига · Кръг 35",
+    "labelEn": "Premier League · GW35",
+    "correct": 9,
+    "total": 10
+  },
+  {
+    "gw": 34,
+    "label": "Висша лига · Кръг 34",
+    "labelEn": "Premier League · GW34",
+    "correct": 4,
+    "total": 8
+  },
+  {
+    "gw": 33,
+    "label": "Висша лига · Кръг 33",
+    "labelEn": "Premier League · GW33",
+    "correct": 8,
+    "total": 11
+  },
+  {
+    "gw": 32,
+    "label": "Висша лига · Кръг 32",
+    "labelEn": "Premier League · GW32",
+    "correct": 3,
+    "total": 9
+  },
+  {
     "gw": 31,
     "label": "Висша лига · Кръг 31",
     "labelEn": "Premier League · GW31",

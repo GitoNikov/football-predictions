@@ -1,0 +1,181 @@
+{
+  "gw": 34,
+  "label": "Висша лига · Кръг 34",
+  "labelEn": "Premier League · GW34",
+  "date_range": "2026-05-02 – 2026-05-04",
+  "date_rangeEn": "2026-05-02 – 2026-05-04",
+  "results": [
+    {
+      "id": "mun_bre",
+      "home": "Ман Юнайтед",
+      "homeEn": "Manchester United",
+      "away": "Брентфорд",
+      "awayEn": "Brentford",
+      "date": "2026-04-27",
+      "competition": "Висша лига · Кръг 34",
+      "competitionEn": "Premier League · GW34",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 72,
+        "confReason": "Combined expected goals ~3.1, recent BTTS and over 2.5 trends for Manchester United, and odd is within the 1.40-2.50 sweet spot",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.57"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "ars_new",
+      "home": "Арсенал",
+      "homeEn": "Arsenal",
+      "away": "Нюкасъл",
+      "awayEn": "Newcastle",
+      "date": "2026-04-25",
+      "competition": "Висша лига · Кръг 34",
+      "competitionEn": "Premier League · GW34",
+      "pick": {
+        "bet": "Арсенал победа",
+        "betEn": "Arsenal Win",
+        "conf": 78,
+        "confReason": "8-place gap, home team strong form, and odd 1.44 is within the sweet spot",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.44"
+      },
+      "result": "W",
+      "score": "1-0"
+    },
+    {
+      "id": "wol_tot",
+      "home": "Уулвърхямптън",
+      "homeEn": "Wolverhampton Wanderers",
+      "away": "Тотнъм",
+      "awayEn": "Tottenham",
+      "date": "2026-04-25",
+      "competition": "Висша лига · Кръг 34",
+      "competitionEn": "Premier League · GW34",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.3/game is below the 3.0 threshold, but both teams have shown recent form with over 2.5 in 4/6 games and BTTS in 4/6 and 2/6 games respectively. The odd is within the 1.40-2.50 sweet spot.",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.73"
+      },
+      "result": "L",
+      "score": "0-1"
+    },
+    {
+      "id": "whu_eve",
+      "home": "Уест Хем",
+      "homeEn": "West Ham",
+      "away": "Евъртън",
+      "awayEn": "Everton",
+      "date": "2026-04-25",
+      "competition": "Висша лига · Кръг 34",
+      "competitionEn": "Premier League · GW34",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.4/game is close to the threshold for over 2.5, and recent games for both teams show some high-scoring trends, but not enough to confidently pick over 2.5 without considering other factors; Everton's recent form has been more consistently high-scoring",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.91"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "liv_pal",
+      "home": "Ливърпул",
+      "homeEn": "Liverpool",
+      "away": "Кристъл Палас",
+      "awayEn": "Crystal Palace",
+      "date": "2026-04-25",
+      "competition": "Висша лига · Кръг 34",
+      "competitionEn": "Premier League · GW34",
+      "pick": {
+        "bet": "Ливърпул победа",
+        "betEn": "Liverpool Win",
+        "conf": 78,
+        "confReason": "Liverpool are 8 places above Crystal Palace, and their recent form, despite some losses, shows a strong ability to score, with the odds being within the preferred range",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.44"
+      },
+      "result": "W",
+      "score": "3-1"
+    },
+    {
+      "id": "ful_avl",
+      "home": "Фулъм",
+      "homeEn": "Fulham",
+      "away": "Астън Вила",
+      "awayEn": "Aston Villa",
+      "date": "2026-04-25",
+      "competition": "Висша лига · Кръг 34",
+      "competitionEn": "Premier League · GW34",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5 Goals",
+        "conf": 68,
+        "confReason": "Combined expected goals ~2.5, recent BTTS in 4/6 Aston Villa games and over 2.5 in 3/6, but no clear h2h edge and Aston Villa's form is inconsistent",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.75"
+      },
+      "result": "L",
+      "score": "1-0"
+    },
+    {
+      "id": "sun_for",
+      "home": "Съндърланд",
+      "homeEn": "Sunderland",
+      "away": "Нотингам Форест",
+      "awayEn": "Nottingham Forest",
+      "date": "2026-04-24",
+      "competition": "Висша лига · Кръг 34",
+      "competitionEn": "Premier League · GW34",
+      "pick": {
+        "bet": "И двата вкарват",
+        "betEn": "Yes, Both Teams to Score",
+        "conf": 68,
+        "confReason": "Nottingham Forest have BTTS in 4/6 recent games and Sunderland in 3/6, combined expected goals is ~2.5, but not high enough for over 2.5, and no clear h2h edge",
+        "market": "btts",
+        "selection": "yes",
+        "odd": "1.73"
+      },
+      "result": "L",
+      "score": "0-5"
+    },
+    {
+      "id": "bur_mci",
+      "home": "Бърнли",
+      "homeEn": "Burnley",
+      "away": "Ман Сити",
+      "awayEn": "Manchester City",
+      "date": "2026-04-22",
+      "competition": "Висша лига · Кръг 34",
+      "competitionEn": "Premier League · GW34",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 72,
+        "confReason": "Combined expected goals is ~1.9, but recent games and H2H suggest high-scoring context, with 5/6 Manchester City games and 3/6 Burnley games going over 2.5, and the last H2H having 6.0 goals/game on average",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "1.3"
+      },
+      "result": "L",
+      "score": "0-1"
+    }
+  ],
+  "record": {
+    "correct": 4,
+    "total": 8
+  }
+}
