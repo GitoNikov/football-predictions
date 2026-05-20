@@ -43,6 +43,8 @@ ODDS_BASE       = "https://api.the-odds-api.com/v4"
 FD_BASE         = "https://api.football-data.org/v4"
 MODEL_NAME      = "llama-3.3-70b-versatile"
 FORM_SLEEP      = 6.5   # seconds between football-data.org team requests
+MIN_EV          = 1.05  # minimum acceptable expected value (conf/100 × odd)
+MIN_ODD         = 1.50  # hard floor — picks below this are never profitable enough
 
 # Domestic leagues processed every Monday
 DOMESTIC_LEAGUES = {
@@ -543,15 +545,20 @@ def fetch_uefa_fixtures(api_key: str, existing_upcoming: list, groq_client, fd_k
                 market = pick_raw.get("market", "h2h")
                 sel    = pick_raw.get("selection", "home")
                 resolved_odd = odds_wh.get(sel_to_key.get(sel, "h"), pick_raw.get("odd", "1.80"))
-                pick = {
-                    "bet":       bet_bg(market, sel, home_bg, away_bg),
-                    "betEn":     pick_raw.get("betEN", f"{home_en} Win"),
-                    "conf":      int(pick_raw.get("conf", 55)),
-                    "confReason": pick_raw.get("conf_reason", ""),
-                    "market":    market,
-                    "selection": sel,
-                    "odd":       str(resolved_odd),
-                }
+                conf   = int(pick_raw.get("conf", 55))
+                if ev_ok(conf, resolved_odd):
+                    pick = {
+                        "bet":        bet_bg(market, sel, home_bg, away_bg),
+                        "betEn":      pick_raw.get("betEN", f"{home_en} Win"),
+                        "conf":       conf,
+                        "confReason": pick_raw.get("conf_reason", ""),
+                        "market":     market,
+                        "selection":  sel,
+                        "odd":        str(resolved_odd),
+                    }
+                else:
+                    print(f"\n    ⚠  EV too low ({conf}% × {resolved_odd}) — no pick")
+                    pick = {"bet": "—", "betEn": "—", "conf": 0, "market": "h2h", "selection": "home", "odd": "?"}
                 prob = {
                     "h": round(100 / float(odds_wh["h"])) if "h" in odds_wh else 50,
                     "d": round(100 / float(odds_wh["x"])) if "x" in odds_wh else 25,
@@ -674,24 +681,33 @@ def fd_get(path: str, fd_key: str) -> dict:
 def fetch_standings(competition: str, fd_key: str) -> tuple[dict, int]:
     """
     Returns:
-        standings_map: {team_name_en: {pos, pts, team_id}}
+        standings_map: {team_name_en: {pos, pts, team_id, gf_pg, ga_pg,
+                                       h_gf_pg, h_ga_pg, a_gf_pg, a_ga_pg}}
         current_matchday: int
+    Home/away splits are populated from the HOME and AWAY sub-tables when present.
     """
     data = fd_get(f"/competitions/{competition}/standings", fd_key)
     matchday = data.get("season", {}).get("currentMatchday", 0)
     standings_map = {}
     for table in data.get("standings", []):
-        if table.get("type") == "TOTAL":
-            for entry in table.get("table", []):
-                name = entry["team"]["name"]
-                played = entry.get("playedGames", 1) or 1
+        ttype = table.get("type")
+        for entry in table.get("table", []):
+            name   = entry["team"]["name"]
+            played = entry.get("playedGames", 1) or 1
+            if ttype == "TOTAL":
                 standings_map[name] = {
                     "pos":     entry["position"],
                     "pts":     entry["points"],
                     "team_id": entry["team"]["id"],
-                    "gf_pg":   round(entry.get("goalsFor", 0) / played, 2),
+                    "gf_pg":   round(entry.get("goalsFor",     0) / played, 2),
                     "ga_pg":   round(entry.get("goalsAgainst", 0) / played, 2),
                 }
+            elif ttype == "HOME" and name in standings_map:
+                standings_map[name]["h_gf_pg"] = round(entry.get("goalsFor",     0) / played, 2)
+                standings_map[name]["h_ga_pg"] = round(entry.get("goalsAgainst", 0) / played, 2)
+            elif ttype == "AWAY" and name in standings_map:
+                standings_map[name]["a_gf_pg"] = round(entry.get("goalsFor",     0) / played, 2)
+                standings_map[name]["a_ga_pg"] = round(entry.get("goalsAgainst", 0) / played, 2)
     print(f"  ✓  Standings: {len(standings_map)} teams | matchday {matchday}")
     return standings_map, matchday
 
@@ -775,6 +791,15 @@ def ordinal(n: int) -> str:
     return f"{n}{['th','st','nd','rd','th'][min(n%10,4)]}"
 
 
+def ev_ok(conf: int, odd) -> bool:
+    """Return True if pick clears both the minimum odds floor and EV threshold."""
+    try:
+        o = float(odd)
+        return o >= MIN_ODD and (conf / 100) * o >= MIN_EV
+    except (ValueError, TypeError):
+        return False
+
+
 def form_stats(form: str) -> dict:
     """Parse form string 'W 2-0, D 1-1, L 0-2' → BTTS and over 2.5 counts."""
     btts = over25 = n = 0
@@ -806,24 +831,45 @@ def build_ai_ctx(home_en: str, away_en: str, home_st: dict, away_st: dict,
     a_gf   = away_st.get("gf_pg", "?")
     a_ga   = away_st.get("ga_pg", "?")
 
+    # Venue-specific splits (home team at home, away team away)
+    h_home_gf = home_st.get("h_gf_pg")
+    h_home_ga = home_st.get("h_ga_pg")
+    a_away_gf = away_st.get("a_gf_pg")
+    a_away_ga = away_st.get("a_ga_pg")
+    have_splits = all(v is not None for v in (h_home_gf, h_home_ga, a_away_gf, a_away_ga))
+
     h_fs   = form_stats(home_form)
     a_fs   = form_stats(away_form)
 
     try:
-        combined_xg = round(float(h_gf) + float(a_ga), 1)
+        if have_splits:
+            exp_home    = (float(h_home_gf) + float(a_away_ga)) / 2
+            exp_away    = (float(a_away_gf) + float(h_home_ga)) / 2
+        else:
+            exp_home    = (float(h_gf) + float(a_ga)) / 2
+            exp_away    = (float(a_gf) + float(h_ga)) / 2
+        combined_xg = round(exp_home + exp_away, 1)
     except (ValueError, TypeError):
         combined_xg = "?"
 
+    # Build scoring lines — include venue split in parentheses when available
+    if have_splits:
+        h_scoring = f"scoring {h_gf} ({h_home_gf} at home) and conceding {h_ga} ({h_home_ga} at home)"
+        a_scoring = f"scoring {a_gf} ({a_away_gf} away) and conceding {a_ga} ({a_away_ga} away)"
+    else:
+        h_scoring = f"scoring {h_gf} and conceding {h_ga}"
+        a_scoring = f"scoring {a_gf} and conceding {a_ga}"
+
     ctx = (
         f"{home_en} are {h_pos} in the {league_name} ({h_pts} pts), "
-        f"scoring {h_gf} and conceding {h_ga} goals per game, "
+        f"{h_scoring} goals per game, "
         f"BTTS in {h_fs['btts']}/{h_fs['n']} and over 2.5 in {h_fs['over25']}/{h_fs['n']} recent games, "
         f"form (last 6, scored first): {home_form}. "
         f"{away_en} are {a_pos} ({a_pts} pts), "
-        f"scoring {a_gf} and conceding {a_ga} goals per game, "
+        f"{a_scoring} goals per game, "
         f"BTTS in {a_fs['btts']}/{a_fs['n']} and over 2.5 in {a_fs['over25']}/{a_fs['n']} recent games, "
         f"form (last 6, scored first): {away_form}. "
-        f"Combined expected goals (home scores + away concedes): ~{combined_xg}/game."
+        f"Combined expected goals: ~{combined_xg}/game."
     )
     if h2h:
         ctx += f" {h2h}."
@@ -867,11 +913,11 @@ William Hill odds: {odds_str}
 
 Market selection rules — evaluate ALL options, pick the single best value:
 1. h2h (home/away win): prefer when one team is clearly stronger — 5+ place gap OR form advantage of 4W or more in last 6 — AND h2h odd is 1.30–2.20. This is the most precise bet; use it when the edge is real.
-2. btts/yes: use when BOTH teams scored in 4+/6 recent games AND combined expected goals >= 2.5. Strong BTTS history is more reliable than raw xG.
-3. over_under/over_2.5: only use when combined expected goals >= 3.0 AND no clear h2h or btts edge. Do NOT default to this — reserve it for genuinely high-scoring contexts.
-4. over_under/over_1.5: use when combined expected goals 2.0–2.9 AND no better option from above.
+2. btts/yes: use when BOTH teams scored in 4+/6 recent games AND combined expected goals >= 2.0. Strong BTTS history is more reliable than raw xG.
+3. over_under/over_2.5: only use when combined expected goals >= 2.5 AND no clear h2h or btts edge. Do NOT default to this — reserve it for genuinely high-scoring contexts.
+4. over_under/over_1.5: use when combined expected goals 1.6–2.4 AND no better option from above.
 5. draw: only when very evenly matched AND draw odd <= 3.50.
-6. Always prefer odds 1.40–2.50. Aim for variety — avoid picking over_2.5 for every match.
+6. Always prefer odds 1.50–2.50. Never pick odds below 1.50 — they require unrealistically high accuracy to be profitable. Aim for variety — avoid picking over_2.5 for every match.
 
 Confidence scoring (be precise — do not default to round numbers):
 - 75–80: Stats, form, and odds all strongly align. The market rule fires cleanly, both teams' recent results support it, and the odd is in the 1.40–2.50 sweet spot.
@@ -1073,18 +1119,23 @@ def process_domestic_league(
                         market       = pick_raw.get("market", "h2h")
                         sel          = pick_raw.get("selection", "home")
                         resolved_odd = odds_wh.get(sel_to_key.get(sel, "h"), pick_raw.get("odd", "1.80"))
-                        m["pick"] = {
-                            "bet":        bet_bg(market, sel, home_bg, away_bg),
-                            "betEn":      pick_raw.get("betEN", f"{home_en} Win"),
-                            "conf":       int(pick_raw.get("conf", 55)),
-                            "confReason": pick_raw.get("conf_reason", ""),
-                            "market":     market,
-                            "selection":  sel,
-                            "odd":        str(resolved_odd),
-                        }
+                        conf         = int(pick_raw.get("conf", 55))
+                        if ev_ok(conf, resolved_odd):
+                            m["pick"] = {
+                                "bet":        bet_bg(market, sel, home_bg, away_bg),
+                                "betEn":      pick_raw.get("betEN", f"{home_en} Win"),
+                                "conf":       conf,
+                                "confReason": pick_raw.get("conf_reason", ""),
+                                "market":     market,
+                                "selection":  sel,
+                                "odd":        str(resolved_odd),
+                            }
+                            print(f"  ↻  Re-picked: {home_en} vs {away_en} → {market}/{sel} @ {resolved_odd}")
+                        else:
+                            m["pick"] = {"bet": "—", "betEn": "—", "conf": 0, "market": "h2h", "selection": "home", "odd": "?"}
+                            print(f"  ↻  {home_en} vs {away_en} — EV too low ({conf}% × {resolved_odd}), no pick")
                         m.pop("ai", None)
                         m.pop("aiEn", None)
-                        print(f"  ↻  Re-picked: {home_en} vs {away_en} → {market}/{sel} @ {resolved_odd}")
                     else:
                         print(f"  ↻  {home_en} vs {away_en} — aiCtx refreshed (no odds to re-pick)")
             continue
@@ -1115,6 +1166,21 @@ def process_domestic_league(
         market       = pick_raw.get("market", "h2h")
         sel          = pick_raw.get("selection", "home")
         resolved_odd = odds_wh.get(sel_to_key.get(sel, "h"), pick_raw.get("odd", "1.80"))
+        conf         = int(pick_raw.get("conf", 55))
+
+        if ev_ok(conf, resolved_odd):
+            pick_entry = {
+                "bet":        bet_bg(market, sel, home_bg, away_bg),
+                "betEn":      pick_raw.get("betEN", f"{home_en} Win"),
+                "conf":       conf,
+                "confReason": pick_raw.get("conf_reason", ""),
+                "market":     market,
+                "selection":  sel,
+                "odd":        str(resolved_odd),
+            }
+        else:
+            print(f"\n    ⚠  EV too low ({conf}% × {resolved_odd}) — no pick")
+            pick_entry = {"bet": "—", "betEn": "—", "conf": 0, "market": "h2h", "selection": "home", "odd": "?"}
 
         match_entry = {
             "id":      match_id,
@@ -1127,15 +1193,7 @@ def process_domestic_league(
             "date":    date_str,
             "time":    time_str,
             "status":  "pending",
-            "pick": {
-                "bet":        bet_bg(market, sel, home_bg, away_bg),
-                "betEn":      pick_raw.get("betEN", f"{home_en} Win"),
-                "conf":       int(pick_raw.get("conf", 55)),
-                "confReason": pick_raw.get("conf_reason", ""),
-                "market":     market,
-                "selection":  sel,
-                "odd":        str(resolved_odd),
-            },
+            "pick":    pick_entry,
             "odds_wh": odds_wh,
             "prob": {
                 "h": round(100 / float(odds_wh["h"])) if "h" in odds_wh else 50,
