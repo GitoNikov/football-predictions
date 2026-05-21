@@ -803,45 +803,6 @@
       "newsCtx": "",
       "competition": "La Liga",
       "competitionBG": "Ла Лига"
-    },
-    {
-      "id": "8beebe69",
-      "home": "Фрайбург",
-      "homeEn": "SC Freiburg",
-      "homeA": "FRI",
-      "away": "Астън Вила",
-      "awayEn": "Aston Villa",
-      "awayA": "AVL",
-      "date": "2026-05-20",
-      "time": "21:00",
-      "competition": "Europa League",
-      "competitionBG": "Лига Европа",
-      "status": "pending",
-      "pick": {
-        "bet": "Астън Вила победа",
-        "betEn": "Aston Villa Win",
-        "conf": 68,
-        "confReason": "Aston Villa are clear favourites at 1.67 (implied 60%), finishing 4th in the Premier League with strong European pedigree; Freiburg at 4.8 are heavy underdogs in their first major European final",
-        "market": "h2h",
-        "selection": "away",
-        "odd": "1.67"
-      },
-      "odds_wh": {
-        "a": "1.67",
-        "h": "4.8",
-        "x": "3.7",
-        "o25": "1.95"
-      },
-      "prob": {
-        "h": 21,
-        "d": 27,
-        "a": 60
-      },
-      "aiCtx": "Europa League Final at Beşiktaş Stadium, Istanbul — neutral venue. Aston Villa (4th in the Premier League, 62 pts) scoring 1.46 and conceding 1.3 goals per game, form (last 6): D 1-1, W 4-3, L 0-1, L 1-2, D 2-2, W 4-2. SC Freiburg (Bundesliga) are in their first-ever major European final. William Hill odds: Freiburg Win 4.8 | Draw 3.7 | Aston Villa Win 1.67 | Over 2.5 Goals 1.95.",
-      "newsCtx": "",
-      "ai": "Двубойът между Фрайбург и Астън Вила е между отбори с различна форма, като Астън Вила заема 4-то място във Висшата лига с 62 точки, вкарват 1.46 гола на мач и допускат 1.3 гола, а формата им е П 1-1, П 4-3, З 0-1, З 1-2, Р 2-2, П 4-2. Гостите имат предимство в класирането и показват добра форма, което ги прави фаворити в този двубой, особено срещу Фрайбург, който е в първия си голям европейски финал. Прогнозата е за победа на Астън Вила с котировка 1.67.",
-      "aiEn": "Aston Villa, who are 4th in the Premier League with 62 points, scoring 1.46 and conceding 1.3 goals per game, and have a recent form of D 1-1, W 4-3, L 0-1, L 1-2, D 2-2, W 4-2, face SC Freiburg in the Europa League Final. Aston Villa's quality, superior league position, and recent form make a strong case for an away win, particularly against a Freiburg side that is in its first major European final. The pick is for an Aston Villa win at exact odds of 1.67.",
-      "aiCtxHash": "d09edd69"
     }
   ],
   "betBuilder": {
@@ -872,6 +833,27 @@
     "reasoningEn": "This combination is statistically sound as both Nottingham Forest and Bournemouth have shown strong form and a tendency to score goals, making a home win, both teams to score, and over 2.5 goals a plausible bet."
   },
   "results": [
+    {
+      "id": "8beebe69",
+      "home": "Фрайбург",
+      "homeEn": "SC Freiburg",
+      "away": "Астън Вила",
+      "awayEn": "Aston Villa",
+      "date": "2026-05-20",
+      "competition": "Лига Европа",
+      "competitionEn": "Europa League",
+      "pick": {
+        "bet": "Астън Вила победа",
+        "betEn": "Aston Villa Win",
+        "conf": 68,
+        "confReason": "Aston Villa are clear favourites at 1.67 (implied 60%), finishing 4th in the Premier League with strong European pedigree; Freiburg at 4.8 are heavy underdogs in their first major European final",
+        "market": "h2h",
+        "selection": "away",
+        "odd": "1.67"
+      },
+      "result": "W",
+      "score": "0-3"
+    },
     {
       "id": "ala_osa",
       "home": "Алавес",
@@ -1480,221 +1462,15 @@
       },
       "result": "W",
       "score": "2-0"
-    },
-    {
-      "id": "gir_rso",
-      "home": "Хирона",
-      "homeEn": "Girona",
-      "away": "Реал Сосиедад",
-      "awayEn": "Real Sociedad",
-      "date": "2026-05-14",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.6, recent BTTS and over 2.5 trends in both teams, and the odd is within the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.73"
-      },
-      "result": "L",
-      "score": "1-1"
-    },
-    {
-      "id": "val_ray",
-      "home": "Валенсия",
-      "homeEn": "Valencia",
-      "away": "Райо Валекано",
-      "awayEn": "Rayo Vallecano",
-      "date": "2026-05-14",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.3/game is not high enough for over 2.5, but no clear h2h or btts edge and the odd is in the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.0"
-      },
-      "result": "L",
-      "score": "1-1"
-    },
-    {
-      "id": "get_mal",
-      "home": "Хетафе",
-      "homeEn": "Getafe",
-      "away": "Майорка",
-      "awayEn": "Mallorca",
-      "date": "2026-05-13",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Под 2.5 гола",
-        "betEn": "Under 2.5 Goals",
-        "conf": 68,
-        "confReason": "Getafe's recent games have low goals, with 0/6 over 2.5 and 0/6 BTTS, while Mallorca's scoring and conceding rates are moderate. Combined expected goals are ~2.3, which is below the threshold for over 2.5, and the odd is within the sweet spot.",
-        "market": "over_under",
-        "selection": "under_2.5",
-        "odd": "2.62"
-      },
-      "result": "L",
-      "score": "3-1"
-    },
-    {
-      "id": "ala_bar",
-      "home": "Алавес",
-      "homeEn": "Deportivo Alavés",
-      "away": "Барселона",
-      "awayEn": "FC Barcelona",
-      "date": "2026-05-13",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score Yes",
-        "conf": 78,
-        "confReason": "Deportivo Alavés have BTTS in 6/6 recent games and FC Barcelona have BTTS in 3/6 recent games, combined expected goals is ~2.1/game, and the odd is within the 1.40-2.50 sweet spot",
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.75"
-      },
-      "result": "L",
-      "score": "1-0"
-    },
-    {
-      "id": "vil_sev",
-      "home": "Вияреал",
-      "homeEn": "Villarreal",
-      "away": "Севиля",
-      "awayEn": "Sevilla",
-      "date": "2026-05-13",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 72,
-        "confReason": "Combined expected goals ~3.5, recent BTTS and over 2.5 trends for both teams, and the odd is within the 1.40-2.50 range",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.8"
-      },
-      "result": "W",
-      "score": "2-3"
-    },
-    {
-      "id": "esp_bil",
-      "home": "Еспаньол",
-      "homeEn": "Espanyol",
-      "away": "Athletic Bilbao",
-      "awayEn": "Athletic Bilbao",
-      "date": "2026-05-13",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals is ~2.5, recent BTTS and over 2.5 trends are moderate, but the odd is within the preferred range and no clear h2h or btts edge exists",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.1"
-      },
-      "result": "L",
-      "score": "2-0"
-    },
-    {
-      "id": "mci_pal",
-      "home": "Ман Сити",
-      "homeEn": "Manchester City",
-      "away": "Кристъл Палас",
-      "awayEn": "Crystal Palace",
-      "date": "2026-05-13",
-      "competition": "Висша лига · Кръг 36",
-      "competitionEn": "Premier League · GW36",
-      "pick": {
-        "bet": "Ман Сити победа",
-        "betEn": "Manchester City Win",
-        "conf": 78,
-        "confReason": "Manchester City are clearly stronger with an 8-place gap and recent form advantage, and the h2h odd is within the preferred range",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.2"
-      },
-      "result": "W",
-      "score": "3-0"
-    },
-    {
-      "id": "osa_atm",
-      "home": "Осасуна",
-      "homeEn": "Osasuna",
-      "away": "Атлетико Мадрид",
-      "awayEn": "Atlético Madrid",
-      "date": "2026-05-12",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 1.5 гола",
-        "betEn": "Over 1.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.3, recent BTTS in 5/6 for Osasuna and 3/6 for Atlético Madrid, and no clear h2h or btts edge",
-        "market": "over_under",
-        "selection": "over_1.5",
-        "odd": "1.28"
-      },
-      "result": "W",
-      "score": "1-2"
-    },
-    {
-      "id": "bet_elc",
-      "home": "Реал Бетис",
-      "homeEn": "Real Betis",
-      "away": "Elche CF",
-      "awayEn": "Elche CF",
-      "date": "2026-05-12",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Реал Бетис победа",
-        "betEn": "Real Betis Win",
-        "conf": 78,
-        "confReason": "Real Betis are 8 places above Elche CF, recent form is decent, and the odd is within the sweet spot",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.62"
-      },
-      "result": "W",
-      "score": "2-1"
-    },
-    {
-      "id": "cel_lev",
-      "home": "Селта Виго",
-      "homeEn": "Celta Vigo",
-      "away": "Levante",
-      "awayEn": "Levante",
-      "date": "2026-05-12",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Селта Виго победа",
-        "betEn": "Celta Vigo Win",
-        "conf": 62,
-        "confReason": "8-place gap and home team recent form, but odd 1.75 is at top of sweet spot and Levante's form is not extremely weak",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.75"
-      },
-      "result": "L",
-      "score": "2-3"
     }
   ],
   "record": {
-    "correct": 66,
-    "total": 110,
+    "correct": 67,
+    "total": 111,
     "period": "ЛЕ 26.02.2026"
+  },
+  "bbRecord": {
+    "correct": 0,
+    "total": 0
   }
 }
