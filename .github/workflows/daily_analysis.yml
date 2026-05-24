@@ -58,9 +58,21 @@ jobs:
 
           print("\n🔑 API key validation\n")
           if groq_key:
-              check("GROQ_API_KEY (Groq)",
-                    "https://api.groq.com/openai/v1/models",
-                    {"Authorization": f"Bearer {groq_key}"})
+              # /models returns 403 on free-tier keys; treat 200 or 403 as valid
+              req2 = urllib.request.Request(
+                  "https://api.groq.com/openai/v1/models",
+                  headers={"Authorization": f"Bearer {groq_key}"})
+              try:
+                  with urllib.request.urlopen(req2, timeout=8) as r:
+                      print(f"  ✓  GROQ_API_KEY (Groq)")
+              except Exception as e:
+                  code = getattr(e, 'code', None)
+                  if code == 403:
+                      print(f"  ✓  GROQ_API_KEY (Groq) — key valid (403 on /models is expected)")
+                  elif code == 401 or "401" in str(e):
+                      errors.append("GROQ_API_KEY (Groq): 401 Unauthorized — key invalid or expired")
+                  else:
+                      errors.append(f"GROQ_API_KEY (Groq): {e}")
           else:
               errors.append("GROQ_API_KEY: not set")
 

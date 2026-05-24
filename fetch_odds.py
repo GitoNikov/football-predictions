@@ -450,8 +450,8 @@ def main():
         print("  ℹ  OAIO_API_KEY not set — skipping UEFA/expansion league odds refresh")
 
     if not all_odds:
-        print("\n⚠  No odds found — check API keys.")
-        sys.exit(1)
+        print("\n⚠  No odds found — check API keys or verify upcoming events exist.")
+        return
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     payload = {
