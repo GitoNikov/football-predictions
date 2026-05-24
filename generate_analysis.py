@@ -13,6 +13,7 @@ Get a free key at: https://console.groq.com
 import hashlib
 import json
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -23,19 +24,22 @@ except ImportError:
     sys.exit("❌  groq not installed. Run: pip install groq")
 
 DATA_FILE  = Path("data/matchday.json")
-MODEL_NAME = "llama-3.3-70b-versatile"
-DELAY      = 1.5   # seconds between calls
+MODEL_NAME = "deepseek-r1-distill-llama-70b"   # reasoning model — better arguments, slower
+DELAY      = 4.0   # seconds between calls (deepseek-r1 TPM limit is tighter)
+
+def strip_think(text: str) -> str:
+    """Remove <think>...</think> reasoning blocks emitted by deepseek-r1."""
+    return re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
+
 
 def to_bg_form(ctx: str) -> str:
     """Convert W/D/L form letters to Bulgarian П/Р/З inside form sections of the context."""
-    import re
     def translate_segment(m):
         s = m.group()
         s = re.sub(r'\bW\b', 'П', s)
         s = re.sub(r'\bD\b', 'Р', s)
         s = re.sub(r'\bL\b', 'З', s)
         return s
-    # Match each "form …." sentence and translate only W/D/L letters within it
     return re.sub(r'form[^.]+\.', translate_segment, ctx)
 
 
@@ -88,9 +92,34 @@ def build_prompt(match: dict, label: str) -> str:
 
     market = pick.get("market", "h2h")
     sel    = pick.get("selection", "home")
-    # Look up market-specific S2 guidance; fall back to home-win default
-    s2_key = (market, sel if market == "h2h" else None)
-    s2_en, s2_bg = _S2.get(s2_key, _S2[("h2h", "home")])
+
+    # Detect value/underdog angle: backing the less-favoured team in a h2h pick
+    is_value_pick = (
+        market == "h2h"
+        and (
+            (sel == "home" and prob.get("h", 50) < prob.get("a", 50))
+            or (sel == "away" and prob.get("a", 50) < prob.get("h", 50))
+        )
+    )
+
+    if is_value_pick:
+        s2_en = (
+            "Sentence 2: this is a VALUE bet on the statistical underdog — identify what specifically "
+            "justifies the pick at these odds: home advantage, motivation (relegation/title/European "
+            "stakes visible in the standings), the favourite's soft or inconsistent recent form, or "
+            "a head-to-head anomaly. Be honest that the underdog is the weaker side on paper; do NOT "
+            "claim they have overall statistical superiority if the Context shows otherwise."
+        )
+        s2_bg = (
+            "Изречение 2: залогът е с добра стойност на аутсайдера — посочи конкретна причина: "
+            "домакинско предимство, мотивация (борба за оцеляване/титла/Европа видима от класирането), "
+            "непостоянната форма на фаворита или история на двубоите. Бъди честен, че аутсайдерът е "
+            "по-слабият отбор на теория; не твърди, че има обща статистическа надмощия, ако "
+            "контекстът показва обратното."
+        )
+    else:
+        s2_key = (market, sel if market == "h2h" else None)
+        s2_en, s2_bg = _S2.get(s2_key, _S2[("h2h", "home")])
 
     return f"""Match: {home_en} vs {away_en} ({label})
 Context (English): {ctx}{news_line}{conf_reason_line}{h2h_line}
@@ -113,7 +142,7 @@ Write a 3-sentence match analysis. Return ONLY valid JSON, no markdown:
 {{"bg": "...", "en": "..."}}
 
 ENGLISH — factual, journalistic tone:
-- Sentence 1: league position, points, goals per game, and recent form (with scores) of both teams
+- Sentence 1: highlight the KEY DIFFERENTIAL between the two teams — pick the 2-3 most telling stats (position gap, points, goals per game, most relevant form results with scores). Do NOT list all form results verbatim; synthesise.
 - {s2_en} — ground it in the Pick reasoning above if provided; include H2H if noted above
 - Sentence 3: state the pick and exact odds {pick['odd']} — do NOT mention any confidence percentage
 
@@ -125,6 +154,7 @@ BULGARIAN — write as a native Bulgarian football journalist, NOT a translation
 - Active voice, present tense, third-person journalistic register — NEVER "ми", "аз", "ни"
 - {s2_bg} — ground it in the Pick reasoning above if provided; include H2H if noted above
 - Mirror the 3-sentence structure but phrased naturally — never translate word-for-word
+- Sentence 1 (BG): same principle — synthesise the key differential, do not copy the full stat list
 - Sentence 3: state the pick and exact odds {pick['odd']} — do NOT mention any confidence percentage"""
 
 
@@ -138,9 +168,10 @@ def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
                 {"role": "user",   "content": prompt},
             ],
             temperature=0.5,
-            max_tokens=700,
+            max_tokens=1500,   # extra headroom for deepseek-r1 thinking tokens
         )
         text = response.choices[0].message.content.strip()
+        text = strip_think(text)   # remove <think>...</think> from deepseek-r1
         if "```" in text:
             text = text.split("```")[1]
             if text.startswith("json"):
@@ -152,7 +183,11 @@ def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
         print(f"\n    ⚠  JSON parse error: {e}")
         return "", ""
     except Exception as e:
-        print(f"\n    ⚠  API error: {e}")
+        if "429" in str(e) or "rate_limit" in str(e).lower():
+            print(f"\n    ⚠  Rate limited — waiting 60s…")
+            time.sleep(60)
+        else:
+            print(f"\n    ⚠  API error: {e}")
         return "", ""
 
 
@@ -162,6 +197,12 @@ def ctx_hash(match: dict) -> str:
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--force", action="store_true",
+                        help="Regenerate analysis for all matches even if context is unchanged")
+    args = parser.parse_args()
+
     api_key = os.environ.get("GROQ_API_KEY", "")
     if not api_key:
         sys.exit("❌  Set GROQ_API_KEY env var.\n    Free key: https://console.groq.com")
@@ -192,7 +233,7 @@ def main():
         current_hash = ctx_hash(match)
         analysis_ok  = match.get("ai") and match.get("aiEn") and match.get("aiCtxHash") == current_hash
 
-        if analysis_ok:
+        if analysis_ok and not args.force:
             print(f"  ↩  {name} — context unchanged, skipping")
             skipped += 1
             continue
@@ -248,9 +289,10 @@ def main():
                         {"role": "user",   "content": prompt},
                     ],
                     temperature=0.7,
-                    max_tokens=250,
+                    max_tokens=800,
                 )
                 text = resp.choices[0].message.content.strip()
+                text = strip_think(text)
                 if "```" in text:
                     text = text.split("```")[1]
                     if text.startswith("json"):
