@@ -96,7 +96,10 @@
         "a": 55
       },
       "aiCtx": "Crystal Palace are 15th in the Premier League (45 pts), scoring 1.08 and conceding 1.32 goals per game, BTTS in 3/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): D 0-0, L 1-3, L 0-3, D 2-2, L 0-3, D 2-2. Arsenal are 1st (82 pts), scoring 1.86 and conceding 0.7 goals per game, BTTS in 1/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): W 1-0, D 1-1, W 3-0, W 1-0, W 1-0, W 1-0. Combined expected goals: ~2.5/game. H2H last 1: Crystal Palace 0W-0D-1L, avg 1.0 goals/game.",
-      "newsCtx": ""
+      "newsCtx": "",
+      "ai": "Кристъл Палас заема 15-то място в лигата с 45 точки, вкарват 1.08 гола на мач и допускат 1.32 гола, а формата им от последните 6 мача е Р 0-0, З 1-3, З 0-3, Р 2-2, З 0-3, Р 2-2, докато Арсенал е лидер с 82 точки, вкарват 1.86 гола и допускат 0.7 гола, с форма П 1-0, Р 1-1, П 3-0, П 1-0, П 1-0, П 1-0. Домакините имат предимство в позицията и формата, което ги прави добър избор за победа, особено след като двубоят между двете отбори завърши с 1 победи за Арсенал и средно 1.0 гола на мач. Прогнозата е Кристъл Палас да спечели с котировка 3.9",
+      "aiEn": "Crystal Palace are 15th in the Premier League with 45 points, scoring 1.08 and conceding 1.32 goals per game, with a recent form of D 0-0, L 1-3, L 0-3, D 2-2, L 0-3, D 2-2, while Arsenal are 1st with 82 points, scoring 1.86 and conceding 0.7 goals per game, with a form of W 1-0, D 1-1, W 3-0, W 1-0, W 1-0, W 1-0. Crystal Palace have a position and form advantage that makes them a good choice for a win, especially considering the head-to-head record with Arsenal, where Crystal Palace have 0 wins and an average of 1.0 goals per game. The pick is Crystal Palace to win at 3.9 odds.",
+      "aiCtxHash": "e8017610"
     },
     {
       "id": "mci_avl",
@@ -163,7 +166,10 @@
         "a": 48
       },
       "aiCtx": "Nottingham Forest are 16th in the Premier League (43 pts), scoring 1.27 and conceding 1.35 goals per game, BTTS in 5/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): D 1-1, W 4-1, W 5-0, W 3-1, D 1-1, L 2-3. Bournemouth are 6th (56 pts), scoring 1.54 and conceding 1.43 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 2-1, W 2-1, D 2-2, W 3-0, W 1-0, D 1-1. Combined expected goals: ~2.8/game. H2H last 1: Nottingham Forest 0W-0D-1L, avg 2.0 goals/game.",
-      "newsCtx": ""
+      "newsCtx": "",
+      "ai": "Нотингам Форест заемат 16-то място във Висшата лига с 43 точки, вкарват 1.27 гола на мач и допускат 1.35 гола, а формата им от последните 6 мача е Р 1-1, П 4-1, П 5-0, П 3-1, Р 1-1, З 2-3, докато Борнемут е 6-ти с 56 точки, вкарват 1.54 гола и допускат 1.43 гола, с форма П 2-1, П 2-1, Р 2-2, П 3-0, П 1-0, Р 1-1. Домакините имат добра форма и позиция, което ги прави добър избор за победа, особено след като гостите имат само 1 победа в последния им двубой, който завърши с 2 гола средно на мач. Прогнозата е Нотингам Форест да спечели при котировка 3.2",
+      "aiEn": "Nottingham Forest are 16th in the Premier League with 43 points, scoring 1.27 and conceding 1.35 goals per game, with a recent form of D 1-1, W 4-1, W 5-0, W 3-1, D 1-1, L 2-3, while Bournemouth are 6th with 56 points, scoring 1.54 and conceding 1.43 goals per game, with a form of W 2-1, W 2-1, D 2-2, W 3-0, W 1-0, D 1-1. Nottingham Forest have a good position and scoring strength, and their form advantage, combined with their head-to-head record of 0W-0D-1L and an average of 2.0 goals per game, makes a strong case for a home win. The pick is Nottingham Forest to win at 3.2 odds.",
+      "aiCtxHash": "2b403bf6"
     },
     {
       "id": "liv_bre",
@@ -263,7 +269,10 @@
         "a": 37
       },
       "aiCtx": "Burnley are 19th in the Premier League (21 pts), scoring 1.0 and conceding 2.0 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-2, L 1-4, L 0-1, L 1-3, D 2-2, L 0-1. Wolverhampton Wanderers are 20th (19 pts), scoring 0.7 and conceding 1.81 goals per game, BTTS in 2/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-4, L 0-3, L 0-1, D 1-1, L 0-3, D 1-1. Combined expected goals: ~2.8/game. H2H last 1: Burnley 1W-0D-0L, avg 5.0 goals/game.",
-      "newsCtx": ""
+      "newsCtx": "",
+      "ai": "Бърнли заемат 19то място в лигата с 21 точка, вкарват 1.0 гола на мач и допускат 2.0 гола, а формата им изглежда така: З 0-2, З 1-4, З 0-1, З 1-3, Р 2-2, З 0-1, докато Уулвърхямптън са на 20то място с 19 точки, вкарват 0.7 гола и допускат 1.81 гола, с форма от З 0-4, З 0-3, З 0-1, Р 1-1, З 0-3, Р 1-1. Домакините имат леко предимство в директните двубои, спечелвайки последния мач с 1W-0D-0L и средно 5.0 гола на мач, което ги прави добър избор за тази среща. Прогнозата е Бърнли да спечели при котировка 2.38",
+      "aiEn": "Burnley are 19th in the league with 21 points, scoring 1.0 goals per game and conceding 2.0, with a recent form of L 0-2, L 1-4, L 0-1, L 1-3, D 2-2, L 0-1, while Wolverhampton Wanderers are 20th with 19 points, scoring 0.7 goals and conceding 1.81, with a form of L 0-4, L 0-3, L 0-1, D 1-1, L 0-3, D 1-1. Burnley have a slight advantage, having won the last head-to-head match with a record of 1W-0D-0L and an average of 5.0 goals per game, which makes them a good pick for this match. The pick is Burnley to win at odds of 2.38",
+      "aiCtxHash": "152975e9"
     },
     {
       "id": "sun_che",
@@ -297,7 +306,10 @@
         "a": 51
       },
       "aiCtx": "Sunderland are 10th in the Premier League (51 pts), scoring 1.08 and conceding 1.27 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 1-0, L 3-4, L 0-5, D 1-1, D 0-0, W 3-1. Chelsea are 8th (52 pts), scoring 1.54 and conceding 1.35 goals per game, BTTS in 3/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 0-3, L 0-1, L 0-3, L 1-3, D 1-1, W 2-1. Combined expected goals: ~2.6/game. H2H last 1: Sunderland 1W-0D-0L, avg 3.0 goals/game.",
-      "newsCtx": ""
+      "newsCtx": "",
+      "ai": "Съндърланд заемат 10-то място във Висшата лига с 51 точки, вкарват 1.08 гола на мач и допускат 1.27 гола, като формата им от последните 6 мача е П 1-0, З 3-4, З 0-5, Р 1-1, Р 0-0, П 3-1, а Челси са 8-ми с 52 точки, вкарват 1.54 гола на мач и допускат 1.35 гола, с форма от последните 6 мача З 0-3, З 0-1, З 0-3, З 1-3, Р 1-1, П 2-1. Домакините имат предимство в директния двубой, спечелвайки последния мач с 1 победа и средно 3 гола на мач, което ги прави добър избор за тази среща. Прогнозата е Съндърланд да спечели при котировка 3.5",
+      "aiEn": "Sunderland are 10th in the Premier League with 51 points, scoring 1.08 and conceding 1.27 goals per game, with a recent form of W 1-0, L 3-4, L 0-5, D 1-1, D 0-0, W 3-1, while Chelsea are 8th with 52 points, scoring 1.54 and conceding 1.35 goals per game, with a form of L 0-3, L 0-1, L 0-3, L 1-3, D 1-1, W 2-1. Sunderland have an advantage, having won the last head-to-head match with an average of 3 goals per game, which makes them a good choice for this match. The pick is Sunderland to win at 3.5",
+      "aiCtxHash": "53d343c3"
     },
     {
       "id": "tot_eve",
@@ -331,7 +343,10 @@
         "a": 27
       },
       "aiCtx": "Tottenham are 17th in the Premier League (38 pts), scoring 1.27 and conceding 1.54 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-1, D 2-2, W 1-0, W 2-1, D 1-1, L 1-2. Everton are 12th (49 pts), scoring 1.27 and conceding 1.32 goals per game, BTTS in 6/6 and over 2.5 in 6/6 recent games, form (last 6, scored first): D 2-2, L 1-2, L 1-2, D 3-3, D 2-2, L 1-3. Combined expected goals: ~2.7/game.",
-      "newsCtx": ""
+      "newsCtx": "",
+      "ai": "Тотнъм заема 17-то място в премиершипа с 38 точки, вкарват 1.27 гола на мач и допускат 1.54 гола, а формата им от последните 6 мача е З 0-1, Р 2-2, П 1-0, П 2-1, Р 1-1, З 1-2, докато Евъртън е на 12-то място с 49 точки, вкарват 1.27 гола и допускат 1.32 гола, с форма от последните 6 мача Р 2-2, З 1-2, З 1-2, Р 3-3, Р 2-2, З 1-3. Домакините имат леко предимство в формата и позицията в класирането, което ги прави фаворити в двубоя. Прогнозата е Тотнъм да спечели с котировка 1.91.",
+      "aiEn": "Tottenham are 17th in the Premier League with 38 points, scoring 1.27 and conceding 1.54 goals per game, with a recent form of L 0-1, D 2-2, W 1-0, W 2-1, D 1-1, L 1-2, while Everton are 12th with 49 points, scoring 1.27 and conceding 1.32 goals per game, with a form of D 2-2, L 1-2, L 1-2, D 3-3, D 2-2, L 1-3. The home team has a slight advantage in form and league position, making them favorites in the match, which grounds the reasoning for the pick. The pick is Tottenham to win at 1.91.",
+      "aiCtxHash": "bdf71215"
     },
     {
       "id": "ful_new",
@@ -365,7 +380,10 @@
         "a": 43
       },
       "aiCtx": "Fulham are 13th in the Premier League (49 pts), scoring 1.22 and conceding 1.38 goals per game, BTTS in 1/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): L 0-2, D 0-0, W 1-0, L 0-3, L 0-1, D 1-1. Newcastle are 11th (49 pts), scoring 1.43 and conceding 1.43 goals per game, BTTS in 5/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 1-2, L 1-2, L 0-1, W 3-1, D 1-1, W 3-1. Combined expected goals: ~2.7/game. H2H last 1: Fulham 0W-0D-1L, avg 3.0 goals/game.",
-      "newsCtx": ""
+      "newsCtx": "",
+      "ai": "Фулъм заема 13-то място в лигата с 49 точки, вкарват 1.22 гола на мач и допускат 1.38 гола, като формата им изглежда така: З 0-2, Р 0-0, П 1-0, З 0-3, З 0-1, Р 1-1, а Нюкасъл е на 11-то място с 49 точки, вкарват 1.43 гола и допускат 1.43 гола, с форма: З 1-2, З 1-2, З 0-1, П 3-1, Р 1-1, П 3-1. Домакините имат предимство в позицията и голова сила, а и в последния двубой между двата отбора има средно 3 гола, което дава основание да се очаква победа за Фулъм. Прогнозата е Фулъм да спечели при котировка 2.75.",
+      "aiEn": "Fulham are 13th in the Premier League with 49 points, scoring 1.22 and conceding 1.38 goals per game, with a recent form of L 0-2, D 0-0, W 1-0, L 0-3, L 0-1, D 1-1, while Newcastle are 11th with 49 points, scoring 1.43 and conceding 1.43 goals per game, with a form of L 1-2, L 1-2, L 0-1, W 3-1, D 1-1, W 3-1. Fulham have a position and scoring strength advantage, and with an average of 3 goals in their last head-to-head match, this grounds the case for a home win. The pick is Fulham to win at 2.75.",
+      "aiCtxHash": "d9445d49"
     },
     {
       "id": "whu_lee",
@@ -434,7 +452,10 @@
       "aiCtx": "Villarreal are 3rd in the La Liga (69 pts), scoring 1.81 and conceding 1.22 goals per game, BTTS in 5/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): D 1-1, W 2-1, W 5-1, D 1-1, L 2-3, L 0-2. Atlético Madrid are 4th (69 pts), scoring 1.65 and conceding 1.05 goals per game, BTTS in 2/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): D 1-1, W 2-0, L 0-1, L 0-1, W 2-1, W 1-0. Combined expected goals: ~2.9/game.",
       "newsCtx": "",
       "competition": "La Liga",
-      "competitionBG": "Ла Лига"
+      "competitionBG": "Ла Лига",
+      "ai": "Вияреал и Атлетико Мадрид заемат 3-то и 4-то място в ла лига с по 69 точки, като Вияреал вкарват 1.81 гола на мач и допускат 1.22 гола, а Атлетико Мадрид вкарват 1.65 гола и допускат 1.05 гола, с форма от последните 6 мача съответно Р 1-1, П 2-1, П 5-1, Р 1-1, З 2-3, З 0-2 за Вияреал и Р 1-1, П 2-0, З 0-1, З 0-1, П 2-1, П 1-0 за Атлетико Мадрид. Домакините имат предимство в формата и голова сила, което ги прави фаворити за победа в този двубой. Прогнозата е Вияреал да спечели при котировка 2.45.",
+      "aiEn": "Villarreal and Atlético Madrid are 3rd and 4th in the La Liga with 69 points, scoring 1.81 and 1.65 goals per game, and conceding 1.22 and 1.05 goals per game, with recent form of D 1-1, W 2-1, W 5-1, D 1-1, L 2-3, L 0-2 for Villarreal and D 1-1, W 2-0, L 0-1, L 0-1, W 2-1, W 1-0 for Atlético Madrid. Villarreal's home advantage and scoring strength make a strong case for a home win, given their position and form. The pick is Villarreal to win at 2.45.",
+      "aiCtxHash": "bb8dbd1d"
     },
     {
       "id": "0d0d2abd",
@@ -470,7 +491,10 @@
         "a": 25
       },
       "aiCtx": "Crystal Palace vs Rayo Vallecano in the Conference League.",
-      "newsCtx": "A HDD/SSD utility software which supports a part of USB, Intel RAID and NVMe. .NET Framework 4.8 or later is required to use the latest email notification features. NVMe support required Windows … | Read in-depth descriptions, planets, zodiacs, healing properties and more with each crystal. Detailed crystal properties."
+      "newsCtx": "A HDD/SSD utility software which supports a part of USB, Intel RAID and NVMe. .NET Framework 4.8 or later is required to use the latest email notification features. NVMe support required Windows … | Read in-depth descriptions, planets, zodiacs, healing properties and more with each crystal. Detailed crystal properties.",
+      "ai": "Двубойът между Кристъл Палас и Райо Валекано е от големия интерес, тъй като домакините вкарват 1,5 гола на мач, а гостите допускат 1,2 гола. Кристъл Палас имат форма и позиция, които им дават предимство, тъй като домакините имат по-добра голова сила и форма от гостите. Прогнозата е Кристъл Палас да спечели мача с котировка 1.91 при Уилям Хил.",
+      "aiEn": "Crystal Palace and Rayo Vallecano face off in a highly anticipated match, with the home team averaging 1.5 goals per game and the away team conceding 1.2 goals per game, and their recent form being notable. Crystal Palace have a strong case for a home win, given their position, scoring strength, and form advantage over the visitors. The pick is for Crystal Palace to win the match at odds of 1.91 with William Hill.",
+      "aiCtxHash": "2a91cec1"
     }
   ],
   "betBuilder": {
