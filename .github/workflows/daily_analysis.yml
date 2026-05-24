@@ -23,6 +23,81 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Validate API keys
+        env:
+          GROQ_API_KEY:            ${{ secrets.GROQ_API_KEY }}
+          ODDS_API_KEY:            ${{ secrets.ODDS_API_KEY }}
+          OAIO_API_KEY:            ${{ secrets.OAIO_API_KEY }}
+          FOOTBALL_DATA_API_KEY:   ${{ secrets.FOOTBALL_DATA_API_KEY }}
+          API_FOOTBALL_KEY:        ${{ secrets.API_FOOTBALL_KEY }}
+        run: |
+          python - <<'EOF'
+          import os, sys, urllib.request, json
+          errors = []
+
+          def check(name, url, headers=None, expect_key=None):
+              req = urllib.request.Request(url, headers=headers or {})
+              try:
+                  with urllib.request.urlopen(req, timeout=8) as r:
+                      if r.status == 200:
+                          print(f"  ✓  {name}")
+                          return
+                      errors.append(f"{name}: HTTP {r.status}")
+              except Exception as e:
+                  code = getattr(getattr(e, 'code', None), '__int__', lambda: None)()
+                  if code == 401 or "401" in str(e):
+                      errors.append(f"{name}: 401 Unauthorized — key invalid or expired")
+                  else:
+                      errors.append(f"{name}: {e}")
+
+          groq_key  = os.environ.get("GROQ_API_KEY", "")
+          odds_key  = os.environ.get("ODDS_API_KEY", "")
+          oaio_key  = os.environ.get("OAIO_API_KEY", "")
+          fd_key    = os.environ.get("FOOTBALL_DATA_API_KEY", "")
+          af_key    = os.environ.get("API_FOOTBALL_KEY", "")
+
+          print("\n🔑 API key validation\n")
+          if groq_key:
+              check("GROQ_API_KEY (Groq)",
+                    "https://api.groq.com/openai/v1/models",
+                    {"Authorization": f"Bearer {groq_key}"})
+          else:
+              errors.append("GROQ_API_KEY: not set")
+
+          if odds_key:
+              check("ODDS_API_KEY (the-odds-api.com)",
+                    f"https://api.the-odds-api.com/v4/sports/?apiKey={odds_key}")
+          else:
+              errors.append("ODDS_API_KEY: not set")
+
+          if oaio_key:
+              check("OAIO_API_KEY (odds-api.io)",
+                    f"https://api.odds-api.io/v3/leagues?sport=football&apiKey={oaio_key}")
+          else:
+              errors.append("OAIO_API_KEY: not set")
+
+          if fd_key:
+              check("FOOTBALL_DATA_API_KEY (football-data.org)",
+                    "https://api.football-data.org/v4/competitions/",
+                    {"X-Auth-Token": fd_key})
+          else:
+              errors.append("FOOTBALL_DATA_API_KEY: not set")
+
+          if af_key:
+              check("API_FOOTBALL_KEY (api-football.com)",
+                    "https://v3.football.api-sports.io/status",
+                    {"x-apisports-key": af_key})
+          else:
+              errors.append("API_FOOTBALL_KEY: not set")
+
+          if errors:
+              print("\n⚠️  Key issues detected:")
+              for e in errors: print(f"    ✗  {e}")
+              print()
+          else:
+              print("\n✅  All keys valid\n")
+          EOF
+
       - name: Check match results
         continue-on-error: true
         env:

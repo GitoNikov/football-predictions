@@ -158,7 +158,8 @@ def api_get(base: str, api_key: str, path: str, params: dict | None = None) -> l
         print("  ⚠  429 rate limit — sleeping 10s and retrying…")
         time.sleep(10)
         resp = requests.get(url, params=p, timeout=15)
-    if resp.status_code in (404, 422):
+    if resp.status_code in (400, 404, 422):
+        print(f"  ⚠  {resp.status_code} from {path} — skipping")
         return None
     resp.raise_for_status()
     return resp.json()
