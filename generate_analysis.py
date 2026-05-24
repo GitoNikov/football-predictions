@@ -27,9 +27,20 @@ DATA_FILE  = Path("data/matchday.json")
 MODEL_NAME = "qwen/qwen3-32b"   # reasoning model — better arguments, slower
 DELAY      = 4.0   # seconds between calls (deepseek-r1 TPM limit is tighter)
 
-def strip_think(text: str) -> str:
-    """Remove <think>...</think> reasoning blocks emitted by deepseek-r1."""
-    return re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
+def extract_json(text: str) -> str:
+    """
+    Extract JSON from model output that may contain <think>...</think> blocks.
+    Strategy: strip think block first; if nothing remains, try to find JSON
+    inside the think block itself (qwen3 sometimes puts JSON inside thinking).
+    As last resort, find the first {...} or [{...}] block in the full text.
+    """
+    stripped = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
+    if stripped:
+        return stripped
+
+    # JSON may be buried inside the think block — extract last {...} occurrence
+    matches = re.findall(r'\{[^{}]*\}', text, re.DOTALL)
+    return matches[-1] if matches else text
 
 
 def to_bg_form(ctx: str) -> str:
@@ -168,10 +179,10 @@ def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
                 {"role": "user",   "content": prompt},
             ],
             temperature=0.5,
-            max_tokens=1500,   # extra headroom for deepseek-r1 thinking tokens
+            max_tokens=3000,   # qwen3 thinking can be long; leave room for JSON output
         )
         text = response.choices[0].message.content.strip()
-        text = strip_think(text)   # remove <think>...</think> from deepseek-r1
+        text = extract_json(text)   # strip <think> blocks; fall back to inner JSON
         if "```" in text:
             text = text.split("```")[1]
             if text.startswith("json"):
@@ -292,7 +303,7 @@ def main():
                     max_tokens=800,
                 )
                 text = resp.choices[0].message.content.strip()
-                text = strip_think(text)
+                text = extract_json(text)
                 if "```" in text:
                     text = text.split("```")[1]
                     if text.startswith("json"):
