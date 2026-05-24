@@ -401,326 +401,6 @@
       "newsCtx": ""
     },
     {
-      "id": "ala_ray",
-      "home": "Алавес",
-      "homeEn": "Deportivo Alavés",
-      "homeA": "ALA",
-      "away": "Райо Валекано",
-      "awayEn": "Rayo Vallecano",
-      "awayA": "RAY",
-      "date": "2026-05-23",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Алавес победа",
-        "betEn": "Deportivo Alavés Win",
-        "conf": 55,
-        "confReason": "",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "2.4"
-      },
-      "odds_wh": {
-        "h": "2.3",
-        "a": "3.0",
-        "x": "3.3",
-        "o25": "1.95"
-      },
-      "prob": {
-        "h": 43,
-        "d": 30,
-        "a": 33
-      },
-      "aiCtx": "Deportivo Alavés are 14th in the La Liga (43 pts), scoring 1.16 and conceding 1.46 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 1-2, W 2-1, L 2-4, D 1-1, W 1-0, W 1-0. Rayo Vallecano are 8th (47 pts), scoring 1.05 and conceding 1.16 goals per game, BTTS in 3/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): W 1-0, D 3-3, W 2-0, D 1-1, D 1-1, W 2-0. Combined expected goals: ~2.4/game. H2H last 1: Deportivo Alavés 0W-0D-1L, avg 1.0 goals/game.",
-      "newsCtx": "",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига"
-    },
-    {
-      "id": "rma_bil",
-      "home": "Реал Мадрид",
-      "homeEn": "Real Madrid",
-      "homeA": "RMA",
-      "away": "Athletic Bilbao",
-      "awayEn": "Athletic Bilbao",
-      "awayA": "BIL",
-      "date": "2026-05-23",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "—",
-        "betEn": "—",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "?"
-      },
-      "odds_wh": {
-        "a": "6.0",
-        "h": "1.44",
-        "x": "4.5",
-        "o25": "1.5"
-      },
-      "prob": {
-        "h": 69,
-        "d": 22,
-        "a": 17
-      },
-      "aiCtx": "Real Madrid are 2nd in the La Liga (83 pts), scoring 1.97 and conceding 0.89 goals per game, BTTS in 2/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): W 2-1, D 1-1, W 2-0, L 0-2, W 2-0, W 1-0. Athletic Bilbao are 12th (45 pts), scoring 1.11 and conceding 1.46 goals per game, BTTS in 3/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): W 1-0, L 2-3, W 4-2, L 0-1, L 0-2, D 1-1. Combined expected goals: ~2.7/game.",
-      "newsCtx": "",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига"
-    },
-    {
-      "id": "val_bar",
-      "home": "Валенсия",
-      "homeEn": "Valencia",
-      "homeA": "VAL",
-      "away": "Барселона",
-      "awayEn": "FC Barcelona",
-      "awayA": "BAR",
-      "date": "2026-05-23",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Валенсия победа",
-        "betEn": "Valencia Win",
-        "conf": 55,
-        "confReason": "",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "3.6"
-      },
-      "odds_wh": {
-        "a": "1.85",
-        "h": "3.6",
-        "x": "3.9",
-        "o25": "1.44"
-      },
-      "prob": {
-        "h": 28,
-        "d": 26,
-        "a": 54
-      },
-      "aiCtx": "Valencia are 9th in the La Liga (46 pts), scoring 1.16 and conceding 1.46 goals per game, BTTS in 4/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): D 1-1, W 2-1, L 0-2, W 1-0, D 1-1, W 4-3. FC Barcelona are 1st (94 pts), scoring 2.54 and conceding 0.89 goals per game, BTTS in 2/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): W 1-0, W 2-0, W 2-1, W 2-0, L 0-1, W 3-1. Combined expected goals: ~3.0/game.",
-      "newsCtx": "",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига"
-    },
-    {
-      "id": "get_osa",
-      "home": "Хетафе",
-      "homeEn": "Getafe",
-      "homeA": "GET",
-      "away": "Осасуна",
-      "awayEn": "Osasuna",
-      "awayA": "OSA",
-      "date": "2026-05-23",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Хетафе победа",
-        "betEn": "Getafe Win",
-        "conf": 55,
-        "confReason": "",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "2.5"
-      },
-      "odds_wh": {
-        "a": "3.1",
-        "h": "2.5",
-        "x": "2.75",
-        "o25": "2.9"
-      },
-      "prob": {
-        "h": 40,
-        "d": 36,
-        "a": 32
-      },
-      "aiCtx": "Getafe are 7th in the La Liga (48 pts), scoring 0.84 and conceding 1.03 goals per game, BTTS in 1/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): W 1-0, L 0-2, L 0-2, D 0-0, W 3-1, L 0-1. Osasuna are 16th (42 pts), scoring 1.19 and conceding 1.32 goals per game, BTTS in 5/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): L 0-1, W 2-1, L 1-2, L 2-3, L 1-2, L 1-2. Combined expected goals: ~2.2/game. H2H last 1: Getafe 0W-0D-1L, avg 3.0 goals/game.",
-      "newsCtx": "",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига"
-    },
-    {
-      "id": "cel_sev",
-      "home": "Селта Виго",
-      "homeEn": "Celta Vigo",
-      "homeA": "CEL",
-      "away": "Севиля",
-      "awayEn": "Sevilla",
-      "awayA": "SEV",
-      "date": "2026-05-23",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "—",
-        "betEn": "—",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "?"
-      },
-      "odds_wh": {
-        "h": "1.8",
-        "a": "4.4",
-        "x": "3.5",
-        "o25": "1.91"
-      },
-      "prob": {
-        "h": 56,
-        "d": 29,
-        "a": 23
-      },
-      "aiCtx": "Celta Vigo are 6th in the La Liga (51 pts), scoring 1.41 and conceding 1.3 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-1, L 1-2, W 3-1, W 1-0, L 2-3, D 1-1. Sevilla are 13th (43 pts), scoring 1.24 and conceding 1.59 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-2, L 1-2, W 1-0, W 2-1, W 3-2, L 0-1. Combined expected goals: ~2.8/game. H2H last 1: Celta Vigo 1W-0D-0L, avg 1.0 goals/game.",
-      "newsCtx": "",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига"
-    },
-    {
-      "id": "gir_elc",
-      "home": "Хирона",
-      "homeEn": "Girona",
-      "homeA": "GIR",
-      "away": "Elche CF",
-      "awayEn": "Elche CF",
-      "awayA": "ELC",
-      "date": "2026-05-23",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "—",
-        "betEn": "—",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "?"
-      },
-      "odds_wh": {
-        "a": "4.0",
-        "h": "1.8",
-        "x": "3.75",
-        "o25": "1.67"
-      },
-      "prob": {
-        "h": 56,
-        "d": 27,
-        "a": 25
-      },
-      "aiCtx": "Girona are 18th in the La Liga (40 pts), scoring 1.03 and conceding 1.46 goals per game, BTTS in 4/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 2-3, L 1-2, L 0-1, D 1-1, D 1-1, L 0-1. Elche CF are 17th (42 pts), scoring 1.3 and conceding 1.51 goals per game, BTTS in 5/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 3-2, W 2-1, L 1-3, D 1-1, L 1-2, W 1-0. Combined expected goals: ~2.6/game. H2H last 1: Girona 0W-0D-1L, avg 3.0 goals/game.",
-      "newsCtx": "",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига"
-    },
-    {
-      "id": "esp_rso",
-      "home": "Еспаньол",
-      "homeEn": "Espanyol",
-      "homeA": "ESP",
-      "away": "Реал Сосиедад",
-      "awayEn": "Real Sociedad",
-      "awayA": "RSO",
-      "date": "2026-05-23",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Еспаньол победа",
-        "betEn": "Espanyol Win",
-        "conf": 55,
-        "confReason": "",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "2.38"
-      },
-      "odds_wh": {
-        "h": "2.25",
-        "a": "3.1",
-        "x": "3.3",
-        "o25": "1.85"
-      },
-      "prob": {
-        "h": 44,
-        "d": 30,
-        "a": 32
-      },
-      "aiCtx": "Espanyol are 11th in the La Liga (45 pts), scoring 1.14 and conceding 1.46 goals per game, BTTS in 2/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): L 0-1, D 0-0, L 0-2, L 1-2, W 2-0, W 2-1. Real Sociedad are 10th (45 pts), scoring 1.57 and conceding 1.62 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-1, D 3-3, L 0-1, D 2-2, D 1-1, L 3-4. Combined expected goals: ~2.9/game.",
-      "newsCtx": "",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига"
-    },
-    {
-      "id": "bet_lev",
-      "home": "Реал Бетис",
-      "homeEn": "Real Betis",
-      "homeA": "BET",
-      "away": "Levante",
-      "awayEn": "Levante",
-      "awayA": "LEV",
-      "date": "2026-05-23",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Реал Бетис победа",
-        "betEn": "Real Betis Win",
-        "conf": 55,
-        "confReason": "",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "2.2"
-      },
-      "odds_wh": {
-        "a": "3.0",
-        "h": "2.15",
-        "x": "3.4",
-        "o25": "1.65"
-      },
-      "prob": {
-        "h": 47,
-        "d": 29,
-        "a": 33
-      },
-      "aiCtx": "Real Betis are 5th in the La Liga (57 pts), scoring 1.54 and conceding 1.27 goals per game, BTTS in 5/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): W 3-2, D 1-1, W 3-0, D 2-2, W 2-1, L 1-3. Levante are 15th (42 pts), scoring 1.24 and conceding 1.59 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 2-0, D 0-0, L 1-5, W 3-2, W 3-2, W 2-0. Combined expected goals: ~2.8/game.",
-      "newsCtx": "",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига"
-    },
-    {
-      "id": "mal_ovi",
-      "home": "Майорка",
-      "homeEn": "Mallorca",
-      "homeA": "MAL",
-      "away": "Oviedo",
-      "awayEn": "Oviedo",
-      "awayA": "OVI",
-      "date": "2026-05-23",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "—",
-        "betEn": "—",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "?"
-      },
-      "odds_wh": {
-        "h": "1.44",
-        "a": "6.5",
-        "x": "4.2",
-        "o25": "1.83"
-      },
-      "prob": {
-        "h": 69,
-        "d": 24,
-        "a": 15
-      },
-      "aiCtx": "Mallorca are 19th in the La Liga (39 pts), scoring 1.19 and conceding 1.54 goals per game, BTTS in 4/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): D 1-1, L 1-2, W 1-0, D 1-1, L 1-3, L 0-2. Oviedo are 20th (29 pts), scoring 0.7 and conceding 1.54 goals per game, BTTS in 2/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): D 1-1, L 1-2, L 0-3, D 0-0, L 0-2, L 0-1. Combined expected goals: ~2.5/game. H2H last 1: Mallorca 0W-1D-0L, avg 0.0 goals/game.",
-      "newsCtx": "",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига"
-    },
-    {
       "id": "vil_atm",
       "home": "Вияреал",
       "homeEn": "Villarreal",
@@ -821,6 +501,191 @@
     "reasoningEn": "This combination is statistically sound as both Nottingham Forest and Bournemouth have shown strong form and a tendency to score goals, making a home win, both teams to score, and over 2.5 goals a plausible bet."
   },
   "results": [
+    {
+      "id": "mal_ovi",
+      "home": "Майорка",
+      "homeEn": "Mallorca",
+      "away": "Oviedo",
+      "awayEn": "Oviedo",
+      "date": "2026-05-23",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "result": "W",
+      "score": "3-0"
+    },
+    {
+      "id": "bet_lev",
+      "home": "Реал Бетис",
+      "homeEn": "Real Betis",
+      "away": "Levante",
+      "awayEn": "Levante",
+      "date": "2026-05-23",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Реал Бетис победа",
+        "betEn": "Real Betis Win",
+        "conf": 55,
+        "confReason": "",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "2.2"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "esp_rso",
+      "home": "Еспаньол",
+      "homeEn": "Espanyol",
+      "away": "Реал Сосиедад",
+      "awayEn": "Real Sociedad",
+      "date": "2026-05-23",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Еспаньол победа",
+        "betEn": "Espanyol Win",
+        "conf": 55,
+        "confReason": "",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "2.38"
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
+      "id": "gir_elc",
+      "home": "Хирона",
+      "homeEn": "Girona",
+      "away": "Elche CF",
+      "awayEn": "Elche CF",
+      "date": "2026-05-23",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
+      "id": "cel_sev",
+      "home": "Селта Виго",
+      "homeEn": "Celta Vigo",
+      "away": "Севиля",
+      "awayEn": "Sevilla",
+      "date": "2026-05-23",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "result": "W",
+      "score": "1-0"
+    },
+    {
+      "id": "get_osa",
+      "home": "Хетафе",
+      "homeEn": "Getafe",
+      "away": "Осасуна",
+      "awayEn": "Osasuna",
+      "date": "2026-05-23",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Хетафе победа",
+        "betEn": "Getafe Win",
+        "conf": 55,
+        "confReason": "",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "2.5"
+      },
+      "result": "W",
+      "score": "1-0"
+    },
+    {
+      "id": "val_bar",
+      "home": "Валенсия",
+      "homeEn": "Valencia",
+      "away": "Барселона",
+      "awayEn": "FC Barcelona",
+      "date": "2026-05-23",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Валенсия победа",
+        "betEn": "Valencia Win",
+        "conf": 55,
+        "confReason": "",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "3.6"
+      },
+      "result": "W",
+      "score": "3-1"
+    },
+    {
+      "id": "rma_bil",
+      "home": "Реал Мадрид",
+      "homeEn": "Real Madrid",
+      "away": "Athletic Bilbao",
+      "awayEn": "Athletic Bilbao",
+      "date": "2026-05-23",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "result": "W",
+      "score": "4-2"
+    },
+    {
+      "id": "ala_ray",
+      "home": "Алавес",
+      "homeEn": "Deportivo Alavés",
+      "away": "Райо Валекано",
+      "awayEn": "Rayo Vallecano",
+      "date": "2026-05-23",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Алавес победа",
+        "betEn": "Deportivo Alavés Win",
+        "conf": 55,
+        "confReason": "",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "2.4"
+      },
+      "result": "L",
+      "score": "1-2"
+    },
     {
       "id": "8beebe69",
       "home": "Фрайбург",
@@ -1261,200 +1126,15 @@
       },
       "result": "L",
       "score": "1-1"
-    },
-    {
-      "id": "ovi_ala",
-      "home": "Oviedo",
-      "homeEn": "Oviedo",
-      "away": "Алавес",
-      "awayEn": "Deportivo Alavés",
-      "date": "2026-05-17",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.2, recent BTTS and over 2.5 trends for Deportivo Alavés, and decent odd, but not extremely high-scoring context",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.8"
-      },
-      "result": "L",
-      "score": "0-1"
-    },
-    {
-      "id": "new_whu",
-      "home": "Нюкасъл",
-      "homeEn": "Newcastle",
-      "away": "Уест Хем",
-      "awayEn": "West Ham",
-      "date": "2026-05-17",
-      "competition": "Висша лига · Кръг 37",
-      "competitionEn": "Premier League · GW37",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 72,
-        "confReason": "Combined expected goals ~3.1, recent BTTS and over 2.5 trends for Newcastle, and West Ham's high concession rate support this pick. The odd is within the sweet spot.",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.44"
-      },
-      "result": "W",
-      "score": "3-1"
-    },
-    {
-      "id": "wol_ful",
-      "home": "Уулвърхямптън",
-      "homeEn": "Wolverhampton Wanderers",
-      "away": "Фулъм",
-      "awayEn": "Fulham",
-      "date": "2026-05-17",
-      "competition": "Висша лига · Кръг 37",
-      "competitionEn": "Premier League · GW37",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals is ~2.1, which is not high enough for over 2.5, but recent games show 4/6 over 2.5 for Wolverhampton and the odd is within the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.67"
-      },
-      "result": "L",
-      "score": "1-1"
-    },
-    {
-      "id": "eve_sun",
-      "home": "Евъртън",
-      "homeEn": "Everton",
-      "away": "Съндърланд",
-      "awayEn": "Sunderland",
-      "date": "2026-05-17",
-      "competition": "Висша лига · Кръг 37",
-      "competitionEn": "Premier League · GW37",
-      "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score",
-        "conf": 72,
-        "confReason": "Everton have BTTS in 5/6 recent games and Sunderland have BTTS in 3/6, combined expected goals is ~2.6, which is close to the required 2.5 for a strong BTTS history",
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.75"
-      },
-      "result": "W",
-      "score": "1-3"
-    },
-    {
-      "id": "lee_bri",
-      "home": "Лийдс",
-      "homeEn": "Leeds",
-      "away": "Брайтън",
-      "awayEn": "Brighton",
-      "date": "2026-05-17",
-      "competition": "Висша лига · Кръг 37",
-      "competitionEn": "Premier League · GW37",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 72,
-        "confReason": "Combined expected goals ~2.5, BTTS in 4/6 and 3/6 recent games for Leeds and Brighton respectively, and over 2.5 in 4/6 and 5/6 recent games for Leeds and Brighton respectively",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.65"
-      },
-      "result": "L",
-      "score": "1-0"
-    },
-    {
-      "id": "bre_pal",
-      "home": "Брентфорд",
-      "homeEn": "Brentford",
-      "away": "Кристъл Палас",
-      "awayEn": "Crystal Palace",
-      "date": "2026-05-17",
-      "competition": "Висша лига · Кръг 37",
-      "competitionEn": "Premier League · GW37",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.8, recent over 2.5 in 4/6 Brentford and 5/6 Crystal Palace games, odd is in the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.67"
-      },
-      "result": "W",
-      "score": "2-2"
-    },
-    {
-      "id": "mun_for",
-      "home": "Ман Юнайтед",
-      "homeEn": "Manchester United",
-      "away": "Нотингам Форест",
-      "awayEn": "Nottingham Forest",
-      "date": "2026-05-17",
-      "competition": "Висша лига · Кръг 37",
-      "competitionEn": "Premier League · GW37",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 78,
-        "confReason": "Combined expected goals ~3.1, recent games show BTTS in 4/6 and over 2.5 in 4/6 for both teams, and the odd is within the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.57"
-      },
-      "result": "W",
-      "score": "3-2"
-    },
-    {
-      "id": "avl_liv",
-      "home": "Астън Вила",
-      "homeEn": "Aston Villa",
-      "away": "Ливърпул",
-      "awayEn": "Liverpool",
-      "date": "2026-05-15",
-      "competition": "Висша лига · Кръг 37",
-      "competitionEn": "Premier League · GW37",
-      "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score",
-        "conf": 72,
-        "confReason": "Both teams scored in 4/6 recent games, combined expected goals ~2.7, and recent form supports goals from both sides",
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.73"
-      },
-      "result": "W",
-      "score": "4-2"
-    },
-    {
-      "id": "rma_ovi",
-      "home": "Реал Мадрид",
-      "homeEn": "Real Madrid",
-      "away": "Oviedo",
-      "awayEn": "Oviedo",
-      "date": "2026-05-14",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Реал Мадрид победа",
-        "betEn": "Real Madrid Win",
-        "conf": 78,
-        "confReason": "Large 18-place gap, strong home team form, and odd within the sweet spot",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.25"
-      },
-      "result": "W",
-      "score": "2-0"
     }
   ],
   "record": {
-    "correct": 67,
-    "total": 111,
+    "correct": 73,
+    "total": 120,
     "period": "ЛЕ 26.02.2026"
+  },
+  "bbRecord": {
+    "correct": 0,
+    "total": 0
   }
 }
