@@ -24,7 +24,7 @@ except ImportError:
     sys.exit("❌  groq not installed. Run: pip install groq")
 
 DATA_FILE  = Path("data/matchday.json")
-MODEL_NAME = "deepseek-r1-distill-llama-70b"   # reasoning model — better arguments, slower
+MODEL_NAME = "qwen/qwen3-32b"   # reasoning model — better arguments, slower
 DELAY      = 4.0   # seconds between calls (deepseek-r1 TPM limit is tighter)
 
 def strip_think(text: str) -> str:
