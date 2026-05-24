@@ -23,9 +23,10 @@ try:
 except ImportError:
     sys.exit("❌  groq not installed. Run: pip install groq")
 
-DATA_FILE  = Path("data/matchday.json")
-MODEL_NAME = "qwen/qwen3-32b"   # reasoning model — better arguments, slower
-DELAY      = 4.0   # seconds between calls (deepseek-r1 TPM limit is tighter)
+DATA_FILE    = Path("data/matchday.json")
+MODEL_NAME   = "qwen/qwen3-32b"          # reasoning model for full analysis
+REASON_MODEL = "llama-3.3-70b-versatile" # fast model for 1-sentence pick reason
+DELAY        = 4.0   # seconds between analysis calls (qwen3 TPM is tighter)
 
 def extract_json(text: str) -> str:
     """
@@ -202,8 +203,72 @@ def generate_analysis(client, match: dict, label: str) -> tuple[str, str]:
         return "", ""
 
 
+def generate_conf_reason(client, match: dict) -> str:
+    """
+    Generate a 1-sentence pick reasoning using the fast model.
+    Called once per match when confReason is absent; result is persisted so it
+    flows into the analysis prompt as the analytical backbone for sentence 2.
+    """
+    pick    = match["pick"]
+    prob    = match.get("prob", {})
+    ctx     = match.get("aiCtx", "")
+    news    = match.get("newsCtx", "")
+    home_en = match.get("homeEn", "")
+    away_en = match.get("awayEn", "")
+
+    # Describe the pick direction so the model knows what to justify
+    sel_label = {
+        ("h2h", "home"):  f"{home_en} win",
+        ("h2h", "away"):  f"{away_en} win",
+        ("h2h", "draw"):  "draw",
+        ("btts", "yes"):  "Both Teams to Score",
+        ("over_under", "over_2.5"): "Over 2.5 Goals",
+        ("over_under", "over_1.5"): "Over 1.5 Goals",
+    }.get((pick.get("market"), pick.get("selection")), pick.get("betEn", ""))
+
+    is_underdog = (
+        pick.get("market") == "h2h"
+        and (
+            (pick.get("selection") == "home" and prob.get("h", 50) < prob.get("a", 50))
+            or (pick.get("selection") == "away" and prob.get("a", 50) < prob.get("h", 50))
+        )
+    )
+    angle = (
+        "Focus on the VALUE angle — what makes the underdog worth backing despite the odds."
+        if is_underdog else
+        "Focus on the strongest statistical edge supporting this pick."
+    )
+
+    prompt = (
+        f"Match: {home_en} vs {away_en}\n"
+        f"Pick: {sel_label} @ {pick.get('odd')} "
+        f"(Home {prob.get('h',50)}% | Draw {prob.get('d',25)}% | Away {prob.get('a',25)}%)\n"
+        f"Context: {ctx}\n"
+        + (f"News: {news}\n" if news else "")
+        + f"\n{angle}\n"
+        f"Write ONE sentence (max 25 words) naming the specific stat or reason that justifies this pick. "
+        f"Be concrete — cite a number or form result from Context. Return ONLY the sentence, no quotes."
+    )
+    try:
+        resp = client.chat.completions.create(
+            model=REASON_MODEL,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.3,
+            max_tokens=80,
+        )
+        return resp.choices[0].message.content.strip().strip('"\'')
+    except Exception as e:
+        print(f"\n    ⚠  conf_reason error: {e}")
+        return ""
+
+
 def ctx_hash(match: dict) -> str:
-    content = match.get("aiCtx", "") + match.get("newsCtx", "")
+    # Include confReason so a newly generated reason triggers re-analysis
+    content = (
+        match.get("aiCtx", "")
+        + match.get("newsCtx", "")
+        + match.get("pick", {}).get("confReason", "")
+    )
     return hashlib.md5(content.encode()).hexdigest()[:8]
 
 
@@ -240,6 +305,13 @@ def main():
             print(f"  ⚠  {name} — no pick yet, skipping")
             skipped += 1
             continue
+
+        # Generate pick reasoning if absent — persisted so it enriches sentence 2
+        if not match["pick"].get("confReason"):
+            reason = generate_conf_reason(client, match)
+            if reason:
+                match["pick"]["confReason"] = reason
+                print(f"  ℹ  {name} — reason: {reason}")
 
         current_hash = ctx_hash(match)
         analysis_ok  = match.get("ai") and match.get("aiEn") and match.get("aiCtxHash") == current_hash
