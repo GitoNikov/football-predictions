@@ -7,35 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "psg_ars",
-      "home": "ПСЖ",
-      "homeEn": "PSG",
-      "homeA": "PSG",
-      "away": "Арсенал",
-      "awayEn": "Arsenal",
-      "awayA": "ARS",
-      "date": "2026-05-30",
-      "time": "18:00",
-      "status": "pending",
-      "pick": {
-        "bet": "—",
-        "betEn": "—",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "—"
-      },
-      "odds_wh": {},
-      "prob": {
-        "h": 40,
-        "d": 25,
-        "a": 35
-      },
-      "aiCtx": "",
-      "competition": "Champions League",
-      "competitionBG": "Шампионска лига"
-    },
-    {
       "id": "0d0d2abd",
       "home": "Кристъл Палас",
       "homeEn": "Crystal Palace",
