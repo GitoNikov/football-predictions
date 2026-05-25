@@ -7,35 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "cry_ray",
-      "home": "Кристъл Палас",
-      "homeEn": "Crystal Palace",
-      "homeA": "CRY",
-      "away": "Райо Валекано",
-      "awayEn": "Rayo Vallecano",
-      "awayA": "RAY",
-      "date": "2026-05-27",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "—",
-        "betEn": "—",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "—"
-      },
-      "odds_wh": {},
-      "prob": {
-        "h": 45,
-        "d": 25,
-        "a": 30
-      },
-      "aiCtx": "",
-      "competition": "Conference League",
-      "competitionBG": "Конференц лига"
-    },
-    {
       "id": "psg_ars",
       "home": "ПСЖ",
       "homeEn": "PSG",
