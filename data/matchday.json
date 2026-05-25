@@ -65,399 +65,6 @@
       "competitionBG": "Шампионска лига"
     },
     {
-      "id": "pal_ars",
-      "home": "Кристъл Палас",
-      "homeEn": "Crystal Palace",
-      "homeA": "PAL",
-      "away": "Арсенал",
-      "awayEn": "Arsenal",
-      "awayA": "ARS",
-      "date": "2026-05-24",
-      "time": "17:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Кристъл Палас победа",
-        "betEn": "Crystal Palace Win",
-        "conf": 55,
-        "confReason": "Crystal Palace's 27% draw probability undervalues their recent 4/6 draw or BTTS outcomes.",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "3.9"
-      },
-      "odds_wh": {
-        "a": "1.83",
-        "h": "3.8",
-        "x": "3.75",
-        "o25": "1.67"
-      },
-      "prob": {
-        "h": 26,
-        "d": 27,
-        "a": 55
-      },
-      "aiCtx": "Crystal Palace are 15th in the Premier League (45 pts), scoring 1.08 and conceding 1.32 goals per game, BTTS in 3/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): D 0-0, L 1-3, L 0-3, D 2-2, L 0-3, D 2-2. Arsenal are 1st (82 pts), scoring 1.86 and conceding 0.7 goals per game, BTTS in 1/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): W 1-0, D 1-1, W 3-0, W 1-0, W 1-0, W 1-0. Combined expected goals: ~2.5/game. H2H last 1: Crystal Palace 0W-0D-1L, avg 1.0 goals/game.",
-      "newsCtx": "",
-      "ai": "Кристъл Палас, 15-и в Премиер лигата с 45 точки, има форма с 4 равенства от последните 6 мача, вкарвайки 1.08 гола и допускайки 1.32, докато Арсенал, водещ с 82 точки, вкарва 1.86 и допуска 0.7 гола на игра. Въпреки историческото превъзходство на Арсенал (0-1-0 в последния двубой с по 1 гол средно), домакините имат непоследователна форма с 3/6 БТТС резултата, което подценява котировката им за равенство. Залогът за победа на Кристъл Палас при котировка 3.9 предлага стойност, подкрепен от техния домакински морал и възможността за емоционален резултат.",
-      "aiEn": "Crystal Palace, 15th in the Premier League with 45 points, have a mixed 6-game form (4 draws) scoring 1.08 and conceding 1.32 goals per game, while Arsenal lead with 82 points, scoring 1.86 and conceding 0.7. Despite Arsenal's dominance (1-0-0 H2H with 1.0 avg goals), Palace's recent 4/6 draws or BTTS results suggest their 27% draw probability is undervalued, offering value for a home win at 3.9. Palace's 3.9 odds reflect their potential to exploit a low-scoring clash against a focused title-chasing side.",
-      "aiCtxHash": "de692746"
-    },
-    {
-      "id": "mci_avl",
-      "home": "Ман Сити",
-      "homeEn": "Manchester City",
-      "homeA": "MCI",
-      "away": "Астън Вила",
-      "awayEn": "Aston Villa",
-      "awayA": "AVL",
-      "date": "2026-05-24",
-      "time": "17:00",
-      "status": "pending",
-      "pick": {
-        "bet": "—",
-        "betEn": "—",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "?"
-      },
-      "odds_wh": {
-        "a": "4.75",
-        "h": "1.44",
-        "x": "4.6",
-        "o25": "1.36"
-      },
-      "prob": {
-        "h": 69,
-        "d": 22,
-        "a": 21
-      },
-      "aiCtx": "Manchester City are 2nd in the Premier League (78 pts), scoring 2.05 and conceding 0.89 goals per game, BTTS in 3/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 2-1, W 1-0, D 3-3, W 3-0, W 3-0, D 1-1. Aston Villa are 4th (62 pts), scoring 1.46 and conceding 1.3 goals per game, BTTS in 5/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): D 1-1, W 4-3, L 0-1, L 1-2, D 2-2, W 4-2. Combined expected goals: ~2.8/game.",
-      "newsCtx": ""
-    },
-    {
-      "id": "for_bou",
-      "home": "Нотингам Форест",
-      "homeEn": "Nottingham Forest",
-      "homeA": "FOR",
-      "away": "Борнемут",
-      "awayEn": "Bournemouth",
-      "awayA": "BOU",
-      "date": "2026-05-24",
-      "time": "17:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Нотингам Форест победа",
-        "betEn": "Nottingham Forest Win",
-        "conf": 55,
-        "confReason": "Nottingham Forest's recent form, with 4 wins in their last 6 games, justifies this pick.",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "3.2"
-      },
-      "odds_wh": {
-        "a": "2.1",
-        "h": "3.1",
-        "x": "3.6",
-        "o25": "1.62"
-      },
-      "prob": {
-        "h": 32,
-        "d": 28,
-        "a": 48
-      },
-      "aiCtx": "Nottingham Forest are 16th in the Premier League (43 pts), scoring 1.27 and conceding 1.35 goals per game, BTTS in 5/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): D 1-1, W 4-1, W 5-0, W 3-1, D 1-1, L 2-3. Bournemouth are 6th (56 pts), scoring 1.54 and conceding 1.43 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 2-1, W 2-1, D 2-2, W 3-0, W 1-0, D 1-1. Combined expected goals: ~2.8/game. H2H last 1: Nottingham Forest 0W-0D-1L, avg 2.0 goals/game.",
-      "newsCtx": "",
-      "ai": "Нотингам Форест, домакините в този двубой, са с по-стабилна форма в последните си 6 мача (4 победи, 2 резултата), въпреки че са на 16-о място с 43 точки. Борнемут, 6-ти с 56 точки, е по-силна екипа на хартия, но загубата от Нотингам в последния им сблъсък (1-0) и разсеяната форма на гостите (4 победи, 2 резултата) дават стойност на залога за домакините. Прогноза: Нотингам Форест победа @ 3.2 котировка.",
-      "aiEn": "Nottingham Forest, despite sitting 16th with 43 points, have shown stronger recent form (4 wins in 6 games) compared to Bournemouth’s 6th-place position with 56 points. The underdog hosts justify this pick at 3.2 odds due to their consistent home performance and the visitors’ inconsistent results (4 wins, 2 draws), despite Bournemouth’s slight edge in goal statistics. Pick: Nottingham Forest Win @ 3.2 William Hill",
-      "aiCtxHash": "b99ac2d4"
-    },
-    {
-      "id": "liv_bre",
-      "home": "Ливърпул",
-      "homeEn": "Liverpool",
-      "homeA": "LIV",
-      "away": "Брентфорд",
-      "awayEn": "Brentford",
-      "awayA": "BRE",
-      "date": "2026-05-24",
-      "time": "17:00",
-      "status": "pending",
-      "pick": {
-        "bet": "—",
-        "betEn": "—",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "?"
-      },
-      "odds_wh": {
-        "a": "3.9",
-        "h": "1.75",
-        "x": "3.9",
-        "o25": "1.5"
-      },
-      "prob": {
-        "h": 57,
-        "d": 26,
-        "a": 26
-      },
-      "aiCtx": "Liverpool are 5th in the Premier League (59 pts), scoring 1.68 and conceding 1.41 goals per game, BTTS in 5/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 0-2, W 2-1, W 3-1, L 2-3, D 1-1, L 2-4. Brentford are 9th (52 pts), scoring 1.46 and conceding 1.38 goals per game, BTTS in 3/6 and over 2.5 in 5/6 recent games, form (last 6, scored first): D 2-2, D 0-0, L 1-2, W 3-0, L 0-3, D 2-2. Combined expected goals: ~3.0/game.",
-      "newsCtx": ""
-    },
-    {
-      "id": "bri_mun",
-      "home": "Брайтън",
-      "homeEn": "Brighton",
-      "homeA": "BRI",
-      "away": "Ман Юнайтед",
-      "awayEn": "Manchester United",
-      "awayA": "MUN",
-      "date": "2026-05-24",
-      "time": "17:00",
-      "status": "pending",
-      "pick": {
-        "bet": "—",
-        "betEn": "—",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "?"
-      },
-      "odds_wh": {
-        "h": "1.91",
-        "a": "3.4",
-        "x": "3.8",
-        "o25": "1.53"
-      },
-      "prob": {
-        "h": 52,
-        "d": 26,
-        "a": 29
-      },
-      "aiCtx": "Brighton are 7th in the Premier League (53 pts), scoring 1.41 and conceding 1.16 goals per game, BTTS in 2/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 2-0, D 2-2, W 3-0, L 1-3, W 3-0, L 0-1. Manchester United are 3rd (68 pts), scoring 1.78 and conceding 1.35 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 1-2, W 1-0, W 2-1, W 3-2, D 0-0, W 3-2. Combined expected goals: ~2.8/game. H2H last 1: Brighton 0W-0D-1L, avg 6.0 goals/game.",
-      "newsCtx": ""
-    },
-    {
-      "id": "bur_wol",
-      "home": "Бърнли",
-      "homeEn": "Burnley",
-      "homeA": "BUR",
-      "away": "Уулвърхямптън",
-      "awayEn": "Wolverhampton Wanderers",
-      "awayA": "WOL",
-      "date": "2026-05-24",
-      "time": "17:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Бърнли победа",
-        "betEn": "Burnley Win",
-        "conf": 55,
-        "confReason": "Burnley's 41% home win probability exceeds Wolverhampton's 37% away win chance.",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "2.38"
-      },
-      "odds_wh": {
-        "h": "2.45",
-        "a": "2.7",
-        "x": "3.4",
-        "o25": "1.73"
-      },
-      "prob": {
-        "h": 41,
-        "d": 29,
-        "a": 37
-      },
-      "aiCtx": "Burnley are 19th in the Premier League (21 pts), scoring 1.0 and conceding 2.0 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-2, L 1-4, L 0-1, L 1-3, D 2-2, L 0-1. Wolverhampton Wanderers are 20th (19 pts), scoring 0.7 and conceding 1.81 goals per game, BTTS in 2/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-4, L 0-3, L 0-1, D 1-1, L 0-3, D 1-1. Combined expected goals: ~2.8/game. H2H last 1: Burnley 1W-0D-0L, avg 5.0 goals/game.",
-      "newsCtx": "",
-      "ai": "Бърнли, на 19-о място с 21 точки, вкарват 1.0 гола и допускат 2.0 на мач, докато Уулвърхямптън, с 19 точки, вкарват 0.7 и допускат 1.81. Домакините имат по-силна форма вкъщи, с 41% вероятност за победа срещу 37% за гостите, а в последния техен двубой Бърнли победиха със средно 5 гола на мач. Победа на Бърнли с котировка 2.38 е прогнозата.",
-      "aiEn": "Burnley, 19th with 21 points, score 1.0 and concede 2.0 goals per game, while Wolves, 20th with 19 points, score 0.7 and concede 1.81. Burnley's 41% home win probability edges out Wolves' 37% away chance, supported by their 5-goal average in their last head-to-head. Burnley win @ 2.38 William Hill is the pick.",
-      "aiCtxHash": "228700a2"
-    },
-    {
-      "id": "sun_che",
-      "home": "Съндърланд",
-      "homeEn": "Sunderland",
-      "homeA": "SUN",
-      "away": "Челси",
-      "awayEn": "Chelsea",
-      "awayA": "CHE",
-      "date": "2026-05-24",
-      "time": "17:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Съндърланд победа",
-        "betEn": "Sunderland Win",
-        "conf": 55,
-        "confReason": "Sunderland's 29% home win probability is underrated given their recent 3-1 win and decent 1.08 goals scored per game form.",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "3.5"
-      },
-      "odds_wh": {
-        "a": "1.95",
-        "h": "3.5",
-        "x": "3.5",
-        "o25": "1.75"
-      },
-      "prob": {
-        "h": 29,
-        "d": 29,
-        "a": 51
-      },
-      "aiCtx": "Sunderland are 10th in the Premier League (51 pts), scoring 1.08 and conceding 1.27 goals per game, BTTS in 3/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 1-0, L 3-4, L 0-5, D 1-1, D 0-0, W 3-1. Chelsea are 8th (52 pts), scoring 1.54 and conceding 1.35 goals per game, BTTS in 3/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 0-3, L 0-1, L 0-3, L 1-3, D 1-1, W 2-1. Combined expected goals: ~2.6/game. H2H last 1: Sunderland 1W-0D-0L, avg 3.0 goals/game.",
-      "newsCtx": "",
-      "ai": "Съндърланд, домакинът на мача, вкарва средно 1.08 гола на мач и излезе победител с 3-1 в последната си домакинска среща, докато Челси има слаба форма с 0-3, 0-1, 0-3 и 1-3 загуби в предишните си четири излизания. Всеки двубой между тези отбори е бил генерално високоголем, със средно 3 гола, което подкрепя залога върху домакините при котировка 3.5, въпреки че те са по-слаби на хартия. Съндърланд победа @ 3.5",
-      "aiEn": "Sunderland, the home side, score 1.08 goals per game and secured a 3-1 win in their last home match, while Chelsea have lost four of their last six games, failing to score in three of them. The underdog’s 29% home win probability is undervalued given their recent form and the history of high-scoring clashes (avg. 3 goals) between these teams, making the 3.5 odds a value bet despite Chelsea’s stronger paper credentials. Sunderland Win @ 3.5",
-      "aiCtxHash": "7bacfe73"
-    },
-    {
-      "id": "tot_eve",
-      "home": "Тотнъм",
-      "homeEn": "Tottenham",
-      "homeA": "TOT",
-      "away": "Евъртън",
-      "awayEn": "Everton",
-      "awayA": "EVE",
-      "date": "2026-05-24",
-      "time": "17:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Тотнъм победа",
-        "betEn": "Tottenham Win",
-        "conf": 55,
-        "confReason": "Tottenham's 54% home win probability justifies this pick.",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.91"
-      },
-      "odds_wh": {
-        "a": "3.75",
-        "h": "1.85",
-        "x": "3.7",
-        "o25": "1.67"
-      },
-      "prob": {
-        "h": 54,
-        "d": 27,
-        "a": 27
-      },
-      "aiCtx": "Tottenham are 17th in the Premier League (38 pts), scoring 1.27 and conceding 1.54 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): L 0-1, D 2-2, W 1-0, W 2-1, D 1-1, L 1-2. Everton are 12th (49 pts), scoring 1.27 and conceding 1.32 goals per game, BTTS in 6/6 and over 2.5 in 6/6 recent games, form (last 6, scored first): D 2-2, L 1-2, L 1-2, D 3-3, D 2-2, L 1-3. Combined expected goals: ~2.7/game.",
-      "newsCtx": "",
-      "ai": "Тотнъм, 17-и с 38 точки, се движи с 1.27 гола на мач, докато Евъртън, 12-и с 49 точки, вкарва 1.27, но допуска по-малко – 1.32. Домакините показаха по-стабилна форма в последните срещи (П 1-0, П 2-1) и имат 54% вероятност за домакинска победа. Прогнозата е за победа на Тотнъм при котировка 1.91.",
-      "aiEn": "Tottenham, 17th with 38 points, score 1.27 goals per game, while 12th-placed Everton (49 points) match that rate but concede fewer (1.32). The hosts’ recent form (W 1-0, W 2-1) and 54% home win probability justify confidence. Pick: Tottenham win @ 1.91 William Hill.",
-      "aiCtxHash": "4d426d53"
-    },
-    {
-      "id": "ful_new",
-      "home": "Фулъм",
-      "homeEn": "Fulham",
-      "homeA": "FUL",
-      "away": "Нюкасъл",
-      "awayEn": "Newcastle",
-      "awayA": "NEW",
-      "date": "2026-05-24",
-      "time": "17:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Фулъм победа",
-        "betEn": "Fulham Win",
-        "conf": 55,
-        "confReason": "Fulham's 36% home win probability is underpriced given their recent form.",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "2.75"
-      },
-      "odds_wh": {
-        "h": "2.75",
-        "a": "2.3",
-        "x": "3.5",
-        "o25": "1.62"
-      },
-      "prob": {
-        "h": 36,
-        "d": 29,
-        "a": 43
-      },
-      "aiCtx": "Fulham are 13th in the Premier League (49 pts), scoring 1.22 and conceding 1.38 goals per game, BTTS in 1/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): L 0-2, D 0-0, W 1-0, L 0-3, L 0-1, D 1-1. Newcastle are 11th (49 pts), scoring 1.43 and conceding 1.43 goals per game, BTTS in 5/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): L 1-2, L 1-2, L 0-1, W 3-1, D 1-1, W 3-1. Combined expected goals: ~2.7/game. H2H last 1: Fulham 0W-0D-1L, avg 3.0 goals/game.",
-      "newsCtx": "",
-      "ai": "Фулъм, 13-и в Премиър Лигата с 49 точки, вкарва 1.22 гола на мач и допуска 1.38, докато Нюкасъл, 11-и със същия брой точки, вкарва 1.43 и допуска 1.43 гола. Домакините имат по-ниска котировка за победа (36%) от тази на букмейкъра, макар историята на двубоите да показва, че средно по 3 гола се забелязват в мачовете между тях, а Нюкасъл е нестабилен в последните си 6 срещи с 2 победи и 4 загуби. Прогнозата е за победа на Фулъм с котировка 2.75.",
-      "aiEn": "Fulham, 13th in the Premier League with 49 points (1.22 goals scored, 1.38 conceded), face Newcastle, 11th with 49 points (1.43 goals scored and conceded), whose recent 6-game form includes 3 wins but 2 losses. The underdog hosts are undervalued at 36% win probability despite a 0-1-1 H2H record, as Newcastle's inconsistency (4/6 over 2.5 goals) and Fulham's home advantage justify the 2.75 odds. Pick: Fulham Win @ 2.75 William Hill.",
-      "aiCtxHash": "a70e1ecd"
-    },
-    {
-      "id": "whu_lee",
-      "home": "Уест Хем",
-      "homeEn": "West Ham",
-      "homeA": "WHU",
-      "away": "Лийдс",
-      "awayEn": "Leeds",
-      "awayA": "LEE",
-      "date": "2026-05-24",
-      "time": "17:00",
-      "status": "pending",
-      "pick": {
-        "bet": "—",
-        "betEn": "—",
-        "conf": 0,
-        "market": "h2h",
-        "selection": "home",
-        "odd": "?"
-      },
-      "odds_wh": {
-        "a": "3.75",
-        "h": "1.83",
-        "x": "3.9",
-        "o25": "1.67"
-      },
-      "prob": {
-        "h": 55,
-        "d": 26,
-        "a": 27
-      },
-      "aiCtx": "West Ham are 18th in the Premier League (36 pts), scoring 1.16 and conceding 1.76 goals per game, BTTS in 2/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 4-0, D 0-0, W 2-1, L 0-3, L 0-1, L 1-3. Leeds are 14th (47 pts), scoring 1.32 and conceding 1.43 goals per game, BTTS in 4/6 and over 2.5 in 4/6 recent games, form (last 6, scored first): W 2-1, W 3-0, D 2-2, W 3-1, D 1-1, W 1-0. Combined expected goals: ~2.8/game. H2H last 1: West Ham 0W-0D-1L, avg 3.0 goals/game.",
-      "newsCtx": ""
-    },
-    {
-      "id": "vil_atm",
-      "home": "Вияреал",
-      "homeEn": "Villarreal",
-      "homeA": "VIL",
-      "away": "Атлетико Мадрид",
-      "awayEn": "Atlético Madrid",
-      "awayA": "ATM",
-      "date": "2026-05-24",
-      "time": "21:00",
-      "status": "pending",
-      "pick": {
-        "bet": "Вияреал победа",
-        "betEn": "Villarreal Win",
-        "conf": 55,
-        "confReason": "Villarreal's 41% home win probability supports this pick.",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "2.45"
-      },
-      "odds_wh": {
-        "a": "2.5",
-        "h": "2.45",
-        "x": "3.7",
-        "o25": "1.44"
-      },
-      "prob": {
-        "h": 41,
-        "d": 27,
-        "a": 40
-      },
-      "aiCtx": "Villarreal are 3rd in the La Liga (69 pts), scoring 1.81 and conceding 1.22 goals per game, BTTS in 5/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): D 1-1, W 2-1, W 5-1, D 1-1, L 2-3, L 0-2. Atlético Madrid are 4th (69 pts), scoring 1.65 and conceding 1.05 goals per game, BTTS in 2/6 and over 2.5 in 1/6 recent games, form (last 6, scored first): D 1-1, W 2-0, L 0-1, L 0-1, W 2-1, W 1-0. Combined expected goals: ~2.9/game.",
-      "newsCtx": "",
-      "competition": "La Liga",
-      "competitionBG": "Ла Лига",
-      "ai": "Вияреал и Атлетико Мадрид са на еднакъв брой точки, но домакините вкарват с по-висока ефективност и имат по-стабилен нападателен потенциал. Вияреал, с 41% вероятност за домакинско победа, разполага с по-силна форма на терена си, включително победи с 5-1 и 2-1, докато гостите са с по-ниски резултати в последните срещи. Прогнозата за победа на Вияреал е с котировка 2.45.",
-      "aiEn": "Villarreal and Atlético Madrid are level on points, but the hosts score more goals per game and have a stronger attacking edge. Villarreal’s 41% home win probability is backed by their high-scoring form, including a 5-1 and 2-1 victory, contrasting Atlético’s recent lower-scoring results. Pick: Villarreal Win @ 2.45 William Hill",
-      "aiCtxHash": "cf9414fd"
-    },
-    {
       "id": "0d0d2abd",
       "home": "Кристъл Палас",
       "homeEn": "Crystal Palace",
@@ -522,9 +129,237 @@
     ],
     "totalOdd": "8.14",
     "reasoning": "Комбинацията от Победа домакин, И двата вкарват и Над 2.5 гола между Нотингам Форест и Борнемут изглежда привлекателна, тъй като двете отбори показват добра форма и способност да вкарват голове, което увеличава вероятността за успешен залог.",
-    "reasoningEn": "This combination is statistically sound as both Nottingham Forest and Bournemouth have shown strong form and a tendency to score goals, making a home win, both teams to score, and over 2.5 goals a plausible bet."
+    "reasoningEn": "This combination is statistically sound as both Nottingham Forest and Bournemouth have shown strong form and a tendency to score goals, making a home win, both teams to score, and over 2.5 goals a plausible bet.",
+    "result": "L"
   },
   "results": [
+    {
+      "id": "vil_atm",
+      "home": "Вияреал",
+      "homeEn": "Villarreal",
+      "away": "Атлетико Мадрид",
+      "awayEn": "Atlético Madrid",
+      "date": "2026-05-24",
+      "competition": "Ла Лига",
+      "competitionEn": "La Liga",
+      "pick": {
+        "bet": "Вияреал победа",
+        "betEn": "Villarreal Win",
+        "conf": 55,
+        "confReason": "Villarreal's 41% home win probability supports this pick.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "2.45"
+      },
+      "result": "W",
+      "score": "5-1"
+    },
+    {
+      "id": "whu_lee",
+      "home": "Уест Хем",
+      "homeEn": "West Ham",
+      "away": "Лийдс",
+      "awayEn": "Leeds",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "result": "W",
+      "score": "3-0"
+    },
+    {
+      "id": "ful_new",
+      "home": "Фулъм",
+      "homeEn": "Fulham",
+      "away": "Нюкасъл",
+      "awayEn": "Newcastle",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "Фулъм победа",
+        "betEn": "Fulham Win",
+        "conf": 55,
+        "confReason": "Fulham's 36% home win probability is underpriced given their recent form.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "2.75"
+      },
+      "result": "W",
+      "score": "2-0"
+    },
+    {
+      "id": "tot_eve",
+      "home": "Тотнъм",
+      "homeEn": "Tottenham",
+      "away": "Евъртън",
+      "awayEn": "Everton",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "Тотнъм победа",
+        "betEn": "Tottenham Win",
+        "conf": 55,
+        "confReason": "Tottenham's 54% home win probability justifies this pick.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.91"
+      },
+      "result": "W",
+      "score": "1-0"
+    },
+    {
+      "id": "sun_che",
+      "home": "Съндърланд",
+      "homeEn": "Sunderland",
+      "away": "Челси",
+      "awayEn": "Chelsea",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "Съндърланд победа",
+        "betEn": "Sunderland Win",
+        "conf": 55,
+        "confReason": "Sunderland's 29% home win probability is underrated given their recent 3-1 win and decent 1.08 goals scored per game form.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "3.5"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "bur_wol",
+      "home": "Бърнли",
+      "homeEn": "Burnley",
+      "away": "Уулвърхямптън",
+      "awayEn": "Wolverhampton Wanderers",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "Бърнли победа",
+        "betEn": "Burnley Win",
+        "conf": 55,
+        "confReason": "Burnley's 41% home win probability exceeds Wolverhampton's 37% away win chance.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "2.38"
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
+      "id": "bri_mun",
+      "home": "Брайтън",
+      "homeEn": "Brighton",
+      "away": "Ман Юнайтед",
+      "awayEn": "Manchester United",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "result": "L",
+      "score": "0-3"
+    },
+    {
+      "id": "liv_bre",
+      "home": "Ливърпул",
+      "homeEn": "Liverpool",
+      "away": "Брентфорд",
+      "awayEn": "Brentford",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
+      "id": "for_bou",
+      "home": "Нотингам Форест",
+      "homeEn": "Nottingham Forest",
+      "away": "Борнемут",
+      "awayEn": "Bournemouth",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "Нотингам Форест победа",
+        "betEn": "Nottingham Forest Win",
+        "conf": 55,
+        "confReason": "Nottingham Forest's recent form, with 4 wins in their last 6 games, justifies this pick.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "3.2"
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
+      "id": "mci_avl",
+      "home": "Ман Сити",
+      "homeEn": "Manchester City",
+      "away": "Астън Вила",
+      "awayEn": "Aston Villa",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "result": "L",
+      "score": "1-2"
+    },
+    {
+      "id": "pal_ars",
+      "home": "Кристъл Палас",
+      "homeEn": "Crystal Palace",
+      "away": "Арсенал",
+      "awayEn": "Arsenal",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "Кристъл Палас победа",
+        "betEn": "Crystal Palace Win",
+        "conf": 55,
+        "confReason": "Crystal Palace's 27% draw probability undervalues their recent 4/6 draw or BTTS outcomes.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "3.9"
+      },
+      "result": "L",
+      "score": "1-2"
+    },
     {
       "id": "mal_ovi",
       "home": "Майорка",
@@ -919,246 +754,15 @@
       },
       "result": "L",
       "score": "1-0"
-    },
-    {
-      "id": "che_tot",
-      "home": "Челси",
-      "homeEn": "Chelsea",
-      "away": "Тотнъм",
-      "awayEn": "Tottenham",
-      "date": "2026-05-19",
-      "competition": "Висша лига · Кръг 37",
-      "competitionEn": "Premier League · GW37",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 72,
-        "confReason": "Combined expected goals of ~3.1/game and recent over 2.5 trends in both teams' games, with a favorable odd within the 1.40-2.50 range",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.6"
-      },
-      "result": "W",
-      "score": "2-1"
-    },
-    {
-      "id": "ars_bur",
-      "home": "Арсенал",
-      "homeEn": "Arsenal",
-      "away": "Бърнли",
-      "awayEn": "Burnley",
-      "date": "2026-05-18",
-      "competition": "Висша лига · Кръг 37",
-      "competitionEn": "Premier League · GW37",
-      "pick": {
-        "bet": "Арсенал победа",
-        "betEn": "Arsenal Win",
-        "conf": 78,
-        "confReason": "Large 18-place gap, strong home form, and recent Burnley struggles, but odd 1.08 is below the preferred range",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.08"
-      },
-      "result": "W",
-      "score": "1-0"
-    },
-    {
-      "id": "rso_val",
-      "home": "Реал Сосиедад",
-      "homeEn": "Real Sociedad",
-      "away": "Валенсия",
-      "awayEn": "Valencia",
-      "date": "2026-05-17",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 72,
-        "confReason": "Combined expected goals ~3.0, recent BTTS and over 2.5 trends for both teams, and the odd is within the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.91"
-      },
-      "result": "W",
-      "score": "3-4"
-    },
-    {
-      "id": "sev_rma",
-      "home": "Севиля",
-      "homeEn": "Sevilla",
-      "away": "Реал Мадрид",
-      "awayEn": "Real Madrid",
-      "date": "2026-05-17",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals is ~2.2, which is not high enough for over 2.5, but recent games show BTTS in 4/6 for Sevilla and over 2.5 in 4/6, indicating a potential for goals. However, the odd is within the sweet spot and the data suggests a decent chance of over 2.5 goals.",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.75"
-      },
-      "result": "L",
-      "score": "0-1"
-    },
-    {
-      "id": "ray_vil",
-      "home": "Райо Валекано",
-      "homeEn": "Rayo Vallecano",
-      "away": "Вияреал",
-      "awayEn": "Villarreal",
-      "date": "2026-05-17",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score",
-        "conf": 68,
-        "confReason": "Villarreal has BTTS in 6/6 recent games and Rayo Vallecano has BTTS in 3/6, combined expected goals is ~2.2 which is close to the 2.5 threshold, but Villarreal's strong BTTS history tips the scale",
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.73"
-      },
-      "result": "L",
-      "score": "2-0"
-    },
-    {
-      "id": "lev_mal",
-      "home": "Levante",
-      "homeEn": "Levante",
-      "away": "Майорка",
-      "awayEn": "Mallorca",
-      "date": "2026-05-17",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5 Goals",
-        "conf": 68,
-        "confReason": "Combined expected goals ~2.8, recent BTTS and over 2.5 trends for both teams, and the odd is within the sweet spot",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "1.83"
-      },
-      "result": "L",
-      "score": "2-0"
-    },
-    {
-      "id": "elc_get",
-      "home": "Elche CF",
-      "homeEn": "Elche CF",
-      "away": "Хетафе",
-      "awayEn": "Getafe",
-      "date": "2026-05-17",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Yes",
-        "conf": 68,
-        "confReason": "Elche CF have BTTS in 5/6 recent games, and combined expected goals is ~2.3, which is close to the required 2.5, but the strong BTTS history makes up for it",
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.95"
-      },
-      "result": "L",
-      "score": "1-0"
-    },
-    {
-      "id": "osa_esp",
-      "home": "Осасуна",
-      "homeEn": "Osasuna",
-      "away": "Еспаньол",
-      "awayEn": "Espanyol",
-      "date": "2026-05-17",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score",
-        "conf": 68,
-        "confReason": "Osasuna have BTTS in 5/6 recent games and combined expected goals is ~2.7, which is close to the required 2.5, but Espanyol's recent BTTS record is weaker. However, Osasuna's strong BTTS history and the decent odd make this a reasonable pick",
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.73"
-      },
-      "result": "W",
-      "score": "1-2"
-    },
-    {
-      "id": "bar_bet",
-      "home": "Барселона",
-      "homeEn": "FC Barcelona",
-      "away": "Реал Бетис",
-      "awayEn": "Real Betis",
-      "date": "2026-05-17",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Барселона победа",
-        "betEn": "FC Barcelona Win",
-        "conf": 78,
-        "confReason": "FC Barcelona are clearly stronger with an 8-place gap and recent form advantage, and the h2h odd is within the 1.30-2.20 range",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.36"
-      },
-      "result": "W",
-      "score": "3-1"
-    },
-    {
-      "id": "atm_gir",
-      "home": "Атлетико Мадрид",
-      "homeEn": "Atlético Madrid",
-      "away": "Хирона",
-      "awayEn": "Girona",
-      "date": "2026-05-17",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Атлетико Мадрид победа",
-        "betEn": "Atlético Madrid Win",
-        "conf": 68,
-        "confReason": "Atlético Madrid are 8 places above Girona in the league, have a form advantage, and the head-to-head odds are within the preferred range",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.75"
-      },
-      "result": "W",
-      "score": "1-0"
-    },
-    {
-      "id": "bil_cel",
-      "home": "Athletic Bilbao",
-      "homeEn": "Athletic Bilbao",
-      "away": "Селта Виго",
-      "awayEn": "Celta Vigo",
-      "date": "2026-05-17",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals is ~2.4, which is close to the threshold for over 2.5, and both teams have shown a tendency for high-scoring games, with 3/6 and 4/6 recent games going over 2.5 goals respectively",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.2"
-      },
-      "result": "L",
-      "score": "1-1"
     }
   ],
   "record": {
-    "correct": 73,
-    "total": 120,
+    "correct": 78,
+    "total": 131,
     "period": "ЛЕ 26.02.2026"
   },
   "bbRecord": {
     "correct": 0,
-    "total": 0
+    "total": 1
   }
 }
