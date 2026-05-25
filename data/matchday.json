@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-05-22T09:48:00Z",
-  "label": "Висша лига · Кръг 38",
-  "labelEn": "Premier League · GW38",
-  "date_range": "2026-05-27",
-  "date_rangeEn": "2026-05-27",
+  "updated_at": "2026-05-25T08:22:14Z",
+  "label": "Висша лига · Кръг ",
+  "labelEn": "Premier League · GW",
+  "date_range": "2026-05-30",
+  "date_rangeEn": "2026-05-30",
   "sport": "soccer_epl",
   "upcoming": [
     {
@@ -73,35 +73,65 @@
       "ai": "Кристъл Палас разполага с по-силна атака вкъщи и домакинството ще бъде ключово предимство срещу Райо Валекано, който не е в добро предстъпление. Домакините са с по-висок процент за победа (52%) и вкарват повече голове на мач, което подкрепя очакваното им предимство. Прогнозата е за победа на Кристъл Палас с котировка 1.91.",
       "aiEn": "Crystal Palace's stronger home attack and Rayo Vallecano's poor away form create a clear advantage for the hosts. Palace's 52% win probability is backed by their higher goal-scoring rate and recent consistency, contrasting with Rayo's struggles. Pick: Crystal Palace Win @ 1.91 William Hill",
       "aiCtxHash": "a0c35657"
+    },
+    {
+      "id": "a54f22ac",
+      "home": "ПСЖ",
+      "homeEn": "Paris Saint Germain",
+      "homeA": "PAR",
+      "away": "Арсенал",
+      "awayEn": "Arsenal",
+      "awayA": "ARS",
+      "date": "2026-05-30",
+      "time": "18:00",
+      "competition": "Champions League",
+      "competitionBG": "Шампионска лига",
+      "status": "pending",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~3.7, recent BTTS in 4/6 for PSG and over 2.5 in 3/6, although Arsenal's recent games have been lower-scoring",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.05"
+      },
+      "odds_wh": {
+        "a": "3.2",
+        "h": "2.3",
+        "x": "3.1",
+        "o25": "2.05"
+      },
+      "prob": {
+        "h": 43,
+        "d": 32,
+        "a": 31
+      },
+      "aiCtx": "Paris Saint Germain are 11th in the Champions League (14 pts), scoring 2.62 and conceding 1.38 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 5-4, D 2-2, D 1-1, W 1-0, W 2-0, L 1-2. Arsenal are 1st (24 pts), scoring 2.88 and conceding 0.5 goals per game, BTTS in 2/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): D 1-1, W 3-0, W 1-0, W 1-0, W 1-0, W 2-1. Combined expected goals: ~3.7/game.",
+      "newsCtx": "Jul 28, 2025 · If you've been dreaming of a visit to the Eiffel Tower, Louvre Museum and Moulin Rouge, plan your trip with these expert … | Jun 20, 2012 · Discover and book the official Paris City Pass, the ultimate offer for an unforgettable souvenir of Paris. Put together … | Arsenal Football Club Official Website: get the latest Arsenal FC news, highlights, fixtures and results. Become a free digital … | 4 days ago · Arsenal boss Mikel Arteta on 'incredible' feeling of winning the Premier League title and calling Bournemouth's …"
     }
   ],
   "betBuilder": {
-    "matchId": "for_bou",
-    "home": "Нотингам Форест",
-    "homeEn": "Nottingham Forest",
-    "away": "Борнемут",
-    "awayEn": "Bournemouth",
+    "matchId": "a54f22ac",
+    "home": "ПСЖ",
+    "homeEn": "Paris Saint Germain",
+    "away": "Арсенал",
+    "awayEn": "Arsenal",
     "markets": [
-      {
-        "market": "Победа домакин",
-        "marketEn": "Home Win",
-        "odd": "3.1"
-      },
-      {
-        "market": "И двата вкарват",
-        "marketEn": "BTTS Yes",
-        "odd": "1.62"
-      },
       {
         "market": "Над 2.5 гола",
         "marketEn": "Over 2.5 Goals",
-        "odd": "1.62"
+        "odd": "2.05"
+      },
+      {
+        "market": "Победа домакин",
+        "marketEn": "Home Win",
+        "odd": "2.3"
       }
     ],
-    "totalOdd": "8.14",
-    "reasoning": "Комбинацията от Победа домакин, И двата вкарват и Над 2.5 гола между Нотингам Форест и Борнемут изглежда привлекателна, тъй като двете отбори показват добра форма и способност да вкарват голове, което увеличава вероятността за успешен залог.",
-    "reasoningEn": "This combination is statistically sound as both Nottingham Forest and Bournemouth have shown strong form and a tendency to score goals, making a home win, both teams to score, and over 2.5 goals a plausible bet.",
-    "result": "L"
+    "totalOdd": "4.71",
+    "reasoning": "",
+    "reasoningEn": ""
   },
   "results": [
     {
@@ -731,9 +761,5 @@
     "correct": 78,
     "total": 131,
     "period": "ЛЕ 26.02.2026"
-  },
-  "bbRecord": {
-    "correct": 0,
-    "total": 1
   }
 }

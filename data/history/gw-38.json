@@ -1,0 +1,219 @@
+{
+  "gw": 38,
+  "label": "Висша лига · Кръг 38",
+  "labelEn": "Premier League · GW38",
+  "date_range": "2026-05-27",
+  "date_rangeEn": "2026-05-27",
+  "results": [
+    {
+      "id": "whu_lee",
+      "home": "Уест Хем",
+      "homeEn": "West Ham",
+      "away": "Лийдс",
+      "awayEn": "Leeds",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "result": "W",
+      "score": "3-0"
+    },
+    {
+      "id": "ful_new",
+      "home": "Фулъм",
+      "homeEn": "Fulham",
+      "away": "Нюкасъл",
+      "awayEn": "Newcastle",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "Фулъм победа",
+        "betEn": "Fulham Win",
+        "conf": 55,
+        "confReason": "Fulham's 36% home win probability is underpriced given their recent form.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "2.75"
+      },
+      "result": "W",
+      "score": "2-0"
+    },
+    {
+      "id": "tot_eve",
+      "home": "Тотнъм",
+      "homeEn": "Tottenham",
+      "away": "Евъртън",
+      "awayEn": "Everton",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "Тотнъм победа",
+        "betEn": "Tottenham Win",
+        "conf": 55,
+        "confReason": "Tottenham's 54% home win probability justifies this pick.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.91"
+      },
+      "result": "W",
+      "score": "1-0"
+    },
+    {
+      "id": "sun_che",
+      "home": "Съндърланд",
+      "homeEn": "Sunderland",
+      "away": "Челси",
+      "awayEn": "Chelsea",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "Съндърланд победа",
+        "betEn": "Sunderland Win",
+        "conf": 55,
+        "confReason": "Sunderland's 29% home win probability is underrated given their recent 3-1 win and decent 1.08 goals scored per game form.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "3.5"
+      },
+      "result": "W",
+      "score": "2-1"
+    },
+    {
+      "id": "bur_wol",
+      "home": "Бърнли",
+      "homeEn": "Burnley",
+      "away": "Уулвърхямптън",
+      "awayEn": "Wolverhampton Wanderers",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "Бърнли победа",
+        "betEn": "Burnley Win",
+        "conf": 55,
+        "confReason": "Burnley's 41% home win probability exceeds Wolverhampton's 37% away win chance.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "2.38"
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
+      "id": "bri_mun",
+      "home": "Брайтън",
+      "homeEn": "Brighton",
+      "away": "Ман Юнайтед",
+      "awayEn": "Manchester United",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "result": "L",
+      "score": "0-3"
+    },
+    {
+      "id": "liv_bre",
+      "home": "Ливърпул",
+      "homeEn": "Liverpool",
+      "away": "Брентфорд",
+      "awayEn": "Brentford",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
+      "id": "for_bou",
+      "home": "Нотингам Форест",
+      "homeEn": "Nottingham Forest",
+      "away": "Борнемут",
+      "awayEn": "Bournemouth",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "Нотингам Форест победа",
+        "betEn": "Nottingham Forest Win",
+        "conf": 55,
+        "confReason": "Nottingham Forest's recent form, with 4 wins in their last 6 games, justifies this pick.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "3.2"
+      },
+      "result": "L",
+      "score": "1-1"
+    },
+    {
+      "id": "mci_avl",
+      "home": "Ман Сити",
+      "homeEn": "Manchester City",
+      "away": "Астън Вила",
+      "awayEn": "Aston Villa",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "—",
+        "betEn": "—",
+        "conf": 0,
+        "market": "h2h",
+        "selection": "home",
+        "odd": "?"
+      },
+      "result": "L",
+      "score": "1-2"
+    },
+    {
+      "id": "pal_ars",
+      "home": "Кристъл Палас",
+      "homeEn": "Crystal Palace",
+      "away": "Арсенал",
+      "awayEn": "Arsenal",
+      "date": "2026-05-24",
+      "competition": "Висша лига · Кръг 38",
+      "competitionEn": "Premier League · GW38",
+      "pick": {
+        "bet": "Кристъл Палас победа",
+        "betEn": "Crystal Palace Win",
+        "conf": 55,
+        "confReason": "Crystal Palace's 27% draw probability undervalues their recent 4/6 draw or BTTS outcomes.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "3.9"
+      },
+      "result": "L",
+      "score": "1-2"
+    }
+  ],
+  "record": {
+    "correct": 4,
+    "total": 10
+  }
+}
