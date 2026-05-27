@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-25T09:58:36Z",
+  "updated_at": "2026-05-27T09:55:00Z",
   "label": "Висша лига · Кръг ",
   "labelEn": "Premier League · GW",
   "date_range": "2026-05-30",
@@ -98,14 +98,19 @@
         "odd": "2.3"
       },
       {
+        "market": "И двата вкарват",
+        "marketEn": "BTTS Yes",
+        "odd": "null"
+      },
+      {
         "market": "Над 2.5 гола",
         "marketEn": "Over 2.5 Goals",
         "odd": "2.05"
       }
     ],
     "totalOdd": "4.71",
-    "reasoning": "Комбинацията Победа домакин и Над 2.5 гола предхожда силната атака на ПСЖ (2.62/среща) и уязвимостта на Арсенал пред оферта (0.5/среща), а комбинираната очаквана стойност (3.7/среща) намеква за висока вероятност за гол в няколко. Формата на ПСЖ в дома (4 победи от 6) укрепва котировката.",
-    "reasoningEn": "The Home Win & Over 2.5 combo leverages PSG’s strong attack (2.62/g) and Arsenal’s defensive frailty (0.5/g), with the 3.7/g xG suggesting a high-scoring encounter. PSG’s home form (4W/6) boosts the value."
+    "reasoning": "",
+    "reasoningEn": ""
   },
   "results": [
     {
