@@ -7,45 +7,6 @@
   "sport": "soccer_epl",
   "upcoming": [
     {
-      "id": "0d0d2abd",
-      "home": "Кристъл Палас",
-      "homeEn": "Crystal Palace",
-      "homeA": "CRY",
-      "away": "Райо Валекано",
-      "awayEn": "Rayo Vallecano",
-      "awayA": "RAY",
-      "date": "2026-05-27",
-      "time": "21:00",
-      "competition": "Conference League",
-      "competitionBG": "Конференц лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Кристъл Палас победа",
-        "betEn": "Crystal Palace Win",
-        "conf": 55,
-        "confReason": "Home win probability is 52%.",
-        "market": "h2h",
-        "selection": "home",
-        "odd": "1.91"
-      },
-      "odds_wh": {
-        "h": "1.91",
-        "a": "4.0",
-        "x": "3.3",
-        "o25": "2.05"
-      },
-      "prob": {
-        "h": 52,
-        "d": 30,
-        "a": 25
-      },
-      "aiCtx": "Crystal Palace vs Rayo Vallecano in the Conference League.",
-      "newsCtx": "A HDD/SSD utility software which supports a part of USB, Intel RAID and NVMe. .NET Framework 4.8 or later is required to use the latest email notification features. NVMe support required Windows … | Read in-depth descriptions, planets, zodiacs, healing properties and more with each crystal. Detailed crystal properties.",
-      "ai": "Кристъл Палас разполага с по-силна атака вкъщи и домакинството ще бъде ключово предимство срещу Райо Валекано, който не е в добро предстъпление. Домакините са с по-висок процент за победа (52%) и вкарват повече голове на мач, което подкрепя очакваното им предимство. Прогнозата е за победа на Кристъл Палас с котировка 1.91.",
-      "aiEn": "Crystal Palace's stronger home attack and Rayo Vallecano's poor away form create a clear advantage for the hosts. Palace's 52% win probability is backed by their higher goal-scoring rate and recent consistency, contrasting with Rayo's struggles. Pick: Crystal Palace Win @ 1.91 William Hill",
-      "aiCtxHash": "a0c35657"
-    },
-    {
       "id": "a54f22ac",
       "home": "ПСЖ",
       "homeEn": "Paris Saint Germain",
@@ -109,10 +70,31 @@
       }
     ],
     "totalOdd": "4.71",
-    "reasoning": "",
-    "reasoningEn": ""
+    "reasoning": "Комбинацията Победа на ПСЖ, И двата вкарват и Над 2.5 гола е обоснована от статистиките: ПСЖ имат добра форма с по-ниски котировки, Арсенал често вкарват първи, а очакваните 3.7 гола показват висока вероятност за големи резултати.",
+    "reasoningEn": "The combination of Home Win, Both Teams to Score, and Over 2.5 Goals is statistically sound: PSG’s strong form offers lower odds, Arsenal often score first, and the 3.7 expected goals suggest high-scoring potential."
   },
   "results": [
+    {
+      "id": "0d0d2abd",
+      "home": "Кристъл Палас",
+      "homeEn": "Crystal Palace",
+      "away": "Райо Валекано",
+      "awayEn": "Rayo Vallecano",
+      "date": "2026-05-27",
+      "competition": "Конференц лига",
+      "competitionEn": "Conference League",
+      "pick": {
+        "bet": "Кристъл Палас победа",
+        "betEn": "Crystal Palace Win",
+        "conf": 55,
+        "confReason": "Home win probability is 52%.",
+        "market": "h2h",
+        "selection": "home",
+        "odd": "1.91"
+      },
+      "result": "W",
+      "score": "1-0"
+    },
     {
       "id": "vil_atm",
       "home": "Вияреал",
@@ -713,32 +695,15 @@
       },
       "result": "L",
       "score": "2-0"
-    },
-    {
-      "id": "ray_elc",
-      "home": "Райо Валекано",
-      "homeEn": "Rayo Vallecano",
-      "away": "Elche CF",
-      "awayEn": "Elche CF",
-      "date": "2026-04-03",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Both Teams to Score Yes",
-        "conf": 72,
-        "confReason": "Both teams have strong BTTS history, with 4/6 and 5/6 recent games having both teams score, and combined expected goals of ~2.6/game supporting this trend",
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.80"
-      },
-      "result": "L",
-      "score": "1-0"
     }
   ],
   "record": {
-    "correct": 78,
-    "total": 131,
+    "correct": 79,
+    "total": 132,
     "period": "ЛЕ 26.02.2026"
+  },
+  "bbRecord": {
+    "correct": 0,
+    "total": 0
   }
 }
