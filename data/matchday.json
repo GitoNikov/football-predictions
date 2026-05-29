@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-27T09:55:00Z",
+  "updated_at": "2026-05-29T10:07:51Z",
   "label": "Висша лига · Кръг ",
   "labelEn": "Premier League · GW",
   "date_range": "2026-05-30",
@@ -61,7 +61,7 @@
       {
         "market": "И двата вкарват",
         "marketEn": "BTTS Yes",
-        "odd": "null"
+        "odd": "not available"
       },
       {
         "market": "Над 2.5 гола",
@@ -70,8 +70,8 @@
       }
     ],
     "totalOdd": "4.71",
-    "reasoning": "Комбинацията Победа на ПСЖ, И двата вкарват и Над 2.5 гола е обоснована от статистиките: ПСЖ имат добра форма с по-ниски котировки, Арсенал често вкарват първи, а очакваните 3.7 гола показват висока вероятност за големи резултати.",
-    "reasoningEn": "The combination of Home Win, Both Teams to Score, and Over 2.5 Goals is statistically sound: PSG’s strong form offers lower odds, Arsenal often score first, and the 3.7 expected goals suggest high-scoring potential."
+    "reasoning": "",
+    "reasoningEn": ""
   },
   "results": [
     {
@@ -701,9 +701,5 @@
     "correct": 79,
     "total": 132,
     "period": "ЛЕ 26.02.2026"
-  },
-  "bbRecord": {
-    "correct": 0,
-    "total": 0
   }
 }
