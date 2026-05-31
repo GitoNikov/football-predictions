@@ -5,47 +5,7 @@
   "date_range": "2026-05-30",
   "date_rangeEn": "2026-05-30",
   "sport": "soccer_epl",
-  "upcoming": [
-    {
-      "id": "a54f22ac",
-      "home": "ПСЖ",
-      "homeEn": "Paris Saint Germain",
-      "homeA": "PAR",
-      "away": "Арсенал",
-      "awayEn": "Arsenal",
-      "awayA": "ARS",
-      "date": "2026-05-30",
-      "time": "18:00",
-      "competition": "Champions League",
-      "competitionBG": "Шампионска лига",
-      "status": "pending",
-      "pick": {
-        "bet": "Над 2.5 гола",
-        "betEn": "Over 2.5",
-        "conf": 68,
-        "confReason": "Combined expected goals ~3.7, recent BTTS in 4/6 for PSG and over 2.5 in 3/6, although Arsenal's recent games have been lower-scoring",
-        "market": "over_under",
-        "selection": "over_2.5",
-        "odd": "2.05"
-      },
-      "odds_wh": {
-        "a": "3.2",
-        "h": "2.3",
-        "x": "3.1",
-        "o25": "2.05"
-      },
-      "prob": {
-        "h": 43,
-        "d": 32,
-        "a": 31
-      },
-      "aiCtx": "Paris Saint Germain are 11th in the Champions League (14 pts), scoring 2.62 and conceding 1.38 goals per game, BTTS in 4/6 and over 2.5 in 3/6 recent games, form (last 6, scored first): W 5-4, D 2-2, D 1-1, W 1-0, W 2-0, L 1-2. Arsenal are 1st (24 pts), scoring 2.88 and conceding 0.5 goals per game, BTTS in 2/6 and over 2.5 in 2/6 recent games, form (last 6, scored first): D 1-1, W 3-0, W 1-0, W 1-0, W 1-0, W 2-1. Combined expected goals: ~3.7/game.",
-      "newsCtx": "Jul 28, 2025 · If you've been dreaming of a visit to the Eiffel Tower, Louvre Museum and Moulin Rouge, plan your trip with these expert … | Jun 20, 2012 · Discover and book the official Paris City Pass, the ultimate offer for an unforgettable souvenir of Paris. Put together … | Arsenal Football Club Official Website: get the latest Arsenal FC news, highlights, fixtures and results. Become a free digital … | 4 days ago · Arsenal boss Mikel Arteta on 'incredible' feeling of winning the Premier League title and calling Bournemouth's …",
-      "ai": "ПСЖ, 11-и в Шампионската лига с 14 точки, вкарват 2.62 гола на мач и имат 4 от последните си 6 срещи с двойно общо, докато Арсенал, водещи с 24 точки, допускат само 0.5 гола, но също така са с 2.88 средно вкарани. Комбинацията от високите средни голове на ПСЖ (1.38 допуснати) и очакваните ~3.7 гола общо сочат към вероятно високоголем сблъсък, подкрепен от 3 от последните 6 над 2.5 за френския гигант. Прогнозата е над 2.5 гола с котировка 2.05.",
-      "aiEn": "Paris Saint Germain, 11th in the Champions League with 14 points, score 2.62 goals per game and have seen BTTS in 4 of their last 6 matches, contrasting with Arsenal's 24-point lead and a mere 0.5 goals conceded. The combined expected goals of ~3.7, driven by PSG's 3/6 over 2.5 and Arsenal's 2.88 goals per game, suggest a high-scoring clash despite the Gunners' recent low-scoring runs. Over 2.5 goals is the pick at odds of 2.05.",
-      "aiCtxHash": "5ae6d5b2"
-    }
-  ],
+  "upcoming": [],
   "betBuilder": {
     "matchId": "a54f22ac",
     "home": "ПСЖ",
@@ -71,9 +31,31 @@
     ],
     "totalOdd": "4.71",
     "reasoning": "",
-    "reasoningEn": ""
+    "reasoningEn": "",
+    "result": "L"
   },
   "results": [
+    {
+      "id": "a54f22ac",
+      "home": "ПСЖ",
+      "homeEn": "Paris Saint Germain",
+      "away": "Арсенал",
+      "awayEn": "Arsenal",
+      "date": "2026-05-30",
+      "competition": "Шампионска лига",
+      "competitionEn": "Champions League",
+      "pick": {
+        "bet": "Над 2.5 гола",
+        "betEn": "Over 2.5",
+        "conf": 68,
+        "confReason": "Combined expected goals ~3.7, recent BTTS in 4/6 for PSG and over 2.5 in 3/6, although Arsenal's recent games have been lower-scoring",
+        "market": "over_under",
+        "selection": "over_2.5",
+        "odd": "2.05"
+      },
+      "result": "L",
+      "score": "1-1"
+    },
     {
       "id": "0d0d2abd",
       "home": "Кристъл Палас",
@@ -674,32 +656,15 @@
       },
       "result": "W",
       "score": "2-1"
-    },
-    {
-      "id": "rso_lev",
-      "home": "Реал Сосиедад",
-      "homeEn": "Real Sociedad",
-      "away": "Levante",
-      "awayEn": "Levante",
-      "date": "2026-04-04",
-      "competition": "Ла Лига",
-      "competitionEn": "La Liga",
-      "pick": {
-        "bet": "И двата вкарват",
-        "betEn": "Yes, Both Teams to Score",
-        "conf": 72,
-        "confReason": "Real Sociedad have BTTS in 5/6 recent games and Levante in 3/6, combined expected goals are ~3.2, indicating a high likelihood of both teams scoring",
-        "market": "btts",
-        "selection": "yes",
-        "odd": "1.61"
-      },
-      "result": "L",
-      "score": "2-0"
     }
   ],
   "record": {
     "correct": 79,
-    "total": 132,
+    "total": 133,
     "period": "ЛЕ 26.02.2026"
+  },
+  "bbRecord": {
+    "correct": 0,
+    "total": 1
   }
 }
